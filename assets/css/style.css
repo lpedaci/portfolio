@@ -233,6 +233,51 @@ dialog.case::backdrop{background:rgba(20,28,38,.55);backdrop-filter:blur(2px)}
 }
 .svc{font-family:var(--font-mono);font-size:11px;background:var(--indigo-deep);color:#fff;border-radius:4px;padding:3px 9px}
 
+/* roadmap (work process phases) */
+.roadmap{list-style:none;margin:16px 0 8px;padding:0}
+.roadmap li{position:relative;display:flex;gap:16px;padding-bottom:22px}
+.roadmap li:last-child{padding-bottom:0}
+.roadmap li::before{
+  content:"";position:absolute;left:23px;top:32px;bottom:2px;
+  width:2px;background:var(--line);
+}
+.roadmap li:last-child::before{display:none}
+.roadmap .ph{
+  flex:none;width:48px;height:30px;margin-top:1px;
+  display:grid;place-items:center;
+  font-family:var(--font-mono);font-size:11.5px;font-weight:500;
+  color:#fff;background:var(--indigo-deep);border-radius:6px;
+  position:relative;z-index:1;letter-spacing:.04em;
+}
+.roadmap li:last-child .ph{background:var(--seal)}
+.roadmap .ph-body b{
+  font-family:var(--font-display);font-weight:600;font-size:15.5px;
+  display:block;color:var(--ink);line-height:1.3;
+}
+.roadmap .ph-body p{margin:3px 0 0;font-size:13.5px;color:var(--muted)}
+
+/* principle callout (dialogs) */
+.principle{
+  border-left:3px solid var(--seal);background:var(--paper-2);
+  border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0 18px;
+}
+.principle p{margin:0;font-size:14.5px}
+.principle b{color:var(--indigo-deep)}
+
+/* worked-example case cards (dialogs) */
+.case-links{display:grid;gap:12px;margin:14px 0}
+@media(min-width:640px){.case-links{grid-template-columns:1fr 1fr}}
+.case-link{
+  border:1px solid var(--line);border-radius:10px;background:var(--card);
+  padding:14px 16px;display:flex;flex-direction:column;gap:6px;
+}
+.case-link .who{font-family:var(--font-mono);font-size:10.5px;color:var(--seal);letter-spacing:.1em;text-transform:uppercase}
+.case-link b{font-family:var(--font-display);font-weight:600;font-size:15px;line-height:1.3}
+.case-link p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
+.case-link .go{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.case-link .go a{font-family:var(--font-display);font-weight:600;font-size:13px;text-decoration:none}
+.case-link .go a:hover{text-decoration:underline}
+
 /* facade for heavy embeds (video / pdf / interactive) */
 .embed{
   position:relative;margin:14px 0;border-radius:10px;overflow:hidden;
