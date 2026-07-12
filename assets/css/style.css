@@ -141,7 +141,7 @@ h2{font-size:clamp(26px,4vw,38px);font-weight:600;margin-bottom:18px}
 .stat{padding:18px 16px;background:var(--card)}
 .stats::after{content:"";background:var(--card)} /* fills the empty grid slot on mobile */
 @media(min-width:1000px){
-  .stats{grid-template-columns:.62fr 1.5fr 1.4fr 1.5fr .85fr}
+  .stats{grid-template-columns:.55fr 2.05fr 1.15fr 1.3fr .8fr}
   .stats::after{display:none}
 }
 .stat b{font-family:var(--font-display);font-size:clamp(22px,3vw,30px);font-weight:700;display:block;color:var(--indigo-deep)}
