@@ -152,6 +152,19 @@
         </div>
       </button>
 
+      <!-- OPERATING SYSTEMS (SO U2 & U3) -->
+      <button class="card" data-cats="id ux" onclick="openDialog('dlg-so')">
+        <div class="cover"><img loading="lazy" src="assets/img/so-cover-card.jpg" alt="Operating Systems interactive learning site: partitioned disk diagram"></div>
+        <div class="body">
+          <div class="meta">2026 <span class="en">· 5th-year program | Operating Systems Lab</span><span class="es">· 5to año | Lab. de Sistemas Operativos</span></div>
+          <h3><span class="en">Operating Systems: Storage & System Setup</span><span class="es">Sistemas Operativos: Almacenamiento y Seteo del S.O.</span></h3>
+          <p class="en">Two interactive HTML sites (Units 2 & 3) that turn disk partitioning, file systems and OS setup into clickable diagrams, plus a randomized self-assessment module for retrieval practice.</p>
+          <p class="es">Dos sitios HTML interactivos (Unidades 2 y 3) que convierten particionado, sistemas de archivos y seteo del SO en diagramas clicables, con un módulo de autoevaluación al azar para práctica de recuperación.</p>
+          <div class="tags"><span class="tag">HTML/CSS/JS</span><span class="tag">GitHub Pages</span><span class="tag">Retrieval Practice</span></div>
+          <span class="open-hint"><span class="en">Open case study →</span><span class="es">Abrir caso →</span></span>
+        </div>
+      </button>
+
       <!-- TEACHER'S ROLE -->
       <button class="card" data-cats="video ux" onclick="openDialog('dlg-teacher')">
         <div class="cover"><img loading="lazy" src="assets/img/teacher-cover-card.jpg" alt="The Teacher's Role in the Digital Era video still"></div>
@@ -523,6 +536,97 @@
         <span class="sub">Google Drive viewer</span>
       </button>
     </div>
+  </div>
+</dialog>
+
+<!-- OPERATING SYSTEMS (SO U2 & U3) -->
+<dialog class="case" id="dlg-so" aria-labelledby="ttl-so">
+  <div class="case-head">
+    <div>
+      <h3 id="ttl-so"><span class="en">Operating Systems: Storage & System Setup</span><span class="es">Sistemas Operativos: Almacenamiento y Seteo del S.O.</span></h3>
+      <div class="meta"><span class="en">2026 | Units 2 & 3, 5th-year Informatics, Operating Systems Lab, Instituto Leonardo Murialdo</span><span class="es">2026 | Unidades 2 y 3, 5to año de Informática, Laboratorio de Sistemas Operativos, Instituto Leonardo Murialdo</span></div>
+    </div>
+    <button class="close-btn" onclick="this.closest('dialog').close()" aria-label="Close">✕</button>
+  </div>
+  <div class="case-body">
+    <div class="toolbox">
+      <span class="svc">Instructional Design</span><span class="svc">LXD</span><span class="svc">Front-end (HTML/CSS/JS)</span><span class="svc">Assessment Design</span>
+    </div>
+    <p class="en">Two fully interactive HTML sites that cover the "hardest to visualize" part of the Operating Systems syllabus: storage management (Unit 2) and OS setup (Unit 3). Instead of static slides, students explore clickable disk diagrams, traffic-light comparison tables and decision trees, and then test themselves with a randomized self-assessment module. Everything is deployed on GitHub Pages, responsive, and written to work on a phone or a lab PC.</p>
+    <p class="es">Dos sitios HTML interactivos que cubren la parte "más difícil de visualizar" del programa de Sistemas Operativos: la gestión de almacenamiento (Unidad 2) y el seteo del SO (Unidad 3). En lugar de diapositivas estáticas, los estudiantes exploran diagramas de disco clicables, tablas comparativas tipo semáforo y árboles de decisión, y luego se ponen a prueba con un módulo de autoevaluación al azar. Todo publicado en GitHub Pages, responsive y pensado para funcionar tanto en el celular como en la PC del laboratorio.</p>
+
+    <h4><span class="en">The Challenge</span><span class="es">El desafío</span></h4>
+    <p class="en">Storage and OS configuration are notoriously abstract: partition schemes (MBR vs GPT), file systems (FAT32, NTFS, exFAT), firmware modes (BIOS/UEFI) and the setup steps after installation (licensing, user accounts, drivers, security). Traditional lectures leave students memorizing tables without understanding <em>why</em> each choice matters. The goal was to make every one of these concepts manipulable and tied to a real decision.</p>
+    <p class="es">El almacenamiento y la configuración del SO son notoriamente abstractos: esquemas de partición (MBR vs GPT), sistemas de archivos (FAT32, NTFS, exFAT), modos de firmware (BIOS/UEFI) y los pasos de seteo posteriores a la instalación (licencias, cuentas de usuario, drivers, seguridad). La clase tradicional deja a los estudiantes memorizando tablas sin entender <em>por qué</em> cada elección importa. El objetivo fue volver manipulable cada uno de esos conceptos y anclarlo a una decisión real.</p>
+
+    <h4><span class="en">The Solution (the LXD approach)</span><span class="es">La solución (el enfoque LXD)</span></h4>
+    <ul class="en">
+      <li><b>Interactive diagrams:</b> clickable disk maps where each segment (primary, extended, logical, EFI, MSR, recovery) reveals its role, size and file system, for both MBR and GPT layouts.</li>
+      <li><b>Decision-first framing:</b> a firmware → scheme → use decision tree ("BIOS or UEFI? boot or data?") so students choose a partition scheme the way a technician actually would, not by rote.</li>
+      <li><b>Traffic-light comparison tables:</b> file systems and format types (quick, full, low-level) compared side by side, colour-coded for fast scanning.</li>
+      <li><b>Real user cases (A–F):</b> an activity where teams design the disk for a concrete user profile and justify their choices.</li>
+      <li><b>Built-in teacher kit:</b> an 80-minute lesson plan and a password-protected teacher area, so the same material serves the class and the instructor.</li>
+    </ul>
+    <ul class="es">
+      <li><b>Diagramas interactivos:</b> mapas de disco clicables donde cada segmento (primaria, extendida, lógica, EFI, MSR, recovery) revela su función, tamaño y sistema de archivos, tanto en MBR como en GPT.</li>
+      <li><b>Enfoque orientado a la decisión:</b> un árbol de decisión firmware → esquema → uso ("¿BIOS o UEFI? ¿arranque o datos?") para que el estudiante elija el esquema de partición como lo haría un técnico, no de memoria.</li>
+      <li><b>Tablas comparativas tipo semáforo:</b> sistemas de archivos y tipos de formateo (rápido, completo, bajo nivel) comparados lado a lado y codificados por color para lectura rápida.</li>
+      <li><b>Casos de usuario reales (A–F):</b> una actividad donde los equipos diseñan el disco para un perfil de usuario concreto y justifican sus decisiones.</li>
+      <li><b>Kit docente incorporado:</b> una guía de clase de 80 minutos y un área docente protegida con contraseña, para que el mismo material sirva a la clase y al profesor.</li>
+    </ul>
+
+    <h4><span class="en">Unit 2 · Storage management (live)</span><span class="es">Unidad 2 · Gestión de almacenamiento (en vivo)</span></h4>
+    <p class="en">Partitioning, formatting and file systems. Explore the interactive disk diagrams, the FAT32/NTFS/exFAT comparison, the build guide and the "which scheme should I choose?" decision tree, right here.</p>
+    <p class="es">Particionado, formateo y sistemas de archivos. Explorá los diagramas de disco interactivos, la comparativa FAT32/NTFS/exFAT, la guía de armado y el árbol de decisión "¿qué esquema elegir?", acá mismo.</p>
+    <div class="embed site" data-src="https://lpedaci.github.io/so_unidad-02/">
+      <button class="facade"><span class="play">⌂</span>
+        <span class="lbl"><span class="en">Load Unit 2 site</span><span class="es">Cargar el sitio de la Unidad 2</span></span>
+        <span class="sub">lpedaci.github.io/so_unidad-02</span>
+      </button>
+    </div>
+    <p><a href="https://lpedaci.github.io/so_unidad-02/" target="_blank" rel="noopener"><span class="en">Open Unit 2 in a new tab ↗</span><span class="es">Abrir la Unidad 2 en pestaña nueva ↗</span></a></p>
+
+    <h4><span class="en">Unit 3 · Operating System setup (live)</span><span class="es">Unidad 3 · Seteo del Sistema Operativo (en vivo)</span></h4>
+    <p class="en">From hardware and installation to post-install configuration. Module 1 is an interactive interconnection map (storage → live USB → BIOS/UEFI → install flow → virtualization); Module 2 is an integrated guide to licensing and activation, user accounts and roles, control panel, drivers, firewall and security.</p>
+    <p class="es">Desde el hardware y la instalación hasta la configuración posterior. El Módulo 1 es un mapa de interconexión interactivo (almacenamiento → live USB → BIOS/UEFI → flujo de instalación → virtualización); el Módulo 2 es un apunte integrador de licencias y activación, cuentas de usuario y roles, panel de control, drivers, firewall y seguridad.</p>
+    <div class="embed site" data-src="https://lpedaci.github.io/so_unidad-03/">
+      <button class="facade"><span class="play">⌂</span>
+        <span class="lbl"><span class="en">Load Unit 3 site</span><span class="es">Cargar el sitio de la Unidad 3</span></span>
+        <span class="sub">lpedaci.github.io/so_unidad-03</span>
+      </button>
+    </div>
+    <p><a href="https://lpedaci.github.io/so_unidad-03/" target="_blank" rel="noopener"><span class="en">Open Unit 3 in a new tab ↗</span><span class="es">Abrir la Unidad 3 en pestaña nueva ↗</span></a></p>
+
+    <h4><span class="en">The assessment module (self-assessment)</span><span class="es">El módulo evaluativo (autoevaluación)</span></h4>
+    <p class="en">The centrepiece of Unit 3 is a self-assessment engine that draws random questions from <em>both</em> units. Students pick a round, answer one question at a time, then verify and read an explanation before moving on. Both the questions and the order of their options are reshuffled on every attempt, so nothing is memorized as "the answer is B".</p>
+    <p class="es">La pieza central de la Unidad 3 es un motor de autoevaluación que toma preguntas al azar de <em>ambas</em> unidades. El estudiante elige una ronda, responde de a una pregunta, verifica y lee una explicación antes de continuar. Tanto las preguntas como el orden de sus opciones se rebarajan en cada intento, así no se memoriza "la respuesta es la B".</p>
+    <div class="case-links">
+      <div class="case-link">
+        <span class="who"><span class="en">Round 1 | Quick review</span><span class="es">Ronda 1 | Repaso rápido</span></span>
+        <b><span class="en">20 questions</span><span class="es">20 preguntas</span></b>
+        <p><span class="en">A balanced mix of easy, medium and hard items, for a short review before class or a test.</span><span class="es">Una mezcla equilibrada de preguntas fáciles, medias y difíciles, para un repaso corto antes de la clase o la prueba.</span></p>
+      </div>
+      <div class="case-link">
+        <span class="who"><span class="en">Round 2 | Challenge</span><span class="es">Ronda 2 | Desafío</span></span>
+        <b><span class="en">40 questions</span><span class="es">40 preguntas</span></b>
+        <p><span class="en">Covers every category worked in the units, weighted towards medium and hard items.</span><span class="es">Recorre todas las categorías trabajadas en las unidades, con más peso en las medias y difíciles.</span></p>
+      </div>
+    </div>
+    <div class="principle">
+      <p class="en"><b>Its purpose: learning, not grading.</b> The module is designed around <em>retrieval practice</em> and the testing effect: the act of recalling an answer, and immediately seeing <em>why</em> it's right or wrong, strengthens memory far more than re-reading. Randomization prevents rote memorization of positions, the per-question explanations turn every mistake into a micro-lesson, and because it is self-paced and ungraded, students can practice without pressure until the concepts stick. It closes the loop of the two interactive sites: explore the concept, then prove you understood it.</p>
+      <p class="es"><b>Su finalidad: aprender, no calificar.</b> El módulo está diseñado en torno a la <em>práctica de recuperación</em> y el efecto del testeo: el acto de recuperar una respuesta, y ver de inmediato <em>por qué</em> es correcta o incorrecta, fija la memoria mucho más que releer. La aleatorización evita memorizar posiciones, las explicaciones por pregunta convierten cada error en una micro-lección, y al ser autoadministrado y sin nota, los estudiantes pueden practicar sin presión hasta que el concepto se afiance. Cierra el circuito de los dos sitios interactivos: explorá el concepto y después demostrá que lo entendiste.</p>
+    </div>
+    <div class="embed site" data-src="https://lpedaci.github.io/so_unidad-03/03-autoevaluacion.html">
+      <button class="facade"><span class="play">✓</span>
+        <span class="lbl"><span class="en">Try the self-assessment module</span><span class="es">Probar el módulo de autoevaluación</span></span>
+        <span class="sub">lpedaci.github.io/so_unidad-03/03-autoevaluacion.html</span>
+      </button>
+    </div>
+    <p><a href="https://lpedaci.github.io/so_unidad-03/03-autoevaluacion.html" target="_blank" rel="noopener"><span class="en">Open the self-assessment in a new tab ↗</span><span class="es">Abrir la autoevaluación en pestaña nueva ↗</span></a></p>
+
+    <h4><span class="en">Outcomes</span><span class="es">Resultados</span></h4>
+    <p class="en">The two units now form a single, coherent learning ecosystem: interactive theory, a hands-on activity with real user cases, a ready-to-run 80-minute lesson plan for the instructor, and a self-assessment loop that lets students measure their own understanding. By building it all myself, I kept full control over the pedagogy, the accessibility and the visual language, and delivered it as a free, always-available resource that any student can reach from any device.</p>
+    <p class="es">Las dos unidades forman ahora un ecosistema de aprendizaje único y coherente: teoría interactiva, una actividad práctica con casos de usuario reales, una guía de clase de 80 minutos lista para usar por el docente, y un circuito de autoevaluación que permite a los estudiantes medir su propia comprensión. Al desarrollarlo íntegramente, mantuve el control total de la pedagogía, la accesibilidad y el lenguaje visual, y lo entregué como un recurso gratuito y siempre disponible al que cualquier estudiante puede acceder desde cualquier dispositivo.</p>
   </div>
 </dialog>
 
