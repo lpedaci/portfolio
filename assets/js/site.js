@@ -72,25 +72,19 @@
     });
   }
 
-  /* ------------------------------------------- embeds, loaded on demand */
-  function mountEmbed(wrap) {
-    if (!wrap || wrap.querySelector('iframe')) return;
-    var frame = document.createElement('iframe');
-    frame.src = wrap.dataset.src;
-    frame.loading = 'lazy';
-    frame.title = wrap.dataset.title || 'Embedded content';
-    frame.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media; clipboard-write';
-    frame.allowFullscreen = true;
-    frame.referrerPolicy = 'strict-origin-when-cross-origin';
-    wrap.appendChild(frame);
-    var facade = wrap.querySelector('.facade');
-    if (facade) facade.remove();
-  }
-
-  document.querySelectorAll('.embed .facade').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      mountEmbed(btn.closest('.embed'));
-    });
+  /* ------------------------------------------------------------- embeds */
+  /* Iframes ship in the HTML and load natively, so every embed is already
+     playable when the visitor gets there, with or without JS. All this does
+     is retire the placeholder once the provider has painted. */
+  document.querySelectorAll('.embed').forEach(function (wrap) {
+    var frame = wrap.querySelector('iframe');
+    if (!frame) return;
+    var settle = function () { wrap.classList.add('is-ready'); };
+    if (frame.complete) settle();
+    frame.addEventListener('load', settle, { once: true });
+    /* Providers that never fire load (cross-origin quirks, blocked third-party
+       cookies) must not leave a shimmer running forever. */
+    window.setTimeout(settle, 6000);
   });
 
   /* --------------------------------------------------------- image zoom */

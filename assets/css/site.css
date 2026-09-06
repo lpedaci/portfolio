@@ -181,6 +181,8 @@ h1, h2, h3, h4{
 }
 
 .num{ font-variant-numeric: tabular-nums; }
+/* Browsers break a line after a hyphen, which splits "end-to-end" mid-phrase. */
+.nobr{ white-space: nowrap; }
 
 /* ------------------------------------------------------------- 4. skeleton */
 .shell{ width: var(--shell); margin-inline: auto; }
@@ -214,14 +216,22 @@ h1, h2, h3, h4{
   transition: background .28s var(--ease), color .28s var(--ease),
               border-color .28s var(--ease), transform .28s var(--ease);
 }
-.pill:hover{ transform: translateY(-2px); }
+/* The base pill is the secondary action (LinkedIn, GitHub, footer links). It
+   gets the same quiet sage hover the filter buttons use, so it acknowledges the
+   cursor without competing with .pill--ink and .pill--ghost. */
+.pill:hover{
+  transform: translateY(-2px);
+  background: var(--sage-tint);
+  border-color: var(--sage);
+  color: var(--sage-deep);
+}
 .pill:active{ transform: translateY(0) scale(.985); transition-duration: .06s; }
 
 .pill--ink{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.pill--ink:hover{ background: var(--sage-deep); border-color: var(--sage-deep); }
+.pill--ink:hover{ background: var(--sage-deep); border-color: var(--sage-deep); color: var(--paper); }
 
 .pill--clay{ background: var(--clay-deep); color: var(--paper); border-color: var(--clay-deep); }
-.pill--clay:hover{ background: var(--ink); border-color: var(--ink); }
+.pill--clay:hover{ background: var(--ink); border-color: var(--ink); color: var(--paper); }
 
 .pill--ghost{ background: transparent; }
 .pill--ghost:hover{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -303,7 +313,8 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
   display: none; align-items: center; gap: 9px;
   padding: 9px 16px 9px 13px;
   border-radius: var(--r-pill);
-  background: var(--ink); color: var(--paper);
+  /* Sage carries state across this site, and availability is a state. */
+  background: var(--sage-deep); color: var(--paper);
   font-family: var(--f-mono); font-size: 10.5px;
   letter-spacing: .07em; text-transform: uppercase;
 }
@@ -554,6 +565,18 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
   font-family: var(--f-mono); font-size: 10.5px;
   letter-spacing: .1em; text-transform: uppercase;
   padding: 10px 18px;
+  transition: none;
+}
+/* This caption borrows .pill for its shape only; it is a static label, not a
+   control. .pill:hover would replace the centering transform above with its
+   own lift, throwing the caption half its width to the right. */
+.panel__caption:hover,
+.panel__caption:focus,
+.panel__caption:active{
+  transform: translateX(-50%);
+  background: var(--paper);
+  border-color: var(--line);
+  color: var(--ink);
 }
 
 /* On narrow screens the rail would hang off the page, so the panel steps
@@ -1189,7 +1212,7 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
 .embed{
   position: relative;
   aspect-ratio: 16 / 9;
-  background: var(--ink);
+  background: var(--bone-deep);
 }
 .embed[data-ratio="tall"]{ aspect-ratio: 3 / 4; }
 @media (min-width: 760px){ .embed[data-ratio="tall"]{ aspect-ratio: 16 / 10; } }
@@ -1197,34 +1220,30 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
 .embed[data-ratio="site"]{ aspect-ratio: 4 / 3; }
 @media (min-width: 760px){ .embed[data-ratio="site"]{ aspect-ratio: 16 / 10; } }
 .embed iframe{
-  position: absolute; inset: 0;
+  position: absolute; inset: 0; z-index: 1;
   width: 100%; height: 100%; border: 0;
 }
-.facade{
-  position: absolute; inset: 0;
-  display: grid; place-content: center; justify-items: center; gap: 14px;
-  width: 100%; height: 100%;
-  border: 0; cursor: pointer;
-  background: var(--ink); color: var(--paper);
-  padding: 24px; text-align: center;
-  transition: background .4s var(--ease);
+
+/* Every embed is live on arrival. This placeholder only fills the reserved box
+   while the provider responds, so the layout never shifts and the page keeps
+   one light theme from top to bottom. */
+.embed__skeleton{
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    linear-gradient(112deg, transparent 26%, rgba(253,251,246,.9) 47%, transparent 68%),
+    var(--bone-deep);
+  background-size: 260% 100%, auto;
+  background-repeat: no-repeat;
+  transition: opacity .45s var(--ease);
 }
-.facade:hover{ background: #221F17; }
-.facade__play{
-  width: 62px; height: 62px; border-radius: 50%;
-  display: grid; place-items: center;
-  background: var(--clay); color: var(--paper);
-  transition: transform .4s var(--ease);
+@media (prefers-reduced-motion: no-preference){
+  .embed__skeleton{ animation: embed-sweep 1.9s var(--ease) infinite; }
 }
-.facade:hover .facade__play{ transform: scale(1.08); }
-.facade:active .facade__play{ transform: scale(.97); }
-.facade__play svg{ width: 22px; height: 22px; }
-.facade__label{ font-size: 14.5px; font-weight: 600; letter-spacing: -.015em; }
-.facade__host{
-  font-family: var(--f-mono); font-size: 10px;
-  letter-spacing: .12em; text-transform: uppercase;
-  color: rgba(251,248,241,.55);
+@keyframes embed-sweep{
+  from{ background-position: -140% 0, 0 0; }
+  to  { background-position:  240% 0, 0 0; }
 }
+.embed.is-ready .embed__skeleton{ opacity: 0; animation: none; }
 
 /* gallery */
 .gallery{
@@ -1393,7 +1412,7 @@ dialog.lightbox button{
 
 /* --------------------------------------------------------------- 19. print */
 @media print{
-  .masthead, .marquee, .facade, .foot__links, .contact__actions{ display: none !important; }
+  .masthead, .marquee, .embed__skeleton, .foot__links, .contact__actions{ display: none !important; }
   body{ background: #fff; }
   .panel, .contact, .outcome, .quotecard{ background: #eee !important; color: #000 !important; }
   a[href^="http"]::after{ content: " (" attr(href) ")"; font-size: 9px; }
