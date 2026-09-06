@@ -29,10 +29,25 @@ const hostOf = (url) => {
 export { hostOf };
 
 /* ------------------------------------------------------------------ head */
-function head({ lang, depth, title, description, canonicalPath, altPath, ogImage }) {
+function head({ lang, depth, title, description, canonicalPath, altPath,
+                ogImage, ogWidth, ogHeight, ogAlt }) {
   const other = lang === 'en' ? 'es' : 'en';
   const url = `${site.domain}/${canonicalPath}`;
   const altUrl = `${site.domain}/${altPath}`;
+
+  /* LinkedIn and Slack size the card slot from og:image:width/height before
+     the file itself has finished downloading. Without them the crawler falls
+     back to a small square thumbnail, which is what made the old preview look
+     wrong. They are only emitted when the dimensions are actually known, so a
+     project cover of some other shape is never described incorrectly. */
+  const imgUrl = `${site.domain}/assets/img/${ogImage || 'og-card.jpg'}`;
+  const dims = ogWidth && ogHeight
+    ? `
+<meta property="og:image:width" content="${ogWidth}">` +
+      `
+<meta property="og:image:height" content="${ogHeight}">`
+    : '';
+
   return `<script>document.documentElement.className+=" js"</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -51,11 +66,15 @@ function head({ lang, depth, title, description, canonicalPath, altPath, ogImage
 <meta property="og:url" content="${url}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
-<meta property="og:image" content="${site.domain}/assets/img/${ogImage || 'og-preview.jpg'}">
+<meta property="og:image" content="${imgUrl}">
+<meta property="og:image:secure_url" content="${imgUrl}">
+<meta property="og:image:type" content="image/jpeg">${dims}
+<meta property="og:image:alt" content="${esc(ogAlt || title)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
-<meta name="twitter:image" content="${site.domain}/assets/img/${ogImage || 'og-preview.jpg'}">
+<meta name="twitter:image" content="${imgUrl}">
+<meta name="twitter:image:alt" content="${esc(ogAlt || title)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -139,12 +158,13 @@ function footer({ lang, depth }) {
 /* ------------------------------------------------------------ page shell */
 export function page({
   lang, depth, title, description, canonicalPath, altPath,
-  enPath, esPath, body, ogImage, jsonLd
+  enPath, esPath, body, ogImage, ogWidth, ogHeight, ogAlt, jsonLd
 }) {
   return `<!doctype html>
 <html lang="${lang === 'es' ? 'es-AR' : 'en'}">
 <head>
-${head({ lang, depth, title, description, canonicalPath, altPath, ogImage })}
+${head({ lang, depth, title, description, canonicalPath, altPath,
+          ogImage, ogWidth, ogHeight, ogAlt })}
 </head>
 <body>
 <a class="skip" href="#main">${esc(t(ui.skip, lang))}</a>

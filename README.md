@@ -23,10 +23,44 @@ Node 18 or newer, for the build only. The published site does not run Node.
 ```bash
 npm run build     # writes the HTML, sitemap.xml and robots.txt
 npm run serve     # builds, then serves the folder
+npm run og        # redraws the social share cards (needs Chrome installed)
 ```
 
 `index.html`, `es/`, `work/`, `es/work/`, `404.html`, `sitemap.xml` and
 `robots.txt` are generated output and are overwritten on every build.
+
+### Social share cards
+
+Every page has its own 1200 x 630 card for LinkedIn, X, WhatsApp and Slack:
+`og-card.jpg` for the home page and `og-<slug>.jpg` for each case study, plus
+an `-es` twin of each. Twenty-two files, all in `assets/img/`.
+
+They are not hand-exported. `src/og/card.mjs` is a small page written in the
+same tokens as `assets/css/site.css`, and `npm run og` paints it with headless
+Chrome and encodes it to JPEG. Two kinds share one skeleton, so a link to the
+home page and a link to a project read as the same set:
+
+| | left column | right |
+|---|---|---|
+| identity | monogram, name and role, the years stat | portrait on its sand mat |
+| project | category and year, title and subtitle, signature | cover in a 5:3 frame |
+
+Project titles run from 7 to 63 characters, so the display size steps down as
+the title grows. Covers run from 2.17:1 to square, so the card reuses the 5:3
+crop the work grid already applies to them.
+
+Change the palette, the portrait in `site.heroPortrait`, or any project title,
+run `npm run og`, and the cards follow the site.
+
+`npm run og` is a separate step from `npm run build` on purpose: it needs a
+browser on the machine, and the cards only change when the brand or the copy
+does. All the cards of one language are painted as a single tall strip and
+sliced apart, so the whole set takes two browser launches per language and a
+few seconds.
+
+LinkedIn caches a link's preview for roughly a week. After deploying, paste the
+URL into the [Post Inspector](https://www.linkedin.com/post-inspector/) to force
+a re-scrape.
 
 ---
 
@@ -40,6 +74,8 @@ src/
   lib/pages.mjs        home, project page, 404
   lib/blocks.mjs       case-study block renderers
   lib/icons.mjs        icon set and the LP monogram
+  og/card.mjs          the 1200 x 630 share card, as a page
+  og/render.mjs        paints the card with headless Chrome  (npm run og)
   build.mjs            writes everything to disk
 
 assets/

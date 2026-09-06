@@ -3,6 +3,25 @@ import { projects } from '../data/projects.mjs';
 import { icon, monogram } from './icons.mjs';
 import { page, t, esc, rel, paths, depthOf } from './layout.mjs';
 import { renderBlocks } from './blocks.mjs';
+import {
+  identityAlt, projectAlt, identityCardFile, projectCardFile, CARD_W, CARD_H
+} from '../og/card.mjs';
+
+/* Every page carries a share card of the same shape, in its own language.
+   Built by `npm run og`; see src/og/card.mjs. */
+const identityCard = (lang) => ({
+  ogImage: identityCardFile(lang),
+  ogWidth: CARD_W,
+  ogHeight: CARD_H,
+  ogAlt: identityAlt(lang)
+});
+
+const projectCard = (p, lang) => ({
+  ogImage: projectCardFile(p, lang),
+  ogWidth: CARD_W,
+  ogHeight: CARD_H,
+  ogAlt: projectAlt(p, lang)
+});
 
 const img = (depth, file) => rel(depth, 'assets/img/' + file);
 const catLabel = (id, lang) => {
@@ -244,6 +263,7 @@ ${contactSection(lang, depth)}`;
     altPath: paths.home(lang === 'en' ? 'es' : 'en'),
     enPath: paths.home('en'),
     esPath: paths.home('es'),
+    ...identityCard(lang),
     body,
     jsonLd: {
       '@context': 'https://schema.org',
@@ -319,7 +339,7 @@ ${contactSection(lang, depth, true)}`;
     altPath: paths.project(lang === 'en' ? 'es' : 'en', p.slug),
     enPath: paths.project('en', p.slug),
     esPath: paths.project('es', p.slug),
-    ogImage: p.cover,
+    ...projectCard(p, lang),
     body,
     jsonLd: {
       '@context': 'https://schema.org',
@@ -397,6 +417,7 @@ export function notFoundPage(lang = 'en') {
     altPath: '404.html',
     enPath: paths.home('en'),
     esPath: paths.home('es'),
+    ...identityCard(lang),
     body
   }).replace(/(href|src)="(assets\/)/g, `$1="${site.domain}/$2`);
 }
