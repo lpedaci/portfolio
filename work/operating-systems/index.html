@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>document.documentElement.className+=" js"</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Operating Systems: storage &amp; system setup · Lourdes Pedaci</title>
+<meta name="description" content="Two hand-coded interactive sites plus a randomised self-assessment engine, built around retrieval practice rather than memorisation.">
+<meta name="author" content="Lourdes Pedaci">
+<meta name="theme-color" content="#F7F4EC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23BE5735'/%3E%3Cg fill='none' stroke='%23FBF8F1' stroke-width='6.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 17v13.5a5 5 0 0 0 5 5h4.5'/%3E%3Cpath d='M38 47V19h4a7 7 0 0 1 0 14h-4'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="canonical" href="https://lpedaci.github.io/portfolio/work/operating-systems/">
+<link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/work/operating-systems/">
+<link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/es/work/operating-systems/">
+<link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lourdes Pedaci">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://lpedaci.github.io/portfolio/work/operating-systems/">
+<meta property="og:title" content="Operating Systems: storage &amp; system setup · Lourdes Pedaci">
+<meta property="og:description" content="Two hand-coded interactive sites plus a randomised self-assessment engine, built around retrieval practice rather than memorisation.">
+<meta property="og:image" content="https://lpedaci.github.io/portfolio/assets/img/so-cover-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Operating Systems: storage &amp; system setup · Lourdes Pedaci">
+<meta name="twitter:description" content="Two hand-coded interactive sites plus a randomised self-assessment engine, built around retrieval practice rather than memorisation.">
+<meta name="twitter:image" content="https://lpedaci.github.io/portfolio/assets/img/so-cover-card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead__bar">
+    <a class="brand" href="../../" aria-label="Lourdes Pedaci">
+      <svg class="brand__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+      <span class="brand__name">Lourdes Pedaci<small>Learning Experience Designer · UX · Data</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Menu">
+      <a href="../../#work">Work</a>
+      <a href="../../#practice">Practice</a>
+      <a href="../../#process">Process</a>
+      <a href="../../#about">About</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+
+    <div class="masthead__end">
+      <span class="status"><i></i>Open to work</span>
+      <div class="langswap" role="group" aria-label="Language">
+        <a href="../../work/operating-systems/" hreflang="en" aria-current="true">EN</a>
+        <a href="../../es/work/operating-systems/" hreflang="es" aria-current="false">ES</a>
+      </div>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="sheet">
+        <span></span><span></span><span></span>
+        <span class="sr">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet">
+  <a class="sheet__link" href="../../#work">Work<em>01</em></a>
+  <a class="sheet__link" href="../../#practice">Practice<em>02</em></a>
+  <a class="sheet__link" href="../../#process">Process<em>03</em></a>
+  <a class="sheet__link" href="../../#about">About<em>04</em></a>
+  <a class="sheet__link" href="../../#contact">Contact<em>05</em></a>
+  <div class="sheet__foot">
+    <a class="pill pill--ink" href="https://drive.google.com/file/d/1oC0_9CM-aP2DHHQepNc5uss5lxxekds_/view" target="_blank" rel="noopener">View résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+    <a class="pill" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+    <a class="pill" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="case-hero shell">
+  <div class="case-hero__top">
+    <a class="pill pill--ghost" href="../../#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12h-14"/><path d="M11 6.5 5.5 12l5.5 5.5"/></svg> All projects</a>
+    <span class="tag num">02 / 2026</span>
+  </div>
+
+  <div class="case-hero__grid">
+    <div>
+      <p class="eyebrow eyebrow--clay reveal">Learning design · UX and product</p>
+      <h1 class="h-xl reveal" style="margin-top:18px">Operating Systems: storage &amp; system setup</h1>
+      <p class="case-hero__sub reveal">Making the least visible part of the syllabus manipulable</p>
+    </div>
+    <div class="tag-row reveal"><span class="tag">HTML/CSS/JS</span><span class="tag">GitHub Pages</span><span class="tag">Retrieval practice</span></div>
+  </div>
+</section>
+
+<div class="shell case-body">
+  <aside class="factsheet reveal">
+    <h2>Project facts</h2>
+    <dl>
+      <div><dt>Role</dt><dd>Instructional design, LXD, front-end development, assessment design</dd></div>
+      <div><dt>Timeline</dt><dd>2026</dd></div>
+      <div><dt>Context</dt><dd>Units 2 and 3, fifth-year Informatics, Operating Systems Lab, Instituto Leonardo Murialdo</dd></div>
+      <div><dt>Stack</dt><dd><div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">GitHub Pages</span></div></dd></div>
+      <div><dt>Methods</dt><dd><div class="tag-row"><span class="tag">Backward Design</span><span class="tag">Retrieval Practice</span><span class="tag">Testing Effect</span><span class="tag">Case-Based Learning</span></div></dd></div>
+    </dl>
+    <div class="factsheet__links">
+      <a class="pill pill--ghost" href="https://lpedaci.github.io/so_unidad-02/" target="_blank" rel="noopener">Unit 2, storage <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+      <a class="pill pill--ghost" href="https://lpedaci.github.io/so_unidad-03/" target="_blank" rel="noopener">Unit 3, OS setup <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+      <a class="pill pill--ghost" href="https://lpedaci.github.io/so_unidad-03/03-autoevaluacion.html" target="_blank" rel="noopener">Self-assessment module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+    </div>
+  </aside>
+
+  <div class="blocks">
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Overview</h2>
+      
+    </div>
+    <div class="prose"><p>Two fully interactive HTML sites that cover the hardest to visualise part of the Operating Systems syllabus: storage management (Unit 2) and OS setup (Unit 3). Instead of static slides, students explore clickable disk diagrams, traffic-light comparison tables and decision trees, and then test themselves with a randomised self-assessment module. Everything is deployed on GitHub Pages, responsive, and written to work on a phone or on a lab PC.</p></div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>The challenge</h2>
+      
+    </div>
+    <div class="prose"><p>Storage and OS configuration are notoriously abstract: partition schemes (MBR vs GPT), file systems (FAT32, NTFS, exFAT), firmware modes (BIOS/UEFI) and the setup steps after installation (licensing, user accounts, drivers, security). Traditional lectures leave students memorising tables without understanding why each choice matters. The goal was to make every one of these concepts manipulable and tied to a real decision.</p></div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>The solution: the LXD approach</h2>
+      
+    </div>
+    <dl class="deflist">
+      <div>
+        <dt>Interactive diagrams</dt>
+        <dd>Clickable disk maps where each segment (primary, extended, logical, EFI, MSR, recovery) reveals its role, size and file system, for both MBR and GPT layouts.</dd>
+      </div>
+      <div>
+        <dt>Decision-first framing</dt>
+        <dd>A firmware to scheme to use decision tree, so students choose a partition scheme the way a technician actually would, not by rote.</dd>
+      </div>
+      <div>
+        <dt>Traffic-light comparison tables</dt>
+        <dd>File systems and format types (quick, full, low-level) compared side by side and colour-coded for fast scanning.</dd>
+      </div>
+      <div>
+        <dt>Real user cases, A to F</dt>
+        <dd>An activity where teams design the disk for a concrete user profile and justify their choices.</dd>
+      </div>
+      <div>
+        <dt>Built-in teacher kit</dt>
+        <dd>An eighty-minute lesson plan and a password-protected teacher area, so the same material serves the class and the instructor.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Unit 2 · Storage management, live</h2>
+      <p class="block__note">Partitioning, formatting and file systems. Explore the interactive disk diagrams, the FAT32/NTFS/exFAT comparison, the build guide and the which scheme should I choose decision tree, right here.</p>
+    </div>
+    <div class="frame">
+      <div class="frame__chrome">
+        <span class="frame__dots"><i></i><i></i><i></i></span>
+        <span class="frame__url">lpedaci.github.io/so_unidad-02</span>
+        <a class="frame__open" href="https://lpedaci.github.io/so_unidad-02/" target="_blank" rel="noopener">Open in a new tab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+      </div>
+      <div class="embed" data-ratio="site" data-src="https://lpedaci.github.io/so_unidad-02/" data-title="Unit 2 site">
+        <button class="facade" type="button">
+          <span class="facade__play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.4" y="4.6" width="17.2" height="14.8" rx="2.4"/><path d="M3.4 9h17.2"/><path d="M6.4 6.8h.01M8.9 6.8h.01"/></svg></span>
+          <span class="facade__label">Unit 2 site</span>
+          <span class="facade__host">lpedaci.github.io</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Unit 3 · Operating system setup, live</h2>
+      <p class="block__note">From hardware and installation to post-install configuration. Module 1 is an interactive interconnection map (storage, live USB, BIOS/UEFI, install flow, virtualisation); Module 2 is an integrated guide to licensing and activation, user accounts and roles, control panel, drivers, firewall and security.</p>
+    </div>
+    <div class="frame">
+      <div class="frame__chrome">
+        <span class="frame__dots"><i></i><i></i><i></i></span>
+        <span class="frame__url">lpedaci.github.io/so_unidad-03</span>
+        <a class="frame__open" href="https://lpedaci.github.io/so_unidad-03/" target="_blank" rel="noopener">Open in a new tab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+      </div>
+      <div class="embed" data-ratio="site" data-src="https://lpedaci.github.io/so_unidad-03/" data-title="Unit 3 site">
+        <button class="facade" type="button">
+          <span class="facade__play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.4" y="4.6" width="17.2" height="14.8" rx="2.4"/><path d="M3.4 9h17.2"/><path d="M6.4 6.8h.01M8.9 6.8h.01"/></svg></span>
+          <span class="facade__label">Unit 3 site</span>
+          <span class="facade__host">lpedaci.github.io</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>The assessment module</h2>
+      
+    </div>
+    <div class="prose"><p>The centrepiece of Unit 3 is a self-assessment engine that draws random questions from both units. Students pick a round, answer one question at a time, then verify and read an explanation before moving on. Both the questions and the order of their options are reshuffled on every attempt, so nothing is memorised as the answer is B.</p></div>
+  </section>
+
+  <section class="block reveal">
+    
+    <div class="statgrid">
+      <div><b class="num">20</b><span>Round 1 · quick review, balanced easy to hard</span></div>
+      <div><b class="num">40</b><span>Round 2 · challenge, weighted to medium and hard</span></div>
+      <div><b class="num">2</b><span>units feeding a single question pool</span></div>
+    </div>
+  </section>
+
+  <aside class="block callout reveal">
+    <h2>Its purpose: learning, not grading.</h2>
+    <p>The module is designed around retrieval practice and the testing effect: recalling an answer, and immediately seeing why it is right or wrong, strengthens memory far more than re-reading. Randomisation prevents rote memorisation of positions, the per-question explanations turn every mistake into a micro-lesson, and because it is self-paced and ungraded, students can practise without pressure until the concepts stick.</p>
+  </aside>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Try the self-assessment module</h2>
+      
+    </div>
+    <div class="frame">
+      <div class="frame__chrome">
+        <span class="frame__dots"><i></i><i></i><i></i></span>
+        <span class="frame__url">lpedaci.github.io/so_unidad-03/03-autoevaluacion.html</span>
+        <a class="frame__open" href="https://lpedaci.github.io/so_unidad-03/03-autoevaluacion.html" target="_blank" rel="noopener">Open in a new tab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+      </div>
+      <div class="embed" data-ratio="site" data-src="https://lpedaci.github.io/so_unidad-03/03-autoevaluacion.html" data-title="Self-assessment">
+        <button class="facade" type="button">
+          <span class="facade__play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.4" y="4.6" width="17.2" height="14.8" rx="2.4"/><path d="M3.4 9h17.2"/><path d="M6.4 6.8h.01M8.9 6.8h.01"/></svg></span>
+          <span class="facade__label">Self-assessment</span>
+          <span class="facade__host">lpedaci.github.io</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block outcome reveal">
+    <h2>Outcomes</h2>
+    <p>The two units now form a single coherent learning ecosystem: interactive theory, a hands-on activity with real user cases, a ready-to-run eighty-minute lesson plan for the instructor, and a self-assessment loop that lets students measure their own understanding. Building it all myself kept full control over the pedagogy, the accessibility and the visual language, and it ships as a free, always-available resource reachable from any device.</p>
+  </section>
+  </div>
+</div>
+
+<section class="section--tight" id="contact">
+  <div class="shell">
+    <div class="contact contact--compact reveal">
+      <svg class="contact__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+      <div class="contact__copy">
+      <div class="contact__inner">
+        <p class="eyebrow">Let us talk</p>
+        <h2 class="h-xl" style="margin-top:16px">A learning problem that deserves a real design process?</h2>
+      </div>
+      <p>Whether you are building a training programme from scratch, rescuing one that nobody finishes, or trying to prove that yours works, write to me.</p>
+      <div class="contact__actions">
+        <a class="pill" href="mailto:lourdes.pedaci@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg> lourdes.pedaci@gmail.com</a>
+        <a class="pill pill--outline" href="https://drive.google.com/file/d/1oC0_9CM-aP2DHHQepNc5uss5lxxekds_/view" target="_blank" rel="noopener">View résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+        <a class="pill pill--outline" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+        <a class="pill pill--outline" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+      </div>
+      </div>
+      <div class="contact__viz" aria-hidden="false">
+        <svg viewBox="0 0 300 272" role="img" aria-label="Learning experience design, UX and data, connected as one practice.">
+          <g class="triad__wires">
+            <path d="M150 56 L246 212"></path>
+            <path d="M246 212 L54 212"></path>
+            <path d="M54 212 L150 56"></path>
+          </g>
+          <circle class="triad__spark" r="4.5" style="--path:path('M150 56 L246 212');--dur:4.2s;--delay:0s"></circle>
+          <circle class="triad__spark" r="4.5" style="--path:path('M246 212 L54 212');--dur:4.8s;--delay:.9s"></circle>
+          <circle class="triad__spark" r="4.5" style="--path:path('M54 212 L150 56');--dur:4.5s;--delay:1.8s"></circle>
+          <g class="triad__node" style="--i:0">
+          <circle cx="150" cy="56" r="43"></circle>
+          <text x="150" y="56" dominant-baseline="central" text-anchor="middle">LxD</text>
+        </g>
+          <g class="triad__node" style="--i:1">
+          <circle cx="246" cy="212" r="43"></circle>
+          <text x="246" y="212" dominant-baseline="central" text-anchor="middle">UX</text>
+        </g>
+          <g class="triad__node" style="--i:2">
+          <circle cx="54" cy="212" r="43"></circle>
+          <text x="54" y="212" dominant-baseline="central" text-anchor="middle">Data</text>
+        </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__top">
+      <a class="brand" href="../../">
+        <svg class="brand__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+        <span class="brand__name">Lourdes Pedaci<small>Learning Experience Designer · UX · Data</small></span>
+      </a>
+      <div class="foot__links">
+        <a class="pill" href="mailto:lourdes.pedaci@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg> lourdes.pedaci@gmail.com</a>
+        <a class="pill" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+        <a class="pill" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+        <a class="pill" href="https://www.behance.net/lourdespedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.6 5.4c1.9 0 3.3.8 3.3 2.8 0 1.2-.6 1.9-1.5 2.3 1.3.4 2 1.4 2 2.8 0 2.3-1.8 3.3-3.9 3.3H2.4V5.4zm-.4 4.4c.8 0 1.4-.4 1.4-1.2s-.5-1.2-1.4-1.2H5.1v2.4zm.2 4.8c1 0 1.6-.4 1.6-1.4s-.7-1.4-1.6-1.4H5.1v2.8zM15 6.3h5.3v1.3H15zM18 9.6c2.3 0 3.8 1.6 3.8 4v.6h-5.5c.1 1.2.8 1.9 2 1.9.8 0 1.4-.3 1.7-.9h2c-.4 1.6-1.8 2.6-3.7 2.6-2.5 0-4.1-1.7-4.1-4.1s1.6-4.1 3.8-4.1m-1.7 3.3h3.4c-.1-1-.7-1.7-1.7-1.7s-1.6.6-1.7 1.7"/></svg> Behance</a>
+      </div>
+    </div>
+    <div class="foot__base">
+      <span>© 2026 Lourdes Pedaci · Designed and built by me</span>
+      <span>Buenos Aires, AR</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Click an image to enlarge">
+  <form method="dialog"><button aria-label="Close">✕</button></form>
+  <img alt="">
+</dialog>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Operating Systems: storage & system setup","description":"Two hand-coded interactive sites plus a randomised self-assessment engine, built around retrieval practice rather than memorisation.","inLanguage":"en","dateCreated":"2026","creator":{"@type":"Person","name":"Lourdes Pedaci","url":"https://lpedaci.github.io/portfolio"},"image":"https://lpedaci.github.io/portfolio/assets/img/so-cover-card.jpg","url":"https://lpedaci.github.io/portfolio/work/operating-systems/"}</script>
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "lourdes-pedaci-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio of Lourdes Pedaci: Learning Experience Design, UX and Data.",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "serve": "node --run build && npx --yes serve@14 ."
+  }
+}
