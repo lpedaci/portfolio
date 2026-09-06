@@ -338,8 +338,14 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
 .langswap a[aria-current="true"]{ background: var(--ink); color: var(--paper); }
 .langswap a:not([aria-current="true"]):hover{ color: var(--ink); }
 
+/* Flex column, not grid: as a grid the three spans each got their own auto
+   row, and the default stretched align-content spread those rows across the
+   full 46px of the button, so the bars sat far apart. The gap is what sets
+   the bar spacing now, and the X below is calculated from it. */
 .burger{
-  display: grid; place-items: center;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 4.4px;
   width: 46px; height: 46px;
   border: 0; border-radius: 50%;
   background: var(--ink); color: var(--paper);
@@ -353,14 +359,17 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
   border-radius: 2px;
   transition: transform .34s var(--ease), opacity .2s var(--ease);
 }
-.burger span + span{ margin-top: 4.4px; }
 .burger[aria-expanded="true"] span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
 .burger[aria-expanded="true"] span:nth-child(2){ opacity: 0; }
 .burger[aria-expanded="true"] span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
 
-/* mobile sheet */
+/* mobile sheet.
+   Layer scale: skip link 10000, masthead 200, sheet 150. The sheet used to be
+   300, which painted it over the sticky bar and hid the burger it is closed
+   with, so the only way out was the Escape key. It now fills the viewport
+   underneath the bar, and the padding-top below clears it. */
 .sheet{
-  position: fixed; inset: 0; z-index: 300;
+  position: fixed; inset: 0; z-index: 150;
   display: grid; align-content: start;
   gap: 4px;
   padding: 92px clamp(20px, 6vw, 48px) 40px;

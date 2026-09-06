@@ -76,8 +76,8 @@ export const categories = [
 
 export const home = {
   eyebrow: {
-    en: 'Learning experience · UX · Data. Selected work, 2019 to today',
-    es: 'Experiencia de aprendizaje · UX · Datos. Trabajos seleccionados, 2019 a hoy'
+    en: 'Learning experience · UX · Data',
+    es: 'Experiencia de aprendizaje · UX · Datos'
   },
   headline: {
     en: ['research', 'design', 'measure'],
