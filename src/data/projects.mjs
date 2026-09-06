@@ -174,7 +174,7 @@ export const projects = [
         h: { en: 'Module preview', es: 'Vista previa del módulo' },
         src: 'https://drive.google.com/file/d/1Xm86v6jKeMypuRnhMuxaunQLTvCZDBpW/preview',
         host: 'Google Drive',
-        label: { en: 'Load the module document', es: 'Cargar el documento del módulo' }
+        label: { en: 'Course module document', es: 'Documento del módulo' }
       }
     ],
     outcome: {
@@ -425,7 +425,7 @@ export const projects = [
         h: { en: 'Watch the video', es: 'Ver el video' },
         src: 'https://www.youtube.com/embed/ShhtVEM_7c4',
         host: 'YouTube',
-        label: { en: 'Play the video', es: 'Reproducir el video' },
+        label: { en: 'Video on the teacher’s role', es: 'Video sobre el rol docente' },
         open: 'https://www.youtube.com/watch?v=ShhtVEM_7c4'
       }
     ],
@@ -488,7 +488,7 @@ export const projects = [
         h: { en: 'The interactive project', es: 'El proyecto interactivo' },
         src: 'https://view.genially.com/6797a346ac4b87277d2c7941/interactive-content-intersafe-season-2-an-instructionally-designed-project',
         host: 'Genially',
-        label: { en: 'Load the interactive project', es: 'Cargar el proyecto interactivo' },
+        label: { en: 'INTERSAFE interactive project', es: 'Proyecto interactivo INTERSAFE' },
         open: 'https://view.genially.com/6797a346ac4b87277d2c7941/interactive-content-intersafe-season-2-an-instructionally-designed-project'
       },
       {
@@ -550,7 +550,7 @@ export const projects = [
         h: { en: 'The project video', es: 'El video del proyecto' },
         src: 'https://player.vimeo.com/video/1025598739',
         host: 'Vimeo',
-        label: { en: 'Play the project video', es: 'Reproducir el video del proyecto' },
+        label: { en: 'INTERSAFE Season 2 teaser', es: 'Teaser de INTERSAFE Temporada 2' },
         open: 'https://vimeo.com/1025598739'
       },
       {
@@ -559,7 +559,7 @@ export const projects = [
         h: { en: 'Listen to an episode', es: 'Escuchar un episodio' },
         src: 'https://open.spotify.com/embed/episode/5V0kofeJ9cQxtJWFmDMl2V',
         host: 'Spotify',
-        label: { en: 'Load the podcast episode', es: 'Cargar el episodio del podcast' },
+        label: { en: 'INTERSAFE podcast episode', es: 'Episodio del podcast INTERSAFE' },
         open: 'https://open.spotify.com/episode/5V0kofeJ9cQxtJWFmDMl2V',
         ratio: 'audio'
       },
@@ -570,7 +570,7 @@ export const projects = [
         note: { en: 'In Spanish.', es: 'En español.' },
         src: 'https://drive.google.com/file/d/1YEhCi7Lwth9i8dXqCUGJxMHQpndhpyX0/preview',
         host: 'Google Drive',
-        label: { en: 'Load the documentation', es: 'Cargar la documentación' }
+        label: { en: 'INTERSAFE project documentation', es: 'Documentación del proyecto INTERSAFE' }
       }
     ],
     outcome: {
@@ -642,7 +642,7 @@ export const projects = [
         h: { en: 'The 96-page SOP guide', es: 'La guía SOP de 96 páginas' },
         src: 'https://drive.google.com/file/d/1jpjXhTmNlIZ842HnXG80JeCsZo8f5JhO/preview',
         host: 'Google Drive',
-        label: { en: 'Load the SOP guide', es: 'Cargar la guía SOP' }
+        label: { en: 'SOP guide, 96 pages', es: 'Guía SOP, 96 páginas' }
       },
       {
         t: 'prose',
@@ -709,7 +709,7 @@ export const projects = [
         h: { en: 'Watch: hardware refresh', es: 'Ver: renovación de hardware' },
         src: 'https://www.youtube.com/embed/2mYelJrOnnY',
         host: 'YouTube',
-        label: { en: 'Play the video', es: 'Reproducir el video' },
+        label: { en: 'Hardware refresh tutorial', es: 'Tutorial de renovación de hardware' },
         open: 'https://www.youtube.com/playlist?list=PLGPl-6kg2v3ZUVTAVp7reFRjV0JRSbk8Z'
       }
     ],
@@ -766,7 +766,7 @@ export const projects = [
         h: { en: 'Watch the opening', es: 'Ver la apertura' },
         src: 'https://player.vimeo.com/video/1045840730',
         host: 'Vimeo',
-        label: { en: 'Play the opening video', es: 'Reproducir el video de apertura' },
+        label: { en: 'Expo Smart Cities opening video', es: 'Video de apertura de Expo Smart Cities' },
         open: 'https://vimeo.com/1045840730'
       }
     ],
@@ -920,7 +920,7 @@ export const projects = [
         h: { en: 'Watch the short film', es: 'Ver el cortometraje' },
         src: 'https://player.vimeo.com/video/1046045810',
         host: 'Vimeo',
-        label: { en: 'Play the short film', es: 'Reproducir el corto' },
+        label: { en: 'The Crow, animated short film', es: 'The Crow, cortometraje animado' },
         open: 'https://vimeo.com/1046045810'
       }
     ],
@@ -998,7 +998,7 @@ export const projects = [
         h: { en: 'Project media', es: 'Material del proyecto' },
         src: 'https://drive.google.com/file/d/1X1UfNS9anlQURk9h2P522GsUvjAyRbhI/preview',
         host: 'Google Drive',
-        label: { en: 'Load the project media', es: 'Cargar el material del proyecto' }
+        label: { en: 'TEDxTECNO project media', es: 'Material del proyecto TEDxTECNO' }
       },
       {
         t: 'prose',
@@ -1091,7 +1091,7 @@ export const projects = [
         h: { en: 'Watch the video', es: 'Ver el video' },
         src: 'https://www.youtube.com/embed/cZjwPcqWMOc',
         host: 'YouTube',
-        label: { en: 'Play the video', es: 'Reproducir el video' },
+        label: { en: 'ERP motion graphics video', es: 'Video de motion graphics de ERP' },
         open: 'https://www.youtube.com/watch?v=cZjwPcqWMOc'
       }
     ],

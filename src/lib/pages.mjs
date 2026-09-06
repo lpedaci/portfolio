@@ -157,7 +157,7 @@ export function homePage(lang) {
   <div class="shell">
     <div class="section-head">
       <div class="section-head__title">
-        <p class="eyebrow eyebrow--clay reveal">${esc(t(ui.navPractice, lang))} / 02</p>
+        <p class="eyebrow eyebrow--clay reveal">${esc(t(ui.navPractice, lang))} / 01</p>
         <h2 class="h-lg reveal">${esc(t(home.practiceTitle, lang))}</h2>
       </div>
       <p class="lead reveal">${esc(t(home.practiceLead, lang))}</p>
@@ -178,7 +178,7 @@ export function homePage(lang) {
   <div class="shell">
     <div class="section-head">
       <div class="section-head__title">
-        <p class="eyebrow eyebrow--clay reveal">${esc(t(ui.navWork, lang))} / 01</p>
+        <p class="eyebrow eyebrow--clay reveal">${esc(t(ui.navWork, lang))} / 02</p>
         <h2 class="h-lg reveal">${esc(t(home.workTitle, lang))}</h2>
       </div>
       <p class="lead reveal">${esc(t(home.workLead, lang))}</p>
@@ -406,18 +406,33 @@ export function notFoundPage(lang = 'en') {
   ${deadEnd(lang)}
 </section>`;
 
-  /* Served from the site root for any missing path, so its own asset links
-     are absolute rather than relative. */
-  return page({
+  const self = lang === 'es' ? 'es/404.html' : '404.html';
+  const other = lang === 'es' ? '404.html' : 'es/404.html';
+
+  const html = page({
     lang,
     depth: 0,
     title: `${t(ui.notFound, lang)} · ${site.name}`,
     description: t(ui.notFoundBody, lang),
-    canonicalPath: '404.html',
-    altPath: '404.html',
+    canonicalPath: self,
+    altPath: other,
     enPath: paths.home('en'),
     esPath: paths.home('es'),
     ...identityCard(lang),
     body
-  }).replace(/(href|src)="(assets\/)/g, `$1="${site.domain}/$2`);
+  })
+    /* The host serves this one file for every missing path, so the page has no
+       reliable idea of how deep it sits. Relative links would resolve against
+       the broken URL instead of the site root, so every internal link is made
+       absolute. Fragments, mail, and data URIs are already location-free. */
+    .replace(/(href|src)="(?!https?:|mailto:|#|data:|\/)(?:\.\/)?([^"]*)"/g,
+             `$1="${site.domain}/$2"`);
+
+  /* GitHub Pages only ever serves the root 404, so a reader who loses their
+     way inside /es/ would land on the English one. Hand them over before the
+     English copy paints. */
+  return lang === 'en'
+    ? html.replace('<body>', `<body>
+<script>if(location.pathname.indexOf('/es/')!==-1)location.replace('${site.domain}/es/404.html')</script>`)
+    : html;
 }

@@ -59,6 +59,7 @@ async function build() {
   }
 
   await emit('404.html', notFoundPage('en'));
+  await emit(join('es', '404.html'), notFoundPage('es'));
   await emit('sitemap.xml', sitemap());
   await emit('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${site.domain}/sitemap.xml\n`);
   await emit('.nojekyll', '');

@@ -85,8 +85,8 @@ function head({ lang, depth, title, description, canonicalPath, altPath,
 function navItems(lang, depth) {
   const h = paths.home(lang);
   return [
-    { href: rel(depth, h) + '#work',     label: t(ui.navWork, lang),     tag: '01' },
-    { href: rel(depth, h) + '#practice', label: t(ui.navPractice, lang), tag: '02' },
+    { href: rel(depth, h) + '#practice', label: t(ui.navPractice, lang), tag: '01' },
+    { href: rel(depth, h) + '#work',     label: t(ui.navWork, lang),     tag: '02' },
     { href: rel(depth, h) + '#process',  label: t(ui.navProcess, lang),  tag: '03' },
     { href: rel(depth, h) + '#about',    label: t(ui.navAbout, lang),    tag: '04' },
     { href: rel(depth, h) + '#contact',  label: t(ui.navContact, lang),  tag: '05' }
@@ -148,7 +148,7 @@ function footer({ lang, depth }) {
       </div>
     </div>
     <div class="foot__base">
-      <span>© ${year} ${site.name} · ${esc(t(ui.builtBy, lang))}</span>
+      <span>© ${year} ${site.name} - ${esc(t(ui.rights, lang))}</span>
       <span>${esc(t(site.location, lang))}</span>
     </div>
   </div>

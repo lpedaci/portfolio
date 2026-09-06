@@ -10,32 +10,53 @@ const headOf = (b, lang) => {
     </div>`;
 };
 
-const facadeIcon = {
-  video: icon.play,
-  audio: icon.sound,
-  doc: icon.doc,
-  interactive: icon.spark,
-  site: icon.window
-};
-
 const ratioFor = (kind) =>
   kind === 'audio' ? 'audio' : kind === 'doc' ? 'tall' : kind === 'site' ? 'site' : 'video';
 
-/* A lazy media surface: nothing third-party loads until the reader asks. */
-function mediaFrame({ lang, kind, src, host, label, open, chromeUrl }) {
-  const shown = chromeUrl || hostOf(open || src);
+/* Providers only grant what the frame asks for. Anything not listed here gets
+   the plain permission set, which is all an ordinary page needs. */
+function allowFor(src) {
+  const h = hostOf(src);
+  if (/youtube|youtu\.be/.test(h)) {
+    return 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  }
+  if (/vimeo/.test(h))  return 'autoplay; fullscreen; picture-in-picture';
+  if (/spotify/.test(h)) return 'autoplay; clipboard-write; encrypted-media; picture-in-picture';
+  if (/google/.test(h))  return 'autoplay';
+  return '';
+}
+
+/* Every embed needs a way out. When a block does not name one, the source URL
+   itself is the escape hatch, so a provider that refuses to be framed still
+   leaves the reader something to click. */
+function escapeHatch(open, src) {
+  if (open) return open;
+  return src.replace(/\/preview(\?.*)?$/, '/view');
+}
+
+/* The iframe ships in the HTML: the material is live the moment the reader
+   arrives, with or without JavaScript. The skeleton only holds the reserved
+   box while the provider responds. */
+function mediaFrame({ lang, kind, src, label, open, chromeUrl }) {
+  const out = escapeHatch(open, src);
+  const shown = chromeUrl || hostOf(out);
+  const allow = allowFor(src);
+  const title = esc(t(label, lang));
   return `<div class="frame">
       <div class="frame__chrome">
         <span class="frame__dots"><i></i><i></i><i></i></span>
         <span class="frame__url">${esc(shown)}</span>
-        ${open ? `<a class="frame__open" href="${open}" target="_blank" rel="noopener">${esc(t(ui.openLive, lang))} ${icon.arrowUpRight}</a>` : ''}
+        <a class="frame__open" href="${out}" target="_blank" rel="noopener">${esc(t(ui.openLive, lang))} ${icon.arrowUpRight}</a>
       </div>
-      <div class="embed" data-ratio="${ratioFor(kind)}" data-src="${esc(src)}" data-title="${esc(t(label, lang))}">
-        <button class="facade" type="button">
-          <span class="facade__play">${facadeIcon[kind] || icon.play}</span>
-          <span class="facade__label">${esc(t(label, lang))}</span>
-          <span class="facade__host">${esc(host)}</span>
-        </button>
+      <div class="embed" data-ratio="${ratioFor(kind)}">
+        <span class="embed__skeleton" aria-hidden="true"></span>
+        <iframe
+          src="${esc(src)}"
+          title="${title}"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          ${allow ? `allow="${allow}"` : ''}
+          allowfullscreen></iframe>
       </div>
     </div>`;
 }
@@ -95,14 +116,13 @@ const render = {
 
   embed: (b, lang) => `<section class="block reveal">
     ${headOf(b, lang)}
-    ${mediaFrame({ lang, kind: b.kind, src: b.src, host: b.host, label: b.label, open: b.open })}
+    ${mediaFrame({ lang, kind: b.kind, src: b.src, label: b.label, open: b.open })}
   </section>`,
 
   live: (b, lang) => `<section class="block reveal">
     ${headOf(b, lang)}
     ${mediaFrame({
-      lang, kind: 'site', src: b.src, host: hostOf(b.url),
-      label: b.label, open: b.url, chromeUrl: b.url.replace(/^https?:\/\//, '').replace(/\/$/, '')
+      lang, kind: 'site', src: b.src, label: b.label, open: b.url, chromeUrl: b.url.replace(/^https?:\/\//, '').replace(/\/$/, '')
     })}
   </section>`,
 

@@ -46,8 +46,8 @@
     </a>
 
     <nav class="nav" aria-label="Menú">
-      <a href="../../../es/#work">Proyectos</a>
       <a href="../../../es/#practice">Práctica</a>
+      <a href="../../../es/#work">Proyectos</a>
       <a href="../../../es/#process">Proceso</a>
       <a href="../../../es/#about">Sobre mí</a>
       <a href="../../../es/#contact">Contacto</a>
@@ -68,8 +68,8 @@
 </header>
 
 <div class="sheet" id="sheet">
-  <a class="sheet__link" href="../../../es/#work">Proyectos<em>01</em></a>
-  <a class="sheet__link" href="../../../es/#practice">Práctica<em>02</em></a>
+  <a class="sheet__link" href="../../../es/#practice">Práctica<em>01</em></a>
+  <a class="sheet__link" href="../../../es/#work">Proyectos<em>02</em></a>
   <a class="sheet__link" href="../../../es/#process">Proceso<em>03</em></a>
   <a class="sheet__link" href="../../../es/#about">Sobre mí<em>04</em></a>
   <a class="sheet__link" href="../../../es/#contact">Contacto<em>05</em></a>
@@ -154,12 +154,15 @@
         <span class="frame__url">youtube.com</span>
         <a class="frame__open" href="https://www.youtube.com/watch?v=cZjwPcqWMOc" target="_blank" rel="noopener">Abrir en pestaña nueva <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
       </div>
-      <div class="embed" data-ratio="video" data-src="https://www.youtube.com/embed/cZjwPcqWMOc" data-title="Reproducir el video">
-        <button class="facade" type="button">
-          <span class="facade__play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.4 5.6a1 1 0 0 1 1.53-.85l8.2 5.15a1.2 1.2 0 0 1 0 2.03l-8.2 5.16a1 1 0 0 1-1.53-.85z"/></svg></span>
-          <span class="facade__label">Reproducir el video</span>
-          <span class="facade__host">YouTube</span>
-        </button>
+      <div class="embed" data-ratio="video">
+        <span class="embed__skeleton" aria-hidden="true"></span>
+        <iframe
+          src="https://www.youtube.com/embed/cZjwPcqWMOc"
+          title="Video de motion graphics de ERP"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -229,7 +232,7 @@
       </div>
     </div>
     <div class="foot__base">
-      <span>© 2026 Lourdes Pedaci · Diseñado y desarrollado por mí</span>
+      <span>© 2026 Lourdes Pedaci - All rights reserved</span>
       <span>Buenos Aires, AR</span>
     </div>
   </div>

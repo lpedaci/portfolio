@@ -58,7 +58,7 @@ export const ui = {
   noMatches:   { en: 'No projects in this category yet.', es: 'Todavía no hay proyectos en esta categoría.' },
   copyEmail:   { en: 'Copy address', es: 'Copiar dirección' },
   copied:      { en: 'Copied', es: 'Copiado' },
-  builtBy:     { en: 'Designed and built by me', es: 'Diseñado y desarrollado por mí' },
+  rights:      { en: 'All rights reserved', es: 'All rights reserved' },
   scroll:      { en: 'Scroll', es: 'Bajá' },
   index:       { en: 'Index', es: 'Índice' },
   backIndex:   { en: 'Back to the index', es: 'Volver al índice' },
