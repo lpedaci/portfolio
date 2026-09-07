@@ -21,6 +21,13 @@
   --ink-20:    rgba(23,21,15,.21);
   --line:      rgba(23,21,15,.14);
   --line-soft: rgba(23,21,15,.08);
+  /* Structural hairlines above are decorative: dividers, card frames, the
+     factsheet rules. WCAG 1.4.11 exempts them. A control identified only by
+     its outline is a different matter, and .14 alpha measures 1.33:1 against
+     the bone ground. This one is the lightest alpha that clears 3:1 on both
+     grounds (3.01 on --bone, 3.04 on --paper), so pills, filters and the
+     language switch keep a soft edge that a low-vision reader can still find. */
+  --line-ctrl: rgba(23,21,15,.46);
 
   /* accents */
   --clay:      #965E44;
@@ -208,7 +215,7 @@ h1, h2, h3, h4{
 .pill{
   display: inline-flex; align-items: center; gap: 8px;
   padding: 11px 20px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-ctrl);
   border-radius: var(--r-pill);
   background: var(--paper);
   font-size: 13.5px; font-weight: 600; letter-spacing: -.012em;
@@ -297,6 +304,7 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
 .nav{ display: none; align-items: center; gap: 3px; }
 @media (min-width: 1060px){ .nav{ display: flex; } }
 .nav a{
+  display: inline-flex; align-items: center; min-height: 44px;
   padding: 10px 17px;
   border-radius: var(--r-pill);
   font-size: 13.5px; font-weight: 600; letter-spacing: -.012em;
@@ -334,12 +342,14 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
 .langswap{
   display: inline-flex; align-items: center;
   padding: 3px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-ctrl);
   border-radius: var(--r-pill);
   background: var(--bone);
 }
 .langswap a{
-  padding: 7px 13px;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 44px; min-height: 38px;
+  padding: 9px 13px;
   border-radius: var(--r-pill);
   font-family: var(--f-mono); font-size: 11px; font-weight: 500;
   letter-spacing: .08em; text-transform: uppercase;
@@ -387,9 +397,16 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
   background: var(--bone);
   overflow-y: auto;
   visibility: hidden; opacity: 0;
-  transition: opacity .34s var(--ease), visibility .34s;
+  /* visibility is delayed on the way out so the fade is seen, and instant on
+     the way in. Transitioning it symmetrically kept the sheet computing as
+     hidden for the first frames after it opened, which made every element
+     inside it unfocusable and silently broke the focus handover. */
+  transition: opacity .34s var(--ease), visibility 0s linear .34s;
 }
-.sheet.is-open{ visibility: visible; opacity: 1; }
+.sheet.is-open{
+  visibility: visible; opacity: 1;
+  transition: opacity .34s var(--ease), visibility 0s linear 0s;
+}
 .sheet a.sheet__link{
   display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
   padding: 18px 0;
@@ -645,16 +662,19 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
 
 /* ----------------------------------------------------------- 10. work grid */
 .filters{
-  display: flex; flex-wrap: wrap; gap: 7px;
+  display: flex; flex-wrap: wrap; gap: 8px;
   margin-bottom: clamp(30px, 3.6vw, 46px);
 }
 .filters button{
-  padding: 9px 17px;
-  border: 1px solid var(--line);
+  /* 44px tall so the touch target clears WCAG 2.5.5, and a 3:1 outline
+     because the border is the only thing that says "control" here. */
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--line-ctrl);
   border-radius: var(--r-pill);
-  background: transparent;
+  background: var(--paper);
   font-size: 12.5px; font-weight: 600; letter-spacing: -.01em;
-  color: var(--ink-45);
+  color: var(--ink-70);
   cursor: pointer;
   transition: background .26s var(--ease), color .26s var(--ease), border-color .26s var(--ease);
 }
@@ -731,7 +751,7 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
 
 .card__flag{
   display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--f-mono); font-size: 9.5px;
+  font-family: var(--f-mono); font-size: 11px;
   letter-spacing: .12em; text-transform: uppercase; color: var(--sage);
 }
 .card__flag::before{ content: ""; width: 16px; height: 1px; background: var(--sage); flex: none; }
@@ -752,7 +772,7 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
   overflow: hidden;
 }
 .card .tag-row{ gap: 6px; margin-top: 3px; }
-.card .tag{ font-size: 9.5px; padding: 5px 10px 6px; }
+.card .tag{ font-size: 11px; padding: 5px 10px 6px; }
 
 /* -------------------------------------------------------------- 11. process */
 .process{
@@ -1046,7 +1066,7 @@ a.orb:active{ transform: rotate(-12deg) scale(.97); }
 .factsheet dl{ margin: 0; display: grid; }
 .factsheet dl > div{ padding: 15px 0; border-bottom: 1px solid var(--line); }
 .factsheet dt{
-  font-family: var(--f-mono); font-size: 10px; font-weight: 500;
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
   letter-spacing: .11em; text-transform: uppercase; color: var(--clay);
   margin-bottom: 7px;
 }
@@ -1399,16 +1419,293 @@ dialog.lightbox button{
 }
 
 /* ----------------------------------------------------------- 18. reveal fx */
+/* The hidden state is painted by CSS the moment the inline head script sets
+   .js, which means a stylesheet that arrives without its script would leave the
+   page blank forever. The failsafe animation resolves the element on its own
+   after four seconds, so nothing here depends on site.js surviving the trip. */
 .js .reveal{
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .7s var(--ease), transform .7s var(--ease);
+  animation: reveal-failsafe .01s linear 4s forwards;
 }
-.js .reveal.is-in{ opacity: 1; transform: none; }
+.js .reveal.is-in{ opacity: 1; transform: none; animation: none; }
+/* Resolved at first paint rather than by a scroll: no fade, because there was
+   never a scroll to reward and the reader is waiting on this. */
+.js .reveal.is-instant{ transition: none; }
+@keyframes reveal-failsafe{ to{ opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce){
   .js .reveal{ opacity: 1; transform: none; transition: none; }
   *, *::before, *::after{ animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
+
+/* -------------------------------------------------- 20. specimen blocks */
+/* The design-system case study documents this stylesheet from inside it.
+   Every specimen below is drawn by the same tokens it names, so the page is
+   the spec sheet rather than a picture of one. */
+
+.filters__status{
+  margin: -18px 0 clamp(24px, 3vw, 34px);
+  font-family: var(--f-mono);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-45);
+}
+
+/* --- colour atoms --------------------------------------------------------- */
+.swatches{
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+}
+.swatch{ margin: 0; }
+.swatch__chip{
+  display: block; height: 76px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+}
+/* A hairline token is not a surface. Showing --line as a 76px block of colour
+   would misrepresent the one thing it does, so those two are drawn as the rules
+   they actually are, on the ground they actually sit on. */
+.swatch__chip--rule{
+  display: grid; align-content: center; gap: 15px;
+  padding: 0 14px;
+  background: var(--bone);
+}
+.swatch__chip--rule i{ display: block; height: 1px; }
+.swatch figcaption{ display: grid; gap: 3px; padding-top: 11px; }
+.swatch__token{
+  font-family: var(--f-mono); font-size: 11.5px; font-weight: 500;
+  letter-spacing: .02em; color: var(--ink);
+}
+.swatch__hex{
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--ink-45);
+}
+.swatch__use{
+  font-family: var(--f-text); font-size: 13px; line-height: 1.42;
+  color: var(--ink-70); margin-top: 3px;
+}
+.swatch__ratio{
+  justify-self: start; margin-top: 6px;
+  padding: 4px 10px 5px;
+  border-radius: var(--r-pill);
+  font-family: var(--f-mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: .07em;
+  background: var(--sage-tint); color: var(--sage-deep);
+}
+.swatch__ratio[data-pass="no"]{ background: var(--clay-tint); color: var(--clay-deep); }
+
+/* --- the type ramp -------------------------------------------------------- */
+.ramp{ display: grid; }
+.ramp__row{
+  display: grid; gap: 6px clamp(20px, 3vw, 44px);
+  grid-template-columns: 1fr;
+  align-items: baseline;
+  padding: clamp(18px, 2.2vw, 26px) 0;
+  border-bottom: 1px solid var(--line);
+}
+.ramp__row:first-child{ border-top: 1px solid var(--line); }
+@media (min-width: 760px){
+  .ramp__row{ grid-template-columns: minmax(0, 168px) minmax(0, 1fr); }
+}
+.ramp__spec{ display: grid; gap: 2px; align-content: start; }
+.ramp__spec b{
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .11em; text-transform: uppercase; color: var(--clay);
+}
+.ramp__spec span{ font-size: 11.5px; line-height: 1.45; color: var(--ink-45); }
+.ramp__spec span:first-of-type{ font-family: var(--f-mono); letter-spacing: .02em; }
+.ramp__specimen{ margin: 0; overflow-wrap: anywhere; }
+/* The display step at its real size would run off a case-study column, so it
+   is shown at the size the column can hold and labelled with the true clamp. */
+.ramp__specimen.display{ font-size: clamp(2.6rem, 8vw, 4.6rem); line-height: .86; }
+.ramp__specimen.h-xl{ font-size: clamp(1.9rem, 5vw, 2.9rem); }
+.ramp__specimen.eyebrow{ color: var(--ink-70); }
+.ramp__specimen.prose{ color: var(--ink-70); }
+
+/* --- component atoms ------------------------------------------------------ */
+.atoms{
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
+}
+.atom{
+  display: grid; align-content: start; gap: 12px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--paper);
+}
+.atom__head{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.atom__head b{
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .11em; text-transform: uppercase; color: var(--clay);
+}
+.atom__head code{
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--ink-45);
+}
+.atom__stage{
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  min-height: 62px;
+  padding: 14px;
+  border-radius: var(--r-md);
+  background: var(--bone);
+}
+.atom__note{
+  margin: 0;
+  font-family: var(--f-text); font-size: 13.5px; line-height: 1.48;
+  color: var(--ink-70);
+}
+/* Specimens are exhibits, not controls: nothing here should look clickable. */
+.atom__stage .pill,
+.atom__stage .tag,
+.atom__stage .orb,
+.atom__stage button{ pointer-events: none; }
+.atom__stage .orb{ width: 46px; height: 46px; }
+.atom__stage .orb svg{ width: 17px; height: 17px; }
+
+/* --- the visitor journey -------------------------------------------------- */
+.journey{ list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.jstage{
+  display: grid; gap: 10px;
+  padding: clamp(20px, 2.4vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--paper);
+}
+.jstage__code{
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .12em; color: var(--sage);
+}
+.jstage h3{
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  letter-spacing: -.026em; line-height: 1.14;
+}
+.jstage__goal{
+  margin: 0;
+  font-family: var(--f-text); font-size: 1rem; line-height: 1.5;
+  color: var(--ink-70);
+}
+.jstage__rows{ display: grid; gap: 0; margin: 6px 0 0; }
+.jstage__rows > div{
+  display: grid; gap: 4px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 720px){
+  .jstage__rows > div{ grid-template-columns: minmax(0, 210px) minmax(0, 1fr); gap: 4px 26px; }
+}
+.jstage__rows dt{
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-45);
+}
+.jstage__rows dd{ margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-70); }
+.jstage__risk dt{ color: var(--clay); }
+
+/* --- before and after ----------------------------------------------------- */
+.compare{ display: grid; }
+.compare__head{ display: none; }
+.compare__row{
+  display: grid; gap: 8px;
+  grid-template-columns: 1fr;
+  padding: clamp(16px, 2vw, 22px) 0;
+  border-bottom: 1px solid var(--line);
+}
+.compare__row:first-of-type{ border-top: 1px solid var(--line); }
+.compare__dim{
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .11em; text-transform: uppercase; color: var(--clay);
+}
+.compare__was, .compare__now{
+  display: grid; gap: 4px;
+  font-size: 14px; line-height: 1.55;
+}
+.compare__was{ color: var(--ink-45); }
+.compare__now{ color: var(--ink); }
+.compare__was em, .compare__now em{
+  font-family: var(--f-mono); font-style: normal;
+  font-size: 10.5px; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+}
+.compare__was em{ color: var(--ink-45); }
+.compare__now em{ color: var(--sage); }
+@media (min-width: 880px){
+  .compare__head{
+    display: grid;
+    grid-template-columns: minmax(0, 200px) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 26px;
+    padding-bottom: 12px;
+  }
+  .compare__head span{
+    font-family: var(--f-mono); font-size: 10.5px; font-weight: 500;
+    letter-spacing: .11em; text-transform: uppercase; color: var(--ink-45);
+  }
+  .compare__row{
+    grid-template-columns: minmax(0, 200px) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 26px; align-items: start;
+  }
+  /* The column headers carry the labels once the table has columns. */
+  .compare__was em, .compare__now em{ display: none; }
+}
+.compare__foot{ margin-top: 18px; }
+
+/* --- the audit ------------------------------------------------------------ */
+.findings{ list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.finding{
+  display: grid; gap: 14px;
+  grid-template-columns: 1fr;
+  padding: clamp(18px, 2.2vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--paper);
+}
+@media (min-width: 780px){
+  .finding{ grid-template-columns: minmax(0, 168px) minmax(0, 1fr); gap: 28px; }
+}
+.finding__meta{ display: flex; flex-wrap: wrap; align-content: start; gap: 7px; }
+.finding__id{
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .12em; color: var(--ink-45);
+  width: 100%;
+}
+.finding__sev, .finding__state{
+  padding: 4px 10px 5px;
+  border-radius: var(--r-pill);
+  font-family: var(--f-mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: .07em; text-transform: uppercase;
+}
+/* Severity is never colour alone: the word is the label, the colour agrees. */
+.finding__sev[data-sev="high"]{ background: var(--clay-deep); color: var(--paper); }
+.finding__sev[data-sev="medium"]{ background: var(--clay-tint); color: var(--clay-deep); }
+.finding__sev[data-sev="low"]{ background: var(--bone-deep); color: var(--ink-70); }
+.finding__state{ border: 1px solid var(--line-ctrl); color: var(--ink-70); }
+.finding[data-state="fixed"] .finding__state{
+  background: var(--sage-deep); border-color: var(--sage-deep); color: var(--paper);
+}
+.finding__body h3{
+  margin: 0 0 6px;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  letter-spacing: -.02em; line-height: 1.2;
+}
+.finding__heur{
+  margin: 0 0 12px;
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: .06em; color: var(--sage);
+}
+.finding__body dl{ margin: 0; display: grid; gap: 0; }
+.finding__body dl > div{
+  display: grid; gap: 4px;
+  padding: 11px 0 0;
+}
+@media (min-width: 620px){
+  .finding__body dl > div{ grid-template-columns: minmax(0, 108px) minmax(0, 1fr); gap: 4px 20px; }
+}
+.finding__body dt{
+  font-family: var(--f-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-45);
+}
+.finding__body dd{ margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-70); }
 
 /* --------------------------------------------------------------- 19. print */
 @media print{

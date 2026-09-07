@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>document.documentElement.className+=" js"</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>This portfolio, audited and rebuilt · Lourdes Pedaci</title>
+<meta name="description" content="I ran the same audit on my portfolio that I run on a client product: heuristics, accessibility, journey, measured contrast. This is the previous build, the eleven findings, the design system that replaced it, and the numbers that say whether it worked.">
+<meta name="author" content="Lourdes Pedaci">
+<meta name="theme-color" content="#F7F4EC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23BE5735'/%3E%3Cg fill='none' stroke='%23FBF8F1' stroke-width='6.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 17v13.5a5 5 0 0 0 5 5h4.5'/%3E%3Cpath d='M38 47V19h4a7 7 0 0 1 0 14h-4'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="canonical" href="https://lpedaci.github.io/portfolio/work/portfolio-redesign/">
+<link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/work/portfolio-redesign/">
+<link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/es/work/portfolio-redesign/">
+<link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lourdes Pedaci">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://lpedaci.github.io/portfolio/work/portfolio-redesign/">
+<meta property="og:title" content="This portfolio, audited and rebuilt · Lourdes Pedaci">
+<meta property="og:description" content="I ran the same audit on my portfolio that I run on a client product: heuristics, accessibility, journey, measured contrast. This is the previous build, the eleven findings, the design system that replaced it, and the numbers that say whether it worked.">
+<meta property="og:image" content="https://lpedaci.github.io/portfolio/assets/img/og-portfolio-redesign.jpg">
+<meta property="og:image:secure_url" content="https://lpedaci.github.io/portfolio/assets/img/og-portfolio-redesign.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="This portfolio, audited and rebuilt. A heuristic and accessibility audit of my own site, and the design system that came out of it. A case study by Lourdes Pedaci.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="This portfolio, audited and rebuilt · Lourdes Pedaci">
+<meta name="twitter:description" content="I ran the same audit on my portfolio that I run on a client product: heuristics, accessibility, journey, measured contrast. This is the previous build, the eleven findings, the design system that replaced it, and the numbers that say whether it worked.">
+<meta name="twitter:image" content="https://lpedaci.github.io/portfolio/assets/img/og-portfolio-redesign.jpg">
+<meta name="twitter:image:alt" content="This portfolio, audited and rebuilt. A heuristic and accessibility audit of my own site, and the design system that came out of it. A case study by Lourdes Pedaci.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead__bar">
+    <a class="brand" href="../../" aria-label="Lourdes Pedaci">
+      <svg class="brand__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+      <span class="brand__name">Lourdes Pedaci<small>Learning Experience Designer · UX · Data</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Menu">
+      <a href="../../#practice">Practice</a>
+      <a href="../../#work">Work</a>
+      <a href="../../#process">Process</a>
+      <a href="../../#about">About</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+
+    <div class="masthead__end">
+      <span class="status"><i></i>Open to work</span>
+      <div class="langswap" role="group" aria-label="Language">
+        <a href="../../work/portfolio-redesign/" hreflang="en" aria-current="true">EN</a>
+        <a href="../../es/work/portfolio-redesign/" hreflang="es" aria-current="false">ES</a>
+      </div>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="sheet">
+        <span></span><span></span><span></span>
+        <span class="sr">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Menu">
+  <a class="sheet__link" href="../../#practice">Practice<em>01</em></a>
+  <a class="sheet__link" href="../../#work">Work<em>02</em></a>
+  <a class="sheet__link" href="../../#process">Process<em>03</em></a>
+  <a class="sheet__link" href="../../#about">About<em>04</em></a>
+  <a class="sheet__link" href="../../#contact">Contact<em>05</em></a>
+  <div class="sheet__foot">
+    <a class="pill pill--ink" href="https://drive.google.com/file/d/1oC0_9CM-aP2DHHQepNc5uss5lxxekds_/view" target="_blank" rel="noopener">View résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+    <a class="pill" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+    <a class="pill" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="case-hero shell">
+  <div class="case-hero__top">
+    <a class="pill pill--ghost" href="../../#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12h-14"/><path d="M11 6.5 5.5 12l5.5 5.5"/></svg> All projects</a>
+    <span class="tag num">01 / 2026</span>
+  </div>
+
+  <div class="case-hero__grid">
+    <div>
+      <p class="eyebrow eyebrow--clay reveal">UX and product · Data and research · Learning design</p>
+      <h1 class="h-xl reveal" style="margin-top:18px">This portfolio, audited and rebuilt</h1>
+      <p class="case-hero__sub reveal">A heuristic and accessibility audit of my own site, and the design system that came out of it</p>
+    </div>
+    <div class="tag-row reveal"><span class="tag">UX Audit</span><span class="tag">Design System</span><span class="tag">WCAG 2.2</span><span class="tag">HTML/CSS/JS</span></div>
+  </div>
+</section>
+
+<div class="shell case-body">
+  <aside class="factsheet reveal">
+    <h2>Project facts</h2>
+    <dl>
+      <div><dt>Role</dt><dd>UX research, heuristic audit, design system, front-end, build tooling</dd></div>
+      <div><dt>Timeline</dt><dd>Audit and rebuild, 2026 · v3 shipped 2025, version 2.0 live since 2026</dd></div>
+      <div><dt>Context</dt><dd>My own portfolio, lpedaci.github.io/portfolio, in English and Spanish</dd></div>
+      <div><dt>Stack</dt><dd><div class="tag-row"><span class="tag">HTML/CSS/JS</span><span class="tag">Node</span><span class="tag">GitHub Pages</span><span class="tag">Figma</span><span class="tag">Headless Chrome</span></div></dd></div>
+      <div><dt>Methods</dt><dd><div class="tag-row"><span class="tag">Nielsen heuristics</span><span class="tag">WCAG 2.2 AA</span><span class="tag">Journey mapping</span><span class="tag">Atomic design</span><span class="tag">Design tokens</span></div></dd></div>
+    </dl>
+    <div class="factsheet__links">
+      <a class="pill pill--ghost" href="https://lpedaci.github.io/portfolio/" target="_blank" rel="noopener">The site being audited <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+      <a class="pill pill--ghost" href="https://github.com/lpedaci/portfolio" target="_blank" rel="noopener">Source on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+    </div>
+  </aside>
+
+  <div class="blocks">
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Overview</h2>
+      
+    </div>
+    <div class="prose"><p>A portfolio is the only product a designer ships where she is client, user researcher and developer at once, which is exactly why it is the one that never gets audited. I audited mine. Same protocol I use on a client product: a heuristic pass, a WCAG 2.2 pass with the contrast ratios actually measured rather than eyeballed, a journey map of the person I am really writing for, and then a rebuild against a documented design system instead of against my own taste on the day.</p><p>What follows is the whole chain, in order: the journey the visitor actually walks, what the previous build did to her, the system that replaced it down to the atoms, the eleven findings the audit produced on the new build, and what got fixed. The specimens on this page are not screenshots. They are drawn by the same stylesheet that draws the rest of the site, which means they cannot quietly go out of date the way an exported style guide always does.</p></div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>The journey, five stages</h2>
+      <p class="block__note">Five stages, each with a goal and a failure mode. Each stage names what the visitor is doing, what the interface owes her at that moment, and the specific way the previous build let her down.</p>
+    </div>
+    <ol class="journey">
+      <li class="jstage">
+        <span class="jstage__code num">01</span>
+        <h3>Arrive</h3>
+        <p class="jstage__goal">Decide in under ten seconds whether this person is worth four minutes.</p>
+        <dl class="jstage__rows">
+          <div><dt>Doing</dt><dd>Lands from LinkedIn, a CV link or a referral. Scans the top of the screen and nothing else.</dd></div>
+          <div><dt>What the site answers with</dt><dd>Three verbs as the headline, one sentence of what I actually do, two numbers that can be checked, and four actions in priority order: résumé, LinkedIn, GitHub, work.</dd></div>
+          <div class="jstage__risk"><dt>Where it breaks</dt><dd>The previous build opened with my name set as the headline and a two-hundred-word paragraph of role description underneath. A name is not a value proposition, and nobody reads two hundred words to find one.</dd></div>
+        </dl>
+      </li>
+      <li class="jstage">
+        <span class="jstage__code num">02</span>
+        <h3>Scan</h3>
+        <p class="jstage__goal">Work out the shape of the practice without reading a case study.</p>
+        <dl class="jstage__rows">
+          <div><dt>Doing</dt><dd>Skims for category words: is this an instructional designer, a UX designer, or a data person.</dd></div>
+          <div><dt>What the site answers with</dt><dd>Three named practices with their tooling, then a filterable grid where every card carries its discipline, year and stack before it is opened.</dd></div>
+          <div class="jstage__risk"><dt>Where it breaks</dt><dd>The previous build had no categories and no filter. Ten projects arrived as one undifferentiated list, so the answer to &quot;is this a UX person&quot; cost ten clicks instead of one.</dd></div>
+        </dl>
+      </li>
+      <li class="jstage">
+        <span class="jstage__code num">03</span>
+        <h3>Choose</h3>
+        <p class="jstage__goal">Pick the one project closest to the role being filled.</p>
+        <dl class="jstage__rows">
+          <div><dt>Doing</dt><dd>Compares three or four cards against the job she is hiring for.</dd></div>
+          <div><dt>What the site answers with</dt><dd>Every cover cropped to one 5:3 frame so the grid reads as one band, a three-line summary clamped to a fixed height so cards stay comparable, and a real URL per project so she can open four in four tabs.</dd></div>
+          <div class="jstage__risk"><dt>Where it breaks</dt><dd>The previous build opened case studies as modal dialogs. No URL, no back button, no second tab, nothing to send to a colleague, and nothing for a search engine to index.</dd></div>
+        </dl>
+      </li>
+      <li class="jstage">
+        <span class="jstage__code num">04</span>
+        <h3>Read</h3>
+        <p class="jstage__goal">Find the decisions, not the deliverables.</p>
+        <dl class="jstage__rows">
+          <div><dt>Doing</dt><dd>Reads the factsheet first, then jumps to the outcome, then goes back for the middle if the outcome earned it.</dd></div>
+          <div><dt>What the site answers with</dt><dd>A sticky factsheet holding role, timeline, context, stack and methods at all times, a single measure for the body text, and the outcome as its own closing block.</dd></div>
+          <div class="jstage__risk"><dt>Where it breaks</dt><dd>In a modal the factsheet scrolled away with everything else, so by paragraph four there was no longer anything on screen saying what my role on the project had been.</dd></div>
+        </dl>
+      </li>
+      <li class="jstage">
+        <span class="jstage__code num">05</span>
+        <h3>Act</h3>
+        <p class="jstage__goal">Get in touch, or file the link somewhere she will find it again.</p>
+        <dl class="jstage__rows">
+          <div><dt>Doing</dt><dd>Copies the address, opens LinkedIn, or pastes the link into a hiring channel.</dd></div>
+          <div><dt>What the site answers with</dt><dd>The same contact block closes every page, so the exit is never more than one screen away. Each URL carries its own share card in its own language, built from these tokens.</dd></div>
+          <div class="jstage__risk"><dt>Where it breaks</dt><dd>The previous build had one share card for the whole site, so a link to a specific project previewed as the generic homepage and lost the only thing that made it worth sending.</dd></div>
+        </dl>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>The baseline and what replaced it</h2>
+      <p class="block__note">Version 3 was a single hand-written index.html: one page, ten projects in modals, both languages shipped in the same document and toggled with display:none. It worked. It just could not be linked to, indexed, shared or extended. Every row below is a measured difference, not an impression.</p>
+    </div>
+    <div class="compare" role="table" aria-label="The baseline and what replaced it">
+      <div class="compare__head" role="row">
+        <span role="columnheader">Dimension</span>
+        <span role="columnheader">v3</span>
+        <span role="columnheader">2.0</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Addressable pages</span>
+        <span class="compare__was" role="cell"><em>v3</em>One URL for the whole portfolio. Case studies lived in ten &lt;dialog&gt; elements with no route of their own.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>24 real URLs in the sitemap: eleven case studies and one index, each in English and Spanish, each server-rendered at build time.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Bilingual model</span>
+        <span class="compare__was" role="cell"><em>v3</em>Both languages in one document, switched with html[data-lang] and display:none. Every reader downloaded the language they were not reading, and search engines saw one page in two languages at once.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Separate document trees at / and /es/, joined by hreflang and x-default, with canonical URLs and per-language Open Graph locales. One content source in src/data, two outputs.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Content source</span>
+        <span class="compare__was" role="cell"><em>v3</em>Copy, markup and styling interleaved across 94 KB of hand-edited HTML. Changing a project title meant editing it in two places and hoping.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Content is data. Every string is a { en, es } pair in src/data, every page is a function of that data, and a build emits both trees. A typo is fixed once.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Landmarks and skip link</span>
+        <span class="compare__was" role="cell"><em>v3</em>No &lt;main&gt; element and no skip link, so a keyboard reader tabbed through the entire header on every visit with no way past it.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>&lt;main id=&quot;main&quot;&gt; on every page with a skip link as the first focusable element, one h1 per document, and an unbroken h2 to h3 hierarchy.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Finding a project</span>
+        <span class="compare__was" role="cell"><em>v3</em>One unlabelled list of ten. No categories, no filter, no way to tell a UX project from a motion project without opening it.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Five categories, a filter bar with aria-pressed state, a discipline flag on every card, and a status message that announces the new result count.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Share previews</span>
+        <span class="compare__was" role="cell"><em>v3</em>One static og-preview.jpg for the entire site, exported by hand from a design tool and already out of date.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>24 share cards, one per URL per language, painted by headless Chrome from the same tokens as the stylesheet. Change the palette, re-run the renderer, every card follows.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Structured data</span>
+        <span class="compare__was" role="cell"><em>v3</em>None. No JSON-LD, no canonical, no hreflang, no sitemap, no robots.txt.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Person schema on the index, CreativeWork on every case study, plus canonical, hreflang, sitemap.xml and robots.txt emitted by the build.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Home document weight</span>
+        <span class="compare__was" role="cell"><em>v3</em>94 KB of HTML, because ten modal case studies and two languages all shipped on first load whether or not anyone opened them.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Roughly 37 KB for the index. The case studies are separate documents, so nobody pays for the nine they did not open.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Layout stability</span>
+        <span class="compare__was" role="cell"><em>v3</em>Images sized by CSS with no reserved box, so covers and galleries pushed the text down as they arrived.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>aspect-ratio on every media container: cards, portrait, galleries and embeds. The box exists before the file does, so nothing moves.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Design decisions</span>
+        <span class="compare__was" role="cell"><em>v3</em>Values chosen per component and repeated by hand. Four different border radii, three greys that were nearly the same grey.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>One token layer at the top of the stylesheet. Colour, radius, type, rhythm and motion each have a named source, and the case study below is generated from it.</span>
+      </div>
+    </div>
+    <p class="block__note compare__foot">The one number that went the other way: the stylesheet grew from 361 lines to about 1,700. That is the honest cost of a system. What it buys is that the next page costs almost nothing, and this one was built without writing a single new colour.</p>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>The system, from the ground up</h2>
+      
+    </div>
+    <div class="prose"><p>Atomic design is the organising idea, but the honest version of it: tokens are the only thing anyone edits, atoms are built from tokens and nothing else, molecules combine atoms without inventing new values, and organisms are the page sections. If a component needs a value that is not in the token layer, either the token layer is wrong or the component is. Both are worth stopping for.</p><p>Everything below this line is a live specimen. The swatches are the declared custom properties, the type ramp is set in the steps it names, and the atoms are the same classes the masthead and the work grid use. Nothing here was exported, so nothing here can lie.</p></div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Level 0 · Colour tokens</h2>
+      <p class="block__note">Four families and a rule for each. Ground is paper. Ink is everything you read. Clay is the editorial voice and appears only on the stressed word, the eyebrow and the selection. Sage is state and behaviour: every figure, every hover, every selected thing. The ratio on each chip is the measured contrast against the bone ground; 4.5 is the AA floor for body text. The one value below the line is --line, and it is meant to be there: a decorative divider is exempt, which is exactly why the audit added a second border token for the controls.</p>
+    </div>
+    <div class="swatches">
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#F7F4EC"></span>
+        <figcaption>
+          <b class="swatch__token">--bone</b>
+          <span class="swatch__hex num">#F7F4EC</span>
+          <span class="swatch__use">The ground. Every page starts here.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#FDFBF6"></span>
+        <figcaption>
+          <b class="swatch__token">--paper</b>
+          <span class="swatch__hex num">#FDFBF6</span>
+          <span class="swatch__use">Raised surfaces: cards, pills, the masthead.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#ECE5D7"></span>
+        <figcaption>
+          <b class="swatch__token">--bone-deep</b>
+          <span class="swatch__hex num">#ECE5D7</span>
+          <span class="swatch__use">Recessed surfaces and image placeholders.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#17150F"></span>
+        <figcaption>
+          <b class="swatch__token">--ink</b>
+          <span class="swatch__hex num">#17150F</span>
+          <span class="swatch__use">Headlines and primary action.</span>
+          <span class="swatch__ratio num" data-pass="yes">16.6:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#4A463A"></span>
+        <figcaption>
+          <b class="swatch__token">--ink-70</b>
+          <span class="swatch__hex num">#4A463A</span>
+          <span class="swatch__use">Body copy and lead paragraphs.</span>
+          <span class="swatch__ratio num" data-pass="yes">8.6:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#6F6959"></span>
+        <figcaption>
+          <b class="swatch__token">--ink-45</b>
+          <span class="swatch__hex num">#6F6959</span>
+          <span class="swatch__use">Metadata, captions, quiet labels.</span>
+          <span class="swatch__ratio num" data-pass="yes">5.0:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#965E44"></span>
+        <figcaption>
+          <b class="swatch__token">--clay</b>
+          <span class="swatch__hex num">#965E44</span>
+          <span class="swatch__use">The editorial voice. Eyebrows and the stressed word.</span>
+          <span class="swatch__ratio num" data-pass="yes">4.8:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#594534"></span>
+        <figcaption>
+          <b class="swatch__token">--clay-deep</b>
+          <span class="swatch__hex num">#594534</span>
+          <span class="swatch__use">Clay on a filled surface, and high-severity labels.</span>
+          <span class="swatch__ratio num" data-pass="yes">8.2:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#EAD9CD"></span>
+        <figcaption>
+          <b class="swatch__token">--clay-tint</b>
+          <span class="swatch__hex num">#EAD9CD</span>
+          <span class="swatch__use">Clay as a ground. Carries ink at 13.3:1.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#596959"></span>
+        <figcaption>
+          <b class="swatch__token">--sage</b>
+          <span class="swatch__hex num">#596959</span>
+          <span class="swatch__use">State and behaviour. Figures, hovers, selection.</span>
+          <span class="swatch__ratio num" data-pass="yes">5.3:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#3F4B3F"></span>
+        <figcaption>
+          <b class="swatch__token">--sage-deep</b>
+          <span class="swatch__hex num">#3F4B3F</span>
+          <span class="swatch__use">Active nav, availability, resolved findings.</span>
+          <span class="swatch__ratio num" data-pass="yes">6.3:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#D3D8CE"></span>
+        <figcaption>
+          <b class="swatch__token">--sage-tint</b>
+          <span class="swatch__hex num">#D3D8CE</span>
+          <span class="swatch__use">Sage as a ground. Carries ink at 12.6:1.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#E2BB99"></span>
+        <figcaption>
+          <b class="swatch__token">--sand</b>
+          <span class="swatch__hex num">#E2BB99</span>
+          <span class="swatch__use">The hero mat. The only large area of warm colour.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip swatch__chip--rule"><i style="background:rgba(23,21,15,.14)"></i><i style="background:rgba(23,21,15,.14)"></i><i style="background:rgba(23,21,15,.14)"></i></span>
+        <figcaption>
+          <b class="swatch__token">--line</b>
+          <span class="swatch__hex num">rgba(23,21,15,.14)</span>
+          <span class="swatch__use">Structural hairlines: dividers, frames, rules.</span>
+          <span class="swatch__ratio num" data-pass="no">1.33:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip swatch__chip--rule"><i style="background:rgba(23,21,15,.46)"></i><i style="background:rgba(23,21,15,.46)"></i><i style="background:rgba(23,21,15,.46)"></i></span>
+        <figcaption>
+          <b class="swatch__token">--line-ctrl</b>
+          <span class="swatch__hex num">rgba(23,21,15,.46)</span>
+          <span class="swatch__use">The outline of anything clickable. Added by this audit.</span>
+          <span class="swatch__ratio num" data-pass="yes">3.01:1</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Level 0 · Type</h2>
+      <p class="block__note">Three families with three jobs. Archivo carries structure and voice, Newsreader carries anything meant to be read at length, JetBrains Mono carries anything that is really a label rather than a sentence. Every step is a clamp, so the ramp is continuous between 320 and 1440 pixels instead of jumping at breakpoints.</p>
+    </div>
+    <div class="ramp">
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>display</b>
+          <span class="num">clamp(3.1rem, 9.4vw, 9.2rem)</span>
+          <span>The home headline, once per site</span>
+        </div>
+        <p class="ramp__specimen display">measure</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>h-xl</b>
+          <span class="num">clamp(2.2rem, 6.2vw, 4.6rem)</span>
+          <span>Case study titles, the contact question</span>
+        </div>
+        <p class="ramp__specimen h-xl">This portfolio, audited</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>h-lg</b>
+          <span class="num">clamp(1.75rem, 4.2vw, 3.1rem)</span>
+          <span>Section headings on the index</span>
+        </div>
+        <p class="ramp__specimen h-lg">Three practices, one method</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>h-sm</b>
+          <span class="num">clamp(1.05rem, 1.7vw, 1.25rem)</span>
+          <span>Card titles, practice cells, process steps</span>
+        </div>
+        <p class="ramp__specimen h-sm">Learning experience design</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>lead</b>
+          <span class="num">clamp(1.08rem, 1.5vw, 1.36rem)</span>
+          <span>The paragraph under a heading. Newsreader, ink-70</span>
+        </div>
+        <p class="ramp__specimen lead">I do not separate pedagogy from interface, or interface from evidence.</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>prose</b>
+          <span class="num">clamp(1.02rem, 1.28vw, 1.2rem)</span>
+          <span>Case study body, held to a 68-character measure</span>
+        </div>
+        <p class="ramp__specimen prose">A serif at reading size, because a case study is read rather than scanned.</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>eyebrow</b>
+          <span class="num">clamp(10px, 1.05vw, 11.5px)</span>
+          <span>Section labels. Mono, .16em tracking, uppercase</span>
+        </div>
+        <p class="ramp__specimen eyebrow">Learning experience · UX · Data</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Level 1 · Atoms</h2>
+      <p class="block__note">Six atoms, and the whole interface is built from them. These are live: the same classes, the same tokens, the same stylesheet. Interaction is switched off here because a specimen that responds to a click is a control pretending to be documentation.</p>
+    </div>
+    <div class="atoms">
+      <article class="atom">
+        <header class="atom__head">
+          <b>Pill</b>
+          <code>.pill</code>
+        </header>
+        <div class="atom__stage"><span class="pill pill--ink">View résumé</span><span class="pill">LinkedIn</span><span class="pill pill--ghost">Work</span></div>
+        <p class="atom__note">The only button in the system, in three weights: ink for the one primary action, paper for secondary, ghost for tertiary. 44px tall, 3:1 outline, and a translateY on hover rather than a colour flash.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Tag</b>
+          <code>.tag</code>
+        </header>
+        <div class="atom__stage"><span class="tag">Figma</span><span class="tag">SCORM</span><span class="tag">Power BI</span></div>
+        <p class="atom__note">Never clickable, and shaped so it cannot be mistaken for a pill: mono, uppercase, ink-45, structural hairline rather than the control outline. Tags state a fact; pills do a thing.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Eyebrow</b>
+          <code>.eyebrow</code>
+        </header>
+        <div class="atom__stage"><span class="eyebrow eyebrow--clay">Practice / 01</span></div>
+        <p class="atom__note">The section label. Mono at .16em tracking, in clay when it opens a section and in ink-45 when it only orients. It is the one place a number is allowed to lead.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Figure</b>
+          <code>.num</code>
+        </header>
+        <div class="atom__stage"><span class="stat__value num" style="font-family:var(--f-text);font-style:italic;font-size:2.1rem;color:var(--sage)">+7</span><span class="stat__value num" style="font-family:var(--f-text);font-style:italic;font-size:2.1rem;color:var(--sage)">11</span></div>
+        <p class="atom__note">Every number in the system is sage, italic Newsreader, tabular. Colour does the categorising so a figure is recognisable as a figure before it is read.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Orb</b>
+          <code>.orb</code>
+        </header>
+        <div class="atom__stage"><span class="orb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span><span class="orb orb--sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.4c.7 4.3 2.3 5.9 6.6 6.6-4.3.7-5.9 2.3-6.6 6.6-.7-4.3-2.3-5.9-6.6-6.6 4.3-.7 5.9-2.3 6.6-6.6"/></svg></span></div>
+        <p class="atom__note">The icon-only affordance, 56px so it clears the touch minimum with room. Every orb that does something carries an aria-label, because a circle with an arrow in it is not a name.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Icon</b>
+          <code>icons.mjs</code>
+        </header>
+        <div class="atom__stage"><span style="display:flex;gap:14px;color:var(--ink)"><svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12h14"/><path d="m13 6.5 5.5 5.5L13 17.5"/></svg><svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg><svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8"/><path d="M12 3.6c2.2 2.3 3.3 5.2 3.3 8.4s-1.1 6.1-3.3 8.4c-2.2-2.3-3.3-5.2-3.3-8.4s1.1-6.1 3.3-8.4"/></svg></span></div>
+        <p class="atom__note">Fourteen icons, drawn on one 24px grid at one 1.7 stroke weight, so they read as one alphabet with the monogram. All are aria-hidden and none is an emoji. Every one inherits currentColor.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Level 1 · The other primitives</h2>
+      <p class="block__note">Colour and type get the attention, but these four are what keep a page from drifting.</p>
+    </div>
+    <dl class="deflist">
+      <div>
+        <dt>Rhythm</dt>
+        <dd>--shell is min(1320px, 100% - clamp(20px, 5vw, 76px)): one measurement decides the page width and its gutters together, so the margin is never set twice. --section is clamp(68px, 9.9vh, 133px) and --gap is clamp(20px, 2.6vw, 34px). Three values, and no page needs a fourth.</dd>
+      </div>
+      <div>
+        <dt>Radius</dt>
+        <dd>Five steps, and the large ones scale with the viewport so a 48px corner on a desktop panel does not stay 48px on a phone card. --r-pill 999px, --r-xl clamp(28px, 3.4vw, 48px), --r-lg clamp(20px, 2.4vw, 32px), --r-md 16px, --r-sm 10px.</dd>
+      </div>
+      <div>
+        <dt>Motion</dt>
+        <dd>One easing curve for the whole site, cubic-bezier(.22,.68,.24,1), and one base duration of .5s. Hovers run shorter than that, the scroll reveal runs longer, and nothing runs at all under prefers-reduced-motion. A second curve would be a second opinion about how this site moves.</dd>
+      </div>
+      <div>
+        <dt>Texture</dt>
+        <dd>A single inline SVG turbulence filter at .055 opacity, painted into the body background rather than laid over the content. Flat colour on a large area reads as plastic; a whisper of grain reads as paper. It costs 380 bytes and nothing sits above the content, so compositing stays cheap.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Levels 2 and 3 · Molecules and organisms</h2>
+      <p class="block__note">A molecule is atoms in an arrangement that means something. An organism is a section of a page. Neither is allowed to introduce a value the token layer does not already have.</p>
+    </div>
+    <dl class="deflist">
+      <div>
+        <dt>Card</dt>
+        <dd>Frame plus flag plus title plus clamped summary plus tag row. The frame is a fixed 5:3 crop and the summary is clamped to three lines, so ten cards of wildly different source material still make one comparable grid. The whole card is the link; there is no separate read more.</dd>
+      </div>
+      <div>
+        <dt>Factsheet</dt>
+        <dd>A definition list of role, timeline, context, stack and methods, sticky from 1000px up. It answers the four questions a reader has in the first ten seconds of a case study and keeps answering them while she scrolls, which is the single change that most improved how the case studies read.</dd>
+      </div>
+      <div>
+        <dt>Block</dt>
+        <dd>Nine content blocks plus the six specimen blocks written for this page. A case study is an array of blocks in src/data, never markup, so a project is described rather than laid out. Adding a new kind of evidence means adding one renderer, not editing eleven pages.</dd>
+      </div>
+      <div>
+        <dt>Masthead</dt>
+        <dd>Brand, five links, availability, language switch and a burger, on a floating pill that gains a shadow once the page scrolls. Below 1060px the links become a full-screen sheet; the layer order puts the sheet under the bar so the burger that closes it is never covered by what it opened.</dd>
+      </div>
+      <div>
+        <dt>Contact</dt>
+        <dd>The same organism closes every page in the site, in a full and a compact variant. Beside it, the practice drawn as a circuit: three nodes, three edges and a signal moving between them, because the argument of the whole site is that the three disciplines are one loop.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>How the audit was run</h2>
+      <p class="block__note">Five passes, in this order, because each one only makes sense once the previous has been settled. Auditing colour before you know who the reader is produces a compliant page nobody needed.</p>
+    </div>
+    <div class="roadmap">
+      <article class="rm-step">
+        <span class="rm-step__code">A01</span>
+        <h3>Frame the reader</h3>
+        <p>One sentence naming who arrives, with how much time, on what device, in which language. Everything after this is measured against it.</p>
+      </article>
+      <article class="rm-step">
+        <span class="rm-step__code">A02</span>
+        <h3>Walk the journey</h3>
+        <p>Five stages, each with a goal and a failure mode. Findings that do not attach to a stage are opinions.</p>
+      </article>
+      <article class="rm-step">
+        <span class="rm-step__code">A03</span>
+        <h3>Heuristic pass</h3>
+        <p>Nielsen against every stage: visibility of status, match with the real world, recognition over recall, consistency, aesthetic restraint.</p>
+      </article>
+      <article class="rm-step">
+        <span class="rm-step__code">A04</span>
+        <h3>Measure, do not judge</h3>
+        <p>Contrast computed from the tokens rather than estimated. Target sizes read from the live DOM. Heading order, landmarks and alt text enumerated, not spot-checked.</p>
+      </article>
+      <article class="rm-step">
+        <span class="rm-step__code">A05</span>
+        <h3>Fix or record</h3>
+        <p>Each finding is either shipped in this pass or written down with the reason it was not. A backlog is a decision; an unmentioned finding is a hole.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>The findings</h2>
+      <p class="block__note">Eleven findings on the live 2.0 build, severity first. Seven were fixed in this pass and shipped with this page; four are recorded with the reason they were not. Everything here was measured, and the evidence column says how.</p>
+    </div>
+    <ol class="findings">
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F01</span>
+          <span class="finding__sev" data-sev="high">High</span>
+          <span class="finding__state">Fixed</span>
+        </div>
+        <div class="finding__body">
+          <h3>The scroll reveal was hiding the content above the fold</h3>
+          <p class="finding__heur">Visibility of system status · WCAG 2.2.1 · Largest Contentful Paint</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>The rule .js .reveal { opacity: 0 } is painted the moment an inline head script sets the js class, and it applies to the h1, the lead and the hero panel. A screenshot of /work/edulabs/ taken during load caught the title, the subtitle and the whole factsheet at zero opacity. Worse, if site.js failed to arrive, the page stayed blank permanently and silently.</dd></div>
+            <div><dt>Resolution</dt><dd>The reveal is now a scroll reward and nothing else. Anything already inside the viewport at first paint is marked visible synchronously and never handed to the observer. A CSS keyframe resolves any remaining element after four seconds, so the page no longer depends on its own JavaScript surviving the trip.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F02</span>
+          <span class="finding__sev" data-sev="high">High</span>
+          <span class="finding__state">Fixed</span>
+        </div>
+        <div class="finding__body">
+          <h3>The mobile menu opened without ever handing over focus</h3>
+          <p class="finding__heur">User control and freedom · WCAG 2.1.2 No Keyboard Trap · 2.4.3 Focus Order</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>The sheet is position: fixed with inset: 0, so it covers everything, but it carried no role, no aria-modal, and no Tab cycle: tabbing past the last link walked out of the overlay into content the reader could not see. Writing a test for that trap turned up a worse bug under it. The sheet transitioned visibility symmetrically with its fade, so for the length of the transition it still computed as hidden, and an element inside a hidden subtree cannot take focus. The focus() call that was meant to hand the reader the menu was hitting an unfocusable element and returning quietly. Measured in headless Chrome at 390px: the sheet opened, and focus stayed on the document body. Every time, since the sheet was written.</dd></div>
+            <div><dt>Resolution</dt><dd>visibility is now delayed only on the way out, so it flips to visible instantly on open and the fade is still seen on close. Then role=&quot;dialog&quot; and aria-modal=&quot;true&quot; with the menu as its accessible name, and a Tab cycle that includes the burger, so the control that closes the sheet is inside the loop rather than behind it. Focus returns to the burger on every close path, not only on Escape. Verified at 390px: focus lands on the first link, Tab and Shift+Tab both wrap, Escape closes and restores focus, and page scroll is released.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F03</span>
+          <span class="finding__sev" data-sev="high">High</span>
+          <span class="finding__state">Fixed</span>
+        </div>
+        <div class="finding__body">
+          <h3>Filtering the work grid was silent</h3>
+          <p class="finding__heur">Visibility of system status · WCAG 4.1.3 Status Messages</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>The filter bar toggles the hidden attribute on eleven cards. A sighted reader sees the grid collapse; a screen-reader reader hears the button state change to pressed and nothing else. There was no live region anywhere in the document: zero elements with aria-live or role=&quot;status&quot;.</dd></div>
+            <div><dt>Resolution</dt><dd>One atomic status message above the grid, in the reader language, phrased as a sentence rather than a bare count: &quot;Showing 4 projects in UX and product.&quot; It is visible as well as announced, so it also helps a reader who filtered by accident.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F04</span>
+          <span class="finding__sev" data-sev="medium">Medium</span>
+          <span class="finding__state">Fixed</span>
+        </div>
+        <div class="finding__body">
+          <h3>Controls were outlined at 1.33:1</h3>
+          <p class="finding__heur">WCAG 1.4.11 Non-text Contrast</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>Every pill, filter button and the language switch drew its boundary with --line, rgba(23,21,15,.14). Composited over the bone ground that is 1.33:1. The text inside passed comfortably, but the edge that says this is a control did not, and the filter buttons had a transparent fill, so the border was the only thing identifying them at all.</dd></div>
+            <div><dt>Resolution</dt><dd>A second border token, --line-ctrl at .46 alpha, applied only to controls. It measures 3.01:1 on bone and 3.04:1 on paper, the lightest value that clears the threshold on both grounds. Structural hairlines keep --line: dividers and frames are decorative and 1.4.11 does not reach them.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F05</span>
+          <span class="finding__sev" data-sev="medium">Medium</span>
+          <span class="finding__state">Fixed</span>
+        </div>
+        <div class="finding__body">
+          <h3>Card metadata was set at 9.5 pixels</h3>
+          <p class="finding__heur">Legibility · Aesthetic and minimalist design</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>The discipline flag and the stack tags on every work card were 9.5px, and the factsheet term labels 10px. Uppercase mono at wide tracking survives small sizes better than most type, which is exactly how it got there, but these carry real information: the category, the year, the tools. They are not ornament.</dd></div>
+            <div><dt>Resolution</dt><dd>An 11px floor for anything that carries meaning. The tracking and the uppercase stay, so the texture of the card is unchanged; it is simply readable now at arm length rather than at reading distance.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F06</span>
+          <span class="finding__sev" data-sev="medium">Medium</span>
+          <span class="finding__state">Fixed</span>
+        </div>
+        <div class="finding__body">
+          <h3>Targets under 44 pixels in the header and the filter bar</h3>
+          <p class="finding__heur">WCAG 2.5.5 Target Size (Enhanced) · Fitts</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>Measured from the live DOM: navigation links 41px tall, filter buttons 39px, the EN and ES switches 41 by 31. All clear the 24px AA minimum of 2.5.8, so this was never a failure, but a language switch is exactly the control a reader uses in a hurry and it was the smallest thing on the page. The gap between filter buttons was 7px, under the 8px adjacent-target guidance.</dd></div>
+            <div><dt>Resolution</dt><dd>A 44px minimum height on navigation links and filter buttons, a 44px minimum width on each language switch, and the filter gap opened to 8px. Nothing moved visually: the extra height went into the hit area, not into the layout.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F07</span>
+          <span class="finding__sev" data-sev="low">Low</span>
+          <span class="finding__state">Fixed</span>
+        </div>
+        <div class="finding__body">
+          <h3>Filter buttons had no surface of their own</h3>
+          <p class="finding__heur">Consistency and standards · Recognition rather than recall</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>Every other control in the system sits on --paper. The filter buttons were transparent on --bone, which made them read as labels rather than as buttons until one was pressed. Their text was also ink-45, the metadata colour, rather than the ink-70 the system uses for anything you are meant to act on.</dd></div>
+            <div><dt>Resolution</dt><dd>Paper fill and ink-70 text, so a filter now looks like the same family of object as a pill. The sage pressed state is unchanged, and it was never carried by colour alone: aria-pressed says it too.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="open">
+        <div class="finding__meta">
+          <span class="finding__id num">F08</span>
+          <span class="finding__sev" data-sev="medium">Medium</span>
+          <span class="finding__state">Recorded</span>
+        </div>
+        <div class="finding__body">
+          <h3>Two language switches, with different affordances</h3>
+          <p class="finding__heur">Consistency and standards</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>The index offers the language twice: EN and ES as a labelled segmented control in the masthead, and a globe orb on the hero panel that does the same thing with an icon and no visible state. Two affordances for one action, and the second one cannot show which language you are already reading.</dd></div>
+            <div><dt>Resolution</dt><dd>Recorded rather than fixed. The globe is load-bearing visually: it balances the panel and it is the only element that overlaps the hero frame from above. Removing it is a composition decision, not an accessibility one, and it belongs in the next visual pass rather than in an audit fix.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="open">
+        <div class="finding__meta">
+          <span class="finding__id num">F09</span>
+          <span class="finding__sev" data-sev="low">Low</span>
+          <span class="finding__state">Recorded</span>
+        </div>
+        <div class="finding__body">
+          <h3>The filter state does not survive a reload or a link</h3>
+          <p class="finding__heur">User control and freedom · Deep linking</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>Filtering to Data and research produces a view a reader might reasonably want to send to a colleague, but the URL never changes, so the link arrives unfiltered and the back button does not undo the filter either.</dd></div>
+            <div><dt>Resolution</dt><dd>Recorded. The fix is a query parameter and a history entry, roughly fifteen lines. It is queued behind the visual pass because the filter is a convenience on an eleven-item grid, not a primary route.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="open">
+        <div class="finding__meta">
+          <span class="finding__id num">F10</span>
+          <span class="finding__sev" data-sev="low">Low</span>
+          <span class="finding__state">Recorded</span>
+        </div>
+        <div class="finding__body">
+          <h3>No dark mode</h3>
+          <p class="finding__heur">Flexibility and efficiency of use</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>The palette is committed to a light paper ground and there is no prefers-color-scheme branch. A reader whose system is set to dark gets the light site, correctly painted, but not what they asked for.</dd></div>
+            <div><dt>Resolution</dt><dd>Recorded as a deliberate decision rather than an omission. The whole identity is paper, grain and warm ink; an inverted version would be a second design system, not a variant, and a half-hearted one would be worse than none. It is worth doing properly or not at all.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="open">
+        <div class="finding__meta">
+          <span class="finding__id num">F11</span>
+          <span class="finding__sev" data-sev="low">Low</span>
+          <span class="finding__state">Recorded</span>
+        </div>
+        <div class="finding__body">
+          <h3>Fonts are fetched from a third party</h3>
+          <p class="finding__heur">Performance · Privacy</p>
+          <dl>
+            <div><dt>Evidence</dt><dd>Three families come from the Google Fonts CDN. It is the only third-party request the site makes, there is no analytics and no tracker of any kind, but it is still a round trip to another origin before the first heading can be painted in its real face.</dd></div>
+            <div><dt>Resolution</dt><dd>Recorded. Self-hosting the four weights actually used, subset to Latin, would remove the request and the preconnects and cut the critical path. It is a build-tooling task rather than a design one, which is the only reason it is not in this pass.</dd></div>
+          </dl>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>What the audit produced</h2>
+      
+    </div>
+    <div class="statgrid">
+      <div><b class="num">24</b><span>indexable URLs, up from one</span></div>
+      <div><b class="num">11</b><span>findings, seven fixed in this pass</span></div>
+      <div><b class="num">17/17</b><span>colour pairs in use, all measured at WCAG AA or better</span></div>
+      <div><b class="num">0</b><span>third-party scripts, trackers or analytics</span></div>
+    </div>
+  </section>
+
+  <aside class="block callout reveal">
+    <h2>Incorrect definition, incorrect solution.</h2>
+    <p>The same principle I hold my students to. The previous version of this portfolio was not badly built; it answered the wrong question. It was built to show ten projects, when what a hiring manager needs is to find the one project that matches the role she is filling and send it to someone else. Once the question changed from show my work to help her decide, the modals, the single URL and the shared share card stopped being implementation details and became the whole problem.</p>
+  </aside>
+
+  <section class="block outcome reveal">
+    <h2>Outcomes</h2>
+    <p>Eleven case studies now have their own address in two languages, each with its own share card, so a link to one project arrives as that project rather than as a homepage. Seven of the eleven findings shipped with this page, including the one that was leaving the h1 invisible on first paint. The four that did not are written down with the reason, which is the part of an audit that usually goes missing. The design system that came out of it is documented on this page by the stylesheet it describes, so the next case study costs one array of blocks and no new decisions.</p>
+  </section>
+  </div>
+</div>
+
+<section class="section--tight" id="contact">
+  <div class="shell">
+    <div class="contact contact--compact reveal">
+      <svg class="contact__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+      <div class="contact__copy">
+      <div class="contact__inner">
+        <p class="eyebrow">Let us talk</p>
+        <h2 class="h-xl" style="margin-top:16px">A learning problem that deserves a real design process?</h2>
+      </div>
+      <p>Whether you are building a training programme from scratch, rescuing one that nobody finishes, or trying to prove that yours works, write to me.</p>
+      <div class="contact__actions">
+        <a class="pill" href="mailto:lourdes.pedaci@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg> lourdes.pedaci@gmail.com</a>
+        <a class="pill pill--outline" href="https://drive.google.com/file/d/1oC0_9CM-aP2DHHQepNc5uss5lxxekds_/view" target="_blank" rel="noopener">View résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+        <a class="pill pill--outline" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+        <a class="pill pill--outline" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+      </div>
+      </div>
+      <div class="contact__viz" aria-hidden="false">
+        <svg viewBox="0 0 300 272" role="img" aria-label="Learning experience design, UX and data, connected as one practice.">
+          <g class="triad__wires">
+            <path d="M150 56 L246 212"></path>
+            <path d="M246 212 L54 212"></path>
+            <path d="M54 212 L150 56"></path>
+          </g>
+          <circle class="triad__spark" r="4.5" style="--path:path('M150 56 L246 212');--dur:4.2s;--delay:0s"></circle>
+          <circle class="triad__spark" r="4.5" style="--path:path('M246 212 L54 212');--dur:4.8s;--delay:.9s"></circle>
+          <circle class="triad__spark" r="4.5" style="--path:path('M54 212 L150 56');--dur:4.5s;--delay:1.8s"></circle>
+          <g class="triad__node" style="--i:0">
+          <circle cx="150" cy="56" r="43"></circle>
+          <text x="150" y="56" dominant-baseline="central" text-anchor="middle">LxD</text>
+        </g>
+          <g class="triad__node" style="--i:1">
+          <circle cx="246" cy="212" r="43"></circle>
+          <text x="246" y="212" dominant-baseline="central" text-anchor="middle">UX</text>
+        </g>
+          <g class="triad__node" style="--i:2">
+          <circle cx="54" cy="212" r="43"></circle>
+          <text x="54" y="212" dominant-baseline="central" text-anchor="middle">Data</text>
+        </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__top">
+      <a class="brand" href="../../">
+        <svg class="brand__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+        <span class="brand__name">Lourdes Pedaci<small>Learning Experience Designer · UX · Data</small></span>
+      </a>
+      <div class="foot__links">
+        <a class="pill" href="mailto:lourdes.pedaci@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg> lourdes.pedaci@gmail.com</a>
+        <a class="pill" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+        <a class="pill" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+        <a class="pill" href="https://www.behance.net/lourdespedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.6 5.4c1.9 0 3.3.8 3.3 2.8 0 1.2-.6 1.9-1.5 2.3 1.3.4 2 1.4 2 2.8 0 2.3-1.8 3.3-3.9 3.3H2.4V5.4zm-.4 4.4c.8 0 1.4-.4 1.4-1.2s-.5-1.2-1.4-1.2H5.1v2.4zm.2 4.8c1 0 1.6-.4 1.6-1.4s-.7-1.4-1.6-1.4H5.1v2.8zM15 6.3h5.3v1.3H15zM18 9.6c2.3 0 3.8 1.6 3.8 4v.6h-5.5c.1 1.2.8 1.9 2 1.9.8 0 1.4-.3 1.7-.9h2c-.4 1.6-1.8 2.6-3.7 2.6-2.5 0-4.1-1.7-4.1-4.1s1.6-4.1 3.8-4.1m-1.7 3.3h3.4c-.1-1-.7-1.7-1.7-1.7s-1.6.6-1.7 1.7"/></svg> Behance</a>
+      </div>
+    </div>
+    <div class="foot__base">
+      <span>© 2026 Lourdes Pedaci - All rights reserved</span>
+      <span>Buenos Aires, AR</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Click an image to enlarge">
+  <form method="dialog"><button aria-label="Close">✕</button></form>
+  <img alt="">
+</dialog>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"This portfolio, audited and rebuilt","description":"I ran the same audit on my portfolio that I run on a client product: heuristics, accessibility, journey, measured contrast. This is the previous build, the eleven findings, the design system that replaced it, and the numbers that say whether it worked.","inLanguage":"en","dateCreated":"2026","creator":{"@type":"Person","name":"Lourdes Pedaci","url":"https://lpedaci.github.io/portfolio"},"image":"https://lpedaci.github.io/portfolio/assets/img/portfolio-redesign-cover-card.svg","url":"https://lpedaci.github.io/portfolio/work/portfolio-redesign/"}</script>
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

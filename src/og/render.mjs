@@ -62,7 +62,10 @@ function findChrome() {
   return hit;
 }
 
-const MIME = { '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg' };
+/* SVG is here because one cover is drawn rather than photographed: the design
+   system card is built from the same tokens as the stylesheet, so it stays a
+   vector all the way into the share card. */
+const MIME = { '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml' };
 
 /* Images travel into the page as data URIs so a render has no path or
    file-access dependency of its own. */

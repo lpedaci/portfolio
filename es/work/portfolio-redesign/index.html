@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<script>document.documentElement.className+=" js"</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Este portfolio, auditado y reconstruido · Lourdes Pedaci</title>
+<meta name="description" content="Le hice a mi portfolio la misma auditoría que le hago al producto de un cliente: heurísticas, accesibilidad, journey, contraste medido. Acá está la versión anterior, los once hallazgos, el design system que la reemplazó y los números que dicen si funcionó.">
+<meta name="author" content="Lourdes Pedaci">
+<meta name="theme-color" content="#F7F4EC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23BE5735'/%3E%3Cg fill='none' stroke='%23FBF8F1' stroke-width='6.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 17v13.5a5 5 0 0 0 5 5h4.5'/%3E%3Cpath d='M38 47V19h4a7 7 0 0 1 0 14h-4'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="canonical" href="https://lpedaci.github.io/portfolio/es/work/portfolio-redesign/">
+<link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/es/work/portfolio-redesign/">
+<link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/work/portfolio-redesign/">
+<link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lourdes Pedaci">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://lpedaci.github.io/portfolio/es/work/portfolio-redesign/">
+<meta property="og:title" content="Este portfolio, auditado y reconstruido · Lourdes Pedaci">
+<meta property="og:description" content="Le hice a mi portfolio la misma auditoría que le hago al producto de un cliente: heurísticas, accesibilidad, journey, contraste medido. Acá está la versión anterior, los once hallazgos, el design system que la reemplazó y los números que dicen si funcionó.">
+<meta property="og:image" content="https://lpedaci.github.io/portfolio/assets/img/og-portfolio-redesign-es.jpg">
+<meta property="og:image:secure_url" content="https://lpedaci.github.io/portfolio/assets/img/og-portfolio-redesign-es.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Este portfolio, auditado y reconstruido. Una auditoría heurística y de accesibilidad de mi propio sitio, y el design system que salió de ella. Caso de estudio de Lourdes Pedaci.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Este portfolio, auditado y reconstruido · Lourdes Pedaci">
+<meta name="twitter:description" content="Le hice a mi portfolio la misma auditoría que le hago al producto de un cliente: heurísticas, accesibilidad, journey, contraste medido. Acá está la versión anterior, los once hallazgos, el design system que la reemplazó y los números que dicen si funcionó.">
+<meta name="twitter:image" content="https://lpedaci.github.io/portfolio/assets/img/og-portfolio-redesign-es.jpg">
+<meta name="twitter:image:alt" content="Este portfolio, auditado y reconstruido. Una auditoría heurística y de accesibilidad de mi propio sitio, y el design system que salió de ella. Caso de estudio de Lourdes Pedaci.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido</a>
+
+<header class="masthead">
+  <div class="masthead__bar">
+    <a class="brand" href="../../../es/" aria-label="Lourdes Pedaci">
+      <svg class="brand__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+      <span class="brand__name">Lourdes Pedaci<small>Diseñadora de Experiencias de Aprendizaje · UX · Datos</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Menú">
+      <a href="../../../es/#practice">Práctica</a>
+      <a href="../../../es/#work">Proyectos</a>
+      <a href="../../../es/#process">Proceso</a>
+      <a href="../../../es/#about">Sobre mí</a>
+      <a href="../../../es/#contact">Contacto</a>
+    </nav>
+
+    <div class="masthead__end">
+      <span class="status"><i></i>Disponible</span>
+      <div class="langswap" role="group" aria-label="Idioma">
+        <a href="../../../work/portfolio-redesign/" hreflang="en" aria-current="false">EN</a>
+        <a href="../../../es/work/portfolio-redesign/" hreflang="es" aria-current="true">ES</a>
+      </div>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="sheet">
+        <span></span><span></span><span></span>
+        <span class="sr">Menú</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Menú">
+  <a class="sheet__link" href="../../../es/#practice">Práctica<em>01</em></a>
+  <a class="sheet__link" href="../../../es/#work">Proyectos<em>02</em></a>
+  <a class="sheet__link" href="../../../es/#process">Proceso<em>03</em></a>
+  <a class="sheet__link" href="../../../es/#about">Sobre mí<em>04</em></a>
+  <a class="sheet__link" href="../../../es/#contact">Contacto<em>05</em></a>
+  <div class="sheet__foot">
+    <a class="pill pill--ink" href="https://drive.google.com/file/d/1oC0_9CM-aP2DHHQepNc5uss5lxxekds_/view" target="_blank" rel="noopener">Ver CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+    <a class="pill" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+    <a class="pill" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="case-hero shell">
+  <div class="case-hero__top">
+    <a class="pill pill--ghost" href="../../../es/#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12h-14"/><path d="M11 6.5 5.5 12l5.5 5.5"/></svg> Todos los proyectos</a>
+    <span class="tag num">01 / 2026</span>
+  </div>
+
+  <div class="case-hero__grid">
+    <div>
+      <p class="eyebrow eyebrow--clay reveal">UX y producto · Datos e investigación · Diseño de aprendizaje</p>
+      <h1 class="h-xl reveal" style="margin-top:18px">Este portfolio, auditado y reconstruido</h1>
+      <p class="case-hero__sub reveal">Una auditoría heurística y de accesibilidad de mi propio sitio, y el design system que salió de ella</p>
+    </div>
+    <div class="tag-row reveal"><span class="tag">UX Audit</span><span class="tag">Design System</span><span class="tag">WCAG 2.2</span><span class="tag">HTML/CSS/JS</span></div>
+  </div>
+</section>
+
+<div class="shell case-body">
+  <aside class="factsheet reveal">
+    <h2>Ficha del proyecto</h2>
+    <dl>
+      <div><dt>Rol</dt><dd>Investigación UX, auditoría heurística, design system, front-end, tooling de build</dd></div>
+      <div><dt>Período</dt><dd>Auditoría y reconstrucción, 2026 · v3 publicada en 2025, versión 2.0 en línea desde 2026</dd></div>
+      <div><dt>Contexto</dt><dd>Mi propio portfolio, lpedaci.github.io/portfolio, en inglés y español</dd></div>
+      <div><dt>Herramientas</dt><dd><div class="tag-row"><span class="tag">HTML/CSS/JS</span><span class="tag">Node</span><span class="tag">GitHub Pages</span><span class="tag">Figma</span><span class="tag">Headless Chrome</span></div></dd></div>
+      <div><dt>Metodologías</dt><dd><div class="tag-row"><span class="tag">Nielsen heuristics</span><span class="tag">WCAG 2.2 AA</span><span class="tag">Journey mapping</span><span class="tag">Atomic design</span><span class="tag">Design tokens</span></div></dd></div>
+    </dl>
+    <div class="factsheet__links">
+      <a class="pill pill--ghost" href="https://lpedaci.github.io/portfolio/" target="_blank" rel="noopener">El sitio auditado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+      <a class="pill pill--ghost" href="https://github.com/lpedaci/portfolio" target="_blank" rel="noopener">Código en GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+    </div>
+  </aside>
+
+  <div class="blocks">
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Contexto</h2>
+      
+    </div>
+    <div class="prose"><p>Un portfolio es el único producto que una diseñadora entrega siendo a la vez clienta, investigadora y desarrolladora, y por eso mismo es el que nunca se audita. Audité el mío. El mismo protocolo que uso con el producto de un cliente: una pasada heurística, una pasada WCAG 2.2 con los ratios de contraste medidos y no estimados a ojo, un mapa del recorrido de la persona para la que realmente escribo, y después una reconstrucción contra un design system documentado en lugar de contra mi gusto de ese día.</p><p>Lo que sigue es la cadena completa, en orden: el recorrido que la visitante realmente hace, qué le hacía la versión anterior, el sistema que la reemplazó hasta el nivel de átomos, los once hallazgos que la auditoría produjo sobre la versión nueva, y qué se corrigió. Las muestras de esta página no son capturas de pantalla. Las dibuja la misma hoja de estilos que dibuja el resto del sitio, lo que significa que no pueden desactualizarse en silencio como siempre termina pasando con una guía de estilo exportada.</p></div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>El recorrido, cinco etapas</h2>
+      <p class="block__note">Cinco etapas, cada una con un objetivo y un modo de falla. Cada etapa nombra qué está haciendo la visitante, qué le debe la interfaz en ese momento, y la forma concreta en que la versión anterior la dejaba a mitad de camino.</p>
+    </div>
+    <ol class="journey">
+      <li class="jstage">
+        <span class="jstage__code num">01</span>
+        <h3>Llegar</h3>
+        <p class="jstage__goal">Decidir en menos de diez segundos si esta persona vale cuatro minutos.</p>
+        <dl class="jstage__rows">
+          <div><dt>Qué hace</dt><dd>Llega desde LinkedIn, un enlace del CV o una recomendación. Escanea la parte de arriba de la pantalla y nada más.</dd></div>
+          <div><dt>Qué responde el sitio</dt><dd>Tres verbos como titular, una frase de lo que hago realmente, dos números verificables y cuatro acciones en orden de prioridad: CV, LinkedIn, GitHub, proyectos.</dd></div>
+          <div class="jstage__risk"><dt>Dónde se cae</dt><dd>La versión anterior abría con mi nombre como titular y debajo un párrafo de doscientas palabras describiendo el rol. Un nombre no es una propuesta de valor, y nadie lee doscientas palabras para encontrar una.</dd></div>
+        </dl>
+      </li>
+      <li class="jstage">
+        <span class="jstage__code num">02</span>
+        <h3>Escanear</h3>
+        <p class="jstage__goal">Entender la forma de la práctica sin leer un caso completo.</p>
+        <dl class="jstage__rows">
+          <div><dt>Qué hace</dt><dd>Busca palabras de categoría: ¿es diseño instruccional, UX o datos?</dd></div>
+          <div><dt>Qué responde el sitio</dt><dd>Tres prácticas nombradas con sus herramientas, y después una grilla filtrable donde cada tarjeta lleva su disciplina, año y stack antes de abrirse.</dd></div>
+          <div class="jstage__risk"><dt>Dónde se cae</dt><dd>La versión anterior no tenía categorías ni filtro. Diez proyectos llegaban como una lista indiferenciada, así que responder &quot;¿es una persona de UX?&quot; costaba diez clics en lugar de uno.</dd></div>
+        </dl>
+      </li>
+      <li class="jstage">
+        <span class="jstage__code num">03</span>
+        <h3>Elegir</h3>
+        <p class="jstage__goal">Elegir el proyecto más cercano al puesto que se busca.</p>
+        <dl class="jstage__rows">
+          <div><dt>Qué hace</dt><dd>Compara tres o cuatro tarjetas contra el puesto que está cubriendo.</dd></div>
+          <div><dt>Qué responde el sitio</dt><dd>Cada portada recortada a un único encuadre 5:3 para que la grilla se lea como una sola banda, un resumen de tres líneas fijado a una altura constante para que las tarjetas sigan siendo comparables, y una URL real por proyecto para poder abrir cuatro en cuatro pestañas.</dd></div>
+          <div class="jstage__risk"><dt>Dónde se cae</dt><dd>La versión anterior abría los casos como ventanas modales. Sin URL, sin botón atrás, sin segunda pestaña, sin nada para mandarle a un colega, y sin nada que un buscador pudiera indexar.</dd></div>
+        </dl>
+      </li>
+      <li class="jstage">
+        <span class="jstage__code num">04</span>
+        <h3>Leer</h3>
+        <p class="jstage__goal">Encontrar las decisiones, no los entregables.</p>
+        <dl class="jstage__rows">
+          <div><dt>Qué hace</dt><dd>Lee primero la ficha, después salta al resultado, y vuelve al medio sólo si el resultado se lo ganó.</dd></div>
+          <div><dt>Qué responde el sitio</dt><dd>Una ficha fija que sostiene rol, período, contexto, stack y metodologías todo el tiempo, una sola medida de línea para el cuerpo de texto, y el resultado como bloque de cierre propio.</dd></div>
+          <div class="jstage__risk"><dt>Dónde se cae</dt><dd>En una modal la ficha se iba con el scroll junto con todo lo demás, así que para el cuarto párrafo ya no quedaba nada en pantalla que dijera cuál había sido mi rol en el proyecto.</dd></div>
+        </dl>
+      </li>
+      <li class="jstage">
+        <span class="jstage__code num">05</span>
+        <h3>Actuar</h3>
+        <p class="jstage__goal">Ponerse en contacto, o guardar el enlace en algún lugar donde vuelva a encontrarlo.</p>
+        <dl class="jstage__rows">
+          <div><dt>Qué hace</dt><dd>Copia la dirección, abre LinkedIn, o pega el enlace en un canal de contratación.</dd></div>
+          <div><dt>Qué responde el sitio</dt><dd>El mismo bloque de contacto cierra todas las páginas, así que la salida nunca está a más de una pantalla. Cada URL lleva su propia tarjeta para compartir, en su idioma, construida con estos mismos tokens.</dd></div>
+          <div class="jstage__risk"><dt>Dónde se cae</dt><dd>La versión anterior tenía una sola tarjeta para compartir en todo el sitio, así que el enlace a un proyecto específico se previsualizaba como la home genérica y perdía lo único que lo hacía valioso para enviar.</dd></div>
+        </dl>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>La versión base y lo que la reemplazó</h2>
+      <p class="block__note">La versión 3 era un único index.html escrito a mano: una página, diez proyectos en modales, los dos idiomas viajando en el mismo documento y alternados con display:none. Funcionaba. Simplemente no se podía enlazar, indexar, compartir ni extender. Cada fila de abajo es una diferencia medida, no una impresión.</p>
+    </div>
+    <div class="compare" role="table" aria-label="La versión base y lo que la reemplazó">
+      <div class="compare__head" role="row">
+        <span role="columnheader">Dimensión</span>
+        <span role="columnheader">v3</span>
+        <span role="columnheader">2.0</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Páginas direccionables</span>
+        <span class="compare__was" role="cell"><em>v3</em>Una sola URL para todo el portfolio. Los casos vivían en diez elementos &lt;dialog&gt; sin ruta propia.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>24 URLs reales en el sitemap: once casos y un índice, cada uno en inglés y español, todos renderizados en el build.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Modelo bilingüe</span>
+        <span class="compare__was" role="cell"><em>v3</em>Los dos idiomas en un solo documento, alternados con html[data-lang] y display:none. Cada lectora descargaba el idioma que no estaba leyendo, y los buscadores veían una página en dos idiomas a la vez.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Árboles de documentos separados en / y /es/, unidos por hreflang y x-default, con URLs canónicas y locales de Open Graph por idioma. Una sola fuente de contenido en src/data, dos salidas.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Fuente del contenido</span>
+        <span class="compare__was" role="cell"><em>v3</em>Textos, marcado y estilos entremezclados en 94 KB de HTML editado a mano. Cambiar el título de un proyecto significaba editarlo en dos lugares y cruzar los dedos.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>El contenido es data. Cada string es un par { en, es } en src/data, cada página es una función de esa data, y un build emite los dos árboles. Un error de tipeo se corrige una sola vez.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Landmarks y salto al contenido</span>
+        <span class="compare__was" role="cell"><em>v3</em>Sin elemento &lt;main&gt; ni enlace de salto, así que quien navegaba por teclado tabulaba por toda la cabecera en cada visita sin manera de saltarla.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>&lt;main id=&quot;main&quot;&gt; en todas las páginas con un enlace de salto como primer elemento enfocable, un solo h1 por documento y una jerarquía h2 a h3 sin saltos.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Encontrar un proyecto</span>
+        <span class="compare__was" role="cell"><em>v3</em>Una lista sin etiquetas de diez. Sin categorías, sin filtro, sin forma de distinguir un proyecto de UX de uno de motion sin abrirlo.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Cinco categorías, una barra de filtros con estado aria-pressed, una bandera de disciplina en cada tarjeta y un mensaje de estado que anuncia el nuevo recuento de resultados.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Vistas previas al compartir</span>
+        <span class="compare__was" role="cell"><em>v3</em>Un único og-preview.jpg estático para todo el sitio, exportado a mano desde una herramienta de diseño y ya desactualizado.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>24 tarjetas para compartir, una por URL y por idioma, pintadas por Chrome headless desde los mismos tokens de la hoja de estilos. Se cambia la paleta, se vuelve a correr el renderer y todas las tarjetas siguen.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Datos estructurados</span>
+        <span class="compare__was" role="cell"><em>v3</em>Ninguno. Sin JSON-LD, sin canonical, sin hreflang, sin sitemap, sin robots.txt.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Esquema Person en el índice, CreativeWork en cada caso, más canonical, hreflang, sitemap.xml y robots.txt emitidos por el build.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Peso del documento de inicio</span>
+        <span class="compare__was" role="cell"><em>v3</em>94 KB de HTML, porque diez casos en modal y dos idiomas viajaban en la primera carga los abriera alguien o no.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Cerca de 37 KB para el índice. Los casos son documentos separados, así que nadie paga por los nueve que no abrió.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Estabilidad del layout</span>
+        <span class="compare__was" role="cell"><em>v3</em>Imágenes dimensionadas por CSS sin caja reservada, así que las portadas y galerías empujaban el texto hacia abajo al ir llegando.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>aspect-ratio en cada contenedor de medios: tarjetas, retrato, galerías y embeds. La caja existe antes que el archivo, así que nada se mueve.</span>
+      </div>
+      <div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">Decisiones de diseño</span>
+        <span class="compare__was" role="cell"><em>v3</em>Valores elegidos componente por componente y repetidos a mano. Cuatro radios de borde distintos, tres grises que eran casi el mismo gris.</span>
+        <span class="compare__now" role="cell"><em>2.0</em>Una capa de tokens al principio de la hoja de estilos. Color, radio, tipografía, ritmo y movimiento tienen cada uno una fuente con nombre, y el caso de abajo se genera desde ahí.</span>
+      </div>
+    </div>
+    <p class="block__note compare__foot">El único número que fue en la dirección contraria: la hoja de estilos pasó de 361 líneas a unas 1.700. Ese es el costo honesto de un sistema. Lo que compra es que la próxima página cueste casi nada, y esta se construyó sin escribir un solo color nuevo.</p>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>El sistema, desde abajo</h2>
+      
+    </div>
+    <div class="prose"><p>El diseño atómico es la idea organizadora, pero en su versión honesta: los tokens son lo único que alguien edita, los átomos se construyen sólo con tokens, las moléculas combinan átomos sin inventar valores nuevos, y los organismos son las secciones de página. Si un componente necesita un valor que no está en la capa de tokens, o está mal la capa de tokens o está mal el componente. Los dos casos valen la pena una pausa.</p><p>Todo lo que sigue es una muestra viva. Las paletas son las custom properties declaradas, la escala tipográfica está compuesta en los pasos que nombra, y los átomos son las mismas clases que usan la cabecera y la grilla de proyectos. Nada de esto fue exportado, así que nada de esto puede mentir.</p></div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Nivel 0 · Tokens de color</h2>
+      <p class="block__note">Cuatro familias y una regla para cada una. El fondo es papel. La tinta es todo lo que se lee. El arcilla es la voz editorial y aparece sólo en la palabra acentuada, el volante y la selección. El salvia es estado y comportamiento: cada cifra, cada hover, cada cosa seleccionada. El ratio de cada muestra es el contraste medido contra el fondo hueso; 4.5 es el piso AA para texto de cuerpo. El único valor por debajo de la línea es --line, y está bien que lo esté: un divisor decorativo está exento, que es justamente por qué la auditoría agregó un segundo token de borde para los controles.</p>
+    </div>
+    <div class="swatches">
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#F7F4EC"></span>
+        <figcaption>
+          <b class="swatch__token">--bone</b>
+          <span class="swatch__hex num">#F7F4EC</span>
+          <span class="swatch__use">El fondo. Toda página empieza acá.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#FDFBF6"></span>
+        <figcaption>
+          <b class="swatch__token">--paper</b>
+          <span class="swatch__hex num">#FDFBF6</span>
+          <span class="swatch__use">Superficies elevadas: tarjetas, píldoras, la cabecera.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#ECE5D7"></span>
+        <figcaption>
+          <b class="swatch__token">--bone-deep</b>
+          <span class="swatch__hex num">#ECE5D7</span>
+          <span class="swatch__use">Superficies hundidas y placeholders de imagen.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#17150F"></span>
+        <figcaption>
+          <b class="swatch__token">--ink</b>
+          <span class="swatch__hex num">#17150F</span>
+          <span class="swatch__use">Titulares y acción principal.</span>
+          <span class="swatch__ratio num" data-pass="yes">16.6:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#4A463A"></span>
+        <figcaption>
+          <b class="swatch__token">--ink-70</b>
+          <span class="swatch__hex num">#4A463A</span>
+          <span class="swatch__use">Cuerpo de texto y párrafos guía.</span>
+          <span class="swatch__ratio num" data-pass="yes">8.6:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#6F6959"></span>
+        <figcaption>
+          <b class="swatch__token">--ink-45</b>
+          <span class="swatch__hex num">#6F6959</span>
+          <span class="swatch__use">Metadatos, epígrafes, etiquetas discretas.</span>
+          <span class="swatch__ratio num" data-pass="yes">5.0:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#965E44"></span>
+        <figcaption>
+          <b class="swatch__token">--clay</b>
+          <span class="swatch__hex num">#965E44</span>
+          <span class="swatch__use">La voz editorial. Volantes y la palabra acentuada.</span>
+          <span class="swatch__ratio num" data-pass="yes">4.8:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#594534"></span>
+        <figcaption>
+          <b class="swatch__token">--clay-deep</b>
+          <span class="swatch__hex num">#594534</span>
+          <span class="swatch__use">Arcilla sobre superficie llena, y etiquetas de severidad alta.</span>
+          <span class="swatch__ratio num" data-pass="yes">8.2:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#EAD9CD"></span>
+        <figcaption>
+          <b class="swatch__token">--clay-tint</b>
+          <span class="swatch__hex num">#EAD9CD</span>
+          <span class="swatch__use">Arcilla como fondo. Sostiene tinta a 13.3:1.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#596959"></span>
+        <figcaption>
+          <b class="swatch__token">--sage</b>
+          <span class="swatch__hex num">#596959</span>
+          <span class="swatch__use">Estado y comportamiento. Cifras, hovers, selección.</span>
+          <span class="swatch__ratio num" data-pass="yes">5.3:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#3F4B3F"></span>
+        <figcaption>
+          <b class="swatch__token">--sage-deep</b>
+          <span class="swatch__hex num">#3F4B3F</span>
+          <span class="swatch__use">Navegación activa, disponibilidad, hallazgos resueltos.</span>
+          <span class="swatch__ratio num" data-pass="yes">6.3:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#D3D8CE"></span>
+        <figcaption>
+          <b class="swatch__token">--sage-tint</b>
+          <span class="swatch__hex num">#D3D8CE</span>
+          <span class="swatch__use">Salvia como fondo. Sostiene tinta a 12.6:1.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip" style="background:#E2BB99"></span>
+        <figcaption>
+          <b class="swatch__token">--sand</b>
+          <span class="swatch__hex num">#E2BB99</span>
+          <span class="swatch__use">El marco del hero. La única superficie grande de color cálido.</span>
+          
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip swatch__chip--rule"><i style="background:rgba(23,21,15,.14)"></i><i style="background:rgba(23,21,15,.14)"></i><i style="background:rgba(23,21,15,.14)"></i></span>
+        <figcaption>
+          <b class="swatch__token">--line</b>
+          <span class="swatch__hex num">rgba(23,21,15,.14)</span>
+          <span class="swatch__use">Filetes estructurales: divisores, marcos, reglas.</span>
+          <span class="swatch__ratio num" data-pass="no">1.33:1</span>
+        </figcaption>
+      </figure>
+      <figure class="swatch">
+        <span class="swatch__chip swatch__chip--rule"><i style="background:rgba(23,21,15,.46)"></i><i style="background:rgba(23,21,15,.46)"></i><i style="background:rgba(23,21,15,.46)"></i></span>
+        <figcaption>
+          <b class="swatch__token">--line-ctrl</b>
+          <span class="swatch__hex num">rgba(23,21,15,.46)</span>
+          <span class="swatch__use">El contorno de todo lo clickeable. Agregado por esta auditoría.</span>
+          <span class="swatch__ratio num" data-pass="yes">3.01:1</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Nivel 0 · Tipografía</h2>
+      <p class="block__note">Tres familias con tres trabajos. Archivo lleva la estructura y la voz, Newsreader lleva todo lo que se lee de corrido, JetBrains Mono lleva todo lo que en realidad es una etiqueta y no una frase. Cada paso es un clamp, así que la escala es continua entre 320 y 1440 píxeles en lugar de saltar en los breakpoints.</p>
+    </div>
+    <div class="ramp">
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>display</b>
+          <span class="num">clamp(3.1rem, 9.4vw, 9.2rem)</span>
+          <span>El titular de inicio, una vez por sitio</span>
+        </div>
+        <p class="ramp__specimen display">medir</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>h-xl</b>
+          <span class="num">clamp(2.2rem, 6.2vw, 4.6rem)</span>
+          <span>Títulos de caso, la pregunta de contacto</span>
+        </div>
+        <p class="ramp__specimen h-xl">Este portfolio, auditado</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>h-lg</b>
+          <span class="num">clamp(1.75rem, 4.2vw, 3.1rem)</span>
+          <span>Títulos de sección en el índice</span>
+        </div>
+        <p class="ramp__specimen h-lg">Tres prácticas, un mismo método</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>h-sm</b>
+          <span class="num">clamp(1.05rem, 1.7vw, 1.25rem)</span>
+          <span>Títulos de tarjeta, celdas de práctica, pasos del proceso</span>
+        </div>
+        <p class="ramp__specimen h-sm">Diseño de experiencias de aprendizaje</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>lead</b>
+          <span class="num">clamp(1.08rem, 1.5vw, 1.36rem)</span>
+          <span>El párrafo bajo un título. Newsreader, ink-70</span>
+        </div>
+        <p class="ramp__specimen lead">No separo la pedagogía de la interfaz, ni la interfaz de la evidencia.</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>prose</b>
+          <span class="num">clamp(1.02rem, 1.28vw, 1.2rem)</span>
+          <span>Cuerpo del caso, sostenido en una medida de 68 caracteres</span>
+        </div>
+        <p class="ramp__specimen prose">Una serif en tamaño de lectura, porque un caso se lee, no se escanea.</p>
+      </div>
+      <div class="ramp__row">
+        <div class="ramp__spec">
+          <b>eyebrow</b>
+          <span class="num">clamp(10px, 1.05vw, 11.5px)</span>
+          <span>Etiquetas de sección. Mono, .16em de tracking, mayúsculas</span>
+        </div>
+        <p class="ramp__specimen eyebrow">Experiencia de aprendizaje · UX · Datos</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Nivel 1 · Átomos</h2>
+      <p class="block__note">Seis átomos, y toda la interfaz se construye con ellos. Son muestras vivas: las mismas clases, los mismos tokens, la misma hoja de estilos. Acá la interacción está apagada porque una muestra que responde al clic es un control disfrazado de documentación.</p>
+    </div>
+    <div class="atoms">
+      <article class="atom">
+        <header class="atom__head">
+          <b>Pill</b>
+          <code>.pill</code>
+        </header>
+        <div class="atom__stage"><span class="pill pill--ink">View résumé</span><span class="pill">LinkedIn</span><span class="pill pill--ghost">Work</span></div>
+        <p class="atom__note">El único botón del sistema, en tres pesos: tinta para la acción principal, papel para la secundaria, fantasma para la terciaria. 44px de alto, contorno 3:1, y un translateY en hover en lugar de un destello de color.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Tag</b>
+          <code>.tag</code>
+        </header>
+        <div class="atom__stage"><span class="tag">Figma</span><span class="tag">SCORM</span><span class="tag">Power BI</span></div>
+        <p class="atom__note">Nunca es clickeable, y está formada para no confundirse con una píldora: mono, mayúsculas, ink-45, filete estructural en lugar del contorno de control. Las etiquetas afirman un hecho; las píldoras hacen algo.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Eyebrow</b>
+          <code>.eyebrow</code>
+        </header>
+        <div class="atom__stage"><span class="eyebrow eyebrow--clay">Practice / 01</span></div>
+        <p class="atom__note">La etiqueta de sección. Mono con .16em de tracking, en arcilla cuando abre una sección y en ink-45 cuando sólo orienta. Es el único lugar donde un número puede ir adelante.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Figure</b>
+          <code>.num</code>
+        </header>
+        <div class="atom__stage"><span class="stat__value num" style="font-family:var(--f-text);font-style:italic;font-size:2.1rem;color:var(--sage)">+7</span><span class="stat__value num" style="font-family:var(--f-text);font-style:italic;font-size:2.1rem;color:var(--sage)">11</span></div>
+        <p class="atom__note">Cada número del sistema es salvia, Newsreader itálica, tabular. El color hace la categorización, así que una cifra se reconoce como cifra antes de leerse.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Orb</b>
+          <code>.orb</code>
+        </header>
+        <div class="atom__stage"><span class="orb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span><span class="orb orb--sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.4c.7 4.3 2.3 5.9 6.6 6.6-4.3.7-5.9 2.3-6.6 6.6-.7-4.3-2.3-5.9-6.6-6.6 4.3-.7 5.9-2.3 6.6-6.6"/></svg></span></div>
+        <p class="atom__note">El elemento de sólo icono, de 56px para superar el mínimo táctil con margen. Cada orbe que hace algo lleva un aria-label, porque un círculo con una flecha adentro no es un nombre.</p>
+      </article>
+      <article class="atom">
+        <header class="atom__head">
+          <b>Icon</b>
+          <code>icons.mjs</code>
+        </header>
+        <div class="atom__stage"><span style="display:flex;gap:14px;color:var(--ink)"><svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12h14"/><path d="m13 6.5 5.5 5.5L13 17.5"/></svg><svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg><svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8"/><path d="M12 3.6c2.2 2.3 3.3 5.2 3.3 8.4s-1.1 6.1-3.3 8.4c-2.2-2.3-3.3-5.2-3.3-8.4s1.1-6.1 3.3-8.4"/></svg></span></div>
+        <p class="atom__note">Catorce iconos, dibujados en una grilla de 24px con un único grosor de 1.7, para que se lean como un mismo alfabeto junto al monograma. Todos son aria-hidden y ninguno es un emoji. Cada uno hereda currentColor.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Nivel 1 · Las otras primitivas</h2>
+      <p class="block__note">El color y la tipografía se llevan la atención, pero son estas cuatro las que evitan que una página se desalinee.</p>
+    </div>
+    <dl class="deflist">
+      <div>
+        <dt>Ritmo</dt>
+        <dd>--shell es min(1320px, 100% - clamp(20px, 5vw, 76px)): una sola medida decide el ancho de página y sus márgenes a la vez, así que el margen nunca se define dos veces. --section es clamp(68px, 9.9vh, 133px) y --gap es clamp(20px, 2.6vw, 34px). Tres valores, y ninguna página necesita un cuarto.</dd>
+      </div>
+      <div>
+        <dt>Radio</dt>
+        <dd>Cinco pasos, y los grandes escalan con el viewport para que una esquina de 48px en un panel de escritorio no siga siendo 48px en una tarjeta de teléfono. --r-pill 999px, --r-xl clamp(28px, 3.4vw, 48px), --r-lg clamp(20px, 2.4vw, 32px), --r-md 16px, --r-sm 10px.</dd>
+      </div>
+      <div>
+        <dt>Movimiento</dt>
+        <dd>Una sola curva de easing para todo el sitio, cubic-bezier(.22,.68,.24,1), y una duración base de .5s. Los hovers corren más cortos, el reveal de scroll más largo, y nada corre bajo prefers-reduced-motion. Una segunda curva sería una segunda opinión sobre cómo se mueve este sitio.</dd>
+      </div>
+      <div>
+        <dt>Textura</dt>
+        <dd>Un único filtro SVG de turbulencia en línea al .055 de opacidad, pintado en el fondo del body en lugar de superpuesto al contenido. El color plano en un área grande se lee como plástico; un susurro de grano se lee como papel. Cuesta 380 bytes y nada queda por encima del contenido, así que el compositing sigue siendo barato.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Niveles 2 y 3 · Moléculas y organismos</h2>
+      <p class="block__note">Una molécula son átomos en una disposición que significa algo. Un organismo es una sección de página. Ninguno puede introducir un valor que la capa de tokens no tenga ya.</p>
+    </div>
+    <dl class="deflist">
+      <div>
+        <dt>Tarjeta</dt>
+        <dd>Marco más bandera más título más resumen recortado más fila de etiquetas. El marco es un encuadre fijo 5:3 y el resumen está limitado a tres líneas, así que diez tarjetas con material de origen muy distinto siguen formando una grilla comparable. La tarjeta entera es el enlace; no hay un leer más aparte.</dd>
+      </div>
+      <div>
+        <dt>Ficha</dt>
+        <dd>Una lista de definiciones con rol, período, contexto, stack y metodologías, fija a partir de 1000px. Responde las cuatro preguntas que una lectora tiene en los primeros diez segundos de un caso y las sigue respondiendo mientras baja, que es el cambio que más mejoró la lectura de los casos.</dd>
+      </div>
+      <div>
+        <dt>Bloque</dt>
+        <dd>Nueve bloques de contenido más los seis bloques de muestra escritos para esta página. Un caso es un array de bloques en src/data, nunca marcado, así que un proyecto se describe en lugar de maquetarse. Sumar un nuevo tipo de evidencia significa sumar un renderer, no editar once páginas.</dd>
+      </div>
+      <div>
+        <dt>Cabecera</dt>
+        <dd>Marca, cinco enlaces, disponibilidad, cambio de idioma y una hamburguesa, sobre una píldora flotante que gana sombra al hacer scroll. Por debajo de 1060px los enlaces pasan a una hoja de pantalla completa; el orden de capas deja la hoja por debajo de la barra para que la hamburguesa que la cierra nunca quede tapada por lo que abrió.</dd>
+      </div>
+      <div>
+        <dt>Contacto</dt>
+        <dd>El mismo organismo cierra todas las páginas del sitio, en variante completa y compacta. Al lado, la práctica dibujada como un circuito: tres nodos, tres aristas y una señal moviéndose entre ellos, porque el argumento de todo el sitio es que las tres disciplinas son un mismo bucle.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Cómo se corrió la auditoría</h2>
+      <p class="block__note">Cinco pasadas, en este orden, porque cada una sólo tiene sentido una vez resuelta la anterior. Auditar el color antes de saber quién es la lectora produce una página conforme que nadie necesitaba.</p>
+    </div>
+    <div class="roadmap">
+      <article class="rm-step">
+        <span class="rm-step__code">A01</span>
+        <h3>Definir la lectora</h3>
+        <p>Una frase que nombre quién llega, con cuánto tiempo, en qué dispositivo y en qué idioma. Todo lo que sigue se mide contra eso.</p>
+      </article>
+      <article class="rm-step">
+        <span class="rm-step__code">A02</span>
+        <h3>Recorrer el journey</h3>
+        <p>Cinco etapas, cada una con un objetivo y un modo de falla. Los hallazgos que no se enganchan a una etapa son opiniones.</p>
+      </article>
+      <article class="rm-step">
+        <span class="rm-step__code">A03</span>
+        <h3>Pasada heurística</h3>
+        <p>Nielsen contra cada etapa: visibilidad del estado, correspondencia con el mundo real, reconocimiento antes que recuerdo, consistencia, contención estética.</p>
+      </article>
+      <article class="rm-step">
+        <span class="rm-step__code">A04</span>
+        <h3>Medir, no opinar</h3>
+        <p>Contraste calculado desde los tokens en lugar de estimado. Tamaños de destino leídos del DOM en vivo. Orden de títulos, landmarks y textos alternativos enumerados, no muestreados.</p>
+      </article>
+      <article class="rm-step">
+        <span class="rm-step__code">A05</span>
+        <h3>Corregir o registrar</h3>
+        <p>Cada hallazgo se corrige en esta pasada o se anota con el motivo por el que no. Un backlog es una decisión; un hallazgo no mencionado es un agujero.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Los hallazgos</h2>
+      <p class="block__note">Once hallazgos sobre la versión 2.0 en línea, ordenados por severidad. Siete se corrigieron en esta pasada y se publicaron junto con esta página; cuatro quedan registrados con el motivo por el que no. Todo esto fue medido, y la columna de evidencia dice cómo.</p>
+    </div>
+    <ol class="findings">
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F01</span>
+          <span class="finding__sev" data-sev="high">Alta</span>
+          <span class="finding__state">Corregido</span>
+        </div>
+        <div class="finding__body">
+          <h3>El reveal de scroll ocultaba el contenido de la primera pantalla</h3>
+          <p class="finding__heur">Visibilidad del estado del sistema · WCAG 2.2.1 · Largest Contentful Paint</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>La regla .js .reveal { opacity: 0 } se pinta apenas un script en línea del head agrega la clase js, y aplica al h1, al párrafo guía y al panel del hero. Una captura de /work/edulabs/ tomada durante la carga atrapó el título, el subtítulo y toda la ficha en opacidad cero. Peor: si site.js no llegaba, la página quedaba en blanco de forma permanente y silenciosa.</dd></div>
+            <div><dt>Resolución</dt><dd>El reveal ahora es sólo una recompensa de scroll. Todo lo que ya está dentro del viewport en el primer pintado se marca visible de forma síncrona y nunca pasa al observer. Un keyframe de CSS resuelve cualquier elemento restante a los cuatro segundos, así que la página ya no depende de que su propio JavaScript sobreviva el viaje.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F02</span>
+          <span class="finding__sev" data-sev="high">Alta</span>
+          <span class="finding__state">Corregido</span>
+        </div>
+        <div class="finding__body">
+          <h3>El menú móvil se abría sin entregar nunca el foco</h3>
+          <p class="finding__heur">Control y libertad del usuario · WCAG 2.1.2 Sin trampa de teclado · 2.4.3 Orden del foco</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>La hoja es position: fixed con inset: 0, así que tapa todo, pero no llevaba rol, ni aria-modal, ni ciclo de Tab: tabular más allá del último enlace salía del overlay hacia contenido que la lectora no podía ver. Escribir una prueba para esa trampa destapó un error peor debajo. La hoja transicionaba visibility de forma simétrica con su fundido, así que durante toda la transición seguía calculando como hidden, y un elemento dentro de un subárbol oculto no puede recibir foco. El focus() que debía entregarle el menú a la lectora golpeaba un elemento no enfocable y volvía en silencio. Medido en Chrome headless a 390px: la hoja se abría y el foco se quedaba en el body del documento. Siempre, desde que la hoja existe.</dd></div>
+            <div><dt>Resolución</dt><dd>Ahora visibility se demora sólo a la salida, así que pasa a visible al instante al abrir y el fundido se sigue viendo al cerrar. Después, role=&quot;dialog&quot; y aria-modal=&quot;true&quot; con el menú como nombre accesible, y un ciclo de Tab que incluye la hamburguesa, para que el control que cierra la hoja esté dentro del bucle y no detrás. El foco vuelve a la hamburguesa en todos los caminos de cierre, no sólo con Escape. Verificado a 390px: el foco cae en el primer enlace, Tab y Shift+Tab dan la vuelta en ambos sentidos, Escape cierra y restituye el foco, y el scroll de página se libera.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F03</span>
+          <span class="finding__sev" data-sev="high">Alta</span>
+          <span class="finding__state">Corregido</span>
+        </div>
+        <div class="finding__body">
+          <h3>Filtrar la grilla de proyectos era silencioso</h3>
+          <p class="finding__heur">Visibilidad del estado del sistema · WCAG 4.1.3 Mensajes de estado</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>La barra de filtros alterna el atributo hidden en once tarjetas. Quien ve la pantalla nota que la grilla se achica; quien usa lector de pantalla escucha que el botón pasa a presionado y nada más. No había ninguna región viva en el documento: cero elementos con aria-live o role=&quot;status&quot;.</dd></div>
+            <div><dt>Resolución</dt><dd>Un único mensaje de estado atómico sobre la grilla, en el idioma de la lectora, redactado como frase y no como número suelto: &quot;Se muestran 4 proyectos en UX y producto.&quot; Es visible además de anunciado, así que también ayuda a quien filtró sin querer.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F04</span>
+          <span class="finding__sev" data-sev="medium">Media</span>
+          <span class="finding__state">Corregido</span>
+        </div>
+        <div class="finding__body">
+          <h3>Los controles tenían un contorno de 1.33:1</h3>
+          <p class="finding__heur">WCAG 1.4.11 Contraste de elementos no textuales</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>Cada píldora, botón de filtro y el cambio de idioma dibujaban su borde con --line, rgba(23,21,15,.14). Compuesto sobre el fondo hueso eso da 1.33:1. El texto de adentro pasaba con holgura, pero el borde que dice esto es un control no, y los botones de filtro tenían relleno transparente, así que el borde era lo único que los identificaba.</dd></div>
+            <div><dt>Resolución</dt><dd>Un segundo token de borde, --line-ctrl al .46 de alfa, aplicado sólo a controles. Mide 3.01:1 sobre hueso y 3.04:1 sobre papel, el valor más liviano que supera el umbral en los dos fondos. Los filetes estructurales conservan --line: divisores y marcos son decorativos y 1.4.11 no llega hasta ahí.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F05</span>
+          <span class="finding__sev" data-sev="medium">Media</span>
+          <span class="finding__state">Corregido</span>
+        </div>
+        <div class="finding__body">
+          <h3>Los metadatos de tarjeta estaban en 9.5 píxeles</h3>
+          <p class="finding__heur">Legibilidad · Diseño estético y minimalista</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>La bandera de disciplina y las etiquetas de stack de cada tarjeta estaban en 9.5px, y las etiquetas de la ficha en 10px. La mono en mayúsculas con tracking ancho aguanta los tamaños chicos mejor que casi cualquier tipografía, que es exactamente cómo llegó ahí, pero esto lleva información real: la categoría, el año, las herramientas. No es ornamento.</dd></div>
+            <div><dt>Resolución</dt><dd>Un piso de 11px para todo lo que lleve significado. Se mantienen el tracking y las mayúsculas, así que la textura de la tarjeta no cambia; simplemente ahora se lee a distancia de brazo y no sólo a distancia de lectura.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F06</span>
+          <span class="finding__sev" data-sev="medium">Media</span>
+          <span class="finding__state">Corregido</span>
+        </div>
+        <div class="finding__body">
+          <h3>Destinos de menos de 44 píxeles en la cabecera y la barra de filtros</h3>
+          <p class="finding__heur">WCAG 2.5.5 Tamaño del destino (mejorado) · Fitts</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>Medido sobre el DOM en vivo: enlaces de navegación de 41px de alto, botones de filtro de 39px, los conmutadores EN y ES de 41 por 31. Todos superan el mínimo AA de 24px de 2.5.8, así que nunca fue un incumplimiento, pero el cambio de idioma es justo el control que se usa con apuro y era lo más chico de la página. El espacio entre botones de filtro era de 7px, por debajo de la guía de 8px entre destinos adyacentes.</dd></div>
+            <div><dt>Resolución</dt><dd>Altura mínima de 44px en enlaces de navegación y botones de filtro, ancho mínimo de 44px en cada conmutador de idioma, y el espacio entre filtros abierto a 8px. Visualmente no se movió nada: la altura extra fue al área de toque, no al layout.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="fixed">
+        <div class="finding__meta">
+          <span class="finding__id num">F07</span>
+          <span class="finding__sev" data-sev="low">Baja</span>
+          <span class="finding__state">Corregido</span>
+        </div>
+        <div class="finding__body">
+          <h3>Los botones de filtro no tenían superficie propia</h3>
+          <p class="finding__heur">Consistencia y estándares · Reconocimiento antes que recuerdo</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>Todos los demás controles del sistema se apoyan en --paper. Los botones de filtro eran transparentes sobre --bone, lo que los hacía leer como etiquetas y no como botones hasta que se presionaba uno. Su texto además era ink-45, el color de metadatos, en lugar del ink-70 que el sistema usa para todo aquello sobre lo que hay que actuar.</dd></div>
+            <div><dt>Resolución</dt><dd>Relleno papel y texto ink-70, así un filtro ahora parece de la misma familia de objetos que una píldora. El estado presionado en salvia no cambia, y nunca dependió sólo del color: aria-pressed también lo dice.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="open">
+        <div class="finding__meta">
+          <span class="finding__id num">F08</span>
+          <span class="finding__sev" data-sev="medium">Media</span>
+          <span class="finding__state">Registrado</span>
+        </div>
+        <div class="finding__body">
+          <h3>Dos cambios de idioma, con lenguajes distintos</h3>
+          <p class="finding__heur">Consistencia y estándares</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>El índice ofrece el idioma dos veces: EN y ES como control segmentado con etiquetas en la cabecera, y un orbe de globo terráqueo en el panel del hero que hace lo mismo con un icono y sin estado visible. Dos formas para una misma acción, y la segunda no puede mostrar en qué idioma estás leyendo.</dd></div>
+            <div><dt>Resolución</dt><dd>Registrado, no corregido. El globo sostiene la composición: equilibra el panel y es el único elemento que se superpone al marco del hero desde arriba. Sacarlo es una decisión de composición, no de accesibilidad, y corresponde a la próxima pasada visual, no a una corrección de auditoría.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="open">
+        <div class="finding__meta">
+          <span class="finding__id num">F09</span>
+          <span class="finding__sev" data-sev="low">Baja</span>
+          <span class="finding__state">Registrado</span>
+        </div>
+        <div class="finding__body">
+          <h3>El estado del filtro no sobrevive a una recarga ni a un enlace</h3>
+          <p class="finding__heur">Control y libertad del usuario · Enlaces profundos</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>Filtrar por Datos e investigación produce una vista que una lectora podría querer mandarle a un colega, pero la URL nunca cambia, así que el enlace llega sin filtrar y el botón atrás tampoco deshace el filtro.</dd></div>
+            <div><dt>Resolución</dt><dd>Registrado. La solución es un parámetro de consulta y una entrada de historial, unas quince líneas. Queda detrás de la pasada visual porque el filtro es una comodidad sobre una grilla de once elementos, no una ruta principal.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="open">
+        <div class="finding__meta">
+          <span class="finding__id num">F10</span>
+          <span class="finding__sev" data-sev="low">Baja</span>
+          <span class="finding__state">Registrado</span>
+        </div>
+        <div class="finding__body">
+          <h3>Sin modo oscuro</h3>
+          <p class="finding__heur">Flexibilidad y eficiencia de uso</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>La paleta está comprometida con un fondo de papel claro y no hay ninguna rama prefers-color-scheme. Quien tiene el sistema en oscuro recibe el sitio claro, bien pintado, pero no lo que pidió.</dd></div>
+            <div><dt>Resolución</dt><dd>Registrado como decisión deliberada y no como omisión. Toda la identidad es papel, grano y tinta cálida; una versión invertida sería un segundo design system, no una variante, y una versión a medias sería peor que ninguna. Vale la pena hacerlo bien o no hacerlo.</dd></div>
+          </dl>
+        </div>
+      </li>
+      <li class="finding" data-state="open">
+        <div class="finding__meta">
+          <span class="finding__id num">F11</span>
+          <span class="finding__sev" data-sev="low">Baja</span>
+          <span class="finding__state">Registrado</span>
+        </div>
+        <div class="finding__body">
+          <h3>Las tipografías se traen de un tercero</h3>
+          <p class="finding__heur">Rendimiento · Privacidad</p>
+          <dl>
+            <div><dt>Evidencia</dt><dd>Tres familias vienen del CDN de Google Fonts. Es la única petición a terceros que hace el sitio, no hay analítica ni rastreadores de ningún tipo, pero sigue siendo un viaje de ida y vuelta a otro origen antes de que el primer título pueda pintarse con su tipografía real.</dd></div>
+            <div><dt>Resolución</dt><dd>Registrado. Alojar localmente los cuatro pesos que realmente se usan, con subconjunto latino, eliminaría la petición y los preconnect y acortaría la ruta crítica. Es una tarea de tooling de build más que de diseño, que es la única razón por la que no está en esta pasada.</dd></div>
+          </dl>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block reveal">
+    <div class="block__head">
+      <h2>Lo que produjo la auditoría</h2>
+      
+    </div>
+    <div class="statgrid">
+      <div><b class="num">24</b><span>URLs indexables, desde una</span></div>
+      <div><b class="num">11</b><span>hallazgos, siete corregidos en esta pasada</span></div>
+      <div><b class="num">17/17</b><span>pares de color en uso, todos medidos en WCAG AA o mejor</span></div>
+      <div><b class="num">0</b><span>scripts de terceros, rastreadores o analítica</span></div>
+    </div>
+  </section>
+
+  <aside class="block callout reveal">
+    <h2>Definición incorrecta, solución incorrecta.</h2>
+    <p>El mismo principio con el que mido a mis estudiantes. La versión anterior de este portfolio no estaba mal construida; respondía la pregunta equivocada. Estaba hecha para mostrar diez proyectos, cuando lo que una hiring manager necesita es encontrar el proyecto que coincide con el puesto que está cubriendo y mandárselo a otra persona. En cuanto la pregunta pasó de mostrar mi trabajo a ayudarla a decidir, las modales, la URL única y la tarjeta compartida dejaron de ser detalles de implementación y pasaron a ser el problema entero.</p>
+  </aside>
+
+  <section class="block outcome reveal">
+    <h2>Resultados</h2>
+    <p>Once casos tienen ahora su propia dirección en dos idiomas, cada uno con su tarjeta para compartir, así que el enlace a un proyecto llega como ese proyecto y no como una página de inicio. Siete de los once hallazgos se publicaron junto con esta página, incluido el que dejaba el h1 invisible en el primer pintado. Los cuatro restantes quedan anotados con su motivo, que es la parte de una auditoría que suele desaparecer. El design system que salió de todo esto está documentado en esta página por la misma hoja de estilos que describe, así que el próximo caso cuesta un array de bloques y ninguna decisión nueva.</p>
+  </section>
+  </div>
+</div>
+
+<section class="section--tight" id="contact">
+  <div class="shell">
+    <div class="contact contact--compact reveal">
+      <svg class="contact__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+      <div class="contact__copy">
+      <div class="contact__inner">
+        <p class="eyebrow">Hablemos</p>
+        <h2 class="h-xl" style="margin-top:16px">¿Un problema de aprendizaje que merece un proceso de diseño real?</h2>
+      </div>
+      <p>Ya sea que estés armando un programa de formación desde cero, rescatando uno que nadie termina, o tratando de demostrar que el tuyo funciona, escribime.</p>
+      <div class="contact__actions">
+        <a class="pill" href="mailto:lourdes.pedaci@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg> lourdes.pedaci@gmail.com</a>
+        <a class="pill pill--outline" href="https://drive.google.com/file/d/1oC0_9CM-aP2DHHQepNc5uss5lxxekds_/view" target="_blank" rel="noopener">Ver CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
+        <a class="pill pill--outline" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+        <a class="pill pill--outline" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+      </div>
+      </div>
+      <div class="contact__viz" aria-hidden="false">
+        <svg viewBox="0 0 300 272" role="img" aria-label="Diseño de experiencias de aprendizaje, UX y datos, conectados como una sola práctica.">
+          <g class="triad__wires">
+            <path d="M150 56 L246 212"></path>
+            <path d="M246 212 L54 212"></path>
+            <path d="M54 212 L150 56"></path>
+          </g>
+          <circle class="triad__spark" r="4.5" style="--path:path('M150 56 L246 212');--dur:4.2s;--delay:0s"></circle>
+          <circle class="triad__spark" r="4.5" style="--path:path('M246 212 L54 212');--dur:4.8s;--delay:.9s"></circle>
+          <circle class="triad__spark" r="4.5" style="--path:path('M54 212 L150 56');--dur:4.5s;--delay:1.8s"></circle>
+          <g class="triad__node" style="--i:0">
+          <circle cx="150" cy="56" r="43"></circle>
+          <text x="150" y="56" dominant-baseline="central" text-anchor="middle">LxD</text>
+        </g>
+          <g class="triad__node" style="--i:1">
+          <circle cx="246" cy="212" r="43"></circle>
+          <text x="246" y="212" dominant-baseline="central" text-anchor="middle">UX</text>
+        </g>
+          <g class="triad__node" style="--i:2">
+          <circle cx="54" cy="212" r="43"></circle>
+          <text x="54" y="212" dominant-baseline="central" text-anchor="middle">Data</text>
+        </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__top">
+      <a class="brand" href="../../../es/">
+        <svg class="brand__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
+        <span class="brand__name">Lourdes Pedaci<small>Diseñadora de Experiencias de Aprendizaje · UX · Datos</small></span>
+      </a>
+      <div class="foot__links">
+        <a class="pill" href="mailto:lourdes.pedaci@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg> lourdes.pedaci@gmail.com</a>
+        <a class="pill" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
+        <a class="pill" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
+        <a class="pill" href="https://www.behance.net/lourdespedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.6 5.4c1.9 0 3.3.8 3.3 2.8 0 1.2-.6 1.9-1.5 2.3 1.3.4 2 1.4 2 2.8 0 2.3-1.8 3.3-3.9 3.3H2.4V5.4zm-.4 4.4c.8 0 1.4-.4 1.4-1.2s-.5-1.2-1.4-1.2H5.1v2.4zm.2 4.8c1 0 1.6-.4 1.6-1.4s-.7-1.4-1.6-1.4H5.1v2.8zM15 6.3h5.3v1.3H15zM18 9.6c2.3 0 3.8 1.6 3.8 4v.6h-5.5c.1 1.2.8 1.9 2 1.9.8 0 1.4-.3 1.7-.9h2c-.4 1.6-1.8 2.6-3.7 2.6-2.5 0-4.1-1.7-4.1-4.1s1.6-4.1 3.8-4.1m-1.7 3.3h3.4c-.1-1-.7-1.7-1.7-1.7s-1.6.6-1.7 1.7"/></svg> Behance</a>
+      </div>
+    </div>
+    <div class="foot__base">
+      <span>© 2026 Lourdes Pedaci - All rights reserved</span>
+      <span>Buenos Aires, AR</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Hacé clic en una imagen para ampliar">
+  <form method="dialog"><button aria-label="Cerrar">✕</button></form>
+  <img alt="">
+</dialog>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Este portfolio, auditado y reconstruido","description":"Le hice a mi portfolio la misma auditoría que le hago al producto de un cliente: heurísticas, accesibilidad, journey, contraste medido. Acá está la versión anterior, los once hallazgos, el design system que la reemplazó y los números que dicen si funcionó.","inLanguage":"es-AR","dateCreated":"2026","creator":{"@type":"Person","name":"Lourdes Pedaci","url":"https://lpedaci.github.io/portfolio"},"image":"https://lpedaci.github.io/portfolio/assets/img/portfolio-redesign-cover-card.svg","url":"https://lpedaci.github.io/portfolio/es/work/portfolio-redesign/"}</script>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

@@ -126,6 +126,120 @@ const render = {
     })}
   </section>`,
 
+  /* ---------------------------------------------------------------------
+     The blocks below exist for one case study: the audit of this site. They
+     are specimens, not illustrations. Every swatch is a real token, every
+     type row is set in the size it names, every atom is the same markup the
+     rest of the site ships. A design system documented in screenshots starts
+     lying the day after it is exported; this one cannot drift, because it is
+     drawn by the stylesheet it describes.
+     --------------------------------------------------------------------- */
+
+  /* swatches: the colour atoms, each carrying its measured contrast. */
+  swatches: (b, lang) => `<section class="block reveal">
+    ${headOf(b, lang)}
+    <div class="swatches">
+      ${b.items.map((c) => `<figure class="swatch">
+        ${c.rule
+          ? `<span class="swatch__chip swatch__chip--rule"><i style="background:${esc(c.hex)}"></i><i style="background:${esc(c.hex)}"></i><i style="background:${esc(c.hex)}"></i></span>`
+          : `<span class="swatch__chip" style="background:${esc(c.hex)}"></span>`}
+        <figcaption>
+          <b class="swatch__token">${esc(c.token)}</b>
+          <span class="swatch__hex num">${esc(c.hex)}</span>
+          <span class="swatch__use">${esc(t(c.use, lang))}</span>
+          ${c.ratio ? `<span class="swatch__ratio num" data-pass="${c.pass === false ? 'no' : 'yes'}">${esc(c.ratio)}</span>` : ''}
+        </figcaption>
+      </figure>`).join('\n      ')}
+    </div>
+  </section>`,
+
+  /* scale: the type ramp, every row set in the step it documents. */
+  scale: (b, lang) => `<section class="block reveal">
+    ${headOf(b, lang)}
+    <div class="ramp">
+      ${b.steps.map((st) => `<div class="ramp__row">
+        <div class="ramp__spec">
+          <b>${esc(st.name)}</b>
+          <span class="num">${esc(st.size)}</span>
+          <span>${esc(t(st.use, lang))}</span>
+        </div>
+        <p class="ramp__specimen ${esc(st.cls)}">${esc(t(st.sample, lang))}</p>
+      </div>`).join('\n      ')}
+    </div>
+  </section>`,
+
+  /* atoms: live components, rendered from the same classes the site uses. */
+  atoms: (b, lang) => `<section class="block reveal">
+    ${headOf(b, lang)}
+    <div class="atoms">
+      ${b.items.map((a) => `<article class="atom">
+        <header class="atom__head">
+          <b>${esc(a.name)}</b>
+          <code>${esc(a.sel)}</code>
+        </header>
+        <div class="atom__stage">${a.demo}</div>
+        <p class="atom__note">${esc(t(a.note, lang))}</p>
+      </article>`).join('\n      ')}
+    </div>
+  </section>`,
+
+  /* journey: what the visitor is doing, and what the interface owes them. */
+  journey: (b, lang) => `<section class="block reveal">
+    ${headOf(b, lang)}
+    <ol class="journey">
+      ${b.stages.map((st, i) => `<li class="jstage">
+        <span class="jstage__code num">${String(i + 1).padStart(2, '0')}</span>
+        <h3>${esc(t(st.stage, lang))}</h3>
+        <p class="jstage__goal">${esc(t(st.goal, lang))}</p>
+        <dl class="jstage__rows">
+          <div><dt>${lang === 'es' ? 'Qué hace' : 'Doing'}</dt><dd>${esc(t(st.doing, lang))}</dd></div>
+          <div><dt>${lang === 'es' ? 'Qué responde el sitio' : 'What the site answers with'}</dt><dd>${esc(t(st.answer, lang))}</dd></div>
+          <div class="jstage__risk"><dt>${lang === 'es' ? 'Dónde se cae' : 'Where it breaks'}</dt><dd>${esc(t(st.risk, lang))}</dd></div>
+        </dl>
+      </li>`).join('\n      ')}
+    </ol>
+  </section>`,
+
+  /* compare: the previous build against this one, one dimension per row. */
+  compare: (b, lang) => `<section class="block reveal">
+    ${headOf(b, lang)}
+    <div class="compare" role="table" aria-label="${esc(t(b.h, lang))}">
+      <div class="compare__head" role="row">
+        <span role="columnheader">${esc(t(b.dimension, lang))}</span>
+        <span role="columnheader">${esc(b.beforeLabel)}</span>
+        <span role="columnheader">${esc(b.afterLabel)}</span>
+      </div>
+      ${b.rows.map((r) => `<div class="compare__row" role="row">
+        <span class="compare__dim" role="rowheader">${esc(t(r.dim, lang))}</span>
+        <span class="compare__was" role="cell"><em>${esc(b.beforeLabel)}</em>${esc(t(r.was, lang))}</span>
+        <span class="compare__now" role="cell"><em>${esc(b.afterLabel)}</em>${esc(t(r.now, lang))}</span>
+      </div>`).join('\n      ')}
+    </div>
+    ${b.foot ? `<p class="block__note compare__foot">${esc(t(b.foot, lang))}</p>` : ''}
+  </section>`,
+
+  /* findings: the audit itself, severity first, each with its evidence. */
+  findings: (b, lang) => `<section class="block reveal">
+    ${headOf(b, lang)}
+    <ol class="findings">
+      ${b.items.map((f) => `<li class="finding" data-state="${esc(f.state)}">
+        <div class="finding__meta">
+          <span class="finding__id num">${esc(f.id)}</span>
+          <span class="finding__sev" data-sev="${esc(f.severity)}">${esc(t(f.severityLabel, lang))}</span>
+          <span class="finding__state">${esc(t(f.stateLabel, lang))}</span>
+        </div>
+        <div class="finding__body">
+          <h3>${esc(t(f.title, lang))}</h3>
+          <p class="finding__heur">${esc(t(f.heuristic, lang))}</p>
+          <dl>
+            <div><dt>${lang === 'es' ? 'Evidencia' : 'Evidence'}</dt><dd>${esc(t(f.evidence, lang))}</dd></div>
+            <div><dt>${lang === 'es' ? 'Resolución' : 'Resolution'}</dt><dd>${esc(t(f.fix, lang))}</dd></div>
+          </dl>
+        </div>
+      </li>`).join('\n      ')}
+    </ol>
+  </section>`,
+
   gallery: (b, lang, depth) => `<section class="block reveal">
     ${headOf(b, lang)}
     <div class="gallery${b.wide ? ' gallery--wide' : ''}">

@@ -189,6 +189,11 @@ export function homePage(lang) {
       ${categories.map((c) => `<button type="button" data-filter="${c.id}" aria-pressed="false">${esc(t(c.label, lang))}</button>`).join('\n      ')}
     </div>
 
+    <p class="filters__status" id="work-status" role="status" aria-atomic="true"
+       data-all="${esc(t(ui.showingAll, lang).replace('{n}', String(projects.length)))}"
+       data-one="${esc(t(ui.showingOne, lang))}"
+       data-many="${esc(t(ui.showingMany, lang))}">${esc(t(ui.showingAll, lang).replace('{n}', String(projects.length)))}</p>
+
     <div class="work" id="work-grid">
       ${projects.map((p, i) => cardMarkup(p, i, lang, depth)).join('\n      ')}
       <p class="work__empty" id="work-empty" hidden>${esc(t(ui.noMatches, lang))}</p>

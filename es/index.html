@@ -67,7 +67,7 @@
   </div>
 </header>
 
-<div class="sheet" id="sheet">
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Menú">
   <a class="sheet__link" href="../es/#practice">Práctica<em>01</em></a>
   <a class="sheet__link" href="../es/#work">Proyectos<em>02</em></a>
   <a class="sheet__link" href="../es/#process">Proceso<em>03</em></a>
@@ -95,8 +95,8 @@
           <span class="stat__label">años en diseño de aprendizaje, EdTech y datos</span>
         </div>
         <div class="stat">
-          <span class="stat__value num">11</span>
-          <span class="stat__label">equipos especializados liderados de punta a punta</span>
+          <span class="stat__value num">16-20</span>
+          <span class="stat__label">equipos especializados liderados en proyectos de inicio a fin</span>
         </div>
       </div>
 
@@ -173,7 +173,7 @@
         <p class="eyebrow eyebrow--clay reveal">Proyectos / 02</p>
         <h2 class="h-lg reveal">Trabajos seleccionados</h2>
       </div>
-      <p class="lead reveal">Diez proyectos, cada uno una forma distinta de responder la misma pregunta: qué necesita poder hacer esta persona, y cómo vamos a saber que puede hacerlo.</p>
+      <p class="lead reveal">Once proyectos, cada uno una forma distinta de responder la misma pregunta: qué necesita poder hacer esta persona, y cómo vamos a saber que puede hacerlo.</p>
     </div>
 
     <div class="filters reveal" role="group" aria-label="Proyectos">
@@ -185,11 +185,29 @@
       <button type="button" data-filter="motion" aria-pressed="false">Video y motion</button>
     </div>
 
+    <p class="filters__status" id="work-status" role="status" aria-atomic="true"
+       data-all="Se muestran los 11 proyectos."
+       data-one="Se muestra 1 proyecto en {cat}."
+       data-many="Se muestran {n} proyectos en {cat}.">Se muestran los 11 proyectos.</p>
+
     <div class="work" id="work-grid">
+      <a class="card reveal" href="../es/work/portfolio-redesign/" data-cats="ux data lxd">
+      <div class="card__frame">
+        <img src="../assets/img/portfolio-redesign-cover-card.svg" alt="Portada del design system: las muestras de color, la escala tipográfica y la grilla de doce columnas" loading="lazy" decoding="async">
+        <span class="card__year num">01 / 2026</span>
+        <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
+      </div>
+      <div class="card__body">
+        <span class="card__flag">UX y producto</span>
+        <h3 class="card__title">Este portfolio, auditado y reconstruido</h3>
+        <p class="card__desc">Le hice a mi portfolio la misma auditoría que le hago al producto de un cliente: heurísticas, accesibilidad, journey, contraste medido. Acá está la versión anterior, los once hallazgos, el design system que la reemplazó y los números que dicen si funcionó.</p>
+        <div class="tag-row"><span class="tag">UX Audit</span><span class="tag">Design System</span><span class="tag">WCAG 2.2</span><span class="tag">HTML/CSS/JS</span></div>
+      </div>
+    </a>
       <a class="card reveal" href="../es/work/project-evaluation/" data-cats="lxd pm ux">
       <div class="card__frame">
         <img src="../assets/img/projeval-cover-card.jpg" alt="Módulo e-learning de Evaluación y Gestión de Proyectos" loading="lazy" decoding="async">
-        <span class="card__year num">01 / 2026</span>
+        <span class="card__year num">02 / 2026</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -202,7 +220,7 @@
       <a class="card reveal" href="../es/work/operating-systems/" data-cats="lxd ux">
       <div class="card__frame">
         <img src="../assets/img/so-cover-card.jpg" alt="Sitio interactivo de Sistemas Operativos: diagrama de disco particionado" loading="lazy" decoding="async">
-        <span class="card__year num">02 / 2026</span>
+        <span class="card__year num">03 / 2026</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -215,7 +233,7 @@
       <a class="card reveal" href="../es/work/teacher-digital-era/" data-cats="lxd motion">
       <div class="card__frame">
         <img src="../assets/img/teacher-cover-card.jpg" alt="El rol docente en la era digital, fotograma del video" loading="lazy" decoding="async">
-        <span class="card__year num">03 / 2025</span>
+        <span class="card__year num">04 / 2025</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -228,7 +246,7 @@
       <a class="card reveal" href="../es/work/intersafe/" data-cats="ux data pm lxd">
       <div class="card__frame">
         <img src="../assets/img/intersafe-cover-card.jpg" alt="Mockups de afiches de INTERSAFE Temporada 2" loading="lazy" decoding="async">
-        <span class="card__year num">04 / 2024</span>
+        <span class="card__year num">05 / 2024</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -241,7 +259,7 @@
       <a class="card reveal" href="../es/work/it-infrastructure/" data-cats="lxd pm data">
       <div class="card__frame">
         <img src="../assets/img/itinfra-cover-card.jpg" alt="Mantenimiento de hardware en el laboratorio de informática" loading="lazy" decoding="async">
-        <span class="card__year num">05 / 2022-2024</span>
+        <span class="card__year num">06 / 2022-2024</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -254,7 +272,7 @@
       <a class="card reveal" href="../es/work/expo-smart-cities/" data-cats="motion">
       <div class="card__frame">
         <img src="../assets/img/expo-cover-card.jpg" alt="Fotograma del video de apertura de Expo Smart Cities 2024" loading="lazy" decoding="async">
-        <span class="card__year num">06 / 2024</span>
+        <span class="card__year num">07 / 2024</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -267,7 +285,7 @@
       <a class="card reveal" href="../es/work/edulabs/" data-cats="ux lxd data">
       <div class="card__frame">
         <img src="../assets/img/edulabs-cover-card.jpg" alt="Pantallas de UX y UI de EduLabs" loading="lazy" decoding="async">
-        <span class="card__year num">07 / 2024</span>
+        <span class="card__year num">08 / 2024</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -280,7 +298,7 @@
       <a class="card reveal" href="../es/work/the-crow/" data-cats="motion">
       <div class="card__frame">
         <img src="../assets/img/crow-cover-card.jpg" alt="Fotograma del cortometraje animado The Crow" loading="lazy" decoding="async">
-        <span class="card__year num">08 / 2024</span>
+        <span class="card__year num">09 / 2024</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -293,7 +311,7 @@
       <a class="card reveal" href="../es/work/tedxtecno/" data-cats="lxd pm">
       <div class="card__frame">
         <img src="../assets/img/tedx-cover-card.jpg" alt="Evento de charlas estudiantiles TEDxTECNO" loading="lazy" decoding="async">
-        <span class="card__year num">09 / 2022</span>
+        <span class="card__year num">10 / 2022</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">
@@ -306,7 +324,7 @@
       <a class="card reveal" href="../es/work/erp-motion-graphics/" data-cats="motion lxd">
       <div class="card__frame">
         <img src="../assets/img/erp-cover-card.jpg" alt="Fotograma del video de motion graphics sobre ERP" loading="lazy" decoding="async">
-        <span class="card__year num">10 / 2019</span>
+        <span class="card__year num">11 / 2019</span>
         <span class="card__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></span>
       </div>
       <div class="card__body">

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img">
+  <title>Portfolio design system: the palette, the type ramp and the grid</title>
+  <!-- Drawn from the site's own tokens. Nothing here is decoration: the chips
+       are the palette, the bars are the type ramp, the frame is the 12-column
+       grid the case study documents. -->
+  <defs>
+    <clipPath id="frame"><rect width="1000" height="600"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1000" height="600" fill="#F7F4EC"/>
+
+    <!-- the 12 column grid, at the weight the stylesheet draws its hairlines -->
+    <g stroke="#17150F" stroke-opacity="0.07" stroke-width="1">
+      <path d="M76.5 0V600M153.5 0V600M230.5 0V600M307.5 0V600M384.5 0V600M461.5 0V600M538.5 0V600M615.5 0V600M692.5 0V600M769.5 0V600M846.5 0V600M923.5 0V600"/>
+      <path d="M0 76.5H1000M0 523.5H1000"/>
+    </g>
+
+    <!-- clay panel: the editorial voice -->
+    <rect x="615" y="76" width="309" height="448" rx="34" fill="#E2BB99"/>
+    <rect x="629" y="90" width="281" height="420" rx="24" fill="#EAD9CD"/>
+    <!-- LP monogram, the same 48x34 drawing the masthead uses -->
+    <g transform="translate(672 176) scale(3.6)" fill="none" stroke="#17150F" stroke-opacity="0.16"
+       stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 4v17a5 5 0 0 0 5 5h6.5"/>
+      <path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/>
+    </g>
+
+    <!-- the type ramp, as bars at the ramp's own proportions -->
+    <g fill="#17150F">
+      <rect x="76" y="150" width="470" height="46" rx="6"/>
+      <rect x="76" y="212" width="386" height="46" rx="6"/>
+    </g>
+    <rect x="76" y="274" width="424" height="46" rx="6" fill="#965E44"/>
+
+    <g fill="#17150F" fill-opacity="0.42">
+      <rect x="76" y="352" width="452" height="9" rx="4.5"/>
+      <rect x="76" y="374" width="418" height="9" rx="4.5"/>
+      <rect x="76" y="396" width="336" height="9" rx="4.5"/>
+    </g>
+
+    <!-- the palette, as the swatch atoms render it -->
+    <g>
+      <rect x="76" y="440" width="66" height="66" rx="14" fill="#17150F"/>
+      <rect x="154" y="440" width="66" height="66" rx="14" fill="#965E44"/>
+      <rect x="232" y="440" width="66" height="66" rx="14" fill="#596959"/>
+      <rect x="310" y="440" width="66" height="66" rx="14" fill="#E2BB99"/>
+      <rect x="388" y="440" width="66" height="66" rx="14" fill="#D3D8CE"/>
+      <rect x="466" y="440" width="66" height="66" rx="14" fill="#FDFBF6" stroke="#17150F" stroke-opacity="0.14"/>
+    </g>
+
+    <!-- the sage node: data and behaviour -->
+    <circle cx="615" cy="300" r="34" fill="#596959"/>
+    <circle cx="615" cy="300" r="52" fill="none" stroke="#596959" stroke-opacity="0.34" stroke-width="1"/>
+  </g>
+</svg>

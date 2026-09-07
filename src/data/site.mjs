@@ -57,6 +57,9 @@ export const ui = {
   filterAll:   { en: 'All', es: 'Todos' },
   noMatches:   { en: 'No projects in this category yet.', es: 'Todavía no hay proyectos en esta categoría.' },
   copyEmail:   { en: 'Copy address', es: 'Copiar dirección' },
+  showingAll:  { en: 'Showing all {n} projects.',   es: 'Se muestran los {n} proyectos.' },
+  showingMany: { en: 'Showing {n} projects in {cat}.', es: 'Se muestran {n} proyectos en {cat}.' },
+  showingOne:  { en: 'Showing 1 project in {cat}.',    es: 'Se muestra 1 proyecto en {cat}.' },
   copied:      { en: 'Copied', es: 'Copiado' },
   rights:      { en: 'All rights reserved', es: 'All rights reserved' },
   scroll:      { en: 'Scroll', es: 'Bajá' },
@@ -89,7 +92,7 @@ export const home = {
   },
   stats: [
     { value: '+7',    label: { en: 'years designing learning, EdTech and data', es: 'años en diseño de aprendizaje, EdTech y datos' } },
-    { value: '11',    label: { en: 'specialised teams led end to end',          es: 'equipos especializados liderados de punta a punta' } }
+    { value: '16-20', label: { en: 'specialised teams led in end-to-end projects', es: 'equipos especializados liderados en proyectos de inicio a fin' } }
   ],
   marquee: ['ADDIE', 'SAM', 'Backward Design', 'Gagné-Briggs', 'Kirkpatrick', 'Design Thinking', 'TPACK', 'Project-Based Learning', 'Retrieval Practice', 'Scrum', 'Kanban'],
 
@@ -133,8 +136,8 @@ export const home = {
 
   workTitle: { en: 'Selected work', es: 'Trabajos seleccionados' },
   workLead: {
-    en: 'Ten projects, each a different way of answering the same question: what does this person need to be able to do, and how will we know that they can.',
-    es: 'Diez proyectos, cada uno una forma distinta de responder la misma pregunta: qué necesita poder hacer esta persona, y cómo vamos a saber que puede hacerlo.'
+    en: 'Eleven projects, each a different way of answering the same question: what does this person need to be able to do, and how will we know that they can.',
+    es: 'Once proyectos, cada uno una forma distinta de responder la misma pregunta: qué necesita poder hacer esta persona, y cómo vamos a saber que puede hacerlo.'
   },
 
   processTitle: { en: 'How I work', es: 'Cómo trabajo' },

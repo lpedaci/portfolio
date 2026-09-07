@@ -120,7 +120,7 @@ function header({ lang, depth, enPath, esPath }) {
   </div>
 </header>
 
-<div class="sheet" id="sheet">
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="${esc(t(ui.menu, lang))}">
   ${items.map((i) => `<a class="sheet__link" href="${i.href}">${esc(i.label)}<em>${i.tag}</em></a>`).join('\n  ')}
   <div class="sheet__foot">
     <a class="pill pill--ink" href="${site.links.cv}" target="_blank" rel="noopener">${esc(t(ui.viewCv, lang))} ${icon.arrowUpRight}</a>

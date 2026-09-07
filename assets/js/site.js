@@ -18,6 +18,9 @@
   }
 
   /* --------------------------------------------------------- mobile sheet */
+  /* The sheet covers the whole viewport, so it is a modal whether or not it
+     was built as one. Without the trap, Tab past the last link walks the page
+     underneath the overlay and the reader loses the menu without knowing it. */
   var burger = document.querySelector('.burger');
   var sheet = document.getElementById('sheet');
   if (burger && sheet) {
@@ -26,8 +29,13 @@
       sheet.classList.toggle('is-open', open);
       document.body.style.overflow = open ? 'hidden' : '';
       if (open) {
+        /* This lands synchronously because the stylesheet flips the sheet to
+           visible with no delay on the way in. It used to fail silently: while
+           visibility was still transitioning, nothing inside was focusable. */
         var first = sheet.querySelector('a');
         if (first) first.focus({ preventScroll: true });
+      } else {
+        burger.focus({ preventScroll: true });
       }
     };
     burger.addEventListener('click', function () {
@@ -37,9 +45,19 @@
       if (e.target.closest('a')) setSheet(false);
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && sheet.classList.contains('is-open')) {
-        setSheet(false);
-        burger.focus();
+      if (!sheet.classList.contains('is-open')) return;
+      if (e.key === 'Escape') { setSheet(false); return; }
+      if (e.key !== 'Tab') return;
+      /* The burger is the way out, so it belongs inside the cycle. */
+      var stops = [burger].concat(
+        Array.prototype.slice.call(sheet.querySelectorAll('a[href], button'))
+      );
+      var first = stops[0];
+      var last = stops[stops.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
       }
     });
   }
@@ -50,6 +68,10 @@
 
   if (filterBar && grid) {
     var emptyNote = document.getElementById('work-empty');
+    /* Filtering rewrites the grid silently: a sighted reader sees ten cards
+       become three, a screen-reader reader hears nothing at all. One atomic
+       status message, phrased as a sentence rather than a bare number. */
+    var status = document.getElementById('work-status');
 
     filterBar.addEventListener('click', function (e) {
       var btn = e.target.closest('button[data-filter]');
@@ -69,6 +91,16 @@
       });
 
       if (emptyNote) emptyNote.hidden = shown > 0;
+      if (status) {
+        /* "Showing 11 projects in All" is a sentence nobody says. The
+           unfiltered view gets its own phrasing. */
+        var tpl = want === 'all' ? status.dataset.all
+                : shown === 1 ? status.dataset.one
+                : status.dataset.many;
+        status.textContent = tpl
+          .replace('{n}', String(shown))
+          .replace('{cat}', btn.textContent.trim());
+      }
     });
   }
 
@@ -147,6 +179,20 @@
     return;
   }
 
+  /* Anything already on screen at first paint is shown immediately and never
+     observed. The reveal is a scroll reward; it has no business holding the
+     h1, the lead and the portrait at opacity 0 while the observer warms up. */
+  var fold = window.innerHeight * 0.94;
+  var pending = [];
+  targets.forEach(function (el) {
+    /* is-instant, not just is-in: a 700ms fade on the h1 is still 700ms of
+       the reader looking at nothing. Above the fold there is no scroll to
+       reward, so the element is simply there. */
+    if (el.getBoundingClientRect().top < fold) el.classList.add('is-in', 'is-instant');
+    else pending.push(el);
+  });
+  if (!pending.length) return;
+
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
@@ -155,7 +201,7 @@
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
 
-  targets.forEach(function (el, i) {
+  pending.forEach(function (el, i) {
     el.style.transitionDelay = Math.min(i % 4, 3) * 70 + 'ms';
     io.observe(el);
   });
@@ -163,6 +209,6 @@
   /* Safety net: whatever happens to the observer (a backgrounded tab, an
      unsupported edge case), nothing on this site stays invisible. */
   window.setTimeout(function () {
-    targets.forEach(function (el) { el.classList.add('is-in'); });
+    pending.forEach(function (el) { el.classList.add('is-in'); });
   }, 2500);
 })();
