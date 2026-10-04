@@ -1,0 +1,10 @@
+# Configuración local de Claude Code
+.claude/
+
+# Archivos del sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Brief interno (notas de posicionamiento, no se publica)
+portfolio-2.0-brief.md

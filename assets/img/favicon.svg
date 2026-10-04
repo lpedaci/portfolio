@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Lourdes Pedaci</title>
+  <rect width="512" height="512" rx="112" fill="#0D0E12"/>
+  <!-- bigotes: pistas de circuito con nodos -->
+  <g fill="none" stroke="#35C2B1" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 296H86"/>
+    <path d="M152 332H112V372"/>
+    <path d="M362 296H426"/>
+    <path d="M360 332H400V372"/>
+  </g>
+  <g fill="#0D0E12" stroke="#35C2B1" stroke-width="10">
+    <circle cx="76" cy="296" r="14"/>
+    <circle cx="112" cy="384" r="14"/>
+    <circle cx="436" cy="296" r="14"/>
+    <circle cx="400" cy="384" r="14"/>
+  </g>
+  <!-- cabeza -->
+  <path fill="#35C2B1" d="M120 200 140 86l84 66q32-10 64 0l84-66 20 114q30 56 8 118-34 86-144 88-110-2-144-88-22-62 8-118Z"/>
+  <path fill="#EC7FB0" d="m152 172 10-56 40 34Zm208 0-10-56-40 34Z"/>
+  <!-- ojos de pantalla -->
+  <rect x="176" y="232" width="48" height="58" rx="12" fill="#0D0E12"/>
+  <rect x="288" y="232" width="48" height="58" rx="12" fill="#0D0E12"/>
+  <rect x="190" y="244" width="14" height="20" rx="4" fill="#B8F3EA"/>
+  <rect x="302" y="244" width="14" height="20" rx="4" fill="#B8F3EA"/>
+  <!-- nariz y boca -->
+  <path fill="#EC7FB0" d="M242 314h28l-14 16Z"/>
+  <path fill="none" stroke="#0D0E12" stroke-width="9" stroke-linecap="round" d="M256 330q-10 22-32 14M256 330q10 22 32 14"/>
+  <!-- nodo en la frente -->
+  <path fill="none" stroke="#0D0E12" stroke-width="9" stroke-linecap="round" d="M256 160v34"/>
+  <circle cx="256" cy="204" r="11" fill="#0D0E12"/>
+</svg>

@@ -1,146 +1,302 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
-<script>document.documentElement.className+=" js"</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>This page does not exist · Lourdes Pedaci</title>
-<meta name="description" content="The link may be outdated, or the project may have moved. Everything is one click away from the index.">
-<meta name="author" content="Lourdes Pedaci">
-<meta name="theme-color" content="#F7F4EC">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23BE5735'/%3E%3Cg fill='none' stroke='%23FBF8F1' stroke-width='6.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 17v13.5a5 5 0 0 0 5 5h4.5'/%3E%3Cpath d='M38 47V19h4a7 7 0 0 1 0 14h-4'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="canonical" href="https://lpedaci.github.io/portfolio/404.html">
-<link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/404.html">
-<link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/es/404.html">
-<link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Lourdes Pedaci">
-<meta property="og:locale" content="en_US">
-<meta property="og:url" content="https://lpedaci.github.io/portfolio/404.html">
-<meta property="og:title" content="This page does not exist · Lourdes Pedaci">
-<meta property="og:description" content="The link may be outdated, or the project may have moved. Everything is one click away from the index.">
-<meta property="og:image" content="https://lpedaci.github.io/portfolio/assets/img/og-card.jpg">
-<meta property="og:image:secure_url" content="https://lpedaci.github.io/portfolio/assets/img/og-card.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Lourdes Pedaci, Learning Experience Designer working across UX and data.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="This page does not exist · Lourdes Pedaci">
-<meta name="twitter:description" content="The link may be outdated, or the project may have moved. Everything is one click away from the index.">
-<meta name="twitter:image" content="https://lpedaci.github.io/portfolio/assets/img/og-card.jpg">
-<meta name="twitter:image:alt" content="Lourdes Pedaci, Learning Experience Designer working across UX and data.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://lpedaci.github.io/portfolio/assets/css/site.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada | Lourdes Pedaci</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0D0E12">
+  <script>
+    // Un 404 puede servirse en cualquier ruta: las hojas de fuentes e íconos se piden desde la raíz del sitio.
+    (() => {
+      const seg = location.pathname.split('/').filter(Boolean)[0];
+      const root = /github\.io$/.test(location.hostname) && seg ? `/${seg}/` : '/';
+      ['assets/css/fonts.css?v=202610041036', 'assets/css/icons.css?v=202610041036'].forEach((href) => {
+        const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = root + href; document.head.appendChild(l);
+      });
+      [['icon', 'assets/img/favicon.svg', 'image/svg+xml'], ['apple-touch-icon', 'assets/img/apple-touch-icon.png', '']].forEach(([rel, href, type]) => {
+        const l = document.createElement('link'); l.rel = rel; l.href = root + href; if (type) l.type = type; document.head.appendChild(l);
+      });
+    })();
+  </script>
+  <!-- Página autocontenida: un 404 puede servirse en cualquier ruta, así que no depende de rutas relativas -->
+  <style>
+    :root {
+      --bg: #0D0E12; --surface: #15171C; --surface-2: #1B1D23; --text: #F2F2EF; --muted: #9A9AA3; --line: #24262E;
+      --it: #35C2B1; --cap: #EC7FB0; --on-accent: #0D0E12;
+      --f-display: 'Schibsted Grotesk', system-ui, sans-serif; --f-body: 'Hanken Grotesk', system-ui, sans-serif; --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1); --gutter: 16px; color-scheme: dark;
+    }
+    @media (min-width: 768px) { :root { --gutter: 32px; } }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; min-height: 100dvh; display: flex; flex-direction: column; background: var(--bg); color: var(--text); font: 400 1rem/1.6 var(--f-body); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; } button { font: inherit; color: inherit; } p, h1 { margin: 0; }
+    :focus-visible { outline: 2px solid var(--it); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: 100%; max-width: 1280px; margin-inline: auto; padding-inline: var(--gutter); }
+
+    .skip { position: absolute; left: var(--gutter); top: -100px; z-index: 30; background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 999px; font-weight: 500; text-decoration: none; }
+    .skip:focus { top: 12px; }
+    .nav { border-bottom: 1px solid var(--line); }
+    .nav__inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav__brand { display: inline-flex; align-items: center; min-height: 44px; font: 600 1.0625rem/1 var(--f-display); letter-spacing: -0.01em; text-decoration: none; }
+    .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+    .lang button { font: 500 0.75rem/1 var(--f-mono); letter-spacing: 0.04em; background: none; border: 0; border-radius: 999px; min-width: 40px; min-height: 32px; padding: 0 10px; cursor: pointer; color: var(--muted); }
+    .lang button[aria-pressed="true"] { background: var(--surface-2); color: var(--text); }
+
+    main { flex: 1; display: grid; place-items: center; padding-block: 40px 64px; }
+    .nf { display: grid; justify-items: center; text-align: center; gap: 0; }
+    .scene { position: relative; width: min(100%, 600px); }
+    .scene svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .eyebrow { margin-top: 24px; font: 400 0.8125rem/1 var(--f-mono); color: var(--it); }
+    h1 { margin-top: 14px; font: 600 clamp(2rem, 1.4rem + 2.6vw, 3rem)/1.08 var(--f-display); letter-spacing: -0.025em; text-wrap: balance; }
+    .lead { margin-top: 14px; color: var(--muted); font-size: 1.0625rem; max-width: 44rem; text-wrap: balance; }
+    .lead span { display: block; }  /* una oración por línea */
+    .ctas { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 500; text-decoration: none; white-space: nowrap; border: 1px solid transparent; transition: transform 0.2s var(--ease), background-color 0.2s var(--ease), border-color 0.2s var(--ease); }
+    .btn:active { transform: translateY(1px); }
+    .btn--primary { background: var(--it); color: var(--on-accent); }
+    .btn--primary:hover { background: #4fd0c0; }
+    .btn--ghost { border-color: var(--line); }
+    .btn--ghost:hover { border-color: var(--muted); }
+    .foot { border-top: 1px solid var(--line); }
+    .foot p { padding-block: 24px; font: 400 0.8125rem/1 var(--f-mono); color: var(--muted); }
+    .foot__inner { display: flex; align-items: center; gap: 12px; }
+    .foot__in { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 999px; color: var(--muted); transition: color 0.2s var(--ease); }
+    .foot__in:hover { color: var(--text); }
+    .foot__in:focus-visible { outline: 2px solid var(--it); outline-offset: 3px; }
+    .foot__icon { width: 18px; height: 18px; fill: currentColor; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+    /* ---------- Gatito ----------
+       En el suelo, agazapado en pose de juego, juega con el hilo del ovillo (el cero del 404).
+       Una pasada de 5 s: mueve la cola, parpadea, menea la cola antes de atacar,
+       le da un manotazo al hilo (el tirón acerca el ovillo) y al final se pregunta dónde está la página. */
+    .digit { font: 600 210px/1 var(--f-display); fill: var(--surface-2); stroke: #2C3038; stroke-width: 1.5; }
+    .cat { fill: #5A5F6B; }        /* gatito tuxedo: cuerpo gris oscuro */
+    .cat-white { fill: #ECECE8; }  /* medias, hocico y panza blancos */
+    .cat-far { fill: #4A4E58; }    /* pata del lado lejano: un tono más oscuro, se lee detrás */
+    .cat-far-white { fill: #D2D2CE; }
+    .ear-in { fill: var(--cap); }
+    .eye { fill: var(--it); }
+    .pupil { fill: var(--bg); }
+    .nose { fill: var(--cap); }
+    .whisker { stroke: #C9C9CF; stroke-width: 1.2; stroke-linecap: round; fill: none; }
+    .ball { fill: var(--it); }
+    .wrapline { fill: none; stroke: #0F5E55; stroke-width: 3; stroke-linecap: round; }
+    .thread { fill: none; stroke: var(--it); stroke-width: 2.5; stroke-linecap: round; }
+    .shadow { fill: #000; opacity: 0.35; }
+    .q { font: 500 22px/1 var(--f-mono); fill: var(--it); opacity: 0; }
+
+    .ball-g, .ball-spin, .q { transform-box: view-box; }
+    .ball-spin { transform-origin: 262px 214px; }
+    /* Piezas del gatito: el eje se mide sobre cada pieza (fill-box), así el gatito se puede escalar entero */
+    .tail, .rear, .head, .ear-r, .eyes, .paw { transform-box: fill-box; }
+    .tail { transform-origin: 10% 95%; }    /* base de la cola */
+    .rear { transform-origin: 70% 100%; }   /* patas traseras en el piso */
+    .head { transform-origin: 60% 100%; }   /* cuello */
+    .ear-r { transform-origin: 20% 100%; }
+    .eyes { transform-origin: 50% 50%; }
+    .paw { transform-origin: 50% 8%; }      /* hombro */
+
+    /* Juega una vez (5 s) al cargar y queda agazapado; vuelve a jugar al pasar el mouse o tocar la escena.
+       Así ninguna animación dura más de 5 s sin control (WCAG 2.2.2) y no hace falta un botón de pausa. */
+    @media (prefers-reduced-motion: no-preference) {
+      .scene { cursor: pointer; }
+      .is-playing .tail { animation: tail 5s ease-in-out; }
+      .is-playing .eyes { animation: blink 5s; }
+      .is-playing .ear-r { animation: ear 5s; }
+      .is-playing .rear { animation: wiggle 5s; }
+      .is-playing .head { animation: head 5s ease-in-out; }
+      .is-playing .paw { animation: paw 5s ease-in-out; }
+      .is-playing .ball-g { animation: roll 5s ease-in-out; }
+      .is-playing .ball-spin { animation: spin 5s ease-in-out; }
+      .is-playing .q { animation: q 5s ease-in-out; }
+    }
+    /* Un solo manotazo, con tiempo: mira el hilo, menea la cola, levanta la pata despacio y la baja.
+       Todo entra en los 5 s de la pasada. */
+    @keyframes tail { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-8deg); } 55% { transform: rotate(14deg); } 80% { transform: rotate(-4deg); } }
+    @keyframes blink { 0%, 4%, 100% { transform: scaleY(1); } 7% { transform: scaleY(0.1); } 10% { transform: scaleY(1); } }
+    @keyframes ear { 0%, 80%, 90%, 100% { transform: rotate(0); } 84% { transform: rotate(-14deg); } 87% { transform: rotate(4deg); } }
+    /* Meneo de la cola antes de atacar, como hacen los gatos */
+    @keyframes wiggle {
+      0%, 16%, 38%, 100% { transform: translateX(0); }
+      20%, 28% { transform: translateX(-2px); } 24%, 32% { transform: translateX(2px); }
+    }
+    /* Sigue el hilo con la cabeza: baja la mirada mientras ataca */
+    @keyframes head { 0%, 10% { transform: rotate(0); } 22%, 70% { transform: rotate(-7deg); } 80%, 100% { transform: rotate(3deg); } }
+    /* Manotazo: levanta la pata hacia adelante sin apuro y la baja sobre el hilo */
+    @keyframes paw {
+      0%, 36% { transform: rotate(0); } 48% { transform: rotate(72deg); } 55% { transform: rotate(-4deg); } 60%, 100% { transform: rotate(0); }
+    }
+    /* El tirón del hilo acerca el ovillo, que rueda y vuelve a su lugar */
+    @keyframes roll { 0%, 55% { transform: translateX(0); } 68% { transform: translateX(12px); } 86%, 100% { transform: translateX(0); } }
+    @keyframes spin { 0%, 55% { transform: rotate(0); } 68% { transform: rotate(40deg); } 86%, 100% { transform: rotate(0); } }
+    @keyframes q { 0%, 84% { opacity: 0; transform: translateY(6px); } 90%, 97% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-4px); } }
+  </style>
 </head>
 <body>
-<script>if(location.pathname.indexOf('/es/')!==-1)location.replace('https://lpedaci.github.io/portfolio/es/404.html')</script>
-<a class="skip" href="#main">Skip to content</a>
-
-<header class="masthead">
-  <div class="masthead__bar">
-    <a class="brand" href="https://lpedaci.github.io/portfolio/" aria-label="Lourdes Pedaci">
-      <svg class="brand__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
-      <span class="brand__name">Lourdes Pedaci<small>Learning Experience Designer · UX · Data</small></span>
-    </a>
-
-    <nav class="nav" aria-label="Menu">
-      <a href="https://lpedaci.github.io/portfolio/#practice">Practice</a>
-      <a href="https://lpedaci.github.io/portfolio/#work">Work</a>
-      <a href="https://lpedaci.github.io/portfolio/#process">Process</a>
-      <a href="https://lpedaci.github.io/portfolio/#about">About</a>
-      <a href="https://lpedaci.github.io/portfolio/#contact">Contact</a>
-    </nav>
-
-    <div class="masthead__end">
-      <span class="status"><i></i>Open to work</span>
-      <div class="langswap" role="group" aria-label="Language">
-        <a href="https://lpedaci.github.io/portfolio/" hreflang="en" aria-current="true">EN</a>
-        <a href="https://lpedaci.github.io/portfolio/es/" hreflang="es" aria-current="false">ES</a>
+  <a class="skip" href="#main" data-i18n="skip">Ir al contenido</a>
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand js-home" href="/">Lourdes Pedaci</a>
+      <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="langLabel">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="sheet">
-        <span></span><span></span><span></span>
-        <span class="sr">Menu</span>
-      </button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Menu">
-  <a class="sheet__link" href="https://lpedaci.github.io/portfolio/#practice">Practice<em>01</em></a>
-  <a class="sheet__link" href="https://lpedaci.github.io/portfolio/#work">Work<em>02</em></a>
-  <a class="sheet__link" href="https://lpedaci.github.io/portfolio/#process">Process<em>03</em></a>
-  <a class="sheet__link" href="https://lpedaci.github.io/portfolio/#about">About<em>04</em></a>
-  <a class="sheet__link" href="https://lpedaci.github.io/portfolio/#contact">Contact<em>05</em></a>
-  <div class="sheet__foot">
-    <a class="pill pill--ink" href="https://drive.google.com/file/d/1oC0_9CM-aP2DHHQepNc5uss5lxxekds_/view" target="_blank" rel="noopener">View résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
-    <a class="pill" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
-    <a class="pill" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
-  </div>
-</div>
+  <main id="main">
+    <div class="wrap nf">
+      <div class="scene" id="scene">
+        <svg viewBox="28 104 604 196" role="img" aria-labelledby="cat-desc">
+          <desc id="cat-desc" data-i18n="catLabel">Un gatito gris con medias blancas, agazapado en el suelo, juega con el hilo de un ovillo de lana que ocupa el lugar del cero.</desc>
+          <g aria-hidden="true">
+            <!-- 4 izquierdo -->
+            <text class="digit" x="40" y="282">4</text>
+            <!-- ovillo (el cero) -->
+            <ellipse class="shadow" cx="262" cy="284" rx="56" ry="7"/>
+            <g class="ball-g">
+              <g class="ball-spin">
+                <circle class="ball" cx="262" cy="214" r="64"/>
+                <path class="wrapline" d="M206 184 C236 214 278 234 322 230"/>
+                <path class="wrapline" d="M214 252 C240 210 280 178 318 178"/>
+                <path class="wrapline" d="M236 154 C258 196 266 236 262 276"/>
+                <path class="wrapline" d="M200 222 C230 236 262 244 296 270"/>
+              </g>
+              <!-- hilo suelto: corre por el suelo hasta la pata del gatito -->
+              <path class="thread" d="M304 258 C318 280 340 290 380 290 C420 290 456 292 504 290"/>
+            </g>
+            <!-- 4 derecho -->
+            <text class="digit" x="340" y="282">4</text>
 
-<main id="main">
-
-<section class="shell oops">
-  <div class="oops__copy">
-    <p class="eyebrow eyebrow--clay num reveal">404</p>
-    <h1 class="display oops__title reveal">lost</h1>
-    <p class="lead reveal">The link may be outdated, or the project may have moved. Everything is one click away from the index.</p>
-    <div class="oops__actions reveal">
-      <a class="pill pill--ink" href="https://lpedaci.github.io/portfolio/">Back to the index <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.6 7.5h7.9v7.9"/></svg></a>
-      <a class="pill" href="https://lpedaci.github.io/portfolio/#work">Work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12h14"/><path d="m13 6.5 5.5 5.5L13 17.5"/></svg></a>
-    </div>
-  </div>
-  <div class="oops__viz reveal">
-        <svg viewBox="0 0 320 240" role="img" aria-label="A signal leaves a page that exists and heads for one that does not: the wire fades out before it arrives and the destination stays drawn as an outline.">
-          <defs>
-            <linearGradient id="routeFade" gradientUnits="userSpaceOnUse" x1="84" y1="163" x2="217" y2="89">
-              <stop offset="0" stop-opacity=".32"></stop>
-              <stop offset=".58" stop-opacity=".32"></stop>
-              <stop offset=".92" stop-opacity="0"></stop>
-            </linearGradient>
-          </defs>
-
-          <path class="route__wire" d="M84 163 L217 89"></path>
-          <circle class="route__spark" r="4.5"></circle>
-
-          <g class="route__node">
-            <circle cx="54" cy="180" r="34"></circle>
+            <!-- gatito, en el suelo y agazapado, mirando el hilo -->
+            <g transform="translate(536 291) scale(1.3) translate(-536 -291)">
+            <ellipse class="shadow" cx="536" cy="291" rx="62" ry="5"/>
+            <!-- pata delantera de apoyo: la del lado lejano, estirada en el piso por detrás del cuerpo
+                 y de la pata que juega; queda un poco más arriba para no tapar el hilo -->
+            <rect class="cat-far" x="466" y="273" width="62" height="11" rx="5.5"/>
+            <rect class="cat-far-white" x="466" y="273" width="15" height="11" rx="5.5"/>
+            <g class="rear">
+              <g class="tail">
+                <path class="cat" d="M552 250 C562 246 570 244 576 242 C594 232 602 212 596 194 C593 186 585 186 586 194 C590 212 584 226 570 234 C562 239 556 241 548 243 Z"/>
+              </g>
+              <rect class="cat" x="558" y="254" width="18" height="36" rx="9"/>
+              <ellipse class="cat" cx="542" cy="262" rx="44" ry="23" transform="rotate(-14 542 262)"/>
+              <ellipse class="cat-white" cx="528" cy="276" rx="22" ry="8"/>
+            </g>
+            <g class="head">
+              <path class="cat" d="M480 238 L484 210 L499 229 Z"/>
+              <path class="ear-in" d="M484 232 L486 217 L494 228 Z"/>
+              <g class="ear-r">
+                <path class="cat" d="M505 227 L520 207 L522 238 Z"/>
+                <path class="ear-in" d="M509 226 L518 214 L519 232 Z"/>
+              </g>
+              <circle class="cat" cx="500" cy="248" r="24"/>
+              <g class="eyes">
+                <ellipse class="eye" cx="490" cy="245" rx="4.5" ry="6"/>
+                <ellipse class="eye" cx="507" cy="245" rx="4.5" ry="6"/>
+                <ellipse class="pupil" cx="489" cy="247" rx="1.8" ry="3.4"/>
+                <ellipse class="pupil" cx="506" cy="247" rx="1.8" ry="3.4"/>
+              </g>
+              <ellipse class="cat-white" cx="498" cy="260" rx="11" ry="8"/>
+              <path class="nose" d="M495 255 L501 255 L498 259 Z"/>
+              <path class="whisker" d="M487 259 L467 255 M487 263 L467 265 M509 259 L527 255 M509 263 L527 265"/>
+            </g>
+            <!-- pata que da el manotazo (gira desde el hombro), por delante de la cabeza -->
+            <g class="paw">
+              <rect class="cat" x="505" y="262" width="14" height="28" rx="7"/>
+              <rect class="cat-white" x="505" y="278" width="14" height="12" rx="7"/>
+              <ellipse class="ear-in" cx="512" cy="286" rx="4" ry="2.6"/>
+            </g>
+            <text class="q" x="524" y="200">?</text>
+            </g>
           </g>
-          <circle class="route__ghost" cx="254" cy="68" r="42"></circle>
         </svg>
       </div>
-</section>
-</main>
 
-<footer class="foot">
-  <div class="shell">
-    <div class="foot__top">
-      <a class="brand" href="https://lpedaci.github.io/portfolio/">
-        <svg class="brand__mark" viewBox="0 0 48 34" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v17a5 5 0 0 0 5 5h6.5"/><path d="M30 30V5h4.5a7 7 0 0 1 0 14H30"/></svg>
-        <span class="brand__name">Lourdes Pedaci<small>Learning Experience Designer · UX · Data</small></span>
-      </a>
-      <div class="foot__links">
-        <a class="pill" href="mailto:lourdes.pedaci@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.6"/><path d="m4.4 7.4 6.3 4.7a2.2 2.2 0 0 0 2.6 0l6.3-4.7"/></svg> lourdes.pedaci@gmail.com</a>
-        <a class="pill" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 3.4a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M3.4 9.1h3.7v11.5H3.4zM9.5 9.1h3.5v1.6a3.9 3.9 0 0 1 3.4-1.8c2.9 0 4.2 1.8 4.2 4.9v6.8h-3.7V14c0-1.5-.5-2.3-1.7-2.3s-2 .8-2 2.3v6.6H9.5z"/></svg> LinkedIn</a>
-        <a class="pill" href="https://github.com/lpedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.8c-2.7.6-3.3-1.2-3.3-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2"/></svg> GitHub</a>
-        <a class="pill" href="https://www.behance.net/lourdespedaci" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.6 5.4c1.9 0 3.3.8 3.3 2.8 0 1.2-.6 1.9-1.5 2.3 1.3.4 2 1.4 2 2.8 0 2.3-1.8 3.3-3.9 3.3H2.4V5.4zm-.4 4.4c.8 0 1.4-.4 1.4-1.2s-.5-1.2-1.4-1.2H5.1v2.4zm.2 4.8c1 0 1.6-.4 1.6-1.4s-.7-1.4-1.6-1.4H5.1v2.8zM15 6.3h5.3v1.3H15zM18 9.6c2.3 0 3.8 1.6 3.8 4v.6h-5.5c.1 1.2.8 1.9 2 1.9.8 0 1.4-.3 1.7-.9h2c-.4 1.6-1.8 2.6-3.7 2.6-2.5 0-4.1-1.7-4.1-4.1s1.6-4.1 3.8-4.1m-1.7 3.3h3.4c-.1-1-.7-1.7-1.7-1.7s-1.6.6-1.7 1.7"/></svg> Behance</a>
+      <p class="eyebrow" data-i18n="eyebrow">error 404</p>
+      <h1 data-i18n="title">Esta página no existe</h1>
+      <p class="lead"><span data-i18n="lead1">Puede que el enlace esté desactualizado o que el proyecto haya cambiado de lugar.</span> <span data-i18n="lead2">Todo lo demás sigue a un clic.</span></p>
+      <div class="ctas">
+        <a class="btn btn--primary js-home" href="/"><i class="ph ph-arrow-left" aria-hidden="true"></i><span data-i18n="home">Volver al inicio</span></a>
+        <a class="btn btn--ghost js-work" href="/#proyectos"><span data-i18n="work">Ver proyectos</span></a>
       </div>
     </div>
-    <div class="foot__base">
-      <span>© 2026 Lourdes Pedaci - All rights reserved</span>
-      <span>Buenos Aires, AR</span>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <p>© 2026 Lourdes Pedaci</p>
+      <a class="foot__in" href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener"><svg class="foot__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="sr-only">LinkedIn <span data-i18n="newTab">(se abre en una pestaña nueva)</span></span></a>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<dialog class="lightbox" id="lightbox" aria-label="Click an image to enlarge">
-  <form method="dialog"><button aria-label="Close">✕</button></form>
-  <img alt="">
-</dialog>
+  <script>
+    (() => {
+      const T = {
+        es: {
+          docTitle: 'Página no encontrada | Lourdes Pedaci', langLabel: 'Idioma', skip: 'Ir al contenido',
+          catLabel: 'Un gatito gris con medias blancas, agazapado en el suelo, juega con el hilo de un ovillo de lana que ocupa el lugar del cero.',
+          eyebrow: 'error 404', title: 'Esta página no existe',
+          lead1: 'Puede que el enlace esté desactualizado o que el proyecto haya cambiado de lugar.',
+          lead2: 'Todo lo demás sigue a un clic.',
+          home: 'Volver al inicio', work: 'Ver proyectos',
+          newTab: '(se abre en una pestaña nueva)'
+        },
+        en: {
+          docTitle: 'Page not found | Lourdes Pedaci', langLabel: 'Language', skip: 'Skip to content',
+          catLabel: 'A grey kitten with white socks, crouched on the floor, plays with the thread of a ball of yarn that takes the place of the zero.',
+          eyebrow: 'error 404', title: 'This page does not exist',
+          lead1: 'The link may be outdated, or the project may have moved.',
+          lead2: 'Everything else is one click away.',
+          home: 'Back to home', work: 'See projects',
+          newTab: '(opens in a new tab)'
+        }
+      };
 
-<script src="https://lpedaci.github.io/portfolio/assets/js/site.js" defer></script>
+      // Raíz del sitio: en GitHub Pages de proyecto es /<repo>/; en local o dominio propio, /.
+      const seg = location.pathname.split('/').filter(Boolean)[0];
+      const root = /github\.io$/.test(location.hostname) && seg ? `/${seg}/` : '/';
+
+      const store = {
+        get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+        set(k, v) { try { localStorage.setItem(k, v); } catch { /* sin almacenamiento */ } }
+      };
+      const fromUrl = new URLSearchParams(location.search).get('lang');
+      const saved = store.get('lang');
+      const browser = (navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en';
+      let lang = ['es', 'en'].includes(fromUrl) ? fromUrl : (['es', 'en'].includes(saved) ? saved : browser);
+
+      const scene = document.getElementById('scene');
+
+      function apply() {
+        const t = T[lang];
+        document.documentElement.lang = lang;
+        document.title = t.docTitle;
+        document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t[el.dataset.i18n]; });
+        document.querySelectorAll('[data-i18n-aria]').forEach((el) => { el.setAttribute('aria-label', t[el.dataset.i18nAria]); });
+        document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+        document.querySelectorAll('.js-home').forEach((a) => { a.href = `${root}?lang=${lang}`; });
+        document.querySelectorAll('.js-work').forEach((a) => { a.href = `${root}?lang=${lang}#proyectos`; });
+      }
+
+      document.querySelectorAll('[data-lang]').forEach((b) => b.addEventListener('click', () => {
+        lang = b.dataset.lang;
+        store.set('lang', lang);
+        apply();
+      }));
+      // Una pasada al cargar; al pasar el mouse o tocar la escena, otra (si no está jugando ya).
+      const play = () => {
+        if (scene.classList.contains('is-playing')) return;
+        scene.classList.add('is-playing');
+        setTimeout(() => scene.classList.remove('is-playing'), 5100);
+      };
+      scene.addEventListener('pointerenter', play);
+      scene.addEventListener('click', play);
+      play();
+      apply();
+    })();
+  </script>
 </body>
 </html>
