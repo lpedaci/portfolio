@@ -4020,7 +4020,8 @@ window.CASES = {
       "body": {
        "es": "Evaluación heurística con capturas, paleta de color con ratios WCAG verificados, una guía visual de color con mockups y un roadmap de mejoras priorizado. La paleta recomendada respeta el verde de marca como restricción.",
        "en": "Heuristic evaluation with screenshots, a colour palette with verified WCAG ratios, a visual colour guide with mockups and a prioritised improvement roadmap. The recommended palette keeps the brand green as a constraint."
-      }
+      },
+      "url": "https://proyectocannon.alwaysdata.net/landing/index.html"
      },
      {
       "title": {
@@ -4031,7 +4032,8 @@ window.CASES = {
       "body": {
        "es": "Datos regulatorios placeholder publicados en el sitio en vivo; fallas de contraste (azul de marca en 3.34:1 y etiquetas eyebrow en 3.09:1, por debajo de WCAG AA); desajuste entre CTA y flujo; banda de logos de aseguradoras vacía en desktop.",
        "en": "Placeholder regulatory data live on the site; contrast failures (brand blue at 3.34:1 and eyebrow labels at 3.09:1, below WCAG AA); a CTA and flow mismatch; an empty insurer-logo band on desktop."
-      }
+      },
+      "url": "https://majoseg.alwaysdata.net/"
      },
      {
       "title": {
@@ -4044,7 +4046,11 @@ window.CASES = {
        "en": "Heuristic and accessibility evaluation of the quote-entry and sales-tracking flows."
       }
      }
-    ]
+    ],
+    "cta": {
+     "es": "Ver sitio",
+     "en": "View site"
+    }
    },
    {
     "t": "cards",
@@ -4067,7 +4073,8 @@ window.CASES = {
       "body": {
        "es": "Plataforma de logística para el seguimiento de envíos y la gestión de rutas: monitoreo de la flota de reparto, notificaciones al cliente con el día y la franja horaria de entrega, y optimización de recorridos según los puntos de entrega, el horario y el estado del tránsito.",
        "en": "Logistics platform for shipment tracking and route management: delivery-fleet monitoring, customer notifications with the delivery day and time slot, and route optimisation based on drop-off points, time of day and traffic conditions."
-      }
+      },
+      "url": "https://varelajoaquin2007-rgb.github.io/Landing-Page-Tres-Reyes/"
      },
      {
       "title": {
@@ -4078,7 +4085,8 @@ window.CASES = {
       "body": {
        "es": "Software de configuración de máquinas de telar.",
        "en": "Loom-machine configuration software."
-      }
+      },
+      "url": "https://manfredojuanignacio08-prog.github.io/Landing_Page_CIT/"
      },
      {
       "title": {
@@ -4089,7 +4097,8 @@ window.CASES = {
       "body": {
        "es": "Software de control de entrada y salida de personal.",
        "en": "Staff clock-in and clock-out software."
-      }
+      },
+      "url": "http://tadin.com.ar/"
      },
      {
       "title": {
@@ -4100,7 +4109,8 @@ window.CASES = {
       "body": {
        "es": "Software de gestión para un estudio contable.",
        "en": "Management software for an accounting firm."
-      }
+      },
+      "url": "https://ecr-landing-page.up.railway.app/"
      },
      {
       "title": {
@@ -4111,7 +4121,8 @@ window.CASES = {
       "body": {
        "es": "Datalogger para un organismo de metrología y tecnología.",
        "en": "Data logger for a metrology and technology body."
-      }
+      },
+      "url": "https://fr2311.github.io/landingDatalogger/"
      },
      {
       "title": {
@@ -4122,9 +4133,26 @@ window.CASES = {
       "body": {
        "es": "Seguimiento de clases, usuarios y pago de clases.",
        "en": "Class, user and payment tracking."
-      }
+      },
+      "url": "https://juanjoybeto.github.io/training-point-landing/"
+     },
+     {
+      "title": {
+       "es": "App de oficios",
+       "en": "Trades app"
+      },
+      "tag": null,
+      "body": {
+       "es": "App que conecta vecinos del conurbano con profesionales de oficios verificados con DNI, para urgencias y trabajos agendados.",
+       "en": "An app that connects residents of Greater Buenos Aires with tradespeople verified by national ID, for emergencies and scheduled jobs."
+      },
+      "url": "https://altoque-landing.vercel.app/"
      }
-    ]
+    ],
+    "cta": {
+     "es": "Ver sitio",
+     "en": "View site"
+    }
    }
   ],
   "outcome": {

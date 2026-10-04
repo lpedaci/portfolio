@@ -194,7 +194,8 @@
     quote: (b) => blk(b, `<blockquote class="quote"><p>“${esc(L(b.body))}”</p></blockquote>${(b.p || []).map((x) => `<p class="quote__more">${esc(L(x))}</p>`).join('')}`),
     cards: (b) => blk(b, `<ul class="xcards" style="--cols:${b.cols || 3}">${b.items.map((x) => `
       <li class="xcard">${x.img ? `<div class="xcard__img">${picture(x.img, false)}</div>` : ''}
-        <div class="xcard__txt">${x.title ? hx(H + 1, 'xcard__h', esc(L(x.title))) : ''}${x.tag ? `<p class="xcard__tag">${esc(L(x.tag))}</p>` : ''}<p>${esc(L(x.body))}</p></div></li>`).join('')}</ul>`, true),
+        <div class="xcard__txt">${x.title ? hx(H + 1, 'xcard__h', esc(L(x.title))) : ''}${x.tag ? `<p class="xcard__tag">${esc(L(x.tag))}</p>` : ''}<p>${esc(L(x.body))}</p>
+        ${x.url && b.cta ? `<a class="link-arrow xcard__link" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(b.cta))}<span class="sr-only">: ${esc(L(x.title))}</span></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>` : ''}</div></li>`).join('')}</ul>`, true),
     empathy: (b) => blk(b, `<div class="emp">${b.quads.map((q) => `
       <section class="emp__q emp__q--${q.k}">${hx(H + 1, 'emp__h', esc(L(q.title)))}<ul>${L(q.items).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></section>`).join('')}</div>`, true),
     persona: (b) => blk(b, `<div class="persona">
