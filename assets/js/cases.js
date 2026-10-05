@@ -5241,7 +5241,7 @@ window.CASES = {
      "es": "La interfaz está construida con Mantine, una biblioteca de componentes de React: un dato útil para la fase de rediseño.",
      "en": "The interface is built with Mantine, a React component library: useful to know for the redesign phase."
     },
-    "cols": 2,
+    "cols": 3,
     "items": [
      {
       "title": {
@@ -5283,20 +5283,6 @@ window.CASES = {
       "body": {
        "es": "Tiempo de cacheo corto en algunos recursos, con un ahorro estimado de 388 KiB. Una oportunidad menor.",
        "en": "A short cache lifetime on some resources, with an estimated saving of 388 KiB. A minor opportunity."
-      }
-     },
-     {
-      "title": {
-       "es": "A verificar",
-       "en": "To verify"
-      },
-      "tag": {
-       "es": "Q4",
-       "en": "Q4"
-      },
-      "body": {
-       "es": "La confirmación y el turno agendado muestran sede, fecha y profesional distintos. Se atribuye a capturas de sesiones diferentes, no a un defecto confirmado: hay que reproducirlo en una corrida limpia.",
-       "en": "The confirmation and the booked appointment show a different location, date and professional. It is attributed to screenshots from different sessions, not to a confirmed defect: it needs to be reproduced in a clean run."
       }
      }
     ]
