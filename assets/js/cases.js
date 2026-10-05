@@ -671,7 +671,8 @@ window.CASES = {
       "Design of the theoretical framework (regulations, case studies, among others).",
       "Survey implementation and analysis of results using Google Forms and Google Sheets."
      ]
-    }
+    },
+    "hl": true
    },
    {
     "t": "bars",
@@ -834,6 +835,30 @@ window.CASES = {
    },
    {
     "t": "gallery",
+    "h": {
+     "es": "Piezas gráficas de la temporada",
+     "en": "The season’s graphic pieces"
+    },
+    "note": {
+     "es": "Tapas de episodios y piezas para redes con una identidad común: fotografía en blanco y negro, papel rasgado, turquesa y naranja, y un QR a Spotify en cada pieza.",
+     "en": "Episode covers and social pieces with a shared identity: black-and-white photography, torn paper, turquoise and orange, and a Spotify QR code on every piece."
+    },
+    "single": true,
+    "images": [
+     {
+      "src": "riesgos-piezas.jpg",
+      "w": 1600,
+      "h": 1142,
+      "alt": {
+       "es": "Mosaico de tapas de Intersafe segunda temporada: la portada \"Su guía personal sobre peligros en internet\" y episodios como El bisturí digital y la cicatriz mental, Agresión digital y Disrespect cibernético, cada uno con su QR a Spotify.",
+       "en": "Mosaic of Intersafe season two covers: the \"Your personal guide to online dangers\" cover and episodes such as The digital scalpel and the mental scar, Digital aggression and Cyber disrespect, each with its Spotify QR code."
+      }
+     }
+    ],
+    "small": true
+   },
+   {
+    "t": "gallery",
     "wide": true,
     "h": {
      "es": "Seguimiento de la producción",
@@ -871,7 +896,8 @@ window.CASES = {
       "Podcasts recorded, edited and ready for publication.",
       "Graphic materials ready to promote the episodes across platforms."
      ]
-    }
+    },
+    "hl": true
    },
    {
     "t": "phase",
@@ -965,6 +991,38 @@ window.CASES = {
     ]
    },
    {
+    "t": "gallery",
+    "h": {
+     "es": "Difusión: historias y afiches",
+     "en": "Promotion: stories and posters"
+    },
+    "note": {
+     "es": "Presentadas en mockups: historias de Instagram con el enlace a cada episodio, y afiches con QR para la comunidad educativa.",
+     "en": "Shown in mockups: Instagram stories linking to each episode, and posters with QR codes for the school community."
+    },
+    "wide": true,
+    "images": [
+     {
+      "src": "riesgos-historias.jpg",
+      "w": 1600,
+      "h": 1066,
+      "alt": {
+       "es": "Tres celulares con historias de Instagram de Intersafe que reproducen los episodios 3, 4 y 5 del podcast, cada una con el botón Escuchá el episodio.",
+       "en": "Three phones showing Intersafe Instagram stories playing podcast episodes 3, 4 and 5, each with a Listen to the episode button."
+      }
+     },
+     {
+      "src": "riesgos-afiches.jpg",
+      "w": 1600,
+      "h": 1066,
+      "alt": {
+       "es": "Dos personas miran tres afiches pegados en una pared: Entre la intimidad y el riesgo, la portada de Intersafe segunda temporada y Detrás de la pantalla, el lado oscuro del ciberstalking.",
+       "en": "Two people look at three posters on a wall: Between intimacy and risk, the Intersafe season two cover, and Behind the screen, the dark side of cyberstalking."
+      }
+     }
+    ]
+   },
+   {
     "t": "bullets",
     "h": {
      "es": "Resultados",
@@ -981,7 +1039,8 @@ window.CASES = {
       "Interactive presentations that encouraged debate and raised awareness within the educational community.",
       "Opportunities for improvement identified for future digital learning initiatives."
      ]
-    }
+    },
+    "hl": true
    },
    {
     "t": "phase",
@@ -3640,7 +3699,8 @@ window.CASES = {
       "es": "El concepto original de la plataforma había sido validado previamente; este trabajo es una reinvención de su UX/UI.",
       "en": "The original platform concept had been validated previously; this work is a UX/UI reinvention of it."
      }
-    ]
+    ],
+    "hl": true
    },
    {
     "t": "bullets",
@@ -4163,6 +4223,1244 @@ window.CASES = {
    "body": {
     "es": "Cada equipo recibió una devolución accionable y priorizada sobre su producto. El trabajo combinó rigor metodológico (Nielsen, WCAG, medición real de contraste) con un formato adaptado a cada caso, presencial o remoto. Como aprendizaje transversal, la accesibilidad y el contraste fueron los problemas más recurrentes, y eso los volvió un foco de la asesoría.",
     "en": "Every team received actionable, prioritised feedback on their product. The work combined methodological rigour (Nielsen, WCAG, real contrast measurement) with a format adapted to each case, in person or remote. As a cross-cutting takeaway, accessibility and contrast were the most recurring issues, which made them a focus of the advisory."
+   }
+  }
+ },
+ "auditoria-turnos": {
+  "cat": "it",
+  "touch": "cap",
+  "title": {
+   "es": "Auditoría UX/UI de un portal de turnos",
+   "en": "UX/UI audit of an appointment portal"
+  },
+  "subtitle": {
+   "es": "Portal del paciente de Centro Rossi: evaluación heurística, accesibilidad WCAG 2.2 y medición con Lighthouse del flujo para sacar un turno. Caso conceptual, no afiliado.",
+   "en": "Centro Rossi’s patient portal: heuristic evaluation, WCAG 2.2 accessibility and Lighthouse measurement of the booking flow. A conceptual case, not affiliated."
+  },
+  "chips": {
+   "es": [
+    "Evaluación heurística",
+    "WCAG 2.2 AA",
+    "Lighthouse",
+    "Recorrido cognitivo"
+   ],
+   "en": [
+    "Heuristic evaluation",
+    "WCAG 2.2 AA",
+    "Lighthouse",
+    "Cognitive walkthrough"
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Auditoría UX/UI, accesibilidad y QA: evaluación, priorización y propuesta de mejoras",
+    "en": "UX/UI audit, accessibility and QA: evaluation, prioritisation and improvement proposal"
+   },
+   "timeline": {
+    "es": "Octubre 2026",
+    "en": "October 2026"
+   },
+   "context": {
+    "es": "Portal de autogestión de turnos de un centro de diagnóstico. Caso conceptual, con datos de una persona ficticia",
+    "en": "Self-service booking portal of a diagnostic centre. A conceptual case, with data from a fictional person"
+   },
+   "stack": [
+    "PageSpeed Insights",
+    "Lighthouse 13.5.0"
+   ],
+   "methods": [
+    "Nielsen",
+    "WCAG 2.2 AA",
+    "Cognitive walkthrough"
+   ]
+  },
+  "links": [],
+  "blocks": [
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": {
+       "es": "99",
+       "en": "99"
+      },
+      "label": {
+       "es": "en Rendimiento (Lighthouse)",
+       "en": "in Performance (Lighthouse)"
+      }
+     },
+     {
+      "value": {
+       "es": "80",
+       "en": "80"
+      },
+      "label": {
+       "es": "en Accesibilidad (Lighthouse)",
+       "en": "in Accessibility (Lighthouse)"
+      }
+     },
+     {
+      "value": {
+       "es": "10",
+       "en": "10"
+      },
+      "label": {
+       "es": "hallazgos de usabilidad",
+       "en": "usability findings"
+      }
+     },
+     {
+      "value": {
+       "es": "3",
+       "en": "3"
+      },
+      "label": {
+       "es": "fallos de accesibilidad WCAG 2.2 AA",
+       "en": "WCAG 2.2 AA accessibility failures"
+      }
+     }
+    ]
+   },
+   {
+    "t": "quote",
+    "h": {
+     "es": "El hallazgo principal",
+     "en": "The key finding"
+    },
+    "body": {
+     "es": "El cuello de botella de este producto es la capa de experiencia y de accesibilidad, no la de performance.",
+     "en": "This product’s bottleneck is the experience and accessibility layer, not performance."
+    },
+    "p": [
+     {
+      "es": "El portal es técnicamente sólido y veloz, y aprueba las métricas de experiencia de usuarios reales. Pero le pide al usuario más esfuerzo cognitivo del necesario, sobre todo al elegir el estudio, y deja afuera a personas con baja visión o que usan lectores de pantalla.",
+      "en": "The portal is technically solid and fast, and it passes the real-user experience metrics. But it asks users for more cognitive effort than needed, above all when choosing the study, and it leaves out people with low vision or who rely on screen readers."
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "El proyecto",
+     "en": "The project"
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Qué es",
+       "en": "What it is"
+      },
+      "v": {
+       "es": "Una auditoría UX/UI y de accesibilidad del portal donde los pacientes sacan turno sin llamar por teléfono.",
+       "en": "A UX/UI and accessibility audit of the portal where patients book appointments without calling."
+      }
+     },
+     {
+      "k": {
+       "es": "Alcance",
+       "en": "Scope"
+      },
+      "v": {
+       "es": "El flujo completo de autogestión (camino feliz), ocho pantallas, en escritorio. La versión mobile es equivalente sin los márgenes laterales, así que los hallazgos aplican a ambas.",
+       "en": "The full self-service flow (happy path), eight screens, on desktop. The mobile version is equivalent without the side margins, so the findings apply to both."
+      }
+     },
+     {
+      "k": {
+       "es": "Escala de severidad",
+       "en": "Severity scale"
+      },
+      "v": {
+       "es": "Alta: bloquea o frustra la tarea para muchos usuarios. Media: genera fricción o reproceso. Baja: mejora de pulido.",
+       "en": "High: blocks or frustrates the task for many users. Medium: causes friction or rework. Low: polish."
+      }
+     },
+     {
+      "k": {
+       "es": "Privacidad",
+       "en": "Privacy"
+      },
+      "v": {
+       "es": "Las capturas usan una persona ficticia, y los nombres de profesionales están tapados. No se reproduce la marca.",
+       "en": "The screenshots use a fictional person, and professionals’ names are covered. The brand is not reproduced."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Métodos",
+     "en": "Methods"
+    },
+    "note": {
+     "es": "La auditoría se basa en capturas del flujo y en el reporte automatizado. No incluye testing con usuarios, analítica ni acceso al backend: los hallazgos de usabilidad son hipótesis fundamentadas que la fase de validación tiene que confirmar.",
+     "en": "The audit is based on screenshots of the flow and the automated report. It does not include user testing, analytics or backend access: the usability findings are grounded hypotheses for the validation phase to confirm."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Evaluación heurística",
+       "en": "Heuristic evaluation"
+      },
+      "body": {
+       "es": "Los diez principios de usabilidad de Nielsen.",
+       "en": "Nielsen’s ten usability heuristics."
+      }
+     },
+     {
+      "lead": {
+       "es": "Revisión de accesibilidad",
+       "en": "Accessibility review"
+      },
+      "body": {
+       "es": "Contra WCAG 2.2, nivel AA.",
+       "en": "Against WCAG 2.2, level AA."
+      }
+     },
+     {
+      "lead": {
+       "es": "Auditoría automatizada",
+       "en": "Automated audit"
+      },
+      "body": {
+       "es": "Lighthouse 13.5.0 a través de PageSpeed Insights.",
+       "en": "Lighthouse 13.5.0 through PageSpeed Insights."
+      }
+     },
+     {
+      "lead": {
+       "es": "Recorrido cognitivo",
+       "en": "Cognitive walkthrough"
+      },
+      "body": {
+       "es": "El camino feliz, del documento a la confirmación del turno.",
+       "en": "The happy path, from the ID number to the booking confirmation."
+      }
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "El recorrido, ocho pasos",
+     "en": "The journey, eight steps"
+    },
+    "steps": {
+     "es": [
+      "Documento",
+      "Verificación",
+      "Código",
+      "Identidad verificada",
+      "Selección de estudios",
+      "Cuestionario previo",
+      "Elección de turno",
+      "Confirmación"
+     ],
+     "en": [
+      "ID number",
+      "Verification",
+      "Code",
+      "Identity verified",
+      "Study selection",
+      "Pre-visit questions",
+      "Slot selection",
+      "Confirmation"
+     ]
+    }
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Medición automatizada",
+     "en": "Automated measurement"
+    },
+    "note": {
+     "es": "Lighthouse 13.5.0, escritorio, 4 de octubre de 2026.",
+     "en": "Lighthouse 13.5.0, desktop, 4 October 2026."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Rendimiento",
+       "en": "Performance"
+      },
+      "v": {
+       "es": "99, excelente",
+       "en": "99, excellent"
+      }
+     },
+     {
+      "k": {
+       "es": "Prácticas recomendadas",
+       "en": "Best practices"
+      },
+      "v": {
+       "es": "100, excelente",
+       "en": "100, excellent"
+      }
+     },
+     {
+      "k": {
+       "es": "Accesibilidad",
+       "en": "Accessibility"
+      },
+      "v": {
+       "es": "80, a mejorar",
+       "en": "80, needs work"
+      }
+     },
+     {
+      "k": {
+       "es": "SEO",
+       "en": "SEO"
+      },
+      "v": {
+       "es": "82, a mejorar",
+       "en": "82, needs work"
+      }
+     },
+     {
+      "k": {
+       "es": "Navegación con agentes (experimental)",
+       "en": "Agentic browsing (experimental)"
+      },
+      "v": {
+       "es": "1 de 4, a mejorar",
+       "en": "1 of 4, needs work"
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Core Web Vitals de campo",
+     "en": "Field Core Web Vitals"
+    },
+    "note": {
+     "es": "Usuarios reales (CrUX), últimos 28 días: aprobada.",
+     "en": "Real users (CrUX), last 28 days: passed."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "LCP",
+       "en": "LCP"
+      },
+      "v": {
+       "es": "0,9 s, bueno",
+       "en": "0.9 s, good"
+      }
+     },
+     {
+      "k": {
+       "es": "INP",
+       "en": "INP"
+      },
+      "v": {
+       "es": "125 ms, bueno",
+       "en": "125 ms, good"
+      }
+     },
+     {
+      "k": {
+       "es": "CLS",
+       "en": "CLS"
+      },
+      "v": {
+       "es": "0,03, bueno",
+       "en": "0.03, good"
+      }
+     },
+     {
+      "k": {
+       "es": "FCP",
+       "en": "FCP"
+      },
+      "v": {
+       "es": "0,9 s, bueno",
+       "en": "0.9 s, good"
+      }
+     },
+     {
+      "k": {
+       "es": "TTFB",
+       "en": "TTFB"
+      },
+      "v": {
+       "es": "0,3 s, bueno",
+       "en": "0.3 s, good"
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Lo que dicen los datos",
+     "en": "What the data says"
+    },
+    "body": {
+     "es": "No hay trabajo pendiente del lado de la velocidad: la única oportunidad de rendimiento es un tiempo de cacheo corto, de impacto menor. El margen de mejora está íntegramente en la experiencia y la accesibilidad.",
+     "en": "There is no pending work on speed: the only performance opportunity is a short cache lifetime, with minor impact. The room for improvement lies entirely in experience and accessibility."
+    }
+   },
+   {
+    "t": "phase",
+    "n": "01",
+    "id": "usabilidad",
+    "mode": {
+     "es": "heurísticas de Nielsen",
+     "en": "Nielsen heuristics"
+    },
+    "name": {
+     "es": "Usabilidad",
+     "en": "Usability"
+    },
+    "q": {
+     "es": "Dónde el flujo le pide al paciente más esfuerzo del necesario.",
+     "en": "Where the flow asks the patient for more effort than needed."
+    }
+   },
+   {
+    "t": "findings",
+    "h": {
+     "es": "Hallazgos de usabilidad",
+     "en": "Usability findings"
+    },
+    "note": {
+     "es": "Diez hallazgos, ordenados por severidad, cada uno con la parte de la pantalla a la que se refiere. Las capturas se amplían con un clic.",
+     "en": "Ten findings, by severity, each with the part of the screen it refers to. Click a screenshot to enlarge it."
+    },
+    "labels": {
+     "sev": {
+      "es": "Severidad",
+      "en": "Severity"
+     },
+     "fixed": {
+      "es": "Corregido",
+      "en": "Fixed"
+     },
+     "recorded": {
+      "es": "Registrado",
+      "en": "Recorded"
+     },
+     "ev": {
+      "es": "Qué pasa",
+      "en": "What happens"
+     },
+     "res": {
+      "es": "Propuesta",
+      "en": "Proposal"
+     }
+    },
+    "items": [
+     {
+      "id": "H1",
+      "sev": {
+       "es": "Alta",
+       "en": "High"
+      },
+      "title": {
+       "es": "Una lista plana de más de 40 estudios",
+       "en": "A flat list of more than 40 studies"
+      },
+      "heur": {
+       "es": "Reconocer antes que recordar | Estética y diseño minimalista",
+       "en": "Recognition rather than recall | Aesthetic and minimalist design"
+      },
+      "ev": {
+       "es": "Al abrir una categoría en \"Buscar por servicio\" se despliega una lista plana de más de 40 ítems, sin búsqueda interna ni agrupación.",
+       "en": "Opening a category in \"Search by service\" unfolds a flat list of more than 40 items, with no inner search or grouping."
+      },
+      "res": {
+       "es": "Un único punto de entrada con buscador predictivo como camino principal, y categorías colapsadas por defecto con búsqueda interna.",
+       "en": "A single entry point with predictive search as the main path, and categories collapsed by default with an inner search."
+      },
+      "img": {
+       "src": "turnos-h1.png",
+       "w": 560,
+       "h": 630,
+       "alt": {
+        "es": "La categoría Consulta Médica abierta: estudios uno debajo del otro, cada uno con un botón de agregar, sin buscador ni agrupación.",
+        "en": "The open General consultation category: studies one below the other, each with an add button, with no search or grouping."
+       }
+      }
+     },
+     {
+      "id": "H2",
+      "sev": {
+       "es": "Alta",
+       "en": "High"
+      },
+      "title": {
+       "es": "El estudio elegido queda fuera de vista",
+       "en": "The chosen study falls out of view"
+      },
+      "heur": {
+       "es": "Visibilidad del estado del sistema",
+       "en": "Visibility of system status"
+      },
+      "ev": {
+       "es": "El estudio seleccionado, con sus subopciones, aparece en una tarjeta al final, debajo de la lista larga. El usuario pierde de vista qué eligió.",
+       "en": "The selected study and its sub-options appear in a card at the end, below the long list. Users lose sight of what they chose."
+      },
+      "res": {
+       "es": "Una bandeja de estudios seleccionados fija y siempre visible.",
+       "en": "A fixed, always-visible tray of selected studies."
+      },
+      "img": {
+       "src": "turnos-h2.png",
+       "w": 560,
+       "h": 590,
+       "alt": {
+        "es": "El final de la pantalla: después de las últimas categorías y del aviso del call center aparece recién la tarjeta Estudios seleccionados, con Consulta Ginecología y sus cuatro subopciones.",
+        "en": "The end of the screen: only after the last categories and the call-centre notice does the Selected studies card appear, with the gynaecology consultation and its four sub-options."
+       }
+      }
+     },
+     {
+      "id": "H3",
+      "sev": {
+       "es": "Alta",
+       "en": "High"
+      },
+      "title": {
+       "es": "Tres caminos sin jerarquía en la misma pantalla",
+       "en": "Three paths with no hierarchy on one screen"
+      },
+      "heur": {
+       "es": "Consistencia y estándares | Diseño minimalista",
+       "en": "Consistency and standards | Minimalist design"
+      },
+      "ev": {
+       "es": "Subir la orden, buscar por texto y navegar por servicio compiten en la misma pantalla. No queda claro cuál es el camino principal.",
+       "en": "Uploading the prescription, searching by text and browsing by service compete on the same screen. The main path is unclear."
+      },
+      "res": {
+       "es": "El buscador como camino principal; subir la orden y navegar por servicio, como alternativas secundarias.",
+       "en": "Search as the main path; uploading the prescription and browsing by service as secondary options."
+      },
+      "img": {
+       "src": "turnos-h3.png",
+       "w": 560,
+       "h": 318,
+       "alt": {
+        "es": "Selección de estudios: adjuntar la orden médica, el buscador de estudios y el botón Buscar por servicio, apilados con el mismo peso.",
+        "en": "Study selection: attaching the prescription, the study search and the Search by service button, stacked with the same weight."
+       }
+      }
+     },
+     {
+      "id": "H4",
+      "sev": {
+       "es": "Alta",
+       "en": "High"
+      },
+      "title": {
+       "es": "Si el estudio no aparece, el flujo termina en WhatsApp",
+       "en": "If the study is missing, the flow ends in WhatsApp"
+      },
+      "heur": {
+       "es": "Control y libertad del usuario | Flexibilidad y eficiencia",
+       "en": "User control and freedom | Flexibility and efficiency"
+      },
+      "ev": {
+       "es": "El único camino es contactar al call center por WhatsApp. El usuario sale de la autogestión y el funnel pierde conversión.",
+       "en": "The only way forward is contacting the call centre on WhatsApp. Users leave self-service and the funnel loses conversion."
+      },
+      "res": {
+       "es": "Antes de derivar, ofrecer sugerencias y la opción de subir la orden para que el equipo la interprete, sin salir de la autogestión.",
+       "en": "Before referring out, offer suggestions and the option to upload the prescription for the team to interpret, without leaving self-service."
+      },
+      "img": {
+       "src": "turnos-h4.png",
+       "w": 1144,
+       "h": 323,
+       "alt": {
+        "es": "A la izquierda, el aviso al pie de la lista: si no encuentra el estudio, contacte al call center. A la derecha, la pantalla a la que lleva: un número de WhatsApp y el botón Volver a búsqueda.",
+        "en": "Left, the notice at the bottom of the list: if you cannot find the study, contact the call centre. Right, the screen it leads to: a WhatsApp number and a Back to search button."
+       }
+      }
+     },
+     {
+      "id": "H5",
+      "sev": {
+       "es": "Media",
+       "en": "Medium"
+      },
+      "title": {
+       "es": "Un calendario sin leyenda",
+       "en": "A calendar with no legend"
+      },
+      "heur": {
+       "es": "Visibilidad del estado | Reconocer antes que recordar",
+       "en": "Visibility of status | Recognition rather than recall"
+      },
+      "ev": {
+       "es": "Los días habilitados aparecen dispersos, sin explicar por qué el resto está deshabilitado, y no hay un atajo al próximo turno disponible.",
+       "en": "Available days appear scattered, with no explanation of why the rest are disabled, and no shortcut to the next available slot."
+      },
+      "res": {
+       "es": "Leyenda de disponibilidad y un atajo a \"próximo turno disponible\".",
+       "en": "An availability legend and a \"next available slot\" shortcut."
+      },
+      "img": {
+       "src": "turnos-h5.png",
+       "w": 560,
+       "h": 550,
+       "alt": {
+        "es": "Calendario de octubre 2026 de una sede: días habilitados salteados entre días grisados, sin leyenda que explique la diferencia.",
+        "en": "October 2026 calendar for one location: available days scattered among greyed-out days, with no legend explaining the difference."
+       }
+      }
+     },
+     {
+      "id": "H6",
+      "sev": {
+       "es": "Media",
+       "en": "Medium"
+      },
+      "title": {
+       "es": "Horarios sin agrupar e información desigual",
+       "en": "Ungrouped times and uneven information"
+      },
+      "heur": {
+       "es": "Consistencia y estándares",
+       "en": "Consistency and standards"
+      },
+      "ev": {
+       "es": "Los horarios se listan en una sola columna sin agrupar por franja. La búsqueda por sede no muestra el profesional y la búsqueda por profesional sí muestra la sede.",
+       "en": "Times are listed in a single column with no grouping by time of day. Searching by location hides the professional, while searching by professional shows the location."
+      },
+      "res": {
+       "es": "Horarios agrupados por franja y la misma información en las dos búsquedas.",
+       "en": "Times grouped by time of day and the same information in both searches."
+      },
+      "img": {
+       "src": "turnos-h6.png",
+       "w": 1144,
+       "h": 372,
+       "alt": {
+        "es": "A la izquierda, horarios de la búsqueda por sede en una sola columna, sin profesional. A la derecha, el horario de la búsqueda por profesional, que sí indica la sede.",
+        "en": "Left, times from the search by location in a single column, with no professional. Right, the time from the search by professional, which does show the location."
+       }
+      }
+     },
+     {
+      "id": "H7",
+      "sev": {
+       "es": "Media",
+       "en": "Medium"
+      },
+      "title": {
+       "es": "\"Consultá en recepción\" como respuesta",
+       "en": "\"Ask at reception\" as the answer"
+      },
+      "heur": {
+       "es": "Ayuda y documentación",
+       "en": "Help and documentation"
+      },
+      "ev": {
+       "es": "\"Documentación requerida: consultá en recepción qué documentación presentar\" traslada la carga de informarse al usuario, sin resolver la duda.",
+       "en": "\"Required documents: ask at reception which documents to bring\" shifts the burden to the user without answering the question."
+      },
+      "res": {
+       "es": "El detalle concreto de la documentación según el estudio.",
+       "en": "The specific documents required for each study."
+      },
+      "img": {
+       "src": "turnos-h7.png",
+       "w": 545,
+       "h": 320,
+       "alt": {
+        "es": "Turno agendado: tarjeta Indicaciones previas y, debajo, Documentación requerida con el texto Consultá en recepción qué documentación presentar.",
+        "en": "Appointment booked: the Pre-visit instructions card and, below, Required documents with the text Ask at reception which documents to bring."
+       }
+      }
+     },
+     {
+      "id": "H8",
+      "sev": {
+       "es": "Media",
+       "en": "Medium"
+      },
+      "title": {
+       "es": "Una respuesta sin consecuencia visible",
+       "en": "An answer with no visible consequence"
+      },
+      "heur": {
+       "es": "Visibilidad del estado | Prevención de errores",
+       "en": "Visibility of status | Error prevention"
+      },
+      "ev": {
+       "es": "En el cuestionario previo, responder \"Sí\" a \"¿Tiene estudios anteriores?\" no muestra un paso siguiente lógico, como subirlos.",
+       "en": "In the pre-visit questions, answering \"Yes\" to \"Do you have previous studies?\" shows no logical next step, such as uploading them."
+      },
+      "res": {
+       "es": "Darle a esa rama una consecuencia visible, por ejemplo la opción de adjuntar los estudios.",
+       "en": "Give that branch a visible consequence, for example the option to attach the studies."
+      },
+      "img": {
+       "src": "turnos-h8.png",
+       "w": 560,
+       "h": 258,
+       "alt": {
+        "es": "Cuestionario previo: la pregunta sobre estudios anteriores respondida con Sí, y solo los botones Volver y Continuar.",
+        "en": "Pre-visit questions: the previous-studies question answered Yes, and only the Back and Continue buttons."
+       }
+      }
+     },
+     {
+      "id": "H9",
+      "sev": {
+       "es": "Baja",
+       "en": "Low"
+      },
+      "title": {
+       "es": "\"Volver al inicio\" descarta el progreso",
+       "en": "\"Back to start\" discards progress"
+      },
+      "heur": {
+       "es": "Prevención de errores",
+       "en": "Error prevention"
+      },
+      "ev": {
+       "es": "En la pantalla del código, \"Volver al inicio\" descarta el progreso sin advertir al usuario.",
+       "en": "On the code screen, \"Back to start\" discards progress without warning the user."
+      },
+      "res": {
+       "es": "Una advertencia de pérdida de progreso.",
+       "en": "A warning before progress is lost."
+      },
+      "img": {
+       "src": "turnos-h9.png",
+       "w": 560,
+       "h": 323,
+       "alt": {
+        "es": "Pantalla de verificación: seis casillas para el código, el reenvío en cuenta regresiva y el enlace Volver al inicio.",
+        "en": "Verification screen: six boxes for the code, a countdown to resend it and the Back to start link."
+       }
+      }
+     },
+     {
+      "id": "H10",
+      "sev": {
+       "es": "Baja",
+       "en": "Low"
+      },
+      "title": {
+       "es": "Ocho pasos sin indicador de progreso",
+       "en": "Eight steps with no progress indicator"
+      },
+      "heur": {
+       "es": "Visibilidad del estado del sistema",
+       "en": "Visibility of system status"
+      },
+      "ev": {
+       "es": "El flujo no muestra cuántos pasos faltan.",
+       "en": "The flow does not show how many steps are left."
+      },
+      "res": {
+       "es": "Un indicador de progreso del flujo.",
+       "en": "A progress indicator for the flow."
+      },
+      "img": {
+       "src": "turnos-h10.png",
+       "w": 560,
+       "h": 238,
+       "alt": {
+        "es": "Encabezado de Seleccionar turno: título y estudio elegido, sin ninguna indicación del paso actual ni de cuántos faltan.",
+        "en": "Select a slot header: title and chosen study, with no sign of the current step or how many are left."
+       }
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "La pantalla completa de selección de estudios",
+     "en": "The full study selection screen"
+    },
+    "note": {
+     "es": "Para dimensionar H1 y H2: la pantalla entera al abrir Consulta Médica, partida en tres columnas. El estudio elegido aparece recién al final.",
+     "en": "To size up H1 and H2: the whole screen after opening General consultation, split into three columns. The chosen study only appears at the very end."
+    },
+    "single": true,
+    "images": [
+     {
+      "src": "turnos-07-lista-larga.png",
+      "w": 2096,
+      "h": 1224,
+      "alt": {
+       "es": "La categoría Consulta Médica abierta muestra más de 40 estudios en una lista plana; al pie, después de todas las categorías, la tarjeta de estudios seleccionados con Consulta Ginecología y sus subopciones.",
+       "en": "The open General consultation category shows more than 40 studies in a flat list; at the bottom, after every category, the selected-studies card with the gynaecology consultation and its sub-options."
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Fortalezas detectadas",
+     "en": "Strengths found"
+    },
+    "cols": 3,
+    "items": [
+     {
+      "img": {
+       "src": "turnos-02-verificacion.png",
+       "w": 680,
+       "h": 425,
+       "alt": {
+        "es": "Elección del canal de verificación, Email o SMS, con el email enmascarado de la persona ficticia.",
+        "en": "Choosing the verification channel, Email or SMS, with the fictional person’s email masked."
+       }
+      },
+      "title": {
+       "es": "Email enmascarado",
+       "en": "Masked email"
+      },
+      "body": {
+       "es": "Al enviar el código, el email se muestra enmascarado: una buena práctica de privacidad.",
+       "en": "When the code is sent, the email is shown masked: a good privacy practice."
+      }
+     },
+     {
+      "img": {
+       "src": "turnos-04-identidad.png",
+       "w": 680,
+       "h": 416,
+       "alt": {
+        "es": "Identidad verificada: revisión de nombre, documento, email, teléfono, dirección y obra social de la persona ficticia antes de continuar.",
+        "en": "Identity verified: review of the fictional person’s name, ID, email, phone, address and health insurance before continuing."
+       }
+      },
+      "title": {
+       "es": "Revisión de identidad",
+       "en": "Identity review"
+      },
+      "body": {
+       "es": "Revisar los datos antes de continuar previene errores.",
+       "en": "Reviewing the details before continuing prevents errors."
+      }
+     },
+     {
+      "img": {
+       "src": "turnos-12-confirmar.png",
+       "w": 680,
+       "h": 425,
+       "alt": {
+        "es": "Confirmar turno: datos del paciente y del turno con estudio, sede, fecha, hora y duración, más los botones Modificar y Confirmar turno. El nombre del profesional está tapado.",
+        "en": "Confirm appointment: patient and booking details with study, location, date, time and length, plus the Modify and Confirm buttons. The professional’s name is covered."
+       }
+      },
+      "title": {
+       "es": "Confirmación clara",
+       "en": "Clear confirmation"
+      },
+      "body": {
+       "es": "El resumen del turno se lee de un vistazo antes de confirmar.",
+       "en": "The booking summary reads at a glance before confirming."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "02",
+    "id": "accesibilidad",
+    "mode": {
+     "es": "WCAG 2.2 AA",
+     "en": "WCAG 2.2 AA"
+    },
+    "name": {
+     "es": "Accesibilidad",
+     "en": "Accessibility"
+    },
+    "q": {
+     "es": "Los tres fallos que explican el 80 de Lighthouse, todos accionables.",
+     "en": "The three failures behind the Lighthouse 80, all actionable."
+    }
+   },
+   {
+    "t": "findings",
+    "h": {
+     "es": "Hallazgos de accesibilidad",
+     "en": "Accessibility findings"
+    },
+    "labels": {
+     "sev": {
+      "es": "Severidad",
+      "en": "Severity"
+     },
+     "fixed": {
+      "es": "Corregido",
+      "en": "Fixed"
+     },
+     "recorded": {
+      "es": "Registrado",
+      "en": "Recorded"
+     },
+     "ev": {
+      "es": "Qué pasa",
+      "en": "What happens"
+     },
+     "res": {
+      "es": "Propuesta",
+      "en": "Proposal"
+     }
+    },
+    "items": [
+     {
+      "id": "A1",
+      "sev": {
+       "es": "Alta",
+       "en": "High"
+      },
+      "title": {
+       "es": "Gris claro sobre blanco",
+       "en": "Light grey on white"
+      },
+      "heur": {
+       "es": "WCAG 1.4.3 Contraste (mínimo)",
+       "en": "WCAG 1.4.3 Contrast (Minimum)"
+      },
+      "ev": {
+       "es": "Textos secundarios con contraste insuficiente, como el subtítulo \"Ingrese su documento para comenzar\" y el texto y botón de la tarjeta \"Estudios que se hacen sin turno\". Es el gris claro sobre blanco presente en casi todas las pantallas.",
+       "en": "Secondary text with insufficient contrast, such as the subtitle \"Enter your ID to start\" and the text and button of the \"Studies without an appointment\" card. It is the light grey on white found on almost every screen."
+      },
+      "res": {
+       "es": "Subir el contraste de los textos secundarios a AA.",
+       "en": "Raise secondary text contrast to AA."
+      },
+      "img": {
+       "src": "turnos-a1.png",
+       "w": 560,
+       "h": 200,
+       "alt": {
+        "es": "Arriba, el título Sacar turno con el subtítulo en gris claro; abajo, la tarjeta Estudios que se hacen sin turno con su descripción en gris sobre blanco.",
+        "en": "Top, the Book an appointment title with its light grey subtitle; bottom, the Studies without an appointment card with its grey description on white."
+       }
+      }
+     },
+     {
+      "id": "A2",
+      "sev": {
+       "es": "Alta",
+       "en": "High"
+      },
+      "title": {
+       "es": "Campos sin etiqueta",
+       "en": "Unlabelled fields"
+      },
+      "heur": {
+       "es": "WCAG 1.3.1 | 3.3.2 | 4.1.2",
+       "en": "WCAG 1.3.1 | 3.3.2 | 4.1.2"
+      },
+      "ev": {
+       "es": "El selector de documento y otros campos dependen del placeholder en lugar de un <label>, lo que los vuelve ambiguos para lectores de pantalla.",
+       "en": "The ID selector and other fields rely on the placeholder instead of a <label>, which makes them ambiguous for screen readers."
+      },
+      "res": {
+       "es": "Asociar un <label> a cada campo. Mejora la accesibilidad y la claridad para todos.",
+       "en": "Associate a <label> with every field. It improves accessibility and clarity for everyone."
+      },
+      "img": {
+       "src": "turnos-a2.png",
+       "w": 560,
+       "h": 96,
+       "alt": {
+        "es": "El campo Documento: un selector con DNI y un campo con el ejemplo Ej: 33444555 escrito como placeholder.",
+        "en": "The ID field: a selector set to DNI and an input with the example 33444555 written as a placeholder."
+       }
+      }
+     },
+     {
+      "id": "A3",
+      "sev": {
+       "es": "Alta",
+       "en": "High"
+      },
+      "title": {
+       "es": "El zoom está deshabilitado",
+       "en": "Zoom is disabled"
+      },
+      "heur": {
+       "es": "WCAG 1.4.4 Cambio de tamaño del texto",
+       "en": "WCAG 1.4.4 Resize Text"
+      },
+      "ev": {
+       "es": "La metaetiqueta viewport incluye maximum-scale=1.0 y user-scalable=no, lo que impide ampliar la pantalla a personas con baja visión.",
+       "en": "The viewport meta tag includes maximum-scale=1.0 and user-scalable=no, which stops people with low vision from zooming in."
+      },
+      "res": {
+       "es": "Quitar maximum-scale y user-scalable=no. Es una corrección de una sola línea con alto impacto.",
+       "en": "Remove maximum-scale and user-scalable=no. A one-line fix with high impact."
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Navegación con agentes (1 de 4)",
+     "en": "Agentic browsing (1 of 4)"
+    },
+    "body": {
+     "es": "El mismo problema de etiquetas (A2) deja el árbol de accesibilidad mal formado, y eso también afecta a la navegación por agentes de IA. Se suman la falta de un llms.txt válido y un ai-catalog.json mal formado. Como es una categoría experimental de Lighthouse, queda registrada como nota a futuro.",
+     "en": "The same labelling problem (A2) leaves the accessibility tree malformed, which also affects browsing by AI agents. Add to that the lack of a valid llms.txt and a malformed ai-catalog.json. As an experimental Lighthouse category, it is recorded as a note for the future."
+    }
+   },
+   {
+    "t": "phase",
+    "n": "03",
+    "id": "qa",
+    "mode": {
+     "es": "notas técnicas",
+     "en": "technical notes"
+    },
+    "name": {
+     "es": "QA técnico",
+     "en": "Technical QA"
+    },
+    "q": {
+     "es": "Lo que no afecta los puntajes pero conviene registrar.",
+     "en": "What does not affect the scores but is worth recording."
+    }
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Notas técnicas y de QA",
+     "en": "Technical and QA notes"
+    },
+    "note": {
+     "es": "La interfaz está construida con Mantine, una biblioteca de componentes de React: un dato útil para la fase de rediseño.",
+     "en": "The interface is built with Mantine, a React component library: useful to know for the redesign phase."
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "Seguridad",
+       "en": "Security"
+      },
+      "tag": {
+       "es": "Q1",
+       "en": "Q1"
+      },
+      "body": {
+       "es": "Faltan encabezados de seguridad recomendados: CSP, HSTS, COOP y X-Frame-Options. No afectan el puntaje de prácticas recomendadas, pero son hallazgos legítimos de QA.",
+       "en": "Recommended security headers are missing: CSP, HSTS, COOP and X-Frame-Options. They do not affect the best-practices score, but they are legitimate QA findings."
+      }
+     },
+     {
+      "title": {
+       "es": "SEO",
+       "en": "SEO"
+      },
+      "tag": {
+       "es": "Q2",
+       "en": "Q2"
+      },
+      "body": {
+       "es": "El 82 se explica por una SPA con el contenido renderizado en el cliente: el rastreador recibe un contenedor vacío hasta ejecutar el JavaScript. Es esperable en una app detrás de verificación de identidad.",
+       "en": "The 82 comes from a client-rendered SPA: the crawler receives an empty container until the JavaScript runs. It is expected in an app behind identity verification."
+      }
+     },
+     {
+      "title": {
+       "es": "Rendimiento",
+       "en": "Performance"
+      },
+      "tag": {
+       "es": "Q3",
+       "en": "Q3"
+      },
+      "body": {
+       "es": "Tiempo de cacheo corto en algunos recursos, con un ahorro estimado de 388 KiB. Una oportunidad menor.",
+       "en": "A short cache lifetime on some resources, with an estimated saving of 388 KiB. A minor opportunity."
+      }
+     },
+     {
+      "title": {
+       "es": "A verificar",
+       "en": "To verify"
+      },
+      "tag": {
+       "es": "Q4",
+       "en": "Q4"
+      },
+      "body": {
+       "es": "La confirmación y el turno agendado muestran sede, fecha y profesional distintos. Se atribuye a capturas de sesiones diferentes, no a un defecto confirmado: hay que reproducirlo en una corrida limpia.",
+       "en": "The confirmation and the booked appointment show a different location, date and professional. It is attributed to screenshots from different sessions, not to a confirmed defect: it needs to be reproduced in a clean run."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "04",
+    "id": "oportunidades",
+    "mode": {
+     "es": "priorización",
+     "en": "prioritisation"
+    },
+    "name": {
+     "es": "Oportunidades de mejora",
+     "en": "Improvement opportunities"
+    },
+    "q": {
+     "es": "Cada recomendación, con los hallazgos que resuelve.",
+     "en": "Each recommendation, with the findings it solves."
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Prioridad 1 | Impacto alto, esfuerzo acotado",
+     "en": "Priority 1 | High impact, limited effort"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Rediseñar la selección de estudios (H1, H2 y H3)",
+       "en": "Redesign study selection (H1, H2 and H3)"
+      },
+      "body": {
+       "es": "Un único punto de entrada con buscador predictivo, categorías colapsadas con búsqueda interna y una bandeja de seleccionados siempre visible.",
+       "en": "A single entry point with predictive search, collapsed categories with inner search and an always-visible selection tray."
+      }
+     },
+     {
+      "lead": {
+       "es": "Corregir contraste y etiquetas (A1 y A2)",
+       "en": "Fix contrast and labels (A1 and A2)"
+      },
+      "body": {
+       "es": "Textos secundarios en AA y un <label> en cada campo.",
+       "en": "Secondary text at AA and a <label> on every field."
+      }
+     },
+     {
+      "lead": {
+       "es": "Habilitar el zoom (A3)",
+       "en": "Enable zoom (A3)"
+      },
+      "body": {
+       "es": "Quitar maximum-scale y user-scalable=no del viewport. Una línea.",
+       "en": "Remove maximum-scale and user-scalable=no from the viewport. One line."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Prioridad 2 | Impacto medio",
+     "en": "Priority 2 | Medium impact"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Mejorar la elección de turno (H5 y H6)",
+       "en": "Improve slot selection (H5 and H6)"
+      },
+      "body": {
+       "es": "Leyenda de disponibilidad, atajo al próximo turno, horarios por franja y la misma información en las dos búsquedas.",
+       "en": "Availability legend, next-slot shortcut, times grouped by time of day and the same information in both searches."
+      }
+     },
+     {
+      "lead": {
+       "es": "Resolver el estudio no encontrado dentro del flujo (H4)",
+       "en": "Handle the missing study inside the flow (H4)"
+      },
+      "body": {
+       "es": "Sugerencias y la opción de subir la orden antes de derivar a WhatsApp.",
+       "en": "Suggestions and the option to upload the prescription before referring to WhatsApp."
+      }
+     },
+     {
+      "lead": {
+       "es": "Clarificar documentación e indicaciones (H7 y H8)",
+       "en": "Clarify documents and instructions (H7 and H8)"
+      },
+      "body": {
+       "es": "El detalle concreto según el estudio, y una consecuencia visible para la rama de estudios anteriores.",
+       "en": "The specific details for each study, and a visible consequence for the previous-studies branch."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Prioridad 3 | Pulido",
+     "en": "Priority 3 | Polish"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Indicador de progreso (H10)",
+       "en": "Progress indicator (H10)"
+      },
+      "body": {
+       "es": "Para los ocho pasos del flujo.",
+       "en": "For the eight steps of the flow."
+      }
+     },
+     {
+      "lead": {
+       "es": "Advertencia de pérdida de progreso (H9)",
+       "en": "Lost-progress warning (H9)"
+      },
+      "body": {
+       "es": "Al volver al inicio desde la pantalla del código.",
+       "en": "When going back to start from the code screen."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Cómo se va a medir el rediseño",
+     "en": "How the redesign will be measured"
+    },
+    "items": {
+     "es": [
+      "Tasa de éxito en la selección del estudio por encima del 90 por ciento.",
+      "Menos tiempo en la pantalla de selección de estudios.",
+      "Menos derivaciones al call center desde la autogestión.",
+      "Accesibilidad de 95 o más en Lighthouse y contraste AA en todos los textos.",
+      "SUS por encima de 80 en testing moderado."
+     ],
+     "en": [
+      "Study selection success rate above 90 per cent.",
+      "Less time on the study selection screen.",
+      "Fewer referrals to the call centre from self-service.",
+      "Lighthouse accessibility of 95 or more and AA contrast on all text.",
+      "SUS above 80 in moderated testing."
+     ]
+    },
+    "foot": {
+     "es": "Son objetivos para la fase de rediseño y testing, no resultados.",
+     "en": "These are targets for the redesign and testing phase, not results."
+    }
+   }
+  ],
+  "outcome": {
+   "h": {
+    "es": "Resultados",
+    "en": "Outcomes"
+   },
+   "body": {
+    "es": "La auditoría mostró un desfasaje claro: un producto rápido, con 99 en rendimiento y Core Web Vitals aprobadas, que pierde en experiencia y en accesibilidad. Los trece hallazgos quedaron priorizados por impacto y esfuerzo, y cada uno mapeado a una recomendación concreta. Tres de ellos, el contraste, las etiquetas y el zoom, se resuelven con cambios acotados. Esta auditoría es la base de la propuesta de rediseño y de su validación con usuarios.",
+    "en": "The audit showed a clear gap: a fast product, with 99 in performance and passing Core Web Vitals, that falls short on experience and accessibility. The thirteen findings were prioritised by impact and effort, and each one mapped to a concrete recommendation. Three of them, contrast, labels and zoom, are fixed with contained changes. This audit is the basis for the redesign proposal and its validation with users."
    }
   }
  },

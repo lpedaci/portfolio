@@ -53,7 +53,7 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 button { font: inherit; color: inherit; }
 ul, ol { list-style: none; margin: 0; padding: 0; }
-h1, h2, h3, p, figure, dl, dd { margin: 0; }
+h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
 .mono { font-family: var(--f-mono); }
@@ -765,6 +765,15 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
 .fnd__dot { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid currentColor; }
 .fnd__h { margin-top: 14px; font: 600 1.1875rem/1.3 var(--f-display); text-wrap: pretty; }
 .fnd__heur { margin-top: 6px; font: 400 0.8125rem/1.5 var(--f-mono); color: var(--muted); }
+/* Captura del hallazgo: la sección de la pantalla a la que se refiere, ampliable */
+.fnd__img { margin-top: 16px; max-width: 520px; }
+.fnd__img--wide { max-width: 760px; }
+/* En pantallas anchas, la captura va al costado del texto (las capturas anchas siguen debajo) */
+@media (min-width: 1000px) {
+  .fnd__i.has-img { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); column-gap: 40px; align-items: start; }
+  .fnd__i.has-img > .fnd__img { margin-top: 0; max-width: none; }
+  .fnd__i.has-img .fnd__dl { grid-template-columns: minmax(0, 1fr); }
+}
 .fnd__dl { margin-top: 16px; display: grid; gap: 16px 32px; }
 .fnd__dl dt { font: 400 0.75rem/1.3 var(--f-mono); color: var(--muted); margin-bottom: 6px; }
 .fnd__dl dd { color: var(--text-2); line-height: 1.65; }

@@ -33,7 +33,7 @@
     const h = b.h ? hx(H, 'blk__h', esc(L(b.h))) : '';
     const n = b.note ? `<p class="blk__note">${esc(L(b.note))}</p>` : '';
     const headless = !h && !n;
-    return `<section class="blk${wide || headless ? ' blk--wide' : ''}${extra}">${headless ? '' : `<div class="blk__head">${h}${n}</div>`}<div class="blk__body">${body}</div></section>`;
+    return `<section class="blk${wide || headless ? ' blk--wide' : ''}${extra}${b.hl ? ' blk--outcome' : ''}">${headless ? '' : `<div class="blk__head">${h}${n}</div>`}<div class="blk__body">${body}</div></section>`;
   }
 
   function frame(kind, src, open, label, title) {
@@ -256,11 +256,12 @@
       const lb = b.labels;
       const sev = { Alta: 'high', High: 'high', Media: 'mid', Medium: 'mid', Baja: 'low', Low: 'low' };
       return blk(b, `<ol class="fnd">${b.items.map((x) => `
-        <li class="fnd__i${x.fixed ? ' is-fixed' : ''}">
-          <p class="fnd__top"><span class="fnd__id">${esc(x.id)}</span><span class="fnd__sev fnd__sev--${sev[L(x.sev)] || 'low'}"><span class="sr-only">${esc(L(lb.sev))}: </span>${esc(L(x.sev))}</span><span class="fnd__st">${x.fixed ? '<i class="ph ph-check-circle" aria-hidden="true"></i>' : '<span class="fnd__dot" aria-hidden="true"></span>'}${esc(L(x.fixed ? lb.fixed : lb.recorded))}</span></p>
+        <li class="fnd__i${x.fixed ? ' is-fixed' : ''}${x.img && x.img.w <= 900 ? ' has-img' : ''}">
+          <div class="fnd__txt"><p class="fnd__top"><span class="fnd__id">${esc(x.id)}</span><span class="fnd__sev fnd__sev--${sev[L(x.sev)] || 'low'}"><span class="sr-only">${esc(L(lb.sev))}: </span>${esc(L(x.sev))}</span>${x.fixed === undefined ? '' : `<span class="fnd__st">${x.fixed ? '<i class="ph ph-check-circle" aria-hidden="true"></i>' : '<span class="fnd__dot" aria-hidden="true"></span>'}${esc(L(x.fixed ? lb.fixed : lb.recorded))}</span>`}</p>
           ${hx(H + 1, 'fnd__h', esc(L(x.title)))}
           <p class="fnd__heur">${esc(L(x.heur))}</p>
-          <dl class="fnd__dl"><div><dt>${esc(L(lb.ev))}</dt><dd>${esc(L(x.ev))}</dd></div><div><dt>${esc(L(lb.res))}</dt><dd>${esc(L(x.res))}</dd></div></dl>
+          <dl class="fnd__dl"><div><dt>${esc(L(lb.ev))}</dt><dd>${esc(L(x.ev))}</dd></div><div><dt>${esc(L(lb.res))}</dt><dd>${esc(L(x.res))}</dd></div></dl></div>
+          ${x.img ? `<div class="fnd__img${x.img.w > 900 ? ' fnd__img--wide' : ''}">${picture(x.img, false)}</div>` : ''}
         </li>`).join('')}</ol>`, true);
     },
 

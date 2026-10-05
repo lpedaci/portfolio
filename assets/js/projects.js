@@ -78,6 +78,20 @@ window.PROJECTS = [
     skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.1', 'Lighthouse', 'Claude'], en: ['Nielsen heuristics', 'WCAG 2.1', 'Lighthouse', 'Claude'] }
   },
   {
+    slug: 'auditoria-turnos',
+    cat: 'it',
+    dates: ['2026-10', '2026-10'],
+    tags: { es: ['ux/ui', 'accesibilidad'], en: ['ux/ui', 'accessibility'] },
+    badges: ['UX'],
+    title: { es: 'Auditoría UX/UI de un portal de turnos', en: 'UX/UI audit of an appointment portal' },
+    desc: {
+      es: 'Evaluación heurística, de accesibilidad y de performance del portal de turnos de un centro de diagnóstico.',
+      en: 'Heuristic, accessibility and performance evaluation of a diagnostic centre’s appointment portal.'
+    },
+    result: { es: '13 hallazgos priorizados', en: '13 prioritised findings' },
+    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Lighthouse', 'PageSpeed Insights'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Lighthouse', 'PageSpeed Insights'] }
+  },
+  {
     slug: 'rediseno-portfolio',
     cat: 'it',
     dates: ['2026-07', '2026-07'],

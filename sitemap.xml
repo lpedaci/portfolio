@@ -2,91 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lpedaci.github.io/portfolio/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/proyectos-aplicados/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/proyectos-aplicados/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/proyectos-aplicados/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/proyectos-aplicados/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/auditorias-ux/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/auditorias-ux/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/auditorias-ux/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/auditorias-ux/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/sistemas-operativos/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/sistemas-operativos/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/sistemas-operativos/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/sistemas-operativos/"/>
   </url>
   <url>
+    <loc>https://lpedaci.github.io/portfolio/casos/auditoria-turnos/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/auditoria-turnos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/auditoria-turnos/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/auditoria-turnos/"/>
+  </url>
+  <url>
     <loc>https://lpedaci.github.io/portfolio/casos/rediseno-portfolio/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/rediseno-portfolio/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/rediseno-portfolio/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/rediseno-portfolio/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/docente-era-digital/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/docente-era-digital/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/docente-era-digital/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/docente-era-digital/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/infraestructura-it/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/infraestructura-it/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/infraestructura-it/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/infraestructura-it/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/expo-smart-cities/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/expo-smart-cities/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/expo-smart-cities/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/expo-smart-cities/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/riesgos-digitales/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/riesgos-digitales/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/riesgos-digitales/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/riesgos-digitales/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/the-crow/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/the-crow/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/the-crow/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/the-crow/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/edulabs/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/edulabs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/edulabs/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/edulabs/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/tedxtecno/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/tedxtecno/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/tedxtecno/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/tedxtecno/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/erp-motion-graphics/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/erp-motion-graphics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/erp-motion-graphics/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/erp-motion-graphics/"/>
