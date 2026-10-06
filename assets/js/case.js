@@ -304,7 +304,7 @@
     mount.innerHTML = `
       <a class="case__back" href="${ROOT}?lang=${state.lang}#proyectos"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>${t('backWork')}</span></a>
       <header class="case__head">
-        <p class="case__meta"><span class="case__cat">${t(CAT_KEY[p.cat])}</span>${(p.badges || []).map((x) => `<span class="case__cat">${esc(x)}</span>`).join('')}${c.chips ? '' : `<span>${esc(p.tags[state.lang].join(' / '))}</span>`}<span>${esc(p.year)}</span></p>
+        <p class="case__meta"><span class="case__cat">${t(CAT_KEY[p.cat])}</span>${(p.also || []).map((c) => `<span class="case__cat" style="--c: var(--${c})">${t(CAT_KEY[c])}</span>`).join('')}${(p.badges || []).map((x) => `<span class="case__cat">${esc(x)}</span>`).join('')}${c.chips ? '' : `<span>${esc(p.tags[state.lang].join(' / '))}</span>`}<span>${esc(p.year)}</span></p>
         <h1 class="case__title">${esc(L(c.title) || L(p.title))}</h1>
         ${c.subtitle ? `<p class="case__sub">${esc(L(c.subtitle))}</p>` : ''}
         ${chips}

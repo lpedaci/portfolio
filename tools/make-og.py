@@ -162,7 +162,7 @@ def main():
     out_dir = os.path.join(ROOT, "assets", "img", "og")
     os.makedirs(out_dir, exist_ok=True)
     for p in load_js("window.PROJECTS"):
-        kicker = " | ".join([CAT_LABEL[p["cat"]]] + p["tags"]["es"])
+        kicker = " | ".join([CAT_LABEL[p["cat"]]] + [CAT_LABEL[c] for c in p.get("also", [])] + p["tags"]["es"])
         render(template, kicker, CAT[p["cat"]], plain_words(p["title"]["es"]), f"{URL}  |  {p['year']}",
                os.path.join(out_dir, f"{p['slug']}.jpg"))
 

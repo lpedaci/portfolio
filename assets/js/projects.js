@@ -12,6 +12,7 @@ window.PROJECTS = [
   {
     slug: 'proyectos-aplicados',
     cat: 'it',
+    also: ['cap'],
     dates: ['2024', '2026'],
     tags: { es: ['product design', 'development'], en: ['product design', 'development'] },
     title: { es: 'Programa de proyectos aplicados', en: 'Applied projects programme' },
@@ -25,6 +26,7 @@ window.PROJECTS = [
   {
     slug: 'riesgos-digitales',
     cat: 'it',
+    also: ['cont'],
     dates: ['2024-07', '2024-11'],
     tags: { es: ['ux', 'seguridad', 'investigación'], en: ['ux', 'security', 'research'] },
     badges: ['UX'],
@@ -39,6 +41,7 @@ window.PROJECTS = [
   {
     slug: 'infraestructura-it',
     cat: 'it',
+    also: ['cap'],
     dates: ['2022-07', '2024-12'],
     tags: { es: ['sistemas', 'documentación'], en: ['systems', 'documentation'] },
     title: { es: 'Estandarización de infraestructura IT', en: 'IT infrastructure standardisation' },

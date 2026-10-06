@@ -11,7 +11,7 @@
     (() => {
       const seg = location.pathname.split('/').filter(Boolean)[0];
       const root = /github\.io$/.test(location.hostname) && seg ? `/${seg}/` : '/';
-      ['assets/css/fonts.css?v=202610051313', 'assets/css/icons.css?v=202610051313'].forEach((href) => {
+      ['assets/css/fonts.css?v=202610061940', 'assets/css/icons.css?v=202610061940'].forEach((href) => {
         const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = root + href; document.head.appendChild(l);
       });
       [['icon', 'assets/img/favicon.svg', 'image/svg+xml'], ['apple-touch-icon', 'assets/img/apple-touch-icon.png', '']].forEach(([rel, href, type]) => {

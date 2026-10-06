@@ -162,6 +162,19 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   margin-top: 24px; color: var(--muted); font-size: 1.0625rem; line-height: 1.65; max-width: 60ch;
 }
 .hero__ctas { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+/* LinkedIn: en escritorio, texto y flecha; en celular, solo el logo (el texto queda para lectores de pantalla) */
+.btn__logo { display: none; width: 20px; height: 20px; fill: currentColor; }
+@media (max-width: 767px) {
+  .hero__ctas { flex-wrap: nowrap; gap: 8px; }
+  .hero__ctas .btn { padding: 0 16px; gap: 8px; }
+  .hero__ctas .btn--primary { flex: 1 1 auto; justify-content: center; min-width: 0; }
+  .btn--in { flex: none; width: 48px; padding: 0; justify-content: center; }
+  .btn--in .btn__logo { display: block; }
+  .btn--in .btn__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .btn--in .ph { display: none; }
+  .hero__ctas .js-cv .ph { display: none; }
+}
+@media (max-width: 359px) { .hero__ctas .btn--primary .ph { display: none; } }
 .hero__visual { width: 100%; max-width: 480px; justify-self: center; }
 
 @media (min-width: 900px) {
@@ -235,6 +248,53 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   grid-auto-flow: row; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   overflow: visible; scroll-snap-type: none;
 }
+/* Posición en el carrusel ("3 / 13"): solo en celular */
+.work__pos { display: none; margin-top: 12px; text-align: center; font-size: 0.8125rem; color: var(--muted); }
+.chips__more { display: none; }
+/* Escritorio (grilla y carrusel): herramientas en una sola línea, las que no entran pasan al "+N" */
+.work .card__foot .chips.is-fit { flex-wrap: nowrap; overflow: hidden; }
+.work .card__foot .chips.is-fit li { flex: none; }
+.work .card__foot .chips.is-fit li[hidden] { display: none; }
+.work .card__foot .chips.is-fit .chips__more:not([hidden]) { display: list-item; list-style: none; color: var(--muted); }
+
+/* Celular: solo carrusel con deslizamiento. Sin selector de vista, flechas ni pausa (no hay avance automático),
+   y en cada tarjeta hasta 4 herramientas más un "+N". El escritorio no cambia. */
+@media (max-width: 767px) {
+  .work__tools { display: none; }
+  .work__pos { display: block; }
+  .card .chip--extra { display: none; }
+  .card .chips__more:not([hidden]) { display: list-item; list-style: none; color: var(--muted); }
+  /* Etiquetas en la misma línea que la fecha; las que no entran, detrás del "+N" */
+}
+/* Etiquetas compactas (celular y vista grilla): en la línea de la fecha, hasta 2 y el resto detrás de "+N".
+   El carrusel de escritorio no las recorta. */
+.work[data-view="grid"] .card__top { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+/* overflow oculto para medir qué entra; el padding deja lugar al anillo de foco del botón */
+.work[data-view="grid"] .card__tags { flex-wrap: nowrap; justify-content: flex-start; min-width: 0; overflow: hidden; padding: 4px; margin: -4px -4px -4px auto; }
+.work[data-view="grid"] .card__tags li { flex: none; }
+.work[data-view="grid"] .card__tags.is-tight li:first-child { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.work[data-view="grid"] .card__tags.is-open { flex-wrap: wrap; overflow: visible; margin-left: -4px; }
+.work[data-view="grid"] .card__top:has(.is-open) { flex-direction: column; align-items: flex-start; gap: 14px; }
+@media (max-width: 767px) {
+  .work .card__top { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+  /* overflow oculto para medir qué entra; el padding deja lugar al anillo de foco del botón */
+  .work .card__tags { flex-wrap: nowrap; justify-content: flex-start; min-width: 0; overflow: hidden; padding: 4px; margin: -4px -4px -4px auto; }
+  .work .card__tags li { flex: none; }
+  .work .card__tags.is-tight li:first-child { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .work .card__tags.is-open { flex-wrap: wrap; overflow: visible; margin-left: -4px; }
+  .work .card__top:has(.is-open) { flex-direction: column; align-items: flex-start; gap: 14px; }
+}
+.card__tags li[hidden] { display: none; }
+.card__tags .tags__more { padding: 0; border: 0; background: none; }
+.tags__btn {
+  display: grid; place-items: center; min-width: 32px; height: 24px; padding: 0 9px; cursor: pointer;
+  font: 400 0.6875rem/1 var(--f-mono); color: var(--c); border-radius: var(--r-pill);
+  border: 1px solid color-mix(in srgb, var(--c) 32%, transparent); background: color-mix(in srgb, var(--c) 7%, transparent);
+}
+.tags__btn .ph { font-size: 0.8125rem; }
+/* Área táctil de 44px sin agrandar el chip */
+.tags__btn { position: relative; }
+.tags__btn::after { content: ""; position: absolute; inset: -10px -6px; }
 
 /* Tarjeta */
 .card {
@@ -248,10 +308,20 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .card[data-cat="cont"] { --c: var(--cont); }
 .card:hover { border-color: color-mix(in srgb, var(--c) 45%, var(--line)); }
 
-.card__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.card { container-type: inline-size; }
+.card__top { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .card__num { font: 400 0.8125rem/1 var(--f-mono); color: var(--muted); white-space: nowrap; }
-.card__tags { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 12px; font: 400 0.8125rem/1.4 var(--f-mono); color: var(--c); }
-.card__tags li + li::before { content: "/"; margin-right: 12px; color: var(--muted); }
+/* Etiquetas: chips livianos con el color de su categoría (más chicos que los de herramientas del pie).
+   En la grilla van en una fila propia debajo del número; en el carrusel, si la card es ancha, en la misma línea. */
+.card__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+@container (min-width: 480px) {
+  .work[data-view="carousel"] .card__top { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+  .work[data-view="carousel"] .card__tags { justify-content: flex-end; }
+}
+.card__tags li {
+  font: 400 0.6875rem/1 var(--f-mono); color: var(--c); padding: 6px 9px; border-radius: var(--r-pill);
+  border: 1px solid color-mix(in srgb, var(--c) 32%, transparent); background: color-mix(in srgb, var(--c) 7%, transparent);
+}
 
 .card__title { font: 600 1.375rem/1.2 var(--f-display); letter-spacing: -0.015em; text-wrap: balance; }
 .card__desc { color: var(--muted); font-size: 0.975rem; line-height: 1.55; }
@@ -326,13 +396,19 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 /* Habilidades: cierre del recorrido. El color de cada grupo sigue el código del sitio */
 .skills { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--line); }
 .skills__title { font: 600 clamp(1.375rem, 1.15rem + 0.8vw, 1.75rem)/1.2 var(--f-display); letter-spacing: -0.015em; margin: 0 0 24px; }
-.skills__grid { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
-.skill { --c: var(--it); display: flex; flex-direction: column; gap: 14px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); }
+/* Mosaico: cada tarjeta mide lo que su contenido y la siguiente se apila debajo (sin huecos verticales).
+   Las columnas se recalculan solas con el ancho. */
+.skills__grid { columns: 1; column-gap: 12px; }
+.skill { --c: var(--it); display: flex; flex-direction: column; gap: 14px; padding: 20px; margin-bottom: 12px; break-inside: avoid; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); }
+/* Chips: cada fila se estira hasta completar el ancho; la última queda natural (el relleno final absorbe el sobrante) */
+.skill .chips li { flex-grow: 1; text-align: center; }
+.skill .chips::after { content: ""; flex-grow: 999; order: 9999; }
+.skill .chips.is-measuring li { flex-grow: 0; }
 .skill[data-cat="cap"] { --c: var(--cap); }
 .skill[data-cat="cont"] { --c: var(--cont); }
 .skill h4 { margin: 0; font: 500 0.8125rem/1.3 var(--f-mono); color: var(--c); }
-@media (min-width: 640px) { .skills__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1100px) { .skills__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 640px) { .skills__grid { columns: 2; } }
+@media (min-width: 1100px) { .skills__grid { columns: 4; } }
 @media (prefers-reduced-motion: no-preference) {
   .skills__grid .skill { transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); transition-delay: calc(var(--i) * 60ms); }
   .skills__grid.is-pending .skill { opacity: 0; transform: translateY(10px); }
