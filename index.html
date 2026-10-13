@@ -36,10 +36,10 @@
 
   <link rel="preload" href="assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/fonts.css?v=202610061940">
-  <link rel="stylesheet" href="assets/css/icons.css?v=202610061940">
-  <link rel="stylesheet" href="assets/css/styles.css?v=202610061940">
-  <link rel="stylesheet" href="assets/css/mg-phone.css?v=202610061940">
+  <link rel="stylesheet" href="assets/css/fonts.css?v=202610131815">
+  <link rel="stylesheet" href="assets/css/icons.css?v=202610131815">
+  <link rel="stylesheet" href="assets/css/styles.css?v=202610131815">
+  <link rel="stylesheet" href="assets/css/mg-phone.css?v=202610131815">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Ir al contenido</a>
@@ -63,10 +63,10 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
+    <!-- HERO: bento de cinco piezas (texto, animación, proyectos, foco y herramientas) -->
     <section class="hero" id="top">
-      <div class="wrap hero__grid">
-        <div class="hero__copy">
+      <div class="wrap bento">
+        <div class="tile tile--intro" style="--i:0">
           <h1 class="hero__title" data-i18n-html="headline">De la capacitación y coordinación de proyectos al <em>mundo IT</em>.</h1>
           <p class="hero__lead" data-i18n="lead">Provengo del área de capacitación técnica y la coordinación de proyectos con clientes reales en un entorno de incubadora ágil híbrida. Busco pivotear a un equipo de IT con foco en análisis funcional, relevamiento de requisitos y gestión ágil de proyectos.</p>
           <div class="hero__ctas">
@@ -87,9 +87,40 @@
         </div>
 
         <!-- Motion graphic: del boceto al producto (assets/js/mg-phone.js) -->
-        <div class="hero__visual">
-          <div class="mgp" data-max="1.05"></div>
-          <ol class="mgp-steps" aria-hidden="true"></ol>
+        <div class="tile tile--anim" style="--i:1">
+          <p class="tile__label mono" data-i18n="heroAnim">Del boceto al producto</p>
+          <div class="tile__stage">
+            <div class="mgp" data-max="1.05"></div>
+            <ol class="mgp-steps" aria-hidden="true"></ol>
+          </div>
+        </div>
+
+        <!-- Las cantidades se calculan desde projects.js (main.js); estas son el respaldo sin JavaScript -->
+        <a class="tile tile--count" href="#proyectos" style="--i:2">
+          <span class="tile__label mono" data-i18n="heroCount">Proyectos publicados</span>
+          <i class="ph ph-arrow-down tile__go" aria-hidden="true"></i>
+          <strong class="count__n" id="hero-n">14</strong>
+          <span class="count__bar" aria-hidden="true"><i data-cat="it" style="--c:var(--it);--n:7;--j:0"></i><i data-cat="cap" style="--c:var(--cap);--n:3;--j:1"></i><i data-cat="cont" style="--c:var(--cont);--n:4;--j:2"></i></span>
+          <span class="count__legend">
+            <span style="--c:var(--it)"><b data-i18n="filterIt">IT</b><span class="mono" data-n="it">7</span></span>
+            <span style="--c:var(--cap)"><b data-i18n="filterCap">Capacitación</b><span class="mono" data-n="cap">3</span></span>
+            <span style="--c:var(--cont)"><b data-i18n="filterCont">Contenido</b><span class="mono" data-n="cont">4</span></span>
+          </span>
+        </a>
+
+        <div class="tile tile--focus" style="--i:3">
+          <p class="tile__label mono" data-i18n="heroFocus">Foco</p>
+          <ul class="focus">
+            <li style="--k:0"><span class="mono" aria-hidden="true">01</span><span data-i18n="focus1">Análisis funcional</span></li>
+            <li style="--k:1"><span class="mono" aria-hidden="true">02</span><span data-i18n="focus2">Relevamiento de requisitos</span></li>
+            <li style="--k:2"><span class="mono" aria-hidden="true">03</span><span data-i18n="focus3">Diseño UX/UI</span></li>
+            <li style="--k:3"><span class="mono" aria-hidden="true">04</span><span data-i18n="focus4">Gestión ágil de proyectos</span></li>
+          </ul>
+        </div>
+
+        <div class="tile tile--stream" style="--i:4">
+          <p class="tile__label mono" data-i18n="heroTools">Herramientas</p>
+          <div class="stream"><ul class="stream__track" id="hero-stream"></ul></div>
         </div>
       </div>
     </section>
@@ -197,10 +228,10 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=202610061940"></script>
-  <script src="assets/js/projects.js?v=202610061940"></script>
-  <script src="assets/js/main.js?v=202610061940"></script>
-  <script src="assets/js/nav.js?v=202610061940"></script>
-  <script src="assets/js/mg-phone.js?v=202610061940"></script>
+  <script src="assets/js/i18n.js?v=202610131815"></script>
+  <script src="assets/js/projects.js?v=202610131815"></script>
+  <script src="assets/js/main.js?v=202610131815"></script>
+  <script src="assets/js/nav.js?v=202610131815"></script>
+  <script src="assets/js/mg-phone.js?v=202610131815"></script>
 </body>
 </html>

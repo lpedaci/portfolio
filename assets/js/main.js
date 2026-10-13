@@ -274,6 +274,63 @@
     }).join('');
   }
 
+  /* ---------- Hero ---------- */
+  /* Franja de herramientas: solo herramientas reales (las de Habilidades y las de las cards), mezcladas
+     para que se vea cada área enseguida. El color es el de la categoría. Los nombres no se traducen. */
+  const TOOLS = [
+    ['it', 'Claude'], ['it', 'Figma'], ['cap', 'Articulate 360'], ['cont', 'Camtasia'],
+    ['it', 'ChatGPT'], ['it', 'Notion'], ['cap', 'Moodle'], ['cont', 'CapCut'],
+    ['it', 'Gemini'], ['it', 'SQL'], ['cap', 'Canva'], ['cont', 'Adobe Premiere'],
+    ['it', 'NotebookLM'], ['it', 'Power BI'], ['cap', 'Storyline'], ['cont', 'After Effects'],
+    ['it', 'Copilot'], ['it', 'GitHub'], ['cap', 'Genially'], ['cont', 'vMix'],
+    ['it', 'ElevenLabs'], ['it', 'Excel'], ['cap', 'Rise'], ['cont', 'YouTube'],
+    ['it', 'Suno'], ['it', 'JavaScript'], ['cap', 'iSpring'], ['it', 'Runway ML'],
+    ['it', 'HTML'], ['cap', 'MS Teams'], ['it', 'Adobe Firefly'], ['it', 'CSS'],
+    ['cap', 'PowerPoint'], ['it', 'MySQL Workbench'], ['cap', 'PowToon'], ['it', 'Google Sheets'],
+    ['cap', 'LinkedIn Learning'], ['it', 'Google Apps Script'], ['it', 'Lighthouse'], ['it', 'GitHub Pages'],
+    ['it', 'PageSpeed Insights'], ['it', 'Slack'], ['it', 'Node'], ['it', 'Google Workspace'], ['it', 'Microsoft Office']
+  ];
+  function initHero() {
+    const stream = document.getElementById('hero-stream');
+    if (stream) {
+      // La lista va dos veces para que el desplazamiento no tenga corte; la copia se oculta a lectores de pantalla
+      const li = (hide) => TOOLS.map(([c, x]) => `<li style="--c:var(--${c})"${hide ? ' aria-hidden="true"' : ''}>${escape(x)}</li>`).join('');
+      stream.innerHTML = li(false) + li(true);
+      const pace = () => stream.style.setProperty('--dur', `${Math.round(stream.scrollWidth / 2 / 38)}s`);
+      pace();
+      document.fonts?.ready.then(pace);
+    }
+    // Cantidades por categoría principal, tomadas de PROJECTS
+    const n = { it: 0, cap: 0, cont: 0 };
+    PROJECTS.forEach((p) => { n[p.cat] += 1; });
+    Object.keys(n).forEach((c) => {
+      const num = document.querySelector(`.count__legend [data-n="${c}"]`);
+      if (num) num.textContent = n[c];
+      document.querySelector(`.count__bar [data-cat="${c}"]`)?.style.setProperty('--n', n[c]);
+    });
+    const out = document.getElementById('hero-n');
+    if (out) {
+      const total = PROJECTS.length;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) out.textContent = total;
+      else {
+        const t0 = performance.now() + 350;
+        const tick = (now) => {
+          const k = Math.min(1, Math.max(0, (now - t0) / 900));
+          out.textContent = Math.round(total * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        out.textContent = 0;
+        requestAnimationFrame(tick);
+      }
+    }
+    // Borde que se ilumina donde está el cursor
+    document.querySelectorAll('.tile').forEach((el) => el.addEventListener('pointermove', (e) => {
+      const r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      el.style.setProperty('--my', `${e.clientY - r.top}px`);
+    }));
+  }
+
   /* ---------- Habilidades ---------- */
   function renderSkills() {
     skillsGrid.innerHTML = t('skills').map((g, i) => `
@@ -414,5 +471,6 @@
   const fromUrl = new URLSearchParams(location.search).get('lang');
   const saved = store.get('lang');
   state.lang = ['es', 'en'].includes(fromUrl) ? fromUrl : (['es', 'en'].includes(saved) ? saved : 'es');
+  initHero();
   applyLang();
 })();
