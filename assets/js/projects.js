@@ -1,5 +1,7 @@
 /* Tarjetas de proyectos. Cada texto visible lleva { es, en }.
    cat: 'it' (turquesa), 'cap' (rosado, capacitación) o 'cont' (ámbar, creación de contenidos).
+   also: categorías adicionales; el proyecto también aparece en esos filtros y suma un chip con el nombre de
+   la categoría, o con el texto de alsoTags si lo tiene (por ejemplo { it: { es: 'ux/ui', en: 'ux/ui' } }).
    badges: etiquetas extra junto a la categoría en el encabezado del caso (por ejemplo 'UX').
    dates: [inicio, fin] en 'AAAA-MM' (o 'AAAA' si no hay mes). De acá sale el año que se muestra
    ('2024' o '2022-2024') y el orden de las cards, del más nuevo
@@ -13,9 +15,10 @@ window.PROJECTS = [
     slug: 'primer-empleo',
     cat: 'cap',
     also: ['it'],
+    alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
     badges: ['UX'],
     dates: ['2026-10', '2026-11'],
-    tags: { es: ['empleabilidad', 'sitio web'], en: ['employability', 'website'] },
+    tags: { es: ['empleabilidad', 'capacitación'], en: ['employability', 'training'] },
     title: { es: 'Del aula al primer trabajo', en: 'From the classroom to a first job' },
     desc: {
       es: 'Taller de primer empleo convertido en un recorrido web de diez paradas: CV para ATS, LinkedIn, porfolio y entrevistas con personas e IA.',
