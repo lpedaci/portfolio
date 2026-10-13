@@ -166,7 +166,7 @@
     prose: (b) => blk(b, b.p.map((x) => `<p>${esc(L(x))}</p>`).join(''), false, ' prose'),
     list: (b) => blk(b, `<ul class="items">${b.items.map((x) => `<li><strong>${esc(L(x.lead))}</strong><span>${esc(L(x.body))}</span></li>`).join('')}</ul>`),
     roadmap: (b) => blk(b, `<ol class="steps" style="--n:${b.steps.length}">${b.steps.map((x) => `<li><span class="code">${esc(L(x.code))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${esc(L(x.body))}</p></li>`).join('')}</ol>`, true),
-    callout: (b) => blk({}, `<div class="callout">${hx(H + 1, '', esc(L(b.h)))}<p>${esc(L(b.body))}</p></div>`, true),
+    callout: (b) => blk({}, `<div class="callout">${hx(H, '', esc(L(b.h)))}<p>${esc(L(b.body))}</p></div>`, true),
     stats: (b) => blk({}, `<div class="stats">${b.items.map((x) => `<div><p class="v">${esc(L(x.value))}</p><p class="l">${esc(L(x.label))}</p></div>`).join('')}</div>`, true),
     cases: (b) => blk(b, `<ul class="cases">${b.items.map((x) => `
       <li><span class="tag">${esc(L(x.tag))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${esc(L(x.body))}</p>
@@ -224,7 +224,7 @@
       return blk(b, `<div class="ufw"><div class="ufw__svg">${userFlowSVG(b)}</div><ol class="ufw__logic">${L(b.logic).map(item).join('')}</ol></div>`, true);
     },
     swatches: (b) => blk(b, b.groups.map((g) => `
-      <div class="swg">${hx(H + 1, 'swg__h', esc(L(g.name)))}<ul class="sw${b.compact ? ' sw--compact' : ''}">${g.items.map((s) => `
+      <div class="swg">${hx(H + 1, 'swg__h', esc(L(g.name)))}<ul class="sw${b.compact ? ' sw--compact' : ''}${b.dense ? ' sw--dense' : ''}">${g.items.map((s) => `
         <li><div class="sw__chip" style="background:${s.chip || s.hex}" aria-hidden="true"></div><span class="sw__token">${esc(s.token)}</span><span class="sw__hex">${esc(s.hex)}</span>${s.ratio ? `<span class="sw__ratio">${esc(L(s.ratio))}</span>` : ''}<p class="sw__use">${esc(L(s.use))}</p></li>`).join('')}</ul></div>`).join(''), true),
     typescale: (b) => { loadMontserrat(); return blk(b, `<div class="ts" role="table" aria-label="${esc(L(b.h))}">
       <div class="ts__row ts__row--head" role="row"><span role="columnheader">${esc(L(b.cols.style))}</span><span role="columnheader" class="ts__sample-h"><span class="sr-only">${esc(L(b.cols.sample || { es: 'Muestra', en: 'Sample' }))}</span></span><span role="columnheader">${esc(L(b.cols.weight))}</span><span role="columnheader">${esc(L(b.cols.size))}</span><span role="columnheader">${esc(L(b.cols.ls))}</span></div>
@@ -248,8 +248,10 @@
 
     /* ---------- Bloques del caso de rediseño del portfolio ---------- */
     // Tabla de tres columnas (dimensión, antes, después); en pantallas chicas cada fila se apila con su rótulo.
-    compare: (b) => blk(b, `<div class="cmp"><table>
-        <thead><tr><th scope="col">${esc(L(b.cols.dim))}</th><th scope="col">${esc(L(b.cols.before))}</th><th scope="col">${esc(L(b.cols.after))}</th></tr></thead>
+    // accent: sin lado bueno ni malo; resalta la primera columna y la última con los colores del caso.
+    // marks: colorea las dos columnas (rosado para "antes", turquesa para "después") con un ícono en cada encabezado.
+    compare: (b) => blk(b, `<div class="cmp${b.marks ? ' cmp--marks' : ''}${b.accent ? ' cmp--accent' : ''}"><table>
+        <thead><tr><th scope="col">${esc(L(b.cols.dim))}</th><th scope="col">${b.marks ? '<i class="ph ph-x-circle" aria-hidden="true"></i>' : ''}${esc(L(b.cols.before))}</th><th scope="col">${b.marks ? '<i class="ph ph-check-circle" aria-hidden="true"></i>' : ''}${b.accent ? '<i class="ph ph-arrow-right" aria-hidden="true"></i>' : ''}${esc(L(b.cols.after))}</th></tr></thead>
         <tbody>${b.rows.map((r) => `<tr><th scope="row">${esc(L(r.dim))}</th><td data-l="${esc(L(b.cols.before))}">${esc(L(r.before))}</td><td data-l="${esc(L(b.cols.after))}">${esc(L(r.after))}</td></tr>`).join('')}</tbody></table></div>`, true),
     // Hallazgos: severidad y estado siempre escritos (el color acompaña, no informa solo).
     findings: (b) => {
@@ -263,6 +265,44 @@
           <dl class="fnd__dl"><div><dt>${esc(L(lb.ev))}</dt><dd>${esc(L(x.ev))}</dd></div><div><dt>${esc(L(lb.res))}</dt><dd>${esc(L(x.res))}</dd></div></dl></div>
           ${x.img ? `<div class="fnd__img${x.img.w > 900 ? ' fnd__img--wide' : ''}">${picture(x.img, false)}</div>` : ''}
         </li>`).join('')}</ol>`, true);
+    },
+
+    /* ---------- Bloques del caso de primer empleo ---------- */
+    // Mapa de líneas y paradas, sin SVG: cada parada crece según sus minutos y el total se calcula acá.
+    metro: (b) => blk(b, `<div class="metro">${b.lines.map((ln, li) => {
+      const total = ln.stops.reduce((s, x) => s + x.min, 0);
+      return `<section class="metro__line metro__line--${li + 1}">
+        ${hx(H + 1, 'metro__h', esc(L(ln.name)))}<p class="metro__sub">${esc(L(ln.sub))}</p>
+        <ol class="metro__stops" start="${ln.stops[0].n}">${ln.stops.map((s) => `
+          <li class="metro__stop" style="flex-grow:${s.min}">
+            <span class="metro__dot" aria-hidden="true">${s.n}</span>
+            <span class="metro__name">${esc(L(s.name))}</span>
+            <span class="metro__min">${s.min} ${esc(L(b.unit))}</span>
+          </li>`).join('')}</ol>
+        <p class="metro__total">${esc(L(b.total))}: ${total} ${esc(L(b.unit))}</p>
+      </section>`;
+    }).join('')}</div>`, true),
+    // Barras apiladas (actividad y exposición) sobre una lista de definición. La escala es la parada más larga;
+    // la exposición lleva rayas para distinguirse sin depender del color, y cada valor va escrito.
+    split: (b) => {
+      const max = Math.max(...b.rows.map((r) => r.min));
+      const u = esc(L(b.unit));
+      const la = esc(L(b.legend.a));
+      const lb = esc(L(b.legend.b));
+      const sumA = b.rows.reduce((s, r) => s + r.act, 0);
+      const sumT = b.rows.reduce((s, r) => s + r.min, 0);
+      const row = (r) => {
+        const ex = r.min - r.act;
+        return `<div class="split__row"><dt>${esc(L(r.label))}</dt><dd>
+          <span class="split__track" aria-hidden="true"><span class="split__bar" style="--t:${(r.min / max * 100).toFixed(1)}%">${r.act ? `<span class="split__a" style="--w:${(r.act / r.min * 100).toFixed(1)}%"></span>` : ''}${ex ? '<span class="split__b"></span>' : ''}</span></span>
+          <span class="split__v" aria-hidden="true">${r.act ? `${r.act} + ${ex} ${u}` : `${r.min} ${u}`}</span>
+          <span class="sr-only">${la}: ${r.act} ${u}. ${lb}: ${ex} ${u}.</span>
+        </dd></div>`;
+      };
+      return blk(b, `<figure class="split"><figcaption class="split__cap">${esc(L(b.title))}</figcaption>
+        <ul class="split__legend"><li><span class="split__key split__key--a" aria-hidden="true"></span>${la}</li><li><span class="split__key split__key--b" aria-hidden="true"></span>${lb}</li></ul>
+        <dl>${b.rows.map(row).join('')}</dl>
+        <p class="split__total"><span aria-hidden="true">${esc(L(b.total))}: ${sumA} + ${sumT - sumA} = ${sumT} ${u}</span><span class="sr-only">${esc(L(b.total))}: ${sumT} ${u}. ${la}: ${sumA} ${u}. ${lb}: ${sumT - sumA} ${u}.</span></p></figure>`, true);
     },
 
     audit: (b) => blk(b, `<div class="audit"><table>

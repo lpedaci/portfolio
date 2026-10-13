@@ -8161,5 +8161,2134 @@ window.CASES = {
    }
   ],
   "outcome": null
+ },
+ "primer-empleo": {
+  "cat": "cap",
+  "touch": "it",
+  "title": {
+   "es": "Del aula al primer trabajo",
+   "en": "From the classroom to a first job"
+  },
+  "subtitle": {
+   "es": "Un taller de dos horas sobre primer empleo, diseñado como un recorrido web de diez paradas al que los estudiantes pueden volver cuando busquen su pasantía o su primer trabajo.",
+   "en": "A two-hour first-job workshop, designed as a ten-stop web journey that students can come back to when they look for their internship or their first job."
+  },
+  "chips": {
+   "es": [
+    "LXD",
+    "UX/UI",
+    "Design system",
+    "Accesibilidad"
+   ],
+   "en": [
+    "LXD",
+    "UX/UI",
+    "Design system",
+    "Accessibility"
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Diseño UX/UI e instruccional, investigación y redacción del contenido, desarrollo del sitio (HTML/CSS/JS) y co-docencia del taller con Julieta Taraborrelli",
+    "en": "UX/UI and instructional design, research and content writing, site development (HTML/CSS/JS) and co-facilitation of the workshop with Julieta Taraborrelli"
+   },
+   "timeline": {
+    "es": "Octubre a noviembre 2026",
+    "en": "October to November 2026"
+   },
+   "context": {
+    "es": "6to año de secundaria técnica, Instituto Leonardo Murialdo, antes de las 200 horas de prácticas profesionalizantes de 7mo",
+    "en": "Sixth year of technical secondary school, Instituto Leonardo Murialdo, ahead of the 200 hours of professional internships in seventh year"
+   },
+   "stack": [
+    "HTML/CSS/JS",
+    "GitHub Pages",
+    "Web Storage (localStorage)",
+    "HyperFrames",
+    "GSAP"
+   ],
+   "methods": [
+    "Doble Diamante",
+    "Benchmarking",
+    "Proto-persona",
+    "How Might We",
+    "WCAG 2.2 AA",
+    "APA 7"
+   ]
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Sitio del taller (en vivo)",
+     "en": "Workshop site (live)"
+    },
+    "url": "https://lpedaci.github.io/taller-primerempleo/"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "quote",
+    "h": {
+     "es": "El problema",
+     "en": "The problem"
+    },
+    "body": {
+     "es": "Armar una capacitación de dos horas sobre currículum, búsqueda de primer empleo y entrevistas que les permita a los estudiantes volver a acceder a la información después, y usarla cuando la necesiten.",
+     "en": "Build a two-hour training on CVs, first-job search and interviews that lets students come back to the information afterwards and use it when they need it."
+    },
+    "p": [
+     {
+      "es": "Así se planteó el encargo al empezar el proyecto. El taller surge de una necesidad de los propios estudiantes, de cara a las prácticas profesionalizantes de 7mo año.",
+      "en": "That is how the brief was framed at the start of the project. The workshop comes from a need raised by the students themselves, ahead of the seventh-year professional internships."
+     }
+    ]
+   },
+   {
+    "t": "diamond",
+    "h": {
+     "es": "Proceso: Doble Diamante",
+     "en": "Process: Double Diamond"
+    },
+    "note": {
+     "es": "El proyecto se ordenó en los cuatro momentos del Doble Diamante: entender el problema, definir qué resolver, explorar cómo y entregar algo que funcione.",
+     "en": "The project followed the four moments of the Double Diamond: understand the problem, define what to solve, explore how, and deliver something that works."
+    },
+    "ends": [
+     {
+      "es": "Necesidad",
+      "en": "Need"
+     },
+     {
+      "es": "Problema definido",
+      "en": "Defined problem"
+     },
+     {
+      "es": "Sitio publicado",
+      "en": "Published site"
+     }
+    ],
+    "phases": [
+     {
+      "name": "Discover",
+      "mode": {
+       "es": "divergir",
+       "en": "diverge"
+      },
+      "q": {
+       "es": "¿Qué necesitan antes de su primera búsqueda?",
+       "en": "What do they need before their first search?"
+      },
+      "items": {
+       "es": [
+        "Necesidades del aula",
+        "Mercado laboral con datos",
+        "Benchmarking"
+       ],
+       "en": [
+        "Classroom needs",
+        "Job market data",
+        "Benchmarking"
+       ]
+      }
+     },
+     {
+      "name": "Define",
+      "mode": {
+       "es": "converger",
+       "en": "converge"
+      },
+      "q": {
+       "es": "¿Qué resolvemos en dos horas?",
+       "en": "What do we solve in two hours?"
+      },
+      "items": {
+       "es": [
+        "Proto-persona",
+        "How Might We",
+        "Requisitos",
+        "Criterios de éxito"
+       ],
+       "en": [
+        "Proto-persona",
+        "How Might We",
+        "Requirements",
+        "Success criteria"
+       ]
+      }
+     },
+     {
+      "name": "Develop",
+      "mode": {
+       "es": "divergir",
+       "en": "diverge"
+      },
+      "q": {
+       "es": "¿Cómo lo resolvemos?",
+       "en": "How do we solve it?"
+      },
+      "items": {
+       "es": [
+        "Inspiración visual",
+        "Arquitectura en dos líneas",
+        "Task flow",
+        "Design system"
+       ],
+       "en": [
+        "Visual inspiration",
+        "Two-line architecture",
+        "Task flow",
+        "Design system"
+       ]
+      }
+     },
+     {
+      "name": "Deliver",
+      "mode": {
+       "es": "converger",
+       "en": "converge"
+      },
+      "q": {
+       "es": "¿Funciona? ¿Qué entregamos?",
+       "en": "Does it work? What do we ship?"
+      },
+      "items": {
+       "es": [
+        "Sitio publicado",
+        "Auditoría de accesibilidad",
+        "Revisión",
+        "Próximos pasos"
+       ],
+       "en": [
+        "Published site",
+        "Accessibility audit",
+        "Review",
+        "Next steps"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "01",
+    "name": "Discover",
+    "mode": {
+     "es": "divergir",
+     "en": "diverge"
+    },
+    "q": {
+     "es": "Entender qué necesita alguien de 17 años antes de su primera búsqueda, con datos actuales y no con miedo.",
+     "en": "Understand what a 17-year-old needs before their first job search, with current data rather than fear."
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "De dónde surge",
+     "en": "Where it comes from"
+    },
+    "p": [
+     {
+      "es": "En 7mo año, cada estudiante del Instituto Leonardo Murialdo hace 200 horas de prácticas profesionalizantes, en cualquiera de las cinco modalidades de la institución. Para muchos es la primera experiencia laboral, y llegan sin CV, sin LinkedIn y sin haber pasado nunca por una entrevista.",
+      "en": "In seventh year, every student at Instituto Leonardo Murialdo completes 200 hours of professional internships, in any of the school's five tracks. For many it is their first work experience, and they arrive with no CV, no LinkedIn and no interview behind them."
+     },
+     {
+      "es": "Las preguntas de los estudiantes no eran solo técnicas. Aparecían el miedo al rechazo, la duda sobre qué carrera elegir y cómo saber si algo les gusta. Por eso el taller combina herramientas concretas (CV, LinkedIn, entrevistas) con autoconocimiento y manejo de la frustración.",
+      "en": "Students' questions were not only technical. Fear of rejection came up, along with doubts about which degree to choose and how to know whether they like something. That is why the workshop combines concrete tools (CV, LinkedIn, interviews) with self-knowledge and handling frustration."
+     }
+    ]
+   },
+   {
+    "t": "bars",
+    "h": {
+     "es": "El mercado laboral, con datos",
+     "en": "The job market, with data"
+    },
+    "note": {
+     "es": "Fuente: INDEC (2026). Son las cifras con las que abre la primera parada del recorrido.",
+     "en": "Source: INDEC (2026). These are the figures that open the first stop of the journey."
+    },
+    "title": {
+     "es": "Desocupación en Argentina, segundo trimestre de 2026",
+     "en": "Unemployment in Argentina, second quarter of 2026"
+    },
+    "lead": 1,
+    "rows": [
+     {
+      "label": {
+       "es": "Desocupación general",
+       "en": "Overall unemployment"
+      },
+      "v": 7.9
+     },
+     {
+      "label": {
+       "es": "Mujeres de 14 a 29 años",
+       "en": "Women aged 14-29"
+      },
+      "v": 17.1
+     },
+     {
+      "label": {
+       "es": "Varones de 14 a 29 años",
+       "en": "Men aged 14-29"
+      },
+      "v": 14.1
+     }
+    ]
+   },
+   {
+    "t": "bars",
+    "h": {
+     "es": "Un proceso que cambió: entrevistas con IA",
+     "en": "A process that has changed: AI interviews"
+    },
+    "note": {
+     "es": "Fuente: Greenhouse (2026b), encuesta a personas que buscaban trabajo en Estados Unidos. En el sitio se contrasta con otra encuesta de signo opuesto y se aclara quién hizo cada una.",
+     "en": "Source: Greenhouse (2026b), a survey of job seekers in the United States. On the site it is contrasted with another survey pointing the other way, and who ran each one is made explicit."
+    },
+    "title": {
+     "es": "Personas que buscaban trabajo y su experiencia con entrevistas con IA",
+     "en": "Job seekers and their experience with AI interviews"
+    },
+    "rows": [
+     {
+      "label": {
+       "es": "Ya tuvo una entrevista con IA",
+       "en": "Have had an AI interview"
+      },
+      "v": 63
+     },
+     {
+      "label": {
+       "es": "No fue avisada antes de que la evaluaba una IA",
+       "en": "Were not told beforehand that AI would assess them"
+      },
+      "v": 70
+     },
+     {
+      "label": {
+       "es": "Quiere poder pedir una entrevista con una persona",
+       "en": "Want the option of an interview with a person"
+      },
+      "v": 46
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Benchmarking: documentación técnica",
+     "en": "Benchmarking: technical documentation"
+    },
+    "note": {
+     "es": "Si el taller iba a ser un sitio de consulta, la referencia no eran otros talleres sino la documentación que la gente usa para resolver algo concreto. Analicé dos de las más usadas.",
+     "en": "If the workshop was going to be a reference site, the benchmark was not other workshops but the documentation people use to solve something specific. I analysed two of the most widely used."
+    },
+    "cta": {
+     "es": "Ver referencia",
+     "en": "View reference"
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": "Microsoft Learn",
+      "tag": {
+       "es": "Página de referencia de un comando (chkdsk)",
+       "en": "Command reference page (chkdsk)"
+      },
+      "body": {
+       "es": "Resumen breve arriba, pestañas para variantes del mismo contenido, cuadros de Nota e Importante, bloques de código, tablas de parámetros e índice lateral de la página.",
+       "en": "A short summary at the top, tabs for variants of the same content, Note and Important boxes, code blocks, parameter tables and an on-page side index."
+      },
+      "url": "https://learn.microsoft.com/es-es/windows-server/administration/windows-commands/chkdsk",
+      "img": {
+       "src": "primer-empleo-bm-microsoft.jpg",
+       "w": 1600,
+       "h": 1000,
+       "alt": {
+        "es": "Página de chkdsk en Microsoft Learn: índice de comandos a la izquierda, resumen breve, dos cuadros de Importante y el índice del artículo a la derecha.",
+        "en": "The chkdsk page on Microsoft Learn: command index on the left, a short summary, two Important boxes and the article index on the right."
+       }
+      }
+     },
+     {
+      "title": "Google Cloud Documentation",
+      "tag": {
+       "es": "Portada de la documentación",
+       "en": "Documentation home"
+      },
+      "body": {
+       "es": "Contenido agrupado por áreas, cada enlace como tarjeta con título y una descripción de una línea, y un punto de entrada claro para empezar.",
+       "en": "Content grouped by area, each link as a card with a title and a one-line description, and a clear entry point to get started."
+      },
+      "url": "https://docs.cloud.google.com/docs",
+      "img": {
+       "src": "primer-empleo-bm-google.jpg",
+       "w": 1600,
+       "h": 1000,
+       "alt": {
+        "es": "Portada de la documentación de Google Cloud: menú por áreas a la izquierda y tarjetas con título y una descripción breve bajo el título Descubrimiento.",
+        "en": "Google Cloud documentation home: a menu by area on the left and cards with a title and a short description under the Discovery heading."
+       }
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "02",
+    "name": "Define",
+    "mode": {
+     "es": "converger",
+     "en": "converge"
+    },
+    "q": {
+     "es": "Decidir qué entra en dos horas y qué tiene que quedar disponible para después.",
+     "en": "Decide what fits in two hours and what has to stay available for later."
+    }
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Proto-persona",
+     "en": "Proto-persona"
+    },
+    "note": {
+     "es": "Construida a partir de la experiencia docente con los cursos, no de una investigación formal. Representa al estudiante para el que se diseñó el taller.",
+     "en": "Built from teaching experience with the classes, not from formal research. It represents the student the workshop was designed for."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Quién",
+       "en": "Who"
+      },
+      "v": {
+       "es": "Estudiante de 6to año de secundaria técnica, 17 años, a un año de sus prácticas profesionalizantes y de elegir qué estudiar.",
+       "en": "A sixth-year technical secondary student, 17 years old, one year away from their internship and from choosing what to study."
+      }
+     },
+     {
+      "k": {
+       "es": "Qué necesita",
+       "en": "Needs"
+      },
+      "v": {
+       "es": "Un CV, un perfil de LinkedIn y una forma de contar lo que sabe hacer, aunque todavía no tenga experiencia formal.",
+       "en": "A CV, a LinkedIn profile and a way to explain what they can do, even with no formal experience yet."
+      }
+     },
+     {
+      "k": {
+       "es": "Qué lo frena",
+       "en": "Barriers"
+      },
+      "v": {
+       "es": "No sabe si algo le gusta hasta probarlo, le teme al rechazo y no conecta lo que estudia con el trabajo al que podría llegar.",
+       "en": "They do not know whether they like something until they try it, they fear rejection and they do not connect what they study with the job they could reach."
+      }
+     },
+     {
+      "k": {
+       "es": "Qué no sabe que no sabe",
+       "en": "Unknown unknowns"
+      },
+      "v": {
+       "es": "Que muchos CV los lee primero un sistema, que la entrevista puede hacerla una IA y que la ofimática se da por sabida en casi cualquier rubro.",
+       "en": "That many CVs are read by a system first, that the interview may be run by AI, and that office software skills are taken for granted in almost every field."
+      }
+     },
+     {
+      "k": {
+       "es": "Cuándo lo va a necesitar",
+       "en": "When they will need it"
+      },
+      "v": {
+       "es": "No el día del taller, sino meses después: al empezar las prácticas, al postularse o al preparar una entrevista.",
+       "en": "Not on the day of the workshop, but months later: when the internship starts, when applying, or when preparing for an interview."
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "How Might We",
+     "en": "How Might We"
+    },
+    "cols": 3,
+    "items": [
+     {
+      "tag": {
+       "es": "HMW 1",
+       "en": "HMW 1"
+      },
+      "body": {
+       "es": "¿Cómo podríamos lograr que lo trabajado en dos horas siga siendo útil meses después, cuando el estudiante realmente lo necesite?",
+       "en": "How might we keep what is covered in two hours useful months later, when the student actually needs it?"
+      }
+     },
+     {
+      "tag": {
+       "es": "HMW 2",
+       "en": "HMW 2"
+      },
+      "body": {
+       "es": "¿Cómo podríamos hacer que el taller sea más práctica que exposición, sin perder el contenido de base?",
+       "en": "How might we make the workshop more practice than lecture, without losing the core content?"
+      }
+     },
+     {
+      "tag": {
+       "es": "HMW 3",
+       "en": "HMW 3"
+      },
+      "body": {
+       "es": "¿Cómo podríamos hablar de rechazo y frustración sin asustar, y con datos reales del mercado?",
+       "en": "How might we talk about rejection and frustration without scaring anyone, and with real market data?"
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Requisitos de partida",
+     "en": "Starting requirements"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Formato",
+       "en": "Format"
+      },
+      "body": {
+       "es": "Una jornada de dos horas, con el contenido disponible después para volver a consultarlo.",
+       "en": "A single two-hour session, with the content available afterwards to come back to."
+      }
+     },
+     {
+      "lead": {
+       "es": "Estructura",
+       "en": "Structure"
+      },
+      "body": {
+       "es": "Un sitio con varios apartados que se recorra como un roadmap, publicado como repositorio en GitHub.",
+       "en": "A site with several sections that reads as a roadmap, published as a GitHub repository."
+      }
+     },
+     {
+      "lead": {
+       "es": "Contenido",
+       "en": "Content"
+      },
+      "body": {
+       "es": "CV, LinkedIn, prácticas profesionalizantes, autoconocimiento, frustración y autoperdón, habilidades blandas, ofimática, idiomas, proyectos propios y entrevistas con personas y con IA.",
+       "en": "CVs, LinkedIn, professional internships, self-knowledge, frustration and self-forgiveness, soft skills, office software, languages, personal projects, and interviews with people and with AI."
+      }
+     },
+     {
+      "lead": {
+       "es": "Diseño",
+       "en": "Design"
+      },
+      "body": {
+       "es": "Evitar el aspecto genérico de las interfaces generadas por IA: una dirección visual propia y reconocible.",
+       "en": "Avoid the generic look of AI-generated interfaces: a visual direction of its own, recognisable at a glance."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Criterios de éxito del diseño",
+     "en": "Design success criteria"
+    },
+    "note": {
+     "es": "Son criterios para evaluar el diseño, no resultados alcanzados. El taller todavía no se dictó.",
+     "en": "These are criteria to evaluate the design, not results achieved. The workshop has not been delivered yet."
+    },
+    "items": {
+     "es": [
+      "Llegar a cualquier parada en un clic desde el mapa o el panel lateral.",
+      "Que más de la mitad del tiempo del taller sea actividad práctica.",
+      "Salir del taller con al menos un producto propio: el mapa personal, el perfil del CV o el pitch.",
+      "Retomar el recorrido donde se dejó, sin crear una cuenta.",
+      "Cumplir WCAG 2.2 AA en los dos temas, claro y oscuro.",
+      "Poder actualizar los datos cada año sin rehacer el sitio."
+     ],
+     "en": [
+      "Reach any stop in one click from the map or the side panel.",
+      "More than half of the workshop time is hands-on activity.",
+      "Leave the workshop with at least one thing of their own: the personal map, the CV profile or the pitch.",
+      "Pick up the journey where it was left, with no account.",
+      "Meet WCAG 2.2 AA in both the light and dark themes.",
+      "Update the data every year without rebuilding the site."
+     ]
+    }
+   },
+   {
+    "t": "phase",
+    "n": "03",
+    "name": "Develop",
+    "mode": {
+     "es": "divergir",
+     "en": "diverge"
+    },
+    "q": {
+     "es": "Explorar cómo convertir un temario largo en un recorrido corto, claro y que se pueda retomar.",
+     "en": "Explore how to turn a long syllabus into a short, clear journey that can be picked up again."
+    }
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Inspiración visual",
+     "en": "Visual inspiration"
+    },
+    "note": {
+     "es": "Para la interfaz busqué plataformas educativas que muestren el progreso y conecten temas entre sí, en lugar de listarlos. Las imágenes son de sus autores y se muestran solo como referencia.",
+     "en": "For the interface I looked at learning platforms that show progress and connect topics to each other instead of just listing them. The images belong to their authors and are shown for reference only."
+    },
+    "cta": {
+     "es": "Ver en Dribbble",
+     "en": "View on Dribbble"
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": "Interactive Learning Web Design",
+      "tag": {
+       "es": "Dribbble, por Tino",
+       "en": "Dribbble, by Tino"
+      },
+      "body": {
+       "es": "Un mapa de nodos que conecta materias, accesos grandes por color y una tarjeta propia para el progreso.",
+       "en": "A node map connecting subjects, large colour-coded entry tiles and a dedicated progress card."
+      },
+      "url": "https://dribbble.com/shots/26665232-Interactive-Learning-Web-Design",
+      "img": {
+       "src": "primer-empleo-ref-nodos.jpg",
+       "w": 1024,
+       "h": 768,
+       "alt": {
+        "es": "Diseño de referencia de una plataforma educativa: cuatro accesos grandes de color a la izquierda y, a la derecha, un mapa de nodos que conecta materias con líneas punteadas.",
+        "en": "Reference design for a learning platform: four large colour tiles on the left and, on the right, a node map connecting subjects with dashed lines."
+       }
+      }
+     },
+     {
+      "title": "Education web design",
+      "tag": {
+       "es": "Dribbble, por Anastasia Golovko para Tino",
+       "en": "Dribbble, by Anastasia Golovko for Tino"
+      },
+      "body": {
+       "es": "Porcentaje de avance siempre visible en el encabezado y una lista de lecciones donde cada una muestra su duración.",
+       "en": "Progress percentage always visible in the header and a list of lessons where each one shows its duration."
+      },
+      "url": "https://dribbble.com/shots/25815073-Education-web-design",
+      "img": {
+       "src": "primer-empleo-ref-progreso.jpg",
+       "w": 1024,
+       "h": 768,
+       "alt": {
+        "es": "Diseño de referencia de un panel educativo: porcentaje de progreso en el encabezado, mosaicos de color, un gráfico de barras semanal y una lista de lecciones con su duración.",
+        "en": "Reference design for a learning dashboard: progress percentage in the header, colour tiles, a weekly bar chart and a list of lessons with their duration."
+       }
+      }
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "h": {
+     "es": "De la referencia al taller",
+     "en": "From reference to workshop"
+    },
+    "note": {
+     "es": "Cada patrón que se llevó al sitio, de dónde viene y para qué se usa.",
+     "en": "Each pattern brought into the site, where it comes from and what it is used for."
+    },
+    "cols": {
+     "dim": {
+      "es": "Referencia",
+      "en": "Reference"
+     },
+     "before": {
+      "es": "Patrón",
+      "en": "Pattern"
+     },
+     "after": {
+      "es": "Cómo se aplicó en el taller",
+      "en": "How it was applied in the workshop"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Microsoft Learn",
+       "en": "Microsoft Learn"
+      },
+      "before": {
+       "es": "Pestañas para variantes del mismo contenido",
+       "en": "Tabs for variants of the same content"
+      },
+      "after": {
+       "es": "Los tres CV de ejemplo, uno por modalidad, en pestañas",
+       "en": "The three sample CVs, one per track, in tabs"
+      }
+     },
+     {
+      "dim": {
+       "es": "Microsoft Learn",
+       "en": "Microsoft Learn"
+      },
+      "before": {
+       "es": "Cuadros de Nota e Importante",
+       "en": "Note and Important boxes"
+      },
+      "after": {
+       "es": "Avisos como \"Sobre la foto y los datos personales\" y \"Si usás Canva\"",
+       "en": "Notices such as \"About the photo and personal details\" and \"If you use Canva\""
+      }
+     },
+     {
+      "dim": {
+       "es": "Microsoft Learn",
+       "en": "Microsoft Learn"
+      },
+      "before": {
+       "es": "Bloques de código para copiar",
+       "en": "Copyable code blocks"
+      },
+      "after": {
+       "es": "Plantillas en bloque monoespaciado con botón Copiar",
+       "en": "Templates in a monospaced block with a Copy button"
+      }
+     },
+     {
+      "dim": {
+       "es": "Microsoft Learn",
+       "en": "Microsoft Learn"
+      },
+      "before": {
+       "es": "Índice lateral de la página",
+       "en": "On-page side index"
+      },
+      "after": {
+       "es": "\"Tu recorrido\": las diez paradas siempre a mano",
+       "en": "\"Your journey\": the ten stops always at hand"
+      }
+     },
+     {
+      "dim": {
+       "es": "Google Cloud Documentation",
+       "en": "Google Cloud Documentation"
+      },
+      "before": {
+       "es": "Contenido agrupado por áreas y una entrada clara para empezar",
+       "en": "Content grouped by area and a clear entry point"
+      },
+      "after": {
+       "es": "Dos líneas temáticas y el botón \"Empezar el recorrido\"",
+       "en": "Two themed lines and the \"Start the journey\" button"
+      }
+     },
+     {
+      "dim": {
+       "es": "Interactive Learning Web Design",
+       "en": "Interactive Learning Web Design"
+      },
+      "before": {
+       "es": "Mapa de nodos que conecta materias",
+       "en": "Node map connecting subjects"
+      },
+      "after": {
+       "es": "El mapa de subte que conecta las paradas",
+       "en": "The metro map connecting the stops"
+      }
+     },
+     {
+      "dim": {
+       "es": "Education web design",
+       "en": "Education web design"
+      },
+      "before": {
+       "es": "Progreso visible y duración por lección",
+       "en": "Visible progress and duration per lesson"
+      },
+      "after": {
+       "es": "Contador \"0 de 10 paradas\" en la barra y minutos en cada parada",
+       "en": "A \"0 of 10 stops\" counter in the bar and minutes on every stop"
+      }
+     }
+    ]
+   },
+   {
+    "t": "metro",
+    "h": {
+     "es": "Arquitectura: dos líneas, diez paradas",
+     "en": "Architecture: two lines, ten stops"
+    },
+    "note": {
+     "es": "La metáfora de un mapa de subte ordena el taller: una línea por hora, cinco paradas por línea y los minutos de cada una a la vista.",
+     "en": "A metro map metaphor organises the workshop: one line per hour, five stops per line, and the minutes for each one in plain sight."
+    },
+    "unit": {
+     "es": "min",
+     "en": "min"
+    },
+    "lines": [
+     {
+      "name": {
+       "es": "Línea 1: Conocerte y prepararte",
+       "en": "Line 1: Know and prepare yourself"
+      },
+      "sub": {
+       "es": "Primera hora",
+       "en": "First hour"
+      },
+      "stops": [
+       {
+        "n": 1,
+        "name": {
+         "es": "El mundo laboral hoy",
+         "en": "Today’s job market"
+        },
+        "min": 8
+       },
+       {
+        "n": 2,
+        "name": {
+         "es": "Autoconocimiento",
+         "en": "Self-knowledge"
+        },
+        "min": 12
+       },
+       {
+        "n": 3,
+        "name": {
+         "es": "Frustración y autoperdón",
+         "en": "Frustration and self-forgiveness"
+        },
+        "min": 10
+       },
+       {
+        "n": 4,
+        "name": {
+         "es": "Prácticas profesionalizantes",
+         "en": "Professional internships"
+        },
+        "min": 10
+       },
+       {
+        "n": 5,
+        "name": {
+         "es": "Habilidades, tecnología e idiomas",
+         "en": "Skills, technology and languages"
+        },
+        "min": 12
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Línea 2: Mostrarte",
+       "en": "Line 2: Show yourself"
+      },
+      "sub": {
+       "es": "Segunda hora",
+       "en": "Second hour"
+      },
+      "stops": [
+       {
+        "n": 6,
+        "name": {
+         "es": "CV para ATS",
+         "en": "ATS-ready CV"
+        },
+        "min": 15
+       },
+       {
+        "n": 7,
+        "name": {
+         "es": "LinkedIn",
+         "en": "LinkedIn"
+        },
+        "min": 8
+       },
+       {
+        "n": 8,
+        "name": {
+         "es": "Porfolio y proyectos propios",
+         "en": "Portfolio and own projects"
+        },
+        "min": 7
+       },
+       {
+        "n": 9,
+        "name": {
+         "es": "Entrevistas: personas e IA",
+         "en": "Interviews: people and AI"
+        },
+        "min": 22
+       },
+       {
+        "n": 10,
+        "name": {
+         "es": "Tu plan de 30 días",
+         "en": "Your 30-day plan"
+        },
+        "min": 5
+       }
+      ]
+     }
+    ],
+    "total": {
+     "es": "Total",
+     "en": "Total"
+    }
+   },
+   {
+    "t": "split",
+    "h": {
+     "es": "Dónde va el tiempo",
+     "en": "Where the time goes"
+    },
+    "note": {
+     "es": "Minutos planificados por parada. Las paradas suman 109 minutos y 60 son actividad: más de la mitad del taller se hace, no se escucha.",
+     "en": "Planned minutes per stop. The stops add up to 109 minutes and 60 of them are activity: more than half of the workshop is done, not listened to."
+    },
+    "title": {
+     "es": "Minutos de actividad y de exposición por parada",
+     "en": "Activity and explanation minutes per stop"
+    },
+    "legend": {
+     "a": {
+      "es": "Actividad",
+      "en": "Activity"
+     },
+     "b": {
+      "es": "Idea clave y ejemplos",
+      "en": "Key idea and examples"
+     }
+    },
+    "unit": {
+     "es": "min",
+     "en": "min"
+    },
+    "rows": [
+     {
+      "label": {
+       "es": "1. El mundo laboral hoy",
+       "en": "1. Today’s job market"
+      },
+      "min": 8,
+      "act": 5
+     },
+     {
+      "label": {
+       "es": "2. Autoconocimiento",
+       "en": "2. Self-knowledge"
+      },
+      "min": 12,
+      "act": 10
+     },
+     {
+      "label": {
+       "es": "3. Frustración y autoperdón",
+       "en": "3. Frustration and self-forgiveness"
+      },
+      "min": 10,
+      "act": 5
+     },
+     {
+      "label": {
+       "es": "4. Prácticas profesionalizantes",
+       "en": "4. Professional internships"
+      },
+      "min": 10,
+      "act": 0
+     },
+     {
+      "label": {
+       "es": "5. Habilidades, tecnología e idiomas",
+       "en": "5. Skills, technology and languages"
+      },
+      "min": 12,
+      "act": 5
+     },
+     {
+      "label": {
+       "es": "6. CV para ATS",
+       "en": "6. ATS-ready CV"
+      },
+      "min": 15,
+      "act": 10
+     },
+     {
+      "label": {
+       "es": "7. LinkedIn",
+       "en": "7. LinkedIn"
+      },
+      "min": 8,
+      "act": 0
+     },
+     {
+      "label": {
+       "es": "8. Porfolio y proyectos propios",
+       "en": "8. Portfolio and own projects"
+      },
+      "min": 7,
+      "act": 5
+     },
+     {
+      "label": {
+       "es": "9. Entrevistas: personas e IA",
+       "en": "9. Interviews: people and AI"
+      },
+      "min": 22,
+      "act": 20
+     },
+     {
+      "label": {
+       "es": "10. Tu plan de 30 días",
+       "en": "10. Your 30-day plan"
+      },
+      "min": 5,
+      "act": 0
+     }
+    ],
+    "total": {
+     "es": "Total",
+     "en": "Total"
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Decisiones de diseño",
+     "en": "Design decisions"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Una parada por vez",
+       "en": "One stop at a time"
+      },
+      "body": {
+       "es": "El sitio muestra solo la parada elegida. Al cambiar, el foco pasa al título de la nueva parada, para que quien usa teclado o lector de pantalla no se pierda. Sin JavaScript se ve todo el contenido.",
+       "en": "The site shows only the chosen stop. When it changes, focus moves to the new stop's heading, so keyboard and screen reader users do not get lost. Without JavaScript, all the content is shown."
+      }
+     },
+     {
+      "lead": {
+       "es": "Retomar donde se dejó",
+       "en": "Pick up where you left off"
+      },
+      "body": {
+       "es": "Cada parada se marca como recorrida y el avance queda en el navegador. Al volver, el sitio abre en la primera parada pendiente. No hay registro ni datos personales que cuidar.",
+       "en": "Each stop can be marked as done and progress stays in the browser. On return, the site opens at the first pending stop. No sign-up and no personal data to look after."
+      }
+     },
+     {
+      "lead": {
+       "es": "Una estructura fija por parada",
+       "en": "One fixed structure per stop"
+      },
+      "body": {
+       "es": "Idea clave, ejemplos y una actividad corta. Saber qué viene baja la carga de orientarse y deja la atención para el contenido.",
+       "en": "Key idea, examples and a short activity. Knowing what comes next lowers the effort of finding your way and leaves attention for the content."
+      }
+     },
+     {
+      "lead": {
+       "es": "Actividades encadenadas",
+       "en": "Chained activities"
+      },
+      "body": {
+       "es": "El aviso que se busca en la parada 1 se trabaja en el CV de la parada 6, y las habilidades con ejemplo de la parada 5 vuelven en el simulacro de entrevista de la parada 9.",
+       "en": "The job ad found at stop 1 becomes the target of the CV at stop 6, and the skills with examples from stop 5 come back in the mock interview at stop 9."
+      }
+     },
+     {
+      "lead": {
+       "es": "Así no, así sí",
+       "en": "Not like this, like this"
+      },
+      "body": {
+       "es": "Logros frente a tareas, debilidades bien y mal contadas, cómo explicar un cambio de trabajo: cada concepto aparece con un ejemplo que falla y otro que funciona, uno al lado del otro.",
+       "en": "Achievements versus tasks, weaknesses told well and badly, how to explain a job change: every concept appears with an example that fails and one that works, side by side."
+      }
+     },
+     {
+      "lead": {
+       "es": "Plantillas para copiar",
+       "en": "Copy-ready templates"
+      },
+      "body": {
+       "es": "Mapa personal, bitácora de prácticas, CV de una página y pitch de 60 segundos se copian con un botón y se completan con datos reales.",
+       "en": "Personal map, internship log, one-page CV and 60-second pitch are copied with one click and filled in with real data."
+      }
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Task flow",
+     "en": "Task flow"
+    },
+    "note": {
+     "es": "La tarea núcleo: recorrer una parada y llevarse algo hecho.",
+     "en": "The core task: going through a stop and leaving with something done."
+    },
+    "steps": {
+     "es": [
+      "Entra al sitio y abre la primera parada pendiente",
+      "Mira el mapa o el panel y elige una parada",
+      "Lee la idea clave y los ejemplos",
+      "Hace la actividad o copia la plantilla",
+      "Completa la plantilla con sus datos reales",
+      "Marca la parada como recorrida",
+      "Sigue a la próxima parada o vuelve al mapa",
+      "Vuelve más adelante a la parada que necesita"
+     ],
+     "en": [
+      "Enters the site and lands on the first pending stop",
+      "Looks at the map or the panel and picks a stop",
+      "Reads the key idea and the examples",
+      "Does the activity or copies the template",
+      "Fills in the template with real details",
+      "Marks the stop as done",
+      "Moves on to the next stop or goes back to the map",
+      "Comes back later to the stop they need"
+     ]
+    }
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Piezas clave del sitio",
+     "en": "Key pieces of the site"
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "Así te lee el ATS",
+       "en": "How the ATS reads you"
+      },
+      "body": {
+       "es": "Un CV atractivo de dos columnas con seis problemas numerados y, debajo, el texto que un sistema podría extraer de él: sin experiencia ni educación encontradas.",
+       "en": "An attractive two-column CV with six numbered problems and, below it, the text a system might extract from it: no experience and no education found."
+      },
+      "img": {
+       "src": "primer-empleo-ats.jpg",
+       "w": 1600,
+       "h": 1493,
+       "alt": {
+        "es": "CV de ejemplo en dos columnas con seis problemas numerados para un ATS, la lista que explica cada uno y, debajo, el texto desordenado que extraería el sistema, sin experiencia ni educación encontradas.",
+        "en": "A two-column sample CV with six numbered problems for an ATS, the list explaining each one and, below, the jumbled text the system would extract, with no experience and no education found."
+       }
+      }
+     },
+     {
+      "title": {
+       "es": "Tres CV de ejemplo, uno por modalidad",
+       "en": "Three sample CVs, one per track"
+      },
+      "body": {
+       "es": "Soporte técnico, mantenimiento y administración, con personas ficticias. En el primero, las palabras clave que coinciden con el aviso están resaltadas.",
+       "en": "Technical support, maintenance and administration, with fictional people. In the first one, the keywords that match the job ad are highlighted."
+      },
+      "img": {
+       "src": "primer-empleo-cv.jpg",
+       "w": 1600,
+       "h": 1922,
+       "alt": {
+        "es": "Pestañas de los tres CV de ejemplo, el aviso de pasante de soporte técnico con sus palabras clave resaltadas en amarillo y el CV de una columna de Tomás Ferreyra, persona ficticia, con las mismas palabras resaltadas.",
+        "en": "Tabs for the three sample CVs, the technical support internship ad with its keywords highlighted in yellow, and the single-column CV of Tomás Ferreyra, a fictional person, with the same words highlighted."
+       }
+      }
+     },
+     {
+      "title": {
+       "es": "Tres animaciones explicativas",
+       "en": "Three explainer animations"
+      },
+      "body": {
+       "es": "Cómo lee un ATS, cómo mejorar el titular de LinkedIn y el método STAR. Se reproducen una vez al entrar en pantalla, tienen pausa, toman los colores del tema y con movimiento reducido muestran el cuadro final.",
+       "en": "How an ATS reads, how to improve a LinkedIn headline and the STAR method. They play once when they come into view, can be paused, take the theme's colours and, with reduced motion, show the final frame."
+      },
+      "img": {
+       "src": "primer-empleo-star.jpg",
+       "w": 1376,
+       "h": 1032,
+       "alt": {
+        "es": "Cuadro final de la animación del método STAR: situación, tarea, acción y resultado con una respuesta de ejemplo, y una barra que muestra que la acción es la parte más larga.",
+        "en": "Final frame of the STAR method animation: situation, task, action and result with a sample answer, and a bar showing that the action is the longest part."
+       }
+      }
+     },
+     {
+      "title": {
+       "es": "Terminal: tu plan de 30 días",
+       "en": "Last stop: your 30-day plan"
+      },
+      "body": {
+       "es": "Doce acciones concretas para salir del taller con algo hecho, desde un correo profesional hasta la primera postulación.",
+       "en": "Twelve concrete actions to leave the workshop with something done, from a professional email address to the first application."
+      },
+      "img": {
+       "src": "primer-empleo-plan.jpg",
+       "w": 1600,
+       "h": 1612,
+       "alt": {
+        "es": "Parada 10, Terminal: tu plan de 30 días. Idea clave sobre fondo amarillo y una lista de doce tareas para marcar, desde completar el mapa personal hasta postularse a un aviso.",
+        "en": "Stop 10, last stop: your 30-day plan. A key idea on a yellow background and a list of twelve tasks to tick off, from completing the personal map to applying for a job ad."
+       }
+      }
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "h": {
+     "es": "Del CV lindo al CV legible",
+     "en": "From a pretty CV to a readable one"
+    },
+    "note": {
+     "es": "Una selección de las reglas de formato que el taller enseña para que el CV pase un sistema de seguimiento de candidatos y también se lea rápido.",
+     "en": "A selection of the formatting rules the workshop teaches so that a CV gets through an applicant tracking system and is also quick to read."
+    },
+    "cols": {
+     "dim": {
+      "es": "Elemento",
+      "en": "Element"
+     },
+     "before": {
+      "es": "Lo que suele hacerse",
+      "en": "What people usually do"
+     },
+     "after": {
+      "es": "Lo que el sistema puede leer",
+      "en": "What the system can read"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Diseño",
+       "en": "Layout"
+      },
+      "before": {
+       "es": "Dos columnas, barras laterales y cuadros de texto",
+       "en": "Two columns, sidebars and text boxes"
+      },
+      "after": {
+       "es": "Una sola columna, alineada a la izquierda",
+       "en": "A single left-aligned column"
+      }
+     },
+     {
+      "dim": {
+       "es": "Títulos de sección",
+       "en": "Section headings"
+      },
+      "before": {
+       "es": "Creativos, como \"Mi recorrido\"",
+       "en": "Creative ones, such as \"My journey\""
+      },
+      "after": {
+       "es": "Comunes: Experiencia laboral, Educación, Habilidades",
+       "en": "Standard ones: Work experience, Education, Skills"
+      }
+     },
+     {
+      "dim": {
+       "es": "Contacto",
+       "en": "Contact details"
+      },
+      "before": {
+       "es": "En el encabezado o el pie de página",
+       "en": "In the header or footer"
+      },
+      "after": {
+       "es": "En el cuerpo del documento, arriba",
+       "en": "In the body of the document, at the top"
+      }
+     },
+     {
+      "dim": {
+       "es": "Habilidades",
+       "en": "Skills"
+      },
+      "before": {
+       "es": "Barras, círculos o estrellas de nivel",
+       "en": "Level bars, circles or stars"
+      },
+      "after": {
+       "es": "Texto concreto: \"Excel (tablas dinámicas, BUSCARX)\"",
+       "en": "Concrete text: \"Excel (pivot tables, XLOOKUP)\""
+      }
+     },
+     {
+      "dim": {
+       "es": "Fechas",
+       "en": "Dates"
+      },
+      "before": {
+       "es": "Abreviadas: \"'26\"",
+       "en": "Abbreviated: \"'26\""
+      },
+      "after": {
+       "es": "Mes y año: \"agosto 2026 - actualidad\"",
+       "en": "Month and year: \"August 2026 - present\""
+      }
+     }
+    ],
+    "marks": true
+   },
+   {
+    "t": "phase",
+    "n": "",
+    "id": "design-system",
+    "name": "Design system",
+    "mode": {
+     "es": "del sitio",
+     "en": "of the site"
+    },
+    "q": {
+     "es": "Una dirección visual de panel de app educativa, con tema claro y oscuro definidos en tokens.",
+     "en": "A learning-app dashboard look, with light and dark themes defined as tokens."
+    }
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Dirección visual",
+     "en": "Visual direction"
+    },
+    "body": {
+     "es": "Fondo lavanda, paneles blancos muy redondeados, mosaicos de color (lavanda para la línea 1, naranja para la línea 2, amarillo para las ideas clave) y bloques carbón para todo lo que pide una acción. El color siempre indica en qué línea estás.",
+     "en": "Lavender background, very rounded white panels, colour tiles (lavender for line 1, orange for line 2, yellow for key ideas) and charcoal blocks for anything that asks for action. Colour always tells you which line you are on."
+    }
+   },
+   {
+    "t": "swatches",
+    "h": {
+     "es": "Color",
+     "en": "Colour"
+    },
+    "note": {
+     "es": "Tokens del tema claro. Los ratios están calculados sobre el panel blanco (--surface), salvo que se indique otro fondo. El tema oscuro tiene su propia escala y está auditado más abajo.",
+     "en": "Light theme tokens. Ratios are calculated against the white panel (--surface) unless another background is stated. The dark theme has its own scale and is audited below."
+    },
+    "groups": [
+     {
+      "name": {
+       "es": "Base",
+       "en": "Base"
+      },
+      "items": [
+       {
+        "token": "--bg",
+        "hex": "#E9E8F6",
+        "use": {
+         "es": "Fondo lavanda de la página",
+         "en": "Lavender page background"
+        }
+       },
+       {
+        "token": "--surface",
+        "hex": "#FFFFFF",
+        "use": {
+         "es": "Paneles",
+         "en": "Panels"
+        }
+       },
+       {
+        "token": "--surface-2",
+        "hex": "#F4F4FA",
+        "use": {
+         "es": "Superficies secundarias",
+         "en": "Secondary surfaces"
+        }
+       },
+       {
+        "token": "--rule",
+        "hex": "#DCDBE9",
+        "use": {
+         "es": "Divisores, solo decorativo",
+         "en": "Dividers, decorative only"
+        }
+       },
+       {
+        "token": "--muted",
+        "hex": "#5B5A6B",
+        "use": {
+         "es": "Texto secundario (6.73:1)",
+         "en": "Secondary text (6.73:1)"
+        }
+       },
+       {
+        "token": "--ink",
+        "hex": "#1F1F24",
+        "use": {
+         "es": "Texto y títulos (16.41:1)",
+         "en": "Text and headings (16.41:1)"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Líneas del recorrido",
+       "en": "Journey lines"
+      },
+      "items": [
+       {
+        "token": "--l1-soft",
+        "hex": "#E7E7FB",
+        "use": {
+         "es": "Fondo de la línea 1",
+         "en": "Line 1 background"
+        }
+       },
+       {
+        "token": "--l1",
+        "hex": "#5257C9",
+        "use": {
+         "es": "Línea 1: links, foco y botones con texto blanco (5.89:1)",
+         "en": "Line 1: links, focus and buttons with white text (5.89:1)"
+        }
+       },
+       {
+        "token": "--l2-soft",
+        "hex": "#FDEBD9",
+        "use": {
+         "es": "Fondo de la línea 2",
+         "en": "Line 2 background"
+        }
+       },
+       {
+        "token": "--l2",
+        "hex": "#B4530F",
+        "use": {
+         "es": "Línea 2: texto y botones con texto blanco (5.02:1)",
+         "en": "Line 2: text and buttons with white text (5.02:1)"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Mosaicos",
+       "en": "Tiles"
+      },
+      "items": [
+       {
+        "token": "--t1",
+        "hex": "#B9BBF6",
+        "use": {
+         "es": "Mosaico de la línea 1, con texto oscuro (8.99:1)",
+         "en": "Line 1 tile, with dark text (8.99:1)"
+        }
+       },
+       {
+        "token": "--t2",
+        "hex": "#F7AB6A",
+        "use": {
+         "es": "Mosaico de la línea 2, con texto oscuro (8.59:1)",
+         "en": "Line 2 tile, with dark text (8.59:1)"
+        }
+       },
+       {
+        "token": "--t3",
+        "hex": "#F8DE73",
+        "use": {
+         "es": "Ideas clave, con texto oscuro (12.26:1)",
+         "en": "Key ideas, with dark text (12.26:1)"
+        }
+       },
+       {
+        "token": "--t4",
+        "hex": "#A9DFC6",
+        "use": {
+         "es": "Mosaico de apoyo, con texto oscuro (10.98:1)",
+         "en": "Supporting tile, with dark text (10.98:1)"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Estados y acción",
+       "en": "States and action"
+      },
+      "items": [
+       {
+        "token": "--yes",
+        "hex": "#17764A",
+        "use": {
+         "es": "Parada recorrida y texto copiado, con tilde blanca (5.64:1)",
+         "en": "Stop done and text copied, with a white tick (5.64:1)"
+        }
+       },
+       {
+        "token": "--no",
+        "hex": "#B4380F",
+        "use": {
+         "es": "Ejemplos de \"así no\" sobre --no-soft (5.16:1)",
+         "en": "\"Not like this\" examples on --no-soft (5.16:1)"
+        }
+       },
+       {
+        "token": "--mark",
+        "hex": "#FFE680",
+        "use": {
+         "es": "Resaltado de palabras clave en los CV (13.19:1 con texto)",
+         "en": "Keyword highlight in the CVs (13.19:1 with text)"
+        }
+       },
+       {
+        "token": "--deep",
+        "hex": "#24242A",
+        "use": {
+         "es": "Bloques carbón de acción, con texto claro (14.00:1)",
+         "en": "Charcoal action blocks, with light text (14.00:1)"
+        }
+       }
+      ]
+     }
+    ],
+    "dense": true
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Tipografía",
+     "en": "Typography"
+    },
+    "note": {
+     "es": "Fuentes autoalojadas con carga swap. Cuerpo de 17 px con interlineado de 1.65 y medida máxima de 70 caracteres.",
+     "en": "Self-hosted fonts with swap loading. 17 px body with 1.65 line height and a 70-character maximum measure."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Outfit",
+       "en": "Outfit"
+      },
+      "v": {
+       "es": "Títulos y números del recorrido, en peso 600 con tracking negativo.",
+       "en": "Headings and journey numbers, weight 600 with negative tracking."
+      }
+     },
+     {
+      "k": {
+       "es": "Geist",
+       "en": "Geist"
+      },
+      "v": {
+       "es": "Texto de cuerpo, tablas y controles.",
+       "en": "Body text, tables and controls."
+      }
+     },
+     {
+      "k": {
+       "es": "Geist Mono",
+       "en": "Geist Mono"
+      },
+      "v": {
+       "es": "Plantillas para copiar y texto extraído por el ATS.",
+       "en": "Copy-ready templates and the text extracted by the ATS."
+      }
+     },
+     {
+      "k": {
+       "es": "Arial",
+       "en": "Arial"
+      },
+      "v": {
+       "es": "Solo dentro de los CV de ejemplo, a propósito: es una de las fuentes que recomiendan las guías de formato para ATS.",
+       "en": "Only inside the sample CVs, on purpose: it is one of the fonts recommended by ATS formatting guides."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Forma, espacio y comportamiento",
+     "en": "Shape, space and behaviour"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Radios",
+       "en": "Radii"
+      },
+      "body": {
+       "es": "Paneles de 2rem, bloques de 1.5rem, botones y etiquetas en píldora, paradas en círculo.",
+       "en": "2rem panels, 1.5rem blocks, pill buttons and tags, circular stops."
+      }
+     },
+     {
+      "lead": {
+       "es": "Temas",
+       "en": "Themes"
+      },
+      "body": {
+       "es": "Sigue la preferencia del sistema y permite cambiar a mano entre claro y oscuro. Cada token tiene su par en el tema oscuro.",
+       "en": "Follows the system preference and allows switching manually between light and dark. Every token has a dark-theme pair."
+      }
+     },
+     {
+      "lead": {
+       "es": "Adaptable",
+       "en": "Responsive"
+      },
+      "body": {
+       "es": "Panel lateral de paradas en escritorio y menú desplegable en pantallas chicas. Las tablas se apilan en móvil, con cada dato rotulado.",
+       "en": "Side panel of stops on desktop and a drop-down menu on small screens. Tables stack on mobile, with every value labelled."
+      }
+     },
+     {
+      "lead": {
+       "es": "Movimiento",
+       "en": "Motion"
+      },
+      "body": {
+       "es": "Entradas suaves al hacer scroll y animaciones explicativas, todo desactivado con la preferencia de movimiento reducido.",
+       "en": "Gentle scroll-in entrances and explainer animations, all switched off with the reduced-motion preference."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Mosaicos, texturas y mapa",
+     "en": "Tiles, textures and map"
+    },
+    "note": {
+     "es": "El color llega en mosaicos grandes. Las texturas son dos: un trazo en espiral, como un garabato, y una grilla fina detrás del mapa. Todo está hecho con CSS y un ícono repetido, sin imágenes de fondo.",
+     "en": "Colour arrives in large tiles. There are two textures: a looping stroke, like a doodle, and a fine grid behind the map. Everything is built with CSS and one repeated icon, with no background images."
+    },
+    "rowsOf": [
+     1,
+     2
+    ],
+    "images": [
+     {
+      "src": "primer-empleo-ds-portada.jpg",
+      "w": 1600,
+      "h": 574,
+      "alt": {
+       "es": "Portada del taller: panel blanco con el título y el trazo en espiral, un bloque carbón con el anillo de avance en cero y dos mosaicos, lavanda y naranja, uno por línea.",
+       "en": "Workshop home: a white panel with the title and the looping stroke, a charcoal block with the progress ring at zero and two tiles, lavender and orange, one per line."
+      },
+      "caption": {
+       "es": "Portada: mosaicos por línea, anillo de avance y el trazo en espiral como textura.",
+       "en": "Home: one tile per line, progress ring and the looping stroke as texture."
+      }
+     },
+     {
+      "src": "primer-empleo-ds-mapa.jpg",
+      "w": 1600,
+      "h": 1171,
+      "alt": {
+       "es": "Mapa del recorrido en tema claro: dos franjas con grilla de fondo, lavanda y naranja, cinco tarjetas de parada en cada una unidas por una línea punteada.",
+       "en": "Journey map in the light theme: two bands with a grid background, lavender and orange, five stop cards in each joined by a dashed line."
+      },
+      "caption": {
+       "es": "El mapa en tema claro: grilla de fondo y paradas unidas por una línea punteada.",
+       "en": "The map in the light theme: grid background and stops joined by a dashed line."
+      }
+     },
+     {
+      "src": "primer-empleo-ds-mapa-oscuro.jpg",
+      "w": 1600,
+      "h": 1171,
+      "alt": {
+       "es": "El mismo mapa en tema oscuro: fondo casi negro, franjas en tonos apagados de lavanda y naranja y tarjetas de parada oscuras.",
+       "en": "The same map in the dark theme: near-black background, bands in muted lavender and orange, and dark stop cards."
+      },
+      "caption": {
+       "es": "El mismo mapa en tema oscuro, con cada token en su par.",
+       "en": "The same map in the dark theme, with every token in its pair."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Animaciones explicativas",
+     "en": "Explainer animations"
+    },
+    "note": {
+     "es": "Tres piezas cortas hechas con HyperFrames y GSAP. Cada una tiene botón de pausa y una descripción en texto, y toma los colores del tema. Acá se ve el cuadro final, que es lo que muestran con movimiento reducido.",
+     "en": "Three short pieces built with HyperFrames and GSAP. Each one has a pause button and a text description, and takes the theme colours. Shown here is the final frame, which is what they display with reduced motion."
+    },
+    "images": [
+     {
+      "src": "primer-empleo-ds-anim-ats.jpg",
+      "w": 1376,
+      "h": 1206,
+      "alt": {
+       "es": "Cuadro final de la animación Así te lee un ATS: un CV de una columna a la izquierda y, a la derecha, nombre, experiencia, educación y habilidades con una tilde verde cada uno. Debajo, el botón Ver de nuevo y la descripción en texto.",
+       "en": "Final frame of the How an ATS reads you animation: a single-column CV on the left and, on the right, name, experience, education and skills, each with a green tick. Below, the Play again button and the text description."
+      },
+      "caption": {
+       "es": "Así te lee un ATS.",
+       "en": "How an ATS reads you."
+      }
+     },
+     {
+      "src": "primer-empleo-ds-anim-linkedin.jpg",
+      "w": 1376,
+      "h": 1160,
+      "alt": {
+       "es": "Cuadro final de la animación del titular de LinkedIn: un perfil ficticio con un titular en tres partes, el puesto que buscás, lo que estudiás y un diferencial.",
+       "en": "Final frame of the LinkedIn headline animation: a fictional profile with a three-part headline, the role you want, what you study and a differentiator."
+      },
+      "caption": {
+       "es": "El titular de LinkedIn en tres partes.",
+       "en": "The LinkedIn headline in three parts."
+      }
+     },
+     {
+      "src": "primer-empleo-star.jpg",
+      "w": 1376,
+      "h": 1032,
+      "alt": {
+       "es": "Cuadro final de la animación del método STAR: situación, tarea, acción y resultado, con una barra que muestra que la acción es la parte más larga.",
+       "en": "Final frame of the STAR method animation: situation, task, action and result, with a bar showing that the action is the longest part."
+      },
+      "caption": {
+       "es": "El método STAR.",
+       "en": "The STAR method."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Cifras y componentes de contenido",
+     "en": "Figures and content components"
+    },
+    "note": {
+     "es": "Los datos se muestran como cifras grandes con su fuente, no como gráficos decorativos. El resto son los bloques que se repiten en cada parada.",
+     "en": "Data is shown as large figures with their source, not as decorative charts. The rest are the blocks repeated at every stop."
+    },
+    "rowsOf": [
+     2,
+     2
+    ],
+    "images": [
+     {
+      "src": "primer-empleo-ds-cifras.jpg",
+      "w": 1600,
+      "h": 1044,
+      "alt": {
+       "es": "Parada 1: encabezado lavanda con número, etiquetas de parada y minutos, la idea clave sobre amarillo y cuatro mosaicos con cifras de desocupación y su fuente.",
+       "en": "Stop 1: lavender header with number, stop and minutes tags, the key idea on yellow and four tiles with unemployment figures and their source."
+      },
+      "caption": {
+       "es": "Encabezado de parada, idea clave y cifras con su fuente.",
+       "en": "Stop header, key idea and figures with their source."
+      }
+     },
+     {
+      "src": "primer-empleo-ds-plantilla.jpg",
+      "w": 1600,
+      "h": 698,
+      "alt": {
+       "es": "Plantilla del pitch de 60 segundos en texto monoespaciado, con una barra verde de título y el botón Copiar.",
+       "en": "The 60-second pitch template in monospaced text, with a green title bar and the Copy button."
+      },
+      "caption": {
+       "es": "Plantilla para copiar.",
+       "en": "Copy-ready template."
+      }
+     },
+     {
+      "src": "primer-empleo-ds-asi-no.jpg",
+      "w": 1600,
+      "h": 434,
+      "alt": {
+       "es": "Dos recuadros lado a lado: Así no, con ícono de cruz y tareas genéricas, y Así sí, con ícono de tilde y logros concretos.",
+       "en": "Two boxes side by side: Not like this, with a cross icon and generic tasks, and Like this, with a tick icon and concrete achievements."
+      },
+      "caption": {
+       "es": "Así no, así sí: el estado va con ícono y texto, no solo con color.",
+       "en": "Not like this, like this: the state uses an icon and text, not colour alone."
+      }
+     },
+     {
+      "src": "primer-empleo-ds-actividad.jpg",
+      "w": 1600,
+      "h": 535,
+      "alt": {
+       "es": "Bloque carbón de actividad con su duración, y debajo la casilla para marcar la parada como recorrida y el botón hacia la parada siguiente.",
+       "en": "Charcoal activity block with its duration and, below, the checkbox to mark the stop as done and the button to the next stop."
+      },
+      "caption": {
+       "es": "Actividad, marca de parada recorrida y paso a la siguiente.",
+       "en": "Activity, done marker and step to the next stop."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "04",
+    "name": "Deliver",
+    "mode": {
+     "es": "converger",
+     "en": "converge"
+    },
+    "q": {
+     "es": "Publicar, revisar y verificar que el sitio funcione para todos antes del dictado.",
+     "en": "Publish, review and verify that the site works for everyone before the workshop."
+    }
+   },
+   {
+    "t": "audit",
+    "h": {
+     "es": "Validación: auditoría de contraste",
+     "en": "Validation: contrast audit"
+    },
+    "note": {
+     "es": "Medí las combinaciones de color del sitio en los dos temas contra WCAG 2.2 AA. Umbrales: 4.5:1 para texto normal, 3:1 para texto grande y componentes. Una combinación no cumple por poco y tiene corrección propuesta.",
+     "en": "I measured the site's colour combinations in both themes against WCAG 2.2 AA. Thresholds: 4.5:1 for normal text, 3:1 for large text and components. One combination falls just short and has a proposed fix."
+    },
+    "cols": {
+     "pair": {
+      "es": "Combinación",
+      "en": "Combination"
+     },
+     "ratio": {
+      "es": "Ratio",
+      "en": "Ratio"
+     },
+     "result": {
+      "es": "Resultado",
+      "en": "Result"
+     },
+     "fix": {
+      "es": "Corrección",
+      "en": "Fix"
+     }
+    },
+    "fail": {
+     "es": "No cumple",
+     "en": "Fails"
+    },
+    "pass": {
+     "es": "Sí cumple",
+     "en": "Passes"
+    },
+    "nofix": {
+     "es": "No requiere cambios",
+     "en": "No change needed"
+    },
+    "rows": [
+     {
+      "fg": "#B4530F",
+      "bg": "#FDEBD9",
+      "pair": {
+       "es": "Número de paso de la línea 2: --l2 sobre --l2-soft (tema claro)",
+       "en": "Line 2 step number: --l2 on --l2-soft (light theme)"
+      },
+      "ratio": "4.32:1",
+      "pass": false,
+      "fix": {
+       "es": "Oscurecer --l2 a #AD500E: 4.60:1 sobre --l2-soft y 5.34:1 con texto blanco",
+       "en": "Darken --l2 to #AD500E: 4.60:1 on --l2-soft and 5.34:1 with white text"
+      },
+      "fixfg": "#AD500E",
+      "fixbg": "#FDEBD9"
+     },
+     {
+      "fg": "#FFFFFF",
+      "bg": "#5257C9",
+      "pair": {
+       "es": "Texto blanco sobre botón --l1 (tema claro)",
+       "en": "White text on --l1 button (light theme)"
+      },
+      "ratio": "5.89:1",
+      "pass": true
+     },
+     {
+      "fg": "#5257C9",
+      "bg": "#E9E8F6",
+      "pair": {
+       "es": "Link --l1 sobre el fondo lavanda (tema claro)",
+       "en": "--l1 link on the lavender background (light theme)"
+      },
+      "ratio": "4.86:1",
+      "pass": true
+     },
+     {
+      "fg": "#5B5A6B",
+      "bg": "#E9E8F6",
+      "pair": {
+       "es": "Texto --muted sobre el fondo lavanda (tema claro)",
+       "en": "--muted text on the lavender background (light theme)"
+      },
+      "ratio": "5.56:1",
+      "pass": true
+     },
+     {
+      "fg": "#1F1F24",
+      "bg": "#B9BBF6",
+      "pair": {
+       "es": "Texto oscuro sobre el mosaico --t1 (el más bajo de los cuatro) (tema claro)",
+       "en": "Dark text on the --t1 tile (lowest of the four) (light theme)"
+      },
+      "ratio": "8.99:1",
+      "pass": true
+     },
+     {
+      "fg": "#17764A",
+      "bg": "#E1F3E8",
+      "pair": {
+       "es": "Texto verde --yes sobre --yes-soft (tema claro)",
+       "en": "--yes green text on --yes-soft (light theme)"
+      },
+      "ratio": "4.88:1",
+      "pass": true
+     },
+     {
+      "fg": "#5257C9",
+      "bg": "#FFFFFF",
+      "pair": {
+       "es": "Anillo de foco --l1 sobre panel (tema claro)",
+       "en": "--l1 focus ring on panel (light theme)"
+      },
+      "ratio": "5.89:1",
+      "pass": true,
+      "ring": true
+     },
+     {
+      "fg": "#F8DE73",
+      "bg": "#24242A",
+      "pair": {
+       "es": "Anillo de foco amarillo sobre bloque carbón (tema claro)",
+       "en": "Yellow focus ring on charcoal block (light theme)"
+      },
+      "ratio": "11.53:1",
+      "pass": true,
+      "ring": true
+     },
+     {
+      "fg": "#F1F0F7",
+      "bg": "#1E1E23",
+      "pair": {
+       "es": "Texto --ink sobre panel (tema oscuro)",
+       "en": "--ink text on panel (dark theme)"
+      },
+      "ratio": "14.66:1",
+      "pass": true
+     },
+     {
+      "fg": "#A9A8B8",
+      "bg": "#1E1E23",
+      "pair": {
+       "es": "Texto --muted sobre panel (tema oscuro)",
+       "en": "--muted text on panel (dark theme)"
+      },
+      "ratio": "7.10:1",
+      "pass": true
+     },
+     {
+      "fg": "#17171B",
+      "bg": "#A9ACF7",
+      "pair": {
+       "es": "Texto oscuro sobre botón --l1 (tema oscuro)",
+       "en": "Dark text on --l1 button (dark theme)"
+      },
+      "ratio": "8.45:1",
+      "pass": true
+     },
+     {
+      "fg": "#F7AB6A",
+      "bg": "#3E2A17",
+      "pair": {
+       "es": "Número de paso de la línea 2: --l2 sobre --l2-soft (tema oscuro)",
+       "en": "Line 2 step number: --l2 on --l2-soft (dark theme)"
+      },
+      "ratio": "7.10:1",
+      "pass": true
+     },
+     {
+      "fg": "#F1F0F7",
+      "bg": "#6B5700",
+      "pair": {
+       "es": "Texto sobre el resaltado --mark (tema oscuro)",
+       "en": "Text on the --mark highlight (dark theme)"
+      },
+      "ratio": "6.21:1",
+      "pass": true
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Accesibilidad del sitio",
+     "en": "Site accessibility"
+    },
+    "items": {
+     "es": [
+      "HTML semántico, enlace para saltar al contenido y foco visible en todos los controles.",
+      "Al cambiar de parada, el foco va al título nuevo; los cambios de estado se anuncian a lectores de pantalla.",
+      "Pestañas, menú y plantillas operables con teclado.",
+      "Animaciones con pausa y descripción en texto; con movimiento reducido muestran el cuadro final.",
+      "Enlaces externos que avisan que se abren en una pestaña nueva e imágenes con texto alternativo descriptivo.",
+      "Cada dato está fechado y citado en APA 7 (17 fuentes), para actualizarlo cada año sin rehacer el taller."
+     ],
+     "en": [
+      "Semantic HTML, a skip-to-content link and visible focus on every control.",
+      "When the stop changes, focus moves to the new heading; state changes are announced to screen readers.",
+      "Tabs, menu and templates are keyboard operable.",
+      "Animations have a pause control and a text description; with reduced motion they show the final frame.",
+      "External links announce they open in a new tab, and images have descriptive alt text.",
+      "Every figure is dated and cited in APA 7 (17 sources), so it can be updated each year without rebuilding the workshop."
+     ]
+    },
+    "hl": true
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Revisión",
+     "en": "Review"
+    },
+    "p": [
+     {
+      "es": "Antes de publicarlo, el sitio pasó por la revisión de Julieta Taraborrelli, co-docente del taller.",
+      "en": "Before publishing, the site was reviewed by Julieta Taraborrelli, the workshop's co-facilitator."
+     }
+    ]
+   },
+   {
+    "t": "live",
+    "h": {
+     "es": "El sitio, en vivo",
+     "en": "The site, live"
+    },
+    "note": {
+     "es": "HTML, CSS y JavaScript sin frameworks ni proceso de compilación, publicado en GitHub Pages.",
+     "en": "HTML, CSS and JavaScript with no frameworks and no build step, published on GitHub Pages."
+    },
+    "src": "https://lpedaci.github.io/taller-primerempleo/",
+    "url": "https://lpedaci.github.io/taller-primerempleo/",
+    "label": {
+     "es": "Del aula al primer trabajo",
+     "en": "From the classroom to a first job"
+    }
+   },
+   {
+    "t": "phase",
+    "id": "cifras",
+    "name": {
+     "es": "El taller en cifras",
+     "en": "The workshop in numbers"
+    },
+    "mode": {
+     "es": "alcance",
+     "en": "scope"
+    },
+    "q": {
+     "es": "Lo que entra en dos horas y lo que queda para después.",
+     "en": "What fits in two hours and what stays for later."
+    }
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": {
+       "es": "10",
+       "en": "10"
+      },
+      "label": {
+       "es": "paradas en dos líneas",
+       "en": "stops on two lines"
+      }
+     },
+     {
+      "value": {
+       "es": "2 h",
+       "en": "2 h"
+      },
+      "label": {
+       "es": "de taller presencial",
+       "en": "of in-person workshop"
+      }
+     },
+     {
+      "value": {
+       "es": "60 min",
+       "en": "60 min"
+      },
+      "label": {
+       "es": "de actividad práctica",
+       "en": "of hands-on activity"
+      }
+     },
+     {
+      "value": {
+       "es": "4",
+       "en": "4"
+      },
+      "label": {
+       "es": "plantillas para copiar",
+       "en": "copy-ready templates"
+      }
+     },
+     {
+      "value": {
+       "es": "17",
+       "en": "17"
+      },
+      "label": {
+       "es": "fuentes citadas en APA 7",
+       "en": "sources cited in APA 7"
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Próximos pasos",
+     "en": "Next steps"
+    },
+    "items": {
+     "es": [
+      "Dictar el taller con 6to año.",
+      "Sumar una parada nueva sobre cómo leer un recibo de sueldo.",
+      "Después del dictado, contrastar los criterios de éxito con lo que pasó en el aula y ajustar el recorrido."
+     ],
+     "en": [
+      "Run the workshop with sixth-year students.",
+      "Add a new stop on how to read a payslip.",
+      "After the session, check the success criteria against what happened in class and adjust the journey."
+     ]
+    }
+   }
+  ],
+  "outcome": null
  }
 };

@@ -10,6 +10,21 @@
 
 window.PROJECTS = [
   {
+    slug: 'primer-empleo',
+    cat: 'cap',
+    also: ['it'],
+    badges: ['UX'],
+    dates: ['2026-10', '2026-11'],
+    tags: { es: ['empleabilidad', 'sitio web'], en: ['employability', 'website'] },
+    title: { es: 'Del aula al primer trabajo', en: 'From the classroom to a first job' },
+    desc: {
+      es: 'Taller de primer empleo convertido en un recorrido web de diez paradas: CV para ATS, LinkedIn, porfolio y entrevistas con personas e IA.',
+      en: 'A first-job workshop turned into a ten-stop web journey: ATS-ready CVs, LinkedIn, portfolios and interviews with people and AI.'
+    },
+    result: { es: '60 de 109 minutos de práctica', en: '60 of 109 minutes hands-on' },
+    skills: { es: ['Doble Diamante', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'], en: ['Double Diamond', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'] }
+  },
+  {
     slug: 'proyectos-aplicados',
     cat: 'it',
     also: ['cap'],
