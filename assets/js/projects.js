@@ -18,10 +18,10 @@ window.PROJECTS = [
     badges: ['UX'],
     dates: ['2026-10', '2026-10'],
     tags: { es: ['ux/ui', 'design system'], en: ['ux/ui', 'design system'] },
-    title: { es: 'El servidor de Lourdes: análisis y diseño UX/UI', en: "Lourdes's server: UX/UI analysis and design" },
+    title: { es: 'Repositorio web de recursos para autocapacitarse: análisis y diseño UX/UI', en: 'Self-learning resource hub: UX/UI analysis and design' },
     desc: {
-      es: 'Un repositorio de cursos y recursos que vivía en Notion, rediseñado como un sitio con exploradores, búsqueda e inventario.',
-      en: 'A collection of courses and resources that lived in Notion, redesigned as a site with explorers, search and an inventory.'
+      es: 'El servidor de Lourdes: cursos y recursos que vivían en Notion, rediseñados como un sitio con exploradores, búsqueda e inventario.',
+      en: "Lourdes's server (El servidor de Lourdes): courses and resources that lived in Notion, redesigned as a site with explorers, search and an inventory."
     },
     result: { es: '160 cursos y 158 recursos filtrables', en: '160 courses and 158 resources to filter' },
     skills: { es: ['Arquitectura de información', 'Design system', 'WCAG 2.1', 'Astro'], en: ['Information architecture', 'Design system', 'WCAG 2.1', 'Astro'] }

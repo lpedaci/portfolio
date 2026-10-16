@@ -10295,12 +10295,12 @@ window.CASES = {
   "cat": "it",
   "touch": "cap",
   "title": {
-   "es": "El servidor de Lourdes: análisis y diseño UX/UI",
-   "en": "Lourdes's server: UX/UI analysis and design"
+   "es": "Repositorio web de recursos para autocapacitarse: análisis y diseño UX/UI",
+   "en": "Self-learning resource hub: UX/UI analysis and design"
   },
   "subtitle": {
-   "es": "Un repositorio de cursos, recursos y charlas para estudiantes de informática que vivía en Notion, rediseñado como un sitio propio que se explora, se filtra y se retoma.",
-   "en": "A collection of courses, resources and talks for computing students that lived in Notion, redesigned as a site of its own that can be explored, filtered and picked up again."
+   "es": "El servidor de Lourdes reúne cursos, recursos y charlas para estudiantes de informática. Vivía en Notion y lo rediseñé como un sitio propio que se explora, se filtra y se retoma.",
+   "en": "El servidor de Lourdes (Lourdes's server) gathers courses, resources and talks for computing students. It lived in Notion, and I redesigned it as a site of its own that can be explored, filtered and picked up again."
   },
   "chips": {
    "es": [
@@ -10434,8 +10434,8 @@ window.CASES = {
     },
     "p": [
      {
-      "es": "El material se publicaba en páginas de Notion desde 2019. Funcionaba como archivo, pero no como herramienta: no se podía filtrar por tema, certificado o idioma, ni guardar lo que interesaba para volver después.",
-      "en": "The material had been published on Notion pages since 2019. It worked as an archive, but not as a tool: it could not be filtered by topic, certificate or language, and there was no way to save what mattered to come back later."
+      "es": "El servidor de Lourdes se publicaba en páginas de Notion desde 2019. Funcionaba como archivo, pero no como herramienta: no se podía filtrar por tema, certificado o idioma, ni guardar lo que interesaba para volver después.",
+      "en": "El servidor de Lourdes had been published on Notion pages since 2019. It worked as an archive, but not as a tool: it could not be filtered by topic, certificate or language, and there was no way to save what mattered to come back later."
      }
     ]
    },
