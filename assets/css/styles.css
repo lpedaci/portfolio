@@ -701,6 +701,8 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 /* Una sola imagen: ocupa la fila (queda centrada); si es vertical, el contenedor se angosta y se centra */
 .gallery--tall { max-width: 560px; margin-inline: auto; }
 .gallery--small { max-width: 640px; margin-inline: auto; }
+.gallery--medium { max-width: 860px; margin-inline: auto; }
+.gallery__cta { margin-top: 16px; }
 .gallery--tall.gallery--small { max-width: 300px; }
 .pic a.js-zoom { cursor: zoom-in; }
 

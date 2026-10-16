@@ -174,7 +174,8 @@
       </li>`).join('')}</ul>`, true),
     live: (b) => blk(b, frame('live', b.src, b.url, L(b.label), L(b.h) || L(b.label)), true),
     embed: (b) => blk(b, frame(b.kind || 'video', b.src, b.open, L(b.label), L(b.h) || L(b.label)), b.kind !== 'audio'),
-    gallery: (b) => blk(b, `<div class="gallery${b.single ? (b.images[0].h > b.images[0].w ? ' gallery--tall' : '') : ''}${b.light ? ' gallery--light' : ''}${b.small ? ' gallery--small' : ''}">${rows(b.images, b.wide ? 2 : 3, b.rowsOf || (b.light ? [4, 1] : null)).map((row) => `<div class="gallery__row">${row.map((im) => picture(im)).join('')}</div>`).join('')}</div>`, true),
+    // url + cta: enlace opcional debajo de la galería (por ejemplo, a la página publicada que muestran las capturas).
+    gallery: (b) => blk(b, `<div class="gallery${b.single ? (b.images[0].h > b.images[0].w ? ' gallery--tall' : '') : ''}${b.light ? ' gallery--light' : ''}${b.small ? ' gallery--small' : ''}${b.medium ? ' gallery--medium' : ''}">${rows(b.images, b.wide ? 2 : 3, b.rowsOf || (b.light ? [4, 1] : null)).map((row) => `<div class="gallery__row">${row.map((im) => picture(im)).join('')}</div>`).join('')}</div>${b.url && b.cta ? `<p class="gallery__cta"><a class="link-arrow" href="${esc(b.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(b.cta))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p>` : ''}`, true),
 
     /* ---------- Bloques del caso MurialdoLab (también los usa el de riesgos digitales) ---------- */
     phase: (b) => {

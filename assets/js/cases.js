@@ -10786,7 +10786,7 @@ window.CASES = {
      "es": "Español rioplatense con voseo y humor liviano, sin rayas ni emojis. Los avisos, los estados vacíos y los errores hablan con la misma voz.",
      "en": "Rioplatense Spanish with voseo and light humour, with no dashes or emojis. Notices, empty states and errors all speak in the same voice."
     },
-    "small": true,
+    "medium": true,
     "images": [
      {
       "src": "servidor-404.jpg",
@@ -11083,6 +11083,11 @@ window.CASES = {
     "h": {
      "es": "Componentes y tema oscuro",
      "en": "Components and dark theme"
+    },
+    "url": "https://lpedaci.github.io/repo-servidor/ui/",
+    "cta": {
+     "es": "Ver la página de componentes",
+     "en": "View the components page"
     },
     "rowsOf": [
      1,
