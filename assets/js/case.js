@@ -67,7 +67,9 @@
     const src = `${ROOT}assets/img/${esc(im.src)}`;
     const imgTag = `<a class="js-zoom" href="${src}" aria-haspopup="dialog"><span class="sr-only">${esc(t('zoomOpen'))}: </span><img src="${src}" width="${im.w}" height="${im.h}" alt="${esc(L(im.alt))}" loading="lazy" decoding="async"></a>`;
     const cap = im.caption ? `<figcaption>${esc(L(im.caption))}</figcaption>` : '';
-    return `<figure class="pic"${grow ? ` style="flex-grow:${(im.w / im.h * 100).toFixed(2)}"` : ''}>${imgTag}${cap}</figure>`;
+    // link: enlace opcional debajo de la imagen (por ejemplo, a la página publicada que muestra la captura)
+    const link = im.link ? `<p class="pic__cta"><a class="link-arrow" href="${esc(im.link.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(im.link.cta))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p>` : '';
+    return `<figure class="pic"${grow ? ` style="flex-grow:${(im.w / im.h * 100).toFixed(2)}"` : ''}>${imgTag}${cap}${link}</figure>`;
   };
 
 

@@ -11084,18 +11084,16 @@ window.CASES = {
      "es": "Componentes y tema oscuro",
      "en": "Components and dark theme"
     },
-    "url": "https://lpedaci.github.io/repo-servidor/ui/",
-    "cta": {
-     "es": "Ver la página de componentes",
-     "en": "View the components page"
-    },
-    "rowsOf": [
-     1,
-     2
-    ],
     "images": [
      {
       "src": "servidor-ui.jpg",
+      "link": {
+       "url": "https://lpedaci.github.io/repo-servidor/ui/",
+       "cta": {
+        "es": "Ver la página de componentes",
+        "en": "View the components page"
+       }
+      },
       "w": 1600,
       "h": 1022,
       "alt": {

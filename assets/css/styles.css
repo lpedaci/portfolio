@@ -703,6 +703,9 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .gallery--small { max-width: 640px; margin-inline: auto; }
 .gallery--medium { max-width: 860px; margin-inline: auto; }
 .gallery__cta { margin-top: 16px; }
+.pic__cta { margin-top: 8px; font-size: 0.9375rem; }
+/* El enlace no lleva el marco de la imagen (.pic a) */
+.pic .pic__cta a { display: inline-flex; border: 0; border-radius: 0; overflow: visible; background: none; }
 .gallery--tall.gallery--small { max-width: 300px; }
 .pic a.js-zoom { cursor: zoom-in; }
 
