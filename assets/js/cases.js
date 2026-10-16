@@ -10290,5 +10290,1038 @@ window.CASES = {
    }
   ],
   "outcome": null
+ },
+ "servidor": {
+  "cat": "it",
+  "touch": "cap",
+  "title": {
+   "es": "El servidor de Lourdes: análisis y diseño UX/UI",
+   "en": "Lourdes's server: UX/UI analysis and design"
+  },
+  "subtitle": {
+   "es": "Un repositorio de cursos, recursos y charlas para estudiantes de informática que vivía en Notion, rediseñado como un sitio propio que se explora, se filtra y se retoma.",
+   "en": "A collection of courses, resources and talks for computing students that lived in Notion, redesigned as a site of its own that can be explored, filtered and picked up again."
+  },
+  "chips": {
+   "es": [
+    "UX/UI",
+    "Arquitectura de información",
+    "Design system",
+    "Accesibilidad"
+   ],
+   "en": [
+    "UX/UI",
+    "Information architecture",
+    "Design system",
+    "Accessibility"
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Arquitectura de información, diseño UX/UI, design system, redacción y desarrollo del sitio",
+    "en": "Information architecture, UX/UI design, design system, copywriting and site development"
+   },
+   "timeline": {
+    "es": "Octubre 2026",
+    "en": "October 2026"
+   },
+   "context": {
+    "es": "Material para estudiantes de informática, egresados y cualquiera que quiera seguir aprendiendo, publicado desde diciembre de 2019",
+    "en": "Material for computing students, graduates and anyone who wants to keep learning, published since December 2019"
+   },
+   "stack": [
+    "Astro",
+    "TypeScript",
+    "Pagefind",
+    "GitHub Actions",
+    "GitHub Pages"
+   ],
+   "methods": [
+    "Arquitectura de información",
+    "Design system",
+    "WCAG 2.1 AA",
+    "axe"
+   ]
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Sitio (en vivo)",
+     "en": "Site (live)"
+    },
+    "url": "https://lpedaci.github.io/repo-servidor/"
+   },
+   {
+    "label": {
+     "es": "Componentes",
+     "en": "Components"
+    },
+    "url": "https://lpedaci.github.io/repo-servidor/ui/"
+   },
+   {
+    "label": {
+     "es": "Repositorio",
+     "en": "Repository"
+    },
+    "url": "https://github.com/lpedaci/repo-servidor"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": {
+       "es": "160",
+       "en": "160"
+      },
+      "label": {
+       "es": "cursos filtrables",
+       "en": "filterable courses"
+      }
+     },
+     {
+      "value": {
+       "es": "158",
+       "en": "158"
+      },
+      "label": {
+       "es": "recursos",
+       "en": "resources"
+      }
+     },
+     {
+      "value": {
+       "es": "12",
+       "en": "12"
+      },
+      "label": {
+       "es": "posts entre charlas y guías",
+       "en": "posts across talks and guides"
+      }
+     },
+     {
+      "value": {
+       "es": "4",
+       "en": "4"
+      },
+      "label": {
+       "es": "threads temáticos",
+       "en": "topic threads"
+      }
+     },
+     {
+      "value": {
+       "es": "6",
+       "en": "6"
+      },
+      "label": {
+       "es": "categorías con su color",
+       "en": "colour-coded categories"
+      }
+     }
+    ]
+   },
+   {
+    "t": "quote",
+    "h": {
+     "es": "El desafío",
+     "en": "The challenge"
+    },
+    "body": {
+     "es": "Que más de 300 enlaces juntados durante años se puedan explorar sin perderse, y que cada persona encuentre lo suyo en pocos pasos.",
+     "en": "Make more than 300 links gathered over the years explorable without getting lost, so that everyone finds what they need in a few steps."
+    },
+    "p": [
+     {
+      "es": "El material se publicaba en páginas de Notion desde 2019. Funcionaba como archivo, pero no como herramienta: no se podía filtrar por tema, certificado o idioma, ni guardar lo que interesaba para volver después.",
+      "en": "The material had been published on Notion pages since 2019. It worked as an archive, but not as a tool: it could not be filtered by topic, certificate or language, and there was no way to save what mattered to come back later."
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "01",
+    "id": "arquitectura",
+    "name": {
+     "es": "Arquitectura de información",
+     "en": "Information architecture"
+    },
+    "mode": {
+     "es": "ordenar",
+     "en": "organise"
+    },
+    "q": {
+     "es": "Pasar de una lista larga de páginas a un mapa con entradas claras según lo que cada persona viene a buscar.",
+     "en": "Turn a long list of pages into a map with clear entry points for whatever each person comes looking for."
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Una metáfora que ordena",
+     "en": "A metaphor that organises"
+    },
+    "p": [
+     {
+      "es": "El sitio se piensa como un servidor de juego: quien entra es un user, las secciones son threads, la portada es el Lobby y lo guardado es el inventario. La metáfora no es solo tono: cada palabra nombra una función concreta y se repite igual en la navegación, los títulos y los avisos.",
+      "en": "The site is framed as a game server: visitors are users, sections are threads, the home page is the lobby and saved items are the inventory. The metaphor is not just tone: each word names a concrete function and is used the same way in navigation, headings and notices."
+     },
+     {
+      "es": "Para estudiantes de informática es un código conocido, y baja la distancia con un material que de otro modo se lee como un listado académico.",
+      "en": "For computing students it is a familiar code, and it closes the distance to material that would otherwise read like an academic list."
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Las piezas del server",
+     "en": "The pieces of the server"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Lobby",
+       "en": "Lobby"
+      },
+      "body": {
+       "es": "La portada. Muestra cuánto hay, las seis categorías como accesos directos, los cuatro threads, lo último que se sumó y un buscador.",
+       "en": "The home page. It shows how much there is, the six categories as shortcuts, the four threads, the latest additions and a search box."
+      }
+     },
+     {
+      "lead": {
+       "es": "Threads",
+       "en": "Threads"
+      },
+      "body": {
+       "es": "Cuatro recorridos temáticos: cursando y egresando, cursos, tecnología y materiales variaditos. Cada uno junta posts y recursos sobre un mismo tema.",
+       "en": "Four topic journeys: studying and graduating, courses, technology and assorted materials. Each one gathers posts and resources on the same subject."
+      }
+     },
+     {
+      "lead": {
+       "es": "Exploradores",
+       "en": "Explorers"
+      },
+      "body": {
+       "es": "Cursos y recursos con filtros combinables, orden, vista de tarjetas o de tabla, y la combinación elegida guardada en la dirección para compartirla.",
+       "en": "Courses and resources with combinable filters, sorting, card or table view, and the chosen combination kept in the URL so it can be shared."
+      }
+     },
+     {
+      "lead": {
+       "es": "Posts",
+       "en": "Posts"
+      },
+      "body": {
+       "es": "Charlas y guías con tiempo de lectura, índice lateral y navegación dentro de su thread.",
+       "en": "Talks and guides with reading time, a side index and navigation within their thread."
+      }
+     },
+     {
+      "lead": {
+       "es": "Inventario",
+       "en": "Inventory"
+      },
+      "body": {
+       "es": "Favoritos y \"ya lo vi\" guardados en el navegador, sin cuenta ni registro.",
+       "en": "Favourites and \"seen it\" saved in the browser, with no account or sign-up."
+      }
+     },
+     {
+      "lead": {
+       "es": "Búsqueda",
+       "en": "Search"
+      },
+      "body": {
+       "es": "Un solo buscador para posts, cursos y recursos, con resultados mientras se escribe.",
+       "en": "One search box for posts, courses and resources, with results as you type."
+      }
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Task flow",
+     "en": "Task flow"
+    },
+    "note": {
+     "es": "La tarea núcleo: encontrar un curso gratuito con certificado sobre un tema puntual.",
+     "en": "The core task: finding a free course with a certificate on a specific topic."
+    },
+    "steps": {
+     "es": [
+      "Entra al Lobby",
+      "Elige una categoría desde su mosaico",
+      "Llega al explorador ya filtrado",
+      "Suma filtros de certificado o idioma",
+      "Revisa duración y proveedor en la tarjeta o la tabla",
+      "Guarda el curso en el inventario",
+      "Comparte el link con los filtros puestos"
+     ],
+     "en": [
+      "Enters the lobby",
+      "Picks a category from its tile",
+      "Lands on the explorer already filtered",
+      "Adds certificate or language filters",
+      "Checks duration and provider on the card or the table",
+      "Saves the course to the inventory",
+      "Shares the link with the filters applied"
+     ]
+    }
+   },
+   {
+    "t": "phase",
+    "n": "02",
+    "id": "interfaz",
+    "name": {
+     "es": "Diseño de interfaz",
+     "en": "Interface design"
+    },
+    "mode": {
+     "es": "resolver",
+     "en": "resolve"
+    },
+    "q": {
+     "es": "Que cada pantalla diga dónde estás, cuánto hay y qué podés hacer ahora.",
+     "en": "Make every screen say where you are, how much there is and what you can do next."
+    }
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Las pantallas principales",
+     "en": "The main screens"
+    },
+    "rowsOf": [
+     2,
+     2
+    ],
+    "images": [
+     {
+      "src": "servidor-lobby.jpg",
+      "w": 1600,
+      "h": 1000,
+      "alt": {
+       "es": "Lobby del servidor: bloque carbón con el título Te doy la bienvenida al server, una terminal con comandos a la derecha, botones Explorar threads y Ver cursos, y contadores de 160 cursos, 158 recursos y 4 threads.",
+       "en": "The server lobby: a charcoal block with the title Welcome to the server, a terminal with commands on the right, Explore threads and See courses buttons, and counters for 160 courses, 158 resources and 4 threads."
+      },
+      "caption": {
+       "es": "Lobby: la metáfora del servidor va literal en el hero, con una terminal y contadores.",
+       "en": "Lobby: the server metaphor is literal in the hero, with a terminal and counters."
+      }
+     },
+     {
+      "src": "servidor-cursos.jpg",
+      "w": 1600,
+      "h": 1000,
+      "alt": {
+       "es": "Explorador de cursos filtrado por la categoría Diseño, UX y UI: buscador, orden, chips de categoría y de certificación con su cantidad, y el contador de resultados.",
+       "en": "Course explorer filtered by the Design, UX and UI category: search box, sort order, category and certificate chips with their counts, and the results counter."
+      },
+      "caption": {
+       "es": "Explorador de cursos: los filtros quedan en la dirección y se pueden compartir.",
+       "en": "Course explorer: filters live in the URL and can be shared."
+      }
+     },
+     {
+      "src": "servidor-threads.jpg",
+      "w": 1600,
+      "h": 1000,
+      "alt": {
+       "es": "Índice de threads: cuatro mosaicos de color, lavanda, naranja, verde agua y amarillo, cada uno con su número, título, bajada y cantidad de posts y recursos.",
+       "en": "Threads index: four colour tiles, lavender, orange, sea green and yellow, each with its number, title, standfirst and count of posts and resources."
+      },
+      "caption": {
+       "es": "Threads: un mosaico de color por tema.",
+       "en": "Threads: one colour tile per topic."
+      }
+     },
+     {
+      "src": "servidor-post.jpg",
+      "w": 1600,
+      "h": 1000,
+      "alt": {
+       "es": "Página de un post: encabezado lavanda con migas de pan, título, bajada, tiempo de lectura y fecha de actualización, y a la derecha el índice En este post.",
+       "en": "A post page: lavender header with breadcrumbs, title, standfirst, reading time and update date, and the In this post index on the right."
+      },
+      "caption": {
+       "es": "Post: migas de pan, tiempo de lectura e índice lateral.",
+       "en": "Post: breadcrumbs, reading time and side index."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Decisiones de diseño",
+     "en": "Design decisions"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Filtros que se comparten",
+       "en": "Filters you can share"
+      },
+      "body": {
+       "es": "Cada filtro queda en la dirección (categoría, proveedor, idioma, certificado, orden y vista). Quien recomienda un curso manda el link con la búsqueda ya armada.",
+       "en": "Every filter is kept in the URL (category, provider, language, certificate, sort and view). Anyone recommending a course sends the link with the search already set up."
+      }
+     },
+     {
+      "lead": {
+       "es": "Cantidades a la vista",
+       "en": "Counts in plain sight"
+      },
+      "body": {
+       "es": "Cada chip de filtro muestra cuántos resultados trae, y el total se actualiza al combinar. Así nadie entra a una combinación vacía sin saberlo.",
+       "en": "Every filter chip shows how many results it brings, and the total updates as filters combine. Nobody walks into an empty combination without knowing."
+      }
+     },
+     {
+      "lead": {
+       "es": "Tarjetas o tabla",
+       "en": "Cards or table"
+      },
+      "body": {
+       "es": "Las tarjetas sirven para descubrir; la tabla, para comparar duración, idioma y certificación de muchos cursos a la vez. En celular, la tabla se apila con cada dato rotulado.",
+       "en": "Cards are for discovering; the table is for comparing duration, language and certificate across many courses at once. On a phone, the table stacks with every value labelled."
+      }
+     },
+     {
+      "lead": {
+       "es": "Estado del link",
+       "en": "Link status"
+      },
+      "body": {
+       "es": "Un revisor automático recorre los enlaces una vez por mes. Los que fallan se muestran como \"Link en revisión\" o dejan de mostrarse, y los contadores solo cuentan los activos.",
+       "en": "An automatic checker goes through the links once a month. Broken ones are shown as \"Link under review\" or stop being shown, and the counters only include active ones."
+      }
+     },
+     {
+      "lead": {
+       "es": "Guardar sin cuenta",
+       "en": "Save without an account"
+      },
+      "body": {
+       "es": "El inventario vive en el navegador. No hay registro ni datos personales que cuidar, y si el almacenamiento está bloqueado el sitio sigue funcionando.",
+       "en": "The inventory lives in the browser. There is no sign-up and no personal data to look after, and if storage is blocked the site keeps working."
+      }
+     },
+     {
+      "lead": {
+       "es": "El error también orienta",
+       "en": "Errors also guide"
+      },
+      "body": {
+       "es": "La página 404 usa la voz del server (\"Te caíste del mapa\") y ofrece volver al Lobby o buscar, en lugar de un callejón sin salida.",
+       "en": "The 404 page uses the server's voice (\"You fell off the map\") and offers to go back to the lobby or search, instead of a dead end."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "En celular",
+     "en": "On a phone"
+    },
+    "note": {
+     "es": "Una sola columna, barra en píldora con tema, inventario y menú siempre a mano, e índice del post en un desplegable.",
+     "en": "A single column, a pill-shaped bar with theme, inventory and menu always at hand, and the post index in a drop-down."
+    },
+    "images": [
+     {
+      "src": "servidor-m-lobby.jpg",
+      "w": 780,
+      "h": 1688,
+      "alt": {
+       "es": "Lobby en celular: barra superior en píldora con logo, tema, inventario y menú; debajo, el bloque carbón con el título, los botones y la terminal.",
+       "en": "Lobby on a phone: pill-shaped top bar with logo, theme, inventory and menu; below, the charcoal block with the title, the buttons and the terminal."
+      },
+      "caption": {
+       "es": "Lobby.",
+       "en": "Lobby."
+      }
+     },
+     {
+      "src": "servidor-m-cursos.jpg",
+      "w": 780,
+      "h": 1688,
+      "alt": {
+       "es": "Explorador de cursos en celular: buscador, orden, botón Limpiar y chips de categoría apilados, cada uno con su cantidad.",
+       "en": "Course explorer on a phone: search box, sort order, Clear button and stacked category chips, each with its count."
+      },
+      "caption": {
+       "es": "Explorador.",
+       "en": "Explorer."
+      }
+     },
+     {
+      "src": "servidor-m-post.jpg",
+      "w": 780,
+      "h": 1688,
+      "alt": {
+       "es": "Post en celular: encabezado lavanda con migas de pan, título, bajada, tiempo de lectura y botón de favorito; el índice pasa a un desplegable.",
+       "en": "A post on a phone: lavender header with breadcrumbs, title, standfirst, reading time and favourite button; the index becomes a drop-down."
+      },
+      "caption": {
+       "es": "Post, con el índice en un desplegable.",
+       "en": "Post, with the index as a drop-down."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Tono y microcopy",
+     "en": "Tone and microcopy"
+    },
+    "note": {
+     "es": "Español rioplatense con voseo y humor liviano, sin rayas ni emojis. Los avisos, los estados vacíos y los errores hablan con la misma voz.",
+     "en": "Rioplatense Spanish with voseo and light humour, with no dashes or emojis. Notices, empty states and errors all speak in the same voice."
+    },
+    "small": true,
+    "images": [
+     {
+      "src": "servidor-404.jpg",
+      "w": 1600,
+      "h": 1000,
+      "alt": {
+       "es": "Página de error: mosaico naranja con un gato dormido entre dos carteles con el número 4, y el texto Te caíste del mapa con botones para volver al Lobby o buscar.",
+       "en": "Error page: an orange tile with a sleeping cat between two signs showing the number 4, and the text You fell off the map with buttons to go back to the lobby or search."
+      },
+      "caption": {
+       "es": "404: el error también habla con la voz del server.",
+       "en": "404: the error also speaks in the server's voice."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "",
+    "id": "design-system",
+    "name": "Design system",
+    "mode": {
+     "es": "del sitio",
+     "en": "of the site"
+    },
+    "q": {
+     "es": "Una dirección visual de panel de app educativa, con tokens compartidos con el taller Del aula al primer trabajo.",
+     "en": "A learning-app dashboard look, with tokens shared with the From the classroom to a first job workshop."
+    }
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Dirección visual",
+     "en": "Visual direction"
+    },
+    "body": {
+     "es": "Fondo lavanda, paneles blancos muy redondeados, mosaicos de color con texto siempre oscuro y bloques carbón para lo que pide acción. Los tokens vienen del taller de primer empleo y se sumaron dos colores para que cada una de las seis categorías tenga el suyo.",
+     "en": "Lavender background, very rounded white panels, colour tiles that always carry dark text and charcoal blocks for anything that asks for action. The tokens come from the first-job workshop, with two colours added so each of the six categories has its own."
+    }
+   },
+   {
+    "t": "swatches",
+    "h": {
+     "es": "Color",
+     "en": "Colour"
+    },
+    "dense": true,
+    "note": {
+     "es": "Tokens del tema claro. Cada categoría de cursos tiene su mosaico y las etiquetas de tema heredan ese color.",
+     "en": "Light theme tokens. Each course category has its tile, and topic tags inherit that colour."
+    },
+    "groups": [
+     {
+      "name": {
+       "es": "Base",
+       "en": "Base"
+      },
+      "items": [
+       {
+        "token": "--bg",
+        "hex": "#E9E8F6",
+        "use": {
+         "es": "Fondo general",
+         "en": "Page background"
+        }
+       },
+       {
+        "token": "--surface",
+        "hex": "#FFFFFF",
+        "use": {
+         "es": "Paneles",
+         "en": "Panels"
+        }
+       },
+       {
+        "token": "--ink",
+        "hex": "#1F1F24",
+        "use": {
+         "es": "Texto principal",
+         "en": "Main text"
+        }
+       },
+       {
+        "token": "--muted",
+        "hex": "#5B5A6B",
+        "use": {
+         "es": "Texto secundario",
+         "en": "Secondary text"
+        }
+       },
+       {
+        "token": "--deep",
+        "hex": "#24242A",
+        "use": {
+         "es": "Bloques carbón, barra y botones primarios",
+         "en": "Charcoal blocks, bar and primary buttons"
+        }
+       },
+       {
+        "token": "--l1",
+        "hex": "#5257C9",
+        "use": {
+         "es": "Links y acentos",
+         "en": "Links and accents"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Mosaicos por categoría",
+       "en": "Tiles by category"
+      },
+      "items": [
+       {
+        "token": "--t1",
+        "hex": "#B9BBF6",
+        "use": {
+         "es": "Programación",
+         "en": "Programming"
+        }
+       },
+       {
+        "token": "--t2",
+        "hex": "#F7AB6A",
+        "use": {
+         "es": "Gestión y soft skills",
+         "en": "Management and soft skills"
+        }
+       },
+       {
+        "token": "--t3",
+        "hex": "#F8DE73",
+        "use": {
+         "es": "Marketing y finanzas",
+         "en": "Marketing and finance"
+        }
+       },
+       {
+        "token": "--t4",
+        "hex": "#B8D8C9",
+        "use": {
+         "es": "Ciudadanía digital y seguridad",
+         "en": "Digital citizenship and security"
+        }
+       },
+       {
+        "token": "--t5",
+        "hex": "#F2B8D2",
+        "use": {
+         "es": "Diseño, UX y UI",
+         "en": "Design, UX and UI"
+        }
+       },
+       {
+        "token": "--t6",
+        "hex": "#A9D3F0",
+        "use": {
+         "es": "Datos y ofimática",
+         "en": "Data and office software"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Estados",
+       "en": "States"
+      },
+      "items": [
+       {
+        "token": "--yes",
+        "hex": "#17764A",
+        "use": {
+         "es": "Con certificado",
+         "en": "With certificate"
+        }
+       },
+       {
+        "token": "--no",
+        "hex": "#B4380F",
+        "use": {
+         "es": "Link en revisión",
+         "en": "Link under review"
+        }
+       },
+       {
+        "token": "--mark",
+        "hex": "#FFE680",
+        "use": {
+         "es": "Resaltado de la búsqueda",
+         "en": "Search highlight"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Tipografía",
+     "en": "Typography"
+    },
+    "note": {
+     "es": "Autoalojadas, con carga swap. Cuerpo de 17 px, interlineado de 1.65 y lectura a 70 caracteres.",
+     "en": "Self-hosted, with swap loading. 17 px body, 1.65 line height and a 70-character measure."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Outfit",
+       "en": "Outfit"
+      },
+      "v": {
+       "es": "Títulos, botones y etiquetas, en peso 600 con tracking negativo en tamaños grandes.",
+       "en": "Headings, buttons and tags, weight 600 with negative tracking at large sizes."
+      }
+     },
+     {
+      "k": {
+       "es": "Geist",
+       "en": "Geist"
+      },
+      "v": {
+       "es": "Texto de cuerpo.",
+       "en": "Body text."
+      }
+     },
+     {
+      "k": {
+       "es": "Geist Mono",
+       "en": "Geist Mono"
+      },
+      "v": {
+       "es": "Datos, contadores, duraciones y la terminal del Lobby.",
+       "en": "Data, counters, durations and the lobby terminal."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Forma, movimiento y temas",
+     "en": "Shape, motion and themes"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Forma",
+       "en": "Shape"
+      },
+      "body": {
+       "es": "Paneles de 2rem, bloques de 1.5rem, botones y chips en píldora. Sombras teñidas del fondo, nunca negras.",
+       "en": "2rem panels, 1.5rem blocks, pill buttons and chips. Shadows tinted with the background, never black."
+      }
+     },
+     {
+      "lead": {
+       "es": "Ilustración",
+       "en": "Illustration"
+      },
+      "body": {
+       "es": "Trazos de línea blancos y translúcidos, un objeto por thread: un camino con bandera, un birrete, un \"</>\" y una hoja con renglones.",
+       "en": "White translucent line strokes, one object per thread: a path with a flag, a mortarboard, a \"</>\" and a lined sheet."
+      }
+     },
+     {
+      "lead": {
+       "es": "Movimiento",
+       "en": "Motion"
+      },
+      "body": {
+       "es": "Entradas en cascada, contadores que suben, una terminal con una sesión simulada y una banda de temas que se frena con el cursor o el foco. Todo queda quieto con movimiento reducido.",
+       "en": "Staggered entrances, counters that count up, a terminal with a simulated session and a topics band that stops on hover or focus. Everything stays still with reduced motion."
+      }
+     },
+     {
+      "lead": {
+       "es": "Temas",
+       "en": "Themes"
+      },
+      "body": {
+       "es": "Claro y oscuro, según el sistema o elegido desde la barra. Los mosaicos llevan texto oscuro en los dos.",
+       "en": "Light and dark, following the system or chosen from the bar. Tiles carry dark text in both."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Componentes y tema oscuro",
+     "en": "Components and dark theme"
+    },
+    "rowsOf": [
+     1,
+     2
+    ],
+    "images": [
+     {
+      "src": "servidor-ui.jpg",
+      "w": 1600,
+      "h": 1022,
+      "alt": {
+       "es": "Página interna de componentes: muestras de color de la paleta, tipografía Outfit, Geist y Geist Mono, botones, chips y badges, cuatro mosaicos de color y un bloque carbón.",
+       "en": "Internal components page: colour palette swatches, Outfit, Geist and Geist Mono type, buttons, chips and badges, four colour tiles and a charcoal block."
+      },
+      "caption": {
+       "es": "La página /ui/ reúne los componentes para revisarlos en los dos temas.",
+       "en": "The /ui/ page gathers the components to review them in both themes."
+      }
+     },
+     {
+      "src": "servidor-lobby-oscuro.jpg",
+      "w": 1600,
+      "h": 1000,
+      "alt": {
+       "es": "Lobby en tema oscuro: fondo casi negro, el mismo bloque carbón con terminal y los contadores.",
+       "en": "Lobby in the dark theme: near-black background, the same charcoal block with terminal and counters."
+      },
+      "caption": {
+       "es": "Tema oscuro: Lobby.",
+       "en": "Dark theme: lobby."
+      }
+     },
+     {
+      "src": "servidor-cursos-oscuro.jpg",
+      "w": 1600,
+      "h": 1000,
+      "alt": {
+       "es": "Explorador de cursos en tema oscuro, con la vista de tabla: columnas de curso, proveedor, duración, idioma y certificación.",
+       "en": "Course explorer in the dark theme, in table view: course, provider, duration, language and certificate columns."
+      },
+      "caption": {
+       "es": "Tema oscuro: explorador en vista de tabla.",
+       "en": "Dark theme: explorer in table view."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "03",
+    "id": "validacion",
+    "name": {
+     "es": "Validación",
+     "en": "Validation"
+    },
+    "mode": {
+     "es": "verificar",
+     "en": "verify"
+    },
+    "q": {
+     "es": "Revisar el sitio publicado contra WCAG 2.1 AA, en los dos temas y en escritorio y celular.",
+     "en": "Check the published site against WCAG 2.1 AA, in both themes and on desktop and mobile."
+    }
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Revisión con axe",
+     "en": "Review with axe"
+    },
+    "note": {
+     "es": "Once páginas del sitio publicado (Lobby, threads, exploradores, posts, inventario, Sobre el server, búsqueda y 404), revisadas con axe en octubre de 2026.",
+     "en": "Eleven pages of the published site (lobby, threads, explorers, posts, inventory, About, search and 404), reviewed with axe in October 2026."
+    },
+    "items": {
+     "es": [
+      "Tema claro, escritorio (1440 px): 0 errores en las 11 páginas.",
+      "Tema claro, celular (375 px): 0 errores y sin desplazamiento horizontal.",
+      "Tema oscuro, escritorio: 0 errores en 10 de las 11 páginas.",
+      "Búsqueda en tema oscuro: el resaltado de las coincidencias no llega al contraste mínimo (detalle abajo).",
+      "Un solo título principal por página y el idioma declarado como español de Argentina en todas."
+     ],
+     "en": [
+      "Light theme, desktop (1440 px): 0 errors across the 11 pages.",
+      "Light theme, mobile (375 px): 0 errors and no horizontal scrolling.",
+      "Dark theme, desktop: 0 errors in 10 of the 11 pages.",
+      "Search in the dark theme: the match highlight falls short of the minimum contrast (details below).",
+      "One main heading per page and the language declared as Argentine Spanish on every page."
+     ]
+    }
+   },
+   {
+    "t": "audit",
+    "h": {
+     "es": "Contraste",
+     "en": "Contrast"
+    },
+    "note": {
+     "es": "Combinaciones clave en los dos temas. Umbral: 4.5:1 para texto normal. La única que no cumple es el resaltado de la búsqueda en tema oscuro, porque el texto hereda el color secundario.",
+     "en": "Key combinations in both themes. Threshold: 4.5:1 for normal text. The only one that fails is the search highlight in the dark theme, because the text inherits the secondary colour."
+    },
+    "cols": {
+     "pair": {
+      "es": "Combinación",
+      "en": "Combination"
+     },
+     "ratio": {
+      "es": "Ratio",
+      "en": "Ratio"
+     },
+     "result": {
+      "es": "Resultado",
+      "en": "Result"
+     },
+     "fix": {
+      "es": "Corrección",
+      "en": "Fix"
+     }
+    },
+    "fail": {
+     "es": "No cumple",
+     "en": "Fails"
+    },
+    "pass": {
+     "es": "Sí cumple",
+     "en": "Passes"
+    },
+    "nofix": {
+     "es": "No requiere cambios",
+     "en": "No change needed"
+    },
+    "rows": [
+     {
+      "fg": "#A9A8B8",
+      "bg": "#6B5700",
+      "pair": {
+       "es": "Coincidencia resaltada en la búsqueda: --muted sobre --mark (tema oscuro)",
+       "en": "Highlighted search match: --muted on --mark (dark theme)"
+      },
+      "ratio": "3.00:1",
+      "pass": false,
+      "fix": {
+       "es": "Dar a la marca el color --ink en lugar de heredarlo: 6.21:1",
+       "en": "Give the mark the --ink colour instead of inheriting it: 6.21:1"
+      },
+      "fixfg": "#F1F0F7",
+      "fixbg": "#6B5700"
+     },
+     {
+      "fg": "#5B5A6B",
+      "bg": "#FFE680",
+      "pair": {
+       "es": "La misma coincidencia en tema claro",
+       "en": "The same match in the light theme"
+      },
+      "ratio": "5.41:1",
+      "pass": true
+     },
+     {
+      "fg": "#1F1F24",
+      "bg": "#F2B8D2",
+      "pair": {
+       "es": "Texto oscuro sobre el mosaico de Diseño, UX y UI (tema claro)",
+       "en": "Dark text on the Design, UX and UI tile (light theme)"
+      },
+      "ratio": "9.82:1",
+      "pass": true
+     },
+     {
+      "fg": "#5B5A6B",
+      "bg": "#E9E8F6",
+      "pair": {
+       "es": "Texto --muted sobre el fondo lavanda (tema claro)",
+       "en": "--muted text on the lavender background (light theme)"
+      },
+      "ratio": "5.56:1",
+      "pass": true
+     },
+     {
+      "fg": "#BDBCCB",
+      "bg": "#24242A",
+      "pair": {
+       "es": "Texto secundario sobre bloque carbón",
+       "en": "Secondary text on a charcoal block"
+      },
+      "ratio": "8.24:1",
+      "pass": true
+     },
+     {
+      "fg": "#1F1F24",
+      "bg": "#93BBA9",
+      "pair": {
+       "es": "Texto oscuro sobre el mosaico verde agua (tema oscuro)",
+       "en": "Dark text on the sea green tile (dark theme)"
+      },
+      "ratio": "7.75:1",
+      "pass": true
+     },
+     {
+      "fg": "#A9ACF7",
+      "bg": "#1E1E23",
+      "pair": {
+       "es": "Link --l1 sobre panel (tema oscuro)",
+       "en": "--l1 link on a panel (dark theme)"
+      },
+      "ratio": "7.85:1",
+      "pass": true
+     }
+    ]
+   },
+   {
+    "t": "live",
+    "h": {
+     "es": "El sitio, en vivo",
+     "en": "The site, live"
+    },
+    "note": {
+     "es": "Sitio estático con Astro, búsqueda con Pagefind y deploy automático en GitHub Pages. Sin cookies ni analytics.",
+     "en": "Static site built with Astro, search with Pagefind and automatic deploys to GitHub Pages. No cookies and no analytics."
+    },
+    "src": "https://lpedaci.github.io/repo-servidor/",
+    "url": "https://lpedaci.github.io/repo-servidor/",
+    "label": {
+     "es": "El servidor de Lourdes",
+     "en": "Lourdes's server"
+    }
+   }
+  ],
+  "outcome": {
+   "h": {
+    "es": "Resultado",
+    "en": "Outcome"
+   },
+   "body": [
+    {
+     "es": "El material pasó de páginas sueltas de Notion a un sitio donde 160 cursos y 158 recursos se filtran, se comparan, se buscan y se guardan. La revisión con axe no encontró errores en el tema claro, ni en escritorio ni en celular, y detectó un único problema de contraste en el tema oscuro, con su corrección definida.",
+     "en": "The material went from loose Notion pages to a site where 160 courses and 158 resources can be filtered, compared, searched and saved. The axe review found no errors in the light theme, on desktop or mobile, and flagged a single contrast issue in the dark theme, with its fix defined."
+    }
+   ]
+  }
  }
 };
