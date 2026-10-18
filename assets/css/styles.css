@@ -181,17 +181,15 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   margin-top: 24px; color: var(--muted); font-size: 1.0625rem; line-height: 1.65; max-width: 60ch;
 }
 .hero__ctas { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
-/* LinkedIn: en escritorio, texto y flecha; en celular, solo el logo (el texto queda para lectores de pantalla) */
-.btn__logo { display: none; width: 20px; height: 20px; fill: currentColor; }
+/* LinkedIn y GitHub: en escritorio, logo y texto; en celular, solo el logo (el texto queda para lectores de pantalla) */
+.btn__logo { flex: none; width: 18px; height: 18px; fill: currentColor; }
 @media (max-width: 767px) {
   .hero__ctas { flex-wrap: nowrap; gap: 8px; }
   .hero__ctas .btn { padding: 0 16px; gap: 8px; }
   .hero__ctas .btn--primary { flex: 1 1 auto; justify-content: center; min-width: 0; }
   .btn--in { flex: none; width: 48px; padding: 0; justify-content: center; }
-  .btn--in .btn__logo { display: block; }
+  .btn--in .btn__logo { width: 20px; height: 20px; }
   .btn--in .btn__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .btn--in .ph { display: none; }
-  .hero__ctas .js-cv .ph { display: none; }
 }
 @media (max-width: 359px) { .hero__ctas .btn--primary .ph { display: none; } }
 
@@ -278,9 +276,7 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   .tile--intro { padding-inline: 32px; }
   .hero__ctas { flex-wrap: nowrap; gap: 8px; }
   .hero__ctas .btn--in { flex: none; width: 44px; padding: 0; justify-content: center; }
-  .btn--in .btn__logo { display: block; }
   .btn--in .btn__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .btn--in .ph { display: none; }
 }
 
 /* Borde que se ilumina donde está el cursor (--mx y --my los pone main.js) */
@@ -551,12 +547,15 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 
 .rows { border-top: 1px solid var(--line); align-self: end; }
 .row {
-  display: grid; grid-template-columns: 1fr auto; grid-template-areas: "name icon" "desc icon";
+  display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "logo name icon" "logo desc icon";
   align-items: center; gap: 2px 16px; padding: 18px 4px; min-height: 72px;
   border-bottom: 1px solid var(--line); text-decoration: none;
   transition: background-color 0.25s var(--ease);
 }
 .row:hover { background: var(--surface); }
+/* Logo de cada fila de contacto: LinkedIn, GitHub y documento para el CV */
+.row__logo { grid-area: logo; width: 22px; height: 22px; fill: currentColor; color: var(--text-2); }
+.row__logo--line { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .row__name { grid-area: name; font: 600 1.125rem/1.2 var(--f-display); }
 .row__desc { grid-area: desc; color: var(--muted); font-size: 0.8125rem; }
 .row .ph { grid-area: icon; font-size: 1.2rem; color: var(--it); transition: transform 0.25s var(--ease); }
