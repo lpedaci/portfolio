@@ -12,7 +12,7 @@ window.I18N = {
     navPath: 'Recorrido',
     navContact: 'Contacto',
     langLabel: 'Idioma',
-    headline: 'De la capacitación y coordinación de proyectos al <em>mundo IT</em>.',
+    headline: 'De la capacitación y coordinación de proyectos al <em>mundo IT</em>',
     lead: 'Provengo del área de capacitación técnica y la coordinación de proyectos con clientes reales en un entorno de incubadora ágil híbrida. Busco pivotear a un equipo de IT con foco en análisis funcional, relevamiento de requisitos y gestión ágil de proyectos.',
     ctaWork: 'Ver proyectos',
     ctaLinkedin: 'Conoceme en LinkedIn',
@@ -52,7 +52,7 @@ window.I18N = {
     noscript: 'Los proyectos necesitan JavaScript para mostrarse.',
 
     pathTitle: 'Recorrido',
-    pathLead: 'De la <span class="c-cap">capacitación técnica</span> y la coordinación de proyectos con clientes reales, hacia el <span class="c-it">mundo IT</span>.',
+    pathLead: 'De la <span class="c-cap">capacitación técnica</span> y la coordinación de proyectos con clientes reales, hacia el <span class="c-it">mundo IT</span>',
     pathFrom: 'desde',
     pathTo: 'hacia',
     path: [
@@ -74,7 +74,7 @@ window.I18N = {
       { cat: 'cont', name: 'Video y medios', items: ['Camtasia', 'CapCut', 'Adobe Premiere', 'vMix', 'Edición y subtitulado', 'YouTube', 'Contenido para redes'] }
     ],
 
-    contactTitle: '¿Te interesa mi perfil? Hablemos.',
+    contactTitle: '¿Te interesa mi perfil? Hablemos',
     rowLinkedin: 'perfil profesional',
     rowGithub: 'código y sitios publicados',
     rowCv: 'currículum en PDF',
@@ -108,7 +108,7 @@ window.I18N = {
     navPath: 'Path',
     navContact: 'Contact',
     langLabel: 'Language',
-    headline: 'From training and project coordination to the <em>IT world</em>.',
+    headline: 'From training and project coordination to the <em>IT world</em>',
     lead: 'My background is in technical training and in coordinating projects with real clients inside a hybrid agile incubator. I want to join an IT team focused on functional analysis, requirements gathering and agile project management.',
     ctaWork: 'See projects',
     ctaLinkedin: 'Meet me on LinkedIn',
@@ -148,7 +148,7 @@ window.I18N = {
     noscript: 'Projects need JavaScript to display.',
 
     pathTitle: 'Path',
-    pathLead: 'From <span class="c-cap">technical training</span> and coordinating projects with real clients, into the <span class="c-it">IT world</span>.',
+    pathLead: 'From <span class="c-cap">technical training</span> and coordinating projects with real clients, into the <span class="c-it">IT world</span>',
     pathFrom: 'from',
     pathTo: 'towards',
     path: [
@@ -170,7 +170,7 @@ window.I18N = {
       { cat: 'cont', name: 'Video and media', items: ['Camtasia', 'CapCut', 'Adobe Premiere', 'vMix', 'Video editing and subtitling', 'YouTube', 'Social media content'] }
     ],
 
-    contactTitle: 'Interested in my profile? Let’s talk.',
+    contactTitle: 'Interested in my profile? Let’s talk',
     rowLinkedin: 'professional profile',
     rowGithub: 'code and published sites',
     rowCv: 'résumé as PDF',

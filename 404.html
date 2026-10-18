@@ -11,7 +11,7 @@
     (() => {
       const seg = location.pathname.split('/').filter(Boolean)[0];
       const root = /github\.io$/.test(location.hostname) && seg ? `/${seg}/` : '/';
-      ['assets/css/fonts.css?v=202610152149', 'assets/css/icons.css?v=202610152149'].forEach((href) => {
+      ['assets/css/fonts.css?v=202610181054', 'assets/css/icons.css?v=202610181054'].forEach((href) => {
         const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = root + href; document.head.appendChild(l);
       });
       [['icon', 'assets/img/favicon.svg', 'image/svg+xml'], ['apple-touch-icon', 'assets/img/apple-touch-icon.png', '']].forEach(([rel, href, type]) => {
@@ -25,20 +25,35 @@
       --bg: #0D0E12; --surface: #15171C; --surface-2: #1B1D23; --text: #F2F2EF; --muted: #9A9AA3; --line: #24262E;
       --it: #35C2B1; --cap: #EC7FB0; --on-accent: #0D0E12;
       --f-display: 'Schibsted Grotesk', system-ui, sans-serif; --f-body: 'Hanken Grotesk', system-ui, sans-serif; --f-mono: 'JetBrains Mono', ui-monospace, monospace;
-      --ease: cubic-bezier(0.16, 1, 0.3, 1); --gutter: 16px; color-scheme: dark;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1); --gutter: 16px; --nav-h: 64px; --r-pill: 999px; color-scheme: dark;
     }
-    @media (min-width: 768px) { :root { --gutter: 32px; } }
+    @media (min-width: 768px) { :root { --gutter: 24px; } }
     *, *::before, *::after { box-sizing: border-box; }
     body { margin: 0; min-height: 100dvh; display: flex; flex-direction: column; background: var(--bg); color: var(--text); font: 400 1rem/1.6 var(--f-body); -webkit-font-smoothing: antialiased; }
     a { color: inherit; } button { font: inherit; color: inherit; } p, h1 { margin: 0; }
     :focus-visible { outline: 2px solid var(--it); outline-offset: 3px; border-radius: 4px; }
-    .wrap { width: 100%; max-width: 1280px; margin-inline: auto; padding-inline: var(--gutter); }
+    .wrap { width: 100%; max-width: 1440px; margin-inline: auto; padding-inline: var(--gutter); }
 
     .skip { position: absolute; left: var(--gutter); top: -100px; z-index: 30; background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 999px; font-weight: 500; text-decoration: none; }
     .skip:focus { top: 12px; }
-    .nav { border-bottom: 1px solid var(--line); }
-    .nav__inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .nav__brand { display: inline-flex; align-items: center; min-height: 44px; font: 600 1.0625rem/1 var(--f-display); letter-spacing: -0.01em; text-decoration: none; }
+    /* Barra: la misma de la home (assets/css/styles.css, sección Navegación) */
+    .nav { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .nav__inner { height: var(--nav-h); display: flex; align-items: center; gap: 24px; }
+    .nav__brand { display: inline-flex; align-items: center; min-height: 44px; font: 600 1.0625rem/1 var(--f-display); letter-spacing: -0.01em; text-decoration: none; margin-right: auto; }
+    .nav__brand::before { content: ">_"; margin-right: 8px; font: 500 0.875rem/1 var(--f-mono); color: var(--it); }
+    .nav ul { list-style: none; margin: 0; padding: 0; }
+    .nav__links { display: none; gap: 28px; }
+    .nav__links a { position: relative; display: inline-block; padding-block: 6px; color: var(--muted); text-decoration: none; font-size: 0.9375rem; transition: color 0.2s var(--ease); }
+    .nav__links a:hover { color: var(--text); }
+    @media (min-width: 720px) { .nav__links { display: flex; } }
+    .nav__toggle { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border: 1px solid var(--line); border-radius: var(--r-pill); background: none; cursor: pointer; color: var(--text); }
+    .nav__toggle .ph { font-size: 1.25rem; }
+    @media (min-width: 720px) { .nav__toggle { display: none; } }
+    @media (max-width: 719px) {
+      .nav__inner { gap: 12px; }
+      .nav.is-open .nav__links { display: flex; flex-direction: column; gap: 0; position: absolute; left: 0; right: 0; top: var(--nav-h); padding: 8px var(--gutter) 16px; background: var(--bg); border-bottom: 1px solid var(--line); }
+      .nav.is-open .nav__links a { display: flex; align-items: center; min-height: 48px; font-size: 1.0625rem; border-bottom: 1px solid var(--line); }
+    }
     .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
     .lang button { font: 500 0.75rem/1 var(--f-mono); letter-spacing: 0.04em; background: none; border: 0; border-radius: 999px; min-width: 40px; min-height: 32px; padding: 0 10px; cursor: pointer; color: var(--muted); }
     .lang button[aria-pressed="true"] { background: var(--surface-2); color: var(--text); }
@@ -139,10 +154,18 @@
   <header class="nav">
     <div class="wrap nav__inner">
       <a class="nav__brand js-home" href="/">Lourdes Pedaci</a>
+      <nav aria-label="Principal">
+        <ul class="nav__links" id="nav-links">
+          <li><a class="js-sec" data-sec="proyectos" href="/#proyectos" data-i18n="navWork">Proyectos</a></li>
+          <li><a class="js-sec" data-sec="recorrido" href="/#recorrido" data-i18n="navPath">Recorrido</a></li>
+          <li><a class="js-sec" data-sec="contacto" href="/#contacto" data-i18n="navContact">Contacto</a></li>
+        </ul>
+      </nav>
       <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="langLabel">
         <button type="button" data-lang="es" aria-pressed="true">ES</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú" data-i18n-aria="menuOpen"><i class="ph ph-list" aria-hidden="true"></i></button>
     </div>
   </header>
 
@@ -242,6 +265,7 @@
           lead1: 'Puede que el enlace esté desactualizado o que el proyecto haya cambiado de lugar.',
           lead2: 'Todo lo demás sigue a un clic.',
           home: 'Volver al inicio', work: 'Ver proyectos',
+          navWork: 'Proyectos', navPath: 'Recorrido', navContact: 'Contacto', menuOpen: 'Abrir menú', menuClose: 'Cerrar menú',
           newTab: '(se abre en una pestaña nueva)'
         },
         en: {
@@ -251,6 +275,7 @@
           lead1: 'The link may be outdated, or the project may have moved.',
           lead2: 'Everything else is one click away.',
           home: 'Back to home', work: 'See projects',
+          navWork: 'Projects', navPath: 'Path', navContact: 'Contact', menuOpen: 'Open menu', menuClose: 'Close menu',
           newTab: '(opens in a new tab)'
         }
       };
@@ -279,7 +304,24 @@
         document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
         document.querySelectorAll('.js-home').forEach((a) => { a.href = `${root}?lang=${lang}`; });
         document.querySelectorAll('.js-work').forEach((a) => { a.href = `${root}?lang=${lang}#proyectos`; });
+        document.querySelectorAll('.js-sec').forEach((a) => { a.href = `${root}?lang=${lang}#${a.dataset.sec}`; });
+        syncMenu();
       }
+
+      // Menú en pantallas chicas, igual que en el resto del sitio: se cierra al elegir, con Escape o al tocar fuera
+      const nav = document.querySelector('.nav');
+      const toggle = nav.querySelector('.nav__toggle');
+      function syncMenu() {
+        const open = nav.classList.contains('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', T[lang][open ? 'menuClose' : 'menuOpen']);
+        toggle.querySelector('.ph').className = `ph ${open ? 'ph-x' : 'ph-list'}`;
+      }
+      const setOpen = (open) => { nav.classList.toggle('is-open', open); syncMenu(); };
+      toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+      nav.querySelector('.nav__links').addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); toggle.focus(); } });
+      document.addEventListener('click', (e) => { if (!nav.contains(e.target)) setOpen(false); });
 
       document.querySelectorAll('[data-lang]').forEach((b) => b.addEventListener('click', () => {
         lang = b.dataset.lang;

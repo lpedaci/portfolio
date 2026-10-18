@@ -87,6 +87,8 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   font: 600 1.0625rem/1 var(--f-display); letter-spacing: -0.01em;
   text-decoration: none; margin-right: auto;
 }
+/* Guiño de consola junto al nombre */
+.nav__brand::before { content: ">_"; margin-right: 8px; font: 500 0.875rem/1 var(--f-mono); color: var(--it); }
 .nav__links { display: none; gap: 28px; }
 .nav__links a {
   color: var(--muted); text-decoration: none; font-size: 0.9375rem;
@@ -145,7 +147,9 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 
 /* ---------- Encabezado de sección ---------- */
 .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 28px; }
-.sec-head__num { color: var(--muted); font-size: 0.875rem; }
+/* Prompt de consola antes de cada título de sección: "~$ cd" */
+.sec-head__num { color: var(--muted); font-size: 0.9375rem; white-space: nowrap; }
+.sec-head__dollar { color: var(--it); }
 .sec-head__title {
   font: 600 clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem)/1.1 var(--f-display); letter-spacing: -0.02em;
 }
@@ -166,6 +170,13 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   letter-spacing: -0.025em; text-wrap: balance; max-width: 18ch;
 }
 .hero__title em { font-style: normal; color: var(--it); }
+/* Cursor de terminal al final del título (quieto con movimiento reducido) */
+.hero__title::after {
+  content: ""; display: inline-block; width: 0.42em; height: 0.08em; margin-left: 0.08em;
+  background: var(--it); vertical-align: 0.02em;
+}
+@media (prefers-reduced-motion: no-preference) { .hero__title::after { animation: caret-blink 1.1s steps(1) infinite; } }
+@keyframes caret-blink { 50% { opacity: 0; } }
 .hero__lead {
   margin-top: 24px; color: var(--muted); font-size: 1.0625rem; line-height: 1.65; max-width: 60ch;
 }
@@ -508,6 +519,7 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 /* Habilidades: cierre del recorrido. El color de cada grupo sigue el código del sitio */
 .skills { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--line); }
 .skills__title { font: 600 clamp(1.375rem, 1.15rem + 0.8vw, 1.75rem)/1.2 var(--f-display); letter-spacing: -0.015em; margin: 0 0 24px; }
+.skills__title::before { content: "~$ ls"; margin-right: 12px; font: 400 0.9375rem/1 var(--f-mono); color: var(--muted); vertical-align: 0.15em; }
 /* Mosaico: cada tarjeta mide lo que su contenido y la siguiente se apila debajo (sin huecos verticales).
    Las columnas se recalculan solas con el ancho. */
 .skills__grid { columns: 1; column-gap: 12px; }
