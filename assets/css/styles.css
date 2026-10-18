@@ -180,6 +180,8 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .hero__lead {
   margin-top: 24px; color: var(--muted); font-size: 1.0625rem; line-height: 1.65; max-width: 60ch;
 }
+/* Punto clave del párrafo: un poco más claro y en peso medio, sin negrita pesada */
+.hero__lead strong { font-weight: 500; color: var(--text-2); }
 .hero__ctas { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
 /* LinkedIn y GitHub: en escritorio, logo y texto; en celular, solo el logo (el texto queda para lectores de pantalla) */
 .btn__logo { flex: none; width: 18px; height: 18px; fill: currentColor; }

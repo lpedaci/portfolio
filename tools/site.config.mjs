@@ -11,8 +11,8 @@ export const SITE = {
     en: 'Lourdes Pedaci | Functional analysis and IT'
   },
   description: {
-    es: 'De la capacitación y coordinación de proyectos al mundo IT. Relevamiento de requisitos, Scrum, UX/UI y coordinación de equipos con clientes reales.',
-    en: 'From training and project coordination to the IT world. Requirements gathering, Scrum, UX/UI and coordinating teams with real clients.'
+    es: 'De la capacitación y coordinación de proyectos al mundo IT. Equipos de producto: problemas de usuarios, requisitos claros y desarrollo ágil de punta a punta.',
+    en: 'From training and project coordination to the IT world. Product teams: user problems, clear requirements and agile development end to end.'
   },
   ogImage: { path: 'assets/img/og-image.jpg', width: 1200, height: 630,
     alt: 'Lourdes Pedaci: de la capacitación y coordinación de proyectos al mundo IT. Ícono de un gatito tecnológico.' }
