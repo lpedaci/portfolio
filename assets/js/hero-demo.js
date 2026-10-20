@@ -1,7 +1,8 @@
 /* Animación del hero: una app para sacar turnos que se diseña y se usa (marcado en index.html, estilos en styles.css).
    1 boceto → 2 wireframe → 3 interfaz (se elige fecha y horario y se confirma) → 4 producto: turno confirmado.
    Las escenas se cambian con data-scene; los toques mueven un círculo hasta cada elemento y lo marcan.
-   Se pausa con el botón, cuando sale de la pantalla y con la pestaña oculta. Movimiento reducido: queda en la escena 4. */
+   Se pausa mientras el cursor está encima (o con el foco del teclado, o con un toque en pantallas táctiles),
+   cuando sale de la pantalla y con la pestaña oculta. Movimiento reducido: queda en la escena 4. */
 (() => {
   const root = document.querySelector('.demo');
   if (!root) return;
@@ -10,7 +11,6 @@
   const steps = [...root.querySelectorAll('.demo__steps li')];
   const screen = $('.device__screen');
   const touch = $('.touch');
-  const toggle = $('.demo__toggle');
 
   let paused = false;
   let visible = true;
@@ -76,15 +76,13 @@
     if (alive()) run();
   }
 
-  toggle.addEventListener('click', () => {
-    paused = !paused;
-    root.classList.toggle('is-paused', paused);
-    toggle.setAttribute('aria-pressed', String(paused));
-    toggle.dataset.i18nAria = paused ? 'animPlay' : 'animPause';
-    const t = typeof I18N !== 'undefined' ? I18N[document.documentElement.lang === 'en' ? 'en' : 'es'] : null;
-    if (t) toggle.setAttribute('aria-label', t[toggle.dataset.i18nAria]);
-    toggle.querySelector('.ph').className = `ph ${paused ? 'ph-play' : 'ph-pause'}`;
-  });
+  // Pausa: con el cursor encima (y sigue al salir), con el foco del teclado o, en táctiles, tocando la animación
+  const setPaused = (v) => { paused = v; root.classList.toggle('is-paused', v); };
+  root.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') setPaused(true); });
+  root.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') setPaused(false); });
+  root.addEventListener('pointerup', (e) => { if (e.pointerType !== 'mouse') setPaused(!paused); });
+  root.addEventListener('focus', () => setPaused(true));
+  root.addEventListener('blur', () => setPaused(false));
   new IntersectionObserver((es) => { visible = es.some((e) => e.isIntersecting); }).observe(root);
 
   run();

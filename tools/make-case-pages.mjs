@@ -33,9 +33,9 @@ const page = (p) => `<!doctype html>
 ${headMeta({ path: `casos/${p.slug}/`, prefix: '../../', title: `${p.title.es} | Porfolio de Lourdes Pedaci`, description: p.desc.es, type: 'article', ...ogImage(p) })}
   <link rel="preload" href="../../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/fonts.css?v=202610201537">
-  <link rel="stylesheet" href="../../assets/css/icons.css?v=202610201537">
-  <link rel="stylesheet" href="../../assets/css/styles.css?v=202610201537">
+  <link rel="stylesheet" href="../../assets/css/fonts.css?v=202610201539">
+  <link rel="stylesheet" href="../../assets/css/icons.css?v=202610201539">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=202610201539">
 </head>
 <body data-slug="${p.slug}">
   <a class="skip" href="#main" data-i18n="skip">Ir al contenido</a>
@@ -71,11 +71,11 @@ ${headMeta({ path: `casos/${p.slug}/`, prefix: '../../', title: `${p.title.es} |
       <a class="foot__top" href="#main"><span data-i18n="backTop">Volver arriba</span><i class="ph ph-arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
-  <script src="../../assets/js/i18n.js?v=202610201537"></script>
-  <script src="../../assets/js/projects.js?v=202610201537"></script>
-  <script src="../../assets/js/cases.js?v=202610201537"></script>
-  <script src="../../assets/js/case.js?v=202610201537"></script>
-  <script src="../../assets/js/nav.js?v=202610201537"></script>
+  <script src="../../assets/js/i18n.js?v=202610201539"></script>
+  <script src="../../assets/js/projects.js?v=202610201539"></script>
+  <script src="../../assets/js/cases.js?v=202610201539"></script>
+  <script src="../../assets/js/case.js?v=202610201539"></script>
+  <script src="../../assets/js/nav.js?v=202610201539"></script>
 </body>
 </html>
 `;

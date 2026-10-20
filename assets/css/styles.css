@@ -438,15 +438,11 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   .pop--req { right: -18%; top: 50%; width: 150px; }
 }
 
-.demo__toggle {
-  position: absolute; right: 0; bottom: 0; width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer;
-  border: 1px solid var(--line-2); border-radius: var(--r-pill); background: var(--surface); color: var(--muted);
-}
-.demo__toggle:hover { color: var(--text); border-color: var(--muted); }
 .demo.is-paused *, .demo.is-paused *::before, .demo.is-paused *::after { animation-play-state: paused !important; }
+.demo:focus-visible { outline: 2px solid var(--it); outline-offset: 6px; border-radius: 24px; }
 @media (prefers-reduced-motion: reduce) {
   .demo *, .demo *::before, .demo *::after { transition: none !important; animation: none !important; }
-  .demo__toggle, .touch, .confetti { display: none; }
+  .touch, .confetti { display: none; }
 }
 
 
