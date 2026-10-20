@@ -8,11 +8,14 @@
    al más antiguo: por fecha de fin y, si empatan, por fecha de inicio; sin mes, el inicio cuenta
    como enero y el fin como diciembre. Con fechas iguales, vale el orden del array.
    result: null si no hay un dato defendible.
+   cover: imagen de la card (800x500, en assets/img/covers). video: true suma un botón de play sobre la portada.
+   Sin cover, la card muestra una portada generada con el color de su categoría.
    El detalle de cada caso vive en cases.js, con el mismo slug. */
 
 window.PROJECTS = [
   {
     slug: 'servidor',
+    cover: 'assets/img/covers/servidor.jpg',
     cat: 'it',
     also: ['cap'],
     badges: ['UX'],
@@ -28,6 +31,7 @@ window.PROJECTS = [
   },
   {
     slug: 'primer-empleo',
+    cover: 'assets/img/covers/primer-empleo.jpg',
     cat: 'cap',
     also: ['it'],
     alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
@@ -44,6 +48,7 @@ window.PROJECTS = [
   },
   {
     slug: 'proyectos-aplicados',
+    cover: 'assets/img/covers/proyectos-aplicados.jpg',
     cat: 'it',
     also: ['cap'],
     dates: ['2024', '2026'],
@@ -58,6 +63,7 @@ window.PROJECTS = [
   },
   {
     slug: 'riesgos-digitales',
+    cover: 'assets/img/covers/riesgos-digitales.jpg',
     cat: 'it',
     also: ['cont'],
     dates: ['2024-07', '2024-11'],
@@ -73,6 +79,7 @@ window.PROJECTS = [
   },
   {
     slug: 'infraestructura-it',
+    cover: 'assets/img/covers/infraestructura-it.jpg',
     cat: 'it',
     also: ['cap'],
     dates: ['2022-07', '2024-12'],
@@ -87,6 +94,7 @@ window.PROJECTS = [
   },
   {
     slug: 'edulabs',
+    cover: 'assets/img/covers/edulabs.jpg',
     cat: 'it',
     dates: ['2024-01', '2024-03'],
     tags: { es: ['ux/ui', 'accesibilidad'], en: ['ux/ui', 'accessibility'] },
@@ -101,6 +109,7 @@ window.PROJECTS = [
   },
   {
     slug: 'auditorias-ux',
+    cover: 'assets/img/covers/auditorias-ux.jpg',
     cat: 'it',
     dates: ['2026-03', '2026-11'],
     tags: { es: ['ux/ui', 'auditoría'], en: ['ux/ui', 'audit'] },
@@ -115,6 +124,7 @@ window.PROJECTS = [
   },
   {
     slug: 'auditoria-turnos',
+    cover: 'assets/img/covers/auditoria-turnos.jpg',
     cat: 'it',
     dates: ['2026-10', '2026-10'],
     tags: { es: ['ux/ui', 'accesibilidad'], en: ['ux/ui', 'accessibility'] },
@@ -128,21 +138,8 @@ window.PROJECTS = [
     skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Lighthouse', 'PageSpeed Insights'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Lighthouse', 'PageSpeed Insights'] }
   },
   {
-    slug: 'rediseno-portfolio',
-    cat: 'it',
-    dates: ['2026-07', '2026-07'],
-    tags: { es: ['ux/ui', 'design system'], en: ['ux/ui', 'design system'] },
-    badges: ['UX'],
-    title: { es: 'Auditoría y rediseño de mi portfolio versión 2.0', en: 'Audit and redesign of my portfolio version 2.0' },
-    desc: {
-      es: 'Auditoría heurística y de accesibilidad de mi portfolio anterior, y el design system que salió de ella.',
-      en: 'A heuristic and accessibility audit of my previous portfolio, and the design system that came out of it.'
-    },
-    result: { es: '11 hallazgos, 7 corregidos', en: '11 findings, 7 fixed' },
-    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Design tokens', 'Node'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Design tokens', 'Node'] }
-  },
-  {
     slug: 'sistemas-operativos',
+    cover: 'assets/img/covers/sistemas-operativos.jpg',
     cat: 'cap',
     dates: ['2026-03', '2026-11'],
     tags: { es: ['sistemas', 'autoevaluación'], en: ['systems', 'self-assessment'] },
@@ -156,6 +153,7 @@ window.PROJECTS = [
   },
   {
     slug: 'tedxtecno',
+    cover: 'assets/img/covers/tedxtecno.jpg',
     cat: 'cap',
     dates: ['2022-08', '2022-11'],
     tags: { es: ['oratoria', 'currículum'], en: ['public speaking', 'curriculum'] },
@@ -169,6 +167,8 @@ window.PROJECTS = [
   },
   {
     slug: 'docente-era-digital',
+    cover: 'assets/img/covers/docente-era-digital.jpg',
+    video: true,
     cat: 'cont',
     dates: ['2025-10', '2025-10'],
     tags: { es: ['motion', 'tpack'], en: ['motion', 'tpack'] },
@@ -182,6 +182,8 @@ window.PROJECTS = [
   },
   {
     slug: 'expo-smart-cities',
+    cover: 'assets/img/covers/expo-smart-cities.jpg',
+    video: true,
     cat: 'cont',
     dates: ['2024-11', '2024-11'],
     tags: { es: ['video', 'apertura'], en: ['video', 'opening'] },
@@ -195,6 +197,8 @@ window.PROJECTS = [
   },
   {
     slug: 'the-crow',
+    cover: 'assets/img/covers/the-crow.jpg',
+    video: true,
     cat: 'cont',
     dates: ['2024-06', '2024-11'],
     tags: { es: ['animación', 'ia'], en: ['animation', 'ai'] },
@@ -208,6 +212,8 @@ window.PROJECTS = [
   },
   {
     slug: 'erp-motion-graphics',
+    cover: 'assets/img/covers/erp-motion-graphics.jpg',
+    video: true,
     cat: 'cont',
     dates: ['2019-10', '2019-10'],
     tags: { es: ['motion', 'erp'], en: ['motion', 'erp'] },

@@ -19,7 +19,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 const ogImage = (p) => {
   const image = `assets/img/og/${p.slug}.jpg`;
   if (!existsSync(join(root, image))) { console.warn(`  sin tarjeta propia: ${image} (correr python tools/make-og.py)`); return {}; }
-  return { image, imageAlt: `${p.title.es}: proyecto del portfolio de Lourdes Pedaci. Ícono de un gatito tecnológico.` };
+  return { image, imageAlt: `${p.title.es}: caso del porfolio de Lourdes Pedaci, Experience Designer, con una captura del proyecto.` };
 };
 
 const page = (p) => `<!doctype html>
@@ -27,21 +27,21 @@ const page = (p) => `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(p.title.es)} | Lourdes Pedaci</title>
+  <title>${esc(p.title.es)} | Porfolio de Lourdes Pedaci</title>
   <meta name="description" content="${esc(p.desc.es)}">
-  <meta name="theme-color" content="#0D0E12">
-${headMeta({ path: `casos/${p.slug}/`, prefix: '../../', title: `${p.title.es} | Lourdes Pedaci`, description: p.desc.es, type: 'article', ...ogImage(p) })}
+  <meta name="theme-color" content="#F7F5F0">
+${headMeta({ path: `casos/${p.slug}/`, prefix: '../../', title: `${p.title.es} | Porfolio de Lourdes Pedaci`, description: p.desc.es, type: 'article', ...ogImage(p) })}
   <link rel="preload" href="../../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/fonts.css?v=202610181112">
-  <link rel="stylesheet" href="../../assets/css/icons.css?v=202610181112">
-  <link rel="stylesheet" href="../../assets/css/styles.css?v=202610181112">
+  <link rel="stylesheet" href="../../assets/css/fonts.css?v=202610201337">
+  <link rel="stylesheet" href="../../assets/css/icons.css?v=202610201337">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=202610201337">
 </head>
 <body data-slug="${p.slug}">
   <a class="skip" href="#main" data-i18n="skip">Ir al contenido</a>
   <header class="nav">
     <div class="wrap nav__inner">
-      <a class="nav__brand" href="../../">Lourdes Pedaci</a>
+      <a class="nav__brand" href="../../"><span class="brand__mark" aria-hidden="true"></span><span class="brand__word" data-i18n="brand">Porfolio</span><span class="brand__name">Lourdes Pedaci</span></a>
       <nav aria-label="Principal">
         <ul class="nav__links" id="nav-links">
           <li><a class="is-active" aria-current="page" href="../../#proyectos" data-nav="proyectos" data-i18n="navWork">Proyectos</a></li>
@@ -71,11 +71,11 @@ ${headMeta({ path: `casos/${p.slug}/`, prefix: '../../', title: `${p.title.es} |
       <a class="foot__top" href="#main"><span data-i18n="backTop">Volver arriba</span><i class="ph ph-arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
-  <script src="../../assets/js/i18n.js?v=202610181112"></script>
-  <script src="../../assets/js/projects.js?v=202610181112"></script>
-  <script src="../../assets/js/cases.js?v=202610181112"></script>
-  <script src="../../assets/js/case.js?v=202610181112"></script>
-  <script src="../../assets/js/nav.js?v=202610181112"></script>
+  <script src="../../assets/js/i18n.js?v=202610201337"></script>
+  <script src="../../assets/js/projects.js?v=202610201337"></script>
+  <script src="../../assets/js/cases.js?v=202610201337"></script>
+  <script src="../../assets/js/case.js?v=202610201337"></script>
+  <script src="../../assets/js/nav.js?v=202610201337"></script>
 </body>
 </html>
 `;

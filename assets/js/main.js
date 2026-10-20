@@ -51,32 +51,28 @@
     // also: categorías adicionales del proyecto (por ejemplo IT que además fue capacitación).
     const tags = [...p.tags[L].map((x) => [p.cat, x]), ...(p.also || []).map((c) => [c, p.alsoTags?.[c]?.[L] ?? t(CAT_KEY[c]).toLowerCase()])]
       .sort((a, b) => CAT_ORDER.indexOf(a[0]) - CAT_ORDER.indexOf(b[0]))
-      .map(([c, x]) => `<li style="--c: var(--${c})">${escape(x)}</li>`).join('')
-      // En celular se ven las que entran junto a la fecha (hasta 2); el resto se abre con este botón.
-      + '<li class="tags__more" hidden><button type="button" class="tags__btn" aria-expanded="false"></button></li>';
-    const MAX = 4; // en celular se ven las primeras 4 herramientas; el resto, como "+N" (la lista completa está en el caso)
-    const extra = p.skills[L].length - MAX;
-    const skills = p.skills[L].map((x, k) => `<li${k >= MAX ? ' class="chip--extra"' : ''}>${escape(x)}</li>`).join('')
-      // "+N": en celular cuenta las que pasan de 4; en la grilla de escritorio, las que no entran en una línea (fitTools)
-      + `<li class="chips__more" data-extra="${Math.max(extra, 0)}"${extra > 0 ? '' : ' hidden'}><span class="chips__n">+${extra}</span><span class="sr-only"> ${t('moreTools')}</span></li>`;
-    const result = p.result
-      ? `<dl class="card__result"><dt>${t('result')}</dt><dd>${escape(p.result[L])}</dd></dl>`
-      : '';
+      .map(([c, x]) => `<li style="--c: var(--${c})">${escape(x)}</li>`).join('');
+    // Sin "+N" en la tarjeta: las etiquetas van en una sola línea y la lista completa está en el caso.
+    // La tarjeta muestra lo esencial (portada, título, descripción y resultado); herramientas y detalle quedan en el caso.
+    const result = p.result ? `<p class="card__result"><span class="sr-only">${t('result')}: </span>${escape(p.result[L])}</p>` : '';
+    // Portada: captura del proyecto o, si no hay, una generada con el color de la categoría.
+    // Es decorativa (alt vacío): el título de la card ya nombra el proyecto.
+    const src = p.cover || '';
+    const media = src
+      ? `<img src="${src}" alt="" loading="lazy" decoding="async" width="800" height="500">${p.video ? '<span class="card__play" aria-hidden="true"><i class="ph ph-play"></i></span>' : ''}`
+      : `<span class="card__ph" aria-hidden="true"><span class="card__ph-n">${num}</span><span class="card__ph-t">${escape(t(CAT_KEY[p.cat]))}</span></span>`;
+    // Toda la tarjeta es un enlace: el título lleva el enlace y su ::after cubre la tarjeta
     return `
       <li style="--i:${i}" aria-label="${i + 1} / ${n}">
         <article class="card" data-cat="${p.cat}">
-          <div class="card__top">
-            <span class="card__num">${num} | ${escape(p.year)}</span>
+          <div class="card__media${src ? '' : ' card__media--ph'}" aria-hidden="true">${media}<span class="card__year">${escape(p.year)}</span></div>
+          <div class="card__body">
             <ul class="card__tags" aria-label="${t(CAT_KEY[p.cat])}">${tags}</ul>
-          </div>
-          <h3 class="card__title">${escape(p.title[L])}</h3>
-          <p class="card__desc">${escape(p.desc[L])}</p>
-          ${result}
-          <div class="card__foot">
-            <ul class="chips">${skills}</ul>
-            <a class="card__link" href="casos/${p.slug}/?lang=${L}">
-              <span>${t('viewCase')}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
-            </a>
+            <h3 class="card__title"><a class="card__hit" href="casos/${p.slug}/?lang=${L}">${escape(p.title[L])}</a></h3>
+            <p class="card__desc">${escape(p.desc[L])}</p>
+            <p class="sr-only">${escape(p.year)}</p>
+            ${result}
+            <span class="card__go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
           </div>
         </article>
       </li>`;
@@ -87,7 +83,6 @@
     track.innerHTML = list.map((p, i) => card(p, i, list.length)).join('');
     track.scrollLeft = 0;
     observePos();
-    fitTags();
     if (announce) {
       status.textContent = (list.length === 1 ? t('countOne') : t('countMany')).replace('{n}', list.length);
     }
@@ -108,7 +103,6 @@
     section.querySelectorAll('[data-view].seg__btn').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
     track.scrollLeft = 0;
     observeEdges();
-    fitTags();
   }
 
   /* ---------- Carrusel: flechas y estado de bordes ---------- */
@@ -135,74 +129,6 @@
     if (last !== first) edgeObserver.observe(last);
     else arrows[1].disabled = true;
   }
-
-  /* ---------- Etiquetas compactas (celular y vista grilla): hasta 2 junto a la fecha y un "+N" que despliega el resto ----------
-     El botón queda abierto hasta que se vuelve a tocar (no se oculta solo: WCAG 2.2.1). */
-  const MAX_TAGS = 2;
-  function setTagBtn(btn, hidden, open) {
-    btn.setAttribute('aria-expanded', String(open));
-    btn.innerHTML = open ? '<i class="ph ph-x" aria-hidden="true"></i>' : `+${hidden}`;
-    btn.setAttribute('aria-label', open ? t('lessTags') : t('moreTags').replace('{n}', hidden));
-  }
-  /* Herramientas en escritorio (grilla y carrusel): una sola línea y "+N" con las que no entran (la lista completa está en el caso) */
-  function fitTools() {
-    const on = !mobile.matches;
-    track.querySelectorAll('.card__foot .chips').forEach((ul) => {
-      const items = [...ul.children].filter((li) => !li.classList.contains('chips__more'));
-      const more = ul.querySelector('.chips__more');
-      const setMore = (n) => { more.hidden = n <= 0; more.querySelector('.chips__n').textContent = `+${n}`; };
-      ul.classList.toggle('is-fit', on);
-      items.forEach((li) => { li.hidden = false; });
-      setMore(on ? 0 : Number(more.dataset.extra));
-      if (!on) return;
-      let n = items.length;
-      while (n > 1 && ul.scrollWidth > ul.clientWidth + 1) {
-        n -= 1;
-        items.forEach((li, k) => { li.hidden = k >= n; });
-        setMore(items.length - n);
-      }
-    });
-  }
-
-  function fitTags() {
-    fitTools();
-    track.querySelectorAll('.card__tags').forEach((ul) => {
-      const tags = [...ul.children].filter((li) => !li.classList.contains('tags__more'));
-      const more = ul.querySelector('.tags__more');
-      const btn = more.querySelector('button');
-      ul.classList.remove('is-open', 'is-tight');
-      tags.forEach((li) => { li.hidden = false; });
-      more.hidden = true;
-      if (!(mobile.matches || state.view === 'grid') || tags.length <= 1) return;
-      const show = (n) => {
-        tags.forEach((li, k) => { li.hidden = k >= n; });
-        more.hidden = n >= tags.length;
-        if (n < tags.length) {
-          more.style.setProperty('--c', tags[n].style.getPropertyValue('--c')); // color de la primera etiqueta oculta
-          setTagBtn(btn, tags.length - n, false);
-        }
-      };
-      let n = Math.min(MAX_TAGS, tags.length);
-      show(n);
-      while (n > 1 && ul.scrollWidth > ul.clientWidth + 1) show(--n);
-      // Si ni una entra entera junto al "+N", se recorta con puntos suspensivos (el "+N" siempre queda visible)
-      if (ul.scrollWidth > ul.clientWidth + 1) ul.classList.add('is-tight');
-    });
-  }
-  track.addEventListener('click', (e) => {
-    const btn = e.target.closest('.tags__btn');
-    if (!btn) return;
-    const ul = btn.closest('.card__tags');
-    const open = !ul.classList.contains('is-open');
-    if (open) {
-      ul.classList.add('is-open');
-      ul.querySelectorAll('li').forEach((li) => { li.hidden = false; });
-      setTagBtn(btn, 0, true);
-    } else {
-      fitTags();
-      btn.focus();
-    }
-  });
 
   /* ---------- Carrusel en celular: posición "3 / 13" según la tarjeta visible ---------- */
   let posObserver;
@@ -294,7 +220,7 @@
     const stream = document.getElementById('hero-stream');
     if (stream) {
       // La lista va dos veces para que el desplazamiento no tenga corte; la copia se oculta a lectores de pantalla
-      const li = (hide) => TOOLS.map(([c, x]) => `<li style="--c:var(--${c})"${hide ? ' aria-hidden="true"' : ''}>${escape(x)}</li>`).join('');
+      const li = (hide) => TOOLS.map(([c, x]) => `<li style="--c:var(--${c}-bright)"${hide ? ' aria-hidden="true"' : ''}>${escape(x)}</li>`).join('');
       stream.innerHTML = li(false) + li(true);
       const pace = () => stream.style.setProperty('--dur', `${Math.round(stream.scrollWidth / 2 / 38)}s`);
       pace();
@@ -323,20 +249,15 @@
         requestAnimationFrame(tick);
       }
     }
-    // Borde que se ilumina donde está el cursor
-    document.querySelectorAll('.tile').forEach((el) => el.addEventListener('pointermove', (e) => {
-      const r = el.getBoundingClientRect();
-      el.style.setProperty('--mx', `${e.clientX - r.left}px`);
-      el.style.setProperty('--my', `${e.clientY - r.top}px`);
-    }));
+
   }
 
   /* ---------- Habilidades ---------- */
   function renderSkills() {
     skillsGrid.innerHTML = t('skills').map((g, i) => `
-      <li class="skill" data-cat="${g.cat}" style="--i:${i}">
+      <li class="skill" data-cat="${g.cat}"${g.tone ? ` data-tone="${g.tone}"` : ''} style="--i:${i}">
         <h4>${escape(g.name)}</h4>
-        <ul class="chips">${g.items.map((x) => `<li>${escape(x)}</li>`).join('')}</ul>
+        <ul class="chips">${g.items.map((x, k) => `<li style="--k:${k}">${escape(x)}</li>`).join('')}</ul>
       </li>`).join('');
     skillsGrid.querySelectorAll('.chips').forEach((ul) => { packChips(ul); chipsObserver?.observe(ul); });
   }
@@ -450,16 +371,8 @@
   section.querySelectorAll('[data-filter].seg__btn').forEach((b) => b.addEventListener('click', () => setFilter(b.dataset.filter)));
   section.querySelectorAll('[data-view].seg__btn').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
   // Al pasar a celular, la vista vuelve a carrusel (la grilla no se puede elegir ahí)
-  mobile.addEventListener('change', (e) => { if (e.matches && state.view !== 'carousel') setView('carousel'); fitTags(); });
-  document.fonts?.ready.then(() => { fitTags(); skillsGrid.querySelectorAll('.chips').forEach(packChips); });
-  // Al cambiar el ancho de las tarjetas (ventana o vista), se recalcula qué etiquetas y herramientas entran
-  if ('ResizeObserver' in window) {
-    let trackW = 0;
-    new ResizeObserver(([e]) => {
-      const w = Math.round(e.contentRect.width);
-      if (w !== trackW) { trackW = w; fitTags(); }
-    }).observe(track);
-  }
+  mobile.addEventListener('change', (e) => { if (e.matches && state.view !== 'carousel') setView('carousel'); });
+  document.fonts?.ready.then(() => { skillsGrid.querySelectorAll('.chips').forEach(packChips); });
   arrows.forEach((a) => a.addEventListener('click', () => { step(Number(a.dataset.dir)); autoRestart(); }));
   track.addEventListener('keydown', (e) => {
     if (state.view !== 'carousel') return;

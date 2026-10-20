@@ -325,7 +325,7 @@
       mount.innerHTML = `<div class="case__head"><h1 class="case__title">${t('caseMissing')}</h1><p class="case__sub">${t('caseMissingBody')}</p></div>`;
       return;
     }
-    document.title = `${L(p.title)} | Lourdes Pedaci`;
+    document.title = `${L(p.title)} | ${t('caseTitleSuffix')}`;
     mount.closest('.case').dataset.cat = p.cat;
     // touch: color secundario opcional del caso (por ejemplo 'cap', rosado) para acentos puntuales.
     if (c.touch) mount.closest('.case').dataset.touch = c.touch; else delete mount.closest('.case').dataset.touch;

@@ -4,18 +4,18 @@ export const SITE = {
   url: 'https://lpedaci.github.io/portfolio/',   // siempre con / final
   name: 'Lourdes Pedaci',
   shortName: 'L. Pedaci',
-  themeColor: '#0D0E12',
+  themeColor: '#F7F5F0',
   locales: { es: 'es_AR', en: 'en_US' },
   title: {
-    es: 'Lourdes Pedaci | Análisis funcional e IT',
-    en: 'Lourdes Pedaci | Functional analysis and IT'
+    es: 'Porfolio | Lourdes Pedaci, Experience Designer',
+    en: 'Portfolio | Lourdes Pedaci, Experience Designer'
   },
   description: {
-    es: 'De la capacitación y coordinación de proyectos al mundo IT. Equipos de producto: problemas de usuarios, requisitos claros y desarrollo ágil de punta a punta.',
-    en: 'From training and project coordination to the IT world. Product teams: user problems, clear requirements and agile development end to end.'
+    es: 'Experience Designer con base en análisis funcional, UX/UI y capacitación. 14 casos reales: del problema del usuario a requisitos claros y productos de punta a punta.',
+    en: 'Experience Designer with a background in functional analysis, UX/UI and training. 14 real case studies: from the user problem to clear requirements and end-to-end products.'
   },
   ogImage: { path: 'assets/img/og-image.jpg', width: 1200, height: 630,
-    alt: 'Lourdes Pedaci: de la capacitación y coordinación de proyectos al mundo IT. Ícono de un gatito tecnológico.' }
+    alt: 'Porfolio de Lourdes Pedaci, Experience Designer: "Diseño experiencias claras, del problema del usuario al producto", junto a capturas de tres proyectos.' }
 };
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');

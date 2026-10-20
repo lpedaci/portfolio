@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página no encontrada | Lourdes Pedaci</title>
+  <title>Página no encontrada | Porfolio de Lourdes Pedaci</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#0D0E12">
+  <meta name="theme-color" content="#F7F5F0">
   <script>
     // Un 404 puede servirse en cualquier ruta: las hojas de fuentes e íconos se piden desde la raíz del sitio.
     (() => {
       const seg = location.pathname.split('/').filter(Boolean)[0];
       const root = /github\.io$/.test(location.hostname) && seg ? `/${seg}/` : '/';
-      ['assets/css/fonts.css?v=202610181112', 'assets/css/icons.css?v=202610181112'].forEach((href) => {
+      ['assets/css/fonts.css?v=202610201337', 'assets/css/icons.css?v=202610201337'].forEach((href) => {
         const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = root + href; document.head.appendChild(l);
       });
       [['icon', 'assets/img/favicon.svg', 'image/svg+xml'], ['apple-touch-icon', 'assets/img/apple-touch-icon.png', '']].forEach(([rel, href, type]) => {
@@ -19,31 +19,62 @@
       });
     })();
   </script>
-  <!-- Página autocontenida: un 404 puede servirse en cualquier ruta, así que no depende de rutas relativas -->
+  <!-- Página autocontenida: un 404 puede servirse en cualquier ruta, así que no depende de rutas relativas.
+       Tokens, nav y fondo copian los de assets/css/styles.css (tema claro con auras). -->
   <style>
     :root {
-      --bg: #0D0E12; --surface: #15171C; --surface-2: #1B1D23; --text: #F2F2EF; --muted: #9A9AA3; --line: #24262E;
-      --it: #35C2B1; --cap: #EC7FB0; --on-accent: #0D0E12;
+      --bg: #F7F5F0; --surface: #FFFFFF; --surface-2: #F0EDE6; --text: #17181C; --muted: #5F6068; --text-2: #3A3B42;
+      --line: #E4E0D7; --line-2: #CFCAC0;
+      --it: #0A7A6E; --it-hover: #08665C; --cap: #B8326F; --on-accent: #FFFFFF;
+      --it-bright: #35C2B1; --cap-bright: #EC7FB0; --cont-bright: #E8B85A;
+      --cat: #1E1F25; --cat-2: #2C2E36;   /* gatito negro: tinta cálida, no negro puro */
       --f-display: 'Schibsted Grotesk', system-ui, sans-serif; --f-body: 'Hanken Grotesk', system-ui, sans-serif; --f-mono: 'JetBrains Mono', ui-monospace, monospace;
-      --ease: cubic-bezier(0.16, 1, 0.3, 1); --gutter: 16px; --nav-h: 64px; --r-pill: 999px; color-scheme: dark;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1); --gutter: 16px; --wrap: 1440px; --r-pill: 999px; color-scheme: light;
     }
     @media (min-width: 768px) { :root { --gutter: 24px; } }
     *, *::before, *::after { box-sizing: border-box; }
     body { margin: 0; min-height: 100dvh; display: flex; flex-direction: column; background: var(--bg); color: var(--text); font: 400 1rem/1.6 var(--f-body); -webkit-font-smoothing: antialiased; }
+    /* Auras de fondo, como en la home */
+    body::before {
+      content: ""; position: fixed; inset: -15%; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(38% 42% at 18% 12%, color-mix(in srgb, var(--it-bright) 30%, transparent), transparent 70%),
+        radial-gradient(30% 36% at 86% 18%, color-mix(in srgb, var(--cap-bright) 26%, transparent), transparent 70%),
+        radial-gradient(34% 40% at 62% 88%, color-mix(in srgb, var(--cont-bright) 26%, transparent), transparent 70%);
+    }
     a { color: inherit; } button { font: inherit; color: inherit; } p, h1 { margin: 0; }
     :focus-visible { outline: 2px solid var(--it); outline-offset: 3px; border-radius: 4px; }
-    .wrap { width: 100%; max-width: 1440px; margin-inline: auto; padding-inline: var(--gutter); }
+    .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
     .skip { position: absolute; left: var(--gutter); top: -100px; z-index: 30; background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 999px; font-weight: 500; text-decoration: none; }
     .skip:focus { top: 12px; }
-    /* Barra: la misma de la home (assets/css/styles.css, sección Navegación) */
-    .nav { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
-    .nav__inner { height: var(--nav-h); display: flex; align-items: center; gap: 24px; }
-    .nav__brand { display: inline-flex; align-items: center; min-height: 44px; font: 600 1.0625rem/1 var(--f-display); letter-spacing: -0.01em; text-decoration: none; margin-right: auto; }
-    .nav__brand::before { content: ">_"; margin-right: 8px; font: 500 0.875rem/1 var(--f-mono); color: var(--it); }
+
+    /* Navegación: la cápsula de vidrio de la home */
+    .nav { position: sticky; top: 0; z-index: 20; padding-top: 10px; pointer-events: none; }
+    .nav__inner {
+      position: relative; pointer-events: auto; display: flex; align-items: center; gap: 24px;
+      width: calc(100% - 2 * var(--gutter)); max-width: calc(var(--wrap) - 2 * var(--gutter)); height: 56px; margin-inline: auto;
+      padding: 0 8px 0 14px; border-radius: var(--r-pill);
+      background: color-mix(in srgb, var(--surface) 62%, transparent);
+      backdrop-filter: blur(18px) saturate(1.6); -webkit-backdrop-filter: blur(18px) saturate(1.6);
+      box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.8), 0 12px 32px -18px color-mix(in srgb, var(--it) 45%, transparent), 0 2px 8px -4px rgb(23 24 28 / 0.08);
+    }
+    .nav__inner::before {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+      background: linear-gradient(90deg, var(--it-bright), var(--cap-bright), var(--cont-bright), var(--it-bright)) 0 0 / 300% 100%;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0.85;
+    }
+    .nav__brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font: 600 1.0625rem/1 var(--f-display); letter-spacing: -0.01em; text-decoration: none; margin-right: auto; }
+    .brand__mark { position: relative; width: 30px; height: 18px; flex: none; border-radius: 9px; background: radial-gradient(circle 9px at 9px 9px, var(--it-bright) 98%, transparent); }
+    .brand__mark::before, .brand__mark::after { content: ""; position: absolute; top: 0; width: 18px; height: 18px; border-radius: 50%; mix-blend-mode: multiply; }
+    .brand__mark::before { left: 6px; background: var(--cap-bright); }
+    .brand__mark::after { left: 12px; background: var(--cont-bright); opacity: 0.9; }
+    .brand__name { font-weight: 400; color: var(--muted); padding-left: 10px; border-left: 1px solid var(--line-2); }
+    @media (max-width: 479px) { .brand__name { display: none; } }
     .nav ul { list-style: none; margin: 0; padding: 0; }
     .nav__links { display: none; gap: 28px; }
-    .nav__links a { position: relative; display: inline-block; padding-block: 6px; color: var(--muted); text-decoration: none; font-size: 0.9375rem; transition: color 0.2s var(--ease); }
+    .nav__links a { display: inline-block; padding-block: 6px; color: var(--muted); text-decoration: none; font-size: 0.9375rem; transition: color 0.2s var(--ease); }
     .nav__links a:hover { color: var(--text); }
     @media (min-width: 720px) { .nav__links { display: flex; } }
     .nav__toggle { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border: 1px solid var(--line); border-radius: var(--r-pill); background: none; cursor: pointer; color: var(--text); }
@@ -51,109 +82,91 @@
     @media (min-width: 720px) { .nav__toggle { display: none; } }
     @media (max-width: 719px) {
       .nav__inner { gap: 12px; }
-      .nav.is-open .nav__links { display: flex; flex-direction: column; gap: 0; position: absolute; left: 0; right: 0; top: var(--nav-h); padding: 8px var(--gutter) 16px; background: var(--bg); border-bottom: 1px solid var(--line); }
+      .nav.is-open .nav__links {
+        display: flex; flex-direction: column; position: absolute; left: 0; right: 0; top: calc(100% + 8px);
+        padding: 8px 20px 12px; border-radius: 20px; border: 1px solid var(--line); background: var(--surface); box-shadow: 0 20px 40px -20px rgb(23 24 28 / 0.25);
+      }
       .nav.is-open .nav__links a { display: flex; align-items: center; min-height: 48px; font-size: 1.0625rem; border-bottom: 1px solid var(--line); }
+      .nav.is-open .nav__links li:last-child a { border-bottom: 0; }
     }
     .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
     .lang button { font: 500 0.75rem/1 var(--f-mono); letter-spacing: 0.04em; background: none; border: 0; border-radius: 999px; min-width: 40px; min-height: 32px; padding: 0 10px; cursor: pointer; color: var(--muted); }
     .lang button[aria-pressed="true"] { background: var(--surface-2); color: var(--text); }
 
-    main { flex: 1; display: grid; place-items: center; padding-block: 40px 64px; }
-    .nf { display: grid; justify-items: center; text-align: center; gap: 0; }
-    .scene { position: relative; width: min(100%, 600px); }
+    main { flex: 1; display: grid; place-items: center; padding-block: 32px 72px; }
+    .nf { display: grid; justify-items: center; text-align: center; }
+    .scene { position: relative; width: min(100%, 680px); }
     .scene svg { display: block; width: 100%; height: auto; overflow: visible; }
-    .eyebrow { margin-top: 24px; font: 400 0.8125rem/1 var(--f-mono); color: var(--it); }
-    h1 { margin-top: 14px; font: 600 clamp(2rem, 1.4rem + 2.6vw, 3rem)/1.08 var(--f-display); letter-spacing: -0.025em; text-wrap: balance; }
-    .lead { margin-top: 14px; color: var(--muted); font-size: 1.0625rem; max-width: 44rem; text-wrap: balance; }
-    .lead span { display: block; }  /* una oración por línea */
+    .eyebrow { margin-top: 20px; display: inline-flex; align-items: center; gap: 8px; font: 500 0.8125rem/1 var(--f-mono); color: var(--it); text-transform: uppercase; letter-spacing: 0.06em; }
+    .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--it); }
+    h1 { margin-top: 14px; font: 600 clamp(2rem, 1.4rem + 2.6vw, 3.25rem)/1.05 var(--f-display); letter-spacing: -0.03em; text-wrap: balance; }
+    .lead { margin-top: 14px; color: var(--muted); font-size: 1.0625rem; max-width: 40rem; text-wrap: balance; }
     .ctas { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
     .btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 500; text-decoration: none; white-space: nowrap; border: 1px solid transparent; transition: transform 0.2s var(--ease), background-color 0.2s var(--ease), border-color 0.2s var(--ease); }
     .btn:active { transform: translateY(1px); }
     .btn--primary { background: var(--it); color: var(--on-accent); }
-    .btn--primary:hover { background: #4fd0c0; }
-    .btn--ghost { border-color: var(--line); }
+    .btn--primary:hover { background: var(--it-hover); }
+    .btn--ghost { border-color: var(--line-2); background: color-mix(in srgb, var(--surface) 60%, transparent); }
     .btn--ghost:hover { border-color: var(--muted); }
+
     .foot { border-top: 1px solid var(--line); }
-    .foot p { padding-block: 24px; font: 400 0.8125rem/1 var(--f-mono); color: var(--muted); }
     .foot__inner { display: flex; align-items: center; gap: 12px; }
+    .foot p { padding-block: 24px; font: 400 0.8125rem/1 var(--f-mono); color: var(--muted); }
     .foot__in { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 999px; color: var(--muted); transition: color 0.2s var(--ease); }
     .foot__in:hover { color: var(--text); }
-    .foot__in:focus-visible { outline: 2px solid var(--it); outline-offset: 3px; }
     .foot__icon { width: 18px; height: 18px; fill: currentColor; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
-    /* ---------- Gatito ----------
-       En el suelo, agazapado en pose de juego, juega con el hilo del ovillo (el cero del 404).
-       Una pasada de 5 s: mueve la cola, parpadea, menea la cola antes de atacar,
-       le da un manotazo al hilo (el tirón acerca el ovillo) y al final se pregunta dónde está la página. */
-    .digit { font: 600 210px/1 var(--f-display); fill: var(--surface-2); stroke: #2C3038; stroke-width: 1.5; }
-    .cat { fill: #5A5F6B; }        /* gatito tuxedo: cuerpo gris oscuro */
-    .cat-white { fill: #ECECE8; }  /* medias, hocico y panza blancos */
-    .cat-far { fill: #4A4E58; }    /* pata del lado lejano: un tono más oscuro, se lee detrás */
-    .cat-far-white { fill: #D2D2CE; }
-    .ear-in { fill: var(--cap); }
-    .eye { fill: var(--it); }
-    .pupil { fill: var(--bg); }
-    .nose { fill: var(--cap); }
-    .whisker { stroke: #C9C9CF; stroke-width: 1.2; stroke-linecap: round; fill: none; }
-    .ball { fill: var(--it); }
-    .wrapline { fill: none; stroke: #0F5E55; stroke-width: 3; stroke-linecap: round; }
-    .thread { fill: none; stroke: var(--it); stroke-width: 2.5; stroke-linecap: round; }
-    .shadow { fill: #000; opacity: 0.35; }
-    .q { font: 500 22px/1 var(--f-mono); fill: var(--it); opacity: 0; }
+    /* ---------- Gatito negro ----------
+       Ocupa el lugar del cero del 404, sentado entre los dos cuatros. Sus ojos siguen el cursor.
+       Una pasada de 5 s al cargar (y otra al pasar el mouse o tocarlo): mueve la cola, parpadea,
+       sacude una oreja e inclina la cabeza con un "?". Ninguna animación dura más de 5 s sin control (WCAG 2.2.2). */
+    .digit { font: 700 230px/1 var(--f-display); letter-spacing: -0.04em; }
+    .digit--a, .digit--b { fill: url(#digit-fill); }
+    .digit-shadow { fill: rgb(23 24 28 / 0.08); }
+    .cat { fill: var(--cat); }
+    .cat-2 { fill: var(--cat-2); }
+    .ear-in, .nose { fill: var(--cap-bright); }
+    .eye { fill: var(--cont-bright); }
+    .pupil { fill: var(--cat); }
+    .shine { fill: #fff; }
+    .whisker { stroke: #8D909A; stroke-width: 1.4; stroke-linecap: round; fill: none; }
+    .paw { fill: url(#paw-fill); }
+    .paw-gap { stroke: #121317; stroke-width: 2; stroke-linecap: round; }
+    .toe { stroke: #474A54; stroke-width: 1.4; stroke-linecap: round; fill: none; }
+    .mouth { stroke: #6A6D77; stroke-width: 1.6; stroke-linecap: round; fill: none; }
+    .collar { fill: var(--it-bright); }
+    .tag { fill: var(--cont-bright); stroke: #C9962F; stroke-width: 1; }
+    .ground { fill: rgb(23 24 28 / 0.1); }
+    .q { font: 600 34px/1 var(--f-display); fill: var(--it); opacity: 0; }
 
-    .ball-g, .ball-spin, .q { transform-box: view-box; }
-    .ball-spin { transform-origin: 262px 214px; }
-    /* Piezas del gatito: el eje se mide sobre cada pieza (fill-box), así el gatito se puede escalar entero */
-    .tail, .rear, .head, .ear-r, .eyes, .paw { transform-box: fill-box; }
-    .tail { transform-origin: 10% 95%; }    /* base de la cola */
-    .rear { transform-origin: 70% 100%; }   /* patas traseras en el piso */
-    .head { transform-origin: 60% 100%; }   /* cuello */
-    .ear-r { transform-origin: 20% 100%; }
+    .tail, .head, .ear-r, .eyes, .q { transform-box: fill-box; }
+    .tail { transform-origin: 0% 100%; }     /* base de la cola, junto al cuerpo */
+    .head { transform-origin: 50% 90%; }     /* cuello */
+    .ear-r { transform-origin: 30% 100%; }
     .eyes { transform-origin: 50% 50%; }
-    .paw { transform-origin: 50% 8%; }      /* hombro */
+    .q { transform-origin: 50% 100%; }
+    .pupils { transition: transform 0.25s ease-out; }
 
-    /* Juega una vez (5 s) al cargar y queda agazapado; vuelve a jugar al pasar el mouse o tocar la escena.
-       Así ninguna animación dura más de 5 s sin control (WCAG 2.2.2) y no hace falta un botón de pausa. */
     @media (prefers-reduced-motion: no-preference) {
       .scene { cursor: pointer; }
       .is-playing .tail { animation: tail 5s ease-in-out; }
       .is-playing .eyes { animation: blink 5s; }
       .is-playing .ear-r { animation: ear 5s; }
-      .is-playing .rear { animation: wiggle 5s; }
       .is-playing .head { animation: head 5s ease-in-out; }
-      .is-playing .paw { animation: paw 5s ease-in-out; }
-      .is-playing .ball-g { animation: roll 5s ease-in-out; }
-      .is-playing .ball-spin { animation: spin 5s ease-in-out; }
       .is-playing .q { animation: q 5s ease-in-out; }
     }
-    /* Un solo manotazo, con tiempo: mira el hilo, menea la cola, levanta la pata despacio y la baja.
-       Todo entra en los 5 s de la pasada. */
-    @keyframes tail { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-8deg); } 55% { transform: rotate(14deg); } 80% { transform: rotate(-4deg); } }
-    @keyframes blink { 0%, 4%, 100% { transform: scaleY(1); } 7% { transform: scaleY(0.1); } 10% { transform: scaleY(1); } }
-    @keyframes ear { 0%, 80%, 90%, 100% { transform: rotate(0); } 84% { transform: rotate(-14deg); } 87% { transform: rotate(4deg); } }
-    /* Meneo de la cola antes de atacar, como hacen los gatos */
-    @keyframes wiggle {
-      0%, 16%, 38%, 100% { transform: translateX(0); }
-      20%, 28% { transform: translateX(-2px); } 24%, 32% { transform: translateX(2px); }
-    }
-    /* Sigue el hilo con la cabeza: baja la mirada mientras ataca */
-    @keyframes head { 0%, 10% { transform: rotate(0); } 22%, 70% { transform: rotate(-7deg); } 80%, 100% { transform: rotate(3deg); } }
-    /* Manotazo: levanta la pata hacia adelante sin apuro y la baja sobre el hilo */
-    @keyframes paw {
-      0%, 36% { transform: rotate(0); } 48% { transform: rotate(72deg); } 55% { transform: rotate(-4deg); } 60%, 100% { transform: rotate(0); }
-    }
-    /* El tirón del hilo acerca el ovillo, que rueda y vuelve a su lugar */
-    @keyframes roll { 0%, 55% { transform: translateX(0); } 68% { transform: translateX(12px); } 86%, 100% { transform: translateX(0); } }
-    @keyframes spin { 0%, 55% { transform: rotate(0); } 68% { transform: rotate(40deg); } 86%, 100% { transform: rotate(0); } }
-    @keyframes q { 0%, 84% { opacity: 0; transform: translateY(6px); } 90%, 97% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-4px); } }
+    @keyframes tail { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-12deg); } 45% { transform: rotate(10deg); } 70% { transform: rotate(-6deg); } }
+    @keyframes blink { 0%, 14%, 20%, 62%, 68%, 100% { transform: scaleY(1); } 17%, 65% { transform: scaleY(0.08); } }
+    @keyframes ear { 0%, 36%, 46%, 100% { transform: rotate(0); } 39% { transform: rotate(-16deg); } 42% { transform: rotate(6deg); } }
+    @keyframes head { 0%, 50% { transform: rotate(0); } 62%, 88% { transform: rotate(-9deg); } 100% { transform: rotate(0); } }
+    @keyframes q { 0%, 64% { opacity: 0; transform: translateY(8px) scale(0.6); } 72%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(-4px); } }
   </style>
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Ir al contenido</a>
   <header class="nav">
-    <div class="wrap nav__inner">
-      <a class="nav__brand js-home" href="/">Lourdes Pedaci</a>
+    <div class="nav__inner">
+      <a class="nav__brand js-home" href="/"><span class="brand__mark" aria-hidden="true"></span><span data-i18n="brand">Porfolio</span><span class="brand__name">Lourdes Pedaci</span></a>
       <nav aria-label="Principal">
         <ul class="nav__links" id="nav-links">
           <li><a class="js-sec" data-sec="proyectos" href="/#proyectos" data-i18n="navWork">Proyectos</a></li>
@@ -172,75 +185,83 @@
   <main id="main">
     <div class="wrap nf">
       <div class="scene" id="scene">
-        <svg viewBox="28 104 604 196" role="img" aria-labelledby="cat-desc">
-          <desc id="cat-desc" data-i18n="catLabel">Un gatito gris con medias blancas, agazapado en el suelo, juega con el hilo de un ovillo de lana que ocupa el lugar del cero.</desc>
+        <svg viewBox="0 40 600 250" role="img" aria-labelledby="cat-desc">
+          <desc id="cat-desc" data-i18n="catLabel">Un gatito negro de ojos ámbar, sentado en el piso entre los dos cuatros del 404, en el lugar del cero, mira con curiosidad.</desc>
+          <defs>
+            <!-- los cuatros van del gris al negro del gatito -->
+            <linearGradient id="digit-fill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#A3A5AD"/>
+              <stop offset="1" stop-color="#2C2E36"/>
+            </linearGradient>
+            <!-- patas delanteras: arrancan del tono del pecho y bajan al negro, así se funden con el cuerpo -->
+            <linearGradient id="paw-fill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2C2E36"/>
+              <stop offset="1" stop-color="#1E1F25"/>
+            </linearGradient>
+          </defs>
           <g aria-hidden="true">
-            <!-- 4 izquierdo -->
-            <text class="digit" x="40" y="282">4</text>
-            <!-- ovillo (el cero) -->
-            <ellipse class="shadow" cx="262" cy="284" rx="56" ry="7"/>
-            <g class="ball-g">
-              <g class="ball-spin">
-                <circle class="ball" cx="262" cy="214" r="64"/>
-                <path class="wrapline" d="M206 184 C236 214 278 234 322 230"/>
-                <path class="wrapline" d="M214 252 C240 210 280 178 318 178"/>
-                <path class="wrapline" d="M236 154 C258 196 266 236 262 276"/>
-                <path class="wrapline" d="M200 222 C230 236 262 244 296 270"/>
-              </g>
-              <!-- hilo suelto: corre por el suelo hasta la pata del gatito -->
-              <path class="thread" d="M304 258 C318 280 340 290 380 290 C420 290 456 292 504 290"/>
-            </g>
-            <!-- 4 derecho -->
-            <text class="digit" x="340" y="282">4</text>
+            <ellipse class="ground" cx="300" cy="272" rx="250" ry="9"/>
+            <ellipse class="ground" cx="306" cy="271" rx="86" ry="7"/>
+            <!-- los dos cuatros, con una sombra corrida -->
+            <text class="digit digit-shadow" x="34" y="270">4</text>
+            <text class="digit digit--a" x="28" y="264">4</text>
+            <text class="digit digit-shadow" x="420" y="270">4</text>
+            <text class="digit digit--b" x="414" y="264">4</text>
 
-            <!-- gatito, en el suelo y agazapado, mirando el hilo -->
-            <g transform="translate(536 291) scale(1.3) translate(-536 -291)">
-            <ellipse class="shadow" cx="536" cy="291" rx="62" ry="5"/>
-            <!-- pata delantera de apoyo: la del lado lejano, estirada en el piso por detrás del cuerpo
-                 y de la pata que juega; queda un poco más arriba para no tapar el hilo -->
-            <rect class="cat-far" x="466" y="273" width="62" height="11" rx="5.5"/>
-            <rect class="cat-far-white" x="466" y="273" width="15" height="11" rx="5.5"/>
-            <g class="rear">
-              <g class="tail">
-                <path class="cat" d="M552 250 C562 246 570 244 576 242 C594 232 602 212 596 194 C593 186 585 186 586 194 C590 212 584 226 570 234 C562 239 556 241 548 243 Z"/>
-              </g>
-              <rect class="cat" x="558" y="254" width="18" height="36" rx="9"/>
-              <ellipse class="cat" cx="542" cy="262" rx="44" ry="23" transform="rotate(-14 542 262)"/>
-              <ellipse class="cat-white" cx="528" cy="276" rx="22" ry="8"/>
+            <!-- gatito negro sentado, en el lugar del cero -->
+            <g class="tail">
+              <path class="cat" d="M338 252 C372 252 392 236 394 206 C396 182 384 166 372 168 C364 170 366 180 372 184 C380 192 378 214 366 226 C356 236 344 238 330 238 Z"/>
             </g>
+            <!-- ancas: las patas traseras dobladas, apoyadas a los costados -->
+            <ellipse class="cat" cx="258" cy="252" rx="26" ry="18"/>
+            <ellipse class="cat" cx="342" cy="252" rx="26" ry="18"/>
+            <path class="cat" d="M236 270 C236 262 246 258 260 258 C270 258 276 264 276 270 Z"/>
+            <path class="cat" d="M324 270 C324 264 330 258 340 258 C354 258 364 262 364 270 Z"/>
+            <!-- cuerpo apoyado en el piso -->
+            <path class="cat" d="M300 166 C336 166 356 196 356 228 C356 252 346 270 330 270 L270 270 C254 270 244 252 244 228 C244 196 264 166 300 166 Z"/>
+            <ellipse class="cat-2" cx="300" cy="214" rx="24" ry="27"/>
+            <!-- patas delanteras rectas, con los deditos sobre el suelo -->
+            <!-- patas delanteras: piernas redondeadas que nacen del tono del pecho y terminan en un pie apoyado -->
+            <path class="paw" d="M279 236 C279 229 283 226 288.5 226 C294 226 298 229 298 236 L298 258 L279 258 Z"/>
+            <path class="paw" d="M302 236 C302 229 306 226 311.5 226 C317 226 321 229 321 236 L321 258 L302 258 Z"/>
+            <path class="paw-gap" d="M300 238 L300 268"/>
+            <ellipse class="cat" cx="288" cy="263" rx="13" ry="8"/>
+            <ellipse class="cat" cx="312" cy="263" rx="13" ry="8"/>
+            <path class="toe" d="M283 265 C283 262 285 261 285 261 M290 265 C290 262 292 261 292 261 M310 265 C310 262 308 261 308 261 M317 265 C317 262 315 261 315 261"/>
+
             <g class="head">
-              <path class="cat" d="M480 238 L484 210 L499 229 Z"/>
-              <path class="ear-in" d="M484 232 L486 217 L494 228 Z"/>
+              <path class="cat" d="M252 128 L256 72 L294 104 Z"/>
+              <path class="ear-in" d="M260 118 L262 86 L284 106 Z"/>
               <g class="ear-r">
-                <path class="cat" d="M505 227 L520 207 L522 238 Z"/>
-                <path class="ear-in" d="M509 226 L518 214 L519 232 Z"/>
+                <path class="cat" d="M348 128 L344 72 L306 104 Z"/>
+                <path class="ear-in" d="M340 118 L338 86 L316 106 Z"/>
               </g>
-              <circle class="cat" cx="500" cy="248" r="24"/>
+              <ellipse class="cat" cx="300" cy="140" rx="58" ry="48"/>
               <g class="eyes">
-                <ellipse class="eye" cx="490" cy="245" rx="4.5" ry="6"/>
-                <ellipse class="eye" cx="507" cy="245" rx="4.5" ry="6"/>
-                <ellipse class="pupil" cx="489" cy="247" rx="1.8" ry="3.4"/>
-                <ellipse class="pupil" cx="506" cy="247" rx="1.8" ry="3.4"/>
+                <ellipse class="eye" cx="278" cy="138" rx="14" ry="16"/>
+                <ellipse class="eye" cx="322" cy="138" rx="14" ry="16"/>
+                <g class="pupils">
+                  <ellipse class="pupil" cx="278" cy="139" rx="5.5" ry="11"/>
+                  <ellipse class="pupil" cx="322" cy="139" rx="5.5" ry="11"/>
+                  <circle class="shine" cx="281" cy="132" r="3"/>
+                  <circle class="shine" cx="325" cy="132" r="3"/>
+                </g>
               </g>
-              <ellipse class="cat-white" cx="498" cy="260" rx="11" ry="8"/>
-              <path class="nose" d="M495 255 L501 255 L498 259 Z"/>
-              <path class="whisker" d="M487 259 L467 255 M487 263 L467 265 M509 259 L527 255 M509 263 L527 265"/>
+              <path class="nose" d="M295 156 L305 156 L300 162 Z"/>
+              <path class="mouth" d="M300 162 C300 168 294 170 290 167 M300 162 C300 168 306 170 310 167"/>
+              <path class="whisker" d="M262 156 L228 150 M262 162 L226 164 M338 156 L372 150 M338 162 L374 164"/>
+              <!-- collar turquesa con chapita: dentro de la cabeza, así acompaña la inclinación -->
+              <path class="collar" d="M262 176 C286 186 314 186 338 176 L340 184 C314 195 286 195 260 184 Z"/>
+              <circle class="tag" cx="300" cy="196" r="7"/>
             </g>
-            <!-- pata que da el manotazo (gira desde el hombro), por delante de la cabeza -->
-            <g class="paw">
-              <rect class="cat" x="505" y="262" width="14" height="28" rx="7"/>
-              <rect class="cat-white" x="505" y="278" width="14" height="12" rx="7"/>
-              <ellipse class="ear-in" cx="512" cy="286" rx="4" ry="2.6"/>
-            </g>
-            <text class="q" x="524" y="200">?</text>
-            </g>
+            <text class="q" x="360" y="92">?</text>
           </g>
         </svg>
       </div>
 
       <p class="eyebrow" data-i18n="eyebrow">error 404</p>
-      <h1 data-i18n="title">Esta página no existe</h1>
-      <p class="lead"><span data-i18n="lead1">Puede que el enlace esté desactualizado o que el proyecto haya cambiado de lugar.</span> <span data-i18n="lead2">Todo lo demás sigue a un clic.</span></p>
+      <h1 data-i18n="title">Te caíste del mapa</h1>
+      <p class="lead" data-i18n="lead">Logro desbloqueado: encontraste al gatito que cuida este porfolio. La página que buscabas no existe o se mudó, pero el recorrido sigue. ¿Volvemos al inicio?</p>
       <div class="ctas">
         <a class="btn btn--primary js-home" href="/"><i class="ph ph-arrow-left" aria-hidden="true"></i><span data-i18n="home">Volver al inicio</span></a>
         <a class="btn btn--ghost js-work" href="/#proyectos"><span data-i18n="work">Ver proyectos</span></a>
@@ -260,21 +281,19 @@
     (() => {
       const T = {
         es: {
-          docTitle: 'Página no encontrada | Lourdes Pedaci', langLabel: 'Idioma', skip: 'Ir al contenido',
-          catLabel: 'Un gatito gris con medias blancas, agazapado en el suelo, juega con el hilo de un ovillo de lana que ocupa el lugar del cero.',
-          eyebrow: 'error 404', title: 'Esta página no existe',
-          lead1: 'Puede que el enlace esté desactualizado o que el proyecto haya cambiado de lugar.',
-          lead2: 'Todo lo demás sigue a un clic.',
+          docTitle: 'Página no encontrada | Porfolio de Lourdes Pedaci', langLabel: 'Idioma', skip: 'Ir al contenido', brand: 'Porfolio',
+          catLabel: 'Un gatito negro de ojos ámbar, sentado en el piso entre los dos cuatros del 404, en el lugar del cero, mira con curiosidad.',
+          eyebrow: 'error 404', title: 'Te caíste del mapa',
+          lead: 'Logro desbloqueado: encontraste al gatito que cuida este porfolio. La página que buscabas no existe o se mudó, pero el recorrido sigue. ¿Volvemos al inicio?',
           home: 'Volver al inicio', work: 'Ver proyectos',
           navWork: 'Proyectos', navPath: 'Recorrido', navContact: 'Contacto', menuOpen: 'Abrir menú', menuClose: 'Cerrar menú',
           newTab: '(se abre en una pestaña nueva)'
         },
         en: {
-          docTitle: 'Page not found | Lourdes Pedaci', langLabel: 'Language', skip: 'Skip to content',
-          catLabel: 'A grey kitten with white socks, crouched on the floor, plays with the thread of a ball of yarn that takes the place of the zero.',
-          eyebrow: 'error 404', title: 'This page does not exist',
-          lead1: 'The link may be outdated, or the project may have moved.',
-          lead2: 'Everything else is one click away.',
+          docTitle: 'Page not found | Lourdes Pedaci’s portfolio', langLabel: 'Language', skip: 'Skip to content', brand: 'Portfolio',
+          catLabel: 'An amber-eyed black kitten sits between the two fours of the 404, in place of the zero, looking curious.',
+          eyebrow: 'error 404', title: 'You fell off the map',
+          lead: 'Achievement unlocked: you found the kitten who looks after this portfolio. The page you were looking for doesn’t exist or has moved, but the journey goes on. Back to the start?',
           home: 'Back to home', work: 'See projects',
           navWork: 'Projects', navPath: 'Path', navContact: 'Contact', menuOpen: 'Open menu', menuClose: 'Close menu',
           newTab: '(opens in a new tab)'
@@ -293,8 +312,6 @@
       const saved = store.get('lang');
       const browser = (navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en';
       let lang = ['es', 'en'].includes(fromUrl) ? fromUrl : (['es', 'en'].includes(saved) ? saved : browser);
-
-      const scene = document.getElementById('scene');
 
       function apply() {
         const t = T[lang];
@@ -329,7 +346,9 @@
         store.set('lang', lang);
         apply();
       }));
-      // Una pasada al cargar; al pasar el mouse o tocar la escena, otra (si no está jugando ya).
+
+      // Gatito: una pasada al cargar; al pasar el mouse o tocarlo, otra (si no está jugando ya)
+      const scene = document.getElementById('scene');
       const play = () => {
         if (scene.classList.contains('is-playing')) return;
         scene.classList.add('is-playing');
@@ -337,7 +356,28 @@
       };
       scene.addEventListener('pointerenter', play);
       scene.addEventListener('click', play);
-      play();
+
+      // Los ojos siguen al cursor (solo se mueve si la persona mueve el mouse; con movimiento reducido quedan quietos)
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const svg = scene.querySelector('svg');
+      const pupils = scene.querySelector('.pupils');
+      if (!reduce) {
+        let raf = 0;
+        window.addEventListener('pointermove', (e) => {
+          if (raf) return;
+          raf = requestAnimationFrame(() => {
+            raf = 0;
+            const r = svg.getBoundingClientRect();
+            const k = 600 / r.width;                      // de px de pantalla a unidades del dibujo
+            const dx = (e.clientX - r.left) * k - 300;    // centro entre los ojos: (300, 138) en el viewBox
+            const dy = (e.clientY - r.top) * k + 40 - 138;
+            const d = Math.hypot(dx, dy) || 1;
+            const m = Math.min(5, d / 40);                // hasta 5 unidades de recorrido
+            pupils.style.transform = `translate(${(dx / d * m).toFixed(2)}px, ${(dy / d * m * 0.7).toFixed(2)}px)`;
+          });
+        }, { passive: true });
+        play();
+      }
       apply();
     })();
   </script>

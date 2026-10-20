@@ -1,6 +1,6 @@
-# Portfolio 3.0
+# Portfolio 4.0
 
-Portfolio bilingüe (ES/EN) orientado a análisis funcional, UX/UI y coordinación de proyectos IT.
+Portfolio bilingüe (ES/EN) de experience design: análisis funcional, UX/UI y coordinación de proyectos IT.
 
 🔗 **https://lpedaci.github.io/portfolio/**
 
@@ -19,9 +19,9 @@ El sitio está diseñado para quien recluta o contrata: alguien que decide en se
 
 | Necesidad de quien lee | Respuesta del diseño |
 |---|---|
-| Entender el perfil sin leer | Titular con la propuesta de valor y una animación que resume el proceso: de la idea y los requisitos al wireframe y al producto. |
+| Entender el perfil sin leer | Titular con la propuesta de valor y una animación que resume el proceso: una app pasa de boceto a wireframe, a interfaz y a producto terminado que alguien usa. |
 | Contactar sin buscar | LinkedIn y CV en el hero; correo, LinkedIn, GitHub y CV en contacto; LinkedIn también en el pie. |
-| Encontrar lo relevante | Proyectos del más nuevo al más antiguo, con categoría, etiquetas, herramientas y resultado visibles antes de abrir. |
+| Encontrar lo relevante | Proyectos del más nuevo al más antiguo, con portada, categoría, etiquetas y resultado visibles antes de abrir. |
 | Comparar a su ritmo | Vista de carrusel o de grilla, con desplazamiento automático que se puede pausar. |
 | Compartir un proyecto | Cada caso tiene su propia URL y su propia tarjeta de vista previa al pegar el link. |
 | Leer en su idioma | ES/EN en todo el sitio; el idioma elegido se recuerda y viaja en la URL. |
@@ -30,18 +30,21 @@ Cada caso sigue la misma estructura: ficha (rol, período, contexto, herramienta
 
 ## 🎨 Sistema visual
 
-Tema oscuro único, con el color usado para informar y no para decorar.
+Tema claro único, con auras de color en el fondo y el color usado para informar y no para decorar.
 
 | Token | Valor | Significado |
 |---|---|---|
-| `--it` | `#35C2B1` | Proyectos de IT |
-| `--cap` | `#EC7FB0` | Capacitación |
-| `--cont` | `#E8B85A` | Creación de contenidos |
-| `--bg` / `--surface` | `#0D0E12` / `#15171C` | Fondo y superficies |
+| `--it` | `#0A7A6E` (bright `#35C2B1`) | Acción principal y proyectos de IT |
+| `--cap` | `#B8326F` (bright `#EC7FB0`) | Capacitación |
+| `--cont` | `#8F5B00` (bright `#E8B85A`) | Creación de contenidos |
+| `--data` / `--ux` / `--pm` | `#2563B0` / `#B4472A` / `#4D7419` | Áreas dentro de IT, solo en Habilidades |
+| `--bg` / `--surface` / `--text` | `#F7F5F0` / `#FFFFFF` / `#17181C` | Fondo, superficies y texto |
+
+Cada color tiene una versión base, con contraste AA para texto y botones, y una "bright" para ilustraciones y auras.
 
 - **Tipografía:** Schibsted Grotesk para títulos, Hanken Grotesk para lectura y JetBrains Mono para etiquetas y datos.
 - **Íconos:** Phosphor, recortado a los íconos que el sitio usa.
-- **Forma:** radios de 12px en tarjetas y paneles, controles en forma de pastilla.
+- **Forma:** radios de 12 a 18px en tarjetas y paneles, controles en forma de pastilla.
 - **Acento secundario por caso:** cada caso puede sumar un segundo color de categoría para cifras y destacados, sin saturar la paleta.
 
 ## ♿ Accesibilidad
@@ -71,7 +74,7 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 
 - Una página por caso, generada desde los datos, con título, descripción y URL canónica propios.
 - `hreflang` para ES/EN, `sitemap.xml` y `robots.txt`.
-- Tarjetas Open Graph de 1200 × 630 generadas a partir de una plantilla: una para la home y una por caso, con título, categoría y etiquetas.
+- Tarjetas Open Graph de 1200 × 630 generadas con las fuentes y colores del sitio: una para la home y una por caso, con título, categoría, etiquetas y la captura del proyecto.
 - Versionado de archivos para que cada publicación llegue sin caché viejo.
 
 ## 🗂️ Estructura
@@ -82,9 +85,9 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 ├── casos/<slug>/         Una página por caso
 ├── assets/
 │   ├── css/              Tokens y estilos, fuentes, íconos, animación del hero
-│   ├── js/               Datos (projects, cases, i18n) y renderers (main, case, nav)
+│   ├── js/               Datos (projects, cases, i18n), renderers (main, case, nav) y animación del hero
 │   ├── fonts/            woff2 propios
-│   └── img/              Imágenes de casos y tarjetas Open Graph
+│   └── img/              Imágenes de casos, portadas de proyectos y tarjetas Open Graph
 └── tools/                Generación de páginas de caso, SEO, tarjetas OG, íconos y versionado
 ```
 
@@ -95,5 +98,4 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 | 1.0 | Una sola página con los casos en ventanas modales. |
 | 2.0 | Rediseño con design system de tokens y una URL por caso, auditado con heurísticas de Nielsen y WCAG 2.2. |
 | 3.0 | Reposicionamiento hacia análisis funcional y UX/UI, tema oscuro con color por categoría y casos construidos por bloques. |
-
-El paso de la 1.0 a la 2.0 y su auditoría están documentados como caso dentro del portfolio.
+| 4.0 | Perfil de experience designer: tema claro con auras, animación del proceso en el hero, portadas por proyecto y tarjetas de vista previa con captura. |
