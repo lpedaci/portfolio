@@ -4234,8 +4234,8 @@ window.CASES = {
    "en": "UX/UI audit of an appointment portal"
   },
   "subtitle": {
-   "es": "Portal del paciente de Centro Rossi: evaluación heurística, accesibilidad WCAG 2.2 y medición con Lighthouse del flujo para sacar un turno. Caso conceptual, no afiliado.",
-   "en": "Centro Rossi’s patient portal: heuristic evaluation, WCAG 2.2 accessibility and Lighthouse measurement of the booking flow. A conceptual case, not affiliated."
+   "es": "Portal del paciente de un centro de diagnóstico: evaluación heurística, accesibilidad WCAG 2.2 y medición con Lighthouse del flujo para sacar un turno. Caso conceptual, no afiliado.",
+   "en": "A diagnostic center’s patient portal: heuristic evaluation, WCAG 2.2 accessibility and Lighthouse measurement of the booking flow. A conceptual case, not affiliated."
   },
   "chips": {
    "es": [
