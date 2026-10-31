@@ -246,6 +246,15 @@
         ${a.tools ? `<ul class="chips" aria-label="${esc(t('fStack'))}">${a.tools.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>
         <ul class="act__pts">${a.points.map((x) => `<li>${x.lead ? `<strong>${esc(L(x.lead))}.</strong> ` : ''}${esc(L(x.body))}</li>`).join('')}</ul></li>`).join('')}</ol>`, true),
     // Piezas embebidas en grilla compacta: se ven sin ocupar toda la pantalla, y cada una abre completa en otra pestaña.
+    /* Animaciones HyperFrames en vivo (composiciones de 1200 x 900 publicadas en otro sitio, con ?embed=1).
+       La composición avisa "ready" por postMessage y espera órdenes: play, pause o end. initAnims la arranca al
+       entrar en pantalla; con movimiento reducido muestra directo el cuadro final. */
+    anim: (b) => blk(b, `<ul class="anims">${b.items.map((x) => `
+      <li><figure class="anim" data-mg="${esc(x.id)}" data-state="idle">
+        <div class="anim__frame"><iframe data-src="${esc(x.src)}" title="${esc(L(x.title))}" tabindex="-1" scrolling="no" loading="lazy"></iframe></div>
+        <figcaption><button type="button" class="anim__btn"><i class="ph ph-play" aria-hidden="true"></i><span>${t('animPlay')}</span><span class="sr-only">: ${esc(L(x.title))}</span></button>
+        <span class="anim__cap">${esc(L(x.caption))}</span></figcaption>
+      </figure></li>`).join('')}</ul>`, true),
     media: (b) => blk(b, `<ul class="media">${b.items.map((x) => `<li>${hx(H + 1, 'media__h', esc(L(x.title)))}${frame(x.kind, x.src, x.open, L(x.title), L(x.title))}</li>`).join('')}</ul>`, true),
     ranked: (b) => blk(b, `<ol class="ranked">${b.items.map((x, i) => `<li><span class="ranked__n" aria-hidden="true">${i + 1}</span><span lang="es">${esc(x)}</span></li>`).join('')}</ol>`),
 
@@ -360,7 +369,48 @@
         <span class="next__label">${t('nextCase')}</span>
         <span class="next__title"><span>${esc(L(nxt.title))}</span><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
       </a>`;
+    initAnims();
   }
+
+  /* ---------- Animaciones HyperFrames ---------- */
+  const anims = [];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  function initAnims() {
+    anims.length = 0;
+    mount.querySelectorAll('.anim').forEach((fig) => {
+      const frame = fig.querySelector('.anim__frame');
+      const iframe = fig.querySelector('iframe');
+      const btn = fig.querySelector('.anim__btn');
+      const a = { id: fig.dataset.mg, fig, iframe, ready: false, started: false, visible: false, resume: false };
+      a.send = (msg) => { if (a.ready) iframe.contentWindow.postMessage({ ...msg, mg: a.id }, '*'); };
+      a.set = (st) => {
+        fig.dataset.state = st;
+        btn.querySelector('.ph').className = `ph ${st === 'playing' ? 'ph-pause' : 'ph-play'}`;
+        btn.firstElementChild.nextElementSibling.textContent = t(st === 'playing' ? 'animPause' : st === 'ended' ? 'animAgain' : 'animPlay');
+      };
+      a.auto = () => { if (a.ready && !a.started && a.visible) { a.started = true; a.send({ cmd: reduce.matches ? 'end' : 'play' }); } };
+      const fit = () => frame.style.setProperty('--s', (frame.clientWidth / 1200).toFixed(4));
+      fit();
+      new ResizeObserver(fit).observe(frame);
+      btn.addEventListener('click', () => { a.started = true; a.resume = false; a.send({ cmd: fig.dataset.state === 'playing' ? 'pause' : 'play' }); });
+      // La composición se carga recién cerca de la pantalla y arranca cuando se ve más de la mitad
+      new IntersectionObserver(([e]) => { if (e.isIntersecting && !iframe.src) iframe.src = iframe.dataset.src; }, { rootMargin: '400px 0px' }).observe(fig);
+      new IntersectionObserver(([e]) => {
+        a.visible = e.isIntersecting;
+        if (!a.visible && fig.dataset.state === 'playing') { a.resume = true; a.send({ cmd: 'pause' }); }
+        else if (a.visible && a.resume) { a.resume = false; a.send({ cmd: 'play' }); }
+        else if (a.visible) a.auto();
+      }, { threshold: 0.55 }).observe(frame);
+      anims.push(a);
+    });
+  }
+  window.addEventListener('message', (e) => {
+    const d = e.data || {};
+    anims.forEach((a) => {
+      if (d.mg !== a.id || e.source !== a.iframe.contentWindow) return;
+      if (d.state === 'ready') { a.ready = true; a.fig.dataset.ready = ''; a.auto(); } else if (d.state) a.set(d.state);
+    });
+  });
 
   function applyLang() {
     document.documentElement.lang = state.lang;

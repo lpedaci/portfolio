@@ -6243,8 +6243,8 @@ window.CASES = {
    "en": "From the classroom to a first job"
   },
   "subtitle": {
-   "es": "Un taller de dos horas sobre primer empleo, diseñado como un recorrido web de diez paradas al que los estudiantes pueden volver cuando busquen su pasantía o su primer trabajo.",
-   "en": "A two-hour first-job workshop, designed as a ten-stop web journey that students can come back to when they look for their internship or their first job."
+   "es": "Un taller de dos horas sobre primer empleo, diseñado como un recorrido web de once paradas y cuatro apartados especiales, al que los estudiantes pueden volver cuando busquen su pasantía o su primer trabajo.",
+   "en": "A two-hour first-job workshop, designed as an eleven-stop web journey with four special sections, that students can come back to when they look for their internship or their first job."
   },
   "chips": {
    "es": [
@@ -6780,8 +6780,8 @@ window.CASES = {
      "en": "Design success criteria"
     },
     "note": {
-     "es": "Son criterios para evaluar el diseño, no resultados alcanzados. El taller todavía no se dictó.",
-     "en": "These are criteria to evaluate the design, not results achieved. The workshop has not been delivered yet."
+     "es": "Son los criterios con los que se diseñó el taller, para contrastarlos con lo que pasó en el aula.",
+     "en": "These are the criteria the workshop was designed against, to be checked against what happened in class."
     },
     "items": {
      "es": [
@@ -6953,8 +6953,8 @@ window.CASES = {
        "en": "On-page side index"
       },
       "after": {
-       "es": "\"Tu recorrido\": las diez paradas siempre a mano",
-       "en": "\"Your journey\": the ten stops always at hand"
+       "es": "\"Tu recorrido\": las once paradas siempre a mano",
+       "en": "\"Your journey\": the eleven stops always at hand"
       }
      },
      {
@@ -7004,12 +7004,12 @@ window.CASES = {
    {
     "t": "metro",
     "h": {
-     "es": "Arquitectura: dos líneas, diez paradas",
-     "en": "Architecture: two lines, ten stops"
+     "es": "Arquitectura: dos líneas, once paradas",
+     "en": "Architecture: two lines, eleven stops"
     },
     "note": {
-     "es": "La metáfora de un mapa de subte ordena el taller: una línea por hora, cinco paradas por línea y los minutos de cada una a la vista.",
-     "en": "A metro map metaphor organises the workshop: one line per hour, five stops per line, and the minutes for each one in plain sight."
+     "es": "La metáfora de un mapa de subte ordena el taller: una línea por hora y los minutos de cada parada a la vista. La entrevista se dividió en dos paradas, con personas y con inteligencia artificial, y la segunda línea pasó a tener seis.",
+     "en": "A metro map metaphor organises the workshop: one line per hour, with the minutes for each stop in plain sight. The interview was split into two stops, with people and with artificial intelligence, so the second line now has six."
     },
     "unit": {
      "es": "min",
@@ -7105,13 +7105,21 @@ window.CASES = {
        {
         "n": 9,
         "name": {
-         "es": "Entrevistas: personas e IA",
-         "en": "Interviews: people and AI"
+         "es": "La entrevista laboral",
+         "en": "The job interview"
         },
-        "min": 22
+        "min": 14
        },
        {
         "n": 10,
+        "name": {
+         "es": "Entrevistas con IA",
+         "en": "AI interviews"
+        },
+        "min": 8
+       },
+       {
+        "n": 11,
         "name": {
          "es": "Tu plan de 30 días",
          "en": "Your 30-day plan"
@@ -7133,8 +7141,8 @@ window.CASES = {
      "en": "Where the time goes"
     },
     "note": {
-     "es": "Minutos planificados por parada. Las paradas suman 109 minutos y 60 son actividad: más de la mitad del taller se hace, no se escucha.",
-     "en": "Planned minutes per stop. The stops add up to 109 minutes and 60 of them are activity: more than half of the workshop is done, not listened to."
+     "es": "Minutos planificados por parada. Las paradas suman 109 minutos y 45 son actividad en clase. El simulacro de entrevista en parejas (20 min) es una actividad extra: si hay tiempo se hace en el aula; si no, queda de tarea o para un nuevo encuentro con alguna de las docentes. Con el simulacro, la práctica llega a 65 de 129 minutos, más de la mitad.",
+     "en": "Planned minutes per stop. The stops add up to 109 minutes and 45 of them are in-class activity. The paired mock interview (20 min) is an extra activity: if there is time it is done in class; if not, it becomes homework or is done in a new session with one of the teachers. With the mock interview, hands-on time reaches 65 of 129 minutes, more than half."
     },
     "title": {
      "es": "Minutos de actividad y de exposición por parada",
@@ -7221,16 +7229,24 @@ window.CASES = {
      },
      {
       "label": {
-       "es": "9. Entrevistas: personas e IA",
-       "en": "9. Interviews: people and AI"
+       "es": "9. La entrevista laboral",
+       "en": "9. The job interview"
       },
-      "min": 22,
-      "act": 20
+      "min": 14,
+      "act": 0
      },
      {
       "label": {
-       "es": "10. Tu plan de 30 días",
-       "en": "10. Your 30-day plan"
+       "es": "10. Entrevistas con IA",
+       "en": "10. AI interviews"
+      },
+      "min": 8,
+      "act": 5
+     },
+     {
+      "label": {
+       "es": "11. Tu plan de 30 días",
+       "en": "11. Your 30-day plan"
       },
       "min": 5,
       "act": 0
@@ -7240,6 +7256,96 @@ window.CASES = {
      "es": "Total",
      "en": "Total"
     }
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Apartados especiales",
+     "en": "Special sections"
+    },
+    "note": {
+     "es": "Temas que suman pero no entran en las dos horas. Viven en el mismo sitio, fuera del recorrido, y en la presentación solo se mencionan.",
+     "en": "Topics that add value but do not fit into the two hours. They live on the same site, outside the journey, and are only mentioned in the presentation."
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "El recibo de sueldo",
+       "en": "The payslip"
+      },
+      "body": {
+       "es": "Aportes, contribuciones y cómo leer el primer recibo, sobre un recibo de ejemplo con datos ficticios y marcas numeradas, ordenado según el Decreto N.º 407/2026.",
+       "en": "Employee and employer contributions and how to read a first payslip, using a sample payslip with fictional data and numbered markers, laid out as set by Decree No. 407/2026."
+      },
+      "img": {
+       "src": "primer-empleo-recibo.jpg",
+       "w": 1200,
+       "h": 1643,
+       "alt": {
+        "es": "Recibo de sueldo de ejemplo con datos ficticios: datos del empleador y del trabajador, costo total del empleador, sueldo bruto, descuentos y sueldo neto, con marcas numeradas y un gráfico de torta de la composición salarial.",
+        "en": "Sample payslip with fictional data: employer and employee details, total employer cost, gross pay, deductions and net pay, with numbered markers and a pie chart of the pay breakdown."
+       }
+      }
+     },
+     {
+      "title": {
+       "es": "Finanzas personales",
+       "en": "Personal finance"
+      },
+      "body": {
+       "es": "Un aporte del Lic. Kevin Giampieri: mentalidad, salida de deudas, presupuesto e inversión, con calculadoras interactivas para repartir el ingreso y ver cómo crece el interés compuesto.",
+       "en": "A contribution by Kevin Giampieri: mindset, getting out of debt, budgeting and investing, with interactive calculators to split income and watch compound interest grow."
+      },
+      "img": {
+       "src": "primer-empleo-interes.jpg",
+       "w": 1400,
+       "h": 1079,
+       "alt": {
+        "es": "Calculadora de interés compuesto: inversión inicial, aporte por mes, tasa anual y años; debajo, el capital final, el total aportado, los intereses ganados y un gráfico de barras que crece año por año.",
+        "en": "Compound interest calculator: initial investment, monthly contribution, annual rate and years; below, the final capital, total contributed, interest earned and a bar chart that grows year by year."
+       }
+      }
+     },
+     {
+      "title": {
+       "es": "Charla de carreras",
+       "en": "Career talk"
+      },
+      "body": {
+       "es": "Cómo funciona la educación superior, qué títulos existen y cómo elegir qué estudiar después de la secundaria, con acceso a la charla, publicada como sitio propio.",
+       "en": "How higher education works, which qualifications exist and how to choose what to study after secondary school, with a link to the talk, published as its own site."
+      },
+      "img": {
+       "src": "primer-empleo-charla.jpg",
+       "w": 1400,
+       "h": 875,
+       "alt": {
+        "es": "Vista previa de la charla de carreras dentro del taller: captura del sitio de la charla, su descripción y el botón Ver la charla.",
+        "en": "Preview of the career talk inside the workshop: a screenshot of the talk site, its description and the View the talk button."
+       }
+      }
+     },
+     {
+      "title": {
+       "es": "El servidor de Lourdes",
+       "en": "Lourdes’s server"
+      },
+      "body": {
+       "es": "Cursos gratuitos, recursos y guías ordenados por tema, para seguir aprendiendo después del taller.",
+       "en": "Free courses, resources and guides organised by topic, to keep learning after the workshop."
+      },
+      "img": {
+       "src": "primer-empleo-servidor.jpg",
+       "w": 1400,
+       "h": 875,
+       "alt": {
+        "es": "Vista previa del servidor de Lourdes dentro del taller: captura del sitio con cursos, recursos y threads, su descripción y el botón Entrar al servidor.",
+        "en": "Preview of Lourdes’s server inside the workshop: a screenshot of the site with courses, resources and threads, its description and the Enter the server button."
+       }
+      }
+     }
+    ]
    },
    {
     "t": "list",
@@ -7372,21 +7478,50 @@ window.CASES = {
      },
      {
       "title": {
-       "es": "Tres CV de ejemplo, uno por modalidad",
-       "en": "Three sample CVs, one per track"
+       "es": "Cinco CV de ejemplo, cada uno con su aviso",
+       "en": "Five sample CVs, each with its job ad"
       },
       "body": {
-       "es": "Soporte técnico, mantenimiento y administración, con personas ficticias. En el primero, las palabras clave que coinciden con el aviso están resaltadas.",
-       "en": "Technical support, maintenance and administration, with fictional people. In the first one, the keywords that match the job ad are highlighted."
+       "es": "Uno por orientación: soporte IT, electrónica, administración, química y multimedios, con y sin foto. Cada CV responde a un aviso de trabajo y las palabras clave del aviso están marcadas en los dos.",
+       "en": "One per track: IT support, electronics, administration, chemistry and multimedia, with and without a photo. Each CV answers a job ad, and the ad’s keywords are marked in both."
       },
       "img": {
-       "src": "primer-empleo-cv.jpg",
-       "w": 1600,
-       "h": 1922,
+       "src": "primer-empleo-cv-aviso.jpg",
+       "w": 1400,
+       "h": 1629,
        "alt": {
-        "es": "Pestañas de los tres CV de ejemplo, el aviso de pasante de soporte técnico con sus palabras clave resaltadas en amarillo y el CV de una columna de Tomás Ferreyra, persona ficticia, con las mismas palabras resaltadas.",
-        "en": "Tabs for the three sample CVs, the technical support internship ad with its keywords highlighted in yellow, and the single-column CV of Tomás Ferreyra, a fictional person, with the same words highlighted."
+        "es": "Aviso de pasante de soporte técnico IT con sus palabras clave resaltadas y, debajo, el CV de una columna de Tomás Ferreyra, persona ficticia, con las mismas palabras resaltadas.",
+        "en": "An IT support internship ad with its keywords highlighted and, below it, the single-column CV of Tomás Ferreyra, a fictional person, with the same words highlighted."
        }
+      }
+     },
+     {
+      "title": {
+       "es": "Perfiles de LinkedIn de ejemplo",
+       "en": "Sample LinkedIn profiles"
+      },
+      "body": {
+       "es": "Dos perfiles ficticios alineados con los CV de ejemplo, con banner, titular en tres partes y un Acerca de breve, más tres claves para la foto: de frente, buena luz y fondo neutro.",
+       "en": "Two fictional profiles aligned with the sample CVs, with a banner, a three-part headline and a short About, plus three tips for the photo: facing the camera, good light and a neutral background."
+      },
+      "img": {
+       "src": "primer-empleo-linkedin.jpg",
+       "w": 1400,
+       "h": 907,
+       "alt": {
+        "es": "Dos perfiles de LinkedIn de ejemplo, de Sofía Medina y Tomás Ferreyra, personas ficticias, con banner, foto, titular, ubicación y Acerca de, y arriba tres claves para la foto.",
+        "en": "Two sample LinkedIn profiles, for Sofía Medina and Tomás Ferreyra, fictional people, with banner, photo, headline, location and About, and three photo tips above."
+       }
+      }
+     },
+     {
+      "title": {
+       "es": "Registro de logros",
+       "en": "Achievement log"
+      },
+      "body": {
+       "es": "En la parada de la entrevista, una plantilla para anotar logros con su resultado y cómo se midió. Esas filas después alimentan los logros del CV y las respuestas con el método STAR.",
+       "en": "In the interview stop, a template to log achievements with their result and how it was measured. Those rows then feed the CV’s achievements and the STAR answers."
       }
      },
      {
@@ -7526,6 +7661,29 @@ window.CASES = {
      }
     ],
     "marks": true
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Modo presentación",
+     "en": "Presentation mode"
+    },
+    "note": {
+     "es": "El botón Presentar abre el mismo sitio como presentación para proyectar en el aula: cada parada se ve dentro de un lienzo 16:9 y lo que no entra pasa a la diapositiva siguiente. Se avanza con las flechas del teclado, con un índice (tecla O) y pantalla completa (tecla F). No hay diapositivas aparte que se desactualicen.",
+     "en": "The Present button opens the same site as a slideshow to project in class: each stop is shown inside a 16:9 canvas and whatever does not fit moves to the next slide. Arrow keys move forward, with an index (O key) and full screen (F key). There are no separate slides to fall out of date."
+    },
+    "single": true,
+    "images": [
+     {
+      "src": "primer-empleo-presentacion.jpg",
+      "w": 1600,
+      "h": 900,
+      "alt": {
+       "es": "Primera diapositiva del modo presentación: el título Del aula al primer trabajo, el avance, la próxima parada y las dos líneas del recorrido con sus paradas numeradas.",
+       "en": "First slide of presentation mode: the title From the classroom to a first job, progress, the next stop and the journey’s two lines with their numbered stops."
+      }
+     }
+    ]
    },
    {
     "t": "phase",
@@ -7856,7 +8014,8 @@ window.CASES = {
     },
     "rowsOf": [
      1,
-     2
+     2,
+     1
     ],
     "images": [
      {
@@ -7897,57 +8056,67 @@ window.CASES = {
        "es": "El mismo mapa en tema oscuro, con cada token en su par.",
        "en": "The same map in the dark theme, with every token in its pair."
       }
+     },
+     {
+      "src": "primer-empleo-mapa-11.jpg",
+      "w": 1600,
+      "h": 1472,
+      "alt": {
+       "es": "El mapa del recorrido completo: la línea 1 con cinco paradas, la línea 2 con seis y, debajo, los cuatro apartados especiales en mosaicos de color.",
+       "en": "The full journey map: line 1 with five stops, line 2 with six and, below, the four special sections in colour tiles."
+      },
+      "caption": {
+       "es": "El mapa con las once paradas y los cuatro apartados especiales.",
+       "en": "The map with the eleven stops and the four special sections."
+      }
      }
     ]
    },
    {
-    "t": "gallery",
+    "t": "anim",
     "h": {
      "es": "Animaciones explicativas",
      "en": "Explainer animations"
     },
     "note": {
-     "es": "Tres piezas cortas hechas con HyperFrames y GSAP. Cada una tiene botón de pausa y una descripción en texto, y toma los colores del tema. Acá se ve el cuadro final, que es lo que muestran con movimiento reducido.",
-     "en": "Three short pieces built with HyperFrames and GSAP. Each one has a pause button and a text description, and takes the theme colours. Shown here is the final frame, which is what they display with reduced motion."
+     "es": "Las tres piezas en vivo: son las mismas composiciones de HyperFrames y GSAP que usa el sitio del taller. Arrancan al aparecer en pantalla, se pueden pausar y, con movimiento reducido, muestran el cuadro final.",
+     "en": "The three pieces, live: the same HyperFrames and GSAP compositions the workshop site uses. They start when they come into view, can be paused and, with reduced motion, show the final frame."
     },
-    "images": [
+    "items": [
      {
-      "src": "primer-empleo-ds-anim-ats.jpg",
-      "w": 1376,
-      "h": 1206,
-      "alt": {
-       "es": "Cuadro final de la animación Así te lee un ATS: un CV de una columna a la izquierda y, a la derecha, nombre, experiencia, educación y habilidades con una tilde verde cada uno. Debajo, el botón Ver de nuevo y la descripción en texto.",
-       "en": "Final frame of the How an ATS reads you animation: a single-column CV on the left and, on the right, name, experience, education and skills, each with a green tick. Below, the Play again button and the text description."
+      "id": "ats",
+      "src": "https://lpedaci.github.io/taller-primerempleo/videos/ats/index.html?embed=1&theme=light",
+      "title": {
+       "es": "Así te lee un ATS",
+       "en": "How an ATS reads you"
       },
       "caption": {
-       "es": "Así te lee un ATS.",
-       "en": "How an ATS reads you."
+       "es": "En un CV de dos columnas con íconos y barras, el sistema no encuentra experiencia ni educación. Con una columna y títulos comunes, lee todos los campos.",
+       "en": "In a two-column CV with icons and bars, the system finds no experience or education. With one column and standard headings, it reads every field."
       }
      },
      {
-      "src": "primer-empleo-ds-anim-linkedin.jpg",
-      "w": 1376,
-      "h": 1160,
-      "alt": {
-       "es": "Cuadro final de la animación del titular de LinkedIn: un perfil ficticio con un titular en tres partes, el puesto que buscás, lo que estudiás y un diferencial.",
-       "en": "Final frame of the LinkedIn headline animation: a fictional profile with a three-part headline, the role you want, what you study and a differentiator."
+      "id": "linkedin",
+      "src": "https://lpedaci.github.io/taller-primerempleo/videos/linkedin/index.html?embed=1&theme=light",
+      "title": {
+       "es": "El titular de LinkedIn",
+       "en": "The LinkedIn headline"
       },
       "caption": {
-       "es": "El titular de LinkedIn en tres partes.",
-       "en": "The LinkedIn headline in three parts."
+       "es": "El titular «Estudiante» se reemplaza por tres partes: el puesto que buscás, lo que estudiás y un diferencial.",
+       "en": "The “Student” headline is replaced by three parts: the role you want, what you study and a differentiator."
       }
      },
      {
-      "src": "primer-empleo-star.jpg",
-      "w": 1376,
-      "h": 1032,
-      "alt": {
-       "es": "Cuadro final de la animación del método STAR: situación, tarea, acción y resultado, con una barra que muestra que la acción es la parte más larga.",
-       "en": "Final frame of the STAR method animation: situation, task, action and result, with a bar showing that the action is the longest part."
+      "id": "star",
+      "src": "https://lpedaci.github.io/taller-primerempleo/videos/star/index.html?embed=1&theme=light",
+      "title": {
+       "es": "El método STAR",
+       "en": "The STAR method"
       },
       "caption": {
-       "es": "El método STAR.",
-       "en": "The STAR method."
+       "es": "Una respuesta armada en cuatro partes. La acción ocupa cerca de la mitad del tiempo.",
+       "en": "An answer built in four parts. The action takes up about half of the time."
       }
      }
     ]
@@ -8228,7 +8397,7 @@ window.CASES = {
       "Pestañas, menú y plantillas operables con teclado.",
       "Animaciones con pausa y descripción en texto; con movimiento reducido muestran el cuadro final.",
       "Enlaces externos que avisan que se abren en una pestaña nueva e imágenes con texto alternativo descriptivo.",
-      "Cada dato está fechado y citado en APA 7 (17 fuentes), para actualizarlo cada año sin rehacer el taller."
+      "Cada dato está fechado y citado en APA 7 (19 fuentes), para actualizarlo cada año sin rehacer el taller."
      ],
      "en": [
       "Semantic HTML, a skip-to-content link and visible focus on every control.",
@@ -8236,7 +8405,7 @@ window.CASES = {
       "Tabs, menu and templates are keyboard operable.",
       "Animations have a pause control and a text description; with reduced motion they show the final frame.",
       "External links announce they open in a new tab, and images have descriptive alt text.",
-      "Every figure is dated and cited in APA 7 (17 sources), so it can be updated each year without rebuilding the workshop."
+      "Every figure is dated and cited in APA 7 (19 sources), so it can be updated each year without rebuilding the workshop."
      ]
     },
     "hl": true
@@ -8249,8 +8418,8 @@ window.CASES = {
     },
     "p": [
      {
-      "es": "Antes de publicarlo, el sitio pasó por la revisión de Julieta Taraborrelli, co-docente del taller.",
-      "en": "Before publishing, the site was reviewed by Julieta Taraborrelli, the workshop's co-facilitator."
+      "es": "Antes de publicarlo, el sitio pasó por la revisión de Julieta Taraborrelli, co-docente del taller. El contenido es de Lourdes Pedaci, Julieta Taraborrelli y Bettyna González, y el apartado de finanzas personales es un aporte de Kevin Giampieri.",
+      "en": "Before publishing, the site was reviewed by Julieta Taraborrelli, the workshop’s co-facilitator. The content is by Lourdes Pedaci, Julieta Taraborrelli and Bettyna González, and the personal finance section is a contribution by Kevin Giampieri."
      }
     ]
    },
@@ -8269,6 +8438,94 @@ window.CASES = {
     "label": {
      "es": "Del aula al primer trabajo",
      "en": "From the classroom to a first job"
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Cuestiones clave",
+     "en": "Key decisions"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Dos paradas para la entrevista",
+       "en": "Two stops for the interview"
+      },
+      "body": {
+       "es": "La entrevista con personas y la entrevista con IA piden preparaciones distintas: una se apoya en el pitch, el método STAR y el registro de logros; la otra, en grabarse y responder sin nadie del otro lado.",
+       "en": "An interview with people and an interview with AI call for different preparation: one relies on the pitch, the STAR method and the achievement log; the other, on recording yourself and answering with nobody on the other side."
+      }
+     },
+     {
+      "lead": {
+       "es": "Lo que suma, fuera del recorrido",
+       "en": "What adds value, outside the journey"
+      },
+      "body": {
+       "es": "El recibo de sueldo, las finanzas, la elección de carrera y los cursos quedan como apartados especiales: están en el mismo sitio, pero no alargan las dos horas.",
+       "en": "The payslip, personal finance, choosing a degree and courses stay as special sections: they are on the same site, but they do not stretch the two hours."
+      }
+     },
+     {
+      "lead": {
+       "es": "Ejemplos cercanos a cada orientación",
+       "en": "Examples close to each track"
+      },
+      "body": {
+       "es": "Cada estudiante encuentra un CV, un aviso y un perfil de LinkedIn parecidos a lo que va a buscar, en lugar de un único ejemplo genérico.",
+       "en": "Each student finds a CV, a job ad and a LinkedIn profile similar to what they will look for, instead of a single generic example."
+      }
+     },
+     {
+      "lead": {
+       "es": "Un solo contenido para el aula y para después",
+       "en": "One source for class and for later"
+      },
+      "body": {
+       "es": "El modo presentación usa el mismo HTML que la web, así lo que se proyecta y lo que se consulta después nunca quedan desfasados.",
+       "en": "Presentation mode uses the same HTML as the website, so what is projected and what is looked up later never fall out of sync."
+      }
+     },
+     {
+      "lead": {
+       "es": "Datos con fecha y fuente",
+       "en": "Dated, sourced data"
+      },
+      "body": {
+       "es": "Las cifras, la normativa del recibo y las herramientas de LinkedIn se citan en APA 7, para actualizarlas cada año sin rehacer el sitio.",
+       "en": "Figures, payslip regulations and LinkedIn tools are cited in APA 7, so they can be updated every year without rebuilding the site."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Resultados",
+     "en": "Results"
+    },
+    "note": {
+     "es": "Lo que el proyecto entrega.",
+     "en": "What the project delivers."
+    },
+    "items": {
+     "es": [
+      "El taller se dictó con 6to año entre el lunes 26 de octubre y el miércoles 4 de noviembre de 2026.",
+      "Un recorrido completo y publicado: once paradas, cuatro apartados especiales y cinco plantillas para copiar.",
+      "El mismo sitio sirve para dictar el taller y para consultarlo después, sin armar diapositivas aparte.",
+      "Cada estudiante puede salir con productos propios: su mapa personal, el perfil del CV, el registro de logros y el pitch.",
+      "Herramientas que se siguen usando después del taller: calculadoras de presupuesto e interés compuesto, la charla de carreras y el servidor de cursos.",
+      "Accesible en los dos temas, claro y oscuro, con 19 fuentes citadas para mantenerlo al día."
+     ],
+     "en": [
+      "The workshop was delivered to sixth-year students between Monday 26 October and Wednesday 4 November 2026.",
+      "A complete, published journey: eleven stops, four special sections and five copy-ready templates.",
+      "The same site is used to run the workshop and to look it up later, with no separate slides.",
+      "Each student can leave with things of their own: their personal map, the CV profile, the achievement log and the pitch.",
+      "Tools that stay useful after the workshop: budget and compound interest calculators, the career talk and the course server.",
+      "Accessible in both the light and dark themes, with 19 cited sources to keep it up to date."
+     ]
     }
    },
    {
@@ -8292,12 +8549,22 @@ window.CASES = {
     "items": [
      {
       "value": {
-       "es": "10",
-       "en": "10"
+       "es": "11",
+       "en": "11"
       },
       "label": {
        "es": "paradas en dos líneas",
        "en": "stops on two lines"
+      }
+     },
+     {
+      "value": {
+       "es": "4",
+       "en": "4"
+      },
+      "label": {
+       "es": "apartados especiales",
+       "en": "special sections"
       }
      },
      {
@@ -8312,18 +8579,18 @@ window.CASES = {
      },
      {
       "value": {
-       "es": "60 min",
-       "en": "60 min"
+       "es": "45 min",
+       "en": "45 min"
       },
       "label": {
-       "es": "de actividad práctica",
-       "en": "of hands-on activity"
+       "es": "de actividad en clase, 65 con el simulacro",
+       "en": "of in-class activity, 65 with the mock interview"
       }
      },
      {
       "value": {
-       "es": "4",
-       "en": "4"
+       "es": "5",
+       "en": "5"
       },
       "label": {
        "es": "plantillas para copiar",
@@ -8332,8 +8599,8 @@ window.CASES = {
      },
      {
       "value": {
-       "es": "17",
-       "en": "17"
+       "es": "19",
+       "en": "19"
       },
       "label": {
        "es": "fuentes citadas en APA 7",
@@ -8350,14 +8617,10 @@ window.CASES = {
     },
     "items": {
      "es": [
-      "Dictar el taller con 6to año.",
-      "Sumar una parada nueva sobre cómo leer un recibo de sueldo.",
-      "Después del dictado, contrastar los criterios de éxito con lo que pasó en el aula y ajustar el recorrido."
+      "Contrastar los criterios de éxito con lo que pasó en el aula y ajustar el recorrido."
      ],
      "en": [
-      "Run the workshop with sixth-year students.",
-      "Add a new stop on how to read a payslip.",
-      "After the session, check the success criteria against what happened in class and adjust the journey."
+      "Check the success criteria against what happened in class and adjust the journey."
      ]
     }
    }

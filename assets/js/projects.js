@@ -40,10 +40,10 @@ window.PROJECTS = [
     tags: { es: ['empleabilidad', 'capacitación'], en: ['employability', 'training'] },
     title: { es: 'Del aula al primer trabajo', en: 'From the classroom to a first job' },
     desc: {
-      es: 'Taller de primer empleo convertido en un recorrido web de diez paradas: CV para ATS, LinkedIn, porfolio y entrevistas con personas e IA.',
-      en: 'A first-job workshop turned into a ten-stop web journey: ATS-ready CVs, LinkedIn, portfolios and interviews with people and AI.'
+      es: 'Taller de primer empleo convertido en un recorrido web de once paradas y cuatro apartados especiales: CV para ATS, LinkedIn, entrevistas con personas e IA, recibo de sueldo y finanzas.',
+      en: 'A first-job workshop turned into an eleven-stop web journey with four special sections: ATS-ready CVs, LinkedIn, interviews with people and AI, payslips and personal finance.'
     },
-    result: { es: '60 de 109 minutos de práctica', en: '60 of 109 minutes hands-on' },
+    result: { es: '45 min de práctica, 65 con el simulacro', en: '45 min hands-on, 65 with the mock interview' },
     skills: { es: ['Doble Diamante', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'], en: ['Double Diamond', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'] }
   },
   {

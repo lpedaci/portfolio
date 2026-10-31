@@ -881,6 +881,22 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .frame--audio iframe { height: 152px; background: transparent; }
 .frame--audio { background: transparent; }
 
+/* Animaciones HyperFrames en vivo: la composición mide 1200 x 900 y se escala al ancho de la tarjeta (--s lo pone case.js) */
+.anims { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.anim { margin: 0; display: grid; gap: 12px; }
+.anim__frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--r-card); border: 1px solid var(--line); background: var(--surface-2); }
+.anim__frame iframe { position: absolute; left: 0; top: 0; width: 1200px; height: 900px; border: 0; transform: scale(var(--s, 0.3)); transform-origin: 0 0; pointer-events: none; }
+.anim figcaption { display: grid; gap: 10px; justify-items: start; }
+.anim__btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill);
+  border: 1px solid var(--line-2); background: var(--surface); color: var(--text); font-weight: 500; cursor: pointer;
+  transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+.anim__btn:hover { border-color: var(--muted); }
+.anim__btn .ph { color: var(--it); }
+.anim:not([data-ready]) .anim__btn { opacity: 0.5; pointer-events: none; }
+.anim__cap { color: var(--muted); font-size: 0.9375rem; line-height: 1.55; }
+
 .gallery { display: grid; gap: 12px; }
 .gallery__row { display: flex; gap: 12px; align-items: flex-start; }
 .pic { flex: 1 1 0; min-width: 0; margin: 0; }
