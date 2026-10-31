@@ -27,8 +27,6 @@ window.CASES = {
     "es": "7mo año de Informática, Instituto Leonardo Murialdo"
    },
    "stack": [
-    "iSpring",
-    "SCORM",
     "HTML/CSS/JS",
     "GitHub Pages",
     "Figma",
@@ -72,8 +70,8 @@ window.CASES = {
     },
     "p": [
      {
-      "en": "A comprehensive e-learning module for the seventh-year programme at Instituto Leonardo Murialdo. I transformed static theoretical content on project lifecycles, organisational structures and management tools, including GitHub and Gantt charts, into an interactive, SCORM-compliant experience designed for student engagement.",
-      "es": "Un módulo de e-learning integral para 7mo año del Instituto Leonardo Murialdo. Transformé contenido teórico estático sobre ciclos de vida de proyectos, estructuras organizacionales y herramientas de gestión, incluyendo GitHub y diagramas de Gantt, en una experiencia interactiva compatible con SCORM, diseñada para el compromiso del estudiante."
+      "en": "A comprehensive e-learning module for the seventh-year programme at Instituto Leonardo Murialdo. I transformed static theoretical content on project lifecycles, organisational structures and management tools, including GitHub and Gantt charts, into an interactive web experience designed for student engagement.",
+      "es": "Un módulo de e-learning integral para 7mo año del Instituto Leonardo Murialdo. Transformé contenido teórico estático sobre ciclos de vida de proyectos, estructuras organizacionales y herramientas de gestión, incluyendo GitHub y diagramas de Gantt, en una experiencia web interactiva, diseñada para el compromiso del estudiante."
      }
     ]
    },
@@ -103,8 +101,8 @@ window.CASES = {
        "es": "Marco interactivo"
       },
       "body": {
-       "en": "iSpring was used to create a non-linear path through the five project phases: initiation, planning, execution, maintenance and closure.",
-       "es": "Usé iSpring para crear un recorrido no lineal a través de las cinco fases de un proyecto: inicio, planificación, ejecución, mantenimiento y cierre."
+       "en": "I designed and coded interactive web modules that build a non-linear path through the five project phases: initiation, planning, execution, maintenance and closure.",
+       "es": "Diseñé y programé módulos web interactivos que arman un recorrido no lineal a través de las cinco fases de un proyecto: inicio, planificación, ejecución, mantenimiento y cierre."
       }
      },
      {
