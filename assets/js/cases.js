@@ -7522,6 +7522,15 @@ window.CASES = {
       "body": {
        "es": "En la parada de la entrevista, una plantilla para anotar logros con su resultado y cómo se midió. Esas filas después alimentan los logros del CV y las respuestas con el método STAR.",
        "en": "In the interview stop, a template to log achievements with their result and how it was measured. Those rows then feed the CV’s achievements and the STAR answers."
+      },
+      "img": {
+       "src": "primer-empleo-logros.jpg",
+       "w": 1400,
+       "h": 1417,
+       "alt": {
+        "es": "Registro de logros con ejemplos completos: una tabla con tres grupos de columnas, el proyecto, el cambio y el impacto, y tres filas de ejemplo.",
+        "en": "Achievement log with complete examples: a table with three column groups, the project, the change and the impact, and three example rows."
+       }
       }
      },
      {
@@ -7554,11 +7563,11 @@ window.CASES = {
       },
       "img": {
        "src": "primer-empleo-plan.jpg",
-       "w": 1600,
-       "h": 1612,
+       "w": 1574,
+       "h": 1973,
        "alt": {
-        "es": "Parada 10, Terminal: tu plan de 30 días. Idea clave sobre fondo amarillo y una lista de doce tareas para marcar, desde completar el mapa personal hasta postularse a un aviso.",
-        "en": "Stop 10, last stop: your 30-day plan. A key idea on a yellow background and a list of twelve tasks to tick off, from completing the personal map to applying for a job ad."
+        "es": "Parada 11, Terminal: tu plan de 30 días. Idea clave sobre fondo amarillo y una lista de trece tareas para marcar, desde completar el mapa personal hasta postularse a un aviso.",
+        "en": "Stop 11, last stop: your 30-day plan. A key idea on a yellow background and a list of thirteen tasks to tick off, from completing the personal map to applying for a job ad."
        }
       }
      }
@@ -7669,8 +7678,8 @@ window.CASES = {
      "en": "Presentation mode"
     },
     "note": {
-     "es": "El botón Presentar abre el mismo sitio como presentación para proyectar en el aula: cada parada se ve dentro de un lienzo 16:9 y lo que no entra pasa a la diapositiva siguiente. Se avanza con las flechas del teclado, con un índice (tecla O) y pantalla completa (tecla F). No hay diapositivas aparte que se desactualicen.",
-     "en": "The Present button opens the same site as a slideshow to project in class: each stop is shown inside a 16:9 canvas and whatever does not fit moves to the next slide. Arrow keys move forward, with an index (O key) and full screen (F key). There are no separate slides to fall out of date."
+     "es": "El botón Presentar abre el mismo sitio como presentación para proyectar en el aula: cada parada se ve dentro de un lienzo 16:9 y lo que no entra pasa a la diapositiva siguiente. Se avanza con las flechas del teclado, con un índice (tecla O) y pantalla completa (tecla F). Como la presentación se arma sola a partir del sitio, cualquier cambio en una parada aparece también en lo que se proyecta: no hace falta mantener un PowerPoint aparte.",
+     "en": "The Present button opens the same site as a slideshow to project in class: each stop is shown inside a 16:9 canvas and whatever does not fit moves to the next slide. Arrow keys move forward, with an index (O key) and full screen (F key). Since the slideshow is built from the site itself, any change to a stop also shows up in what is projected: there is no separate PowerPoint to maintain."
     },
     "single": true,
     "images": [
@@ -8014,14 +8023,13 @@ window.CASES = {
     },
     "rowsOf": [
      1,
-     2,
-     1
+     2
     ],
     "images": [
      {
       "src": "primer-empleo-ds-portada.jpg",
       "w": 1600,
-      "h": 574,
+      "h": 597,
       "alt": {
        "es": "Portada del taller: panel blanco con el título y el trazo en espiral, un bloque carbón con el anillo de avance en cero y dos mosaicos, lavanda y naranja, uno por línea.",
        "en": "Workshop home: a white panel with the title and the looping stroke, a charcoal block with the progress ring at zero and two tiles, lavender and orange, one per line."
@@ -8034,10 +8042,10 @@ window.CASES = {
      {
       "src": "primer-empleo-ds-mapa.jpg",
       "w": 1600,
-      "h": 1171,
+      "h": 1438,
       "alt": {
-       "es": "Mapa del recorrido en tema claro: dos franjas con grilla de fondo, lavanda y naranja, cinco tarjetas de parada en cada una unidas por una línea punteada.",
-       "en": "Journey map in the light theme: two bands with a grid background, lavender and orange, five stop cards in each joined by a dashed line."
+       "es": "Mapa del recorrido en tema claro: dos franjas con grilla de fondo, lavanda y naranja, con cinco paradas en la línea 1 y seis en la línea 2 unidas por una línea punteada, y debajo los cuatro apartados especiales.",
+       "en": "Journey map in the light theme: two bands with a background grid, lavender and orange, with five stops on line 1 and six on line 2 joined by a dotted line, and the four special sections below."
       },
       "caption": {
        "es": "El mapa en tema claro: grilla de fondo y paradas unidas por una línea punteada.",
@@ -8047,7 +8055,7 @@ window.CASES = {
      {
       "src": "primer-empleo-ds-mapa-oscuro.jpg",
       "w": 1600,
-      "h": 1171,
+      "h": 1438,
       "alt": {
        "es": "El mismo mapa en tema oscuro: fondo casi negro, franjas en tonos apagados de lavanda y naranja y tarjetas de parada oscuras.",
        "en": "The same map in the dark theme: near-black background, bands in muted lavender and orange, and dark stop cards."
@@ -8055,19 +8063,6 @@ window.CASES = {
       "caption": {
        "es": "El mismo mapa en tema oscuro, con cada token en su par.",
        "en": "The same map in the dark theme, with every token in its pair."
-      }
-     },
-     {
-      "src": "primer-empleo-mapa-11.jpg",
-      "w": 1600,
-      "h": 1472,
-      "alt": {
-       "es": "El mapa del recorrido completo: la línea 1 con cinco paradas, la línea 2 con seis y, debajo, los cuatro apartados especiales en mosaicos de color.",
-       "en": "The full journey map: line 1 with five stops, line 2 with six and, below, the four special sections in colour tiles."
-      },
-      "caption": {
-       "es": "El mapa con las once paradas y los cuatro apartados especiales.",
-       "en": "The map with the eleven stops and the four special sections."
       }
      }
     ]
@@ -8483,8 +8478,8 @@ window.CASES = {
        "en": "One source for class and for later"
       },
       "body": {
-       "es": "El modo presentación usa el mismo HTML que la web, así lo que se proyecta y lo que se consulta después nunca quedan desfasados.",
-       "en": "Presentation mode uses the same HTML as the website, so what is projected and what is looked up later never fall out of sync."
+       "es": "La presentación se genera a partir del mismo sitio: si se corrige una parada, el cambio aparece en la web que consultan los estudiantes y en lo que se proyecta en clase.",
+       "en": "The slideshow is generated from the same site: when a stop is corrected, the change shows up both on the website students look up and in what is projected in class."
       }
      },
      {
@@ -8513,7 +8508,7 @@ window.CASES = {
      "es": [
       "El taller se dictó con 6to año entre el lunes 26 de octubre y el miércoles 4 de noviembre de 2026.",
       "Un recorrido completo y publicado: once paradas, cuatro apartados especiales y cinco plantillas para copiar.",
-      "El mismo sitio sirve para dictar el taller y para consultarlo después, sin armar diapositivas aparte.",
+      "El mismo sitio sirve para dictar el taller (en modo presentación) y para consultarlo después, sin tener que armar un PowerPoint aparte.",
       "Cada estudiante puede salir con productos propios: su mapa personal, el perfil del CV, el registro de logros y el pitch.",
       "Herramientas que se siguen usando después del taller: calculadoras de presupuesto e interés compuesto, la charla de carreras y el servidor de cursos.",
       "Accesible en los dos temas, claro y oscuro, con 19 fuentes citadas para mantenerlo al día."
@@ -8521,7 +8516,7 @@ window.CASES = {
      "en": [
       "The workshop was delivered to sixth-year students between Monday 26 October and Wednesday 4 November 2026.",
       "A complete, published journey: eleven stops, four special sections and five copy-ready templates.",
-      "The same site is used to run the workshop and to look it up later, with no separate slides.",
+      "The same site is used to run the workshop (in presentation mode) and to look it up later, with no separate PowerPoint to build.",
       "Each student can leave with things of their own: their personal map, the CV profile, the achievement log and the pitch.",
       "Tools that stay useful after the workshop: budget and compound interest calculators, the career talk and the course server.",
       "Accessible in both the light and dark themes, with 19 cited sources to keep it up to date."
