@@ -4228,31 +4228,29 @@ window.CASES = {
   "cat": "it",
   "touch": "cap",
   "title": {
-   "es": "Auditoría UX/UI y rediseño de un centro de estética",
-   "en": "UX/UI audit and redesign for a facial aesthetics centre"
+   "es": "Auditoría UX/UI de un centro de estética",
+   "en": "UX/UI audit of a facial aesthetics centre"
   },
   "subtitle": {
-   "es": "Landing de un centro de estética facial: evaluación heurística, WCAG 2.2, Core Web Vitals y un rediseño que prepara la conversación por Instagram. Propuesta conceptual, no afiliada.",
-   "en": "A facial aesthetics centre’s landing page: heuristic evaluation, WCAG 2.2, Core Web Vitals and a redesign that prepares the Instagram conversation. A conceptual proposal, not affiliated."
+   "es": "Landing de un centro de estética facial: evaluación heurística, WCAG 2.2 y Core Web Vitals del recorrido hasta pedir turno. Propuesta conceptual, no afiliada.",
+   "en": "A facial aesthetics centre’s landing page: heuristic evaluation, WCAG 2.2 and Core Web Vitals of the path to booking. A conceptual proposal, not affiliated."
   },
   "chips": {
    "es": [
     "Evaluación heurística",
     "WCAG 2.2 AA",
-    "Core Web Vitals",
-    "Rediseño de landing"
+    "Core Web Vitals"
    ],
    "en": [
     "Heuristic evaluation",
     "WCAG 2.2 AA",
-    "Core Web Vitals",
-    "Landing redesign"
+    "Core Web Vitals"
    ]
   },
   "facts": {
    "role": {
-    "es": "Auditoría UX/UI completa, arquitectura de información, UX writing y diseño visual",
-    "en": "Full UX/UI audit, information architecture, UX writing and visual design"
+    "es": "Auditoría UX/UI, de accesibilidad y de rendimiento",
+    "en": "UX/UI, accessibility and performance audit"
    },
    "timeline": {
     "es": "Noviembre 2026",
@@ -4295,8 +4293,8 @@ window.CASES = {
        "en": "A nice-looking site that did not help people book."
       },
       "body": {
-       "es": "Lo audité con heurísticas, WCAG 2.2 y Core Web Vitals, y lo rediseñé para que la clienta encuentre su tratamiento, vea el precio y llegue al chat con el mensaje ya armado.",
-       "en": "I audited it with heuristics, WCAG 2.2 and Core Web Vitals, and redesigned it so that clients can find their treatment, see the price and reach the chat with the message already written."
+       "es": "Funcionaba como folleto: todo el recorrido terminaba en un mensaje directo vacío de Instagram. Lo audité con heurísticas, WCAG 2.2 y Core Web Vitals.",
+       "en": "It worked like a brochure: every journey ended in an empty Instagram direct message. I audited it with heuristics, WCAG 2.2 and Core Web Vitals."
       }
      },
      {
@@ -4313,12 +4311,12 @@ window.CASES = {
      {
       "size": "s",
       "v": {
-       "es": "33",
-       "en": "33"
+       "es": "5",
+       "en": "5"
       },
       "body": {
-       "es": "tratamientos con precio en una sola página",
-       "en": "treatments with prices on a single page"
+       "es": "de los 8 hallazgos principales tienen severidad 3, en una escala de 0 a 4",
+       "en": "of the 8 main findings have severity 3, on a scale from 0 to 4"
       }
      },
      {
@@ -4326,16 +4324,16 @@ window.CASES = {
       "tone": "c2",
       "lead": true,
       "k": {
-       "es": "La idea central",
-       "en": "The central idea"
+       "es": "La restricción del negocio",
+       "en": "The business constraint"
       },
       "title": {
-       "es": "Preparar la conversación en lugar de reemplazarla.",
-       "en": "Prepare the conversation instead of replacing it."
+       "es": "Los turnos se toman solo por mensaje directo de Instagram.",
+       "en": "Appointments are only booked by Instagram direct message."
       },
       "body": {
-       "es": "Los turnos se toman solo por mensaje directo de Instagram. Por eso el rediseño no suma un canal nuevo: arma el mensaje con el tratamiento, si es la primera vez y el horario preferido, y abre el chat.",
-       "en": "Appointments are only booked by Instagram direct message. So the redesign adds no new channel: it writes the message with the treatment, whether it is a first visit and the preferred time, and opens the chat."
+       "es": "La web es el link de la bio: casi todo el tráfico llega desde el celular, dentro de la app de Instagram.",
+       "en": "The website is the link in the bio: almost all traffic arrives from a phone, inside the Instagram app."
       }
      },
      {
@@ -4345,12 +4343,12 @@ window.CASES = {
        "en": "Accessibility"
       },
       "v": {
-       "es": "AA",
-       "en": "AA"
+       "es": "3,62:1",
+       "en": "3.62:1"
       },
       "body": {
-       "es": "El fucsia de marca daba 3,62:1 sobre el rosa claro. El reemplazo, #B8266F, da entre 4,82:1 y 5,92:1 sin perder identidad.",
-       "en": "The brand fuchsia gave 3.62:1 on the light pink. Its replacement, #B8266F, gives between 4.82:1 and 5.92:1 without losing identity."
+       "es": "El fucsia de marca sobre el rosa claro, por debajo del mínimo AA de 4,5:1. No llega en ningún fondo de la paleta.",
+       "en": "The brand fuchsia on the light pink, below the AA minimum of 4.5:1. It does not reach it on any background in the palette."
       }
      },
      {
@@ -4403,8 +4401,8 @@ window.CASES = {
        "en": "My role"
       },
       "v": {
-       "es": "Auditoría UX/UI completa, arquitectura de información, UX writing y diseño visual.",
-       "en": "Full UX/UI audit, information architecture, UX writing and visual design."
+       "es": "Auditoría UX/UI, de accesibilidad y de rendimiento.",
+       "en": "UX/UI, accessibility and performance audit."
       }
      },
      {
@@ -4413,8 +4411,8 @@ window.CASES = {
        "en": "Outcome"
       },
       "v": {
-       "es": "14 problemas de usabilidad priorizados, paleta corregida a WCAG AA y una nueva landing con buscador por necesidad, catálogo de 33 tratamientos con precios y un flujo de pedido de turno con mensaje pre-armado.",
-       "en": "14 prioritised usability problems, a palette corrected to WCAG AA and a new landing page with a needs-based finder, a catalogue of 33 priced treatments and a booking flow with a pre-written message."
+       "es": "14 problemas de usabilidad priorizados y una corrección de la paleta para llegar a WCAG AA.",
+       "en": "14 prioritised usability problems and a palette correction to reach WCAG AA."
       }
      },
      {
@@ -4451,8 +4449,8 @@ window.CASES = {
       "en": "The centre belongs to a long-established aesthetics professional with a very good Google rating and a large Instagram community. The website is the link in the bio: almost all traffic arrives from a phone, inside the Instagram app."
      },
      {
-      "es": "Los turnos se toman solo por mensaje directo de Instagram. Esa restricción del negocio ordenó todo el rediseño.",
-      "en": "Appointments are only booked by Instagram direct message. That business constraint shaped the entire redesign."
+      "es": "Los turnos se toman solo por mensaje directo de Instagram. Esa restricción del negocio atraviesa toda la auditoría.",
+      "en": "Appointments are only booked by Instagram direct message. That business constraint runs through the entire audit."
      }
     ]
    },
@@ -4767,8 +4765,8 @@ window.CASES = {
      "en": "Accessibility: brand colour contrast"
     },
     "note": {
-     "es": "El fucsia de marca #D83383 no llega al mínimo AA de 4,5:1 sobre ningún fondo de la paleta. Lo reemplacé por #B8266F, que da entre 4,82:1 y 5,92:1 sin perder identidad.",
-     "en": "The brand fuchsia #D83383 does not reach the AA minimum of 4.5:1 on any background in the palette. I replaced it with #B8266F, which gives between 4.82:1 and 5.92:1 without losing identity."
+     "es": "El fucsia de marca #D83383 no llega al mínimo AA de 4,5:1 sobre ningún fondo de la paleta. La corrección propuesta es #B8266F, que da entre 4,82:1 y 5,92:1 sin perder identidad.",
+     "en": "The brand fuchsia #D83383 does not reach the AA minimum of 4.5:1 on any background in the palette. The proposed fix is #B8266F, which gives between 4.82:1 and 5.92:1 without losing identity."
     },
     "cols": {
      "pair": {
@@ -4784,8 +4782,8 @@ window.CASES = {
       "en": "Result"
      },
      "fix": {
-      "es": "Corrección",
-      "en": "Fix"
+      "es": "Corrección propuesta",
+      "en": "Proposed fix"
      }
     },
     "pass": {
@@ -4880,138 +4878,6 @@ window.CASES = {
       "caption": {
        "es": "Lighthouse en escritorio: 100 de rendimiento.",
        "en": "Lighthouse on desktop: 100 in performance."
-      }
-     }
-    ]
-   },
-   {
-    "t": "phase",
-    "n": "02",
-    "id": "rediseno",
-    "mode": {
-     "es": "arquitectura, UX writing y diseño visual",
-     "en": "architecture, UX writing and visual design"
-    },
-    "name": {
-     "es": "Decisiones de diseño",
-     "en": "Design decisions"
-    },
-    "q": {
-     "es": "Cómo llevar a la clienta desde su problema hasta el chat, con todo el contexto.",
-     "en": "How to take clients from their problem to the chat, with all the context."
-    }
-   },
-   {
-    "t": "bento",
-    "items": [
-     {
-      "size": "l",
-      "n": "01",
-      "title": {
-       "es": "Entrar por el problema, no por la técnica",
-       "en": "Enter through the problem, not the technique"
-      },
-      "body": {
-       "es": "Agregué un selector \"¿Qué te gustaría mejorar?\" con seis necesidades (manchas y melasma, acné, arrugas, flacidez, textura, cuerpo) que filtra el catálogo. La evaluación profesional sigue siendo la que decide: el texto lo aclara.",
-       "en": "I added a \"What would you like to improve?\" selector with six needs (dark spots and melasma, acne, wrinkles, sagging, texture, body) that filters the catalogue. The professional evaluation still decides, and the text says so."
-      },
-      "img": {
-       "src": "estetica-06-filtro.webp",
-       "w": 1366,
-       "h": 900,
-       "alt": {
-        "es": "Catálogo de tratamientos filtrado por manchas y melasma: el aviso indica 10 tratamientos, con categorías, descripciones y precios en efectivo y de lista.",
-        "en": "Treatment catalogue filtered by dark spots and melasma: the notice shows 10 treatments, with categories, descriptions, and cash and list prices."
-       }
-      }
-     },
-     {
-      "size": "s",
-      "n": "02",
-      "title": {
-       "es": "Precios a la vista, en formato carta",
-       "en": "Prices in plain sight, in a menu format"
-      },
-      "body": {
-       "es": "Los 33 tratamientos vigentes en una sola página, con precio en efectivo, precio de lista y un desplegable con lo que incluye. La vista inicial muestra tres por categoría para no abrumar.",
-       "en": "All 33 current treatments on a single page, with a cash price, a list price and a drop-down showing what is included. The initial view shows three per category to avoid overwhelming."
-      },
-      "tone": "c2"
-     },
-     {
-      "size": "l",
-      "n": "03",
-      "title": {
-       "es": "Preparar la conversación en lugar de reemplazarla",
-       "en": "Prepare the conversation instead of replacing it"
-      },
-      "body": {
-       "es": "Como el negocio toma turnos solo por Instagram, no agregué un canal nuevo: el botón \"Pedir turno\" abre un formulario corto (tratamiento, primera vez, horario preferido), arma el mensaje, lo copia y abre el mensaje directo. La clienta llega al chat con todo el contexto.",
-       "en": "Since the business only books through Instagram, I did not add a new channel: the \"Book\" button opens a short form (treatment, first visit, preferred time), writes the message, copies it and opens the direct message. Clients reach the chat with all the context."
-      },
-      "img": {
-       "src": "estetica-07-pedir-turno.webp",
-       "w": 1366,
-       "h": 900,
-       "alt": {
-        "es": "Diálogo Pedir turno: tratamiento, primera vez, horario preferido y un comentario opcional, con la vista previa del mensaje armado y el botón Copiar mensaje y abrir Instagram.",
-        "en": "Booking dialog: treatment, first visit, preferred time and an optional comment, with a preview of the written message and a Copy message and open Instagram button."
-       }
-      }
-     },
-     {
-      "size": "s",
-      "n": "04",
-      "title": {
-       "es": "Hacer visible la autoridad",
-       "en": "Make authority visible"
-      },
-      "body": {
-       "es": "Sección de especialidad en manchas y melasma, credenciales (formación en el exterior, disertaciones en congresos) y un bloque para profesionales que lleva a los cursos.",
-       "en": "A section on the specialty in dark spots and melasma, credentials (training abroad, conference talks) and a block for professionals that leads to the courses."
-      },
-      "tone": "c2"
-     },
-     {
-      "size": "s",
-      "n": "05",
-      "title": {
-       "es": "Primera pantalla útil en celular",
-       "en": "A useful first screen on mobile"
-      },
-      "body": {
-       "es": "Saqué el logo grande del hero en mobile: titular, beneficio, dos acciones y prueba social entran sin scroll. Barra inferior fija con \"Pedir turno\".",
-       "en": "I removed the large logo from the mobile hero: headline, benefit, two actions and social proof fit without scrolling. A fixed bottom bar carries \"Book\"."
-      },
-      "img": {
-       "src": "estetica-05-hero-celular.webp",
-       "w": 390,
-       "h": 844,
-       "alt": {
-        "es": "Hero del rediseño en celular: titular y marca tapados, beneficio, botones Pedir turno y Ver tratamientos y precios, prueba social tapada y barra inferior fija.",
-        "en": "Redesign hero on mobile: covered headline and brand, benefit, Book and See treatments and prices buttons, covered social proof and a fixed bottom bar."
-       }
-      }
-     },
-     {
-      "size": "l",
-      "n": "06",
-      "title": {
-       "es": "Sistema visual heredado y corregido",
-       "en": "An inherited, corrected visual system"
-      },
-      "body": {
-       "es": "Mantuve la paleta y Cormorant Garamond de la marca, reemplacé Poppins por Albert Sans para mejorar la lectura en tamaños chicos y limité la caligrafía.",
-       "en": "I kept the brand’s palette and Cormorant Garamond, replaced Poppins with Albert Sans to improve reading at small sizes and limited the calligraphy."
-      },
-      "img": {
-       "src": "estetica-04-hero-escritorio.webp",
-       "w": 1366,
-       "h": 900,
-       "alt": {
-        "es": "Hero del rediseño en escritorio: titular y logo tapados, beneficio, dos botones y dos notas flotantes sobre la duración de la sesión y la consulta incluida.",
-        "en": "Redesign hero on desktop: covered headline and logo, benefit, two buttons and two floating notes about session length and the included consultation."
-       }
       }
      }
     ]

@@ -127,12 +127,12 @@ window.PROJECTS = [
     cover: 'assets/img/covers/auditoria-estetica.jpg',
     cat: 'it',
     dates: ['2026-11', '2026-11'],
-    tags: { es: ['ux/ui', 'rediseño'], en: ['ux/ui', 'redesign'] },
+    tags: { es: ['ux/ui', 'auditoría'], en: ['ux/ui', 'audit'] },
     badges: ['UX'],
-    title: { es: 'Auditoría UX/UI y rediseño de un centro de estética', en: 'UX/UI audit and redesign for a facial aesthetics centre' },
+    title: { es: 'Auditoría UX/UI de un centro de estética', en: 'UX/UI audit of a facial aesthetics centre' },
     desc: {
-      es: 'Auditoría heurística, de accesibilidad y de rendimiento, y una landing que prepara la conversación por Instagram. Propuesta conceptual, no afiliada.',
-      en: 'Heuristic, accessibility and performance audit, and a landing page that prepares the Instagram conversation. A conceptual proposal, not affiliated.'
+      es: 'Auditoría heurística, de accesibilidad y de rendimiento de la landing de un centro de estética. Propuesta conceptual, no afiliada.',
+      en: 'Heuristic, accessibility and performance audit of a facial aesthetics centre’s landing page. A conceptual proposal, not affiliated.'
     },
     result: { es: '14 problemas priorizados', en: '14 prioritised problems' },
     skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Core Web Vitals'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Core Web Vitals'] }
