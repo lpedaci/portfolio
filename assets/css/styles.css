@@ -914,6 +914,34 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .pic .pic__cta a { display: inline-flex; border: 0; border-radius: 0; overflow: visible; background: none; }
 .gallery--tall.gallery--small { max-width: 300px; }
 .pic a.js-zoom { cursor: zoom-in; }
+/* Captura muy alta: recuadro con desplazamiento (en el celular deja lugar para seguir bajando por la página) */
+.pic__scroll { max-height: min(60dvh, 760px); overflow-y: auto; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
+/* Bento: tarjetas de distinto tamaño para los puntos clave. En pantallas chicas, una sola columna */
+.bento { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+.bento__i { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); }
+.bento__i--tint { background: color-mix(in srgb, var(--c2, var(--c)) 7%, var(--surface)); border-color: color-mix(in srgb, var(--c2, var(--c)) 28%, var(--line)); }
+.bento__k { font: 400 0.75rem/1.3 var(--f-mono); color: var(--c2, var(--c)); }
+.bento__n { font: 600 1.5rem/1 var(--f-display); color: var(--c2, var(--c)); font-variant-numeric: tabular-nums; }
+.bento__v { font: 600 clamp(2.5rem, 2rem + 2vw, 3.5rem)/1 var(--f-display); letter-spacing: -0.03em; color: var(--text); }
+.bento__h { font: 600 1.25rem/1.25 var(--f-display); letter-spacing: -0.01em; text-wrap: balance; }
+.bento__i--lead .bento__h { font-size: clamp(1.5rem, 1.25rem + 1.2vw, 2.125rem); line-height: 1.15; letter-spacing: -0.02em; }
+.bento__b { color: var(--text-2); line-height: 1.6; }
+.bento__i .pic { flex: none; margin-top: auto; padding-top: 10px; }
+.bento__i--phone .pic { width: 100%; max-width: 240px; margin-inline: auto; }
+@media (min-width: 900px) {
+  .bento { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .bento__i--s { grid-column: span 2; }
+  .bento__i--m { grid-column: span 3; }
+  .bento__i--l { grid-column: span 4; }
+  .bento__i { padding: 28px; }
+  /* Sin imagen: el número o rótulo arriba y el texto abajo, para que la tarjeta alta no quede vacía */
+  .bento__i:not(:has(.pic)) > .bento__n + .bento__h, .bento__i--lead > .bento__k + .bento__h { margin-top: auto; }
+  .bento__i:not(:has(.pic)):has(.bento__v):not(:has(.bento__k)) { justify-content: flex-end; }
+  .bento__i--tint > .bento__n { font-size: clamp(4rem, 2rem + 4vw, 6.5rem); letter-spacing: -0.04em; }
+  .bento__i--tint > .bento__n + .bento__h { font-size: 1.5rem; line-height: 1.2; }
+}
+.refs { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.refs li { padding-left: 2em; text-indent: -2em; color: var(--text-2); line-height: 1.6; overflow-wrap: anywhere; }
 
 /* Visor de imágenes (diálogo) */
 .viewer { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: color-mix(in srgb, var(--bg) 94%, transparent); color: var(--text); }
@@ -922,6 +950,9 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .viewer__stage { flex: 1; min-height: 0; display: grid; place-items: center; padding: 64px var(--gutter) 8px; overflow: auto; overscroll-behavior: contain; }
 .viewer__img { max-width: 100%; max-height: calc(100dvh - 130px); width: auto; height: auto; border-radius: 8px; cursor: zoom-in; }
 .viewer.is-zoomed .viewer__stage { place-items: start; }
+/* Captura muy alta: abre al ancho de la pantalla, para leerla bajando */
+.viewer.is-tall:not(.is-zoomed) .viewer__stage { place-items: start center; }
+.viewer.is-tall:not(.is-zoomed) .viewer__img { width: min(100%, 1200px); max-height: none; }
 .viewer.is-zoomed .viewer__img { max-width: none; max-height: none; cursor: zoom-out; border-radius: 0; }
 .viewer__cap { padding: 8px var(--gutter) 16px; text-align: center; color: var(--muted); font-size: 0.875rem; }
 .viewer__close { position: absolute; top: 12px; right: 12px; z-index: 1; width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--line-2); border-radius: var(--r-pill); background: var(--surface); font-size: 1.25rem; cursor: pointer; }
@@ -1150,6 +1181,10 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .cmp tbody tr { border-bottom: 1px solid var(--line); }
 .cmp td:last-child { color: var(--text); }
 /* marks: cada columna con su color y un ícono en el encabezado (el rótulo de la columna sigue escrito) */
+/* El dato principal es la primera columna (por ejemplo, un hallazgo con su severidad) */
+.cmp--lead tbody th { width: 56%; font-weight: 500; }
+.cmp--lead td { width: 30%; }
+.cmp--lead td:last-child { width: 14%; font-family: var(--f-mono); }
 .cmp--marks thead th:nth-child(2) { color: var(--cap); }
 .cmp--marks thead th:nth-child(3) { color: var(--it); }
 .cmp--marks thead .ph { margin-right: 6px; font-size: 1rem; vertical-align: -2px; }

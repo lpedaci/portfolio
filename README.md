@@ -64,7 +64,7 @@ Objetivo WCAG 2.2 AA, verificado con axe-core en todas las páginas.
 Sitio estático sin frameworks ni dependencias en el navegador.
 
 - **Contenido como dato:** proyectos (`projects.js`), casos (`cases.js`) y textos de interfaz (`i18n.js`) viven separados del marcado. Cada string es un par `{ es, en }`.
-- **Casos por bloques:** un renderer arma cada caso a partir de bloques tipados (cifras, fases, journey maps, personas, user flows, paletas, auditorías de contraste, tablas comparativas, galerías, embebidos y más). Sumar un tipo de evidencia es sumar un renderer, no editar páginas.
+- **Casos por bloques:** un renderer arma cada caso a partir de bloques tipados (cifras, fases, journey maps, personas, user flows, paletas, auditorías de contraste, tablas comparativas, tarjetas bento, galerías, embebidos, referencias APA y más). Sumar un tipo de evidencia es sumar un renderer, no editar páginas.
 - **Orden por fechas:** cada proyecto declara su período y la grilla se ordena sola.
 - **Imágenes:** dimensiones declaradas para que el layout no salte, carga diferida y ampliación en un visor dentro de la página.
 - **Embebidos:** video, audio y presentaciones cargan en diferido; YouTube usa su dominio sin cookies.

@@ -65,6 +65,8 @@
   // flex-grow proporcional a la relación de aspecto (x100: con valores menores a 1, flexbox no llena la fila)
   const picture = (im, grow = true) => {
     const src = `${ROOT}assets/img/${esc(im.src)}`;
+    // scroll: captura muy alta, en un recuadro con desplazamiento y un enlace para verla completa en el visor
+    if (im.scroll) return `<figure class="pic"${grow ? ` style="flex-grow:${(im.w / im.h * 100).toFixed(2)}"` : ''}><div class="pic__scroll" tabindex="0" role="group" aria-label="${esc(t('picScroll'))}"><img src="${src}" width="${im.w}" height="${im.h}" alt="${esc(L(im.alt))}" loading="lazy" decoding="async"></div>${im.caption ? `<figcaption>${esc(L(im.caption))}</figcaption>` : ''}<p class="pic__cta"><a class="link-arrow js-zoom" data-tall href="${src}" aria-haspopup="dialog"><span>${esc(t('picFull'))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p></figure>`;
     const imgTag = `<a class="js-zoom" href="${src}" aria-haspopup="dialog"><span class="sr-only">${esc(t('zoomOpen'))}: </span><img src="${src}" width="${im.w}" height="${im.h}" alt="${esc(L(im.alt))}" loading="lazy" decoding="async"></a>`;
     const cap = im.caption ? `<figcaption>${esc(L(im.caption))}</figcaption>` : '';
     // link: enlace opcional debajo de la imagen (por ejemplo, a la página publicada que muestra la captura)
@@ -165,6 +167,13 @@
       <text x="20" y="21" text-anchor="middle" fill="${ring ? '#191919' : fg}">Aa</text></svg>`;
 
   const BLOCKS = {
+    // Tarjetas de distinto tamaño para los puntos clave. size: 's', 'm' o 'l' (2, 3 o 4 de 6 columnas); tone: 'c2' suma el tinte del caso.
+    bento: (b) => blk(b, `<ul class="bento">${b.items.map((x) => `<li class="bento__i bento__i--${x.size || 's'}${x.tone ? ' bento__i--tint' : ''}${x.lead ? ' bento__i--lead' : ''}${x.img && x.img.h > x.img.w ? ' bento__i--phone' : ''}">
+        ${x.n ? `<p class="bento__n">${esc(x.n)}</p>` : ''}${x.k ? `<p class="bento__k">${esc(L(x.k))}</p>` : ''}${x.v ? `<p class="bento__v">${esc(L(x.v))}</p>` : ''}
+        ${x.title ? hx(b.h ? H + 1 : H, 'bento__h', esc(L(x.title))) : ''}${x.body ? `<p class="bento__b">${esc(L(x.body))}</p>` : ''}${x.img ? picture(x.img, false) : ''}
+      </li>`).join('')}</ul>`, true),
+    // Referencias en APA 7: título en cursiva y enlace opcional.
+    refs: (b) => blk(b, `<ul class="refs">${b.items.map((x) => `<li>${esc(L(x.pre))} <em>${esc(L(x.title))}</em>${esc(L(x.post))}${x.url ? ` <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url)}</a>` : ''}</li>`).join('')}</ul>`),
     prose: (b) => blk(b, b.p.map((x) => `<p>${esc(L(x))}</p>`).join(''), false, ' prose'),
     list: (b) => blk(b, `<ul class="items">${b.items.map((x) => `<li><strong>${esc(L(x.lead))}</strong><span>${esc(L(x.body))}</span></li>`).join('')}</ul>`),
     roadmap: (b) => blk(b, `<ol class="steps" style="--n:${b.steps.length}">${b.steps.map((x) => `<li><span class="code">${esc(L(x.code))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${esc(L(x.body))}</p></li>`).join('')}</ol>`, true),
@@ -262,7 +271,7 @@
     // Tabla de tres columnas (dimensión, antes, después); en pantallas chicas cada fila se apila con su rótulo.
     // accent: sin lado bueno ni malo; resalta la primera columna y la última con los colores del caso.
     // marks: colorea las dos columnas (rosado para "antes", turquesa para "después") con un ícono en cada encabezado.
-    compare: (b) => blk(b, `<div class="cmp${b.marks ? ' cmp--marks' : ''}${b.accent ? ' cmp--accent' : ''}"><table>
+    compare: (b) => blk(b, `<div class="cmp${b.marks ? ' cmp--marks' : ''}${b.accent ? ' cmp--accent' : ''}${b.lead ? ' cmp--lead' : ''}"><table>
         <thead><tr><th scope="col">${esc(L(b.cols.dim))}</th><th scope="col">${b.marks ? '<i class="ph ph-x-circle" aria-hidden="true"></i>' : ''}${esc(L(b.cols.before))}</th><th scope="col">${b.marks ? '<i class="ph ph-check-circle" aria-hidden="true"></i>' : ''}${b.accent ? '<i class="ph ph-arrow-right" aria-hidden="true"></i>' : ''}${esc(L(b.cols.after))}</th></tr></thead>
         <tbody>${b.rows.map((r) => `<tr><th scope="row">${esc(L(r.dim))}</th><td data-l="${esc(L(b.cols.before))}">${esc(L(r.before))}</td><td data-l="${esc(L(b.cols.after))}">${esc(L(r.after))}</td></tr>`).join('')}</tbody></table></div>`, true),
     // Hallazgos: severidad y estado siempre escritos (el color acompaña, no informa solo).
@@ -444,7 +453,7 @@
     const a = e.target.closest('.js-zoom');
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault();
-    const img = a.querySelector('img');
+    const img = a.querySelector('img') || a.closest('.pic').querySelector('img');
     vTrigger = a;
     vImg.src = a.href;
     if (!vImg.isConnected) vStage.appendChild(vImg);
@@ -452,6 +461,7 @@
     viewer.querySelector('.viewer__cap').textContent = img.alt;
     viewer.setAttribute('aria-label', img.alt);
     vClose.setAttribute('aria-label', t('zoomClose'));
+    viewer.classList.toggle('is-tall', 'tall' in a.dataset);
     setZoom(false);
     viewer.showModal();
     vStage.scrollTo(0, 0);

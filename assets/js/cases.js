@@ -4224,6 +4224,1018 @@ window.CASES = {
    }
   }
  },
+ "auditoria-estetica": {
+  "cat": "it",
+  "touch": "cap",
+  "title": {
+   "es": "Auditoría UX/UI y rediseño de un centro de estética",
+   "en": "UX/UI audit and redesign for a facial aesthetics centre"
+  },
+  "subtitle": {
+   "es": "Landing de un centro de estética facial: evaluación heurística, WCAG 2.2, Core Web Vitals y un rediseño que prepara la conversación por Instagram. Propuesta conceptual, no afiliada.",
+   "en": "A facial aesthetics centre’s landing page: heuristic evaluation, WCAG 2.2, Core Web Vitals and a redesign that prepares the Instagram conversation. A conceptual proposal, not affiliated."
+  },
+  "chips": {
+   "es": [
+    "Evaluación heurística",
+    "WCAG 2.2 AA",
+    "Core Web Vitals",
+    "Rediseño de landing"
+   ],
+   "en": [
+    "Heuristic evaluation",
+    "WCAG 2.2 AA",
+    "Core Web Vitals",
+    "Landing redesign"
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Auditoría UX/UI completa, arquitectura de información, UX writing, diseño visual y desarrollo front-end",
+    "en": "Full UX/UI audit, information architecture, UX writing, visual design and front-end development"
+   },
+   "timeline": {
+    "es": "Noviembre 2026",
+    "en": "November 2026"
+   },
+   "context": {
+    "es": "Centro de estética facial de autor en CABA. Propuesta conceptual no afiliada, con datos públicos del sitio y de Instagram",
+    "en": "Signature facial aesthetics centre in Buenos Aires. A conceptual, non-affiliated proposal, based on public data from the website and Instagram"
+   },
+   "stack": [
+    "PageSpeed Insights",
+    "Lighthouse 13.6",
+    "Chrome DevTools",
+    "HTML/CSS/JS",
+    "Python",
+    "Playwright"
+   ],
+   "methods": [
+    "Nielsen",
+    "WCAG 2.2",
+    "Core Web Vitals"
+   ]
+  },
+  "links": [],
+  "blocks": [
+   {
+    "t": "bento",
+    "h": {
+     "es": "Los puntos clave",
+     "en": "Key points"
+    },
+    "items": [
+     {
+      "size": "l",
+      "tone": "c2",
+      "lead": true,
+      "k": {
+       "es": "El punto de partida",
+       "en": "The starting point"
+      },
+      "title": {
+       "es": "Un sitio lindo que no ayudaba a pedir turno.",
+       "en": "A nice-looking site that did not help people book."
+      },
+      "body": {
+       "es": "Lo audité con heurísticas, WCAG 2.2 y Core Web Vitals, y lo rediseñé para que la clienta encuentre su tratamiento, vea el precio y llegue al chat con el mensaje ya armado.",
+       "en": "I audited it with heuristics, WCAG 2.2 and Core Web Vitals, and redesigned it so that clients can find their treatment, see the price and reach the chat with the message already written."
+      }
+     },
+     {
+      "size": "s",
+      "v": {
+       "es": "14",
+       "en": "14"
+      },
+      "body": {
+       "es": "problemas de usabilidad priorizados",
+       "en": "prioritised usability problems"
+      }
+     },
+     {
+      "size": "s",
+      "v": {
+       "es": "33",
+       "en": "33"
+      },
+      "body": {
+       "es": "tratamientos con precio en una sola página",
+       "en": "treatments with prices on a single page"
+      }
+     },
+     {
+      "size": "l",
+      "tone": "c2",
+      "lead": true,
+      "k": {
+       "es": "La idea central",
+       "en": "The central idea"
+      },
+      "title": {
+       "es": "Preparar la conversación en lugar de reemplazarla.",
+       "en": "Prepare the conversation instead of replacing it."
+      },
+      "body": {
+       "es": "Los turnos se toman solo por mensaje directo de Instagram. Por eso el rediseño no suma un canal nuevo: arma el mensaje con el tratamiento, si es la primera vez y el horario preferido, y abre el chat.",
+       "en": "Appointments are only booked by Instagram direct message. So the redesign adds no new channel: it writes the message with the treatment, whether it is a first visit and the preferred time, and opens the chat."
+      }
+     },
+     {
+      "size": "m",
+      "k": {
+       "es": "Accesibilidad",
+       "en": "Accessibility"
+      },
+      "v": {
+       "es": "AA",
+       "en": "AA"
+      },
+      "body": {
+       "es": "El fucsia de marca daba 3,62:1 sobre el rosa claro. El reemplazo, #B8266F, da entre 4,82:1 y 5,92:1 sin perder identidad.",
+       "en": "The brand fuchsia gave 3.62:1 on the light pink. Its replacement, #B8266F, gives between 4.82:1 and 5.92:1 without losing identity."
+      }
+     },
+     {
+      "size": "m",
+      "k": {
+       "es": "Rendimiento",
+       "en": "Performance"
+      },
+      "v": {
+       "es": "2,9 s",
+       "en": "2.9 s"
+      },
+      "body": {
+       "es": "LCP en celular, por encima del umbral de 2,5 s. En escritorio, el rendimiento fue de 100.",
+       "en": "LCP on mobile, above the 2.5 s threshold. On desktop, performance was 100."
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Resumen",
+     "en": "Summary"
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Cliente",
+       "en": "Client"
+      },
+      "v": {
+       "es": "Sin cliente: propuesta conceptual no afiliada, con datos públicos del sitio y de Instagram, sobre un centro de estética facial de autor en CABA.",
+       "en": "No client: a conceptual, non-affiliated proposal, based on public data from the website and Instagram, about a signature facial aesthetics centre in Buenos Aires."
+      }
+     },
+     {
+      "k": {
+       "es": "Desafío",
+       "en": "Challenge"
+      },
+      "v": {
+       "es": "El sitio funcionaba como folleto: todo el recorrido terminaba en un mensaje directo vacío de Instagram.",
+       "en": "The site worked like a brochure: every journey ended in an empty Instagram direct message."
+      }
+     },
+     {
+      "k": {
+       "es": "Mi rol",
+       "en": "My role"
+      },
+      "v": {
+       "es": "Auditoría UX/UI completa, arquitectura de información, UX writing, diseño visual y desarrollo front-end.",
+       "en": "Full UX/UI audit, information architecture, UX writing, visual design and front-end development."
+      }
+     },
+     {
+      "k": {
+       "es": "Resultado",
+       "en": "Outcome"
+      },
+      "v": {
+       "es": "14 problemas de usabilidad priorizados, paleta corregida a WCAG AA y una nueva landing con buscador por necesidad, catálogo de 33 tratamientos con precios y un flujo de pedido de turno con mensaje pre-armado.",
+       "en": "14 prioritised usability problems, a palette corrected to WCAG AA and a new landing page with a needs-based finder, a catalogue of 33 priced treatments and a booking flow with a pre-written message."
+      }
+     },
+     {
+      "k": {
+       "es": "Autora",
+       "en": "Author"
+      },
+      "v": {
+       "es": "Lourdes Pedaci",
+       "en": "Lourdes Pedaci"
+      }
+     },
+     {
+      "k": {
+       "es": "Privacidad",
+       "en": "Privacy"
+      },
+      "v": {
+       "es": "No se reproduce la marca. Las capturas tapan nombres, logo, titulares, ubicación, reseñas y otros datos que permitirían identificar al negocio, y los informes de PageSpeed están recortados.",
+       "en": "The brand is not reproduced. The screenshots cover names, logo, headlines, location, reviews and other details that could identify the business, and the PageSpeed reports are cropped."
+      }
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Contexto",
+     "en": "Context"
+    },
+    "p": [
+     {
+      "es": "El centro pertenece a una profesional de la estética con larga trayectoria, muy buen puntaje en Google y una comunidad grande en Instagram. La web es el link de la bio: casi todo el tráfico llega desde el celular, dentro de la app de Instagram.",
+      "en": "The centre belongs to a long-established aesthetics professional with a very good Google rating and a large Instagram community. The website is the link in the bio: almost all traffic arrives from a phone, inside the Instagram app."
+     },
+     {
+      "es": "Los turnos se toman solo por mensaje directo de Instagram. Esa restricción del negocio ordenó todo el rediseño.",
+      "en": "Appointments are only booked by Instagram direct message. That business constraint shaped the entire redesign."
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Audiencias",
+     "en": "Audiences"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Clienta actual",
+       "en": "Current client"
+      },
+      "body": {
+       "es": "Ya sigue a la profesional, quiere saber qué le conviene, cuánto sale y cómo pedir turno.",
+       "en": "Already follows the professional and wants to know what suits her, what it costs and how to book."
+      }
+     },
+     {
+      "lead": {
+       "es": "Clienta nueva",
+       "en": "New client"
+      },
+      "body": {
+       "es": "Llega desde Google Maps, no conoce a la profesional y necesita pruebas antes de escribir.",
+       "en": "Arrives from Google Maps, does not know the professional and needs proof before writing."
+      }
+     },
+     {
+      "lead": {
+       "es": "Profesional de la estética",
+       "en": "Aesthetics professional"
+      },
+      "body": {
+       "es": "Busca los cursos que dicta el centro, que el sitio mencionaba sin enlazar.",
+       "en": "Looks for the courses the centre teaches, which the site mentioned without linking to them."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "images": [
+     {
+      "src": "estetica-01-sitio-original.webp",
+      "w": 1200,
+      "h": 5268,
+      "alt": {
+       "es": "Sitio original completo en escritorio, una página larga con portada, cinco tarjetas de la experiencia, seis categorías de tratamientos, reseñas, mapa, biografía y pie. Marca, ubicación, reseñas y videos están tapados.",
+       "en": "Full original site on desktop, a long page with a hero, five experience cards, six treatment categories, reviews, a map, a biography and a footer. Brand, location, reviews and videos are covered."
+      },
+      "caption": {
+       "es": "El sitio original completo, en escritorio. Desplazá dentro del recuadro para recorrerlo.",
+       "en": "The full original site, on desktop. Scroll inside the frame to go through it."
+      },
+      "scroll": true
+     }
+    ],
+    "medium": true
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Método",
+     "en": "Method"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Recorrido en vivo",
+       "en": "Live walkthrough"
+      },
+      "body": {
+       "es": "La home y las seis subpáginas de tratamientos.",
+       "en": "The home page and the six treatment subpages."
+      }
+     },
+     {
+      "lead": {
+       "es": "Inspección técnica",
+       "en": "Technical inspection"
+      },
+      "body": {
+       "es": "DOM, tokens de color, tipografía, áreas táctiles y embeds.",
+       "en": "DOM, colour tokens, typography, touch targets and embeds."
+      }
+     },
+     {
+      "lead": {
+       "es": "PageSpeed Insights",
+       "en": "PageSpeed Insights"
+      },
+      "body": {
+       "es": "Informes en celular y en escritorio.",
+       "en": "Reports on mobile and on desktop."
+      }
+     },
+     {
+      "lead": {
+       "es": "Evaluación heurística",
+       "en": "Heuristic evaluation"
+      },
+      "body": {
+       "es": "Las 10 heurísticas de Nielsen, con una escala de severidad de 0 a 4.",
+       "en": "Nielsen’s 10 heuristics, with a severity scale from 0 to 4."
+      }
+     },
+     {
+      "lead": {
+       "es": "Cálculo de contraste",
+       "en": "Contrast calculation"
+      },
+      "body": {
+       "es": "Con la fórmula de WCAG 2.2.",
+       "en": "Using the WCAG 2.2 formula."
+      }
+     },
+     {
+      "lead": {
+       "es": "Relevamiento de Instagram",
+       "en": "Instagram review"
+      },
+      "body": {
+       "es": "Las dos cuentas del negocio, para contrastar lo que la marca comunica con lo que el sitio muestra.",
+       "en": "The business’s two accounts, to compare what the brand communicates with what the site shows."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "01",
+    "id": "auditoria",
+    "mode": {
+     "es": "heurísticas, WCAG 2.2 y Core Web Vitals",
+     "en": "heuristics, WCAG 2.2 and Core Web Vitals"
+    },
+    "name": {
+     "es": "Auditoría",
+     "en": "Audit"
+    },
+    "q": {
+     "es": "Qué funcionaba y dónde se trababa el camino hasta pedir turno.",
+     "en": "What worked and where the path to booking got stuck."
+    }
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Lo que funcionaba",
+     "en": "What worked"
+    },
+    "items": {
+     "es": [
+      "Una voz de marca auténtica y un principio ético claro: no hacer un tratamiento que la piel no necesita.",
+      "Precios transparentes y detallados en las subpáginas, algo poco común en el rubro.",
+      "Buena base técnica: 100 en SEO, CLS 0, TBT 0 ms, HTML semántico y datos estructurados."
+     ],
+     "en": [
+      "An authentic brand voice and a clear ethical principle: no treatment that the skin does not need.",
+      "Transparent, detailed prices on the subpages, which is uncommon in the industry.",
+      "A good technical base: 100 in SEO, CLS 0, TBT 0 ms, semantic HTML and structured data."
+     ]
+    }
+   },
+   {
+    "t": "compare",
+    "lead": true,
+    "h": {
+     "es": "Hallazgos principales",
+     "en": "Main findings"
+    },
+    "note": {
+     "es": "Ocho de los 14 problemas. La severidad usa la escala de Nielsen, de 0 a 4.",
+     "en": "Eight of the 14 problems. Severity uses Nielsen’s scale, from 0 to 4."
+    },
+    "cols": {
+     "dim": {
+      "es": "Hallazgo",
+      "en": "Finding"
+     },
+     "before": {
+      "es": "Heurística o criterio",
+      "en": "Heuristic or criterion"
+     },
+     "after": {
+      "es": "Severidad",
+      "en": "Severity"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Promo \"Hasta octubre\" y \"Precios vigentes a agosto\" visibles en noviembre",
+       "en": "\"Until October\" promo and \"Prices valid in August\" still visible in November"
+      },
+      "before": {
+       "es": "Visibilidad del estado del sistema",
+       "en": "Visibility of system status"
+      },
+      "after": {
+       "es": "3",
+       "en": "3"
+      }
+     },
+     {
+      "dim": {
+       "es": "\"Reservar turno\" no reserva: salta al final de la página, que recién ahí deriva a Instagram",
+       "en": "\"Book an appointment\" does not book: it jumps to the end of the page, which only then points to Instagram"
+      },
+      "before": {
+       "es": "Relación con el mundo real",
+       "en": "Match with the real world"
+      },
+      "after": {
+       "es": "3",
+       "en": "3"
+      }
+     },
+     {
+      "dim": {
+       "es": "Categorías por técnica (peelings, dermaplaning) cuando la clienta piensa por problema (manchas, acné)",
+       "en": "Categories by technique (peels, dermaplaning) when clients think by problem (dark spots, acne)"
+      },
+      "before": {
+       "es": "Relación con el mundo real",
+       "en": "Match with the real world"
+      },
+      "after": {
+       "es": "3",
+       "en": "3"
+      }
+     },
+     {
+      "dim": {
+       "es": "Sin contraindicaciones ni aclaraciones previas",
+       "en": "No contraindications or prior notes"
+      },
+      "before": {
+       "es": "Prevención de errores",
+       "en": "Error prevention"
+      },
+      "after": {
+       "es": "3",
+       "en": "3"
+      }
+     },
+     {
+      "dim": {
+       "es": "La especialidad declarada en Instagram (manchas y melasma) no aparece en el sitio",
+       "en": "The specialty stated on Instagram (dark spots and melasma) does not appear on the site"
+      },
+      "before": {
+       "es": "Contenido y confianza",
+       "en": "Content and trust"
+      },
+      "after": {
+       "es": "3",
+       "en": "3"
+      }
+     },
+     {
+      "dim": {
+       "es": "Cada consulta empieza de cero en un mensaje directo vacío",
+       "en": "Every enquiry starts from zero in an empty direct message"
+      },
+      "before": {
+       "es": "Flexibilidad y eficiencia",
+       "en": "Flexibility and efficiency"
+      },
+      "after": {
+       "es": "2",
+       "en": "2"
+      }
+     },
+     {
+      "dim": {
+       "es": "La home no muestra precios: hay que entrar a cada subpágina",
+       "en": "The home page shows no prices: each subpage has to be opened"
+      },
+      "before": {
+       "es": "Reconocer antes que recordar",
+       "en": "Recognition rather than recall"
+      },
+      "after": {
+       "es": "2",
+       "en": "2"
+      }
+     },
+     {
+      "dim": {
+       "es": "Seis enlaces con el mismo texto \"Ver todos los tratamientos\"",
+       "en": "Six links with the same text, \"See all treatments\""
+      },
+      "before": {
+       "es": "WCAG 2.4.4",
+       "en": "WCAG 2.4.4"
+      },
+      "after": {
+       "es": "2",
+       "en": "2"
+      }
+     }
+    ]
+   },
+   {
+    "t": "audit",
+    "h": {
+     "es": "Accesibilidad: contraste del color de marca",
+     "en": "Accessibility: brand colour contrast"
+    },
+    "note": {
+     "es": "El fucsia de marca #D83383 no llega al mínimo AA de 4,5:1 sobre ningún fondo de la paleta. Lo reemplacé por #B8266F, que da entre 4,82:1 y 5,92:1 sin perder identidad.",
+     "en": "The brand fuchsia #D83383 does not reach the AA minimum of 4.5:1 on any background in the palette. I replaced it with #B8266F, which gives between 4.82:1 and 5.92:1 without losing identity."
+    },
+    "cols": {
+     "pair": {
+      "es": "Combinación",
+      "en": "Combination"
+     },
+     "ratio": {
+      "es": "Ratio",
+      "en": "Ratio"
+     },
+     "result": {
+      "es": "Resultado",
+      "en": "Result"
+     },
+     "fix": {
+      "es": "Corrección",
+      "en": "Fix"
+     }
+    },
+    "pass": {
+     "es": "Cumple",
+     "en": "Pass"
+    },
+    "fail": {
+     "es": "No cumple",
+     "en": "Fail"
+    },
+    "nofix": {
+     "es": "Sin cambios",
+     "en": "No change"
+    },
+    "rows": [
+     {
+      "fg": "#D83383",
+      "bg": "#FAE2EC",
+      "pair": {
+       "es": "Fucsia sobre el rosa claro",
+       "en": "Fuchsia on the light pink"
+      },
+      "ratio": {
+       "es": "3,62:1",
+       "en": "3.62:1"
+      },
+      "pass": false,
+      "fixfg": "#B8266F",
+      "fixbg": "#FAE2EC",
+      "fix": {
+       "es": "#B8266F sobre el rosa claro",
+       "en": "#B8266F on the light pink"
+      }
+     },
+     {
+      "fg": "#FFFFFF",
+      "bg": "#D83383",
+      "pair": {
+       "es": "Texto blanco sobre fucsia",
+       "en": "White text on fuchsia"
+      },
+      "ratio": {
+       "es": "4,45:1",
+       "en": "4.45:1"
+      },
+      "pass": false,
+      "fixfg": "#FFFFFF",
+      "fixbg": "#B8266F",
+      "fix": {
+       "es": "Texto blanco sobre #B8266F",
+       "en": "White text on #B8266F"
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Rendimiento",
+     "en": "Performance"
+    },
+    "body": {
+     "es": "Excelente en escritorio (100), pero en celular el LCP fue de 2,9 s, por encima del umbral de 2,5 s. La causa: un logo PNG de 134 KB y tres familias tipográficas desde Google Fonts que bloqueaban el render.",
+     "en": "Excellent on desktop (100), but on mobile the LCP was 2.9 s, above the 2.5 s threshold. The cause: a 134 KB PNG logo and three font families from Google Fonts that blocked rendering."
+    }
+   },
+   {
+    "t": "gallery",
+    "wide": true,
+    "images": [
+     {
+      "src": "estetica-02-lighthouse-celular.webp",
+      "w": 1200,
+      "h": 1225,
+      "alt": {
+       "es": "Informe de PageSpeed Insights en celular: 95 de rendimiento y LCP de 2,9 s, marcado en naranja. La dirección y las vistas del sitio están tapadas.",
+       "en": "PageSpeed Insights report on mobile: 95 in performance and an LCP of 2.9 s, flagged in orange. The address and the site previews are covered."
+      },
+      "caption": {
+       "es": "Lighthouse en celular: 95 de rendimiento, LCP 2,9 s.",
+       "en": "Lighthouse on mobile: 95 in performance, LCP 2.9 s."
+      }
+     },
+     {
+      "src": "estetica-03-lighthouse-escritorio.webp",
+      "w": 1200,
+      "h": 905,
+      "alt": {
+       "es": "Informe de PageSpeed Insights en escritorio: 100 de rendimiento y todas las métricas en verde. La dirección y las vistas del sitio están tapadas.",
+       "en": "PageSpeed Insights report on desktop: 100 in performance and all metrics in green. The address and the site previews are covered."
+      },
+      "caption": {
+       "es": "Lighthouse en escritorio: 100 de rendimiento.",
+       "en": "Lighthouse on desktop: 100 in performance."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "02",
+    "id": "rediseno",
+    "mode": {
+     "es": "arquitectura, UX writing y diseño visual",
+     "en": "architecture, UX writing and visual design"
+    },
+    "name": {
+     "es": "Decisiones de diseño",
+     "en": "Design decisions"
+    },
+    "q": {
+     "es": "Cómo llevar a la clienta desde su problema hasta el chat, con todo el contexto.",
+     "en": "How to take clients from their problem to the chat, with all the context."
+    }
+   },
+   {
+    "t": "bento",
+    "items": [
+     {
+      "size": "l",
+      "n": "01",
+      "title": {
+       "es": "Entrar por el problema, no por la técnica",
+       "en": "Enter through the problem, not the technique"
+      },
+      "body": {
+       "es": "Agregué un selector \"¿Qué te gustaría mejorar?\" con seis necesidades (manchas y melasma, acné, arrugas, flacidez, textura, cuerpo) que filtra el catálogo. La evaluación profesional sigue siendo la que decide: el texto lo aclara.",
+       "en": "I added a \"What would you like to improve?\" selector with six needs (dark spots and melasma, acne, wrinkles, sagging, texture, body) that filters the catalogue. The professional evaluation still decides, and the text says so."
+      },
+      "img": {
+       "src": "estetica-06-filtro.webp",
+       "w": 1366,
+       "h": 900,
+       "alt": {
+        "es": "Catálogo de tratamientos filtrado por manchas y melasma: el aviso indica 10 tratamientos, con categorías, descripciones y precios en efectivo y de lista.",
+        "en": "Treatment catalogue filtered by dark spots and melasma: the notice shows 10 treatments, with categories, descriptions, and cash and list prices."
+       }
+      }
+     },
+     {
+      "size": "s",
+      "n": "02",
+      "title": {
+       "es": "Precios a la vista, en formato carta",
+       "en": "Prices in plain sight, in a menu format"
+      },
+      "body": {
+       "es": "Los 33 tratamientos vigentes en una sola página, con precio en efectivo, precio de lista y un desplegable con lo que incluye. La vista inicial muestra tres por categoría para no abrumar.",
+       "en": "All 33 current treatments on a single page, with a cash price, a list price and a drop-down showing what is included. The initial view shows three per category to avoid overwhelming."
+      },
+      "tone": "c2"
+     },
+     {
+      "size": "l",
+      "n": "03",
+      "title": {
+       "es": "Preparar la conversación en lugar de reemplazarla",
+       "en": "Prepare the conversation instead of replacing it"
+      },
+      "body": {
+       "es": "Como el negocio toma turnos solo por Instagram, no agregué un canal nuevo: el botón \"Pedir turno\" abre un formulario corto (tratamiento, primera vez, horario preferido), arma el mensaje, lo copia y abre el mensaje directo. La clienta llega al chat con todo el contexto.",
+       "en": "Since the business only books through Instagram, I did not add a new channel: the \"Book\" button opens a short form (treatment, first visit, preferred time), writes the message, copies it and opens the direct message. Clients reach the chat with all the context."
+      },
+      "img": {
+       "src": "estetica-07-pedir-turno.webp",
+       "w": 1366,
+       "h": 900,
+       "alt": {
+        "es": "Diálogo Pedir turno: tratamiento, primera vez, horario preferido y un comentario opcional, con la vista previa del mensaje armado y el botón Copiar mensaje y abrir Instagram.",
+        "en": "Booking dialog: treatment, first visit, preferred time and an optional comment, with a preview of the written message and a Copy message and open Instagram button."
+       }
+      }
+     },
+     {
+      "size": "s",
+      "n": "04",
+      "title": {
+       "es": "Hacer visible la autoridad",
+       "en": "Make authority visible"
+      },
+      "body": {
+       "es": "Sección de especialidad en manchas y melasma, credenciales (formación en el exterior, disertaciones en congresos) y un bloque para profesionales que lleva a los cursos.",
+       "en": "A section on the specialty in dark spots and melasma, credentials (training abroad, conference talks) and a block for professionals that leads to the courses."
+      },
+      "tone": "c2"
+     },
+     {
+      "size": "s",
+      "n": "05",
+      "title": {
+       "es": "Primera pantalla útil en celular",
+       "en": "A useful first screen on mobile"
+      },
+      "body": {
+       "es": "Saqué el logo grande del hero en mobile: titular, beneficio, dos acciones y prueba social entran sin scroll. Barra inferior fija con \"Pedir turno\".",
+       "en": "I removed the large logo from the mobile hero: headline, benefit, two actions and social proof fit without scrolling. A fixed bottom bar carries \"Book\"."
+      },
+      "img": {
+       "src": "estetica-05-hero-celular.webp",
+       "w": 390,
+       "h": 844,
+       "alt": {
+        "es": "Hero del rediseño en celular: titular y marca tapados, beneficio, botones Pedir turno y Ver tratamientos y precios, prueba social tapada y barra inferior fija.",
+        "en": "Redesign hero on mobile: covered headline and brand, benefit, Book and See treatments and prices buttons, covered social proof and a fixed bottom bar."
+       }
+      }
+     },
+     {
+      "size": "l",
+      "n": "06",
+      "title": {
+       "es": "Sistema visual heredado y corregido",
+       "en": "An inherited, corrected visual system"
+      },
+      "body": {
+       "es": "Mantuve la paleta y Cormorant Garamond de la marca, reemplacé Poppins por Albert Sans para mejorar la lectura en tamaños chicos y limité la caligrafía.",
+       "en": "I kept the brand’s palette and Cormorant Garamond, replaced Poppins with Albert Sans to improve reading at small sizes and limited the calligraphy."
+      },
+      "img": {
+       "src": "estetica-04-hero-escritorio.webp",
+       "w": 1366,
+       "h": 900,
+       "alt": {
+        "es": "Hero del rediseño en escritorio: titular y logo tapados, beneficio, dos botones y dos notas flotantes sobre la duración de la sesión y la consulta incluida.",
+        "en": "Redesign hero on desktop: covered headline and logo, benefit, two buttons and two floating notes about session length and the included consultation."
+       }
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "03",
+    "id": "implementacion",
+    "mode": {
+     "es": "HTML, CSS, JS y Python",
+     "en": "HTML, CSS, JS and Python"
+    },
+    "name": {
+     "es": "Implementación",
+     "en": "Implementation"
+    },
+    "q": {
+     "es": "Cómo se sostiene el rediseño en el código.",
+     "en": "How the redesign holds up in the code."
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Lo que se construyó",
+     "en": "What was built"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "HTML estático generado",
+       "en": "Generated static HTML"
+      },
+      "body": {
+       "es": "Con un script de Python a partir de un archivo de datos: el catálogo queda en el HTML (legible por buscadores y agentes) y los precios se actualizan en un solo lugar.",
+       "en": "With a Python script from a data file: the catalogue stays in the HTML (readable by search engines and agents) and prices are updated in one place."
+      }
+     },
+     {
+      "lead": {
+       "es": "Carga",
+       "en": "Loading"
+      },
+      "body": {
+       "es": "Fuentes autoalojadas en WOFF2 con precarga, logo en WebP de 40 KB.",
+       "en": "Self-hosted WOFF2 fonts with preload, a 40 KB WebP logo."
+      }
+     },
+     {
+      "lead": {
+       "es": "Accesibilidad",
+       "en": "Accessibility"
+      },
+      "body": {
+       "es": "Contraste AA, objetivos táctiles de 44 px o más, foco visible, enlace para saltar al contenido, diálogo nativo con retorno de foco y prefers-reduced-motion.",
+       "en": "AA contrast, touch targets of 44 px or more, visible focus, a skip link, a native dialog with focus return and prefers-reduced-motion."
+      }
+     },
+     {
+      "lead": {
+       "es": "Datos estructurados",
+       "en": "Structured data"
+      },
+      "body": {
+       "es": "BeautySalon con puntaje agregado.",
+       "en": "BeautySalon with an aggregate rating."
+      }
+     },
+     {
+      "lead": {
+       "es": "Dependencias",
+       "en": "Dependencies"
+      },
+      "body": {
+       "es": "Sin dependencias de JavaScript externas.",
+       "en": "No external JavaScript dependencies."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "images": [
+     {
+      "src": "estetica-08-rediseno-completo.webp",
+      "w": 1200,
+      "h": 9305,
+      "alt": {
+       "es": "Rediseño completo en escritorio, una página larga: hero, selector por necesidad, catálogo con precios, cómo es una sesión, especialidad, reseñas, biografía, bloque para profesionales, preguntas frecuentes y contacto. Marca, personas, ubicación y reseñas están tapadas.",
+       "en": "Full redesign on desktop, a long page: hero, needs selector, priced catalogue, how a session works, specialty, reviews, biography, block for professionals, FAQ and contact. Brand, people, location and reviews are covered."
+      },
+      "caption": {
+       "es": "El rediseño completo, en escritorio. Desplazá dentro del recuadro o abrí la imagen completa.",
+       "en": "The full redesign, on desktop. Scroll inside the frame or open the full image."
+      },
+      "scroll": true
+     }
+    ],
+    "h": {
+     "es": "El rediseño completo",
+     "en": "The full redesign"
+    },
+    "medium": true
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Próximos pasos",
+     "en": "Next steps"
+    },
+    "items": {
+     "es": [
+      "Sesión de fotos propia (profesional, equipo, gabinete) y galería de resultados con consentimiento.",
+      "Horarios, política de seña y cancelación, y preguntas frecuentes ampliadas con datos del negocio.",
+      "Medir clics en \"Pedir turno\" y compararlos con los turnos confirmados por mes.",
+      "Validar el flujo con cinco clientas reales."
+     ],
+     "en": [
+      "An original photo shoot (professional, team, treatment room) and a results gallery with consent.",
+      "Opening hours, a deposit and cancellation policy, and an expanded FAQ with the business’s details.",
+      "Measure clicks on \"Book\" and compare them with confirmed appointments per month.",
+      "Validate the flow with five real clients."
+     ]
+    }
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Aprendizajes",
+     "en": "Learnings"
+    },
+    "body": {
+     "es": "La restricción de canal (solo Instagram) parecía un límite y terminó siendo la idea central: en lugar de sumar una agenda online que el negocio no iba a usar, el sitio pasó a preparar la conversación que ya existía.",
+     "en": "The channel constraint (Instagram only) looked like a limit and ended up being the central idea: instead of adding an online calendar the business would not use, the site now prepares the conversation that already existed."
+    }
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencias",
+     "en": "References"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Fogg, B. J. (2002).",
+       "en": "Fogg, B. J. (2002)."
+      },
+      "title": {
+       "es": "Stanford guidelines for web credibility",
+       "en": "Stanford guidelines for web credibility"
+      },
+      "post": {
+       "es": ". Stanford Persuasive Technology Lab.",
+       "en": ". Stanford Persuasive Technology Lab."
+      },
+      "url": "https://credibility.stanford.edu/guidelines/"
+     },
+     {
+      "pre": {
+       "es": "Google. (2026, 2 de noviembre).",
+       "en": "Google. (2026, November 2)."
+      },
+      "title": {
+       "es": "Informe de PageSpeed Insights del sitio auditado",
+       "en": "PageSpeed Insights report for the audited site"
+      },
+      "post": {
+       "es": " [Informe Lighthouse 13.6; dirección omitida para preservar el anonimato].",
+       "en": " [Lighthouse 13.6 report; address omitted to preserve anonymity]."
+      }
+     },
+     {
+      "pre": {
+       "es": "McQuade, B. (2025, 7 de mayo).",
+       "en": "McQuade, B. (2025, May 7)."
+      },
+      "title": {
+       "es": "How the Core Web Vitals metrics thresholds were defined",
+       "en": "How the Core Web Vitals metrics thresholds were defined"
+      },
+      "post": {
+       "es": ". web.dev.",
+       "en": ". web.dev."
+      },
+      "url": "https://web.dev/articles/defining-core-web-vitals-thresholds"
+     },
+     {
+      "pre": {
+       "es": "Nielsen, J. (2020).",
+       "en": "Nielsen, J. (2020)."
+      },
+      "title": {
+       "es": "10 usability heuristics for user interface design",
+       "en": "10 usability heuristics for user interface design"
+      },
+      "post": {
+       "es": ". Nielsen Norman Group.",
+       "en": ". Nielsen Norman Group."
+      },
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/"
+     },
+     {
+      "pre": {
+       "es": "W3C. (2023).",
+       "en": "W3C. (2023)."
+      },
+      "title": {
+       "es": "Web Content Accessibility Guidelines (WCAG) 2.2",
+       "en": "Web Content Accessibility Guidelines (WCAG) 2.2"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.w3.org/TR/WCAG22/"
+     }
+    ]
+   }
+  ]
+ },
  "auditoria-turnos": {
   "cat": "it",
   "touch": "cap",

@@ -123,6 +123,21 @@ window.PROJECTS = [
     skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.1', 'Lighthouse', 'Claude'], en: ['Nielsen heuristics', 'WCAG 2.1', 'Lighthouse', 'Claude'] }
   },
   {
+    slug: 'auditoria-estetica',
+    cover: 'assets/img/covers/auditoria-estetica.jpg',
+    cat: 'it',
+    dates: ['2026-11', '2026-11'],
+    tags: { es: ['ux/ui', 'rediseño'], en: ['ux/ui', 'redesign'] },
+    badges: ['UX'],
+    title: { es: 'Auditoría UX/UI y rediseño de un centro de estética', en: 'UX/UI audit and redesign for a facial aesthetics centre' },
+    desc: {
+      es: 'Auditoría heurística, de accesibilidad y de rendimiento, y una landing que prepara la conversación por Instagram. Propuesta conceptual, no afiliada.',
+      en: 'Heuristic, accessibility and performance audit, and a landing page that prepares the Instagram conversation. A conceptual proposal, not affiliated.'
+    },
+    result: { es: '14 problemas priorizados', en: '14 prioritised problems' },
+    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Core Web Vitals', 'HTML/CSS/JS'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Core Web Vitals', 'HTML/CSS/JS'] }
+  },
+  {
     slug: 'auditoria-turnos',
     cover: 'assets/img/covers/auditoria-turnos.jpg',
     cat: 'it',

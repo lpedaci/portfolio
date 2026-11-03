@@ -11,8 +11,8 @@ export const SITE = {
     en: 'Portfolio | Lourdes Pedaci, Experience Designer'
   },
   description: {
-    es: 'Experience Designer con base en análisis funcional, UX/UI y capacitación. 14 casos reales: del problema del usuario a requisitos claros y productos de punta a punta.',
-    en: 'Experience Designer with a background in functional analysis, UX/UI and training. 14 real case studies: from the user problem to clear requirements and end-to-end products.'
+    es: 'Experience Designer con base en análisis funcional, UX/UI y capacitación. 15 casos: del problema del usuario a requisitos claros y productos de punta a punta.',
+    en: 'Experience Designer with a background in functional analysis, UX/UI and training. 15 case studies: from the user problem to clear requirements and end-to-end products.'
   },
   ogImage: { path: 'assets/img/og-image.jpg', width: 1200, height: 630,
     alt: 'Porfolio de Lourdes Pedaci, Experience Designer: "Diseño experiencias claras, del problema del usuario al producto", junto a capturas de tres proyectos.' }

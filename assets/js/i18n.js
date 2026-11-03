@@ -104,6 +104,8 @@ window.I18N = {
     zoomIn: 'Clic para ver en tamaño real',
     zoomOut: 'Clic para ajustar a la pantalla',
     zoomClose: 'Cerrar imagen',
+    picFull: 'Ver imagen completa',
+    picScroll: 'Captura con desplazamiento',
     caseMissing: 'Este caso no existe.',
     caseMissingBody: 'Puede que el enlace esté desactualizado. Todos los proyectos están en la página principal.'
   },
@@ -209,6 +211,8 @@ window.I18N = {
     zoomIn: 'Click to view at full size',
     zoomOut: 'Click to fit the screen',
     zoomClose: 'Close image',
+    picFull: 'View full image',
+    picScroll: 'Scrollable screenshot',
     caseMissing: 'This case does not exist.',
     caseMissingBody: 'The link may be outdated. All projects are on the home page.'
   }
