@@ -135,7 +135,7 @@ window.PROJECTS = [
       en: 'Heuristic, accessibility and performance audit, and a landing page that prepares the Instagram conversation. A conceptual proposal, not affiliated.'
     },
     result: { es: '14 problemas priorizados', en: '14 prioritised problems' },
-    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Core Web Vitals', 'HTML/CSS/JS'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Core Web Vitals', 'HTML/CSS/JS'] }
+    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Core Web Vitals'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Core Web Vitals'] }
   },
   {
     slug: 'auditoria-turnos',

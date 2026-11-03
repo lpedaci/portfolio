@@ -4251,8 +4251,8 @@ window.CASES = {
   },
   "facts": {
    "role": {
-    "es": "Auditoría UX/UI completa, arquitectura de información, UX writing, diseño visual y desarrollo front-end",
-    "en": "Full UX/UI audit, information architecture, UX writing, visual design and front-end development"
+    "es": "Auditoría UX/UI completa, arquitectura de información, UX writing y diseño visual",
+    "en": "Full UX/UI audit, information architecture, UX writing and visual design"
    },
    "timeline": {
     "es": "Noviembre 2026",
@@ -4265,10 +4265,7 @@ window.CASES = {
    "stack": [
     "PageSpeed Insights",
     "Lighthouse 13.6",
-    "Chrome DevTools",
-    "HTML/CSS/JS",
-    "Python",
-    "Playwright"
+    "Chrome DevTools"
    ],
    "methods": [
     "Nielsen",
@@ -4406,8 +4403,8 @@ window.CASES = {
        "en": "My role"
       },
       "v": {
-       "es": "Auditoría UX/UI completa, arquitectura de información, UX writing, diseño visual y desarrollo front-end.",
-       "en": "Full UX/UI audit, information architecture, UX writing, visual design and front-end development."
+       "es": "Auditoría UX/UI completa, arquitectura de información, UX writing y diseño visual.",
+       "en": "Full UX/UI audit, information architecture, UX writing and visual design."
       }
      },
      {
@@ -5018,138 +5015,6 @@ window.CASES = {
       }
      }
     ]
-   },
-   {
-    "t": "phase",
-    "n": "03",
-    "id": "implementacion",
-    "mode": {
-     "es": "HTML, CSS, JS y Python",
-     "en": "HTML, CSS, JS and Python"
-    },
-    "name": {
-     "es": "Implementación",
-     "en": "Implementation"
-    },
-    "q": {
-     "es": "Cómo se sostiene el rediseño en el código.",
-     "en": "How the redesign holds up in the code."
-    }
-   },
-   {
-    "t": "list",
-    "h": {
-     "es": "Lo que se construyó",
-     "en": "What was built"
-    },
-    "items": [
-     {
-      "lead": {
-       "es": "HTML estático generado",
-       "en": "Generated static HTML"
-      },
-      "body": {
-       "es": "Con un script de Python a partir de un archivo de datos: el catálogo queda en el HTML (legible por buscadores y agentes) y los precios se actualizan en un solo lugar.",
-       "en": "With a Python script from a data file: the catalogue stays in the HTML (readable by search engines and agents) and prices are updated in one place."
-      }
-     },
-     {
-      "lead": {
-       "es": "Carga",
-       "en": "Loading"
-      },
-      "body": {
-       "es": "Fuentes autoalojadas en WOFF2 con precarga, logo en WebP de 40 KB.",
-       "en": "Self-hosted WOFF2 fonts with preload, a 40 KB WebP logo."
-      }
-     },
-     {
-      "lead": {
-       "es": "Accesibilidad",
-       "en": "Accessibility"
-      },
-      "body": {
-       "es": "Contraste AA, objetivos táctiles de 44 px o más, foco visible, enlace para saltar al contenido, diálogo nativo con retorno de foco y prefers-reduced-motion.",
-       "en": "AA contrast, touch targets of 44 px or more, visible focus, a skip link, a native dialog with focus return and prefers-reduced-motion."
-      }
-     },
-     {
-      "lead": {
-       "es": "Datos estructurados",
-       "en": "Structured data"
-      },
-      "body": {
-       "es": "BeautySalon con puntaje agregado.",
-       "en": "BeautySalon with an aggregate rating."
-      }
-     },
-     {
-      "lead": {
-       "es": "Dependencias",
-       "en": "Dependencies"
-      },
-      "body": {
-       "es": "Sin dependencias de JavaScript externas.",
-       "en": "No external JavaScript dependencies."
-      }
-     }
-    ]
-   },
-   {
-    "t": "gallery",
-    "images": [
-     {
-      "src": "estetica-08-rediseno-completo.webp",
-      "w": 1200,
-      "h": 9305,
-      "alt": {
-       "es": "Rediseño completo en escritorio, una página larga: hero, selector por necesidad, catálogo con precios, cómo es una sesión, especialidad, reseñas, biografía, bloque para profesionales, preguntas frecuentes y contacto. Marca, personas, ubicación y reseñas están tapadas.",
-       "en": "Full redesign on desktop, a long page: hero, needs selector, priced catalogue, how a session works, specialty, reviews, biography, block for professionals, FAQ and contact. Brand, people, location and reviews are covered."
-      },
-      "caption": {
-       "es": "El rediseño completo, en escritorio. Desplazá dentro del recuadro o abrí la imagen completa.",
-       "en": "The full redesign, on desktop. Scroll inside the frame or open the full image."
-      },
-      "scroll": true
-     }
-    ],
-    "h": {
-     "es": "El rediseño completo",
-     "en": "The full redesign"
-    },
-    "medium": true
-   },
-   {
-    "t": "bullets",
-    "h": {
-     "es": "Próximos pasos",
-     "en": "Next steps"
-    },
-    "items": {
-     "es": [
-      "Sesión de fotos propia (profesional, equipo, gabinete) y galería de resultados con consentimiento.",
-      "Horarios, política de seña y cancelación, y preguntas frecuentes ampliadas con datos del negocio.",
-      "Medir clics en \"Pedir turno\" y compararlos con los turnos confirmados por mes.",
-      "Validar el flujo con cinco clientas reales."
-     ],
-     "en": [
-      "An original photo shoot (professional, team, treatment room) and a results gallery with consent.",
-      "Opening hours, a deposit and cancellation policy, and an expanded FAQ with the business’s details.",
-      "Measure clicks on \"Book\" and compare them with confirmed appointments per month.",
-      "Validate the flow with five real clients."
-     ]
-    }
-   },
-   {
-    "t": "callout",
-    "h": {
-     "es": "Aprendizajes",
-     "en": "Learnings"
-    },
-    "body": {
-     "es": "La restricción de canal (solo Instagram) parecía un límite y terminó siendo la idea central: en lugar de sumar una agenda online que el negocio no iba a usar, el sitio pasó a preparar la conversación que ya existía.",
-     "en": "The channel constraint (Instagram only) looked like a limit and ended up being the central idea: instead of adding an online calendar the business would not use, the site now prepares the conversation that already existed."
-    }
    },
    {
     "t": "refs",
