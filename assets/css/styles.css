@@ -1346,7 +1346,10 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .hero__title { max-width: none; margin-inline: auto; }
 .hero__title .l { display: block; text-wrap: balance; }
 /* Cada oración del texto en su propio renglón, equilibrada: la segunda (qué busco) empieza en una línea nueva */
-.hero__lead { margin-inline: auto; max-width: 64ch; }
+.hero__lead { margin-inline: auto; max-width: 100%; }
+@media (min-width: 768px) { .hero__lead { max-width: 720px; } }
+/* En pantallas anchas el texto se extiende más, sin llegar al ancho del título */
+@media (min-width: 1100px) { .hero__lead { max-width: min(940px, 85%); } }
 .hero__lead > span { display: block; text-wrap: balance; }
 .hero__lead > span + span { margin-top: 6px; }
 .hero__ctas { justify-content: center; }
