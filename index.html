@@ -36,9 +36,9 @@
 
   <link rel="preload" href="assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/fonts.css?v=202611081839">
-  <link rel="stylesheet" href="assets/css/icons.css?v=202611081839">
-  <link rel="stylesheet" href="assets/css/styles.css?v=202611081839">
+  <link rel="stylesheet" href="assets/css/fonts.css?v=202611081924">
+  <link rel="stylesheet" href="assets/css/icons.css?v=202611081924">
+  <link rel="stylesheet" href="assets/css/styles.css?v=202611081924">
   </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Ir al contenido</a>
@@ -62,14 +62,16 @@
   </header>
 
   <main id="main">
-    <!-- HERO: mensaje y una sola animación; debajo, la franja de herramientas -->
+    <!-- HERO: mensaje centrado, botones y el reparto de proyectos publicados -->
     <section class="hero" id="top">
+      <!-- Fondo del hero: grilla tenue que se desvanece, un brillo pastel con los tres colores del sistema y algunos cuadrados sueltos -->
+      <div class="hero__bg" aria-hidden="true"><i style="--x:12%;--y:22%"></i><i style="--x:84%;--y:16%;--c:var(--cap-bright)"></i><i style="--x:22%;--y:64%;--c:var(--cont-bright)"></i><i style="--x:76%;--y:58%"></i><i style="--x:92%;--y:40%;--c:var(--cont-bright)"></i><i style="--x:6%;--y:44%;--c:var(--cap-bright)"></i></div>
       <div class="wrap">
         <div class="hero__grid">
           <div class="hero__text">
             <p class="hero__eyebrow mono" data-i18n="eyebrow">Experience Designer · UX/UI · Análisis funcional</p>
             <h1 class="hero__title" data-i18n-html="headline">Diseño experiencias <em>claras</em>, del problema del usuario al producto</h1>
-            <p class="hero__lead" data-i18n-html="lead">Vengo de la capacitación técnica y de coordinar proyectos con clientes reales en una incubadora ágil. Busco sumarme a un <strong>equipo de producto</strong> para entender problemas de usuarios, convertirlos en requisitos claros y diseñar soluciones de punta a punta.</p>
+            <p class="hero__lead" data-i18n-html="lead"><span>Vengo de la capacitación técnica y de coordinar proyectos con clientes reales en una incubadora ágil.</span> <span>Busco sumarme a un <strong>equipo de producto</strong> para entender problemas de usuarios, convertirlos en requisitos claros y diseñar soluciones de punta a punta.</span></p>
             <div class="hero__ctas">
               <a class="btn btn--primary" href="#proyectos">
                 <span data-i18n="ctaWork">Ver proyectos</span>
@@ -87,99 +89,16 @@
 
             <!-- Las cantidades se calculan desde projects.js (main.js); estas son el respaldo sin JavaScript -->
             <a class="hero__meta" href="#proyectos">
-              <strong class="count__n" id="hero-n">14</strong>
-              <span class="count__label"><span data-i18n="heroCount">proyectos publicados</span><i class="ph ph-arrow-down" aria-hidden="true"></i></span>
+              <span class="count__total"><strong class="count__n" id="hero-n">15</strong> <span data-i18n="heroCount">proyectos publicados</span></span>
               <span class="count__legend">
-                <span style="--c:var(--it)"><b data-i18n="filterIt">IT</b><span class="mono" data-n="it">7</span></span>
-                <span style="--c:var(--cap)"><b data-i18n="filterCap">Capacitación</b><span class="mono" data-n="cap">3</span></span>
-                <span style="--c:var(--cont)"><b data-i18n="filterCont">Contenido</b><span class="mono" data-n="cont">4</span></span>
+                <span style="--c:var(--it)"><b data-i18n="filterIt">IT</b> <span class="mono" data-n="it">8</span></span>
+                <span style="--c:var(--cap)"><b data-i18n="filterCap">Capacitación</b> <span class="mono" data-n="cap">3</span></span>
+                <span style="--c:var(--cont)"><b data-i18n="filterCont">Contenido</b> <span class="mono" data-n="cont">4</span></span>
               </span>
-              <span class="count__bar" aria-hidden="true"><i data-cat="it" style="--c:var(--it-bright);--n:7;--j:0"></i><i data-cat="cap" style="--c:var(--cap-bright);--n:3;--j:1"></i><i data-cat="cont" style="--c:var(--cont-bright);--n:4;--j:2"></i></span>
+              <i class="ph ph-arrow-down count__go" aria-hidden="true"></i>
             </a>
           </div>
 
-          <!-- Animación: una app que se diseña y se usa. Boceto, wireframe, interfaz y producto terminado (assets/js/hero-demo.js) -->
-          <div class="hero__art">
-            <div class="demo" data-scene="1" role="img" tabindex="0" aria-label="Animación: una app para sacar turnos pasa de boceto a wireframe y a interfaz final; una persona elige fecha y horario, confirma y recibe el aviso de turno confirmado." data-i18n-aria="demoLabel">
-              <ol class="demo__steps" aria-hidden="true">
-                <li data-s="1"><span data-i18n="demoStep1">boceto</span></li>
-                <li data-s="2"><span data-i18n="demoStep2">wireframe</span></li>
-                <li data-s="3"><span data-i18n="demoStep3">interfaz</span></li>
-                <li data-s="4"><span data-i18n="demoStep4">producto</span></li>
-              </ol>
-
-              <div class="demo__cam" aria-hidden="true">
-                <div class="device">
-                  <span class="device__key device__key--a"></span><span class="device__key device__key--b"></span><span class="device__key device__key--c"></span>
-                  <div class="device__screen">
-                    <span class="device__island"></span>
-                    <div class="sbar"><span>9:41</span><span class="sbar__icons"><i></i><i></i><i></i></span></div>
-
-                    <!-- 1. Boceto -->
-                    <div class="scr scr--sketch">
-                      <svg viewBox="0 0 200 360" preserveAspectRatio="none">
-                        <path d="M18 42 q40 -4 90 1" /><path d="M18 58 q30 3 60 -1" />
-                        <path d="M16 82 h168 v118 h-168 z" />
-                        <path d="M30 104 h18 M64 104 h18 M98 104 h18 M132 104 h18 M30 130 h18 M64 130 h18 M98 130 h18 M132 130 h18 M30 156 h18 M64 156 h18" />
-                        <path d="M18 222 q14 -2 28 1 l-1 18 q-14 2 -28 -1 z M60 222 q14 -2 28 1 l-1 18 q-14 2 -28 -1 z M102 222 q14 -2 28 1 l-1 18 q-14 2 -28 -1 z" />
-                        <path d="M20 300 q80 -6 160 0 q2 14 0 26 q-80 5 -160 0 q-3 -13 0 -26 z" />
-                        <path class="sk-mark" d="M119 126 c-2 -8 -17 -9 -21 -1 c-4 8 4 15 12 13 c6 -1 10 -6 9 -12 M156 68 C160 90 144 110 124 120 M124 120 l9 -1 M124 120 l3 -8" />
-                      </svg>
-                      <span class="sk-note" data-i18n="demoSketch">¿fecha y hora en 1 pantalla?</span>
-                    </div>
-
-                    <!-- 2. Wireframe -->
-                    <div class="scr scr--wire">
-                      <b style="width:62%;height:14px"></b><b style="width:40%;height:9px"></b>
-                      <div class="wf-cal"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                      <div class="wf-row"><i></i><i></i><i></i><i></i></div>
-                      <b class="wf-btn"></b>
-                    </div>
-
-                    <!-- 3. Interfaz -->
-                    <div class="scr scr--ui">
-                      <div class="ui-top"><span class="ui-back"></span><span class="app-logo"><i></i>Turnia</span><span class="ui-step" data-i18n="demoStepOf">Paso 2 de 3</span></div>
-                      <p class="ui-h" data-i18n="demoTitle">Elegí fecha y hora</p>
-                      <p class="ui-sub"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg><span data-i18n="demoSub">Consulta clínica · Sede Centro</span></p>
-                      <div class="cal">
-                        <div class="cal__head"><span class="cal__m"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span data-i18n="demoMonth">Octubre 2026</span></span><span class="cal__nav"><i></i><i></i></span></div>
-                        <div class="cal__grid">
-                          <span class="wd" data-i18n="demoD1">L</span><span class="wd" data-i18n="demoD2">M</span><span class="wd" data-i18n="demoD3">M</span><span class="wd" data-i18n="demoD4">J</span><span class="wd" data-i18n="demoD5">V</span><span class="wd" data-i18n="demoD6">S</span><span class="wd" data-i18n="demoD7">D</span>
-                          <span class="d off">19</span><span class="d">20</span><span class="d">21</span><span class="d off">22</span><span class="d">23</span><span class="d off">24</span><span class="d off">25</span>
-                          <span class="d">26</span><span class="d" data-tap="date">27</span><span class="d">28</span><span class="d">29</span><span class="d">30</span><span class="d off">31</span><span class="d off">1</span>
-                        </div>
-                      </div>
-                      <p class="ui-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="demoTimes">Horarios disponibles</span></p>
-                      <div class="slots"><span>09:00</span><span data-tap="time">10:30</span><span>12:15</span><span>16:00</span></div>
-                      <span class="ui-cta" data-tap="cta" data-i18n="demoCta">Confirmar turno</span>
-                    </div>
-
-                    <!-- 4. Producto: turno confirmado -->
-                    <div class="scr scr--done">
-                      <div class="done__badge">
-                        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" /><path d="M15 27 l7 7 l15 -16" /></svg>
-                        <span class="confetti"><i style="--x:-62px;--y:-48px;--r:200deg;--c:var(--app)"></i><i style="--x:58px;--y:-54px;--r:-160deg;--c:var(--app-accent)"></i><i style="--x:-72px;--y:6px;--r:120deg;--c:var(--app-sun)"></i><i style="--x:70px;--y:10px;--r:-90deg;--c:var(--app)"></i><i style="--x:-40px;--y:-74px;--r:60deg;--c:var(--app-sun)"></i><i style="--x:34px;--y:-80px;--r:-220deg;--c:var(--app)"></i><i style="--x:-56px;--y:44px;--r:180deg;--c:var(--app-accent)"></i><i style="--x:52px;--y:46px;--r:-140deg;--c:var(--app-sun)"></i><i style="--x:0px;--y:-90px;--r:90deg;--c:var(--app-accent)"></i></span>
-                      </div>
-                      <p class="done__h" data-i18n="demoDone">¡Turno confirmado!</p>
-                      <p class="done__p" data-i18n="demoDoneSub">Te enviamos el detalle por mail.</p>
-                      <div class="done__ticket">
-                        <span class="done__date"><b data-i18n="demoDay">mar</b><strong>27</strong></span>
-                        <span class="done__info"><b data-i18n="demoWhat">Consulta clínica</b><span data-i18n="demoWhen">10:30 · Sede Centro</span></span><span class="done__ok" aria-hidden="true"></span>
-                      </div>
-                      <span class="ui-cta ui-cta--ghost" data-i18n="demoMine">Ver mis turnos</span>
-                    </div>
-
-                    <span class="touch"></span>
-                  </div>
-                </div>
-
-                <!-- Piezas que salen del teléfono -->
-                <div class="pop pop--note"><span class="pop__k" data-i18n="demoInsightK">Insight</span><span data-i18n="demoInsight">“Quiero sacar turno sin llamar.”</span></div>
-                <div class="pop pop--req"><span class="pop__k">RF-02</span><span data-i18n="demoReq">Elegir fecha y horario disponibles</span></div>
-                <div class="pop pop--push"><span class="pop__icon"></span><span><b><span class="pop__app">Turnia</span><span data-i18n="demoPushT">Turno confirmado</span></b><span data-i18n="demoPushS">mar 27 oct · 10:30</span></span></div>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -289,10 +208,9 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=202611081839"></script>
-  <script src="assets/js/projects.js?v=202611081839"></script>
-  <script src="assets/js/main.js?v=202611081839"></script>
-  <script src="assets/js/nav.js?v=202611081839"></script>
-  <script src="assets/js/hero-demo.js?v=202611081839"></script>
+  <script src="assets/js/i18n.js?v=202611081924"></script>
+  <script src="assets/js/projects.js?v=202611081924"></script>
+  <script src="assets/js/main.js?v=202611081924"></script>
+  <script src="assets/js/nav.js?v=202611081924"></script>
 </body>
 </html>

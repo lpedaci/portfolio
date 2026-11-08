@@ -19,7 +19,7 @@ El sitio está diseñado para quien recluta o contrata: alguien que decide en se
 
 | Necesidad de quien lee | Respuesta del diseño |
 |---|---|
-| Entender el perfil sin leer | Titular con la propuesta de valor y una animación que resume el proceso: una app pasa de boceto a wireframe, a interfaz y a producto terminado que alguien usa. |
+| Entender el perfil sin leer | Hero centrado y sin ilustración: titular con la propuesta de valor, una oración sobre de dónde vengo y otra, en su propio renglón, sobre qué busco, y el total de proyectos con su reparto por categoría. |
 | Contactar sin buscar | LinkedIn y CV en el hero; correo, LinkedIn, GitHub y CV en contacto; LinkedIn también en el pie. |
 | Encontrar lo relevante | Proyectos del más nuevo al más antiguo, con portada, categoría, etiquetas y resultado visibles antes de abrir. |
 | Comparar a su ritmo | Vista de carrusel o de grilla, con desplazamiento automático que se puede pausar. |
@@ -51,6 +51,8 @@ Cada color tiene una versión base, con contraste AA para texto y botones, y una
 - **Tipografía:** Schibsted Grotesk para títulos, Hanken Grotesk para lectura y JetBrains Mono para etiquetas y datos.
 - **Íconos:** Phosphor, recortado a los íconos que el sitio usa.
 - **Forma y profundidad:** tarjetas y paneles con radio de 20px (`--r-panel`), borde casi invisible y una sombra amplia y suave (`--shadow-card`) en lugar de líneas finas. Controles en forma de pastilla.
+- **Hero de la portada:** centrado y sin ilustración: la etiqueta en una pastilla, título, texto en dos oraciones equilibradas (la segunda empieza en un renglón nuevo), botones y una pastilla con el total de proyectos y su reparto por categoría, que lleva a Proyectos. Su fondo es el único con textura: una grilla fina que se desvanece hacia los bordes, un brillo pastel con los tres colores de categoría y algunos cuadrados sueltos. Los botones son planos, sin brillo ni degradé.
+- **Secciones de la portada:** Proyectos, Recorrido y Contacto van cada una en una caja blanca, con las mismas reglas que la caja de los casos.
 - **Caja de contenido:** en los casos, el contenido va en una caja blanca de radio 28px, hasta 1720px de ancho con margen lateral. Adentro, las tarjetas son gris neutro muy claro y sin sombra, para no apilar tarjeta sobre tarjeta.
 - **Paneles de texto:** título adentro y texto a todo el ancho del panel. Dos paneles seguidos comparten la fila; la prosa larga en un panel de fila entera se lee en dos columnas.
 - **Cifras:** mosaicos con un tinte del color del caso, el primero más intenso. Las columnas se eligen según la cantidad (6 cifras: 3 + 3) y la última fila se estira, sin huecos.
@@ -96,8 +98,8 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 ├── 404.html              Página de error con animación accesible
 ├── casos/<slug>/         Una página por caso
 ├── assets/
-│   ├── css/              Tokens y estilos, fuentes, íconos, animación del hero
-│   ├── js/               Datos (projects, cases, i18n), renderers (main, case, nav) y animación del hero
+│   ├── css/              Tokens y estilos, fuentes, íconos
+│   ├── js/               Datos (projects, cases, i18n) y renderers (main, case, nav)
 │   ├── fonts/            woff2 propios
 │   └── img/              Imágenes de casos, portadas de proyectos y tarjetas Open Graph
 └── tools/                Generación de páginas de caso, SEO, tarjetas OG, íconos y versionado
@@ -111,4 +113,4 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 | 2.0 | Rediseño con design system de tokens y una URL por caso, auditado con heurísticas de Nielsen y WCAG 2.2. |
 | 3.0 | Reposicionamiento hacia análisis funcional y UX/UI, tema oscuro con color por categoría y casos construidos por bloques. |
 | 4.0 | Perfil de experience designer: tema claro con auras, animación del proceso en el hero, portadas por proyecto y tarjetas de vista previa con captura. |
-| 4.1 | Casos con lógica de tablero: resumen de problema, solución y resultados, índice lateral, tarjeta en vivo, caja de contenido y un único fondo blanco cálido en toda la web. |
+| 4.1 | Casos con lógica de tablero: resumen de problema, solución y resultados, índice lateral, tarjeta en vivo, caja de contenido y un único fondo blanco cálido en toda la web. El hero de la portada queda centrado y sin ilustración. |

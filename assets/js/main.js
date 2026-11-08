@@ -208,7 +208,6 @@
     Object.keys(n).forEach((c) => {
       const num = document.querySelector(`.count__legend [data-n="${c}"]`);
       if (num) num.textContent = n[c];
-      document.querySelector(`.count__bar [data-cat="${c}"]`)?.style.setProperty('--n', n[c]);
     });
     const out = document.getElementById('hero-n');
     if (out) {
