@@ -26,11 +26,16 @@ El sitio está diseñado para quien recluta o contrata: alguien que decide en se
 | Compartir un proyecto | Cada caso tiene su propia URL y su propia tarjeta de vista previa al pegar el link. |
 | Leer en su idioma | ES/EN en todo el sitio; el idioma elegido se recuerda y viaja en la URL. |
 
-Cada caso sigue la misma estructura: ficha (rol, período, contexto, herramientas, metodologías), proceso y resultado, y cierra con un acceso al caso siguiente.
+Cada caso sigue la misma estructura, con la lógica de un tablero:
+
+- **Índice lateral:** a la izquierda, "En esta página" lista el resumen, el acceso en vivo, las fases y los apartados, y marca el que se está leyendo. En pantallas chicas pasa a ser una barra de pastillas fija debajo del menú.
+- **Resumen arriba:** problema, solución y resultados en tres tarjetas; los resultados con cifras grandes cuando hay un dato defendible.
+- **En vivo:** si el proyecto está publicado, una tarjeta propia con el primer enlace como botón principal. Cuando es un sitio propio, suma una vista previa: la captura del sitio dentro de un marco de navegador con su dirección.
+- **Después, el detalle:** la ficha (rol, período, contexto, herramientas, metodologías), el proceso explicado por fases y el resultado, y cierra con el caso siguiente.
 
 ## 🎨 Sistema visual
 
-Tema claro único, con auras de color en el fondo y el color usado para informar y no para decorar.
+Tema claro único sobre un fondo blanco cálido liso, igual en toda la web, y el color usado para informar y no para decorar.
 
 | Token | Valor | Significado |
 |---|---|---|
@@ -38,13 +43,20 @@ Tema claro único, con auras de color en el fondo y el color usado para informar
 | `--cap` | `#B8326F` (bright `#EC7FB0`) | Capacitación |
 | `--cont` | `#8F5B00` (bright `#E8B85A`) | Creación de contenidos |
 | `--data` / `--ux` / `--pm` | `#2563B0` / `#B4472A` / `#4D7419` | Áreas dentro de IT, solo en Habilidades |
-| `--bg` / `--surface` / `--text` | `#F7F5F0` / `#FFFFFF` / `#17181C` | Fondo, superficies y texto |
+| `--bg` / `--surface` / `--text` | `#FBF8F3` / `#FFFFFF` / `#17181C` | Fondo, superficies y texto |
+| `--surface` / `--line` dentro de la caja del caso | `#F4F5F7` / `#E3E5EA` | Tarjetas y divisores sobre la caja blanca |
 
-Cada color tiene una versión base, con contraste AA para texto y botones, y una "bright" para ilustraciones y auras.
+Cada color tiene una versión base, con contraste AA para texto y botones, y una "bright" para ilustraciones y acentos sin texto encima.
 
 - **Tipografía:** Schibsted Grotesk para títulos, Hanken Grotesk para lectura y JetBrains Mono para etiquetas y datos.
 - **Íconos:** Phosphor, recortado a los íconos que el sitio usa.
-- **Forma:** radios de 12 a 18px en tarjetas y paneles, controles en forma de pastilla.
+- **Forma y profundidad:** tarjetas y paneles con radio de 20px (`--r-panel`), borde casi invisible y una sombra amplia y suave (`--shadow-card`) en lugar de líneas finas. Controles en forma de pastilla.
+- **Caja de contenido:** en los casos, el contenido va en una caja blanca de radio 28px, hasta 1720px de ancho con margen lateral. Adentro, las tarjetas son gris neutro muy claro y sin sombra, para no apilar tarjeta sobre tarjeta.
+- **Paneles de texto:** título adentro y texto a todo el ancho del panel. Dos paneles seguidos comparten la fila; la prosa larga en un panel de fila entera se lee en dos columnas.
+- **Cifras:** mosaicos con un tinte del color del caso, el primero más intenso. Las columnas se eligen según la cantidad (6 cifras: 3 + 3) y la última fila se estira, sin huecos.
+- **Botoneras:** grupos en una pastilla blanca con sombra suave. La opción elegida de un filtro va llena con el color de acción; la de un selector de vista o un botón activado, con un tinte del mismo color. Los botones de flecha son círculos blancos de 46px que toman el color de acción al pasar el cursor.
+- **En vivo:** etiqueta con un punto verde (late tres veces y se queda quieto con movimiento reducido) y botón lleno con el color del caso, también en la barra de cada sitio embebido.
+- **Vista previa de sitios:** marco oscuro con tres puntos en los colores de categoría y la dirección en mono; la captura es la portada del proyecto. Es decorativa para lectores de pantalla y no suma un paso de tabulación: el acceso es el botón.
 - **Acento secundario por caso:** cada caso puede sumar un segundo color de categoría para cifras y destacados, sin saturar la paleta.
 
 ## ♿ Accesibilidad
@@ -99,3 +111,4 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 | 2.0 | Rediseño con design system de tokens y una URL por caso, auditado con heurísticas de Nielsen y WCAG 2.2. |
 | 3.0 | Reposicionamiento hacia análisis funcional y UX/UI, tema oscuro con color por categoría y casos construidos por bloques. |
 | 4.0 | Perfil de experience designer: tema claro con auras, animación del proceso en el hero, portadas por proyecto y tarjetas de vista previa con captura. |
+| 4.1 | Casos con lógica de tablero: resumen de problema, solución y resultados, índice lateral, tarjeta en vivo, caja de contenido y un único fondo blanco cálido en toda la web. |

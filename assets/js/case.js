@@ -33,7 +33,8 @@
     const h = b.h ? hx(H, 'blk__h', esc(L(b.h))) : '';
     const n = b.note ? `<p class="blk__note">${esc(L(b.note))}</p>` : '';
     const headless = !h && !n;
-    return `<section class="blk${wide || headless ? ' blk--wide' : ''}${extra}${b.hl ? ' blk--outcome' : ''}">${headless ? '' : `<div class="blk__head">${h}${n}</div>`}<div class="blk__body">${body}</div></section>`;
+    // Los bloques de texto van en un panel; los anchos ya traen sus propias tarjetas, figuras o tablas.
+    return `<section class="blk${wide || headless ? ' blk--wide' : ' blk--panel'}${extra}${b.hl ? ' blk--outcome' : ''}">${headless ? '' : `<div class="blk__head">${h}${n}</div>`}<div class="blk__body">${body}</div></section>`;
   }
 
   function frame(kind, src, open, label, title) {
@@ -42,7 +43,7 @@
     // YouTube y Vimeo necesitan saber desde qué sitio se embebe (si no, YouTube muestra el error 153).
     return `
       <div class="frame frame--${kind}">
-        <div class="frame__bar"><span>${esc(host(open || src))}</span>${ext(open || src, t('openNew'))}</div>
+        <div class="frame__bar">${kind === 'live' ? `<span class="live__badge live__badge--sm"><span class="live__dot" aria-hidden="true"></span>${t('liveLinks')}</span>` : ''}<span class="frame__host">${esc(host(open || src))}</span>${ext(open || src, t('openNew'))}</div>
         <iframe src="${esc(safeSrc)}" title="${esc(title || label)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"${allow}></iframe>
       </div>`;
   }
@@ -178,7 +179,9 @@
     list: (b) => blk(b, `<ul class="items">${b.items.map((x) => `<li><strong>${esc(L(x.lead))}</strong><span>${esc(L(x.body))}</span></li>`).join('')}</ul>`),
     roadmap: (b) => blk(b, `<ol class="steps" style="--n:${b.steps.length}">${b.steps.map((x) => `<li><span class="code">${esc(L(x.code))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${esc(L(x.body))}</p></li>`).join('')}</ol>`, true),
     callout: (b) => blk({}, `<div class="callout">${hx(H, '', esc(L(b.h)))}<p>${esc(L(b.body))}</p></div>`, true),
-    stats: (b) => blk({}, `<div class="stats">${b.items.map((x) => `<div><p class="v">${esc(L(x.value))}</p><p class="l">${esc(L(x.label))}</p></div>`).join('')}</div>`, true),
+    // Cifras en mosaicos: --sc es la cantidad de columnas en pantallas anchas, elegida para que las filas queden parejas
+    // (6 cifras: 3 + 3; 7 u 8: de a 4). La última fila se estira, así no quedan huecos.
+    stats: (b) => blk({}, `<div class="stats" style="--sc:${b.items.length <= 5 ? b.items.length : (b.items.length === 6 ? 3 : 4)}">${b.items.map((x) => `<div><p class="v">${esc(L(x.value))}</p><p class="l">${esc(L(x.label))}</p></div>`).join('')}</div>`, true),
     cases: (b) => blk(b, `<ul class="cases">${b.items.map((x) => `
       <li><span class="tag">${esc(L(x.tag))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${esc(L(x.body))}</p>
         <div class="lnks">${(x.links || []).map((k) => `<a class="link-arrow" href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(L(k.label))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>`).join('')}</div>
@@ -353,16 +356,62 @@
     const links = c.links || [];
     H = 2;
     // Los tokens de CSS que aparecen en el texto (--line, --ink-70) van en mono: en la fuente de texto, "--" se lee como una raya.
-    const blocks = c.blocks.map((b) => (BLOCKS[b.t] ? BLOCKS[b.t](b) : '')).join('')
+    /* Paneles de texto seguidos: se agrupan de a dos en la misma fila, como tarjetas de un tablero.
+       Si quedan en número impar, el último ocupa la fila entera. El orden de lectura no cambia. */
+    const parts = c.blocks.map((b) => (BLOCKS[b.t] ? BLOCKS[b.t](b) : ''));
+    const isPanel = (h) => /^\s*<section class="blk[^"]*blk--panel/.test(h);
+    for (let k = 0; k < parts.length;) {
+      if (!isPanel(parts[k])) { k++; continue; }
+      let e = k;
+      while (e < parts.length && isPanel(parts[e])) e++;
+      for (let j = k; j + 1 < e; j += 2) {
+        parts[j] = `<div class="pair">${parts[j]}`;
+        parts[j + 1] = `${parts[j + 1]}</div>`;
+      }
+      k = e;
+    }
+    const blocks = parts.join('')
       .replace(/>([^<]+)</g, (m, txt) => `>${txt.replace(/(^|[\s(])(--[a-z][\w-]*)/g, '$1<code class="tok">$2</code>')}<`);
     H = 2;
     const chips = c.chips ? `<ul class="chips case__chips">${L(c.chips).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
+
+    /* Resumen del caso: problema, solución y resultados, antes de la ficha y del desarrollo.
+       Cada resultado es una cifra con su rótulo ({ v, l }) o una frase ({ t }). */
+    const sm = c.summary;
+    const summary = sm ? `<section class="brief" aria-labelledby="brief-h">
+        <h2 class="sr-only" id="brief-h">${t('sumTitle')}</h2>
+        <div class="brief__col brief__col--p"><h3 class="brief__k"><i class="ph ph-x-circle" aria-hidden="true"></i>${t('sumProblem')}</h3><p class="brief__t">${esc(L(sm.problem))}</p></div>
+        <div class="brief__col brief__col--s"><h3 class="brief__k"><i class="ph ph-check-circle" aria-hidden="true"></i>${t('sumSolution')}</h3><p class="brief__t">${esc(L(sm.solution))}</p></div>
+        <div class="brief__col brief__col--r"><h3 class="brief__k"><i class="ph ph-arrow-up" aria-hidden="true"></i>${t(sm.results.length > 1 ? 'sumResults' : 'sumResult')}</h3>
+          <ul class="brief__res">${sm.results.map((r) => (r.v
+            ? `<li class="brief__m"><span class="brief__v">${esc(L(r.v))}</span> <span class="brief__l">${esc(L(r.l))}</span></li>`
+            : `<li class="brief__x"><i class="ph ph-check" aria-hidden="true"></i><span>${esc(L(r.t))}</span></li>`)).join('')}</ul></div>
+      </section>` : '';
+
+    /* En vivo: los enlaces al proyecto publicado van en una tarjeta propia, con el primero como botón principal.
+       Si el primer enlace es un sitio propio (github.io), la tarjeta suma una vista previa: la portada del proyecto,
+       que es una captura real del sitio, dentro de un marco de navegador con su dirección. */
+    const site = links.length && /\.github\.io$/.test(host(links[0].url)) && p.cover;
+    const shortUrl = (u) => { try { const x = new URL(u); return (x.hostname + x.pathname).replace(/\/$/, ''); } catch { return u; } };
+    const live = links.length ? `<section class="live${site ? ' live--preview' : ''}" aria-labelledby="live-h">
+        ${site ? `<a class="live__shot" href="${esc(links[0].url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <span class="live__chrome"><span class="live__dots"><i></i><i></i><i></i></span><span class="live__url">${esc(shortUrl(links[0].url))}</span></span>
+          <img src="${ROOT}${esc(p.cover)}" width="800" height="500" alt="" loading="lazy" decoding="async"></a>` : ''}
+        <div class="live__txt"><p class="live__badge"><span class="live__dot" aria-hidden="true"></span>${t('liveLinks')}</p>
+          <h2 class="live__h" id="live-h">${t('liveTitle')}</h2>${site ? `<p class="live__desc">${esc(L(p.desc))}</p>` : ''}<p class="live__sub">${t('liveSub')}</p>
+          ${site ? '' : '</div>'}
+        <div class="live__btns">${links.map((k, n) => `<a class="btn ${n ? 'btn--soft' : 'btn--live'}" href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(L(k.label))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>`).join('')}</div>
+        ${site ? '</div>' : ''}
+      </section>` : '';
 
     const i = PROJECTS.indexOf(p);
     const nxt = PROJECTS[(i + 1) % PROJECTS.length];
     const nextColor = { it: 'var(--it)', cap: 'var(--cap)', cont: 'var(--cont)' }[nxt.cat];
 
     mount.innerHTML = `
+      <div class="case__grid">
+      <nav class="toc" aria-labelledby="toc-h"><p class="toc__h" id="toc-h">${t('tocTitle')}</p><ol class="toc__list"></ol></nav>
+      <div class="case__main">
       <a class="case__back" href="${ROOT}?lang=${state.lang}#proyectos"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>${t('backWork')}</span></a>
       <header class="case__head">
         <p class="case__meta"><span class="case__cat">${t(CAT_KEY[p.cat])}</span>${(p.also || []).map((c) => `<span class="case__cat" style="--c: var(--${c})">${t(CAT_KEY[c])}</span>`).join('')}${(p.badges || []).map((x) => `<span class="case__cat">${esc(x)}</span>`).join('')}${c.chips ? '' : `<span>${esc(p.tags[state.lang].join(' / '))}</span>`}<span>${esc(p.year)}</span></p>
@@ -370,16 +419,68 @@
         ${c.subtitle ? `<p class="case__sub">${esc(L(c.subtitle))}</p>` : ''}
         ${chips}
       </header>
+      ${summary}
+      ${live}
       ${(() => { const items = [fact('fRole', f.role), fact('fTimeline', f.timeline), fact('fContext', f.context), fact('fStack', f.stack), fact('fMethods', f.methods)].filter(Boolean); return `<dl class="facts" style="--n:${items.length}">${items.join('')}</dl>`; })()}
-      ${links.length ? `<div class="case__links"><span class="case__links-label">${t('liveLinks')}</span>${links.map((k) => `<a class="btn btn--ghost" href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(L(k.label))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>`).join('')}</div>` : ''}
       <div class="blocks">${blocks}</div>
       ${c.outcome ? blk({ h: t('outcome') }, [].concat(c.outcome.body).map((x) => `<p>${esc(L(x))}</p>`).join(''), false, ' blk--outcome') : ''}
       <a class="next" href="${ROOT}casos/${nxt.slug}/?lang=${state.lang}" style="--next-c:${nextColor}">
         <span class="next__label">${t('nextCase')}</span>
         <span class="next__title"><span>${esc(L(nxt.title))}</span><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
-      </a>`;
+      </a>
+      </div></div>`;
+    buildToc();
     initAnims();
   }
+
+  /* ---------- Índice del caso ----------
+     Se arma con lo que quedó en la página: el resumen, la tarjeta en vivo, las fases y los bloques con título h2.
+     En escritorio es una columna fija a la izquierda; en pantallas chicas, una barra de pastillas que se desplaza
+     de costado. La sección que se está leyendo queda marcada (aria-current). */
+  let tocTargets = [];
+  const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'seccion';
+  function buildToc() {
+    const list = mount.querySelector('.toc__list');
+    const main = mount.querySelector('.case__main');
+    const used = new Set();
+    const items = [];
+    main.querySelectorAll('.brief, .live, .phase, h2.blk__h').forEach((el) => {
+      const sec = el.matches('h2') ? el.closest('section') : el;
+      let label; let kind = '';
+      if (el.matches('.brief')) label = t('tocSummary');
+      else if (el.matches('.live')) { label = t('liveLinks'); kind = 'live'; }
+      else if (el.matches('.phase')) { label = el.querySelector('.phase__h').textContent; kind = 'phase'; }
+      else label = el.textContent;
+      if (!sec.id) {
+        let id = slugify(label); let n = 2;
+        while (used.has(id) || document.getElementById(id)) id = `${slugify(label)}-${n++}`;
+        sec.id = id;
+      }
+      used.add(sec.id);
+      items.push({ id: sec.id, label, kind, sec });
+    });
+    list.innerHTML = items.map((x) => `<li class="toc__i${x.kind ? ` toc__i--${x.kind}` : ''}"><a href="#${esc(x.id)}">${x.kind === 'live' ? '<span class="live__dot" aria-hidden="true"></span>' : ''}<span>${esc(x.label)}</span></a></li>`).join('');
+    tocTargets = items.map((x) => ({ sec: x.sec, a: list.querySelector(`a[href="#${CSS.escape(x.id)}"]`) }));
+    current = null;
+    spy();
+  }
+  let current = null;
+  function spy() {
+    if (!tocTargets.length) return;
+    const line = innerHeight * 0.3;
+    let on = tocTargets[0];
+    for (const x of tocTargets) { if (x.sec.getBoundingClientRect().top <= line) on = x; }
+    if (on === current) return;
+    if (current) current.a.removeAttribute('aria-current');
+    on.a.setAttribute('aria-current', 'location');
+    current = on;
+    // En la barra horizontal, la pastilla activa se desliza a la vista sin mover la página.
+    const list = on.a.closest('.toc__list');
+    if (list.scrollWidth > list.clientWidth) list.scrollTo({ left: on.a.parentElement.offsetLeft - 16, behavior: reduce.matches ? 'auto' : 'smooth' });
+  }
+  let spyQueued = false;
+  addEventListener('scroll', () => { if (spyQueued) return; spyQueued = true; requestAnimationFrame(() => { spyQueued = false; spy(); }); }, { passive: true });
+  addEventListener('resize', () => { current = null; spy(); });
 
   /* ---------- Animaciones HyperFrames ---------- */
   const anims = [];

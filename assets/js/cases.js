@@ -13,6 +13,41 @@ window.CASES = {
    "es": "Equipos que desarrollan con clientes reales, del relevamiento a la entrega",
    "en": "Teams building for real clients, from requirements gathering to delivery"
   },
+  "summary": {
+   "problem": {
+    "es": "Temas densos de gestión de proyectos (ciclos de vida, organigramas, Gantt, GitHub) se daban con diapositivas, y los proyectos corrían el riesgo de quedar en ejercicios hipotéticos.",
+    "en": "Dense project-management topics (life cycles, org charts, Gantt, GitHub) were taught with slides, and projects risked ending up as hypothetical exercises."
+   },
+   "solution": {
+    "es": "Un hub interactivo con seis fases, de la validación del problema con un cliente real a la defensa final, y dos casos de referencia resueltos.",
+    "en": "An interactive hub with six phases, from validating the problem with a real client to the final defence, plus two fully worked reference cases."
+   },
+   "results": [
+    {
+     "v": "14-18",
+     "l": {
+      "es": "equipos por año, más de 70 integrantes",
+      "en": "teams per year, over 70 members"
+     }
+    },
+    {
+     "v": {
+      "es": "3er año",
+      "en": "3rd year"
+     },
+     "l": {
+      "es": "consecutivo de uso del módulo",
+      "en": "in a row the module is in use"
+     }
+    },
+    {
+     "t": {
+      "es": "Cada equipo llega a la defensa con un problema validado, una landing publicada y un usuario real que vio el producto.",
+      "en": "Every team reaches the defence with a validated problem, a published landing page and a real user who has seen the product."
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "es": "Coordinación de proyectos, diseño instruccional, front-end",
@@ -356,6 +391,41 @@ window.CASES = {
     "UX Research",
     "Team coordination",
     "Content production"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Los riesgos en internet (acoso, manipulación, estafas, pérdida de privacidad) crecieron con la pandemia, y faltaba contenido que los explicara a niños, adolescentes y adultos.",
+    "en": "Online risks (harassment, manipulation, scams, loss of privacy) grew during the pandemic, and there was little content explaining them to children, teenagers and adults."
+   },
+   "solution": {
+    "es": "Un programa participativo en Doble Diamante: 11 equipos investigaron con encuestas y entrevistas, y produjeron una temporada de podcast.",
+    "en": "A participatory Double Diamond programme: 11 teams researched through surveys and interviews and produced a podcast season."
+   },
+   "results": [
+    {
+     "v": {
+      "es": "1.741",
+      "en": "1,741"
+     },
+     "l": {
+      "es": "personas encuestadas, de todas las franjas de edad",
+      "en": "people surveyed, across every age group"
+     }
+    },
+    {
+     "v": "272",
+     "l": {
+      "es": "reproducciones en Spotify desde octubre de 2024",
+      "en": "Spotify plays since October 2024"
+     }
+    },
+    {
+     "t": {
+      "es": "Temporada completa publicada y presentada en vivo a la comunidad educativa.",
+      "en": "Full season published and presented live to the school community."
+     }
+    }
    ]
   },
   "facts": {
@@ -1265,6 +1335,37 @@ window.CASES = {
    "en": "A 96-page single source of truth, and the video ecosystem that made it usable",
    "es": "Una única fuente de verdad de 96 páginas, y el ecosistema de video que la hizo usable"
   },
+  "summary": {
+   "problem": {
+    "es": "Los laboratorios tenían un rendimiento desparejo: máquinas parcheadas una por una y un saber que vivía en la cabeza de una sola persona.",
+    "en": "The labs performed unevenly: machines patched one by one, and know-how that lived in a single person’s head."
+   },
+   "solution": {
+    "es": "Una auditoría de hardware y software, sistemas operativos a medida de cada laboratorio y perfiles por nivel, documentados en una guía y una serie de videotutoriales.",
+    "en": "A hardware and software audit, operating systems tailored to each lab and profiles per level, documented in a guide and a video tutorial series."
+   },
+   "results": [
+    {
+     "v": "96",
+     "l": {
+      "es": "páginas de SOP como única fuente de verdad",
+      "en": "SOP pages as a single source of truth"
+     }
+    },
+    {
+     "t": {
+      "es": "Un estándar documentado que cualquier técnico puede reproducir.",
+      "en": "A documented standard any technician can reproduce."
+     }
+    },
+    {
+     "t": {
+      "es": "El equipo de pasantías 2023 lo aplicó con un proceso de cinco pasos.",
+      "en": "The 2023 intern team applied it through a five-step process."
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "en": "Instructional design, technical writing, systems analysis, team lead",
@@ -1575,6 +1676,37 @@ window.CASES = {
     "UI",
     "Design System",
     "Accessibility"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Docentes de ciencias sin laboratorio disponible ni presupuesto para suscripciones terminan usando animaciones que no muestran una práctica real.",
+    "en": "Science teachers with no lab available and no budget for subscriptions end up using animations that don’t show a real experiment."
+   },
+   "solution": {
+    "es": "Una reinvención UX/UI de MurialdoLab en Doble Diamante: research, persona, flujos, wireframes y un design system documentado.",
+    "en": "A Double Diamond UX/UI reinvention of MurialdoLab: research, persona, flows, wireframes and a documented design system."
+   },
+   "results": [
+    {
+     "v": "7",
+     "l": {
+      "es": "combinaciones de color que no llegaban a AA, con su corrección",
+      "en": "colour pairs below AA, each with its fix"
+     }
+    },
+    {
+     "t": {
+      "es": "Design system auditado contra WCAG 2.1 AA sin cambiar la identidad visual.",
+      "en": "Design system audited against WCAG 2.1 AA without changing the visual identity."
+     }
+    },
+    {
+     "t": {
+      "es": "UI final consistente con la marca y próximos pasos planteados.",
+      "en": "Final UI consistent with the brand, with next steps defined."
+     }
+    }
    ]
   },
   "facts": {
@@ -3751,6 +3883,37 @@ window.CASES = {
     "Team mentoring"
    ]
   },
+  "summary": {
+   "problem": {
+    "es": "Los equipos de 7mo desarrollan productos para clientes reales y necesitaban detectar problemas de usabilidad y accesibilidad antes de entregarlos.",
+    "en": "7th-year teams build products for real clients and needed to catch usability and accessibility problems before delivering them."
+   },
+   "solution": {
+    "es": "Asesorías presenciales con devolución en vivo y auditorías remotas con un entregable web: heurísticas de Nielsen, WCAG 2.1 y medición real de contraste.",
+    "en": "In-person sessions with live feedback, and remote audits with a web deliverable: Nielsen’s heuristics, WCAG 2.1 and real contrast measurement."
+   },
+   "results": [
+    {
+     "v": "10",
+     "l": {
+      "es": "productos revisados: 3 en auditoría remota y 7 en persona",
+      "en": "products reviewed: 3 remote audits and 7 in person"
+     }
+    },
+    {
+     "t": {
+      "es": "Cada equipo recibió una devolución accionable y priorizada.",
+      "en": "Every team received actionable, prioritised feedback."
+     }
+    },
+    {
+     "t": {
+      "es": "Contraste y accesibilidad, los problemas más repetidos, pasaron a ser un foco de la asesoría.",
+      "en": "Contrast and accessibility, the most frequent problems, became a focus of the sessions."
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "es": "Especialista UX/UI y coordinadora: evaluación heurística, auditoría de accesibilidad, devolución y roadmap de mejoras para cada equipo",
@@ -3779,51 +3942,6 @@ window.CASES = {
   },
   "links": [],
   "blocks": [
-   {
-    "t": "stats",
-    "items": [
-     {
-      "value": {
-       "es": "2",
-       "en": "2"
-      },
-      "label": {
-       "es": "modalidades: presencial y remota",
-       "en": "formats: in person and remote"
-      }
-     },
-     {
-      "value": {
-       "es": "10",
-       "en": "10"
-      },
-      "label": {
-       "es": "heurísticas de Nielsen como marco",
-       "en": "Nielsen heuristics as the framework"
-      }
-     },
-     {
-      "value": {
-       "es": "1 a 4",
-       "en": "1 to 4"
-      },
-      "label": {
-       "es": "escala de severidad por hallazgo",
-       "en": "severity scale per finding"
-      }
-     },
-     {
-      "value": {
-       "es": "Web",
-       "en": "Web"
-      },
-      "label": {
-       "es": "entregable autocontenido por auditoría remota",
-       "en": "self-contained deliverable per remote audit"
-      }
-     }
-    ]
-   },
    {
     "t": "kv",
     "h": {
@@ -4247,6 +4365,45 @@ window.CASES = {
     "Core Web Vitals"
    ]
   },
+  "summary": {
+   "problem": {
+    "es": "Un sitio lindo que no ayudaba a pedir turno: funcionaba como folleto y todo el recorrido terminaba en un mensaje directo vacío de Instagram.",
+    "en": "A beautiful site that didn’t help people book: it worked as a brochure, and every path ended in an empty Instagram direct message."
+   },
+   "solution": {
+    "es": "Una auditoría del recorrido hasta pedir turno, con heurísticas de Nielsen, WCAG 2.2 y Core Web Vitals, respetando que los turnos se toman solo por Instagram.",
+    "en": "An audit of the path to booking with Nielsen’s heuristics, WCAG 2.2 and Core Web Vitals, working within the rule that bookings only happen on Instagram."
+   },
+   "results": [
+    {
+     "v": "14",
+     "l": {
+      "es": "problemas de usabilidad priorizados",
+      "en": "prioritised usability issues"
+     }
+    },
+    {
+     "v": {
+      "es": "4,82:1",
+      "en": "4.82:1"
+     },
+     "l": {
+      "es": "contraste mínimo del fucsia corregido; antes, 3,62:1",
+      "en": "minimum contrast of the corrected fuchsia, up from 3.62:1"
+     }
+    },
+    {
+     "v": {
+      "es": "2,9 s",
+      "en": "2.9 s"
+     },
+     "l": {
+      "es": "LCP en celular, con su causa identificada",
+      "en": "mobile LCP, with its cause identified"
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "es": "Auditoría UX/UI, de accesibilidad y de rendimiento",
@@ -4274,101 +4431,6 @@ window.CASES = {
   "links": [],
   "blocks": [
    {
-    "t": "bento",
-    "h": {
-     "es": "Los puntos clave",
-     "en": "Key points"
-    },
-    "items": [
-     {
-      "size": "l",
-      "tone": "c2",
-      "lead": true,
-      "k": {
-       "es": "El punto de partida",
-       "en": "The starting point"
-      },
-      "title": {
-       "es": "Un sitio lindo que no ayudaba a pedir turno.",
-       "en": "A nice-looking site that did not help people book."
-      },
-      "body": {
-       "es": "Funcionaba como folleto: todo el recorrido terminaba en un mensaje directo vacío de Instagram. Lo audité con heurísticas, WCAG 2.2 y Core Web Vitals.",
-       "en": "It worked like a brochure: every journey ended in an empty Instagram direct message. I audited it with heuristics, WCAG 2.2 and Core Web Vitals."
-      }
-     },
-     {
-      "size": "s",
-      "v": {
-       "es": "14",
-       "en": "14"
-      },
-      "body": {
-       "es": "problemas de usabilidad priorizados",
-       "en": "prioritised usability problems"
-      }
-     },
-     {
-      "size": "s",
-      "v": {
-       "es": "5",
-       "en": "5"
-      },
-      "body": {
-       "es": "de los 8 hallazgos principales tienen severidad 3, en una escala de 0 a 4",
-       "en": "of the 8 main findings have severity 3, on a scale from 0 to 4"
-      }
-     },
-     {
-      "size": "l",
-      "tone": "c2",
-      "lead": true,
-      "k": {
-       "es": "La restricción del negocio",
-       "en": "The business constraint"
-      },
-      "title": {
-       "es": "Los turnos se toman solo por mensaje directo de Instagram.",
-       "en": "Appointments are only booked by Instagram direct message."
-      },
-      "body": {
-       "es": "La web es el link de la bio: casi todo el tráfico llega desde el celular, dentro de la app de Instagram.",
-       "en": "The website is the link in the bio: almost all traffic arrives from a phone, inside the Instagram app."
-      }
-     },
-     {
-      "size": "m",
-      "k": {
-       "es": "Accesibilidad",
-       "en": "Accessibility"
-      },
-      "v": {
-       "es": "3,62:1",
-       "en": "3.62:1"
-      },
-      "body": {
-       "es": "El fucsia de marca sobre el rosa claro, por debajo del mínimo AA de 4,5:1. No llega en ningún fondo de la paleta.",
-       "en": "The brand fuchsia on the light pink, below the AA minimum of 4.5:1. It does not reach it on any background in the palette."
-      }
-     },
-     {
-      "size": "m",
-      "k": {
-       "es": "Rendimiento",
-       "en": "Performance"
-      },
-      "v": {
-       "es": "2,9 s",
-       "en": "2.9 s"
-      },
-      "body": {
-       "es": "LCP en celular, por encima del umbral de 2,5 s. En escritorio, el rendimiento fue de 100.",
-       "en": "LCP on mobile, above the 2.5 s threshold. On desktop, performance was 100."
-      }
-     }
-    ]
-   },
-   {
     "t": "kv",
     "h": {
      "es": "Resumen",
@@ -4387,32 +4449,12 @@ window.CASES = {
      },
      {
       "k": {
-       "es": "Desafío",
-       "en": "Challenge"
-      },
-      "v": {
-       "es": "El sitio funcionaba como folleto: todo el recorrido terminaba en un mensaje directo vacío de Instagram.",
-       "en": "The site worked like a brochure: every journey ended in an empty Instagram direct message."
-      }
-     },
-     {
-      "k": {
        "es": "Mi rol",
        "en": "My role"
       },
       "v": {
        "es": "Auditoría UX/UI, de accesibilidad y de rendimiento.",
        "en": "UX/UI, accessibility and performance audit."
-      }
-     },
-     {
-      "k": {
-       "es": "Resultado",
-       "en": "Outcome"
-      },
-      "v": {
-       "es": "14 problemas de usabilidad priorizados y una corrección de la paleta para llegar a WCAG AA.",
-       "en": "14 prioritised usability problems and a palette correction to reach WCAG AA."
       }
      },
      {
@@ -4992,6 +5034,38 @@ window.CASES = {
     "Cognitive walkthrough"
    ]
   },
+  "summary": {
+   "problem": {
+    "es": "Un portal de turnos veloz, con 99 en rendimiento, que le pide al paciente más esfuerzo del necesario y deja afuera a personas con baja visión o que usan lector de pantalla.",
+    "en": "A fast booking portal, scoring 99 on performance, that asks patients for more effort than needed and shuts out people with low vision or using screen readers."
+   },
+   "solution": {
+    "es": "Evaluación heurística, revisión WCAG 2.2 AA y Lighthouse sobre las ocho pantallas del flujo, con cada hallazgo unido a una recomendación priorizada.",
+    "en": "Heuristic evaluation, a WCAG 2.2 AA review and Lighthouse across the eight screens of the flow, with each finding tied to a prioritised recommendation."
+   },
+   "results": [
+    {
+     "v": "13",
+     "l": {
+      "es": "hallazgos priorizados por impacto y esfuerzo: 10 de usabilidad y 3 de accesibilidad",
+      "en": "findings prioritised by impact and effort: 10 usability, 3 accessibility"
+     }
+    },
+    {
+     "v": "3",
+     "l": {
+      "es": "fallos de accesibilidad que se resuelven con cambios acotados",
+      "en": "accessibility failures fixable with small changes"
+     }
+    },
+    {
+     "t": {
+      "es": "Metas medibles para el rediseño: éxito en la selección, accesibilidad de 95 o más y SUS por encima de 80.",
+      "en": "Measurable goals for the redesign: selection success, accessibility of 95 or more and SUS above 80."
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "es": "Auditoría UX/UI, accesibilidad y QA: evaluación, priorización y propuesta de mejoras",
@@ -5017,51 +5091,6 @@ window.CASES = {
   },
   "links": [],
   "blocks": [
-   {
-    "t": "stats",
-    "items": [
-     {
-      "value": {
-       "es": "99",
-       "en": "99"
-      },
-      "label": {
-       "es": "en Rendimiento (Lighthouse)",
-       "en": "in Performance (Lighthouse)"
-      }
-     },
-     {
-      "value": {
-       "es": "80",
-       "en": "80"
-      },
-      "label": {
-       "es": "en Accesibilidad (Lighthouse)",
-       "en": "in Accessibility (Lighthouse)"
-      }
-     },
-     {
-      "value": {
-       "es": "10",
-       "en": "10"
-      },
-      "label": {
-       "es": "hallazgos de usabilidad",
-       "en": "usability findings"
-      }
-     },
-     {
-      "value": {
-       "es": "3",
-       "en": "3"
-      },
-      "label": {
-       "es": "fallos de accesibilidad WCAG 2.2 AA",
-       "en": "WCAG 2.2 AA accessibility failures"
-      }
-     }
-    ]
-   },
    {
     "t": "quote",
     "h": {
@@ -6202,6 +6231,38 @@ window.CASES = {
    "en": "Making the least visible part of the syllabus manipulable",
    "es": "Volver manipulable la parte menos visible del programa"
   },
+  "summary": {
+   "problem": {
+    "es": "Almacenamiento y seteo del sistema operativo son temas abstractos: la clase tradicional deja a los estudiantes memorizando tablas sin entender por qué importa cada elección.",
+    "en": "Storage and OS setup are abstract topics: traditional classes leave students memorising tables without knowing why each choice matters."
+   },
+   "solution": {
+    "es": "Dos sitios interactivos con diagramas de disco clicables, árboles de decisión y tablas tipo semáforo, más un módulo de autoevaluación al azar.",
+    "en": "Two interactive sites with clickable disk diagrams, decision trees and traffic-light tables, plus a randomised self-assessment module."
+   },
+   "results": [
+    {
+     "v": "2",
+     "l": {
+      "es": "unidades en un único banco de preguntas",
+      "en": "units feeding a single question bank"
+     }
+    },
+    {
+     "v": "20 / 40",
+     "l": {
+      "es": "preguntas por ronda, rebarajadas en cada intento",
+      "en": "questions per round, reshuffled on every attempt"
+     }
+    },
+    {
+     "t": {
+      "es": "Una guía de clase de 80 minutos lista para el docente.",
+      "en": "An 80-minute lesson guide ready for the teacher."
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "en": "Instructional design, LXD, front-end development, assessment design",
@@ -6456,6 +6517,30 @@ window.CASES = {
    "en": "Empowering technical voices through storytelling",
    "es": "Potenciar voces técnicas a través del storytelling"
   },
+  "summary": {
+   "problem": {
+    "es": "Futuros técnicos que dominaban el cómo de la tecnología, pero necesitaban contar el porqué a una audiencia más amplia.",
+    "en": "Future technicians who mastered the how of technology but needed to explain the why to a wider audience."
+   },
+   "solution": {
+    "es": "Un currículum interdisciplinario con los lineamientos de TED: storytelling, coaching de estructura narrativa y presentaciones pensadas como apoyo visual.",
+    "en": "An interdisciplinary curriculum following TED’s guidelines: storytelling, coaching on narrative structure and slides designed as visual support."
+   },
+   "results": [
+    {
+     "t": {
+      "es": "Un ciclo de charlas tecnológicas en vivo, a cargo de los estudiantes de 5to año.",
+      "en": "A live series of tech talks given by 5th-year students."
+     }
+    },
+    {
+     "t": {
+      "es": "Más autonomía comunicativa y presencia profesional en los estudiantes.",
+      "en": "Students gained communication autonomy and professional presence."
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "en": "Programme design, curriculum, coaching, project management",
@@ -6613,6 +6698,24 @@ window.CASES = {
    "en": "A paradigm shift, argued in two minutes of motion",
    "es": "Un cambio de paradigma, argumentado en dos minutos de motion"
   },
+  "summary": {
+   "problem": {
+    "es": "El modelo tradicional de transmisión de contenidos no alcanza en la era digital, y había que argumentar el cambio de rol docente de forma breve.",
+    "en": "The traditional content-delivery model falls short in the digital age, and the shift in the teacher’s role had to be argued briefly."
+   },
+   "solution": {
+    "es": "Un video de motion de dos minutos que integra a Paulo Freire, Edith Litwin y el modelo TPACK.",
+    "en": "A two-minute motion video that brings together Paulo Freire, Edith Litwin and the TPACK model."
+   },
+   "results": [
+    {
+     "t": {
+      "es": "Un video que presenta al docente como gestor del aprendizaje, que enseña a aprender.",
+      "en": "A video that presents the teacher as a learning manager who teaches students how to learn."
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "en": "Concept, script, instructional design, motion",
@@ -6727,6 +6830,24 @@ window.CASES = {
    "en": "Setting the room up for the work the students were about to show",
    "es": "Preparar la sala para el trabajo que los estudiantes estaban por mostrar"
   },
+  "summary": {
+   "problem": {
+    "es": "La Expo Informática 2024 necesitaba una apertura que enmarcara los proyectos de los estudiantes ante familias, personal e invitados.",
+    "en": "Expo Informática 2024 needed an opening that framed the students’ projects for families, staff and guests."
+   },
+   "solution": {
+    "es": "Un video de apertura sobre ciudades inteligentes, hecho con After Effects, Premiere e IA generativa.",
+    "en": "An opening video on smart cities, made with After Effects, Premiere and generative AI."
+   },
+   "results": [
+    {
+     "t": {
+      "es": "La pieza abrió el evento y presentó el trabajo que los estudiantes iban a mostrar.",
+      "en": "The piece opened the event and introduced the work the students were about to show."
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "en": "Concept, direction, motion, edit",
@@ -6800,6 +6921,24 @@ window.CASES = {
   "subtitle": {
    "en": "An animated short built end to end with generative tools",
    "es": "Un corto animado construido de punta a punta con herramientas generativas"
+  },
+  "summary": {
+   "problem": {
+    "es": "El proyecto final de la diplomatura pedía contar una historia completa con herramientas de IA generativa.",
+    "en": "The diploma’s final project called for telling a complete story with generative AI tools."
+   },
+   "solution": {
+    "es": "Un corto inspirado en El Cuervo de Poe: imágenes con Adobe Firefly, animación con Runway y banda sonora original con Suno.",
+    "en": "A short film inspired by Poe’s The Raven: images with Adobe Firefly, animation with Runway and an original score with Suno."
+   },
+   "results": [
+    {
+     "t": {
+      "es": "Cortometraje terminado y publicado como proyecto final del Módulo 02 de la diplomatura de UNTREF.",
+      "en": "Short film finished and published as the final project of Module 02 of the UNTREF diploma."
+     }
+    }
+   ]
   },
   "facts": {
    "role": {
@@ -6876,6 +7015,24 @@ window.CASES = {
   "subtitle": {
    "en": "Two minutes to make an entire enterprise architecture legible",
    "es": "Dos minutos para volver legible toda una arquitectura empresarial"
+  },
+  "summary": {
+   "problem": {
+    "es": "La arquitectura de un ERP, con software integrado y bases de datos centralizadas, es densa y difícil de visualizar para estudiantes de ingeniería en sistemas.",
+    "en": "ERP architecture, with integrated software and centralised databases, is dense and hard to picture for systems engineering students."
+   },
+   "solution": {
+    "es": "Un motion graphics de dos minutos con estilo de pizarra, ordenado alrededor de los diez factores críticos de éxito.",
+    "en": "A two-minute whiteboard-style motion graphic, organised around the ten critical success factors."
+   },
+   "results": [
+    {
+     "t": {
+      "es": "Una síntesis de dos minutos que muestra cómo circula la información en toda la organización.",
+      "en": "A two-minute summary that shows how information flows across the whole organisation."
+     }
+    }
+   ]
   },
   "facts": {
    "role": {
@@ -7001,6 +7158,38 @@ window.CASES = {
     "UX/UI",
     "Design system",
     "Accessibility"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Los estudiantes llegan a sus primeras prácticas sin CV, sin LinkedIn y sin haber pasado por una entrevista, y un taller de dos horas se olvida antes de que lo necesiten.",
+    "en": "Students reach their first placement with no CV, no LinkedIn and no interview experience, and a two-hour workshop is forgotten before they need it."
+   },
+   "solution": {
+    "es": "Un recorrido web de once paradas y cuatro apartados especiales, que sirve para dictar el taller en modo presentación y para volver a consultarlo después.",
+    "en": "An eleven-stop web journey with four special sections, used to teach the workshop in presentation mode and to come back to later."
+   },
+   "results": [
+    {
+     "v": "45 min",
+     "l": {
+      "es": "de actividad en clase, 65 con el simulacro de entrevista",
+      "en": "of hands-on work in class, 65 with the mock interview"
+     }
+    },
+    {
+     "v": "5",
+     "l": {
+      "es": "plantillas para copiar y salir con algo propio hecho",
+      "en": "copy-ready templates to leave with something of their own"
+     }
+    },
+    {
+     "t": {
+      "es": "Dictado con 6to año entre el 26 de octubre y el 4 de noviembre de 2026.",
+      "en": "Taught to 6th-year students between 26 October and 4 November 2026."
+     }
+    }
    ]
   },
   "facts": {
@@ -9390,6 +9579,39 @@ window.CASES = {
     "Accessibility"
    ]
   },
+  "summary": {
+   "problem": {
+    "es": "Más de 300 enlaces juntados desde 2019 vivían en páginas de Notion: se podían leer, pero no filtrar por tema, certificado o idioma, ni guardar para volver.",
+    "en": "Over 300 links gathered since 2019 lived in Notion pages: you could read them, but not filter by topic, certificate or language, or save them for later."
+   },
+   "solution": {
+    "es": "Un sitio propio con la lógica de un servidor de juego: Lobby, threads, exploradores con filtros que se comparten por link, búsqueda e inventario sin cuenta.",
+    "en": "A dedicated site built like a game server: a Lobby, threads, explorers with filters you can share as a link, search and an inventory with no account."
+   },
+   "results": [
+    {
+     "v": "160",
+     "l": {
+      "es": "cursos filtrables por tema, certificado e idioma",
+      "en": "courses to filter by topic, certificate and language"
+     }
+    },
+    {
+     "v": "158",
+     "l": {
+      "es": "recursos ordenados en el mismo explorador",
+      "en": "resources in the same explorer"
+     }
+    },
+    {
+     "v": "0",
+     "l": {
+      "es": "errores de axe en tema claro, en escritorio y en celular",
+      "en": "axe errors in the light theme, on desktop and mobile"
+     }
+    }
+   ]
+  },
   "facts": {
    "role": {
     "es": "Arquitectura de información, diseño UX/UI, design system, redacción y desarrollo del sitio",
@@ -9441,61 +9663,6 @@ window.CASES = {
    }
   ],
   "blocks": [
-   {
-    "t": "stats",
-    "items": [
-     {
-      "value": {
-       "es": "160",
-       "en": "160"
-      },
-      "label": {
-       "es": "cursos filtrables",
-       "en": "filterable courses"
-      }
-     },
-     {
-      "value": {
-       "es": "158",
-       "en": "158"
-      },
-      "label": {
-       "es": "recursos",
-       "en": "resources"
-      }
-     },
-     {
-      "value": {
-       "es": "12",
-       "en": "12"
-      },
-      "label": {
-       "es": "posts entre charlas y guías",
-       "en": "posts across talks and guides"
-      }
-     },
-     {
-      "value": {
-       "es": "4",
-       "en": "4"
-      },
-      "label": {
-       "es": "threads temáticos",
-       "en": "topic threads"
-      }
-     },
-     {
-      "value": {
-       "es": "6",
-       "en": "6"
-      },
-      "label": {
-       "es": "categorías con su color",
-       "en": "colour-coded categories"
-      }
-     }
-    ]
-   },
    {
     "t": "quote",
     "h": {
@@ -10369,6 +10536,65 @@ window.CASES = {
       "pass": true
      }
     ]
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": {
+       "es": "160",
+       "en": "160"
+      },
+      "label": {
+       "es": "cursos filtrables",
+       "en": "filterable courses"
+      }
+     },
+     {
+      "value": {
+       "es": "158",
+       "en": "158"
+      },
+      "label": {
+       "es": "recursos",
+       "en": "resources"
+      }
+     },
+     {
+      "value": {
+       "es": "12",
+       "en": "12"
+      },
+      "label": {
+       "es": "posts entre charlas y guías",
+       "en": "posts across talks and guides"
+      }
+     },
+     {
+      "value": {
+       "es": "4",
+       "en": "4"
+      },
+      "label": {
+       "es": "threads temáticos",
+       "en": "topic threads"
+      }
+     },
+     {
+      "value": {
+       "es": "6",
+       "en": "6"
+      },
+      "label": {
+       "es": "categorías con su color",
+       "en": "colour-coded categories"
+      }
+     }
+    ],
+    "h": {
+     "es": "El server en cifras",
+     "en": "The server in numbers"
+    }
    },
    {
     "t": "live",
