@@ -57,9 +57,10 @@ window.I18N = {
     path: [
       { year: '2019', role: 'Instructora de Sistemas Operativos y Seguridad de la Información', org: 'Instituto Leonardo Murialdo', body: 'Diagnóstico de incidentes en escenarios reales, rutas de aprendizaje por perfil y gestión de requisitos y KPIs en proyectos de ciberseguridad.' },
       { year: '2022', role: 'Estandarización de infraestructura IT', org: 'Laboratorios de informática', body: 'Auditoría de hardware y software, y un SOP de 96 páginas que cualquier técnico puede reproducir.' },
-      { year: '2024', role: 'Consultora UX/UI', org: 'Independiente', body: 'Auditorías heurísticas, wireframes y testeo con usuarios. Investigación con 1.741 participantes en un programa de riesgos digitales.' },
+      { year: '2024', role: 'Consultora UX/UI', org: 'Independiente', body: 'Asesoramiento a equipos de proyecto en Diseño Centrado en el Usuario, de la definición del problema al testing. Workshops de prototipado y diseño de interfaces, auditorías UX con análisis heurístico, wireframes y pruebas con usuarios, y análisis del manejo de la información en proyectos web: estructura de la base de datos, consistencia de los datos y presentación en la interfaz.' },
       { year: '2025', role: 'Facilitadora de gestión de proyectos', org: 'Incubadora ágil híbrida', body: 'Ciclo de vida con sprints y Gantt, cohortes anuales de más de 70 integrantes y equipos que desarrollan con clientes reales.' },
-      { year: 'próximo paso', role: 'Análisis funcional en IT', role2: 'Diseño UX/UI', org: 'Roles a los que apunto', body: 'Relevamiento de requisitos, documentación funcional y gestión ágil, o diseño de experiencia e interfaz, dentro de un equipo de producto.', target: true }
+      { year: '2026', role: 'Capacitadora', org: 'Talleres de empleabilidad e IA', body: 'Diseño y facilitación de talleres de empleabilidad (CV, LinkedIn, entrevistas) y desarrollo personal, y de herramientas de IA para generar contenido: prompts, flujos de trabajo y revisión crítica de resultados. Plantillas, guías y recursos web para practicar después del taller.' },
+      { year: 'próximo paso', role: 'Diseño de experiencias (UX/UI)', role2: 'Creación de producto', org: 'Roles a los que apunto', body: 'Investigación con usuarios, diseño de experiencia e interfaz y construcción de producto de punta a punta, del problema y los requisitos al prototipo y la entrega, dentro de un equipo de producto.', target: true }
     ],
     skillsTitle: 'Habilidades',
     skills: [
@@ -157,9 +158,10 @@ window.I18N = {
     path: [
       { year: '2019', role: 'Operating Systems and Information Security instructor', org: 'Instituto Leonardo Murialdo', body: 'Diagnosing incidents in real scenarios, role-based learning paths, and managing requirements and KPIs in cybersecurity projects.' },
       { year: '2022', role: 'IT infrastructure standardisation', org: 'Computer labs', body: 'Hardware and software audit, and a 96-page SOP that any technician can reproduce.' },
-      { year: '2024', role: 'UX/UI consultant', org: 'Independent', body: 'Heuristic audits, wireframes and user testing. Research with 1,741 participants in a digital risk programme.' },
+      { year: '2024', role: 'UX/UI consultant', org: 'Independent', body: 'Advising project teams on User-Centred Design, from problem definition to testing. Hands-on prototyping and interface design workshops, UX audits based on heuristic analysis, wireframes and user testing, and analysis of how web projects handle information: database structure, data consistency and how it is presented in the interface.' },
       { year: '2025', role: 'Project management facilitator', org: 'Hybrid agile incubator', body: 'Project lifecycle with sprints and Gantt, yearly cohorts of 70+ people, and teams building for real clients.' },
-      { year: 'next step', role: 'Functional analysis in IT', role2: 'UX/UI design', org: 'The roles I am aiming for', body: 'Requirements gathering, functional documentation and agile delivery, or experience and interface design, inside a product team.', target: true }
+      { year: '2026', role: 'Trainer', org: 'Employability and AI workshops', body: 'Design and delivery of employability workshops (CV, LinkedIn, interviews) and personal development, plus workshops on AI tools for content creation: prompts, workflows and critical review of results. Templates, guides and web resources to keep practising after the workshop.' },
+      { year: 'next step', role: 'Experience design (UX/UI)', role2: 'Product creation', org: 'The roles I am aiming for', body: 'User research, experience and interface design, and building products end to end, from the problem and requirements to the prototype and delivery, inside a product team.', target: true }
     ],
     skillsTitle: 'Skills',
     skills: [

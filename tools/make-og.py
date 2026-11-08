@@ -1,12 +1,13 @@
-"""Genera las tarjetas de vista previa (Open Graph), 1200 x 630, con la estética del sitio (tema claro y auras):
-  - assets/img/og-image.jpg            la de la home: título del hero (i18n.js, headline) y un collage de tres proyectos
+"""Genera las tarjetas de vista previa (Open Graph), 1200 x 630, con la estética del sitio:
+  - assets/img/og-image.jpg            la de la home, como el hero: fondo blanco cálido con grilla que se desvanece,
+                                       brillo pastel y cuadrados; etiqueta, título en dos líneas y reparto de proyectos
   - assets/img/og/<slug>.jpg           una por caso: categoría, título y año a la izquierda; la portada del proyecto
                                        (cover en projects.js, en assets/img/covers) a la derecha
 
 El aura de fondo toma el color de la categoría del proyecto. Las fuentes son las del sitio.
 Los textos salen de assets/js/i18n.js y assets/js/projects.js: al cambiar un título o una portada alcanza con volver a correr esto.
 
-Uso: python tools/make-og.py   (después: node tools/bump-version.mjs)
+Uso: python tools/make-og.py [home]   (home: solo la de la portada; después: node tools/bump-version.mjs)
 Requiere: pip install pillow fonttools brotli
 """
 import io
@@ -29,7 +30,8 @@ CAT_TXT = {"it": (10, 122, 110), "cap": (184, 50, 111), "cont": (143, 91, 0)}   
 CAT = {"it": (53, 194, 177), "cap": (236, 127, 176), "cont": (232, 184, 90)}   # versiones "bright" (auras y marca)
 CAT_LABEL = {"it": "it", "cap": "capacitación", "cont": "contenido"}
 HOME_KICKER = "experience designer | ux/ui | análisis funcional"
-HOME_COVERS = ["servidor", "primer-empleo", "riesgos-digitales"]  # proyectos del collage de la home
+HOME_BG = (251, 248, 243)   # --bg actual (blanco cálido)
+HOME_KICKER_UP = "EXPERIENCE DESIGNER · UX/UI · ANÁLISIS FUNCIONAL"
 URL = "lpedaci.github.io/portfolio"
 X = 72                   # margen izquierdo
 TEXT_MAX = 520           # ancho del bloque de texto (a la derecha va la imagen)
@@ -106,8 +108,15 @@ def plain_words(text, color=TEXT):
     return [[(w, color)] for w in text.split()]
 
 
+def headline_lines(html):
+    """El título del hero viene en líneas (<span class="l">): devuelve una lista de líneas, cada una en palabras."""
+    parts = re.findall(r'<span class="l">(.*?)</span>', html) or [html]
+    return [headline_words(p) for p in parts]
+
+
 def headline_words(html):
     """'Diseño experiencias <em>claras</em>, ...' -> palabras con el tramo <em> en turquesa."""
+    html = re.sub(r"</?span[^>]*>", "", html)
     words, glue = [], False
     for part in re.split(r"(<em>.*?</em>)", html):
         if not part:
@@ -224,18 +233,82 @@ def render_case(p, out_path):
     save(im, out_path, f"({size}px, {n} líneas)")
 
 
-def render_home(headline, projects, out_path):
-    im = aura([(120, 40, 380, CAT["it"], 0.5), (1120, 90, 360, CAT["cap"], 0.4), (760, 660, 340, CAT["cont"], 0.45)])
-    brand(im, 64)
+def blend(color, a, base=HOME_BG):
+    return tuple(round(base[i] * (1 - a) + color[i] * a) for i in range(3))
+
+
+def render_home(lines, projects, out_path):
+    """Como el hero de la portada: todo centrado sobre el fondo con grilla, brillo y cuadrados."""
+    im = Image.new("RGB", (W, H), HOME_BG)
+    # brillo pastel con los tres colores
+    for x, y, r, color, a in [(420, 300, 250, CAT["it"], 0.24), (790, 280, 240, CAT["cap"], 0.2), (610, 470, 220, CAT["cont"], 0.22)]:
+        blob = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(blob).ellipse((x - r, y - r, x + r, y + r), fill=int(255 * a))
+        im.paste(Image.new("RGB", (W, H), color), (0, 0), blob.filter(ImageFilter.GaussianBlur(r * 0.5)))
+    # grilla fina que se desvanece hacia los bordes
+    grid = Image.new("L", (W, H), 0)
+    gd = ImageDraw.Draw(grid)
+    for gx in range(W // 2 % 56, W, 56):
+        gd.line((gx, 0, gx, H), fill=255)
+    for gy in range(0, H, 56):
+        gd.line((0, gy, W, gy), fill=255)
+    fade = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(fade).ellipse((60, -40, W - 60, H + 40), fill=255)
+    fade = fade.filter(ImageFilter.GaussianBlur(120))
+    alpha = Image.composite(grid, Image.new("L", (W, H), 0), fade).point(lambda v: v * 16 // 255)
+    im.paste(Image.new("RGB", (W, H), TEXT), (0, 0), alpha)
+    # cuadrados sueltos
     d = ImageDraw.Draw(im)
-    kf = font("jetbrains-mono-latin", 22, 500)
-    d.text((X, 150), fit_kicker(d, HOME_KICKER, kf), font=kf, fill=CAT_TXT["it"])
-    size, n = title_block(d, headline)
-    d.text((X, 540), URL, font=font("jetbrains-mono-latin", 22, 400), fill=MUTED)
-    covers = {p["slug"]: p["cover"] for p in projects if p.get("cover")}
-    for slug, xy, angle in zip(HOME_COVERS, [(720, 70), (820, 240), (665, 330)], [5, -4, -8]):
-        drop(im, framed(os.path.join(ROOT, covers[slug]), 420, 262, 18), xy, angle=angle, shadow=60)
-    save(im, out_path, f"({size}px, {n} líneas)")
+    for (x, y), c in zip([(96, 150), (1060, 110), (170, 430), (990, 400), (1110, 520)], ["it", "cap", "cont", "it", "cont"]):
+        d.rounded_rectangle((x, y, x + 40, y + 40), 8, fill=blend(CAT[c], 0.2))
+
+    brand(im, 52)
+    d = ImageDraw.Draw(im)
+    # etiqueta en una pastilla blanca
+    kf = font("jetbrains-mono-latin", 19, 500)
+    tw = d.textlength(HOME_KICKER_UP, font=kf)
+    pw, ph = tw + 64, 44
+    px, py = (W - pw) / 2, 150
+    d.rounded_rectangle((px, py, px + pw, py + ph), 22, fill=(255, 255, 255), outline=(228, 224, 215), width=1)
+    d.ellipse((px + 20, py + 17, px + 30, py + 27), fill=CAT_TXT["it"])
+    d.text((px + 42, py + 11), HOME_KICKER_UP, font=kf, fill=(58, 59, 66))
+    # título centrado: el más grande en que la línea más ancha entre en 1080 px
+    for size in range(84, 40, -2):
+        f = font("schibsted-grotesk-latin", size)
+        if max(width(d, line_text(l), f) for l in lines) <= 1080:
+            break
+    lh = round(size * 1.06)
+    top = 232
+    for i, l in enumerate(lines):
+        draw_line(d, ((W - width(d, line_text(l), f)) / 2, top + i * lh), l, f)
+    # reparto de proyectos, como la pastilla del hero
+    n = {"it": 0, "cap": 0, "cont": 0}
+    for p in projects:
+        n[p["cat"]] += 1
+    bf = font("hanken-grotesk-latin", 24, 400)
+    nf = font("schibsted-grotesk-latin", 30)
+    total = str(len(projects))
+    parts = [("it", "IT"), ("cap", "Capacitación"), ("cont", "Contenido")]
+    label = "proyectos publicados"
+    seg = [d.textlength(f"{name} {n[c]}", font=bf) + 22 for c, name in parts]
+    inner = d.textlength(total, font=nf) + 10 + d.textlength(label, font=bf) + 28 + sum(seg) + 18 * (len(seg) - 1)
+    bw, bh = inner + 56, 60
+    bx, by = (W - bw) / 2, top + len(lines) * lh + 46
+    d.rounded_rectangle((bx, by, bx + bw, by + bh), 30, fill=(255, 255, 255), outline=(228, 224, 215), width=1)
+    x = bx + 28
+    d.text((x, by + 12), total, font=nf, fill=TEXT)
+    x += d.textlength(total, font=nf) + 10
+    d.text((x, by + 16), label, font=bf, fill=(58, 59, 66))
+    x += d.textlength(label, font=bf) + 14
+    d.line((x, by + 16, x, by + bh - 16), fill=(228, 224, 215), width=2)
+    x += 14
+    for (c, name), w in zip(parts, seg):
+        d.ellipse((x, by + 26, x + 10, by + 36), fill=CAT_TXT[c])
+        d.text((x + 18, by + 16), f"{name} {n[c]}", font=bf, fill=MUTED)
+        x += w + 18
+    uf = font("jetbrains-mono-latin", 20, 400)
+    d.text(((W - d.textlength(URL, font=uf)) / 2, 572), URL, font=uf, fill=MUTED)
+    save(im, out_path, f"({size}px, {len(lines)} líneas)")
 
 
 def load_js(expr):
@@ -246,9 +319,12 @@ def load_js(expr):
 
 
 def main():
+    import sys
     projects = load_js("window.PROJECTS")
-    render_home(headline_words(load_js("window.I18N.es.headline")), projects,
+    render_home(headline_lines(load_js("window.I18N.es.headline")), projects,
                 os.path.join(ROOT, "assets", "img", "og-image.jpg"))
+    if sys.argv[1:] == ["home"]:
+        return
     out_dir = os.path.join(ROOT, "assets", "img", "og")
     os.makedirs(out_dir, exist_ok=True)
     for p in projects:

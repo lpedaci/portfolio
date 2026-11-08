@@ -89,7 +89,7 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 
 - Una página por caso, generada desde los datos, con título, descripción y URL canónica propios.
 - `hreflang` para ES/EN, `sitemap.xml` y `robots.txt`.
-- Tarjetas Open Graph de 1200 × 630 generadas con las fuentes y colores del sitio: una para la home y una por caso, con título, categoría, etiquetas y la captura del proyecto.
+- Tarjetas Open Graph de 1200 × 630 generadas con las fuentes y colores del sitio (`tools/make-og.py`). La de la home repite el hero: fondo blanco cálido con grilla y brillo pastel, la etiqueta, el título en dos líneas y el reparto de proyectos. Las de cada caso llevan título, categoría, etiquetas y la captura del proyecto. `python tools/make-og.py home` regenera solo la de la home.
 - Versionado de archivos para que cada publicación llegue sin caché viejo.
 
 ## 🗂️ Estructura
