@@ -46,3 +46,38 @@
   new MutationObserver(markNewTab).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   markNewTab();
 })();
+
+/* Fondo: el mismo efecto del hero (grilla que se desvanece, brillo pastel y cuadrados sueltos) repartido al azar
+   a lo largo de la página, alternando lados. Es decorativo (aria-hidden) y no tiene movimiento.
+   Se rearma solo si la página crece o se achica bastante (por ejemplo, cuando un caso termina de dibujarse). */
+(() => {
+  const layer = document.createElement('div');
+  layer.className = 'fx';
+  layer.setAttribute('aria-hidden', 'true');
+  document.body.prepend(layer);
+  const COLORS = ['var(--it-bright)', 'var(--cap-bright)', 'var(--cont-bright)'];
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+  let built = 0;
+  function build() {
+    const h = document.documentElement.scrollHeight;
+    // El hero de la portada ya tiene su propio fondo: las manchas empiezan debajo.
+    const start = document.querySelector('.hero__bg') ? 900 : 120;
+    const step = innerWidth < 768 ? 900 : 1100;
+    const n = Math.max(1, Math.floor((h - start) / step));
+    if (n === built) return;
+    built = n;
+    let side = Math.random() < 0.5 ? -1 : 1;
+    layer.innerHTML = Array.from({ length: n }, (_, i) => {
+      side = -side;
+      const top = start + i * step + rnd(0, step * 0.4);
+      const left = side < 0 ? rnd(-12, 18) : rnd(52, 82);
+      const [a, b, c] = [...COLORS].sort(() => Math.random() - 0.5);
+      const squares = Array.from({ length: 3 }, () => `<i style="--x:${rnd(5, 92).toFixed(1)}%;--y:${rnd(10, 85).toFixed(1)}%;--c:${pick(COLORS)}"></i>`).join('');
+      return `<div class="fx__spot" style="top:${Math.round(top)}px;left:${left.toFixed(1)}%;--a:${a};--b:${b};--c3:${c}">${squares}</div>`;
+    }).join('');
+  }
+  build();
+  let queued = 0;
+  new ResizeObserver(() => { clearTimeout(queued); queued = setTimeout(build, 250); }).observe(document.body);
+})();

@@ -35,7 +35,7 @@ Cada caso sigue la misma estructura, con la lógica de un tablero:
 
 ## 🎨 Sistema visual
 
-Tema claro único sobre un fondo blanco cálido liso, igual en toda la web, y el color usado para informar y no para decorar.
+Tema claro único sobre un fondo blanco cálido, igual en toda la web, con el efecto del hero repetido al azar en el fondo, y el color usado para informar y no para decorar.
 
 | Token | Valor | Significado |
 |---|---|---|
@@ -51,7 +51,8 @@ Cada color tiene una versión base, con contraste AA para texto y botones, y una
 - **Tipografía:** Schibsted Grotesk para títulos, Hanken Grotesk para lectura y JetBrains Mono para etiquetas y datos.
 - **Íconos:** Phosphor, recortado a los íconos que el sitio usa.
 - **Forma y profundidad:** tarjetas y paneles con radio de 20px (`--r-panel`), borde casi invisible y una sombra amplia y suave (`--shadow-card`) en lugar de líneas finas. Controles en forma de pastilla.
-- **Hero de la portada:** centrado y sin ilustración: la etiqueta en una pastilla, título, texto en dos oraciones equilibradas (la segunda empieza en un renglón nuevo), botones y una pastilla con el total de proyectos y su reparto por categoría, que lleva a Proyectos. Su fondo es el único con textura: una grilla fina que se desvanece hacia los bordes, un brillo pastel con los tres colores de categoría y algunos cuadrados sueltos. Los botones son planos, sin brillo ni degradé.
+- **Hero de la portada:** centrado y sin ilustración: la etiqueta en una pastilla, título, texto en dos oraciones equilibradas (la segunda empieza en un renglón nuevo), botones y una pastilla con el total de proyectos y su reparto por categoría, que lleva a Proyectos. El título corta después de "claras,": la propuesta en la primera línea y el recorrido en la segunda. Su fondo combina una grilla fina que se desvanece hacia los bordes, un brillo pastel con los tres colores de categoría y algunos cuadrados sueltos. Los botones son planos, sin brillo ni degradé.
+- **Fondo de todas las páginas:** el mismo efecto del hero repetido en manchas que `nav.js` reparte al azar a lo largo de la página, alternando lados. Es decorativo, sin movimiento, queda detrás de las cajas y se rearma si la página cambia de alto. La página 404, que es autocontenida, lo lleva fijo y centrado.
 - **Secciones de la portada:** Proyectos, Recorrido y Contacto van cada una en una caja blanca, con las mismas reglas que la caja de los casos.
 - **Caja de contenido:** en los casos, el contenido va en una caja blanca de radio 28px, hasta 1720px de ancho con margen lateral. Adentro, las tarjetas son gris neutro muy claro y sin sombra, para no apilar tarjeta sobre tarjeta.
 - **Paneles de texto:** título adentro y texto a todo el ancho del panel. Dos paneles seguidos comparten la fila; la prosa larga en un panel de fila entera se lee en dos columnas.

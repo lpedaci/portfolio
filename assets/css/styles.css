@@ -72,7 +72,27 @@ body {
 img { display: block; max-width: 100%; height: auto; }
 
 /* ---------- Fondo ----------
-   Un solo fondo para toda la web: blanco cálido liso, sin auras ni tramas. */
+   Blanco cálido en toda la web y, encima, el efecto del hero repetido al azar: manchas con una grilla fina que se
+   desvanece, un brillo pastel con los tres colores de categoría y algunos cuadrados sueltos. Las arma nav.js. */
+body { position: relative; }
+.fx { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.fx__spot { position: absolute; width: min(900px, 110vw); height: 720px; translate: -50% 0; }
+.fx__spot::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(rgb(23 24 28 / 0.05) 1px, transparent 1px), linear-gradient(90deg, rgb(23 24 28 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 15%, transparent 72%);
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 15%, transparent 72%);
+}
+.fx__spot::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(34% 38% at 36% 42%, color-mix(in srgb, var(--a) 26%, transparent), transparent 72%),
+    radial-gradient(32% 36% at 64% 46%, color-mix(in srgb, var(--b) 22%, transparent), transparent 72%),
+    radial-gradient(28% 32% at 50% 66%, color-mix(in srgb, var(--c3) 20%, transparent), transparent 72%);
+}
+.fx__spot i { position: absolute; z-index: 1; left: var(--x); top: var(--y); width: 32px; height: 32px; border-radius: 6px; background: color-mix(in srgb, var(--c) 16%, transparent); }
+@media (max-width: 767px) { .fx__spot i { display: none; } }
 
 a { color: inherit; }
 button { font: inherit; color: inherit; }
@@ -1316,13 +1336,15 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 @media (max-width: 767px) { .hero__bg i { display: none; } }
 
 .hero__grid { justify-items: center; }
-.hero__text { display: flex; flex-direction: column; align-items: center; max-width: 900px; }
+.hero__text { display: flex; flex-direction: column; align-items: center; max-width: 1120px; }
 .hero__eyebrow {
   padding: 7px 14px 7px 12px; border-radius: var(--r-pill); background: var(--surface);
   border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); box-shadow: var(--shadow-card);
 }
 @media (max-width: 559px) { .hero__eyebrow { font-size: 0.6875rem; letter-spacing: 0.02em; padding-inline: 12px; gap: 8px; text-align: center; border-radius: 16px; } }
-.hero__title { max-width: 18ch; margin-inline: auto; }
+/* El título corta después de "claras,": la primera línea es la propuesta y la segunda, el recorrido */
+.hero__title { max-width: none; margin-inline: auto; }
+.hero__title .l { display: block; text-wrap: balance; }
 /* Cada oración del texto en su propio renglón, equilibrada: la segunda (qué busco) empieza en una línea nueva */
 .hero__lead { margin-inline: auto; max-width: 64ch; }
 .hero__lead > span { display: block; text-wrap: balance; }

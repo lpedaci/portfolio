@@ -11,7 +11,7 @@
     (() => {
       const seg = location.pathname.split('/').filter(Boolean)[0];
       const root = /github\.io$/.test(location.hostname) && seg ? `/${seg}/` : '/';
-      ['assets/css/fonts.css?v=202611081926', 'assets/css/icons.css?v=202611081926'].forEach((href) => {
+      ['assets/css/fonts.css?v=202611081932', 'assets/css/icons.css?v=202611081932'].forEach((href) => {
         const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = root + href; document.head.appendChild(l);
       });
       [['icon', 'assets/img/favicon.svg', 'image/svg+xml'], ['apple-touch-icon', 'assets/img/apple-touch-icon.png', '']].forEach(([rel, href, type]) => {
@@ -20,10 +20,10 @@
     })();
   </script>
   <!-- Página autocontenida: un 404 puede servirse en cualquier ruta, así que no depende de rutas relativas.
-       Tokens, nav y fondo copian los de assets/css/styles.css (tema claro con auras). -->
+       Tokens, nav y fondo copian los de assets/css/styles.css (blanco cálido con el efecto del hero de fondo). -->
   <style>
     :root {
-      --bg: #F7F5F0; --surface: #FFFFFF; --surface-2: #F0EDE6; --text: #17181C; --muted: #5F6068; --text-2: #3A3B42;
+      --bg: #FBF8F3; --surface: #FFFFFF; --surface-2: #F0EDE6; --text: #17181C; --muted: #5F6068; --text-2: #3A3B42;
       --line: #E4E0D7; --line-2: #CFCAC0;
       --it: #0A7A6E; --it-hover: #08665C; --cap: #B8326F; --on-accent: #FFFFFF;
       --it-bright: #35C2B1; --cap-bright: #EC7FB0; --cont-bright: #E8B85A;
@@ -34,13 +34,19 @@
     @media (min-width: 768px) { :root { --gutter: 24px; } }
     *, *::before, *::after { box-sizing: border-box; }
     body { margin: 0; min-height: 100dvh; display: flex; flex-direction: column; background: var(--bg); color: var(--text); font: 400 1rem/1.6 var(--f-body); -webkit-font-smoothing: antialiased; }
-    /* Auras de fondo, como en la home */
+    /* Fondo: el mismo efecto del hero de la portada (grilla que se desvanece y brillo pastel), fijo y centrado */
+    body::before, body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; }
     body::before {
-      content: ""; position: fixed; inset: -15%; z-index: -1; pointer-events: none;
+      background-image: linear-gradient(rgb(23 24 28 / 0.055) 1px, transparent 1px), linear-gradient(90deg, rgb(23 24 28 / 0.055) 1px, transparent 1px);
+      background-size: 56px 56px; background-position: center;
+      -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 20%, transparent 78%);
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 20%, transparent 78%);
+    }
+    body::after {
       background:
-        radial-gradient(38% 42% at 18% 12%, color-mix(in srgb, var(--it-bright) 30%, transparent), transparent 70%),
-        radial-gradient(30% 36% at 86% 18%, color-mix(in srgb, var(--cap-bright) 26%, transparent), transparent 70%),
-        radial-gradient(34% 40% at 62% 88%, color-mix(in srgb, var(--cont-bright) 26%, transparent), transparent 70%);
+        radial-gradient(30% 36% at 36% 42%, color-mix(in srgb, var(--it-bright) 30%, transparent), transparent 72%),
+        radial-gradient(28% 34% at 64% 40%, color-mix(in srgb, var(--cap-bright) 26%, transparent), transparent 72%),
+        radial-gradient(26% 30% at 50% 66%, color-mix(in srgb, var(--cont-bright) 26%, transparent), transparent 72%);
     }
     a { color: inherit; } button { font: inherit; color: inherit; } p, h1 { margin: 0; }
     :focus-visible { outline: 2px solid var(--it); outline-offset: 3px; border-radius: 4px; }
