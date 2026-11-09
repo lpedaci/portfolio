@@ -456,7 +456,7 @@
     const main = mount.querySelector('.case__main');
     const used = new Set();
     const items = [];
-    main.querySelectorAll('.brief, .live, .phase, h2.blk__h').forEach((el) => {
+    main.querySelectorAll('.brief, .live:not(.live--block), .phase, h2.blk__h').forEach((el) => {
       const sec = el.matches('h2') ? el.closest('section') : el;
       let label; let kind = '';
       if (el.matches('.brief')) label = t('tocSummary');

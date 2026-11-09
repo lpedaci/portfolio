@@ -4433,8 +4433,8 @@ window.CASES = {
    {
     "t": "kv",
     "h": {
-     "es": "Resumen",
-     "en": "Summary"
+     "es": "Sobre el caso",
+     "en": "About this case"
     },
     "items": [
      {
