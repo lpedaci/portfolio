@@ -187,6 +187,17 @@
         <div class="lnks">${(x.links || []).map((k) => `<a class="link-arrow" href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(L(k.label))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>`).join('')}</div>
       </li>`).join('')}</ul>`, true),
     live: (b) => blk(b, frame('live', b.src, b.url, L(b.label), L(b.h) || L(b.label)), true),
+    // Vista previa de otra página: captura en un marco de navegador, con un texto corto y un botón que la abre.
+    // La captura es decorativa (el acceso es el botón); img: { src, w, h } dentro de assets/img.
+    preview: (b) => { const u = (() => { try { const x = new URL(b.url); return (x.hostname + x.pathname + x.hash).replace(/\/$/, ''); } catch { return b.url; } })();
+      return blk(b, `<div class="live live--preview live--block">
+        <a class="live__shot" href="${esc(b.url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <span class="live__chrome"><span class="live__dots"><i></i><i></i><i></i></span><span class="live__url">${esc(u)}</span></span>
+          <img src="${ROOT}assets/img/${esc(b.img.src)}" width="${b.img.w}" height="${b.img.h}" alt="" loading="lazy" decoding="async"></a>
+        <div class="live__txt"><p class="live__badge"><span class="live__dot" aria-hidden="true"></span>${esc(L(b.kicker))}</p>
+          ${hx(H + 1, 'live__h', esc(L(b.title)))}<p class="live__desc">${esc(L(b.body))}</p>
+          <div class="live__btns"><a class="btn btn--live" href="${esc(b.url)}" target="_blank" rel="noopener"><span>${esc(L(b.cta))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></div></div>
+      </div>`, true); },
     embed: (b) => blk(b, frame(b.kind || 'video', b.src, b.open, L(b.label), L(b.h) || L(b.label)), b.kind !== 'audio'),
     // url + cta: enlace opcional debajo de la galería (por ejemplo, a la página publicada que muestran las capturas).
     gallery: (b) => blk(b, `<div class="gallery${b.single ? (b.images[0].h > b.images[0].w ? ' gallery--tall' : '') : ''}${b.light ? ' gallery--light' : ''}${b.small ? ' gallery--small' : ''}${b.medium ? ' gallery--medium' : ''}">${rows(b.images, b.wide ? 2 : 3, b.rowsOf || (b.light ? [4, 1] : null)).map((row) => `<div class="gallery__row">${row.map((im) => picture(im)).join('')}</div>`).join('')}</div>${b.url && b.cta ? `<p class="gallery__cta"><a class="link-arrow" href="${esc(b.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(b.cta))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p>` : ''}`, true),
@@ -233,7 +244,7 @@
         <div>${hx(H + 1, 'jr__xh', esc(L(b.labels.touch)))}<ul class="chips">${L(b.touch).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
       </div>`, true),
     bullets: (b) => blk(b, `<ul class="checks">${L(b.items).map((x) => `<li><i class="ph ph-check" aria-hidden="true"></i><span>${esc(x)}</span></li>`).join('')}</ul>${b.foot ? `<p class="blk__foot">${esc(L(b.foot))}</p>` : ''}`),
-    taskflow: (b) => blk(b, `<ol class="tf">${L(b.steps).map((x, i, a) => `<li><span class="tf__n">${String(i + 1).padStart(2, '0')}</span><span class="tf__t">${esc(x)}</span>${i < a.length - 1 ? '<i class="ph ph-arrow-right tf__a" aria-hidden="true"></i>' : ''}</li>`).join('')}</ol>`, true),
+    taskflow: (b) => blk(b, `<ol class="tf" style="--tfc:${(n => (n <= 4 ? n : n <= 6 ? 3 : 4))(L(b.steps).length)}">${L(b.steps).map((x, i, a) => `<li><span class="tf__n">${String(i + 1).padStart(2, '0')}</span><span class="tf__t">${esc(x)}</span>${i < a.length - 1 ? '<i class="ph ph-arrow-right tf__a" aria-hidden="true"></i>' : ''}</li>`).join('')}</ol>`, true),
     userflow: (b) => {
       const item = (x) => (Array.isArray(x) ? `<li>${esc(x[0])}<ul>${x[1].map((y) => `<li>${esc(y)}</li>`).join('')}</ul></li>` : `<li>${esc(x)}</li>`);
       return blk(b, `<div class="ufw"><div class="ufw__svg">${userFlowSVG(b)}</div><ol class="ufw__logic">${L(b.logic).map(item).join('')}</ol></div>`, true);
@@ -352,7 +363,8 @@
     if (c.touch) mount.closest('.case').dataset.touch = c.touch; else delete mount.closest('.case').dataset.touch;
 
     const f = c.facts || {};
-    const fact = (k, v) => (v && (Array.isArray(v) ? v.length : L(v)) ? `<div><dt>${t(k)}</dt><dd>${esc(Array.isArray(v) ? v.join(', ') : L(v))}</dd></div>` : '');
+    // Un dato puede ser texto, lista o lista por idioma ({ es: [...], en: [...] }): las listas se unen con coma y espacio.
+    const fact = (k, v) => { const x = Array.isArray(v) ? v : L(v); const txt = Array.isArray(x) ? x.join(', ') : x; return txt ? `<div><dt>${t(k)}</dt><dd>${esc(txt)}</dd></div>` : ''; };
     const links = c.links || [];
     H = 2;
     // Los tokens de CSS que aparecen en el texto (--line, --ink-70) van en mono: en la fuente de texto, "--" se lee como una raya.

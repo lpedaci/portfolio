@@ -692,6 +692,7 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .btn--soft .ph { color: var(--c); }
 @media (max-width: 559px) { .live__btns .btn { flex: 1 1 100%; justify-content: center; white-space: normal; text-align: center; min-width: 0; } }
 .live + .facts { margin-top: 16px; }
+.live--block { margin-top: 0; }
 /* Con vista previa: la captura del sitio en un marco de navegador a la izquierda, el texto y los botones a la derecha */
 .live--preview { align-items: center; }
 @media (min-width: 900px) { .live--preview { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 32px; padding: 24px; } }
@@ -713,7 +714,13 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 /* Resumen del caso: problema, solución y resultados como tres tarjetas, arriba de todo.
    Cada una se reconoce por su ícono y su título; los resultados llevan las cifras grandes. */
 .brief { margin-top: 40px; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 900px) { .brief { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr); } }
+/* Problema y solución lado a lado; los resultados ocupan la fila de abajo, con las cifras en fila.
+   Así ninguna tarjeta queda estirada con espacio vacío cuando los resultados son más largos. */
+@media (min-width: 700px) {
+  .brief { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .brief__col--r { grid-column: 1 / -1; }
+  .brief__res { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+}
 .brief__col { display: flex; flex-direction: column; gap: 14px; padding: 24px; background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); border-radius: var(--r-panel); box-shadow: var(--shadow-card); }
 .brief__k { display: flex; align-items: center; gap: 12px; font: 600 1.0625rem/1.2 var(--f-display); color: var(--text); }
 .brief__k .ph { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; font-size: 1.125rem; color: var(--c); background: color-mix(in srgb, var(--c) 12%, var(--surface)); }
@@ -1060,12 +1067,16 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 
 /* Task flow */
 .tf { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); counter-reset: tf; }
+/* Pasos que llenan la fila: cada uno toma su parte y la última fila se estira, sin huecos al costado */
+@media (min-width: 640px) {
+  .tf { --k: 2; display: flex; flex-wrap: wrap; }
+  .tf li { flex: 1 1 calc((100% - (var(--k) - 1) * 12px) / var(--k)); min-width: 0; }
+}
+@media (min-width: 1100px) { .tf { --k: var(--tfc, 4); } }
 .tf li { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 18px 40px 18px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); }
 .tf__n { font: 500 0.75rem/1 var(--f-mono); color: var(--c); }
 .tf__t { line-height: 1.45; }
 .tf__a { position: absolute; right: 14px; top: 16px; color: var(--c); }
-@media (min-width: 640px) { .tf { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1100px) { .tf { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 /* User flow: diagrama y la misma lógica en texto */
 .ufw { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); align-items: start; }

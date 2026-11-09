@@ -4463,8 +4463,8 @@ window.CASES = {
        "en": "Author"
       },
       "v": {
-       "es": "Lourdes Pedaci",
-       "en": "Lourdes Pedaci"
+       "es": "Lic. Lourdes Pedaci",
+       "en": "Lourdes Pedaci (Lic.)"
       }
      },
      {
@@ -7228,6 +7228,13 @@ window.CASES = {
      "en": "Workshop site (live)"
     },
     "url": "https://lpedaci.github.io/taller-primerempleo/"
+   },
+   {
+    "label": {
+     "es": "Escape room de finanzas (en vivo)",
+     "en": "Finance escape room (live)"
+    },
+    "url": "https://lpedaci.github.io/taller-primerempleo/escape/"
    }
   ],
   "blocks": [
@@ -8226,8 +8233,8 @@ window.CASES = {
        "en": "Personal finance"
       },
       "body": {
-       "es": "Un aporte del Lic. Kevin Giampieri: mentalidad, salida de deudas, presupuesto e inversión, con calculadoras interactivas para repartir el ingreso y ver cómo crece el interés compuesto.",
-       "en": "A contribution by Kevin Giampieri: mindset, getting out of debt, budgeting and investing, with interactive calculators to split income and watch compound interest grow."
+       "es": "Un aporte del Lic. Kevin Giampieri: mentalidad, salida de deudas, presupuesto e inversión, con calculadoras interactivas para repartir el ingreso y ver cómo crece el interés compuesto. Al cierre, un banner lleva al escape room Tu primer sueldo, publicado como caso aparte.",
+       "en": "A contribution by Kevin Giampieri: mindset, getting out of debt, budgeting and investing, with interactive calculators to split income and watch compound interest grow. At the end, a banner leads to the Your first paycheck escape room, published as a separate case."
       },
       "img": {
        "src": "primer-empleo-interes.jpg",
@@ -9345,8 +9352,8 @@ window.CASES = {
     },
     "p": [
      {
-      "es": "Antes de publicarlo, el sitio pasó por la revisión de Julieta Taraborrelli, co-docente del taller. El contenido es de Lourdes Pedaci, Julieta Taraborrelli y Bettyna González, y el apartado de finanzas personales es un aporte de Kevin Giampieri.",
-      "en": "Before publishing, the site was reviewed by Julieta Taraborrelli, the workshop’s co-facilitator. The content is by Lourdes Pedaci, Julieta Taraborrelli and Bettyna González, and the personal finance section is a contribution by Kevin Giampieri."
+      "es": "Antes de publicarlo, el sitio pasó por la revisión de Julieta Taraborrelli, co-docente del taller. El contenido es de la Lic. Lourdes Pedaci, la Lic. Julieta Taraborrelli y la Lic. Bettyna González, y el apartado de finanzas personales es un aporte de Kevin Giampieri.",
+      "en": "Before publishing, the site was reviewed by Julieta Taraborrelli, the workshop’s co-facilitator. The content is by Lourdes Pedaci (Lic.), Julieta Taraborrelli (Lic.) and Bettyna González (Lic.), and the personal finance section is a contribution by Kevin Giampieri."
      }
     ]
    },
@@ -9443,7 +9450,8 @@ window.CASES = {
       "El mismo sitio sirve para dictar el taller (en modo presentación) y para consultarlo después, sin tener que armar un PowerPoint aparte.",
       "Cada estudiante puede salir con productos propios: su mapa personal, el perfil del CV, el registro de logros y el pitch.",
       "Herramientas que se siguen usando después del taller: calculadoras de presupuesto e interés compuesto, la charla de carreras y el servidor de cursos.",
-      "Accesible en los dos temas, claro y oscuro, con 19 fuentes citadas para mantenerlo al día."
+      "Accesible en los dos temas, claro y oscuro, con 19 fuentes citadas para mantenerlo al día.",
+      "Un escape room de finanzas personales, Tu primer sueldo, para practicar el recibo y las finanzas fuera de las dos horas, con contenido del Lic. Kevin Giampieri."
      ],
      "en": [
       "The workshop was delivered to sixth-year students between Monday 26 October and Wednesday 4 November 2026.",
@@ -9451,7 +9459,8 @@ window.CASES = {
       "The same site is used to run the workshop (in presentation mode) and to look it up later, with no separate PowerPoint to build.",
       "Each student can leave with things of their own: their personal map, the CV profile, the achievement log and the pitch.",
       "Tools that stay useful after the workshop: budget and compound interest calculators, the career talk and the course server.",
-      "Accessible in both the light and dark themes, with 19 cited sources to keep it up to date."
+      "Accessible in both the light and dark themes, with 19 cited sources to keep it up to date.",
+      "A personal finance escape room, Your first paycheck, to practise payslips and finance outside the two hours, with content by Kevin Giampieri (Lic.)."
      ]
     }
    },
@@ -10623,6 +10632,1129 @@ window.CASES = {
     {
      "es": "El material pasó de páginas sueltas de Notion a un sitio donde 160 cursos y 158 recursos se filtran, se comparan, se buscan y se guardan. La revisión con axe no encontró errores en el tema claro, ni en escritorio ni en celular, y detectó un único problema de contraste en el tema oscuro, con su corrección definida.",
      "en": "The material went from loose Notion pages to a site where 160 courses and 158 resources can be filtered, compared, searched and saved. The axe review found no errors in the light theme, on desktop or mobile, and flagged a single contrast issue in the dark theme, with its fix defined."
+    }
+   ]
+  }
+ },
+ "escape-room-finanzas": {
+  "cat": "cap",
+  "touch": "cont",
+  "title": {
+   "es": "Tu primer sueldo: escape room de finanzas personales",
+   "en": "Your first paycheck: a personal finance escape room"
+  },
+  "subtitle": {
+   "es": "Un juego web de cinco salas para practicar el recibo de sueldo, el presupuesto, la tarjeta, la inflación y las estafas digitales. Contenido de finanzas del Lic. Kevin Giampieri; diseño instruccional, gamificación, UX/UI y desarrollo de la Lic. Lourdes Pedaci.",
+   "en": "A five-room web game to practise reading a payslip, budgeting, credit cards, inflation and online scams. Finance content by Kevin Giampieri (Lic.); instructional design, gamification, UX/UI and development by Lourdes Pedaci (Lic.)."
+  },
+  "chips": {
+   "es": [
+    "Gamificación",
+    "Finanzas personales",
+    "Diseño instruccional",
+    "UX/UI",
+    "Accesibilidad"
+   ],
+   "en": [
+    "Gamification",
+    "Personal finance",
+    "Instructional design",
+    "UX/UI",
+    "Accessibility"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "El recibo de sueldo y las finanzas personales se ven en el taller, pero en dos horas no queda tiempo para practicarlos, y son temas que suelen dar miedo o aburrir.",
+    "en": "Payslips and personal finance are covered in the workshop, but two hours leave no time to practise them, and the topics tend to feel intimidating or dull."
+   },
+   "solution": {
+    "es": "Un escape room web, aparte del taller: cinco salas con candados, pistas a cambio de llaves y errores que explican qué se confundió, con Fuerte, un personaje que acompaña cada intento.",
+    "en": "A web escape room alongside the workshop: five rooms with locks, hints paid with keys and errors that explain what went wrong, with Fuerte, a character who reacts to every attempt."
+   },
+   "results": [
+    {
+     "v": "5 × 3",
+     "l": {
+      "es": "salas en tres versiones, para volver a jugar sin memorizar",
+      "en": "rooms in three versions, to replay without memorising"
+     }
+    },
+    {
+     "v": {
+      "es": "30-35 min",
+      "en": "30-35 min"
+     },
+     "l": {
+      "es": "de juego, más 10 de puesta en común",
+      "en": "of play, plus 10 for a group debrief"
+     }
+    },
+    {
+     "t": {
+      "es": "Revisado contra WCAG 2.2 AA en tema claro y oscuro, de 375 a 1700 px.",
+      "en": "Checked against WCAG 2.2 AA in light and dark themes, from 375 to 1700 px."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Diseño instruccional, gamificación, diseño UX/UI, design system y desarrollo web. Contenido de finanzas: Lic. Kevin Giampieri",
+    "en": "Instructional design, gamification, UX/UI design, design system and web development. Finance content: Kevin Giampieri (Lic.)"
+   },
+   "timeline": {
+    "es": "Noviembre 2026",
+    "en": "November 2026"
+   },
+   "context": {
+    "es": "Actividad aparte del taller Del aula al primer trabajo, para 6to año de secundaria técnica, Instituto Leonardo Murialdo",
+    "en": "A standalone activity of the From the classroom to a first job workshop, for sixth-year technical secondary students, Instituto Leonardo Murialdo"
+   },
+   "stack": [
+    "HTML/CSS/JS",
+    "SVG",
+    "Web Storage (localStorage)",
+    "GitHub Pages"
+   ],
+   "methods": {
+    "es": [
+     "Gamificación",
+     "Aprendizaje a partir del error",
+     "Autoevaluación antes y después",
+     "WCAG 2.2 AA"
+    ],
+    "en": [
+     "Gamification",
+     "Learning from mistakes",
+     "Pre and post self-assessment",
+     "WCAG 2.2 AA"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Escape room (en vivo)",
+     "en": "Escape room (live)"
+    },
+    "url": "https://lpedaci.github.io/taller-primerempleo/escape/"
+   },
+   {
+    "label": {
+     "es": "Design system",
+     "en": "Design system"
+    },
+    "url": "https://lpedaci.github.io/taller-primerempleo/diseno/"
+   },
+   {
+    "label": {
+     "es": "Entrada desde el taller",
+     "en": "Entry from the workshop"
+    },
+    "url": "https://lpedaci.github.io/taller-primerempleo/#finanzas"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "quote",
+    "h": {
+     "es": "El desafío",
+     "en": "The challenge"
+    },
+    "body": {
+     "es": "Que lo que se ve del recibo de sueldo y de finanzas personales se pueda practicar solo, sin presión y sin restarle tiempo a las dos horas del taller.",
+     "en": "Make what the workshop covers about payslips and personal finance something students can practise on their own, without pressure and without taking time from the two-hour session."
+    },
+    "p": [
+     {
+      "es": "El contenido de finanzas es un aporte del Lic. Kevin Giampieri: mentalidad, salida de deudas, presupuesto e inversión. El juego lo cruza con el apartado del recibo de sueldo del mismo sitio y lo convierte en cinco situaciones del primer día de cobro.",
+      "en": "The finance content is a contribution by Kevin Giampieri (Lic.): mindset, getting out of debt, budgeting and investing. The game combines it with the payslip section of the same site and turns it into five situations from your first payday."
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "El proyecto",
+     "en": "The project"
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Qué es",
+       "en": "What it is"
+      },
+      "v": {
+       "es": "Un escape room web: es tu primer día de cobro, la puerta de la oficina se trabó y para salir hay que abrir cinco candados.",
+       "en": "A web escape room: it is your first payday, the office door is stuck and you need to open five locks to get out."
+      }
+     },
+     {
+      "k": {
+       "es": "Dónde vive",
+       "en": "Where it lives"
+      },
+      "v": {
+       "es": "En una página propia del sitio del taller. Se llega desde el apartado de finanzas personales (#finanzas) y desde el del recibo de sueldo.",
+       "en": "On its own page within the workshop site. It is reached from the personal finance section (#finanzas) and from the payslip section."
+      }
+     },
+     {
+      "k": {
+       "es": "Contenido",
+       "en": "Content"
+      },
+      "v": {
+       "es": "Finanzas personales: Lic. Kevin Giampieri. Recibo de sueldo: el orden del Decreto N.º 407/2026. Todos los montos, nombres y dominios son ficticios.",
+       "en": "Personal finance: Kevin Giampieri (Lic.). Payslip: the layout set by Decree No. 407/2026. All amounts, names and domains are fictional."
+      }
+     },
+     {
+      "k": {
+       "es": "Mi aporte",
+       "en": "My contribution"
+      },
+      "v": {
+       "es": "Diseño instruccional, gamificación, diseño UX/UI, el personaje, el design system de la capa de juego y el desarrollo web.",
+       "en": "Instructional design, gamification, UX/UI design, the character, the game-layer design system and the web development."
+      }
+     },
+     {
+      "k": {
+       "es": "Privacidad",
+       "en": "Privacy"
+      },
+      "v": {
+       "es": "El avance y las insignias se guardan solo en el navegador. No se envía nada a ningún servidor.",
+       "en": "Progress and badges are stored only in the browser. Nothing is sent to any server."
+      }
+     }
+    ]
+   },
+   {
+    "t": "preview",
+    "h": {
+     "es": "Cómo se llega",
+     "en": "How students get there"
+    },
+    "note": {
+     "es": "El juego no es una parada del mapa, para no romper las dos líneas de una hora: se llega desde el apartado de finanzas personales del taller, que cierra con un banner y Fuerte animado.",
+     "en": "The game is not a stop on the map, so the two one-hour lines stay intact: it is reached from the workshop's personal finance section, which ends with a banner and an animated Fuerte."
+    },
+    "img": {
+     "src": "escape-19-taller-finanzas.webp",
+     "w": 1440,
+     "h": 900
+    },
+    "url": "https://lpedaci.github.io/taller-primerempleo/#finanzas",
+    "kicker": {
+     "es": "En el taller",
+     "en": "In the workshop"
+    },
+    "title": {
+     "es": "Finanzas personales, con el escape room al cierre",
+     "en": "Personal finance, with the escape room at the end"
+    },
+    "body": {
+     "es": "Después de la actividad del apartado, un banner invita a jugar Tu primer sueldo: 30 a 35 minutos para poner a prueba lo que se vio del recibo, el presupuesto, la tarjeta, la inflación y las estafas.",
+     "en": "After the section's activity, a banner invites students to play Your first paycheck: 30 to 35 minutes to test what they saw about payslips, budgeting, credit cards, inflation and scams."
+    },
+    "cta": {
+     "es": "Ver el apartado de finanzas",
+     "en": "See the finance section"
+    }
+   },
+   {
+    "t": "phase",
+    "id": "diseno-instruccional",
+    "n": "01",
+    "name": {
+     "es": "Diseño instruccional",
+     "en": "Instructional design"
+    },
+    "mode": {
+     "es": "aprendizaje",
+     "en": "learning"
+    },
+    "q": {
+     "es": "Qué se practica, en qué orden y cómo se aprende del error.",
+     "en": "What is practised, in what order, and how students learn from mistakes."
+    }
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "La secuencia didáctica",
+     "en": "The learning sequence"
+    },
+    "note": {
+     "es": "Seis momentos: medir lo que se sabe, explorar, resolver, cerrar con lo aprendido y volver a medir. Dura entre 30 y 35 minutos, más 10 de puesta en común.",
+     "en": "Six moments: measure what you know, explore, solve, close with what was learned and measure again. It takes 30 to 35 minutes, plus 10 for a group debrief."
+    },
+    "steps": {
+     "es": [
+      "Autoevaluación: cinco frases de 1 a 4",
+      "Inspeccionar los objetos de la sala",
+      "Abrir el candado, con pistas si hacen falta",
+      "Debrief: qué se resolvió y por qué",
+      "Puerta final con las letras juntadas",
+      "Antes y después: fortaleza y próximo paso"
+     ],
+     "en": [
+      "Self-assessment: five statements, 1 to 4",
+      "Inspect the objects in the room",
+      "Open the lock, with hints if needed",
+      "Debrief: what was solved and why",
+      "Final door with the collected letters",
+      "Before and after: strength and next step"
+     ]
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Cinco salas, cinco temas",
+     "en": "Five rooms, five topics"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "1 | Recepción: el recibo",
+       "en": "1 | Reception: the payslip"
+      },
+      "body": {
+       "es": "Calcular el sueldo neto de un recibo con el monto tapado por una mancha de café. Bruto y neto, aportes y contribuciones.",
+       "en": "Work out the net pay on a payslip whose total is hidden under a coffee stain. Gross and net, employee and employer contributions."
+      }
+     },
+     {
+      "lead": {
+       "es": "2 | Oficina: el presupuesto",
+       "en": "2 | Office: the budget"
+      },
+      "body": {
+       "es": "Clasificar necesidades y gustos, y calcular cuánto se va por mes en gastos hormiga.",
+       "en": "Sort needs from wants and work out how much small daily expenses add up to each month."
+      }
+     },
+     {
+      "lead": {
+       "es": "3 | Caja: la tarjeta",
+       "en": "3 | Till: the credit card"
+      },
+      "body": {
+       "es": "Comparar dos ofertas en cuotas y reconocer el costo financiero total: la cuota más baja no siempre es la más barata.",
+       "en": "Compare two instalment offers and recognise the total financial cost: the lowest instalment is not always the cheapest."
+      }
+     },
+     {
+      "lead": {
+       "es": "4 | Bóveda: la inflación",
+       "en": "4 | Vault: inflation"
+      },
+      "body": {
+       "es": "Calcular cuánto falta para una compra después de que subió el precio. La plata quieta pierde poder de compra.",
+       "en": "Work out how much is still missing for a purchase after a price rise. Idle money loses purchasing power."
+      }
+     },
+     {
+      "lead": {
+       "es": "5 | Salida: los mensajes",
+       "en": "5 | Exit: the messages"
+      },
+      "body": {
+       "es": "Marcar las estafas entre cuatro mensajes del celular y nombrar la señal que las delata.",
+       "en": "Spot the scams among four phone messages and name the sign that gives them away."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Reglas pensadas para aprender",
+     "en": "Rules designed for learning"
+    },
+    "note": {
+     "es": "El juego no castiga: el error es parte del recorrido.",
+     "en": "The game does not punish: mistakes are part of the journey."
+    },
+    "items": {
+     "es": [
+      "Sin cuenta regresiva, sin forma de perder y sin ranking. El cronómetro es opcional y empieza oculto.",
+      "Intentos ilimitados, y los errores más comunes tienen su propio mensaje: explican qué se confundió en lugar de decir solo «incorrecto».",
+      "Debrief obligatorio después de cada candado, con una pregunta extra y una reflexión opcional.",
+      "Pistas a cambio de llaves: se empieza con tres, cada reflexión suma una y, después de tres intentos fallidos seguidos, la próxima pista es gratis.",
+      "Modo simple (?modo=simple): las mismas preguntas como cuestionario, sin la capa de juego, para quien lo necesite."
+     ],
+     "en": [
+      "No countdown, no way to lose and no leaderboard. The timer is optional and hidden by default.",
+      "Unlimited attempts, and the most common mistakes get their own message: it explains what was confused instead of just saying \"wrong\".",
+      "A mandatory debrief after each lock, with a bonus question and an optional reflection.",
+      "Hints paid with keys: you start with three, each reflection earns one and, after three failed attempts in a row, the next hint is free.",
+      "Simple mode (?modo=simple): the same questions as a plain quiz, without the game layer, for anyone who needs it."
+     ]
+    }
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Aprender del error",
+     "en": "Learning from mistakes"
+    },
+    "note": {
+     "es": "A la izquierda, un error esperado: el bruto en lugar del neto, con su explicación. A la derecha, el debrief que reemplaza al candado cuando se abre.",
+     "en": "On the left, an expected mistake: gross instead of net pay, with its explanation. On the right, the debrief that replaces the lock once it opens."
+    },
+    "images": [
+     {
+      "src": "escape-05-error.webp",
+      "w": 1338,
+      "h": 637,
+      "alt": {
+       "es": "Candado de la sala 1 con la respuesta 1.000.000 y el aviso: Ese es el bruto. El neto es lo que te queda después de los descuentos. Debajo, dos pistas que cuestan una llave.",
+       "en": "Room 1 lock with the answer 1,000,000 and the message: That is the gross pay. Net pay is what you keep after deductions. Below, two hints that cost a key each."
+      }
+     },
+     {
+      "src": "escape-06-debrief.webp",
+      "w": 1338,
+      "h": 1084,
+      "alt": {
+       "es": "Debrief de la sala 1: Candado abierto, nuevo nivel Claridad, intentos, pistas y letras del código, la explicación de lo resuelto, la opción de jugar otra versión y una pregunta para pensar.",
+       "en": "Room 1 debrief: Lock open, new level Clarity, attempts, hints and code letters, the explanation of what was solved, the option to play another version and a question to think about."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Rejugar sin memorizar",
+     "en": "Replay without memorising"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Tres versiones por sala",
+       "en": "Three versions per room"
+      },
+      "body": {
+       "es": "Inicial, intermedia y avanzada. Al empezar, cada sala toma una al azar, priorizando las que todavía no se resolvieron.",
+       "en": "Beginner, intermediate and advanced. Each room picks one at random when a game starts, favouring the ones not solved yet."
+      }
+     },
+     {
+      "lead": {
+       "es": "Una puerta que cambia",
+       "en": "A door that changes"
+      },
+      "body": {
+       "es": "La palabra de la puerta final sale de un banco sobre el tema y cambia en cada partida, con las letras desordenadas.",
+       "en": "The final door's word comes from a topic word bank and changes every game, with the letters shuffled."
+      }
+     },
+     {
+      "lead": {
+       "es": "Insignias de bronce, plata y oro",
+       "en": "Bronze, silver and gold badges"
+      },
+      "body": {
+       "es": "Una por dificultad: se gana al resolver las cinco salas en esa versión. Invitan a volver a jugar en lugar de repetir el mismo camino.",
+       "en": "One per difficulty, earned by solving all five rooms at that level. They invite students to replay instead of repeating the same path."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Medir antes y después",
+     "en": "Measuring before and after"
+    },
+    "note": {
+     "es": "Las mismas cinco frases al entrar y al salir. La pantalla final muestra la fortaleza, el próximo paso y un código de resultado para el formulario de cierre.",
+     "en": "The same five statements on the way in and out. The final screen shows the strongest area, the next step and a result code for the closing form."
+    },
+    "single": true,
+    "medium": true,
+    "images": [
+     {
+      "src": "escape-02-autoevaluacion.webp",
+      "w": 1314,
+      "h": 911,
+      "alt": {
+       "es": "Autoevaluación inicial ¿Cómo llegás?: cinco frases, como Sé diferenciar sueldo bruto y neto, con cuatro opciones de Para nada a Totalmente, y el botón Entrar a la oficina.",
+       "en": "Initial self-assessment, How are you arriving?: five statements, such as I can tell gross and net pay apart, with four options from Not at all to Completely, and an Enter the office button."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "diseno-ux-ui",
+    "n": "02",
+    "name": {
+     "es": "Diseño UX/UI",
+     "en": "UX/UI design"
+    },
+    "mode": {
+     "es": "interfaz",
+     "en": "interface"
+    },
+    "q": {
+     "es": "Que el juego se entienda solo, en escritorio y en el celular.",
+     "en": "A game that explains itself, on desktop and on mobile."
+    }
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "El panel y una sala",
+     "en": "The dashboard and a room"
+    },
+    "note": {
+     "es": "El panel es un hero en bento: la historia y las reglas en una tarjeta clara, y Fuerte en un afiche oscuro que muestra el avance. Cada sala tiene sus objetos arriba y el candado abajo.",
+     "en": "The dashboard is a bento hero: the story and rules on a light card, and Fuerte on a dark poster that shows progress. Each room has its objects at the top and the lock below."
+    },
+    "images": [
+     {
+      "src": "escape-01-panel.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Panel del escape room Tu primer sueldo: la historia, tres reglas (5 salas, sin límite de tiempo, pistas a cambio de llaves), el botón Empezar y Fuerte con 0 de 5 luces encendidas. Debajo, las cinco salas bloqueadas.",
+       "en": "Your first paycheck escape room dashboard: the story, three rules (5 rooms, no time limit, hints for keys), a Start button and Fuerte with 0 of 5 lights on. Below, the five locked rooms."
+      }
+     },
+     {
+      "src": "escape-03-sala.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Sala 1, El recibo: barra con el nivel de Fuerte, los cinco pasos y las llaves; dos objetos para inspeccionar (recibo de sueldo y nota de Recursos Humanos) y el candado ¿Cuál es tu sueldo neto?",
+       "en": "Room 1, The payslip: a bar with Fuerte's level, the five steps and the keys; two objects to inspect (payslip and an HR note) and the lock What is your net pay?"
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Decisiones de interfaz",
+     "en": "Interface decisions"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Una página propia",
+       "en": "A page of its own"
+      },
+      "body": {
+       "es": "El juego empezó como una posible parada 12. Se movió a su propia página para no romper el ritmo de dos horas, con entradas livianas desde el recibo y finanzas.",
+       "en": "The game started as a possible stop 12. It moved to its own page so the two-hour rhythm stays intact, with light entry points from the payslip and finance sections."
+      }
+     },
+     {
+      "lead": {
+       "es": "Objetos hechos en HTML",
+       "en": "Objects built in HTML"
+      },
+      "body": {
+       "es": "El recibo es una tabla; los folletos, el sobre y los mensajes del celular también son HTML, no imágenes. Se leen con lector de pantalla y escalan.",
+       "en": "The payslip is a table; leaflets, the envelope and phone messages are HTML too, not images. Screen readers can read them and they scale."
+      }
+     },
+     {
+      "lead": {
+       "es": "El debrief en el lugar del candado",
+       "en": "The debrief replaces the lock"
+      },
+      "body": {
+       "es": "No es un modal: reemplaza el área del candado y el botón para seguir aparece debajo, así no se pierde el contexto de la sala.",
+       "en": "It is not a modal: it replaces the lock area and the continue button appears below, so the room's context is never lost."
+      }
+     },
+     {
+      "lead": {
+       "es": "Avance siempre a la vista",
+       "en": "Progress always visible"
+      },
+      "body": {
+       "es": "Barra con el nivel de Fuerte, los cinco pasos y el equipo (llaves, tiempo y letras). En el celular, el equipo va en una barra fija abajo que resume las letras con un conteo.",
+       "en": "A bar with Fuerte's level, the five steps and the kit (keys, time and letters). On mobile, the kit sits in a fixed bottom bar that summarises the letters as a count."
+      }
+     },
+     {
+      "lead": {
+       "es": "Respuestas que perdonan",
+       "en": "Forgiving answers"
+      },
+      "body": {
+       "es": "Sin distinguir espacios, puntos de miles, signo $, mayúsculas ni tildes. Los campos numéricos ponen el separador de miles al escribir.",
+       "en": "Spaces, thousands separators, the $ sign, capitals and accents do not matter. Number fields add the thousands separator as you type."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Un objeto y la vista en el celular",
+     "en": "An object and the mobile view"
+    },
+    "note": {
+     "es": "Los objetos se abren en un diálogo nativo: el recibo respeta el orden de secciones del Decreto N.º 407/2026. En el celular, la sala va en una columna y el equipo, en la barra de abajo.",
+     "en": "Objects open in a native dialog: the payslip follows the section order of Decree No. 407/2026. On mobile, the room is a single column and the kit sits in the bottom bar."
+    },
+    "images": [
+     {
+      "src": "escape-04-objeto.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Diálogo con el recibo de sueldo de la sala 1: datos del empleador y del trabajador, contribuciones del empleador y remuneración bruta y deducciones, con montos ficticios.",
+       "en": "Dialog with the room 1 payslip: employer and employee details, employer contributions and gross pay and deductions, with fictional amounts."
+      }
+     },
+     {
+      "src": "escape-07-celular.webp",
+      "w": 780,
+      "h": 1688,
+      "alt": {
+       "es": "Sala 2, El presupuesto, en el celular: nivel Claridad, el paso 2 de 5, la versión inicial, la lista de gastos del mes y la barra inferior con llaves, tiempo y letras.",
+       "en": "Room 2, The budget, on mobile: level Clarity, step 2 of 5, the beginner version, the monthly expenses list and the bottom bar with keys, time and letters."
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Una capa de juego reutilizable",
+     "en": "A reusable game layer"
+    },
+    "body": {
+     "es": "El juego usa el mismo design system del taller y le suma tokens propios (--juego-*), íconos de juego, un personaje y medallas. Llaves, candados, sellos e insignias tienen sus propios colores, para poder sumar juegos en otros apartados.",
+     "en": "The game uses the workshop's design system and adds its own tokens (--juego-*), game icons, a character and medals. Keys, locks, seals and badges have their own colours, so more games can be added to other sections."
+    }
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Design system de la capa de juego",
+     "en": "Game-layer design system"
+    },
+    "note": {
+     "es": "Tokens del juego, el color de cada sala y los componentes propios. Las salas usan los tonos del taller sin los verdes: en el sistema, el verde es el color de afirmación y el de Finanzas personales.",
+     "en": "Game tokens, each room's colour and the game's own components. Rooms use the workshop tones without the greens: in the system, green means confirmation and marks Personal finance."
+    },
+    "wide": true,
+    "images": [
+     {
+      "src": "escape-12-tokens.webp",
+      "w": 1354,
+      "h": 228,
+      "alt": {
+       "es": "Tokens de la capa de juego: juego, juego suave, latón, botón del juego y candado abierto, cada uno con su nombre de token y su valor.",
+       "en": "Game-layer tokens: game, soft game, brass, game button and open lock, each with its token name and value."
+      }
+     },
+     {
+      "src": "escape-13-salas-color.webp",
+      "w": 1354,
+      "h": 275,
+      "alt": {
+       "es": "Colores de las cinco salas: amarillo para el recibo, rosa para el presupuesto, celeste para la tarjeta, lavanda para la inflación y naranja para los mensajes.",
+       "en": "Colours of the five rooms: yellow for the payslip, pink for the budget, light blue for the card, lavender for inflation and orange for the messages."
+      }
+     },
+     {
+      "src": "escape-14-componentes.webp",
+      "w": 1354,
+      "h": 244,
+      "alt": {
+       "es": "Componentes del juego: botón Probar, botón Jugar otra versión y la etiqueta de versión intermedia.",
+       "en": "Game components: Try button, Play another version button and the intermediate version label."
+      }
+     },
+     {
+      "src": "escape-15-insignias-ds.webp",
+      "w": 1600,
+      "h": 287,
+      "alt": {
+       "es": "Insignias de bronce, plata y oro, cada una con un candado grabado y la condición para ganarla.",
+       "en": "Bronze, silver and gold badges, each with an engraved padlock and the condition to earn it."
+      }
+     }
+    ],
+    "rowsOf": [
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Insignias y avance en el panel",
+     "en": "Badges and progress on the dashboard"
+    },
+    "note": {
+     "es": "Sin ganar, cada medalla conserva su metal pero se ve tenue: el estado no depende solo del color, porque además dice «Ganada» o «3 de 5 salas». Se descargan como imagen.",
+     "en": "Until earned, each medal keeps its metal but looks faded: the state does not rely on colour alone, as it also says \"Earned\" or \"3 of 5 rooms\". They can be downloaded as an image."
+    },
+    "images": [
+     {
+      "src": "escape-08-panel-avance.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Panel con avance: Fuerte con 1 de 5 luces encendidas, el botón Seguir en la sala 2 y la sala 1 marcada como resuelta.",
+       "en": "Dashboard with progress: Fuerte with 1 of 5 lights on, a Continue in room 2 button and room 1 marked as solved."
+      }
+     },
+     {
+      "src": "escape-09-insignias.webp",
+      "w": 1346,
+      "h": 354,
+      "alt": {
+       "es": "Sección Insignias del panel: bronce, plata y oro con el avance por sala y el botón Descargar mis insignias.",
+       "en": "Badges section on the dashboard: bronze, silver and gold with progress per room and a Download my badges button."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "fuerte",
+    "n": "",
+    "name": {
+     "es": "Fuerte, el personaje",
+     "en": "Fuerte, the character"
+    },
+    "mode": {
+     "es": "gamificación",
+     "en": "gamification"
+    },
+    "q": {
+     "es": "Un compañero que reacciona a cada intento, muestra el avance y nunca tapa la información.",
+     "en": "A companion who reacts to every attempt, shows progress and never hides information."
+    }
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Expresiones y niveles",
+     "en": "Expressions and levels"
+    },
+    "note": {
+     "es": "Una caja fuerte de metal anodizado naranja, con visor, cejas, perilla de combinación y cinco luces, una por candado abierto.",
+     "en": "An orange anodised-metal safe with a visor, eyebrows, a combination dial and five lights, one per lock opened."
+    },
+    "single": true,
+    "images": [
+     {
+      "src": "escape-11-fuerte.webp",
+      "w": 1600,
+      "h": 417,
+      "alt": {
+       "es": "Fuerte en sus cuatro expresiones (normal, feliz, preocupado y pensando) y la escalera de niveles: Inicio, Claridad, Orden, Prudencia, Previsión y Seguridad.",
+       "en": "Fuerte in its four expressions (neutral, happy, worried and thinking) and the level ladder: Start, Clarity, Order, Prudence, Foresight and Security."
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Quién es Fuerte",
+     "en": "Who Fuerte is"
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Por qué una caja fuerte",
+       "en": "Why a safe"
+      },
+      "v": {
+       "es": "Junta las dos ideas del juego: abrir cerraduras y guardar la plata. El naranja metalizado no compite con el verde, que en el sistema es el color de afirmación.",
+       "en": "It joins the game's two ideas: opening locks and keeping money safe. The metallic orange does not compete with green, which means confirmation in the system."
+      }
+     },
+     {
+      "k": {
+       "es": "Personalidad",
+       "en": "Personality"
+      },
+      "v": {
+       "es": "Cercano, alentador y un poco tímido: cuando está tranquilo te mira, y si lo descubrís mirando se hace el distraído. Habla poco y en voseo: «Uy, casi. Fijate lo que dice abajo.»",
+       "en": "Warm, encouraging and a little shy: when calm it watches you, and if you catch it looking it pretends to be distracted. It speaks briefly and informally: \"Oops, almost. Check what it says below.\""
+      }
+     },
+     {
+      "k": {
+       "es": "Finalidad",
+       "en": "Purpose"
+      },
+      "v": {
+       "es": "Dar una respuesta emocional a cada intento, mostrar el avance con luces que se cuentan y firmar los mensajes del juego. Acompaña el texto, no lo reemplaza: el aviso de error o de acierto siempre está escrito.",
+       "en": "Give an emotional response to each attempt, show progress with lights you can count and sign the game's messages. It supports the text, never replaces it: the error or success message is always written out."
+      }
+     },
+     {
+      "k": {
+       "es": "Versiones",
+       "en": "Versions"
+      },
+      "v": {
+       "es": "La grande del panel y las salas, una mini que firma los mensajes, la del banner del sitio, que se anima sola, y la de la página de error, donde la gatita del taller duerme arriba de Fuerte.",
+       "en": "The large one on the dashboard and in rooms, a mini one that signs messages, the one in the site banner, which animates on its own, and the one on the error page, where the workshop's cat sleeps on top of Fuerte."
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Estados",
+     "en": "States"
+    },
+    "cols": 4,
+    "items": [
+     {
+      "title": {
+       "es": "Normal",
+       "en": "Neutral"
+      },
+      "tag": {
+       "es": "en calma",
+       "en": "at rest"
+      },
+      "body": {
+       "es": "Flota suave y parpadea cada tanto. A veces sigue el cursor; a veces mira de frente o de costado.",
+       "en": "It floats gently and blinks now and then. Sometimes it follows the cursor; sometimes it looks ahead or to the side."
+      }
+     },
+     {
+      "title": {
+       "es": "Feliz",
+       "en": "Happy"
+      },
+      "tag": {
+       "es": "al acertar",
+       "en": "on a correct answer"
+      },
+      "body": {
+       "es": "Da un salto corto y se enciende una luz más: «¡Se encendió otra luz!»",
+       "en": "It does a short jump and one more light turns on: \"Another light is on!\""
+      }
+     },
+     {
+      "title": {
+       "es": "Preocupado",
+       "en": "Worried"
+      },
+      "tag": {
+       "es": "ante un error",
+       "en": "after a mistake"
+      },
+      "body": {
+       "es": "Niega con un balanceo breve y deriva al mensaje escrito que explica qué se confundió.",
+       "en": "It shakes briefly and points to the written message that explains what went wrong."
+      }
+     },
+     {
+      "title": {
+       "es": "Pensando",
+       "en": "Thinking"
+      },
+      "tag": {
+       "es": "al pedir pista",
+       "en": "when asking for a hint"
+      },
+      "body": {
+       "es": "Ladea la caja y deja de parpadear mientras acompaña la pista: «Te paso una ayuda.»",
+       "en": "It tilts and stops blinking while it delivers the hint: \"Here is some help.\""
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Animaciones y comportamiento",
+     "en": "Animation and behaviour"
+    },
+    "note": {
+     "es": "Todo con transform y opacity, y todo apagado con prefers-reduced-motion: en ese caso, Fuerte queda quieto y mira de frente.",
+     "en": "Everything uses transform and opacity, and everything turns off with prefers-reduced-motion: in that case Fuerte stays still and looks straight ahead."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Flotar y parpadear",
+       "en": "Floating and blinking"
+      },
+      "body": {
+       "es": "Un vaivén de 3,6 s y un parpadeo cada 5 s, para que se sienta vivo sin distraer de la tarea.",
+       "en": "A 3.6 s sway and a blink every 5 s, so it feels alive without distracting from the task."
+      }
+     },
+     {
+      "lead": {
+       "es": "Mirada",
+       "en": "Gaze"
+      },
+      "body": {
+       "es": "Alterna al azar entre seguir el cursor, mirar de frente y mirar de costado.",
+       "en": "It switches at random between following the cursor, looking ahead and looking to the side."
+      }
+     },
+     {
+      "lead": {
+       "es": "Cohibido",
+       "en": "Shy"
+      },
+      "body": {
+       "es": "Si el cursor se le posa encima, corre la vista y sube las cejas, como si lo hubieran descubierto mirando. Al rato vuelve a seguirte.",
+       "en": "If the cursor rests on it, it looks away and raises its eyebrows, as if caught staring. After a moment it follows you again."
+      }
+     },
+     {
+      "lead": {
+       "es": "Reacciones",
+       "en": "Reactions"
+      },
+      "body": {
+       "es": "Salto al acertar (0,7 s), negación ante un error (0,5 s) y ladeo al pensar (0,6 s). Son cortas, para no demorar el próximo intento.",
+       "en": "A jump on success (0.7 s), a shake on a mistake (0.5 s) and a tilt while thinking (0.6 s). They are short, so the next attempt is never delayed."
+      }
+     },
+     {
+      "lead": {
+       "es": "Subir de nivel",
+       "en": "Levelling up"
+      },
+      "body": {
+       "es": "Al resolver una sala, gira sobre su eje (0,9 s) y saluda con el brazo en la tarjeta del nivel nuevo.",
+       "en": "When a room is solved, it spins on its axis (0.9 s) and waves from the new level card."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Niveles: hábitos, no tarjetas",
+     "en": "Levels: habits, not cards"
+    },
+    "note": {
+     "es": "Sube un nivel por sala resuelta.",
+     "en": "It goes up one level per room solved."
+    },
+    "items": {
+     "es": [
+      "Inicio, Claridad, Orden, Prudencia, Previsión y Seguridad: cada nivel nombra el hábito que trabaja la sala.",
+      "La sala de la tarjeta enseña a desconfiar de las cuotas, así que el premio no podía ser «subir de tarjeta».",
+      "El avance no depende solo del color: las luces se cuentan y el nivel está escrito."
+     ],
+     "en": [
+      "Start, Clarity, Order, Prudence, Foresight and Security: each level names the habit its room works on.",
+      "The card room teaches students to distrust instalments, so the reward could not be \"upgrading your card\".",
+      "Progress does not rely on colour alone: the lights can be counted and the level is written out."
+     ]
+    }
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "De Chipi a Fuerte",
+     "en": "From Chipi to Fuerte"
+    },
+    "body": {
+     "es": "La primera mascota, Chipi, era una tarjeta con cara que cambiaba de color por nivel: costaba leerla y contradecía la sala de la tarjeta. La caja fuerte une cerraduras y ahorro, y muestra el avance con luces que se cuentan. El metal también se rehízo: las líneas de cepillado del primer intento se leían como tela, y se reemplazaron por bisel, punto de brillo y un reflejo nítido.",
+     "en": "The first mascot, Chipi, was a card with a face that changed colour by level: it was hard to read and contradicted the card room. The safe joins locks and saving, and shows progress with countable lights. The metal was redone too: the brushed lines of the first attempt read as fabric, so they were replaced with a bevel, a highlight and a crisp reflection."
+    }
+   },
+   {
+    "t": "phase",
+    "id": "validacion",
+    "n": "03",
+    "name": {
+     "es": "Validación",
+     "en": "Validation"
+    },
+    "mode": {
+     "es": "accesibilidad y QA",
+     "en": "accessibility and QA"
+    },
+    "q": {
+     "es": "Sitio, juego y páginas de error revisados en tema claro y oscuro, a 1700, 1366, 1024, 768 y 375 px.",
+     "en": "Site, game and error pages checked in light and dark themes at 1700, 1366, 1024, 768 and 375 px."
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Qué se revisó",
+     "en": "What was checked"
+    },
+    "note": {
+     "es": "Pruebas en el navegador, con scripts de verificación y recorridos a mano.",
+     "en": "Tests in the browser, with verification scripts and manual walkthroughs."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Contraste: corregido",
+       "en": "Contrast: fixed"
+      },
+      "body": {
+       "es": "Todo el texto contra su fondo real, en los dos temas. El crédito del pie daba 4,35:1 y 4,13:1 y se corrigió; en las salas, el contraste se ajustó por tema.",
+       "en": "All text against its real background, in both themes. The footer credit measured 4.35:1 and 4.13:1 and was fixed; in the rooms, contrast was adjusted per theme."
+      }
+     },
+     {
+      "lead": {
+       "es": "Teclado, foco y lectores de pantalla",
+       "en": "Keyboard, focus and screen readers"
+      },
+      "body": {
+       "es": "Foco visible, diálogos nativos que devuelven el foco y avisos de aciertos, errores, pistas e insignias en una región aria-live. Fuerte lleva aria-hidden y su información también está en texto.",
+       "en": "Visible focus, native dialogs that return focus and announcements for correct answers, errors, hints and badges in an aria-live region. Fuerte is aria-hidden and its information is also in text."
+      }
+     },
+     {
+      "lead": {
+       "es": "Estructura y objetivos táctiles",
+       "en": "Structure and touch targets"
+      },
+      "body": {
+       "es": "Un h1 por pantalla, títulos sin saltos y controles de al menos 24 × 24 px; los principales, de 44 px de alto.",
+       "en": "One h1 per screen, no skipped heading levels and controls of at least 24 × 24 px; the main ones are 44 px tall."
+      }
+     },
+     {
+      "lead": {
+       "es": "Responsive: corregido",
+       "en": "Responsive: fixed"
+      },
+      "body": {
+       "es": "Se ajustaron los cortes de las salas y del código (900 y 1600 px), y la barra del celular resume las letras para no desbordar.",
+       "en": "Room and code breakpoints were adjusted (900 and 1600 px), and the mobile bar summarises the letters so it never overflows."
+      }
+     },
+     {
+      "lead": {
+       "es": "QA de contenido y funcional",
+       "en": "Content and functional QA"
+      },
+      "body": {
+       "es": "Las quince versiones de las salas, los errores esperados, la pista gratis, el cambio de versión, las insignias, la descarga, la puerta con palabras de 5 y 10 letras y las dos páginas de error.",
+       "en": "All fifteen room versions, expected mistakes, the free hint, switching versions, badges, the download, the door with 5- and 10-letter words and both error pages."
+      }
+     }
+    ]
+   },
+   {
+    "t": "live",
+    "h": {
+     "es": "El escape room, en vivo",
+     "en": "The escape room, live"
+    },
+    "note": {
+     "es": "HTML, CSS y JavaScript sin frameworks, publicado en GitHub Pages. El avance se guarda en tu navegador.",
+     "en": "HTML, CSS and JavaScript with no frameworks, published on GitHub Pages. Progress is saved in your browser."
+    },
+    "src": "https://lpedaci.github.io/taller-primerempleo/escape/",
+    "url": "https://lpedaci.github.io/taller-primerempleo/escape/",
+    "label": {
+     "es": "Tu primer sueldo",
+     "en": "Your first paycheck"
+    }
+   },
+   {
+    "t": "phase",
+    "id": "en-cifras",
+    "name": {
+     "es": "El juego en cifras",
+     "en": "The game in numbers"
+    },
+    "mode": {
+     "es": "alcance",
+     "en": "scope"
+    },
+    "q": {
+     "es": "Lo que entra en una partida y lo que invita a volver.",
+     "en": "What fits in one game and what invites players back."
+    }
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": "5",
+      "label": {
+       "es": "salas, una por tema",
+       "en": "rooms, one per topic"
+      }
+     },
+     {
+      "value": "15",
+      "label": {
+       "es": "versiones entre las cinco salas",
+       "en": "versions across the five rooms"
+      }
+     },
+     {
+      "value": "30-35 min",
+      "label": {
+       "es": "de juego, más 10 de puesta en común",
+       "en": "of play, plus 10 for a group debrief"
+      }
+     },
+     {
+      "value": "3",
+      "label": {
+       "es": "insignias: bronce, plata y oro",
+       "en": "badges: bronze, silver and gold"
+      }
+     },
+     {
+      "value": "6",
+      "label": {
+       "es": "niveles de Fuerte, uno por hábito",
+       "en": "Fuerte levels, one per habit"
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Próximos pasos",
+     "en": "Next steps"
+    },
+    "items": {
+     "es": [
+      "Comparar las autoevaluaciones de entrada y salida con los códigos de resultado del formulario de cierre.",
+      "Revisar con un especialista el contenido de las salas 3 y 5 (costo financiero total y estafas), que no forma parte del aporte de finanzas."
+     ],
+     "en": [
+      "Compare the pre and post self-assessments using the result codes from the closing form.",
+      "Review the content of rooms 3 and 5 (total financial cost and scams) with a specialist, as it is not part of the finance contribution."
+     ]
+    }
+   }
+  ],
+  "outcome": {
+   "body": [
+    {
+     "es": "El taller suma una práctica de finanzas que se juega sola, aprende del error y se puede repetir en tres dificultades, sin quitarle tiempo a las dos horas. El contenido del Lic. Kevin Giampieri llega como cinco situaciones concretas del primer sueldo, y el diseño instruccional y el de la interfaz trabajan juntos: cada regla del juego existe para que se aprenda, y cada pantalla, para que se entienda sin explicación.",
+     "en": "The workshop gains a finance practice that students play on their own, that learns from mistakes and can be replayed at three difficulty levels, without taking time from the two hours. Kevin Giampieri's content arrives as five concrete first-paycheck situations, and instructional and interface design work together: every game rule exists so that people learn, and every screen so that it can be understood without explanation."
     }
    ]
   }

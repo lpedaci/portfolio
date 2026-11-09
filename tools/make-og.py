@@ -325,9 +325,12 @@ def main():
                 os.path.join(ROOT, "assets", "img", "og-image.jpg"))
     if sys.argv[1:] == ["home"]:
         return
+    only = sys.argv[1:]  # slugs puntuales: python tools/make-og.py <slug> ...
     out_dir = os.path.join(ROOT, "assets", "img", "og")
     os.makedirs(out_dir, exist_ok=True)
     for p in projects:
+        if only and p["slug"] not in only:
+            continue
         render_case(p, os.path.join(out_dir, f"{p['slug']}.jpg"))
 
 

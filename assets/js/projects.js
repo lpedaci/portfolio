@@ -14,6 +14,23 @@
 
 window.PROJECTS = [
   {
+    slug: 'escape-room-finanzas',
+    cover: 'assets/img/covers/escape-room-finanzas.jpg',
+    cat: 'cap',
+    also: ['it'],
+    alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
+    badges: ['UX'],
+    dates: ['2026-11', '2026-11'],
+    tags: { es: ['gamificación', 'finanzas personales'], en: ['gamification', 'personal finance'] },
+    title: { es: 'Tu primer sueldo: escape room de finanzas personales', en: 'Your first paycheck: a personal finance escape room' },
+    desc: {
+      es: 'Un juego web de cinco salas para practicar el recibo, el presupuesto, la tarjeta, la inflación y las estafas, con contenido del Lic. Kevin Giampieri y un personaje que acompaña cada intento.',
+      en: 'A five-room web game to practise payslips, budgeting, credit cards, inflation and scams, with content by Kevin Giampieri (Lic.) and a character who reacts to every attempt.'
+    },
+    result: { es: '5 salas en 3 versiones', en: '5 rooms in 3 versions' },
+    skills: { es: ['Gamificación', 'Diseño instruccional', 'Design system', 'WCAG 2.2'], en: ['Gamification', 'Instructional design', 'Design system', 'WCAG 2.2'] }
+  },
+  {
     slug: 'servidor',
     cover: 'assets/img/covers/servidor.jpg',
     cat: 'it',

@@ -29,7 +29,7 @@ El sitio está diseñado para quien recluta o contrata: alguien que decide en se
 Cada caso sigue la misma estructura, con la lógica de un tablero:
 
 - **Índice lateral:** a la izquierda, "En esta página" lista el resumen, el acceso en vivo, las fases y los apartados, y marca el que se está leyendo. En pantallas chicas pasa a ser una barra de pastillas fija debajo del menú.
-- **Resumen arriba:** problema, solución y resultados en tres tarjetas; los resultados con cifras grandes cuando hay un dato defendible.
+- **Resumen arriba:** problema y solución lado a lado y, debajo, los resultados en una fila, con cifras grandes cuando hay un dato defendible. Así ninguna tarjeta queda estirada con espacio vacío.
 - **En vivo:** si el proyecto está publicado, una tarjeta propia con el primer enlace como botón principal. Cuando es un sitio propio, suma una vista previa: la captura del sitio dentro de un marco de navegador con su dirección.
 - **Después, el detalle:** la ficha (rol, período, contexto, herramientas, metodologías), el proceso explicado por fases y el resultado, y cierra con el caso siguiente.
 
@@ -79,7 +79,7 @@ Objetivo WCAG 2.2 AA, verificado con axe-core en todas las páginas.
 Sitio estático sin frameworks ni dependencias en el navegador.
 
 - **Contenido como dato:** proyectos (`projects.js`), casos (`cases.js`) y textos de interfaz (`i18n.js`) viven separados del marcado. Cada string es un par `{ es, en }`.
-- **Casos por bloques:** un renderer arma cada caso a partir de bloques tipados (cifras, fases, journey maps, personas, user flows, paletas, auditorías de contraste, tablas comparativas, tarjetas bento, galerías, embebidos, referencias APA y más). Sumar un tipo de evidencia es sumar un renderer, no editar páginas.
+- **Casos por bloques:** un renderer arma cada caso a partir de bloques tipados (cifras, fases, journey maps, personas, user flows, paletas, auditorías de contraste, tablas comparativas, tarjetas bento, galerías, vistas previas de otras páginas, embebidos, referencias APA y más). Sumar un tipo de evidencia es sumar un renderer, no editar páginas.
 - **Orden por fechas:** cada proyecto declara su período y la grilla se ordena sola.
 - **Imágenes:** dimensiones declaradas para que el layout no salte, carga diferida y ampliación en un visor dentro de la página.
 - **Embebidos:** video, audio y presentaciones cargan en diferido; YouTube usa su dominio sin cookies.
