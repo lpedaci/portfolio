@@ -28,10 +28,11 @@ El sitio está diseñado para quien recluta o contrata: alguien que decide en se
 
 Cada caso sigue la misma estructura, con la lógica de un tablero:
 
-- **Índice lateral:** a la izquierda, "En esta página" lista el resumen, el acceso en vivo, las fases y los apartados, y marca el que se está leyendo. En pantallas chicas pasa a ser una barra de pastillas fija debajo del menú.
+- **Un apartado por vez:** el caso se divide en apartados (el resumen, el acceso en vivo, cada fase y cada bloque con título) y se ve uno por vez. El "Índice del caso", fijo a la izquierda, abre cada uno; en tablet y celular es un menú superior con el apartado actual que despliega el índice completo. El panel muestra el apartado entero, la página se desplaza normalmente y las flechas de anterior y siguiente quedan pegadas al pie mientras se lee; en el último apartado, la flecha lleva al caso siguiente. Cada apartado tiene su propio enlace (`#apartado`) y las flechas del teclado también cambian de apartado.
+- **Apartados unidos:** dos apartados cortos que cuentan lo mismo (por ejemplo "El desafío" y "El proyecto") se unen en uno, con un título propio en el índice.
 - **Resumen arriba:** problema y solución lado a lado y, debajo, los resultados en una fila, con cifras grandes cuando hay un dato defendible. Así ninguna tarjeta queda estirada con espacio vacío.
 - **En vivo:** si el proyecto está publicado, una tarjeta propia con el primer enlace como botón principal. Cuando es un sitio propio, suma una vista previa: la captura del sitio dentro de un marco de navegador con su dirección.
-- **Después, el detalle:** la ficha (rol, período, contexto, herramientas, metodologías), el proceso explicado por fases y el resultado, y cierra con el caso siguiente.
+- **Después, el detalle:** la ficha (rol, período, contexto, herramientas y metodologías, estas dos en pastillas), el proceso explicado por fases y el resultado.
 
 ## 🎨 Sistema visual
 
@@ -43,6 +44,7 @@ Tema claro único sobre un fondo blanco cálido, igual en toda la web, con el ef
 | `--cap` | `#B8326F` (bright `#EC7FB0`) | Capacitación |
 | `--cont` | `#8F5B00` (bright `#E8B85A`) | Creación de contenidos |
 | `--data` / `--ux` / `--pm` | `#2563B0` / `#B4472A` / `#4D7419` | Áreas dentro de IT, solo en Habilidades |
+| `--neg` | `#B3261E` | Lo negativo: frustraciones, momentos bajos de un journey, severidad alta |
 | `--bg` / `--surface` / `--text` | `#FBF8F3` / `#FFFFFF` / `#17181C` | Fondo, superficies y texto |
 | `--surface` / `--line` dentro de la caja del caso | `#F4F5F7` / `#E3E5EA` | Tarjetas y divisores sobre la caja blanca |
 
@@ -54,8 +56,8 @@ Cada color tiene una versión base, con contraste AA para texto y botones, y una
 - **Hero de la portada:** centrado y sin ilustración: la etiqueta en una pastilla, título, texto en dos oraciones equilibradas (la segunda empieza en un renglón nuevo), botones y una pastilla con el total de proyectos y su reparto por categoría, que lleva a Proyectos. El título corta después de "claras,": la propuesta en la primera línea y el recorrido en la segunda. Su fondo combina una grilla fina que se desvanece hacia los bordes, un brillo pastel con los tres colores de categoría y algunos cuadrados sueltos. Los botones son planos, sin brillo ni degradé.
 - **Fondo de todas las páginas:** el mismo efecto del hero repetido en manchas que `nav.js` reparte al azar a lo largo de la página, alternando lados. Es decorativo, sin movimiento, queda detrás de las cajas y se rearma si la página cambia de alto. La página 404, que es autocontenida, lo lleva fijo y centrado.
 - **Secciones de la portada:** Proyectos, Recorrido y Contacto van cada una en una caja blanca, con las mismas reglas que la caja de los casos.
-- **Caja de contenido:** en los casos, el contenido va en una caja blanca de radio 28px, hasta 1720px de ancho con margen lateral. Adentro, las tarjetas son gris neutro muy claro y sin sombra, para no apilar tarjeta sobre tarjeta.
-- **Paneles de texto:** título adentro y texto a todo el ancho del panel. Dos paneles seguidos comparten la fila; la prosa larga en un panel de fila entera se lee en dos columnas.
+- **Caja de contenido:** en los casos, el contenido va en una caja blanca de radio 24px que usa casi todo el ancho, con un margen del 3 % a cada lado (el menú se alinea con ese margen). Adentro, las tarjetas son gris neutro muy claro y sin sombra, para no apilar tarjeta sobre tarjeta.
+- **Paneles de texto:** título adentro y texto a todo el ancho del panel. Dos paneles seguidos comparten la fila solo si tienen un largo parecido; si no, cada uno va a lo ancho. La prosa larga en un panel de fila entera se lee en dos columnas.
 - **Cifras:** mosaicos con un tinte del color del caso, el primero más intenso. Las columnas se eligen según la cantidad (6 cifras: 3 + 3) y la última fila se estira, sin huecos.
 - **Botoneras:** grupos en una pastilla blanca con sombra suave. La opción elegida de un filtro va llena con el color de acción; la de un selector de vista o un botón activado, con un tinte del mismo color. Los botones de flecha son círculos blancos de 46px que toman el color de acción al pasar el cursor.
 - **En vivo:** etiqueta con un punto verde (late tres veces y se queda quieto con movimiento reducido) y botón lleno con el color del caso, también en la barra de cada sitio embebido.
@@ -83,6 +85,9 @@ Sitio estático sin frameworks ni dependencias en el navegador.
   - **`decisionflow`:** diagrama de flujo con decisiones hecho en HTML y CSS, sin SVG. Es una lista ordenada en el orden del flujo: inicio y fin en pastilla, pasos en tarjeta y decisiones con un rombo y el rótulo "Decisión" escrito; cada decisión lleva sus ramas en una sublista ("Sí", "No" o el nombre de la acción), lado a lado desde 640 px y apiladas con sangría debajo. Una rama sin pasos sigue el flujo y `to` indica a qué paso vuelve; un nodo `dashed` con `cond` marca un final condicional. El diagrama y su versión en texto son el mismo elemento.
   - **`timeline`:** línea de tiempo en días sin SVG: una barra con un tramo por etapa, proporcional a sus días, hitos marcados sobre la barra, eje de días y una tarjeta por etapa con su rango, su duración y un ejemplo. La barra es decorativa: etapas e hitos también van escritos.
   - **Énfasis en el texto:** en los textos de lectura (resumen, paneles, tarjetas, tablas, listas), `**frase**` se muestra en negrita y `==frase==` resaltada con un tinte del color del caso. El texto se escapa antes, así que no se puede colar HTML.
+  - **`journey`:** journey map paso a paso. La curva de emoción se dibuja hasta la etapa elegida y se ve una tarjeta por vez; se recorre con anterior y siguiente, eligiendo la etapa o con Reproducir, que avanza solo y se puede pausar. Las etapas bajas llevan `--neg`, siempre con la emoción escrita.
+  - **`taskflow`:** los pasos como un recorrido de nodos numerados unidos por una línea, en fila en pantallas anchas y en columna en las angostas; el último paso, la meta, va relleno con el color del caso.
+  - **`join` y `toc`:** `join: true` suma un bloque (o el resultado del caso, en `outcome`) al apartado anterior, y `toc` le da al apartado el título que muestra el índice.
   - **`lens` en las fases:** `'cap'`, `'it'` o `'both'` pinta el rótulo de la fase con el color de la lente (un punto por color), sin quitar el texto.
 - **Orden por fechas:** cada proyecto declara su período y la grilla se ordena sola.
 - **Imágenes:** dimensiones declaradas para que el layout no salte, carga diferida y ampliación en un visor dentro de la página.
@@ -119,3 +124,4 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 | 3.0 | Reposicionamiento hacia análisis funcional y UX/UI, tema oscuro con color por categoría y casos construidos por bloques. |
 | 4.0 | Perfil de experience designer: tema claro con auras, animación del proceso en el hero, portadas por proyecto y tarjetas de vista previa con captura. |
 | 4.1 | Casos con lógica de tablero: resumen de problema, solución y resultados, índice lateral, tarjeta en vivo, caja de contenido y un único fondo blanco cálido en toda la web. El hero de la portada queda centrado y sin ilustración. |
+| 4.2 | Casos por apartados: se ve uno por vez desde el índice (menú superior en celular), con flechas para recorrerlos, ancho casi completo, journey maps paso a paso y apartados cortos unidos. |

@@ -95,10 +95,15 @@ window.CASES = {
       "es": "Coordino el ciclo de vida de los proyectos de una incubadora ágil híbrida, con sprints y Gantt alineados a indicadores. Cada año trabajan entre 14 y 18 equipos, más de 70 integrantes en total, y cada equipo tiene un cliente real: releva el problema, lo valida, prototipa y entrega. El módulo interactivo que se ve abajo es el material con el que los equipos recorren ese ciclo.",
       "en": "I coordinate the project lifecycle of a hybrid agile incubator, with sprints and Gantt charts tied to indicators. Each year 14 to 18 teams take part, more than 70 people in total, and every team has a real client: they gather the requirements, validate the problem, prototype and deliver. The interactive module below is the material the teams use to walk through that cycle."
      }
-    ]
+    ],
+    "toc": {
+     "es": "Mi rol y contexto",
+     "en": "My role and context"
+    }
    },
    {
     "t": "prose",
+    "join": true,
     "h": {
      "en": "Overview",
      "es": "Contexto"
@@ -121,10 +126,15 @@ window.CASES = {
       "en": "The objective was to digitise the Project Evaluation and Management curriculum. The challenge was making dense topics, such as departmentalisation criteria and organisational chart conventions, accessible and dynamic for eighteen-year-old students, moving away from traditional slide-based lectures.",
       "es": "El objetivo fue digitalizar el currículum de Evaluación y Gestión de Proyectos. El desafío consistió en hacer que temas densos, como los criterios de departamentalización y las convenciones de organigramas, resultaran accesibles y dinámicos para estudiantes de 18 años, dejando atrás las clases tradicionales basadas en diapositivas."
      }
-    ]
+    ],
+    "toc": {
+     "es": "El desafío y la solución",
+     "en": "The challenge and the solution"
+    }
    },
    {
     "t": "list",
+    "join": true,
     "h": {
      "en": "The solution: the LXD approach",
      "es": "La solución: el enfoque LXD"
@@ -340,10 +350,15 @@ window.CASES = {
     "label": {
      "en": "Course hub",
      "es": "Hub de la asignatura"
+    },
+    "toc": {
+     "es": "Hub interactivo y vista previa",
+     "en": "Interactive hub and preview"
     }
    },
    {
     "t": "embed",
+    "join": true,
     "kind": "doc",
     "h": {
      "en": "Module preview",
@@ -473,10 +488,15 @@ window.CASES = {
     "body": {
      "es": "Generar contenido educativo que comunique e instruya, a niños, adolescentes y adultos, sobre los múltiples riesgos existentes en internet, tales como el acoso, la manipulación, las estafas y la pérdida de privacidad, exacerbados durante la pandemia por COVID-19.",
      "en": "Generate educational content that communicates and instructs children, teenagers and adults about the multiple risks on the internet, such as harassment, manipulation, scams and the loss of privacy, which were exacerbated during the COVID-19 pandemic."
+    },
+    "toc": {
+     "es": "El problema y el proceso",
+     "en": "The problem and the process"
     }
    },
    {
     "t": "diamond",
+    "join": true,
     "h": {
      "es": "Proceso: Doble Diamante",
      "en": "Process: Double Diamond"
@@ -1413,10 +1433,15 @@ window.CASES = {
       "en": "Educational technology is only as effective as the infrastructure supporting it. My mission was to resolve inconsistent lab performance by auditing hardware and software to ensure every workstation met the specific pedagogical needs of our students. Beyond the technical setup, this project was about creating a reliable and secure digital workspace for different educational levels.",
       "es": "La tecnología educativa es tan efectiva como la infraestructura que la sostiene. Mi misión fue resolver el rendimiento desparejo de los laboratorios auditando hardware y software para asegurar que cada puesto de trabajo respondiera a las necesidades pedagógicas específicas de los estudiantes. Más allá de la configuración técnica, este proyecto se trató de crear un espacio digital confiable y seguro para distintos niveles educativos."
      }
-    ]
+    ],
+    "toc": {
+     "es": "Contexto y ecosistema instruccional",
+     "en": "Context and instructional ecosystem"
+    }
    },
    {
     "t": "prose",
+    "join": true,
     "h": {
      "en": "Instructional ecosystem and documentation",
      "es": "Ecosistema instruccional y documentación"
@@ -1453,10 +1478,15 @@ window.CASES = {
       "en": "To maximise resource efficiency, I conducted a comprehensive software and hardware audit. This analysis allowed us to design personalised operating system versions that adapt to the physical location of the labs and the specific needs of the curriculum.",
       "es": "Para maximizar la eficiencia de los recursos, realicé una auditoría integral de software y hardware. Este análisis nos permitió diseñar versiones personalizadas del sistema operativo que se adaptan a la ubicación física de los laboratorios y a las necesidades específicas del currículum."
      }
-    ]
+    ],
+    "toc": {
+     "es": "Estrategia y experiencia de usuario",
+     "en": "Strategy and user experience"
+    }
    },
    {
     "t": "prose",
+    "join": true,
     "h": {
      "en": "User experience and environment",
      "es": "Experiencia de usuario y entorno"
@@ -1601,7 +1631,11 @@ window.CASES = {
        "es": "Montaje final del hardware y habilitación de los puestos para uso estudiantil."
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Mantenimiento y renovación de hardware",
+     "en": "Maintenance and hardware refresh"
+    }
    },
    {
     "t": "gallery",
@@ -1629,6 +1663,7 @@ window.CASES = {
    },
    {
     "t": "embed",
+    "join": true,
     "kind": "video",
     "h": {
      "en": "Watch: hardware refresh",
@@ -1800,10 +1835,15 @@ window.CASES = {
        "en": "This case is a reinvention of an existing product, conceived by someone else. My work was restructuring the research, the flows, the design system and the accessibility."
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Contexto y proceso",
+     "en": "Context and process"
+    }
    },
    {
     "t": "diamond",
+    "join": true,
     "h": {
      "es": "Proceso: Doble Diamante",
      "en": "Process: Double Diamond"
@@ -3989,10 +4029,15 @@ window.CASES = {
        "en": "For remote audits, a self-contained web document with the heuristic evaluation: findings, severity, contrast measurements and prioritised recommendations."
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Contexto y encuadre",
+     "en": "Context and framing"
+    }
    },
    {
     "t": "prose",
+    "join": true,
     "h": {
      "es": "El encuadre",
      "en": "The framing"
@@ -4040,10 +4085,15 @@ window.CASES = {
        "en": "An in-depth audit of the site or product, delivered as a self-contained heuristic evaluation document."
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Modalidades y método",
+     "en": "Formats and method"
+    }
    },
    {
     "t": "roadmap",
+    "join": true,
     "h": {
      "es": "Método: flujo de trabajo",
      "en": "Method: workflow"
@@ -4117,10 +4167,15 @@ window.CASES = {
        "en": "Information architecture and visual design critique."
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Marcos, contraste y entregable",
+     "en": "Frameworks, contrast and deliverable"
+    }
    },
    {
     "t": "list",
+    "join": true,
     "h": {
      "es": "Medición de contraste",
      "en": "Measuring contrast"
@@ -4160,6 +4215,7 @@ window.CASES = {
    },
    {
     "t": "bullets",
+    "join": true,
     "h": {
      "es": "Formato del entregable",
      "en": "Deliverable format"
@@ -4477,10 +4533,15 @@ window.CASES = {
        "en": "The brand is not reproduced. The screenshots cover names, logo, headlines, location, reviews and other details that could identify the business, and the PageSpeed reports are cropped."
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Sobre el caso y contexto",
+     "en": "About the case and context"
+    }
    },
    {
     "t": "prose",
+    "join": true,
     "h": {
      "es": "Contexto",
      "en": "Context"
@@ -4533,7 +4594,11 @@ window.CASES = {
        "en": "Looks for the courses the centre teaches, which the site mentioned without linking to them."
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Audiencias y método",
+     "en": "Audiences and method"
+    }
    },
    {
     "t": "gallery",
@@ -4557,6 +4622,7 @@ window.CASES = {
    },
    {
     "t": "list",
+    "join": true,
     "h": {
      "es": "Método",
      "en": "Method"
@@ -5106,10 +5172,15 @@ window.CASES = {
       "es": "El portal es técnicamente sólido y veloz, y aprueba las métricas de experiencia de usuarios reales. Pero le pide al usuario más esfuerzo cognitivo del necesario, sobre todo al elegir el estudio, y deja afuera a personas con baja visión o que usan lectores de pantalla.",
       "en": "The portal is technically solid and fast, and it passes the real-user experience metrics. But it asks users for more cognitive effort than needed, above all when choosing the study, and it leaves out people with low vision or who rely on screen readers."
      }
-    ]
+    ],
+    "toc": {
+     "es": "El hallazgo y el proyecto",
+     "en": "The finding and the project"
+    }
    },
    {
     "t": "kv",
+    "join": true,
     "h": {
      "es": "El proyecto",
      "en": "The project"
@@ -5208,10 +5279,15 @@ window.CASES = {
        "en": "The happy path, from the ID number to the booking confirmation."
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Métodos y recorrido",
+     "en": "Methods and journey"
+    }
    },
    {
     "t": "taskflow",
+    "join": true,
     "h": {
      "es": "El recorrido, ocho pasos",
      "en": "The journey, eight steps"
@@ -5300,10 +5376,15 @@ window.CASES = {
        "en": "1 of 4, needs work"
       }
      }
-    ]
+    ],
+    "toc": {
+     "es": "Medición de laboratorio y de campo",
+     "en": "Lab and field measurement"
+    }
    },
    {
     "t": "kv",
+    "join": true,
     "h": {
      "es": "Core Web Vitals de campo",
      "en": "Field Core Web Vitals"
@@ -6324,10 +6405,15 @@ window.CASES = {
       "en": "Two fully interactive HTML sites that cover the hardest to visualise part of the Operating Systems syllabus: storage management (Unit 2) and OS setup (Unit 3). Instead of static slides, students explore clickable disk diagrams, traffic-light comparison tables and decision trees, and then test themselves with a randomised self-assessment module. Everything is deployed on GitHub Pages, responsive, and written to work on a phone or on a lab PC.",
       "es": "Dos sitios HTML interactivos que cubren la parte más difícil de visualizar del programa de Sistemas Operativos: la gestión de almacenamiento (Unidad 2) y el seteo del SO (Unidad 3). En lugar de diapositivas estáticas, los estudiantes exploran diagramas de disco clicables, tablas comparativas tipo semáforo y árboles de decisión, y luego se ponen a prueba con un módulo de autoevaluación al azar. Todo publicado en GitHub Pages, responsive y pensado para funcionar tanto en el celular como en la PC del laboratorio."
      }
-    ]
+    ],
+    "toc": {
+     "es": "Contexto y desafío",
+     "en": "Context and challenge"
+    }
    },
    {
     "t": "prose",
+    "join": true,
     "h": {
      "en": "The challenge",
      "es": "El desafío"
@@ -6413,10 +6499,15 @@ window.CASES = {
     "label": {
      "en": "Unit 2 site",
      "es": "Sitio de la Unidad 2"
+    },
+    "toc": {
+     "es": "Unidades 2 y 3, en vivo",
+     "en": "Units 2 and 3, live"
     }
    },
    {
     "t": "live",
+    "join": true,
     "h": {
      "en": "Unit 3 | Operating system setup, live",
      "es": "Unidad 3 | Seteo del sistema operativo, en vivo"
@@ -6443,7 +6534,11 @@ window.CASES = {
       "en": "The centrepiece of Unit 3 is a self-assessment engine that draws random questions from both units. Students pick a round, answer one question at a time, then verify and read an explanation before moving on. Both the questions and the order of their options are reshuffled on every attempt, so nothing is memorised as the answer is B.",
       "es": "La pieza central de la Unidad 3 es un motor de autoevaluación que toma preguntas al azar de ambas unidades. El estudiante elige una ronda, responde de a una pregunta, verifica y lee una explicación antes de continuar. Tanto las preguntas como el orden de sus opciones se rebarajan en cada intento, así no se memoriza que la respuesta es la B."
      }
-    ]
+    ],
+    "toc": {
+     "es": "El módulo evaluativo",
+     "en": "The assessment module"
+    }
    },
    {
     "t": "stats",
@@ -6484,6 +6579,7 @@ window.CASES = {
    },
    {
     "t": "live",
+    "join": true,
     "h": {
      "en": "Try the self-assessment module",
      "es": "Probar el módulo de autoevaluación"
@@ -6579,10 +6675,15 @@ window.CASES = {
       "en": "In the technical world, the ability to communicate an idea is as important as the idea itself. I designed TEDxTECNO to give fifth-year Informatics students a collaborative platform to strengthen their public speaking strategies. My mission was to help these future technicians move beyond the how of technology and master the why, using storytelling to reach a broader audience.",
       "es": "En el mundo técnico, la capacidad de comunicar una idea es tan importante como la idea misma. Diseñé TEDxTECNO para brindar a los estudiantes de 5to año de Informática una plataforma colaborativa donde fortalecer sus estrategias de oratoria. Mi misión fue ayudar a estos futuros técnicos a ir más allá del cómo de la tecnología y dominar el porqué, usando el storytelling para llegar a una audiencia más amplia."
      }
-    ]
+    ],
+    "toc": {
+     "es": "Contexto y estrategia educativa",
+     "en": "Context and educational strategy"
+    }
    },
    {
     "t": "prose",
+    "join": true,
     "h": {
      "en": "Educational strategy and narrative design",
      "es": "Estrategia educativa y diseño narrativo"
@@ -6605,7 +6706,11 @@ window.CASES = {
       "en": "A key focus was incorporating technology as a visual aid rather than a backdrop. I worked with students to design effective visual presentations and multimedia tools that served as explanatory supports. This taught them how to leverage UX in their presentations, so their slides were intuitive and enhanced their verbal delivery instead of competing with it.",
       "es": "Un foco clave fue incorporar la tecnología como apoyo visual y no como mero telón de fondo. Trabajé con los estudiantes en el diseño de presentaciones visuales efectivas y herramientas multimedia que funcionaran como soportes explicativos. Esto les enseñó a aprovechar la UX en sus presentaciones, logrando diapositivas intuitivas que potenciaran su exposición oral en lugar de competir con ella."
      }
-    ]
+    ],
+    "toc": {
+     "es": "La tecnología y el material",
+     "en": "Technology and project media"
+    }
    },
    {
     "t": "gallery",
@@ -6650,6 +6755,7 @@ window.CASES = {
    },
    {
     "t": "embed",
+    "join": true,
     "kind": "doc",
     "h": {
      "en": "Project media",
@@ -6761,10 +6867,15 @@ window.CASES = {
       "en": "To communicate the necessity of a pedagogical shift in the digital age. The goal was to move beyond the traditional content-delivery model and illustrate how teachers can become learning experience designers who foster student participation and autonomy.",
       "es": "Comunicar la necesidad de un cambio pedagógico en la era digital. El objetivo fue superar el modelo tradicional de transmisión de contenidos e ilustrar cómo los docentes pueden convertirse en diseñadores de experiencias de aprendizaje que fomentan la participación y la autonomía del estudiante."
      }
-    ]
+    ],
+    "toc": {
+     "es": "El desafío y la solución",
+     "en": "The challenge and the solution"
+    }
    },
    {
     "t": "list",
+    "join": true,
     "h": {
      "en": "The solution: the LXD strategy",
      "es": "La solución: la estrategia LXD"
@@ -6892,10 +7003,15 @@ window.CASES = {
       "en": "Opening video for Expo Informatics 2024 at Instituto Leonardo Murialdo, Argentina, produced with Adobe After Effects, Adobe Premiere and generative AI around the smart cities theme. The piece opens the event and frames the students projects for an audience of families, staff and guests.",
       "es": "Video de apertura para la Expo Informática 2024 del Instituto Leonardo Murialdo, Argentina, producido con Adobe After Effects, Adobe Premiere e IA generativa en torno a la temática de ciudades inteligentes. La pieza abre el evento y enmarca los proyectos de los estudiantes ante una audiencia de familias, personal e invitados."
      }
-    ]
+    ],
+    "toc": {
+     "es": "Contexto y apertura",
+     "en": "Context and opening"
+    }
    },
    {
     "t": "embed",
+    "join": true,
     "kind": "video",
     "h": {
      "en": "Watch the opening",
@@ -6985,10 +7101,15 @@ window.CASES = {
       "en": "An animated short film inspired by The Raven by Edgar Allan Poe, created as the final project for Module 02 of the Professional Diploma in Digital Tools and Artificial Intelligence at the National University of Tres de Febrero (UNTREF), Argentina. The project featured AI-generated visuals produced with Adobe Firefly, while the animation was crafted using Runway AI, bringing the imagery to life and enhancing the narrative with dynamic elements. Original soundtrack generated with Suno AI.",
       "es": "Un cortometraje animado inspirado en El Cuervo de Edgar Allan Poe, creado como proyecto final del Módulo 02 de la Diplomatura Profesional en Herramientas Digitales e Inteligencia Artificial de la Universidad Nacional de Tres de Febrero (UNTREF), Argentina. El proyecto contó con visuales generados por IA con Adobe Firefly, mientras que la animación se realizó con Runway AI, dando vida a las imágenes y potenciando la narrativa con elementos dinámicos. Banda sonora original generada con Suno AI."
      }
-    ]
+    ],
+    "toc": {
+     "es": "Contexto y cortometraje",
+     "en": "Context and short film"
+    }
    },
    {
     "t": "embed",
+    "join": true,
     "kind": "video",
     "h": {
      "en": "Watch the short film",
@@ -7076,10 +7197,15 @@ window.CASES = {
       "en": "The objective was to distil the multi-layered nature of Enterprise Resource Planning systems into a two-minute synthesis. The challenge lay in translating dense technical requirements, such as integrated software architecture and centralised databases, into a clear visual roadmap for systems engineering students.",
       "es": "El objetivo fue destilar la naturaleza multicapa de los sistemas de Planificación de Recursos Empresariales (ERP) en una síntesis de dos minutos. El desafío radicó en traducir requerimientos técnicos densos, como la arquitectura de software integrada y las bases de datos centralizadas, en una hoja de ruta visual y clara para estudiantes de ingeniería en sistemas."
      }
-    ]
+    ],
+    "toc": {
+     "es": "El desafío y la solución",
+     "en": "The challenge and the solution"
+    }
    },
    {
     "t": "list",
+    "join": true,
     "h": {
      "en": "The solution: the LXD approach",
      "es": "La solución: el enfoque LXD"
@@ -7253,10 +7379,15 @@ window.CASES = {
       "es": "Así se planteó el encargo al empezar el proyecto. El taller surge de una necesidad de los propios estudiantes, de cara a las prácticas profesionalizantes de 7mo año.",
       "en": "That is how the brief was framed at the start of the project. The workshop comes from a need raised by the students themselves, ahead of the seventh-year professional internships."
      }
-    ]
+    ],
+    "toc": {
+     "es": "El problema y el proceso",
+     "en": "The problem and the process"
+    }
    },
    {
     "t": "diamond",
+    "join": true,
     "h": {
      "es": "Proceso: Doble Diamante",
      "en": "Process: Double Diamond"
@@ -10644,8 +10775,8 @@ window.CASES = {
    "en": "Your first paycheck: a personal finance escape room"
   },
   "subtitle": {
-   "es": "Un juego web de cinco salas para practicar el recibo de sueldo, el presupuesto, la tarjeta, la inflación y las estafas digitales. Contenido de finanzas del Lic. Kevin Giampieri; diseño instruccional, gamificación, UX/UI y desarrollo de la Lic. Lourdes Pedaci.",
-   "en": "A five-room web game to practise reading a payslip, budgeting, credit cards, inflation and online scams. Finance content by Kevin Giampieri (Lic.); instructional design, gamification, UX/UI and development by Lourdes Pedaci (Lic.)."
+   "es": "Un juego web de cinco salas para practicar el recibo de sueldo, el presupuesto, la tarjeta, la inflación y las estafas digitales, pensado principalmente para el taller «Del aula al primer trabajo». Contenido de finanzas del Lic. Kevin Giampieri; diseño instruccional, gamificación, UX/UI y desarrollo de la Lic. Lourdes Pedaci.",
+   "en": "A five-room web game to practise reading a payslip, budgeting, credit cards, inflation and online scams, built mainly for the “From the classroom to a first job” workshop. Finance content by Kevin Giampieri (Lic.); instructional design, gamification, UX/UI and development by Lourdes Pedaci (Lic.)."
   },
   "chips": {
    "es": [
@@ -10771,10 +10902,15 @@ window.CASES = {
       "es": "El contenido de finanzas es un aporte del Lic. Kevin Giampieri: mentalidad, salida de deudas, presupuesto e inversión. El juego lo cruza con el apartado del recibo de sueldo del mismo sitio y lo convierte en cinco situaciones del primer día de cobro.",
       "en": "The finance content is a contribution by Kevin Giampieri (Lic.): mindset, getting out of debt, budgeting and investing. The game combines it with the payslip section of the same site and turns it into five situations from your first payday."
      }
-    ]
+    ],
+    "toc": {
+     "es": "El desafío y el proyecto",
+     "en": "The challenge and the project"
+    }
    },
    {
     "t": "kv",
+    "join": true,
     "h": {
      "es": "El proyecto",
      "en": "The project"
@@ -11690,6 +11826,10 @@ window.CASES = {
     "q": {
      "es": "Lo que entra en una partida y lo que invita a volver.",
      "en": "What fits in one game and what invites players back."
+    },
+    "toc": {
+     "es": "El juego en cifras y el resultado",
+     "en": "The game in numbers and the outcome"
     }
    },
    {
@@ -11751,6 +11891,7 @@ window.CASES = {
    }
   ],
   "outcome": {
+   "join": true,
    "body": [
     {
      "es": "El taller suma una práctica de finanzas que se juega sola, aprende del error y se puede repetir en tres dificultades, sin quitarle tiempo a las dos horas. El contenido del Lic. Kevin Giampieri llega como cinco situaciones concretas del primer sueldo, y el diseño instruccional y el de la interfaz trabajan juntos: cada regla del juego existe para que se aprenda, y cada pantalla, para que se entienda sin explicación.",
@@ -11913,6 +12054,7 @@ window.CASES = {
    },
    {
     "t": "compare",
+    "join": true,
     "accent": true,
     "lens": true,
     "arrow": false,
@@ -13764,7 +13906,7 @@ window.CASES = {
      {
       "src": "rumbo-42-antes-despues-login.webp",
       "w": 2600,
-      "h": 1500,
+      "h": 950,
       "alt": {
        "es": "Login antes y después del piloto, a 1280 px. Izquierda, antes: una columna angosta con media pantalla vacía. Derecha, después: formulario a la izquierda y panel tintado con una vista previa del producto a la derecha",
        "en": "Login before and after the pilot, at 1280 px. Left, before: a narrow column with half the screen empty. Right, after: the form on the left and a tinted panel with a product preview on the right"
@@ -14104,17 +14246,6 @@ window.CASES = {
       }
      }
     ]
-   },
-   {
-    "t": "callout",
-    "h": {
-     "es": "Mi parte en el diseño visual",
-     "en": "My part in the visual design"
-    },
-    "body": {
-     "es": "De las 142 decisiones registradas, **51 empezaron con un pedido o una observación mía** al revisar el trabajo: espacios que sobraban, una fecha que pesaba más que la tarea, una barra de progreso que «no decía mucho» y terminó siendo la línea de tiempo del recorrido.",
-     "en": "Of the 142 logged decisions, **51 started with a request or an observation of mine** while reviewing the work: spacing that wasn't needed, a date that outweighed the task, a progress bar that “didn't say much” and ended up becoming the journey timeline."
-    }
    },
    {
     "t": "phase",

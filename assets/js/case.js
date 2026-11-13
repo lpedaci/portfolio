@@ -7,8 +7,11 @@
   const PROJECTS = window.PROJECTS;
 
   const slug = document.body.dataset.slug;
+  /* Vista del caso: 'completa' (el panel muestra el apartado entero y se desplaza la página, con el footer del sitio)
+     o 'fija' (todo queda fijo al alto de la pantalla y solo se desplaza el panel). ?vista=fija permite comparar. */
+  const FLOW = new URLSearchParams(location.search).get('vista') !== 'fija';
   const mount = document.getElementById('case');
-  const state = { lang: 'es' };
+  const state = { lang: 'es', apt: undefined };
 
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch { return null; } },
@@ -144,13 +147,16 @@
     </svg>`;
   }
 
+  /* Curva de emoción del journey: un tramo y un punto por etapa, para revelarla paso a paso (initJourneys).
+     Es decorativa: las etapas se leen en las tarjetas. */
   function journeyCurve(stages) {
-    const pts = stages.map((s, i) => [50 + i * 100, 60 - s.level * 22]);
-    const d = pts.map((p, i) => (i ? 'L' : 'M') + p.join(' ')).join(' ');
-    return `<svg class="jc" viewBox="0 0 600 130" aria-hidden="true">
-      <line class="jc__base" x1="20" y1="60" x2="580" y2="60"/>
-      <path class="jc__line" d="${d}"/>
-      ${pts.map((p, i) => `<circle class="jc__pt${stages[i].level < 0 ? ' is-neg' : ''}" cx="${p[0]}" cy="${p[1]}" r="6"/><text class="jc__n" x="${p[0]}" y="124" text-anchor="middle">${String(i + 1).padStart(2, '0')}</text>`).join('')}
+    // Cada etapa ocupa una columna de 200 unidades: los puntos quedan centrados sobre los botones de etapa de abajo.
+    const W = stages.length * 200;
+    const pts = stages.map((s, i) => [100 + i * 200, 50 - s.level * 20]);
+    return `<svg class="jc" viewBox="0 0 ${W} 100" aria-hidden="true">
+      <line class="jc__base" x1="20" y1="50" x2="${W - 20}" y2="50"/>
+      ${pts.slice(1).map((p, i) => `<line class="jc__seg${stages[i + 1].level < 0 ? ' is-neg' : ''}" data-k="${i + 1}" x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${p[0]}" y2="${p[1]}" pathLength="1"/>`).join('')}
+      ${pts.map((p, i) => `<g class="jc__g${stages[i].level < 0 ? ' is-neg' : ''}" data-k="${i}"><circle class="jc__pt" cx="${p[0]}" cy="${p[1]}" r="9"/></g>`).join('')}
     </svg>`;
   }
 
@@ -255,19 +261,30 @@
             <p class="persona__bio">${rich(L(b.bio))}</p></div>
         </div>
         <div class="persona__cols">
-          <div>${hx(H + 2, 'persona__l', esc(L(b.goalsL)))}<ul>${L(b.goals).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
-          <div>${hx(H + 2, 'persona__l', esc(L(b.painsL)))}<ul>${L(b.pains).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+          <div class="persona__col persona__col--goals">${hx(H + 2, 'persona__l', `<i class="ph ph-check-circle" aria-hidden="true"></i>${esc(L(b.goalsL))}`)}<ul>${L(b.goals).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+          <div class="persona__col persona__col--pains">${hx(H + 2, 'persona__l', `<i class="ph ph-x-circle" aria-hidden="true"></i>${esc(L(b.painsL))}`)}<ul>${L(b.pains).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
         </div></div>`, true),
-    journey: (b) => blk(b, `${journeyCurve(b.stages)}<ol class="jr">${b.stages.map((s, i) => `
-      <li class="jr__s"><p class="jr__n">${String(i + 1).padStart(2, '0')}</p>${hx(H + 1, 'jr__h', esc(L(s.name)))}
-        <p class="jr__emo${s.level < 0 ? ' is-neg' : (s.level > 0 ? ' is-pos' : '')}"><span>${esc(L(b.labels.emotion))}:</span> ${esc(L(s.emo))}</p>
-        <dl><dt>${esc(L(b.labels.actions))}</dt><dd>${esc(L(s.actions))}</dd><dt>${esc(L(b.labels.feel))}</dt><dd>${esc(L(s.feel))}</dd></dl></li>`).join('')}</ol>
+    /* Journey: la curva se dibuja de a una etapa. Se ve una tarjeta por vez y se recorre con los botones
+       (anterior, siguiente o reproducir) o eligiendo la etapa. Sin JS de interacción, igual se lee la primera. */
+    journey: (b) => blk(b, `<div class="jx" data-step="0" style="--n:${b.stages.length}">${journeyCurve(b.stages)}
+      <div class="jx__tabs" role="group" aria-label="${esc(t('jxStages'))}">${b.stages.map((s, i) => `<button type="button" class="jx__tab${s.level < 0 ? ' is-neg' : ''}" data-jx-go="${i}" aria-pressed="${i === 0}"><span class="jx__tn">${String(i + 1).padStart(2, '0')}</span><span class="jx__tl">${esc(L(s.name))}</span></button>`).join('')}</div>
+      <ol class="jr" aria-live="polite">${b.stages.map((s, i) => `
+      <li class="jr__s${s.level < 0 ? ' is-neg' : ''}"${i ? ' hidden' : ''}><div class="jr__id"><p class="jr__n">${String(i + 1).padStart(2, '0')} / ${String(b.stages.length).padStart(2, '0')}</p>${hx(H + 1, 'jr__h', esc(L(s.name)))}
+        <p class="jr__emo${s.level < 0 ? ' is-neg' : (s.level > 0 ? ' is-pos' : '')}"><span>${esc(L(b.labels.emotion))}:</span> ${esc(L(s.emo))}</p></div>
+        <dl><div><dt>${esc(L(b.labels.actions))}</dt><dd>${esc(L(s.actions))}</dd></div><div class="jr__feel"><dt>${esc(L(b.labels.feel))}</dt><dd>${esc(L(s.feel))}</dd></div></dl></li>`).join('')}</ol>
+      <div class="jx__ctrl">
+        <button type="button" class="jx__btn jx__btn--icon" data-jx="prev" aria-label="${esc(t('jxPrev'))}" disabled><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
+        <button type="button" class="jx__btn jx__btn--soft" data-jx="play"><i class="ph ph-play" aria-hidden="true"></i><span>${t('jxPlay')}</span></button>
+        <button type="button" class="jx__btn jx__btn--main" data-jx="next"><span>${t('jxNext')}</span><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+      </div></div>
       <div class="jr__extra">
         <div>${hx(H + 1, 'jr__xh', esc(L(b.labels.actors)))}<ul class="chips">${L(b.actors).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
         <div>${hx(H + 1, 'jr__xh', esc(L(b.labels.touch)))}<ul class="chips">${L(b.touch).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
-      </div>`, true),
+      </div>`, true, ' blk--journey'),
     bullets: (b) => blk(b, `<ul class="checks">${L(b.items).map((x) => `<li><i class="ph ph-check" aria-hidden="true"></i><span>${rich(x)}</span></li>`).join('')}</ul>${b.foot ? `<p class="blk__foot">${esc(L(b.foot))}</p>` : ''}`),
-    taskflow: (b) => blk(b, `<ol class="tf" style="--tfc:${(n => (n <= 4 ? n : n <= 6 ? 3 : 4))(L(b.steps).length)}">${L(b.steps).map((x, i, a) => `<li><span class="tf__n">${String(i + 1).padStart(2, '0')}</span><span class="tf__t">${esc(x)}</span>${i < a.length - 1 ? '<i class="ph ph-arrow-right tf__a" aria-hidden="true"></i>' : ''}</li>`).join('')}</ol>`, true),
+    /* Flujo de pasos como un recorrido: nodos numerados unidos por una línea (en fila en pantallas anchas,
+       en columna en las angostas). El último paso, la meta, va relleno con el color del caso. */
+    taskflow: (b) => blk(b, `<ol class="tf" style="--n:${L(b.steps).length}">${L(b.steps).map((x, i) => `<li class="tf__s"><span class="tf__n" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><span class="tf__t">${esc(x)}</span></li>`).join('')}</ol>`, true),
     userflow: (b) => {
       const item = (x) => (Array.isArray(x) ? `<li>${esc(x[0])}<ul>${x[1].map((y) => `<li>${esc(y)}</li>`).join('')}</ul></li>` : `<li>${esc(x)}</li>`);
       return blk(b, `<div class="ufw"><div class="ufw__svg">${userFlowSVG(b)}</div><ol class="ufw__logic">${L(b.logic).map(item).join('')}</ol></div>`, true);
@@ -421,21 +438,35 @@
 
     const f = c.facts || {};
     // Un dato puede ser texto, lista o lista por idioma ({ es: [...], en: [...] }): las listas se unen con coma y espacio.
-    const fact = (k, v) => { const x = Array.isArray(v) ? v : L(v); const txt = Array.isArray(x) ? x.join(', ') : x; return txt ? `<div><dt>${t(k)}</dt><dd>${esc(txt)}</dd></div>` : ''; };
+    const fact = (k, v) => {
+      const x = Array.isArray(v) ? v : L(v);
+      if (!x || (Array.isArray(x) && !x.length)) return '';
+      const dd = Array.isArray(x) ? `<ul class="chips facts__chips">${x.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` : esc(x);
+      return `<div class="facts__i facts__i--${k.slice(1).toLowerCase()}"><dt>${t(k)}</dt><dd>${dd}</dd></div>`;
+    };
     const links = c.links || [];
     H = 2;
     // Los tokens de CSS que aparecen en el texto (--line, --ink-70) van en mono: en la fuente de texto, "--" se lee como una raya.
     /* Paneles de texto seguidos: se agrupan de a dos en la misma fila, como tarjetas de un tablero.
        Si quedan en número impar, el último ocupa la fila entera. El orden de lectura no cambia. */
-    const parts = c.blocks.map((b) => (BLOCKS[b.t] ? BLOCKS[b.t](b) : ''));
+    // join: true suma el bloque al apartado anterior (no abre uno propio en el índice).
+    // toc: título del apartado en el índice cuando difiere del título del bloque (por ejemplo, al unir dos).
+    const parts = c.blocks.map((b) => { const h = BLOCKS[b.t] ? BLOCKS[b.t](b) : ''; const attrs = `${b.join ? ' data-join' : ''}${b.toc ? ` data-toc="${esc(L(b.toc))}"` : ''}`; return attrs ? h.replace(/^(\s*<section class="[^"]*")/, `$1${attrs}`) : h; });
     const isPanel = (h) => /^\s*<section class="blk[^"]*blk--panel/.test(h);
     for (let k = 0; k < parts.length;) {
       if (!isPanel(parts[k])) { k++; continue; }
       let e = k;
       while (e < parts.length && isPanel(parts[e])) e++;
-      for (let j = k; j + 1 < e; j += 2) {
+      /* Solo se emparejan paneles de largo parecido: si uno tiene mucho más texto o una lista larga,
+         cada uno va a lo ancho (si no, uno queda con mucho blanco y el otro apretado). */
+      const size = (h) => h.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().length;
+      const items = (h) => (h.match(/<li[\s>]/g) || []).length;
+      const pairable = (a, b) => { const x = size(a); const y = size(b); return Math.max(x, y) <= Math.min(x, y) * 1.8 && Math.abs(items(a) - items(b)) <= 3; };
+      for (let j = k; j + 1 < e;) {
+        if (!pairable(parts[j], parts[j + 1])) { j++; continue; }
         parts[j] = `<div class="pair">${parts[j]}`;
         parts[j + 1] = `${parts[j + 1]}</div>`;
+        j += 2;
       }
       k = e;
     }
@@ -477,11 +508,18 @@
     const nxt = PROJECTS[(i + 1) % PROJECTS.length];
     const nextColor = { it: 'var(--it)', cap: 'var(--cap)', cont: 'var(--cont)' }[nxt.cat];
 
+    /* Vista por apartados: el índice (columna en escritorio, menú superior en pantallas chicas) muestra un apartado
+       por vez; solo el contenido del apartado se desplaza. Abajo, flechas para ir al anterior y al siguiente. */
     mount.innerHTML = `
       <div class="case__grid">
-      <nav class="toc" aria-labelledby="toc-h"><p class="toc__h" id="toc-h">${t('tocTitle')}</p><ol class="toc__list"></ol></nav>
+      <nav class="toc" aria-labelledby="toc-h">
+        <div class="toc__bar">
+          <button type="button" class="toc__toggle" aria-expanded="false" aria-controls="toc-list"><i class="ph ph-list" aria-hidden="true"></i><span class="sr-only">${t('aptMenu')}: </span><span class="toc__count"></span><span class="toc__now"></span></button>
+        </div>
+        <p class="toc__h" id="toc-h">${t('tocTitle')}</p><ol class="toc__list" id="toc-list"></ol>
+      </nav>
       <div class="case__main">
-      <a class="case__back" href="${ROOT}?lang=${state.lang}#proyectos"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>${t('backWork')}</span></a>
+      <div class="case__scroll" tabindex="-1">
       <header class="case__head">
         <p class="case__meta"><span class="case__cat">${t(CAT_KEY[p.cat])}</span>${(p.also || []).map((c) => `<span class="case__cat" style="--c: var(--${c})">${t(CAT_KEY[c])}</span>`).join('')}${(p.badges || []).map((x) => `<span class="case__cat">${esc(x)}</span>`).join('')}${c.chips ? '' : `<span>${esc(p.tags[state.lang].join(' / '))}</span>`}<span>${esc(p.year)}</span></p>
         <h1 class="case__title">${esc(L(c.title) || L(p.title))}</h1>
@@ -492,65 +530,281 @@
       ${live}
       ${(() => { const items = [fact('fRole', f.role), fact('fTimeline', f.timeline), fact('fContext', f.context), fact('fStack', f.stack), fact('fMethods', f.methods)].filter(Boolean); return `<dl class="facts" style="--n:${items.length}">${items.join('')}</dl>`; })()}
       <div class="blocks">${blocks}</div>
-      ${c.outcome ? blk({ h: c.outcome.h || t('outcome') }, [].concat(c.outcome.body).map((x) => `<p>${rich(L(x))}</p>`).join(''), false, ' blk--outcome') : ''}
+      ${c.outcome ? blk({ h: c.outcome.h || t('outcome') }, [].concat(c.outcome.body).map((x) => `<p>${rich(L(x))}</p>`).join(''), false, ' blk--outcome').replace(/^(\s*<section class="[^"]*")/, c.outcome.join ? '$1 data-join' : '$1') : ''}
       ${c.credits ? `<p class="case__credits">${esc(L(c.credits))}</p>` : ''}
-      <a class="next" href="${ROOT}casos/${nxt.slug}/?lang=${state.lang}" style="--next-c:${nextColor}">
-        <span class="next__label">${t('nextCase')}</span>
-        <span class="next__title"><span>${esc(L(nxt.title))}</span><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
-      </a>
+      </div>
+      <nav class="pager" aria-label="${esc(t('aptNav'))}" style="--next-c:${nextColor}">
+        <a class="pager__btn pager__btn--prev" href="#"><i class="ph ph-arrow-left" aria-hidden="true"></i><span class="pager__txt"><span class="pager__k">${t('aptPrev')}</span><span class="sr-only">: </span><span class="pager__l"></span></span></a>
+        <p class="pager__count" aria-hidden="true"></p>
+        <a class="pager__btn pager__btn--next" href="#"><span class="pager__txt"><span class="pager__k"></span><span class="sr-only">: </span><span class="pager__l"></span></span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </nav>
       </div></div>`;
-    buildToc();
+    nextCase = { url: `${ROOT}casos/${nxt.slug}/?lang=${state.lang}`, title: L(nxt.title) };
+    document.documentElement.classList.add('is-case-app', FLOW ? 'is-case-flow' : 'is-case-fixed');
+    stopJourneys();
+    buildSections();
+    initJourneys();
     initAnims();
   }
 
-  /* ---------- Índice del caso ----------
-     Se arma con lo que quedó en la página: el resumen, la tarjeta en vivo, las fases y los bloques con título h2.
-     En escritorio es una columna fija a la izquierda; en pantallas chicas, una barra de pastillas que se desplaza
-     de costado. La sección que se está leyendo queda marcada (aria-current). */
-  let tocTargets = [];
-  const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'seccion';
-  function buildToc() {
+  /* ---------- Apartados del caso ----------
+     Se arman con lo que quedó en la página: cada apartado empieza en el resumen, la tarjeta en vivo, una fase
+     o un bloque con título h2, y suma todo lo que sigue hasta el próximo. La cabecera del caso y la ficha van
+     con el resumen. Se ve un apartado por vez; el índice y las flechas de abajo cambian cuál.
+     El enlace (#id) se actualiza sin sumar pasos al historial, así "atrás" sale del caso. */
+  let apts = [];
+  let nextCase = null;
+  const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'seccion';
+  const pad = (n) => String(n).padStart(2, '0');
+
+  function buildSections() {
+    const scroll = mount.querySelector('.case__scroll');
     const list = mount.querySelector('.toc__list');
-    const main = mount.querySelector('.case__main');
-    const used = new Set();
-    const items = [];
-    main.querySelectorAll('.brief, .live:not(.live--block), .phase, h2.blk__h').forEach((el) => {
-      const sec = el.matches('h2') ? el.closest('section') : el;
-      let label; let kind = '';
-      if (el.matches('.brief')) label = t('tocSummary');
-      else if (el.matches('.live')) { label = t('liveLinks'); kind = 'live'; }
-      else if (el.matches('.phase')) { label = el.querySelector('.phase__h').textContent; kind = 'phase'; }
-      else label = el.textContent;
-      if (!sec.id) {
-        let id = slugify(label); let n = 2;
-        while (used.has(id) || document.getElementById(id)) id = `${slugify(label)}-${n++}`;
-        sec.id = id;
-      }
-      used.add(sec.id);
-      items.push({ id: sec.id, label, kind, sec });
+    // Unidades en orden de lectura: los hijos del contenido, con los bloques sueltos. Un par de paneles con dos
+    // títulos h2 se separa (cada uno abre su apartado); si no, el par viaja junto.
+    const units = [];
+    [...scroll.children].forEach((el) => {
+      if (!el.matches('.blocks')) { units.push(el); return; }
+      [...el.children].forEach((u) => {
+        if (u.matches('.pair') && u.querySelectorAll('h2.blk__h:not([data-join] *)').length > 1) units.push(...u.children);
+        else units.push(u);
+      });
     });
-    list.innerHTML = items.map((x) => `<li class="toc__i${x.kind ? ` toc__i--${x.kind}` : ''}"><a href="#${esc(x.id)}">${x.kind === 'live' ? '<span class="live__dot" aria-hidden="true"></span>' : ''}<span>${esc(x.label)}</span></a></li>`).join('');
-    tocTargets = items.map((x) => ({ sec: x.sec, a: list.querySelector(`a[href="#${CSS.escape(x.id)}"]`) }));
-    current = null;
-    spy();
+    const head = (u) => {
+      if (u.matches('.brief')) return { label: t('tocSummary'), kind: 'brief' };
+      if (u.matches('.live:not(.live--block)')) return { label: t('liveLinks'), kind: 'live' };
+      if (u.matches('.phase')) return { label: u.dataset.toc || u.querySelector('.phase__h').textContent, kind: 'phase' };
+      const h = [...u.querySelectorAll('h2.blk__h')].find((x) => !x.closest('[data-join]'));
+      const own = h && h.closest('[data-toc]');
+      return h ? { label: own ? own.dataset.toc : h.textContent, kind: '' } : null;
+    };
+    const out = [];
+    let lead = [];
+    let briefSec = null;
+    units.forEach((u) => {
+      const h = head(u);
+      if (u.matches('.facts') && (briefSec || out.length)) { (briefSec || out[out.length - 1]).nodes.push(u); return; }
+      if (!h) { if (out.length) out[out.length - 1].nodes.push(u); else lead.push(u); return; }
+      if (h.kind === 'brief' && !out.length) { briefSec = { ...h, nodes: [...lead, u] }; lead = []; out.push(briefSec); return; }
+      if (lead.length) { out.push({ label: t('tocIntro'), kind: 'brief', nodes: lead }); lead = []; }
+      out.push({ ...h, nodes: [u] });
+    });
+    if (lead.length) out.unshift({ label: t('tocIntro'), kind: 'brief', nodes: lead });
+
+    const used = new Set();
+    scroll.innerHTML = '';
+    apts = out.map((s, i) => {
+      let id = slugify(s.label); let n = 2;
+      while (used.has(id) || document.getElementById(id)) id = `${slugify(s.label)}-${n++}`;
+      used.add(id);
+      const el = document.createElement('div');
+      el.className = 'apt';
+      el.id = id;
+      el.hidden = true;
+      s.nodes.forEach((x) => el.appendChild(x));
+      scroll.appendChild(el);
+      return { ...s, id, el, i };
+    });
+    list.innerHTML = apts.map((x) => `<li class="toc__i${x.kind ? ` toc__i--${x.kind}` : ''}"><a href="#${esc(x.id)}" data-i="${x.i}"><span class="toc__n" aria-hidden="true">${x.kind === 'live' ? '<span class="live__dot"></span>' : pad(x.i + 1)}</span><span class="toc__t">${esc(x.label)}</span></a></li>`).join('');
+
+    const fromHash = location.hash ? findApt(decodeURIComponent(location.hash.slice(1))) : null;
+    const start = fromHash ? fromHash.i : Math.min(state.apt || 0, apts.length - 1);
+    show(start, { focus: false, target: fromHash && fromHash.target });
   }
-  let current = null;
-  function spy() {
-    if (!tocTargets.length) return;
-    const line = innerHeight * 0.3;
-    let on = tocTargets[0];
-    for (const x of tocTargets) { if (x.sec.getBoundingClientRect().top <= line) on = x; }
-    if (on === current) return;
-    if (current) current.a.removeAttribute('aria-current');
-    on.a.setAttribute('aria-current', 'location');
-    current = on;
-    // En la barra horizontal, la pastilla activa se desliza a la vista sin mover la página.
-    const list = on.a.closest('.toc__list');
-    if (list.scrollWidth > list.clientWidth) list.scrollTo({ left: on.a.parentElement.offsetLeft - 16, behavior: reduce.matches ? 'auto' : 'smooth' });
+  /* Al cargar, el navegador intenta llevar el ancla (#apartado) a la vista dentro del panel: se vuelve a dejar
+     el apartado desde arriba (o en el punto pedido, si el enlace apunta adentro de un apartado). */
+  try { history.scrollRestoration = 'manual'; } catch { /* sin soporte */ }
+  addEventListener('load', () => {
+    const scroll = mount.querySelector('.case__scroll');
+    if (!scroll) return;
+    const hit = location.hash ? findApt(decodeURIComponent(location.hash.slice(1))) : null;
+    if (FLOW) window.scrollTo(0, 0); else toTop();
+    if (hit && hit.target) scrollInside(hit.target);
+  });
+
+  // Alto que tapan arriba el menú (y, en pantallas chicas, la barra del índice) en la vista completa.
+  const topOffset = () => {
+    const nav = document.querySelector('.nav');
+    const bar = matchMedia('(max-width: 1023px)').matches ? mount.querySelector('.toc') : null;
+    return (nav ? nav.getBoundingClientRect().height : 0) + (bar ? bar.getBoundingClientRect().height : 0) + 12;
+  };
+  /* Lleva un elemento arriba de la vista sin mover nada más (scrollIntoView movería también otros contenedores).
+     Vista fija: dentro del panel. Vista completa: la página, debajo del menú. */
+  const scrollInside = (el) => {
+    const sc = mount.querySelector('.case__scroll');
+    if (!FLOW) { sc.scrollTop += el.getBoundingClientRect().top - sc.getBoundingClientRect().top - 16; return; }
+    window.scrollTo({ top: Math.max(0, scrollY + el.getBoundingClientRect().top - topOffset()), behavior: 'auto' });
+  };
+  // Al cambiar de apartado, se vuelve al principio del panel (en la vista completa, solo si ya se había bajado).
+  const toTop = () => {
+    const sc = mount.querySelector('.case__scroll');
+    if (!FLOW) { sc.scrollTop = 0; window.scrollTo(0, 0); return; }
+    const main = mount.querySelector('.case__main');
+    const top = main.getBoundingClientRect().top - topOffset();
+    if (top < 0) window.scrollTo({ top: Math.max(0, scrollY + top), behavior: 'auto' });
+  };
+  // Apartado que contiene un id (el propio apartado o algo de adentro, por ejemplo una fase).
+  function findApt(id) {
+    const el = id && document.getElementById(id);
+    const apt = el && el.closest('.apt');
+    if (!apt || !mount.contains(apt)) return null;
+    const x = apts.find((a) => a.el === apt);
+    return x ? { i: x.i, target: el === apt ? null : el } : null;
   }
-  let spyQueued = false;
-  addEventListener('scroll', () => { if (spyQueued) return; spyQueued = true; requestAnimationFrame(() => { spyQueued = false; spy(); }); }, { passive: true });
-  addEventListener('resize', () => { current = null; spy(); });
+
+  function show(i, { focus = true, target = null } = {}) {
+    if (!apts[i]) return;
+    const prev = state.apt;
+    state.apt = i;
+    stopJourneys();
+    const cur = apts[i];
+    apts.forEach((a) => { a.el.hidden = a !== cur; });
+    toTop();
+    if (target) scrollInside(target);
+    if (!reduce.matches && prev !== undefined && prev !== i) {
+      cur.el.classList.remove('is-in');
+      void cur.el.offsetWidth;
+      cur.el.classList.add('is-in');
+    }
+
+    // Índice: marca el apartado actual y, en el menú superior, muestra cuál es.
+    mount.querySelectorAll('.toc__list a').forEach((a) => {
+      if (Number(a.dataset.i) === i) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+    });
+    const toggle = mount.querySelector('.toc__toggle');
+    toggle.querySelector('.toc__count').textContent = `${pad(i + 1)}/${pad(apts.length)}`;
+    toggle.querySelector('.toc__now').textContent = cur.label;
+    const on = mount.querySelector('.toc__list a[aria-current]');
+    const list = on && on.closest('.toc__list');
+    if (list && list.scrollHeight > list.clientHeight) {
+      const li = on.parentElement;
+      if (li.offsetTop < list.scrollTop || li.offsetTop + li.offsetHeight > list.scrollTop + list.clientHeight) list.scrollTop = li.offsetTop - list.clientHeight / 2;
+    }
+
+    // Flechas: anterior y siguiente; en el último apartado, la siguiente lleva al próximo caso.
+    const pPrev = mount.querySelector('.pager__btn--prev');
+    const pNext = mount.querySelector('.pager__btn--next');
+    const before = apts[i - 1];
+    const after = apts[i + 1];
+    pPrev.classList.toggle('is-off', !before);
+    if (before) { pPrev.href = `#${before.id}`; pPrev.removeAttribute('aria-hidden'); pPrev.removeAttribute('tabindex'); pPrev.querySelector('.pager__l').textContent = before.label; }
+    else { pPrev.removeAttribute('href'); pPrev.setAttribute('aria-hidden', 'true'); pPrev.setAttribute('tabindex', '-1'); pPrev.querySelector('.pager__l').textContent = ''; }
+    pNext.classList.toggle('is-case', !after);
+    pNext.href = after ? `#${after.id}` : nextCase.url;
+    pNext.querySelector('.pager__k').textContent = after ? t('aptNext') : t('nextCase');
+    pNext.querySelector('.pager__l').textContent = after ? after.label : nextCase.title;
+    mount.querySelector('.pager__count').innerHTML = `<span>${pad(i + 1)}</span> / ${pad(apts.length)}`;
+
+    const url = new URL(location.href);
+    url.hash = cur.id;
+    history.replaceState(null, '', url);
+
+    if (focus) {
+      // El foco pasa al título del apartado: el lector de pantalla anuncia dónde quedó.
+      const h = target || cur.el.querySelector('h1, h2') || cur.el;
+      if (!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1');
+      h.focus({ preventScroll: true });
+    }
+  }
+
+  const tocOpen = (open) => {
+    const toc = mount.querySelector('.toc');
+    if (!toc) return;
+    toc.classList.toggle('is-open', open);
+    const btn = toc.querySelector('.toc__toggle');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelector('.ph').className = `ph ${open ? 'ph-x' : 'ph-list'}`;
+  };
+
+  mount.addEventListener('click', (e) => {
+    if (e.target.closest('.toc__toggle')) { tocOpen(!mount.querySelector('.toc').classList.contains('is-open')); return; }
+    const a = e.target.closest('a[href^="#"], .pager__btn');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+    if (a.classList.contains('pager__btn')) {
+      if (a.classList.contains('is-off')) { e.preventDefault(); return; }
+      if (a.classList.contains('is-case')) return; // próximo caso: navegación normal
+    }
+    const hit = findApt(decodeURIComponent((a.getAttribute('href') || '').slice(1)));
+    if (!hit) return;
+    e.preventDefault();
+    tocOpen(false);
+    show(hit.i, { target: hit.target });
+  });
+  document.addEventListener('click', (e) => { const toc = mount.querySelector('.toc.is-open'); if (toc && !toc.contains(e.target)) tocOpen(false); });
+  document.addEventListener('keydown', (e) => {
+    const toc = mount.querySelector('.toc.is-open');
+    if (e.key === 'Escape' && toc) { tocOpen(false); toc.querySelector('.toc__toggle').focus(); return; }
+    // Flechas del teclado: cambian de apartado cuando el foco no está en un control ni en el visor.
+    if ((e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    if (viewer.open || e.target.closest('input, textarea, select, [contenteditable], iframe, .pic__scroll, .toc__list, .jx')) return;
+    if (!apts.length) return;
+    const k = state.apt + (e.key === 'ArrowRight' ? 1 : -1);
+    if (apts[k]) { e.preventDefault(); show(k); }
+  });
+  addEventListener('hashchange', () => { const hit = findApt(decodeURIComponent(location.hash.slice(1))); if (hit && hit.i !== state.apt) show(hit.i, { target: hit.target }); });
+  // Al pasar a escritorio, el menú desplegable deja de tener sentido: se cierra.
+  matchMedia('(min-width: 1024px)').addEventListener('change', () => tocOpen(false));
+
+  /* ---------- Journey paso a paso ----------
+     Cada paso marca la etapa, dibuja el tramo de la curva hasta ella y muestra su tarjeta.
+     Reproducir avanza solo cada pocos segundos y se frena al final, al tocar otro control o al cambiar de apartado. */
+  const jxTimers = new Map();
+  function stopJourneys() { jxTimers.forEach((id, root) => { clearInterval(id); setPlay(root, false); }); jxTimers.clear(); }
+  function setPlay(root, on) {
+    const b = root.querySelector('[data-jx="play"]');
+    if (!b) return;
+    b.querySelector('.ph').className = `ph ${on ? 'ph-pause' : 'ph-play'}`;
+    b.querySelector('span').textContent = t(on ? 'jxPause' : 'jxPlay');
+    b.setAttribute('aria-pressed', String(on));
+  }
+  function jxGo(root, k) {
+    const cards = [...root.querySelectorAll('.jr__s')];
+    const n = cards.length;
+    k = Math.max(0, Math.min(n - 1, k));
+    root.dataset.step = k;
+    cards.forEach((c, i) => {
+      const was = !c.hidden;
+      c.hidden = i !== k;
+      if (i === k && !was && !reduce.matches) { c.classList.remove('is-in'); void c.offsetWidth; c.classList.add('is-in'); }
+    });
+    root.querySelectorAll('.jx__tab').forEach((b, i) => { b.setAttribute('aria-pressed', String(i === k)); b.classList.toggle('is-past', i < k); });
+    root.querySelectorAll('.jc__seg').forEach((l) => l.classList.toggle('is-on', Number(l.dataset.k) <= k));
+    root.querySelectorAll('.jc__g').forEach((g) => { const i = Number(g.dataset.k); g.classList.toggle('is-on', i <= k); g.classList.toggle('is-cur', i === k); });
+    root.querySelector('[data-jx="prev"]').disabled = k === 0;
+    const next = root.querySelector('[data-jx="next"]');
+    next.querySelector('span').textContent = t(k === n - 1 ? 'jxRestart' : 'jxNext');
+    next.querySelector('.ph').className = `ph ${k === n - 1 ? 'ph-arrow-up' : 'ph-arrow-right'}`;
+    // Que la etapa elegida quede a la vista en la fila de etapas (celular)
+    const tab = root.querySelectorAll('.jx__tab')[k];
+    const tabs = tab && tab.parentElement;
+    if (tabs && tabs.scrollWidth > tabs.clientWidth) tabs.scrollTo({ left: tab.offsetLeft - tabs.clientWidth / 2 + tab.offsetWidth / 2, behavior: reduce.matches ? 'auto' : 'smooth' });
+  }
+  function initJourneys() { mount.querySelectorAll('.jx').forEach((root) => jxGo(root, 0)); }
+  mount.addEventListener('click', (e) => {
+    const root = e.target.closest('.jx');
+    if (!root) return;
+    const go = e.target.closest('[data-jx-go]');
+    const act = e.target.closest('[data-jx]');
+    if (!go && !act) return;
+    const k = Number(root.dataset.step);
+    const n = root.querySelectorAll('.jr__s').length;
+    if (act && act.dataset.jx === 'play') {
+      if (jxTimers.has(root)) { clearInterval(jxTimers.get(root)); jxTimers.delete(root); setPlay(root, false); return; }
+      if (k === n - 1) jxGo(root, 0);
+      setPlay(root, true);
+      jxTimers.set(root, setInterval(() => {
+        const cur = Number(root.dataset.step);
+        if (cur >= n - 1 || !root.isConnected) { clearInterval(jxTimers.get(root)); jxTimers.delete(root); setPlay(root, false); return; }
+        jxGo(root, cur + 1);
+        if (cur + 1 >= n - 1) { clearInterval(jxTimers.get(root)); jxTimers.delete(root); setPlay(root, false); }
+      }, 2600));
+      return;
+    }
+    if (jxTimers.has(root)) { clearInterval(jxTimers.get(root)); jxTimers.delete(root); setPlay(root, false); }
+    if (go) jxGo(root, Number(go.dataset.jxGo));
+    else if (act.dataset.jx === 'prev') jxGo(root, k - 1);
+    else jxGo(root, k === n - 1 ? 0 : k + 1);
+  });
 
   /* ---------- Animaciones HyperFrames ---------- */
   const anims = [];
