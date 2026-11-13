@@ -14,6 +14,24 @@
 
 window.PROJECTS = [
   {
+    slug: 'rumbo',
+    cover: 'assets/img/covers/rumbo.jpg',
+    cat: 'it',
+    badges: ['UX', 'LXD'],
+    dates: ['2026-11', '2026-11'],
+    tags: { es: ['ux/ui', 'lxd', 'producto b2b'], en: ['ux/ui', 'lxd', 'b2b product'] },
+    title: { es: 'Rumbo, plataforma de onboarding corporativo', en: 'Rumbo, a corporate onboarding platform' },
+    desc: {
+      es: 'Producto B2B para cuatro roles: el ingreso a una empresa diseñado como experiencia de aprendizaje y construido como prototipo navegable.',
+      en: 'A B2B product for four roles: joining a company designed as a learning experience and built as a navigable prototype.'
+    },
+    result: { es: '40 pantallas, 4 roles, WCAG 2.2 AA', en: '40 screens, 4 roles, WCAG 2.2 AA' },
+    skills: {
+      es: ['Diseño instruccional', 'Arquitectura de la información', 'Sistema de diseño', 'WCAG 2.2', 'Análisis funcional'],
+      en: ['Instructional design', 'Information architecture', 'Design system', 'WCAG 2.2', 'Functional analysis']
+    }
+  },
+  {
     slug: 'escape-room-finanzas',
     cover: 'assets/img/covers/escape-room-finanzas.jpg',
     cat: 'cap',

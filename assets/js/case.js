@@ -17,6 +17,9 @@
   const t = (key) => I18N[state.lang][key] ?? key;
   const L = (v) => (v && typeof v === 'object' && !Array.isArray(v) ? (v[state.lang] ?? v.es ?? '') : (v ?? ''));
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  /* Texto con énfasis: se escapa primero y después **frase** pasa a negrita y ==frase== a resaltado.
+     Solo en textos de lectura (resumen, paneles, tarjetas, tablas comparativas); los títulos van sin marcas. */
+  const rich = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong class="em">$1</strong>').replace(/==(.+?)==/g, '<mark class="hl">$1</mark>');
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
   const CAT_KEY = { it: 'catIt', cap: 'catCap', cont: 'catCont' };
 
@@ -167,18 +170,34 @@
       <rect x="0.5" y="0.5" width="39" height="31" rx="6" fill="${bg}" stroke="${ring ? fg : 'rgb(255 255 255 / 0.08)'}" stroke-width="${ring ? 3 : 1}"/>
       <text x="20" y="21" text-anchor="middle" fill="${ring ? '#191919' : fg}">Aa</text></svg>`;
 
+  const DF = {
+    start: { es: 'Inicio', en: 'Start' }, end: { es: 'Fin', en: 'End' }, decision: { es: 'Decisión', en: 'Decision' },
+    go: { es: 'Sigue el flujo', en: 'The flow continues' }, back: { es: 'Vuelve a', en: 'Back to' }
+  };
+  const quote = (s) => (state.lang === 'en' ? `“${s}”` : `«${s}»`);
+  function dfNode(n) {
+    const k = n.kind || 'step';
+    const kicker = k === 'decision' ? `<span class="dfl__k"><span class="dfl__dia" aria-hidden="true"></span>${esc(L(DF.decision))}<span class="sr-only">:</span></span>`
+      : (k === 'start' || k === 'end' ? `<span class="sr-only">${esc(L(DF[k]))}: </span>` : '');
+    const box = `<div class="dfl__box">${kicker}<span class="dfl__t">${esc(L(n.label))}</span>${n.cond ? `<span class="dfl__cond">${esc(L(n.cond))}</span>` : ''}</div>`;
+    const branches = n.branches ? `<ul class="dfl__br" style="--nb:${n.branches.length}">${n.branches.map((x) => `<li class="dfl__b"><p class="dfl__bl">${esc(L(x.label))}</p>${x.nodes ? `<ol class="dfl__list">${x.nodes.map(dfNode).join('')}</ol>` : ''}${x.to
+      ? `<p class="dfl__to"><i class="ph ph-arrow-up" aria-hidden="true"></i>${esc(L(DF.back))} ${esc(quote(L(x.to)))}</p>`
+      : (x.nodes ? '' : `<p class="dfl__to"><i class="ph ph-arrow-down" aria-hidden="true"></i>${esc(L(DF.go))}</p>`)}</li>`).join('')}</ul>` : '';
+    return `<li class="dfl__n dfl__n--${k}${n.dashed ? ' is-dashed' : ''}">${box}${branches}</li>`;
+  }
+
   const BLOCKS = {
     // Tarjetas de distinto tamaño para los puntos clave. size: 's', 'm' o 'l' (2, 3 o 4 de 6 columnas); tone: 'c2' suma el tinte del caso.
     bento: (b) => blk(b, `<ul class="bento">${b.items.map((x) => `<li class="bento__i bento__i--${x.size || 's'}${x.tone ? ' bento__i--tint' : ''}${x.lead ? ' bento__i--lead' : ''}${x.img && x.img.h > x.img.w ? ' bento__i--phone' : ''}">
         ${x.n ? `<p class="bento__n">${esc(x.n)}</p>` : ''}${x.k ? `<p class="bento__k">${esc(L(x.k))}</p>` : ''}${x.v ? `<p class="bento__v">${esc(L(x.v))}</p>` : ''}
-        ${x.title ? hx(b.h ? H + 1 : H, 'bento__h', esc(L(x.title))) : ''}${x.body ? `<p class="bento__b">${esc(L(x.body))}</p>` : ''}${x.img ? picture(x.img, false) : ''}
+        ${x.title ? hx(b.h ? H + 1 : H, 'bento__h', esc(L(x.title))) : ''}${x.body ? `<p class="bento__b">${rich(L(x.body))}</p>` : ''}${x.img ? picture(x.img, false) : ''}
       </li>`).join('')}</ul>`, true),
     // Referencias en APA 7: título en cursiva y enlace opcional.
     refs: (b) => blk(b, `<ul class="refs">${b.items.map((x) => `<li>${esc(L(x.pre))} <em>${esc(L(x.title))}</em>${esc(L(x.post))}${x.url ? ` <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url)}</a>` : ''}</li>`).join('')}</ul>`),
-    prose: (b) => blk(b, b.p.map((x) => `<p>${esc(L(x))}</p>`).join(''), false, ' prose'),
-    list: (b) => blk(b, `<ul class="items">${b.items.map((x) => `<li><strong>${esc(L(x.lead))}</strong><span>${esc(L(x.body))}</span></li>`).join('')}</ul>`),
-    roadmap: (b) => blk(b, `<ol class="steps" style="--n:${b.steps.length}">${b.steps.map((x) => `<li><span class="code">${esc(L(x.code))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${esc(L(x.body))}</p></li>`).join('')}</ol>`, true),
-    callout: (b) => blk({}, `<div class="callout">${hx(H, '', esc(L(b.h)))}<p>${esc(L(b.body))}</p></div>`, true),
+    prose: (b) => blk(b, b.p.map((x) => `<p>${rich(L(x))}</p>`).join(''), false, ' prose'),
+    list: (b) => blk(b, `<ul class="items">${b.items.map((x) => `<li><strong>${esc(L(x.lead))}</strong><span>${rich(L(x.body))}</span></li>`).join('')}</ul>`),
+    roadmap: (b) => blk(b, `<ol class="steps" style="--n:${b.steps.length}">${b.steps.map((x) => `<li><span class="code">${esc(L(x.code))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${rich(L(x.body))}</p></li>`).join('')}</ol>`, true),
+    callout: (b) => blk({}, `<div class="callout">${hx(H, '', esc(L(b.h)))}<p>${rich(L(b.body))}</p></div>`, true),
     // Cifras en mosaicos: --sc es la cantidad de columnas en pantallas anchas, elegida para que las filas queden parejas
     // (6 cifras: 3 + 3; 7 u 8: de a 4). La última fila se estira, así no quedan huecos.
     stats: (b) => blk({}, `<div class="stats" style="--sc:${b.items.length <= 5 ? b.items.length : (b.items.length === 6 ? 3 : 4)}">${b.items.map((x) => `<div><p class="v">${esc(L(x.value))}</p><p class="l">${esc(L(x.label))}</p></div>`).join('')}</div>`, true),
@@ -205,8 +224,11 @@
     /* ---------- Bloques del caso MurialdoLab (también los usa el de riesgos digitales) ---------- */
     phase: (b) => {
       H = 2;
-      const html = `<section class="phase" id="fase-${esc(b.id || b.name.toLowerCase().replace(/\s+/g, '-'))}">
-        <p class="phase__n">${b.n ? `${esc(b.n)} | ` : ''}${esc(L(b.mode))}</p>
+      // lens: 'cap', 'it' o 'both' pinta el rótulo con el color de la lente (un punto por color); el texto de la lente sigue escrito.
+      const lens = ['cap', 'it', 'both'].includes(b.lens) ? b.lens : '';
+      const dots = lens ? `<span class="phase__dots" aria-hidden="true">${lens === 'both' ? '<i></i><i></i>' : '<i></i>'}</span>` : '';
+      const html = `<section class="phase${lens ? ` phase--${lens}` : ''}" id="fase-${esc(b.id || L(b.name).toLowerCase().replace(/\s+/g, '-'))}">
+        <p class="phase__n">${dots}${b.n ? `${esc(b.n)} | ` : ''}${esc(L(b.mode))}</p>
         ${hx(2, 'phase__h', esc(L(b.name)))}
         <p class="phase__q">${esc(L(b.q))}</p>
       </section>`;
@@ -217,19 +239,20 @@
     diamond: (b) => blk(b, `${diamondSVG()}${b.ends ? `<p class="dd__ends">${b.ends.map((x) => `<span>${esc(L(x))}</span>`).join('')}</p>` : ''}<ol class="dd__grid">${b.phases.map((p, i) => `
       <li class="dd__phase"><p class="dd__mode">${String(i + 1).padStart(2, '0')} | ${esc(L(p.mode))}</p>${hx(H + 1, 'dd__name', esc(p.name))}<p class="dd__q">${esc(L(p.q))}</p>
         <ul class="chips">${L(p.items).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></li>`).join('')}</ol>`, true),
-    quote: (b) => blk(b, `<blockquote class="quote"><p>“${esc(L(b.body))}”</p></blockquote>${(b.p || []).map((x) => `<p class="quote__more">${esc(L(x))}</p>`).join('')}`),
+    quote: (b) => blk(b, `<blockquote class="quote"><p>“${esc(L(b.body))}”</p></blockquote>${(b.p || []).map((x) => `<p class="quote__more">${rich(L(x))}</p>`).join('')}`),
     cards: (b) => blk(b, `<ul class="xcards" style="--cols:${b.cols || 3}">${b.items.map((x) => `
       <li class="xcard">${x.img ? `<div class="xcard__img">${picture(x.img, false)}</div>` : ''}
-        <div class="xcard__txt">${x.title ? hx(H + 1, 'xcard__h', esc(L(x.title))) : ''}${x.tag ? `<p class="xcard__tag">${esc(L(x.tag))}</p>` : ''}<p>${esc(L(x.body))}</p>
+        <div class="xcard__txt">${x.avatar ? `<img class="xcard__av" src="${ROOT}assets/img/${esc(x.avatar.src)}" width="${x.avatar.w}" height="${x.avatar.h}" alt="" loading="lazy" decoding="async">` : ''}${x.title ? hx(H + 1, 'xcard__h', esc(L(x.title))) : ''}${x.tag ? `<p class="xcard__tag">${esc(L(x.tag))}</p>` : ''}<p>${rich(L(x.body))}</p>
         ${x.url && b.cta ? `<a class="link-arrow xcard__link" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(b.cta))}<span class="sr-only">: ${esc(L(x.title))}</span></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>` : ''}</div></li>`).join('')}</ul>`, true),
     empathy: (b) => blk(b, `<div class="emp">${b.quads.map((q) => `
       <section class="emp__q emp__q--${q.k}">${hx(H + 1, 'emp__h', esc(L(q.title)))}<ul>${L(q.items).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></section>`).join('')}</div>`, true),
-    persona: (b) => blk(b, `<div class="persona">
+    // photo.round: retrato recortado en círculo (con su propio anillo), a su tamaño real en lugar de a 240 px.
+    persona: (b) => blk(b, `<div class="persona${b.photo.round ? ' persona--round' : ''}">
         <div class="persona__head">
           <img class="persona__photo" src="${ROOT}assets/img/${esc(b.photo.src)}" width="${b.photo.w}" height="${b.photo.h}" alt="${esc(L(b.photo.alt))}" loading="lazy" decoding="async">
           <div class="persona__id">${hx(H + 1, 'persona__name', esc(b.name))}
             <dl class="persona__meta">${b.meta.map((m) => `<div><dt>${esc(L(m.k))}</dt><dd>${esc(L(m.v))}</dd></div>`).join('')}</dl>
-            <p class="persona__bio">${esc(L(b.bio))}</p></div>
+            <p class="persona__bio">${rich(L(b.bio))}</p></div>
         </div>
         <div class="persona__cols">
           <div>${hx(H + 2, 'persona__l', esc(L(b.goalsL)))}<ul>${L(b.goals).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
@@ -243,7 +266,7 @@
         <div>${hx(H + 1, 'jr__xh', esc(L(b.labels.actors)))}<ul class="chips">${L(b.actors).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
         <div>${hx(H + 1, 'jr__xh', esc(L(b.labels.touch)))}<ul class="chips">${L(b.touch).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
       </div>`, true),
-    bullets: (b) => blk(b, `<ul class="checks">${L(b.items).map((x) => `<li><i class="ph ph-check" aria-hidden="true"></i><span>${esc(x)}</span></li>`).join('')}</ul>${b.foot ? `<p class="blk__foot">${esc(L(b.foot))}</p>` : ''}`),
+    bullets: (b) => blk(b, `<ul class="checks">${L(b.items).map((x) => `<li><i class="ph ph-check" aria-hidden="true"></i><span>${rich(x)}</span></li>`).join('')}</ul>${b.foot ? `<p class="blk__foot">${esc(L(b.foot))}</p>` : ''}`),
     taskflow: (b) => blk(b, `<ol class="tf" style="--tfc:${(n => (n <= 4 ? n : n <= 6 ? 3 : 4))(L(b.steps).length)}">${L(b.steps).map((x, i, a) => `<li><span class="tf__n">${String(i + 1).padStart(2, '0')}</span><span class="tf__t">${esc(x)}</span>${i < a.length - 1 ? '<i class="ph ph-arrow-right tf__a" aria-hidden="true"></i>' : ''}</li>`).join('')}</ol>`, true),
     userflow: (b) => {
       const item = (x) => (Array.isArray(x) ? `<li>${esc(x[0])}<ul>${x[1].map((y) => `<li>${esc(y)}</li>`).join('')}</ul></li>` : `<li>${esc(x)}</li>`);
@@ -258,11 +281,12 @@
       </div>`, true); },
     /* ---------- Bloques del caso de riesgos digitales ---------- */
     // Barras horizontales sobre una lista de definición: el valor va escrito al lado de cada barra.
+    // unit: lo que sigue al valor ('%' si no se indica; '' para cantidades).
     bars: (b) => {
       const max = Math.max(...b.rows.map((r) => r.v));
       const pct = new Intl.NumberFormat(state.lang === 'en' ? 'en-US' : 'es-AR', { maximumFractionDigits: 1 });
       return blk(b, `<figure class="bars"><figcaption class="bars__cap">${esc(L(b.title))}</figcaption>
-        <dl>${b.rows.map((r, i) => `<div class="bars__row${b.lead === i ? ' is-lead' : ''}"><dt>${r.flag ? `<img class="bars__flag" src="${ROOT}assets/img/flags/${esc(r.flag)}.svg" width="21" height="14" alt="">` : ''}${esc(L(r.label))}</dt><dd><span class="bars__track" aria-hidden="true"><span class="bars__fill" style="--w:${(r.v / max * 100).toFixed(1)}%"></span></span><span class="bars__v">${pct.format(r.v)}%</span></dd></div>`).join('')}</dl></figure>`);
+        <dl>${b.rows.map((r, i) => `<div class="bars__row${b.lead === i ? ' is-lead' : ''}"><dt>${r.flag ? `<img class="bars__flag" src="${ROOT}assets/img/flags/${esc(r.flag)}.svg" width="21" height="14" alt="">` : ''}${esc(L(r.label))}</dt><dd><span class="bars__track" aria-hidden="true"><span class="bars__fill" style="--w:${(r.v / max * 100).toFixed(1)}%"></span></span><span class="bars__v">${pct.format(r.v)}${b.unit === undefined ? '%' : esc(L(b.unit))}</span></dd></div>`).join('')}</dl></figure>`);
     },
     activities: (b) => blk(b, `<ol class="acts">${b.items.map((a, i) => `
       <li class="act"><div class="act__head"><p class="act__n">${String(i + 1).padStart(2, '0')}</p>${hx(H + 1, 'act__h', esc(L(a.title)))}
@@ -285,9 +309,11 @@
     // Tabla de tres columnas (dimensión, antes, después); en pantallas chicas cada fila se apila con su rótulo.
     // accent: sin lado bueno ni malo; resalta la primera columna y la última con los colores del caso.
     // marks: colorea las dos columnas (rosado para "antes", turquesa para "después") con un ícono en cada encabezado.
-    compare: (b) => blk(b, `<div class="cmp${b.marks ? ' cmp--marks' : ''}${b.accent ? ' cmp--accent' : ''}${b.lead ? ' cmp--lead' : ''}"><table>
-        <thead><tr><th scope="col">${esc(L(b.cols.dim))}</th><th scope="col">${b.marks ? '<i class="ph ph-x-circle" aria-hidden="true"></i>' : ''}${esc(L(b.cols.before))}</th><th scope="col">${b.marks ? '<i class="ph ph-check-circle" aria-hidden="true"></i>' : ''}${b.accent ? '<i class="ph ph-arrow-right" aria-hidden="true"></i>' : ''}${esc(L(b.cols.after))}</th></tr></thead>
-        <tbody>${b.rows.map((r) => `<tr><th scope="row">${esc(L(r.dim))}</th><td data-l="${esc(L(b.cols.before))}">${esc(L(r.before))}</td><td data-l="${esc(L(b.cols.after))}">${esc(L(r.after))}</td></tr>`).join('')}</tbody></table></div>`, true),
+    // arrow: false quita la flecha del encabezado de la última columna (cuando no hay un antes y un después).
+    // lens: además, la columna del medio toma el color secundario del caso (dos miradas lado a lado).
+    compare: (b) => blk(b, `<div class="cmp${b.marks ? ' cmp--marks' : ''}${b.accent ? ' cmp--accent' : ''}${b.lens ? ' cmp--lens' : ''}${b.lead ? ' cmp--lead' : ''}"><table>
+        <thead><tr><th scope="col">${esc(L(b.cols.dim))}</th><th scope="col">${b.marks ? '<i class="ph ph-x-circle" aria-hidden="true"></i>' : ''}${esc(L(b.cols.before))}</th><th scope="col">${b.marks ? '<i class="ph ph-check-circle" aria-hidden="true"></i>' : ''}${b.accent && b.arrow !== false ? '<i class="ph ph-arrow-right" aria-hidden="true"></i>' : ''}${esc(L(b.cols.after))}</th></tr></thead>
+        <tbody>${b.rows.map((r) => `<tr><th scope="row">${esc(L(r.dim))}</th><td data-l="${esc(L(b.cols.before))}">${rich(L(r.before))}</td><td data-l="${esc(L(b.cols.after))}">${rich(L(r.after))}</td></tr>`).join('')}</tbody></table></div>`, true),
     // Hallazgos: severidad y estado siempre escritos (el color acompaña, no informa solo).
     findings: (b) => {
       const lb = b.labels;
@@ -314,7 +340,7 @@
             <span class="metro__name">${esc(L(s.name))}</span>
             <span class="metro__min">${s.min} ${esc(L(b.unit))}</span>
           </li>`).join('')}</ol>
-        <p class="metro__total">${esc(L(b.total))}: ${total} ${esc(L(b.unit))}</p>
+        ${b.hideTotal ? '' : `<p class="metro__total">${esc(L(b.total))}: ${total} ${esc(L(b.unit))}</p>`}
       </section>`;
     }).join('')}</div>`, true),
     // Barras apiladas (actividad y exposición) sobre una lista de definición. La escala es la parada más larga;
@@ -339,6 +365,37 @@
         <dl>${b.rows.map(row).join('')}</dl>
         <p class="split__total"><span aria-hidden="true">${esc(L(b.total))}: ${sumA} + ${sumT - sumA} = ${sumT} ${u}</span><span class="sr-only">${esc(L(b.total))}: ${sumT} ${u}. ${la}: ${sumA} ${u}. ${lb}: ${sumT - sumA} ${u}.</span></p></figure>`, true);
     },
+
+    /* ---------- Bloques del caso de Rumbo ---------- */
+    // Línea de tiempo en días, sin SVG: una barra con un tramo por etapa (proporcional a sus días), hitos marcados
+    // sobre la barra y, debajo, una tarjeta por etapa con su rango, su duración y un ejemplo. La barra es decorativa:
+    // las etapas y los hitos también van escritos (tarjetas y leyenda), así se entiende sin verla.
+    // start / end: primer y último día; stages: [{ name, from, to, range, body, ex? }]; marks: [{ at, label }];
+    // ticks: días con rótulo en el eje; legend: hitos en texto.
+    timeline: (b) => {
+      const span = b.end - b.start + 1;
+      const pos = (d) => `${(((d - b.start) / span) * 100).toFixed(2)}%`;
+      const days = (s) => s.to - s.from + 1;
+      return blk(b, `<div class="tl">
+        <div class="tl__head">${hx(H + 1, 'tl__h', esc(L(b.name)))}${b.sub ? `<p class="tl__sub">${rich(L(b.sub))}</p>` : ''}</div>
+        <div class="tl__chart" aria-hidden="true">
+          <div class="tl__marks">${b.marks.map((m) => `<span class="tl__mark${m.at >= b.end - 3 ? ' is-end' : ''}${m.at <= b.start + 3 ? ' is-start' : ''}" style="--x:${pos(m.at)}"><span class="tl__ml">${esc(L(m.label))}</span></span>`).join('')}</div>
+          <div class="tl__track">${b.stages.map((s, i) => `<span class="tl__seg tl__seg--${i + 1}" style="flex-grow:${days(s)}"><span class="tl__sn">${i + 1}</span></span>`).join('')}</div>
+          <div class="tl__axis">${(b.ticks || []).map((d) => `<span class="tl__tick${d === b.end ? ' is-end' : ''}${d === b.start ? ' is-start' : ''}" style="--x:${pos(d)}">${esc(String(d))}</span>`).join('')}</div>
+          ${b.axisL ? `<p class="tl__axisl">${esc(L(b.axisL))}</p>` : ''}
+        </div>
+        <ol class="tl__stages" style="--n:${b.stages.length}">${b.stages.map((s, i) => `<li class="tl__st tl__st--${i + 1}">
+          <p class="tl__top"><span class="tl__num" aria-hidden="true">${i + 1}</span><span class="tl__dur">${days(s)} ${esc(L(b.unit))}</span></p>
+          ${hx(H + 2, 'tl__name', esc(L(s.name)))}<p class="tl__range">${esc(L(s.range))}</p>
+          <p class="tl__body">${rich(L(s.body))}</p>${s.ex ? `<p class="tl__ex"><span>${esc(L(b.exL))}</span> ${esc(L(s.ex))}</p>` : ''}
+        </li>`).join('')}</ol>
+        ${b.legend ? `<ul class="tl__legend">${L(b.legend).map((x) => `<li><span class="tl__dia" aria-hidden="true"></span>${rich(x)}</li>`).join('')}</ul>` : ''}
+      </div>`, true);
+    },
+    // Diagrama de flujo con decisiones, sin SVG: una lista ordenada en el orden del flujo, que es a la vez el diagrama
+    // y su versión en texto. nodes: [{ kind: 'start' | 'step' | 'decision' | 'end', label, dashed?, cond?,
+    // branches?: [{ label, nodes?, to? }] }]. Una rama sin nodos sigue el flujo; to: nombre del paso al que vuelve.
+    decisionflow: (b) => blk(b, `<ol class="dfl">${b.nodes.map(dfNode).join('')}</ol>`, true),
 
     audit: (b) => blk(b, `<div class="audit"><table>
         <thead><tr><th scope="col">${esc(L(b.cols.pair))}</th><th scope="col">${esc(L(b.cols.ratio))}</th><th scope="col">${esc(L(b.cols.result))}</th><th scope="col">${esc(L(b.cols.fix))}</th></tr></thead>
@@ -392,8 +449,8 @@
     const sm = c.summary;
     const summary = sm ? `<section class="brief" aria-labelledby="brief-h">
         <h2 class="sr-only" id="brief-h">${t('sumTitle')}</h2>
-        <div class="brief__col brief__col--p"><h3 class="brief__k"><i class="ph ph-x-circle" aria-hidden="true"></i>${t('sumProblem')}</h3><p class="brief__t">${esc(L(sm.problem))}</p></div>
-        <div class="brief__col brief__col--s"><h3 class="brief__k"><i class="ph ph-check-circle" aria-hidden="true"></i>${t('sumSolution')}</h3><p class="brief__t">${esc(L(sm.solution))}</p></div>
+        <div class="brief__col brief__col--p"><h3 class="brief__k"><i class="ph ph-x-circle" aria-hidden="true"></i>${t('sumProblem')}</h3><p class="brief__t">${rich(L(sm.problem))}</p></div>
+        <div class="brief__col brief__col--s"><h3 class="brief__k"><i class="ph ph-check-circle" aria-hidden="true"></i>${t('sumSolution')}</h3><p class="brief__t">${rich(L(sm.solution))}</p></div>
         <div class="brief__col brief__col--r"><h3 class="brief__k"><i class="ph ph-arrow-up" aria-hidden="true"></i>${t(sm.results.length > 1 ? 'sumResults' : 'sumResult')}</h3>
           <ul class="brief__res">${sm.results.map((r) => (r.v
             ? `<li class="brief__m"><span class="brief__v">${esc(L(r.v))}</span> <span class="brief__l">${esc(L(r.l))}</span></li>`
@@ -435,7 +492,8 @@
       ${live}
       ${(() => { const items = [fact('fRole', f.role), fact('fTimeline', f.timeline), fact('fContext', f.context), fact('fStack', f.stack), fact('fMethods', f.methods)].filter(Boolean); return `<dl class="facts" style="--n:${items.length}">${items.join('')}</dl>`; })()}
       <div class="blocks">${blocks}</div>
-      ${c.outcome ? blk({ h: t('outcome') }, [].concat(c.outcome.body).map((x) => `<p>${esc(L(x))}</p>`).join(''), false, ' blk--outcome') : ''}
+      ${c.outcome ? blk({ h: c.outcome.h || t('outcome') }, [].concat(c.outcome.body).map((x) => `<p>${rich(L(x))}</p>`).join(''), false, ' blk--outcome') : ''}
+      ${c.credits ? `<p class="case__credits">${esc(L(c.credits))}</p>` : ''}
       <a class="next" href="${ROOT}casos/${nxt.slug}/?lang=${state.lang}" style="--next-c:${nextColor}">
         <span class="next__label">${t('nextCase')}</span>
         <span class="next__title"><span>${esc(L(nxt.title))}</span><i class="ph ph-arrow-right" aria-hidden="true"></i></span>

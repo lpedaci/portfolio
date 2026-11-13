@@ -11758,5 +11758,2979 @@ window.CASES = {
     }
    ]
   }
+ },
+ "rumbo": {
+  "cat": "it",
+  "touch": "cap",
+  "title": {
+   "es": "Rumbo, plataforma de onboarding corporativo",
+   "en": "Rumbo, a corporate onboarding platform"
+  },
+  "subtitle": {
+   "es": "Producto B2B para RRHH, jefes, personas nuevas y sistemas: el ingreso pensado como experiencia de aprendizaje y construido como prototipo navegable de alta fidelidad. Empresa y datos ficticios.",
+   "en": "A B2B product for HR, managers, new hires and IT: joining a company designed as a learning experience and built as a high-fidelity, fully navigable prototype. Fictional company and data."
+  },
+  "chips": {
+   "es": [
+    "Learning Experience Design",
+    "UX/UI",
+    "Producto B2B",
+    "WCAG 2.2 AA"
+   ],
+   "en": [
+    "Learning Experience Design",
+    "UX/UI",
+    "B2B product",
+    "WCAG 2.2 AA"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "En muchas empresas, el ingreso de una persona vive en **planillas, correos sueltos y la memoria de quien la recibe**. La persona nueva no sabe qué hacer primero ni con quién hablar, el jefe llega al check-in sin datos, RRHH arma el mismo recorrido una y otra vez y sistemas recibe pedidos urgentes sin una forma segura de verificar quién los pide.",
+    "en": "In many companies, a new hire's first weeks live in **spreadsheets, scattered emails and the memory of whoever welcomes them**. The new hire doesn't know what to do first or who to ask, the manager arrives at the check-in with no data, HR rebuilds the same journey again and again, and IT gets urgent requests with no safe way to verify who is asking."
+   },
+   "solution": {
+    "es": "Rumbo convierte el ingreso en un **recorrido por etapas que RRHH diseña una vez por puesto**. Cada tarea tiene responsable, plazo y dependencias; el jefe acompaña con check-ins a los 30, 60 y 90 días, y RRHH ve dónde se traban los recorridos. **Lo especifiqué, lo diseñé y lo llevé a un prototipo funcional**, con un agente de IA como desarrollador.",
+    "en": "Rumbo turns onboarding into a **staged journey that HR designs once per role**. Every task has an owner, a due date and dependencies; the manager follows up with check-ins at 30, 60 and 90 days, and HR sees where journeys get stuck. **I specified it, designed it and took it to a working prototype**, with an AI agent as the developer."
+   },
+   "results": [
+    {
+     "v": "40",
+     "l": {
+      "es": "pantallas para cuatro roles, en español e inglés",
+      "en": "screens for four roles, in Spanish and English"
+     }
+    },
+    {
+     "v": "142",
+     "l": {
+      "es": "decisiones de diseño registradas, con la duda, lo decidido y por qué",
+      "en": "design decisions logged, with the question, the decision and the reason"
+     }
+    },
+    {
+     "v": "0",
+     "l": {
+      "es": "errores de axe en 51 vistas y 6 anchos, de 320 a 1440 px",
+      "en": "axe errors across 51 views and 6 widths, from 320 to 1440 px"
+     }
+    },
+    {
+     "t": {
+      "es": "Lighthouse con 100 en accesibilidad en las cuatro pantallas medidas, 380 tests unitarios y 614 pruebas de punta a punta en verde.",
+      "en": "Lighthouse scores 100 for accessibility on the four screens measured, with 380 unit tests and 614 end-to-end tests passing."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Experience Designer: supuestos y proto-personas, diseño instruccional del recorrido, arquitectura de la información, UX/UI, sistema de diseño, especificación funcional y dirección del desarrollo",
+    "en": "Experience Designer: assumptions and proto-personas, instructional design of the journey, information architecture, UX/UI, design system, functional specification and directing the development"
+   },
+   "timeline": {
+    "es": "Noviembre 2026",
+    "en": "November 2026"
+   },
+   "context": {
+    "es": "Producto conceptual para portfolio. Nortia S.A., sus personas y sus datos son ficticios",
+    "en": "Concept product for my portfolio. Nortia S.A., its people and its data are fictional"
+   },
+   "stack": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Radix y shadcn/ui",
+    "Recharts",
+    "Vitest",
+    "Playwright",
+    "GitHub Actions",
+    "Claude Code"
+   ],
+   "methods": {
+    "es": [
+     "Lean UX",
+     "Arquitectura de la información",
+     "MoSCoW",
+     "ISO/IEC 25010",
+     "Diseño instruccional",
+     "WCAG 2.2 AA",
+     "Material Design 3",
+     "Modelo C4"
+    ],
+    "en": [
+     "Lean UX",
+     "Information architecture",
+     "MoSCoW",
+     "ISO/IEC 25010",
+     "Instructional design",
+     "WCAG 2.2 AA",
+     "Material Design 3",
+     "C4 model"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Recorrer la demo",
+     "en": "Explore the demo"
+    },
+    "url": "https://lpedaci.github.io/rumbo-app/"
+   },
+   {
+    "label": {
+     "es": "Sistema de diseño",
+     "en": "Design system"
+    },
+    "url": "https://lpedaci.github.io/rumbo-app/#/design-system"
+   },
+   {
+    "label": {
+     "es": "Documentación y código",
+     "en": "Docs and code"
+    },
+    "url": "https://github.com/lpedaci/rumbo-app"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "quote",
+    "h": {
+     "es": "La idea",
+     "en": "The idea"
+    },
+    "body": {
+     "es": "El onboarding es el primer curso que toma una persona en una empresa, y pocas veces se diseña como uno.",
+     "en": "Onboarding is the first course anyone takes at a company, and it is rarely designed like one."
+    },
+    "p": [
+     {
+      "es": "Rumbo lo trata así: etapas con objetivos, tareas que se habilitan en orden, hitos que se evalúan y una persona que siempre sabe **qué hacer, con quién y para cuándo**. Y lo construye como un producto: **cuatro roles con objetivos distintos usando la misma herramienta**, cada uno con lo que necesita ver.",
+      "en": "Rumbo treats it that way: stages with goals, tasks that unlock in order, milestones that get assessed and a person who always knows **what to do, with whom and by when**. And it builds it as a product: **four roles with different goals using the same tool**, each one seeing what they need."
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "lens": true,
+    "arrow": false,
+    "h": {
+     "es": "Dos lentes sobre el mismo problema",
+     "en": "Two lenses on the same problem"
+    },
+    "cols": {
+     "dim": {
+      "es": "Aspecto",
+      "en": "Aspect"
+     },
+     "before": {
+      "es": "Lente LXD",
+      "en": "LXD lens"
+     },
+     "after": {
+      "es": "Lente UX/UI",
+      "en": "UX/UI lens"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "La pregunta",
+       "en": "The question"
+      },
+      "before": {
+       "es": "¿Cómo aprende alguien a trabajar en un lugar nuevo?",
+       "en": "How does someone learn to work somewhere new?"
+      },
+      "after": {
+       "es": "¿Cómo usan una misma herramienta cuatro roles distintos?",
+       "en": "How do four different roles use the same tool?"
+      }
+     },
+     {
+      "dim": {
+       "es": "A quién pongo en el centro",
+       "en": "Who I put at the centre"
+      },
+      "before": {
+       "es": "A la persona nueva, que aprende, y a RRHH, que diseña el recorrido",
+       "en": "The new hire, who is learning, and HR, who designs the journey"
+      },
+      "after": {
+       "es": "A los cuatro roles, cada uno con su espacio y sus permisos",
+       "en": "All four roles, each with its own space and permissions"
+      }
+     },
+     {
+      "dim": {
+       "es": "Qué diseño",
+       "en": "What I design"
+      },
+      "before": {
+       "es": "Secuencia, andamiaje, hitos evaluables y retroalimentación",
+       "en": "Sequence, scaffolding, assessable milestones and feedback"
+      },
+      "after": {
+       "es": "Arquitectura de la información, flujos, interfaz y sistema de diseño",
+       "en": "Information architecture, flows, interface and design system"
+      }
+     },
+     {
+      "dim": {
+       "es": "Cómo sé que funciona",
+       "en": "How I know it works"
+      },
+      "before": {
+       "es": "La persona avanza, entiende por qué algo se traba y llega preparada al check-in",
+       "en": "The new hire moves forward, understands why something is stuck and arrives ready for the check-in"
+      },
+      "after": {
+       "es": "Cada rol encuentra lo suyo, sin errores de accesibilidad y en cualquier pantalla",
+       "en": "Every role finds what it needs, with no accessibility errors, on any screen"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "descubrir",
+    "n": "01",
+    "lens": "both",
+    "mode": {
+     "es": "Las dos lentes",
+     "en": "Both lenses"
+    },
+    "name": {
+     "es": "Descubrir",
+     "en": "Discover"
+    },
+    "q": {
+     "es": "¿Quién vive el ingreso y qué le falta a cada uno?",
+     "en": "Who goes through onboarding, and what does each of them lack?"
+    }
+   },
+   {
+    "t": "cards",
+    "cols": 4,
+    "h": {
+     "es": "Cuatro roles, cuatro problemas",
+     "en": "Four roles, four problems"
+    },
+    "items": [
+     {
+      "avatar": {
+       "src": "rumbo-11-carla.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Carla Méndez",
+      "tag": {
+       "es": "RRHH y L&D",
+       "en": "HR and L&D"
+      },
+      "body": {
+       "es": "Diseña los recorridos y quiere demostrar con datos que funcionan, pero **se entera tarde de los problemas** y teme romper los ingresos en curso al cambiar una plantilla.",
+       "en": "Designs the journeys and wants to prove with data that they work, but **hears about problems too late** and fears breaking ongoing journeys when she changes a template."
+      }
+     },
+     {
+      "avatar": {
+       "src": "rumbo-12-martin.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Martín Rossi",
+      "tag": {
+       "es": "Jefe directo",
+       "en": "Line manager"
+      },
+      "body": {
+       "es": "Quiere que la persona sea productiva cuanto antes, sin que el acompañamiento le coma el día. **Se olvida de los check-ins** y llega sin saber qué hizo la persona.",
+       "en": "Wants the new hire to be productive as soon as possible without mentoring eating up his day. **He forgets check-ins** and turns up without knowing what the person has done."
+      }
+     },
+     {
+      "avatar": {
+       "src": "rumbo-10-sofia.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Sofía Ramírez",
+      "tag": {
+       "es": "Nuevo ingreso",
+       "en": "New hire"
+      },
+      "body": {
+       "es": "Quiere hacer las cosas bien y en orden. **No sabe si va bien**, espera accesos de otras áreas y le da vergüenza preguntar dos veces lo mismo.",
+       "en": "Wants to do things right and in order. **She doesn't know if she is on track**, waits for access from other teams and feels awkward asking the same thing twice."
+      }
+     },
+     {
+      "avatar": {
+       "src": "rumbo-13-diego.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Diego Ferreyra",
+      "tag": {
+       "es": "Sistemas",
+       "en": "IT"
+      },
+      "body": {
+       "es": "Tiene que resolver accesos rápido sin abrirle la puerta a la ingeniería social. Recibe pedidos por chat o en el pasillo, **sin datos para verificar quién pide**.",
+       "en": "Has to sort out access quickly without opening the door to social engineering. Requests arrive by chat or in the corridor, **with no data to verify who is asking**."
+      }
+     }
+    ]
+   },
+   {
+    "t": "persona",
+    "h": {
+     "es": "Sofía, la persona que aprende",
+     "en": "Sofía, the person who learns"
+    },
+    "photo": {
+     "src": "rumbo-10-sofia.webp",
+     "w": 112,
+     "h": 112,
+     "round": true,
+     "alt": {
+      "es": "Retrato de Sofía Ramírez, persona ficticia, con el anillo violeta del rol de nuevo ingreso",
+      "en": "Portrait of Sofía Ramírez, a fictional person, with the violet ring of the new hire role"
+     }
+    },
+    "name": "Sofía Ramírez",
+    "meta": [
+     {
+      "k": {
+       "es": "Rol",
+       "en": "Role"
+      },
+      "v": {
+       "es": "Nuevo ingreso",
+       "en": "New hire"
+      }
+     },
+     {
+      "k": {
+       "es": "Puesto",
+       "en": "Position"
+      },
+      "v": {
+       "es": "Analista de Datos Jr.",
+       "en": "Junior Data Analyst"
+      }
+     },
+     {
+      "k": {
+       "es": "Tipo",
+       "en": "Type"
+      },
+      "v": {
+       "es": "Proto-persona, hipótesis sin validar",
+       "en": "Proto-persona, unvalidated hypothesis"
+      }
+     }
+    ],
+    "bio": {
+     "es": "Motivada pero con incertidumbre. Necesita una lista clara, señales de progreso y **saber que trabarse por una dependencia no es su culpa**.",
+     "en": "Motivated but unsure. She needs a clear list, signs of progress and **to know that being blocked by a dependency is not her fault**."
+    },
+    "goalsL": {
+     "es": "Criterios de éxito",
+     "en": "Success criteria"
+    },
+    "goals": {
+     "es": [
+      "Al entrar, ver de inmediato las 3 tareas más urgentes",
+      "Entender por qué una tarea está bloqueada y quién la destraba",
+      "Sentir que su opinión cuenta en los check-ins"
+     ],
+     "en": [
+      "See her 3 most urgent tasks as soon as she logs in",
+      "Understand why a task is blocked and who can unblock it",
+      "Feel that her opinion counts in check-ins"
+     ]
+    },
+    "painsL": {
+     "es": "Frustraciones supuestas",
+     "en": "Assumed frustrations"
+    },
+    "pains": {
+     "es": [
+      "Información repartida en muchos correos la primera semana",
+      "No saber si va bien o si se está atrasando",
+      "Esperar accesos de otras áreas sin saber a quién reclamar"
+     ],
+     "en": [
+      "Information spread across many emails in the first week",
+      "Not knowing whether she is on track or falling behind",
+      "Waiting for access from other teams without knowing who to chase"
+     ]
+    }
+   },
+   {
+    "t": "persona",
+    "h": {
+     "es": "Carla, la persona que diseña el recorrido",
+     "en": "Carla, the person who designs the journey"
+    },
+    "photo": {
+     "src": "rumbo-11-carla.webp",
+     "w": 112,
+     "h": 112,
+     "round": true,
+     "alt": {
+      "es": "Retrato de Carla Méndez, persona ficticia, con el anillo petróleo del rol de RRHH",
+      "en": "Portrait of Carla Méndez, a fictional person, with the teal ring of the HR role"
+     }
+    },
+    "name": "Carla Méndez",
+    "meta": [
+     {
+      "k": {
+       "es": "Rol",
+       "en": "Role"
+      },
+      "v": {
+       "es": "RRHH y L&D",
+       "en": "HR and L&D"
+      }
+     },
+     {
+      "k": {
+       "es": "Puesto",
+       "en": "Position"
+      },
+      "v": "People Partner"
+     },
+     {
+      "k": {
+       "es": "Tipo",
+       "en": "Type"
+      },
+      "v": {
+       "es": "Proto-persona, hipótesis sin validar",
+       "en": "Proto-persona, unvalidated hypothesis"
+      }
+     }
+    ],
+    "bio": {
+     "es": "Piensa en sistemas: **quiere diseñar una vez y reutilizar**. Revisa el estado general y baja al detalle solo cuando algo se sale de lo esperado.",
+     "en": "Thinks in systems: **she wants to design once and reuse**. She checks the overall picture and drills down only when something goes off track."
+    },
+    "goalsL": {
+     "es": "Criterios de éxito",
+     "en": "Success criteria"
+    },
+    "goals": {
+     "es": [
+      "Ver en una sola pantalla qué recorridos están en riesgo y por qué",
+      "Crear un recorrido nuevo en minutos a partir de una plantilla",
+      "Responder con un gráfico dónde se traba el onboarding"
+     ],
+     "en": [
+      "See on a single screen which journeys are at risk and why",
+      "Create a new journey from a template in minutes",
+      "Answer with a chart where onboarding gets stuck"
+     ]
+    },
+    "painsL": {
+     "es": "Frustraciones supuestas",
+     "en": "Assumed frustrations"
+    },
+    "pains": {
+     "es": [
+      "El proceso vive en planillas, correos y la memoria de cada líder",
+      "Las tareas de otras áreas se atrasan y no tiene cómo mostrarlo",
+      "Miedo a romper los recorridos en curso al cambiar una plantilla"
+     ],
+     "en": [
+      "The process lives in spreadsheets, emails and each leader's memory",
+      "Tasks owned by other teams run late and she has no way to show it",
+      "Fear of breaking ongoing journeys when she changes a template"
+     ]
+    }
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Proto-personas, no personas",
+     "en": "Proto-personas, not personas"
+    },
+    "body": {
+     "es": "Las construí con el enfoque de Lean UX (Gothelf y Seiden, 2021): **hipótesis explícitas, sin entrevistas ni citas inventadas**. Cada una tiene su tabla de supuestos con el riesgo si es falso y cómo validarlo, y el proyecto incluye un plan de validación en cinco etapas, con entre 2 y 6 personas por rol.",
+     "en": "I built them with the Lean UX approach (Gothelf & Seiden, 2021): **explicit hypotheses, with no invented interviews or quotes**. Each one has its own table of assumptions, with the risk if it is false and how to validate it, and the project includes a five-stage validation plan with 2 to 6 people per role."
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Los supuestos de mayor riesgo",
+     "en": "The riskiest assumptions"
+    },
+    "note": {
+     "es": "Cada supuesto, con cómo lo validaría.",
+     "en": "Each assumption, with how I would validate it."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "RRHH diseña los recorridos, no cada líder",
+       "en": "HR designs the journeys, not each leader"
+      },
+      "body": {
+       "es": "Entrevistas a RRHH y a líderes sobre quién arma hoy el plan de ingreso",
+       "en": "Interviews with HR and leaders about who puts together the onboarding plan today"
+      }
+     },
+     {
+      "lead": {
+       "es": "El problema es la visibilidad, no la falta de contenido",
+       "en": "The problem is visibility, not a lack of content"
+      },
+      "body": {
+       "es": "Pedirle a RRHH que ordene sus problemas actuales por impacto",
+       "en": "Ask HR to rank their current problems by impact"
+      }
+     },
+     {
+      "lead": {
+       "es": "Los líderes hacen check-ins formales a los 30, 60 y 90 días",
+       "en": "Leaders hold formal check-ins at 30, 60 and 90 days"
+      },
+      "body": {
+       "es": "Entrevistas sobre la frecuencia y el formato del seguimiento actual",
+       "en": "Interviews about how often and how follow-up happens today"
+      }
+     },
+     {
+      "lead": {
+       "es": "La persona nueva prefiere una lista guiada a un portal con mucha información",
+       "en": "New hires prefer a guided list to an information-heavy portal"
+      },
+      "body": {
+       "es": "Entrevistas a ingresos de los últimos seis meses sobre su primera semana",
+       "en": "Interviews with people hired in the last six months about their first week"
+      }
+     }
+    ]
+   },
+   {
+    "t": "journey",
+    "h": {
+     "es": "Los primeros 90 días de Sofía (hipótesis)",
+     "en": "Sofía's first 90 days (hypothesis)"
+    },
+    "note": {
+     "es": "Mapa de experiencia hipotético, derivado de la proto-persona: no sale de entrevistas.",
+     "en": "A hypothetical experience map derived from the proto-persona, not from interviews."
+    },
+    "labels": {
+     "emotion": {
+      "es": "Emoción",
+      "en": "Emotion"
+     },
+     "actions": {
+      "es": "Qué hace",
+      "en": "What she does"
+     },
+     "feel": {
+      "es": "Qué piensa",
+      "en": "What she thinks"
+     },
+     "actors": {
+      "es": "Quiénes participan",
+      "en": "Who is involved"
+     },
+     "touch": {
+      "es": "Puntos de contacto",
+      "en": "Touchpoints"
+     }
+    },
+    "stages": [
+     {
+      "name": {
+       "es": "Preingreso",
+       "en": "Pre-boarding"
+      },
+      "level": 0,
+      "emo": {
+       "es": "Expectativa",
+       "en": "Anticipation"
+      },
+      "actions": {
+       "es": "Recibe correos sueltos con formularios y documentos",
+       "en": "Gets scattered emails with forms and documents"
+      },
+      "feel": {
+       "es": "«¿Esto es todo lo que tengo que hacer antes de empezar?»",
+       "en": "“Is this everything I need to do before I start?”"
+      }
+     },
+     {
+      "name": {
+       "es": "Primer día",
+       "en": "First day"
+      },
+      "level": -1,
+      "emo": {
+       "es": "Abrumada",
+       "en": "Overwhelmed"
+      },
+      "actions": {
+       "es": "Firma, recibe equipo, conoce gente, espera accesos",
+       "en": "Signs papers, gets equipment, meets people, waits for access"
+      },
+      "feel": {
+       "es": "«No sé por dónde empezar ni a quién preguntar»",
+       "en": "“I don't know where to start or who to ask”"
+      }
+     },
+     {
+      "name": {
+       "es": "Semana 1",
+       "en": "Week 1"
+      },
+      "level": -1,
+      "emo": {
+       "es": "Trabada",
+       "en": "Stuck"
+      },
+      "actions": {
+       "es": "Hace cursos y lecturas; una tarea depende de un acceso que no llega",
+       "en": "Takes courses and readings; one task depends on access that doesn't arrive"
+      },
+      "feel": {
+       "es": "«¿Me estoy atrasando yo o me están atrasando?»",
+       "en": "“Am I falling behind, or is someone holding me back?”"
+      }
+     },
+     {
+      "name": {
+       "es": "Mes 1",
+       "en": "Month 1"
+      },
+      "level": 1,
+      "emo": {
+       "es": "Encaminada",
+       "en": "On track"
+      },
+      "actions": {
+       "es": "Completa tareas, conoce su equipo, prepara la autoevaluación",
+       "en": "Completes tasks, gets to know her team, prepares her self-review"
+      },
+      "feel": {
+       "es": "«Ya entiendo qué se espera de mí»",
+       "en": "“Now I understand what is expected of me”"
+      }
+     },
+     {
+      "name": {
+       "es": "Check-in de 30 días",
+       "en": "30-day check-in"
+      },
+      "level": 1,
+      "emo": {
+       "es": "Escuchada",
+       "en": "Heard"
+      },
+      "actions": {
+       "es": "Comparte cómo se siente; el jefe evalúa los hitos con ella",
+       "en": "Shares how she feels; her manager reviews the milestones with her"
+      },
+      "feel": {
+       "es": "«Mi opinión cuenta»",
+       "en": "“My opinion counts”"
+      }
+     },
+     {
+      "name": {
+       "es": "Días 30 a 90",
+       "en": "Days 30 to 90"
+      },
+      "level": 1,
+      "emo": {
+       "es": "Autónoma",
+       "en": "Independent"
+      },
+      "actions": {
+       "es": "Toma trabajo real con menos acompañamiento",
+       "en": "Takes on real work with less support"
+      },
+      "feel": {
+       "es": "«Ya soy parte del equipo»",
+       "en": "“I'm part of the team now”"
+      }
+     }
+    ],
+    "actors": {
+     "es": [
+      "Sofía",
+      "Martín (jefe)",
+      "Nicolás (buddy)",
+      "Carla (RRHH)",
+      "Diego (sistemas)"
+     ],
+     "en": [
+      "Sofía",
+      "Martín (manager)",
+      "Nicolás (buddy)",
+      "Carla (HR)",
+      "Diego (IT)"
+     ]
+    },
+    "touch": {
+     "es": [
+      "Correo",
+      "Rumbo",
+      "Reuniones",
+      "Mesa de ayuda"
+     ],
+     "en": [
+      "Email",
+      "Rumbo",
+      "Meetings",
+      "Help desk"
+     ]
+    }
+   },
+   {
+    "t": "prose",
+    "p": [
+     {
+      "es": "Los momentos bajos (primer día y semana 1) son los que Rumbo ataca primero: **«Lo próximo»** para el primer día y **el aviso de tarea bloqueada** para la semana 1.",
+      "en": "The low points (first day and week 1) are the ones Rumbo tackles first: **“Up next”** for the first day and **the blocked-task notice** for week 1."
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "definir",
+    "n": "02",
+    "lens": "it",
+    "mode": {
+     "es": "Lente UX/UI",
+     "en": "UX/UI lens"
+    },
+    "name": {
+     "es": "Definir",
+     "en": "Define"
+    },
+    "q": {
+     "es": "¿Qué tiene que hacer el producto y en qué orden?",
+     "en": "What does the product need to do, and in what order?"
+    }
+   },
+   {
+    "t": "bars",
+    "h": {
+     "es": "Cómo prioricé: matriz de decisión ponderada",
+     "en": "How I prioritised: a weighted decision matrix"
+    },
+    "title": {
+     "es": "Peso de cada criterio al priorizar funciones",
+     "en": "Weight of each criterion when prioritising features"
+    },
+    "lead": 0,
+    "rows": [
+     {
+      "label": {
+       "es": "Valor para el usuario",
+       "en": "Value for the user"
+      },
+      "v": 40
+     },
+     {
+      "label": {
+       "es": "Demostración de habilidades en el portfolio",
+       "en": "Showing skills in the portfolio"
+      },
+      "v": 35
+     },
+     {
+      "label": {
+       "es": "Facilidad sin backend",
+       "en": "Ease without a backend"
+      },
+      "v": 25
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "De la matriz a dos fases",
+     "en": "From the matrix to two phases"
+    },
+    "p": [
+     {
+      "es": "El resultado se expresó en MoSCoW y armó dos fases: **primero el núcleo**, lo que demuestra la propuesta, y **después la base corporativa**, lo que se espera de cualquier plataforma que maneja datos de personas. Incluí a propósito ==«demostración de habilidades» como criterio==: es un proyecto de portfolio y decirlo hace la priorización honesta.",
+      "en": "The result was expressed with MoSCoW and produced two phases: **first the core**, which proves the idea, and **then the corporate baseline**, which anyone expects from a platform that handles personal data. I deliberately included ==“showing skills” as a criterion==: this is a portfolio project, and saying so keeps the prioritisation honest."
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "h": {
+     "es": "Dos fases, ocho áreas",
+     "en": "Two phases, eight areas"
+    },
+    "cols": {
+     "dim": {
+      "es": "Área",
+      "en": "Area"
+     },
+     "before": {
+      "es": "Núcleo (fase A)",
+      "en": "Core (phase A)"
+     },
+     "after": {
+      "es": "Base corporativa (fase B)",
+      "en": "Corporate baseline (phase B)"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Acceso y seguridad",
+       "en": "Access and security"
+      },
+      "before": {
+       "es": "SSO y verificación en dos pasos simulados, bloqueo por intentos y derivación a sistemas",
+       "en": "Simulated SSO and two-step verification, lockout after failed attempts and referral to IT"
+      },
+      "after": {
+       "es": "Sesiones activas, alertas de inicio inusual y doble aprobación de cambios sensibles",
+       "en": "Active sessions, unusual sign-in alerts and dual approval of sensitive changes"
+      }
+     },
+     {
+      "dim": {
+       "es": "Recorrido",
+       "en": "Journey"
+      },
+      "before": {
+       "es": "Recorrido por etapas, con tareas, cursos y dependencias",
+       "en": "Staged journey with tasks, courses and dependencies"
+      },
+      "after": {
+       "es": "Comentarios con menciones en cada tarea",
+       "en": "Comments with mentions on every task"
+      }
+     },
+     {
+      "dim": {
+       "es": "Plantillas",
+       "en": "Templates"
+      },
+      "before": {
+       "es": "Constructor con arrastrar y soltar y alternativa por teclado",
+       "en": "Builder with drag and drop and a keyboard alternative"
+      },
+      "after": {
+       "es": "Borrador, publicación, versiones y comparación",
+       "en": "Draft, publishing, versions and comparison"
+      }
+     },
+     {
+      "dim": {
+       "es": "Personas e ingresos",
+       "en": "People and hires"
+      },
+      "before": {
+       "es": "Alta con fechas calculadas desde la plantilla",
+       "en": "New hires with dates calculated from the template"
+      },
+      "after": {
+       "es": "Personas y catálogos; altas, cambios de puesto y bajas con sus accesos",
+       "en": "People and catalogues; joiners, role changes and leavers with their access"
+      }
+     },
+     {
+      "dim": {
+       "es": "Seguimiento",
+       "en": "Follow-up"
+      },
+      "before": {
+       "es": "Panel con alertas y check-ins 30/60/90 con escalamiento",
+       "en": "Dashboard with alerts and 30/60/90 check-ins with escalation"
+      },
+      "after": {
+       "es": "Notificaciones, reportes en CSV y vistas para imprimir",
+       "en": "Notifications, CSV reports and print views"
+      }
+     },
+     {
+      "dim": {
+       "es": "Control",
+       "en": "Control"
+      },
+      "before": {
+       "es": "Solicitudes de acceso, auditoría y matriz de permisos",
+       "en": "Access requests, audit log and permission matrix"
+      },
+      "after": {
+       "es": "Revisión periódica de accesos por cada jefe",
+       "en": "Periodic access review by each manager"
+      }
+     },
+     {
+      "dim": {
+       "es": "Privacidad",
+       "en": "Privacy"
+      },
+      "before": {
+       "es": "Mínimo privilegio: cada rol ve solo lo que necesita",
+       "en": "Least privilege: each role sees only what it needs"
+      },
+      "after": {
+       "es": "Aviso de privacidad, DNI y CUIL ocultos, solicitudes de la Ley 25.326",
+       "en": "Privacy notice, masked ID and tax numbers, requests under Argentina's Law 25,326"
+      }
+     },
+     {
+      "dim": {
+       "es": "Uso diario",
+       "en": "Everyday use"
+      },
+      "before": {
+       "es": "«Ver como», aviso de sesión por vencer y «Restablecer demo»",
+       "en": "“View as”, session timeout warning and “Reset demo”"
+      },
+      "after": {
+       "es": "Búsqueda global, ayuda por pantalla, preferencias y la interfaz en inglés",
+       "en": "Global search, help on every screen, preferences and the interface in English"
+      }
+     }
+    ]
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": "89",
+      "label": {
+       "es": "requerimientos funcionales hechos",
+       "en": "functional requirements done"
+      }
+     },
+     {
+      "value": "8",
+      "label": {
+       "es": "fuera de alcance, a propósito",
+       "en": "out of scope, on purpose"
+      }
+     },
+     {
+      "value": "57",
+      "label": {
+       "es": "requerimientos no funcionales según ISO/IEC 25010",
+       "en": "non-functional requirements under ISO/IEC 25010"
+      }
+     },
+     {
+      "value": "14",
+      "label": {
+       "es": "casos de uso",
+       "en": "use cases"
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "cols": 2,
+    "h": {
+     "es": "Arquitectura de la información",
+     "en": "Information architecture"
+    },
+    "note": {
+     "es": "Basada en los cuatro sistemas de Rosenfeld, Morville y Arango (2015).",
+     "en": "Based on the four systems described by Rosenfeld, Morville and Arango (2015)."
+    },
+    "items": [
+     {
+      "title": {
+       "es": "Organización por audiencia",
+       "en": "Organised by audience"
+      },
+      "body": {
+       "es": "Cada rol tiene su propio espacio (/admin, /manager, /me, /it) y su navegación. No es solo orden: **es mínimo privilegio**, porque cada rol ve datos distintos.",
+       "en": "Each role has its own space (/admin, /manager, /me, /it) and its own navigation. It is not just about order: **it is least privilege**, because each role sees different data."
+      }
+     },
+     {
+      "title": {
+       "es": "Rotulado con vocabulario fijo",
+       "en": "Labels from a fixed vocabulary"
+      },
+      "body": {
+       "es": "Un glosario define cada término y **un test impide usar los prohibidos**. Por ejemplo, «cuenta de trabajo» en lugar de «cuenta corporativa», en todo el producto.",
+       "en": "A glossary defines every term and **a test blocks the banned ones**. For example, “work account” instead of “corporate account”, across the whole product."
+      }
+     },
+     {
+      "title": {
+       "es": "Navegación",
+       "en": "Navigation"
+      },
+      "body": {
+       "es": "Barra lateral con los ítems del rol, barra superior con «Ver como», ayuda y notificaciones, y en celulares un menú inferior solo con íconos.",
+       "en": "A sidebar with the role's items, a top bar with “View as”, help and notifications, and an icon-only bottom menu on phones."
+      }
+     },
+     {
+      "title": {
+       "es": "Búsqueda filtrada por permisos",
+       "en": "Search filtered by permissions"
+      },
+      "body": {
+       "es": "Ctrl+K o / desde cualquier pantalla. **Cada rol encuentra solo lo que tiene permitido ver**; un test lo verifica por rol.",
+       "en": "Ctrl+K or / from any screen. **Each role only finds what it is allowed to see**; a test checks this for every role."
+      }
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Task flow: hacer un check-in (jefe directo)",
+     "en": "Task flow: running a check-in (line manager)"
+    },
+    "steps": {
+     "es": [
+      "Ver el próximo check-in",
+      "Leer la autoevaluación",
+      "Evaluar cada hito",
+      "Escribir comentarios y próximos pasos",
+      "Enviar el check-in",
+      "Ver el historial"
+     ],
+     "en": [
+      "See the next check-in",
+      "Read the self-review",
+      "Assess each milestone",
+      "Write comments and next steps",
+      "Submit the check-in",
+      "See the history"
+     ]
+    }
+   },
+   {
+    "t": "decisionflow",
+    "h": {
+     "es": "User flow: check-in con escalamiento",
+     "en": "User flow: check-in with escalation"
+    },
+    "note": {
+     "es": "La autoevaluación va antes de la reunión pero no es obligatoria. Solo el escalamiento genera una alerta: escalar se diseñó como apoyo, no como castigo, y por eso es una decisión explícita del jefe.",
+     "en": "The self-review comes before the meeting but is not mandatory. Only escalation triggers an alert: escalating was designed as support, not punishment, so it is an explicit decision by the manager."
+    },
+    "nodes": [
+     {
+      "kind": "start",
+      "label": {
+       "es": "Hacer el check-in",
+       "en": "Start the check-in"
+      }
+     },
+     {
+      "kind": "decision",
+      "label": {
+       "es": "¿Respondió la autoevaluación?",
+       "en": "Has she answered the self-review?"
+      },
+      "branches": [
+       {
+        "label": {
+         "es": "Sí",
+         "en": "Yes"
+        },
+        "nodes": [
+         {
+          "kind": "step",
+          "label": {
+           "es": "Leer la autoevaluación",
+           "en": "Read the self-review"
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "es": "No",
+         "en": "No"
+        },
+        "nodes": [
+         {
+          "kind": "step",
+          "label": {
+           "es": "Aviso: todavía no respondió",
+           "en": "Notice: no answer yet"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "step",
+      "label": {
+       "es": "Evaluar cada hito",
+       "en": "Assess each milestone"
+      }
+     },
+     {
+      "kind": "decision",
+      "label": {
+       "es": "¿Algún hito no cumplido?",
+       "en": "Any milestone not met?"
+      },
+      "branches": [
+       {
+        "label": {
+         "es": "No",
+         "en": "No"
+        }
+       },
+       {
+        "label": {
+         "es": "Sí",
+         "en": "Yes"
+        },
+        "nodes": [
+         {
+          "kind": "decision",
+          "label": {
+           "es": "¿Qué acción?",
+           "en": "Which action?"
+          },
+          "branches": [
+           {
+            "label": {
+             "es": "Reprogramar",
+             "en": "Reschedule"
+            },
+            "nodes": [
+             {
+              "kind": "step",
+              "label": {
+               "es": "Elegir nueva fecha",
+               "en": "Pick a new date"
+              }
+             }
+            ]
+           },
+           {
+            "label": {
+             "es": "Escalar a RRHH",
+             "en": "Escalate to HR"
+            },
+            "nodes": [
+             {
+              "kind": "step",
+              "label": {
+               "es": "Escribir la nota de escalamiento",
+               "en": "Write the escalation note"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "step",
+      "label": {
+       "es": "Comentarios y próximos pasos",
+       "en": "Comments and next steps"
+      }
+     },
+     {
+      "kind": "step",
+      "label": {
+       "es": "Enviar el check-in",
+       "en": "Submit the check-in"
+      }
+     },
+     {
+      "kind": "decision",
+      "label": {
+       "es": "¿Todos los hitos evaluados?",
+       "en": "All milestones assessed?"
+      },
+      "branches": [
+       {
+        "label": {
+         "es": "No",
+         "en": "No"
+        },
+        "nodes": [
+         {
+          "kind": "step",
+          "label": {
+           "es": "Error junto al hito",
+           "en": "Error next to the milestone"
+          }
+         }
+        ],
+        "to": {
+         "es": "Evaluar cada hito",
+         "en": "Assess each milestone"
+        }
+       },
+       {
+        "label": {
+         "es": "Sí",
+         "en": "Yes"
+        }
+       }
+      ]
+     },
+     {
+      "kind": "end",
+      "label": {
+       "es": "Guardado en el historial",
+       "en": "Saved to the history"
+      }
+     },
+     {
+      "kind": "end",
+      "dashed": true,
+      "label": {
+       "es": "Alerta para RRHH en el panel",
+       "en": "Alert for HR on the dashboard"
+      },
+      "cond": {
+       "es": "Solo si se escaló",
+       "en": "Only if escalated"
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "rowsOf": [
+     1,
+     1
+    ],
+    "h": {
+     "es": "Wireflows",
+     "en": "Wireflows"
+    },
+    "note": {
+     "es": "Los wireflows se generan desde la app, así que muestran las pantallas reales.",
+     "en": "The wireflows are generated from the app, so they show the real screens."
+    },
+    "images": [
+     {
+      "src": "rumbo-20-wireflow-journey.webp",
+      "w": 2306,
+      "h": 370,
+      "alt": {
+       "es": "Wireflow del recorrido del nuevo ingreso, con capturas reales de cada paso: bienvenida guiada, Mi recorrido, detalle de la tarea, tarea bloqueada y autoevaluación",
+       "en": "Wireflow of the new hire's journey with real screenshots of each step: guided welcome, My journey, task detail, blocked task and self-review"
+      }
+     },
+     {
+      "src": "rumbo-21-wireflow-template.webp",
+      "w": 2306,
+      "h": 370,
+      "alt": {
+       "es": "Wireflow de la creación de una plantilla: catálogo, plantilla nueva, editor con orden y dependencias, vista previa y guardado",
+       "en": "Wireflow of creating a template: catalogue, new template, editor with ordering and dependencies, preview and saving"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "aprendizaje",
+    "n": "03",
+    "lens": "cap",
+    "mode": {
+     "es": "Lente LXD",
+     "en": "LXD lens"
+    },
+    "name": {
+     "es": "Diseñar el aprendizaje",
+     "en": "Designing the learning"
+    },
+    "q": {
+     "es": "¿Cómo se aprende a trabajar en un lugar nuevo, paso a paso?",
+     "en": "How do you learn to work somewhere new, step by step?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "El recorrido como un curso",
+     "en": "The journey as a course"
+    },
+    "p": [
+     {
+      "es": "Un recorrido de ingreso tiene **la misma estructura que un buen curso**: objetivos por etapa, actividades en orden, puntos de control y alguien que acompaña. La diferencia es que no lo dicta una persona, lo diseña RRHH una vez por puesto y se adapta solo a cada fecha de ingreso.",
+      "en": "An onboarding journey has **the same structure as a good course**: goals for each stage, activities in order, checkpoints and someone alongside. The difference is that nobody teaches it live: HR designs it once per role and it adapts itself to each start date."
+     },
+     {
+      "es": "Por eso Rumbo tiene dos usuarios de diseño instruccional: Sofía, que aprende, y Carla, que diseña. ==El constructor de plantillas es, en el fondo, una herramienta de autoría.==",
+      "en": "That is why Rumbo has two instructional design users: Sofía, who learns, and Carla, who designs. ==At heart, the template builder is an authoring tool.=="
+     }
+    ]
+   },
+   {
+    "t": "timeline",
+    "h": {
+     "es": "El recorrido, en días",
+     "en": "The journey, in days"
+    },
+    "name": {
+     "es": "Cuatro etapas, de 30 días antes del ingreso al día 90",
+     "en": "Four stages, from 30 days before day one to day 90"
+    },
+    "sub": {
+     "es": "Los límites de cada etapa son fijos y **la etapa de cada tarea sale de su plazo**: RRHH carga «día 12» y Rumbo la ubica en Mes 1 y calcula la fecha real.",
+     "en": "Stage boundaries are fixed and **each task's stage comes from its due day**: HR enters “day 12” and Rumbo places it in Month 1 and works out the real date."
+    },
+    "unit": {
+     "es": "días",
+     "en": "days"
+    },
+    "start": -30,
+    "end": 90,
+    "ticks": [
+     -30,
+     0,
+     7,
+     30,
+     60,
+     90
+    ],
+    "axisL": {
+     "es": "Días respecto del ingreso (día 0)",
+     "en": "Days relative to the start date (day 0)"
+    },
+    "exL": {
+     "es": "En el recorrido de Sofía",
+     "en": "In Sofía's journey"
+    },
+    "marks": [
+     {
+      "at": 0,
+      "label": {
+       "es": "Ingreso",
+       "en": "Day one"
+      }
+     },
+     {
+      "at": 30,
+      "label": {
+       "es": "Check-in 30",
+       "en": "Check-in 30"
+      }
+     },
+     {
+      "at": 60,
+      "label": {
+       "es": "Check-in 60",
+       "en": "Check-in 60"
+      }
+     },
+     {
+      "at": 90,
+      "label": {
+       "es": "Check-in 90",
+       "en": "Check-in 90"
+      }
+     }
+    ],
+    "stages": [
+     {
+      "name": {
+       "es": "Preingreso",
+       "en": "Pre-boarding"
+      },
+      "from": -30,
+      "to": -1,
+      "range": {
+       "es": "Días -30 a -1",
+       "en": "Days -30 to -1"
+      },
+      "body": {
+       "es": "Papeles, cuenta y equipo **listos antes del primer día**.",
+       "en": "Paperwork, account and equipment **ready before day one**."
+      },
+      "ex": {
+       "es": "Firmar contrato y documentación, crear la cuenta de trabajo, preparar la computadora",
+       "en": "Sign the contract and documents, create the work account, set up the computer"
+      }
+     },
+     {
+      "name": {
+       "es": "Semana 1",
+       "en": "Week 1"
+      },
+      "from": 0,
+      "to": 6,
+      "range": {
+       "es": "Días 0 a 6",
+       "en": "Days 0 to 6"
+      },
+      "body": {
+       "es": "Bienvenida y orientación: **pocas tareas y bien a la vista** con «Lo próximo».",
+       "en": "Welcome and orientation: **few tasks, clearly in view** in “Up next”."
+      },
+      "ex": {
+       "es": "Reunión de bienvenida con RRHH, entrega de puesto y credencial, manual de cultura",
+       "en": "Welcome meeting with HR, desk and badge handover, culture handbook"
+      }
+     },
+     {
+      "name": {
+       "es": "Mes 1",
+       "en": "Month 1"
+      },
+      "from": 7,
+      "to": 29,
+      "range": {
+       "es": "Días 7 a 29",
+       "en": "Days 7 to 29"
+      },
+      "body": {
+       "es": "Primeras tareas del puesto, que **se habilitan en orden** según sus dependencias.",
+       "en": "First tasks of the role, which **unlock in order** according to their dependencies."
+      },
+      "ex": {
+       "es": "Primer análisis guiado, presentar resultados al equipo",
+       "en": "First guided analysis, present results to the team"
+      }
+     },
+     {
+      "name": {
+       "es": "Días 30 a 90",
+       "en": "Days 30 to 90"
+      },
+      "from": 30,
+      "to": 90,
+      "range": {
+       "es": "Días 30 a 90",
+       "en": "Days 30 to 90"
+      },
+      "body": {
+       "es": "Trabajo real con menos acompañamiento y **tres check-ins para ajustar el rumbo**.",
+       "en": "Real work with less support and **three check-ins to adjust course**."
+      },
+      "ex": {
+       "es": "Proyecto propio: tablero de métricas, retrospectiva del recorrido",
+       "en": "Own project: metrics dashboard, journey retrospective"
+      }
+     }
+    ],
+    "legend": {
+     "es": [
+      "**Día 0:** el ingreso; las fechas reales se calculan desde ahí",
+      "**Días 30, 60 y 90:** check-ins con el jefe directo, con la autoevaluación antes"
+     ],
+     "en": [
+      "**Day 0:** the start date; real dates are calculated from it",
+      "**Days 30, 60 and 90:** check-ins with the line manager, preceded by the self-review"
+     ]
+    }
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "h": {
+     "es": "Del principio a la pantalla",
+     "en": "From principle to screen"
+    },
+    "cols": {
+     "dim": {
+      "es": "Principio",
+      "en": "Principle"
+     },
+     "before": {
+      "es": "Qué buscaba",
+      "en": "What I was after"
+     },
+     "after": {
+      "es": "Cómo se ve en Rumbo",
+      "en": "How it shows in Rumbo"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Secuencia y andamiaje",
+       "en": "Sequence and scaffolding"
+      },
+      "before": {
+       "es": "Que cada paso se apoye en el anterior",
+       "en": "Each step builds on the previous one"
+      },
+      "after": {
+       "es": "Etapas fijas y dependencias: **una tarea se habilita cuando está hecha la previa**, y el aviso dice cuál es y quién la completa",
+       "en": "Fixed stages and dependencies: **a task unlocks once the previous one is done**, and the notice says which one it is and who completes it"
+      }
+     },
+     {
+      "dim": {
+       "es": "Foco y carga cognitiva",
+       "en": "Focus and cognitive load"
+      },
+      "before": {
+       "es": "Que el primer día no abrume",
+       "en": "The first day shouldn't overwhelm"
+      },
+      "after": {
+       "es": "«Lo próximo» muestra **solo las 3 tareas más urgentes** y las hechas se pliegan",
+       "en": "“Up next” shows **only the 3 most urgent tasks**, and finished ones collapse"
+      }
+     },
+     {
+      "dim": {
+       "es": "Evaluación formativa",
+       "en": "Formative assessment"
+      },
+      "before": {
+       "es": "Evaluar para ajustar, no para calificar",
+       "en": "Assess to adjust, not to grade"
+      },
+      "after": {
+       "es": "Check-ins a los 30, 60 y 90 días con hitos **cumplidos, parciales o no cumplidos**, y la opción de reprogramar o escalar",
+       "en": "Check-ins at 30, 60 and 90 days with milestones **met, partly met or not met**, and the option to reschedule or escalate"
+      }
+     },
+     {
+      "dim": {
+       "es": "Voz de quien aprende",
+       "en": "The learner's voice"
+      },
+      "before": {
+       "es": "Que la persona reflexione sobre su avance",
+       "en": "The new hire reflects on her progress"
+      },
+      "after": {
+       "es": "Autoevaluación y «cómo te sentís» antes del check-in, que **el jefe lee antes de la reunión**",
+       "en": "A self-review and “how are you feeling” before the check-in, which **the manager reads before the meeting**"
+      }
+     },
+     {
+      "dim": {
+       "es": "Retroalimentación del progreso",
+       "en": "Progress feedback"
+      },
+      "before": {
+       "es": "Saber si se va bien sin preguntar",
+       "en": "Knowing you are on track without asking"
+      },
+      "after": {
+       "es": "Línea de tiempo con el marcador «Hoy, día 28» y una frase con la conclusión: **«Vas al día»**",
+       "en": "A timeline with a “Today, day 28” marker and a sentence with the takeaway: **“You're on track”**"
+      }
+     },
+     {
+      "dim": {
+       "es": "Variedad de modalidades",
+       "en": "Variety of formats"
+      },
+      "before": {
+       "es": "Aprender de distintas formas",
+       "en": "Learning in different ways"
+      },
+      "after": {
+       "es": "Cada tarea es una tarea, un curso, una reunión, una lectura o un documento",
+       "en": "Each item is a task, a course, a meeting, a reading or a document"
+      }
+     },
+     {
+      "dim": {
+       "es": "Orientación",
+       "en": "Orientation"
+      },
+      "before": {
+       "es": "Entender la herramienta antes de usarla",
+       "en": "Understanding the tool before using it"
+      },
+      "after": {
+       "es": "**Bienvenida guiada de 3 pasos** por rol, armada con piezas reales de la interfaz",
+       "en": "**A 3-step guided welcome** per role, built from real interface pieces"
+      }
+     },
+     {
+      "dim": {
+       "es": "Cuidado",
+       "en": "Care"
+      },
+      "before": {
+       "es": "Preguntar cómo está la persona sin exponerla",
+       "en": "Asking how people are without exposing them"
+      },
+      "after": {
+       "es": "El ánimo se muestra **solo agregado y con 3 respuestas o más**",
+       "en": "Mood is shown **only in aggregate and with 3 or more answers**"
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "La decisión que más defiendo",
+     "en": "The decision I stand behind most"
+    },
+    "body": {
+     "es": "Al armar el panel de RRHH, una tarea de Sofía vencida porque sistemas no le había dado un acceso contaba como atraso de Sofía. El gráfico **escondía justo el cuello de botella que tenía que mostrar**, y le cargaba a la persona nueva una culpa que no era suya. Cambié la regla: ==cada atraso se atribuye a quien bloquea en la raíz de la cadena==.",
+     "en": "While building the HR dashboard, a task of Sofía's that was overdue because IT hadn't granted her access counted as Sofía's delay. The chart **hid exactly the bottleneck it was meant to reveal**, and it pinned on the new hire a blame that wasn't hers. I changed the rule: ==every delay is attributed to whoever blocks at the root of the chain==."
+    }
+   },
+   {
+    "t": "bars",
+    "h": {
+     "es": "Dónde se traban los recorridos",
+     "en": "Where journeys get stuck"
+    },
+    "unit": "",
+    "title": {
+     "es": "Tareas vencidas por responsable, atribuidas a quien bloquea (panel de RRHH con los datos iniciales de la demo)",
+     "en": "Overdue tasks by owner, attributed to whoever blocks them (HR dashboard with the demo's starting data)"
+    },
+    "lead": 0,
+    "rows": [
+     {
+      "label": {
+       "es": "Sistemas",
+       "en": "IT"
+      },
+      "v": 7
+     },
+     {
+      "label": {
+       "es": "Nuevo ingreso",
+       "en": "New hire"
+      },
+      "v": 3
+     },
+     {
+      "label": {
+       "es": "Jefe directo",
+       "en": "Line manager"
+      },
+      "v": 1
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "p": [
+     {
+      "es": "**Sistemas concentra 7 de las 11 tareas vencidas**: varias tareas de las personas nuevas esperan un acceso. Buddy, RRHH y Facilities no tienen ninguna. Con la regla anterior, esos atrasos habrían aparecido como de las personas nuevas.",
+      "en": "**IT accounts for 7 of the 11 overdue tasks**: several of the new hires' tasks are waiting for access. Buddy, HR and Facilities have none. Under the previous rule, those delays would have shown up as the new hires'."
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "cols": 3,
+    "h": {
+     "es": "La plantilla como herramienta de autoría",
+     "en": "The template as an authoring tool"
+    },
+    "items": [
+     {
+      "title": {
+       "es": "Plazos relativos",
+       "en": "Relative due days"
+      },
+      "body": {
+       "es": "Cada tarea se define en días respecto del ingreso, de -30 a 90. Al dar de alta a una persona, **Rumbo calcula las fechas reales.**",
+       "en": "Each task is set in days relative to the start date, from -30 to 90. When a new hire is added, **Rumbo works out the real dates.**"
+      }
+     },
+     {
+      "title": {
+       "es": "Dependencias sin trampas",
+       "en": "Dependencies without traps"
+      },
+      "body": {
+       "es": "No se permiten ciclos ni una tarea previa que venza después de la que depende de ella. **El error dice qué cambiar.**",
+       "en": "No cycles, and no prerequisite due after the task that depends on it. **The error says what to change.**"
+      }
+     },
+     {
+      "title": {
+       "es": "Arrastrar, o no",
+       "en": "Drag, or not"
+      },
+      "body": {
+       "es": "Las tareas se reordenan con arrastrar y soltar dentro de su etapa, y con «Subir», «Bajar» y «Mover a etapa» **desde el teclado**.",
+       "en": "Tasks are reordered by drag and drop within their stage, and with “Move up”, “Move down” and “Move to stage” **from the keyboard**."
+      }
+     },
+     {
+      "title": {
+       "es": "Vista previa",
+       "en": "Preview"
+      },
+      "body": {
+       "es": "RRHH ve el recorrido **como lo va a ver la persona nueva**, con una fecha de ingreso de ejemplo.",
+       "en": "HR sees the journey **as the new hire will**, with a sample start date."
+      }
+     },
+     {
+      "title": {
+       "es": "Versiones como un curso con cohortes",
+       "en": "Versions like a course with cohorts"
+      },
+      "body": {
+       "es": "Publicar una versión nueva no cambia los recorridos en curso: **cada ingreso conserva la versión con la que empezó**. Se puede comparar y restaurar.",
+       "en": "Publishing a new version doesn't change ongoing journeys: **each hire keeps the version they started with**. Versions can be compared and restored."
+      }
+     },
+     {
+      "title": {
+       "es": "Responsables claros",
+       "en": "Clear owners"
+      },
+      "body": {
+       "es": "La persona nueva solo marca sus tareas; las de otras áreas muestran quién las completa. **Nadie marca trabajo ajeno.**",
+       "en": "New hires only tick off their own tasks; other teams' tasks show who completes them. **Nobody ticks off someone else's work.**"
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "El aprendizaje en pantalla",
+     "en": "Learning on screen"
+    },
+    "images": [
+     {
+      "src": "rumbo-30-n1-recorrido.webp",
+      "w": 960,
+      "h": 600,
+      "alt": {
+       "es": "Mi recorrido, de Sofía, en el día 28: saludo, indicadores, línea de tiempo por etapa con el marcador de hoy y lo próximo",
+       "en": "Sofía's My journey on day 28: greeting, indicators, a timeline by stage with today's marker, and what's up next"
+      },
+      "caption": {
+       "es": "Mi recorrido: línea de tiempo por etapa y lo próximo",
+       "en": "My journey: timeline by stage and what's up next"
+      }
+     },
+     {
+      "src": "rumbo-31-n2-bloqueada.webp",
+      "w": 960,
+      "h": 600,
+      "alt": {
+       "es": "Tarea bloqueada de Sofía: aviso con la tarea previa, su responsable y su vencimiento",
+       "en": "Sofía's blocked task: a notice with the prerequisite task, its owner and its due date"
+      },
+      "caption": {
+       "es": "Tarea bloqueada: de qué depende y quién la destraba",
+       "en": "Blocked task: what it depends on and who can unblock it"
+      }
+     },
+     {
+      "src": "rumbo-32-j3-checkin.webp",
+      "w": 960,
+      "h": 600,
+      "alt": {
+       "es": "Check-in de 30 días de Martín con Sofía: hitos con cumplido, parcial o no cumplido y la autoevaluación al lado",
+       "en": "Martín's 30-day check-in with Sofía: milestones marked met, partly met or not met, with the self-review alongside"
+      },
+      "caption": {
+       "es": "Check-in de 30 días con la autoevaluación al lado",
+       "en": "30-day check-in with the self-review alongside"
+      }
+     },
+     {
+      "src": "rumbo-33-a6-constructor.webp",
+      "w": 960,
+      "h": 600,
+      "alt": {
+       "es": "Constructor de plantillas de Carla: tareas por etapa con plazo, responsable y dependencias",
+       "en": "Carla's template builder: tasks by stage with due day, owner and dependencies"
+      },
+      "caption": {
+       "es": "Constructor de plantillas",
+       "en": "Template builder"
+      }
+     },
+     {
+      "src": "rumbo-34-bienvenida.webp",
+      "w": 1280,
+      "h": 800,
+      "alt": {
+       "es": "Bienvenida guiada de Sofía, primer paso de tres, sobre su recorrido atenuado: «Te damos la bienvenida, Sofía»",
+       "en": "Sofía's guided welcome, step one of three, over her dimmed journey: “Welcome, Sofía”"
+      },
+      "caption": {
+       "es": "Bienvenida guiada, paso 1 de 3",
+       "en": "Guided welcome, step 1 of 3"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "interfaz",
+    "n": "04",
+    "lens": "it",
+    "mode": {
+     "es": "Lente UX/UI",
+     "en": "UX/UI lens"
+    },
+    "name": {
+     "es": "Diseñar la interfaz",
+     "en": "Designing the interface"
+    },
+    "q": {
+     "es": "¿Cómo se ve propio sin dejar de ser una herramienta de trabajo?",
+     "en": "How does it look like its own thing while still being a work tool?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Frenar antes de escalar",
+     "en": "Stopping before scaling up"
+    },
+    "p": [
+     {
+      "es": "La primera versión cumplía todas las reglas y **aun así parecía una plantilla**. En lugar de seguir puliendo pantallas sueltas, frené: audité la interfaz contra siete referencias visuales, **rediseñé tres pantallas como piloto** (portada, login y recorrido), las aprobé con capturas de antes y después, y recién ahí apliqué el estilo al resto.",
+      "en": "The first version followed every rule and **still looked like a template**. Instead of polishing screens one by one, I stopped: I audited the interface against seven visual references, **redesigned three screens as a pilot** (home, login and journey), approved them with before and after screenshots, and only then applied the style to the rest."
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "marks": true,
+    "h": {
+     "es": "Qué cambió con la auditoría visual",
+     "en": "What the visual audit changed"
+    },
+    "cols": {
+     "dim": {
+      "es": "Aspecto",
+      "en": "Aspect"
+     },
+     "before": {
+      "es": "Antes",
+      "en": "Before"
+     },
+     "after": {
+      "es": "Después",
+      "en": "After"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Capas",
+       "en": "Layers"
+      },
+      "before": {
+       "es": "Fondo y tarjetas casi del mismo color: todo parecía una hoja",
+       "en": "Background and cards almost the same colour: everything looked like one sheet"
+      },
+      "after": {
+       "es": "Fondo gris frío con tarjetas blancas que se despegan a simple vista",
+       "en": "A cool grey background with white cards that stand out at a glance"
+      }
+     },
+     {
+      "dim": {
+       "es": "Jerarquía",
+       "en": "Hierarchy"
+      },
+      "before": {
+       "es": "El título de la pantalla pesaba igual que los de las tarjetas",
+       "en": "The screen title carried the same weight as the card titles"
+      },
+      "after": {
+       "es": "Saludo con el nombre en color como único título y chips con el contexto",
+       "en": "A greeting with the name in colour as the only title, plus chips with context"
+      }
+     },
+     {
+      "dim": {
+       "es": "Datos",
+       "en": "Data"
+      },
+      "before": {
+       "es": "Barras finas y porcentajes sueltos",
+       "en": "Thin bars and loose percentages"
+      },
+      "after": {
+       "es": "Indicadores con ícono, cifra grande y sparkline",
+       "en": "Indicators with an icon, a large figure and a sparkline"
+      }
+     },
+     {
+      "dim": {
+       "es": "Personas",
+       "en": "People"
+      },
+      "before": {
+       "es": "Mismo color para todos los avatares",
+       "en": "The same colour for every avatar"
+      },
+      "after": {
+       "es": "Un color por rol, en fotos e iniciales, en todo el producto",
+       "en": "One colour per role, on photos and initials, across the product"
+      }
+     },
+     {
+      "dim": {
+       "es": "Acento",
+       "en": "Accent"
+      },
+      "before": {
+       "es": "Casi todo petróleo o gris",
+       "en": "Almost everything teal or grey"
+      },
+      "after": {
+       "es": "Ciruela para logros, destacados y la segunda serie de gráficos",
+       "en": "Plum for achievements, highlights and the second chart series"
+      }
+     },
+     {
+      "dim": {
+       "es": "Login",
+       "en": "Login"
+      },
+      "before": {
+       "es": "Una columna angosta y media pantalla vacía",
+       "en": "A narrow column and half the screen empty"
+      },
+      "after": {
+       "es": "Dos columnas con una vista previa del producto",
+       "en": "Two columns with a preview of the product"
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "rowsOf": [
+     1,
+     1,
+     1
+    ],
+    "h": {
+     "es": "Antes y después",
+     "en": "Before and after"
+    },
+    "note": {
+     "es": "En cada captura, antes a la izquierda y después a la derecha.",
+     "en": "In each screenshot, before is on the left and after is on the right."
+    },
+    "images": [
+     {
+      "src": "rumbo-40-antes-despues-recorrido.webp",
+      "w": 2600,
+      "h": 1500,
+      "alt": {
+       "es": "Mi recorrido antes y después del piloto, a 1280 px. Izquierda, antes: título «Mi recorrido», barras finas de avance y contactos en lista. Derecha, después: saludo «Buenos días, Sofía», cuatro indicadores con ícono y la línea de tiempo por etapa con el marcador de hoy",
+       "en": "My journey before and after the pilot, at 1280 px. Left, before: a “My journey” title, thin progress bars and contacts in a list. Right, after: a “Good morning, Sofía” greeting, four indicators with icons and the timeline by stage with today's marker"
+      },
+      "caption": {
+       "es": "Mi recorrido, a 1280 px",
+       "en": "My journey, at 1280 px"
+      }
+     },
+     {
+      "src": "rumbo-41-antes-despues-portada.webp",
+      "w": 2600,
+      "h": 1500,
+      "alt": {
+       "es": "Portada de la demo antes y después del piloto, a 1280 px. Izquierda, antes: hero solo con texto. Derecha, después: hero a dos columnas con una vista previa compuesta del producto",
+       "en": "Demo home page before and after the pilot, at 1280 px. Left, before: a text-only hero. Right, after: a two-column hero with a composed preview of the product"
+      },
+      "caption": {
+       "es": "Portada de la demo, a 1280 px",
+       "en": "Demo home page, at 1280 px"
+      }
+     },
+     {
+      "src": "rumbo-42-antes-despues-login.webp",
+      "w": 2600,
+      "h": 1500,
+      "alt": {
+       "es": "Login antes y después del piloto, a 1280 px. Izquierda, antes: una columna angosta con media pantalla vacía. Derecha, después: formulario a la izquierda y panel tintado con una vista previa del producto a la derecha",
+       "en": "Login before and after the pilot, at 1280 px. Left, before: a narrow column with half the screen empty. Right, after: the form on the left and a tinted panel with a product preview on the right"
+      },
+      "caption": {
+       "es": "Login, a 1280 px",
+       "en": "Login, at 1280 px"
+      }
+     }
+    ]
+   },
+   {
+    "t": "swatches",
+    "h": {
+     "es": "Paleta: Material 3 con color propio",
+     "en": "Palette: Material 3 with its own colour"
+    },
+    "note": {
+     "es": "El contraste es el del color sobre blanco, calculado con la fórmula de WCAG.",
+     "en": "Contrast is each colour against white, calculated with the WCAG formula."
+    },
+    "groups": [
+     {
+      "name": {
+       "es": "Roles de color",
+       "en": "Colour roles"
+      },
+      "items": [
+       {
+        "token": "primary",
+        "hex": "#1F6F78",
+        "use": {
+         "es": "Acción principal, navegación activa, foco",
+         "en": "Primary action, active navigation, focus"
+        },
+        "ratio": {
+         "es": "5,83:1",
+         "en": "5.83:1"
+        }
+       },
+       {
+        "token": "secondary",
+        "hex": "#4A6366",
+        "use": {
+         "es": "Botones tonales y menor énfasis",
+         "en": "Tonal buttons and lower emphasis"
+        },
+        "ratio": {
+         "es": "6,43:1",
+         "en": "6.43:1"
+        }
+       },
+       {
+        "token": "tertiary",
+        "hex": "#9C3D74",
+        "use": {
+         "es": "Acento: logros, destacados, segunda serie",
+         "en": "Accent: achievements, highlights, second series"
+        },
+        "ratio": {
+         "es": "6,30:1",
+         "en": "6.30:1"
+        }
+       },
+       {
+        "token": "error",
+        "hex": "#B3261E",
+        "use": {
+         "es": "Errores, vencidas, acciones destructivas",
+         "en": "Errors, overdue items, destructive actions"
+        },
+        "ratio": {
+         "es": "6,54:1",
+         "en": "6.54:1"
+        }
+       },
+       {
+        "token": "success",
+        "hex": "#2E7D32",
+        "use": {
+         "es": "Completadas y confirmaciones",
+         "en": "Completed items and confirmations"
+        },
+        "ratio": {
+         "es": "5,13:1",
+         "en": "5.13:1"
+        }
+       },
+       {
+        "token": "warning",
+        "hex": "#8A5300",
+        "use": {
+         "es": "Por vencer y bloqueadas por dependencias",
+         "en": "Due soon and blocked by dependencies"
+        },
+        "ratio": {
+         "es": "6,33:1",
+         "en": "6.33:1"
+        }
+       },
+       {
+        "token": "info",
+        "hex": "#2457C5",
+        "use": {
+         "es": "Avisos y ayuda",
+         "en": "Notices and help"
+        },
+        "ratio": {
+         "es": "6,47:1",
+         "en": "6.47:1"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Un color por rol (identifican personas, nunca estados)",
+       "en": "One colour per role (they identify people, never states)"
+      },
+      "items": [
+       {
+        "token": "role-hr",
+        "hex": "#1F6F78",
+        "use": {
+         "es": "RRHH",
+         "en": "HR"
+        }
+       },
+       {
+        "token": "role-manager",
+        "hex": "#9C3D74",
+        "use": {
+         "es": "Jefe directo",
+         "en": "Line manager"
+        }
+       },
+       {
+        "token": "role-hire",
+        "hex": "#6A4FC4",
+        "use": {
+         "es": "Nuevo ingreso",
+         "en": "New hire"
+        }
+       },
+       {
+        "token": "role-it",
+        "hex": "#2457C5",
+        "use": {
+         "es": "Sistemas",
+         "en": "IT"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "t": "bento",
+    "h": {
+     "es": "El sistema de diseño en seis ideas",
+     "en": "The design system in six ideas"
+    },
+    "items": [
+     {
+      "size": "l",
+      "lead": true,
+      "title": {
+       "es": "Material 3, traducido a tokens propios",
+       "en": "Material 3, translated into its own tokens"
+      },
+      "body": {
+       "es": "Hereda el rigor de Material Design 3 sin parecer una app de Google: **cuatro niveles de tokens**, de los valores crudos a los componentes.",
+       "en": "It inherits the rigour of Material Design 3 without looking like a Google app: **four tiers of tokens**, from raw values to components."
+      },
+      "img": {
+       "src": "rumbo-43-tokens.webp",
+       "w": 1008,
+       "h": 570,
+       "alt": {
+        "es": "Niveles de tokens: 1 Referencia (valores crudos y tipografía), 2 Sistema (roles de color, personas y gráficos, espacio, elevación y movimiento), 3 Tema de Tailwind y 4 Componentes, con el control de calidad debajo: test de contraste y documentación viva",
+        "en": "Token tiers: 1 Reference (raw values and typeface), 2 System (colour roles, people and charts, spacing, elevation and motion), 3 Tailwind theme and 4 Components, with quality control below: a contrast test and living documentation"
+       }
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Profundidad sin sombras",
+       "en": "Depth without shadows"
+      },
+      "body": {
+       "es": "La jerarquía sale de los niveles de superficie, no de sombras ni degradés.",
+       "en": "Hierarchy comes from surface levels, not from shadows or gradients."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Un botón principal por región",
+       "en": "One primary button per region"
+      },
+      "body": {
+       "es": "Un test lo verifica en todas las pantallas, en celular y en escritorio.",
+       "en": "A test checks it on every screen, on mobile and desktop."
+      }
+     },
+     {
+      "size": "m",
+      "title": {
+       "es": "Cifras tabulares",
+       "en": "Tabular figures"
+      },
+      "body": {
+       "es": "Inter con la escala de Material 3; los números de KPIs, tablas y fechas se alinean.",
+       "en": "Inter with the Material 3 type scale; numbers in KPIs, tables and dates line up."
+      }
+     },
+     {
+      "size": "m",
+      "title": {
+       "es": "Cargas con forma",
+       "en": "Loading with shape"
+      },
+      "body": {
+       "es": "Mientras llega una pantalla, se ve un esqueleto con la forma de su plantilla: panel, listado, ficha o formulario.",
+       "en": "While a screen loads, a skeleton shows the shape of its template: dashboard, list, record or form."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Movimiento medido",
+       "en": "Measured motion"
+      },
+      "body": {
+       "es": "Entre 150 y 300 ms, con las curvas de Material 3, y apagado si la persona pide reducir animaciones.",
+       "en": "Between 150 and 300 ms, with Material 3 easing curves, and switched off when someone asks for reduced motion."
+      }
+     }
+    ]
+   },
+   {
+    "t": "preview",
+    "url": "https://lpedaci.github.io/rumbo-app/#/design-system",
+    "img": {
+     "src": "rumbo-44-design-system.webp",
+     "w": 1440,
+     "h": 900
+    },
+    "kicker": {
+     "es": "En vivo",
+     "en": "Live"
+    },
+    "title": {
+     "es": "Un sitio que documenta el sistema con sus propios componentes",
+     "en": "A site that documents the system with its own components"
+    },
+    "body": {
+     "es": "Fundamentos leídos en vivo desde los tokens, contraste calculado, componentes reales, patrones y pautas de uso.",
+     "en": "Foundations read live from the tokens, calculated contrast, real components, patterns and usage guidelines."
+    },
+    "cta": {
+     "es": "Ver el sistema de diseño",
+     "en": "See the design system"
+    }
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Una pantalla clave por rol",
+     "en": "One key screen per role"
+    },
+    "images": [
+     {
+      "src": "rumbo-45-a1-panel.webp",
+      "w": 960,
+      "h": 600,
+      "alt": {
+       "es": "Panel de seguimiento de Carla, de RRHH: saludo, cuatro indicadores con sparklines, avance por cohorte y alertas",
+       "en": "Carla's HR tracking dashboard: greeting, four indicators with sparklines, progress by cohort and alerts"
+      },
+      "caption": {
+       "es": "RRHH: panel de seguimiento",
+       "en": "HR: tracking dashboard"
+      }
+     },
+     {
+      "src": "rumbo-46-j1-equipo.webp",
+      "w": 960,
+      "h": 600,
+      "alt": {
+       "es": "Mi equipo, de Martín, jefe directo: personas con su avance y el próximo check-in",
+       "en": "My team, for Martín, the line manager: people with their progress and the next check-in"
+      },
+      "caption": {
+       "es": "Jefe directo: mi equipo",
+       "en": "Line manager: my team"
+      }
+     },
+     {
+      "src": "rumbo-47-s1-solicitudes.webp",
+      "w": 960,
+      "h": 600,
+      "alt": {
+       "es": "Bandeja de solicitudes de acceso de Diego, de sistemas, con estados en píldoras",
+       "en": "Diego's IT access request inbox, with states shown as pills"
+      },
+      "caption": {
+       "es": "Sistemas: solicitudes de acceso",
+       "en": "IT: access requests"
+      }
+     },
+     {
+      "src": "rumbo-48-s7-aprobaciones.webp",
+      "w": 960,
+      "h": 600,
+      "alt": {
+       "es": "Doble aprobación: quién pidió el cambio y a quién espera",
+       "en": "Dual approval: who requested the change and who it is waiting for"
+      },
+      "caption": {
+       "es": "Sistemas: doble aprobación",
+       "en": "IT: dual approval"
+      }
+     },
+     {
+      "src": "rumbo-49-mobile.webp",
+      "w": 375,
+      "h": 812,
+      "alt": {
+       "es": "Mi recorrido de Sofía en un celular de 375 px: saludo y cuatro indicadores en dos columnas",
+       "en": "Sofía's My journey on a 375 px phone: greeting and four indicators in two columns"
+      },
+      "caption": {
+       "es": "Nuevo ingreso, en un celular de 375 px",
+       "en": "New hire, on a 375 px phone"
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Mi parte en el diseño visual",
+     "en": "My part in the visual design"
+    },
+    "body": {
+     "es": "De las 142 decisiones registradas, **51 empezaron con un pedido o una observación mía** al revisar el trabajo: espacios que sobraban, una fecha que pesaba más que la tarea, una barra de progreso que «no decía mucho» y terminó siendo la línea de tiempo del recorrido.",
+     "en": "Of the 142 logged decisions, **51 started with a request or an observation of mine** while reviewing the work: spacing that wasn't needed, a date that outweighed the task, a progress bar that “didn't say much” and ended up becoming the journey timeline."
+    }
+   },
+   {
+    "t": "phase",
+    "id": "accesibilidad",
+    "n": "05",
+    "lens": "both",
+    "mode": {
+     "es": "Las dos lentes",
+     "en": "Both lenses"
+    },
+    "name": {
+     "es": "Accesibilidad y seguridad",
+     "en": "Accessibility and security"
+    },
+    "q": {
+     "es": "¿Cómo se diseña para que nadie quede afuera y nadie entre de más?",
+     "en": "How do you design so nobody is left out and nobody gets in who shouldn't?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Desde la especificación",
+     "en": "From the specification"
+    },
+    "p": [
+     {
+      "es": "La accesibilidad estuvo en la especificación **desde el primer día**, no como revisión final. Y en un producto que maneja datos de personas, ==la seguridad también es experiencia==: lo que la interfaz obliga a hacer, lo que no deja hacer y cómo lo explica.",
+      "en": "Accessibility was in the specification **from day one**, not added as a final check. And in a product that handles personal data, ==security is part of the experience too==: what the interface makes you do, what it won't let you do and how it explains it."
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Accesibilidad en decisiones concretas (WCAG 2.2 AA)",
+     "en": "Accessibility in concrete decisions (WCAG 2.2 AA)"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Arrastrar, con alternativa (2.5.7)",
+       "en": "Dragging, with an alternative (2.5.7)"
+      },
+      "body": {
+       "es": "Todo lo que se arrastra en el constructor también se hace con botones y teclado",
+       "en": "Everything you can drag in the builder can also be done with buttons and the keyboard"
+      }
+     },
+     {
+      "lead": {
+       "es": "Código en un solo campo (3.3.8)",
+       "en": "Code in a single field (3.3.8)"
+      },
+      "body": {
+       "es": "La verificación en dos pasos acepta pegar el código; no hay seis casillas",
+       "en": "Two-step verification accepts a pasted code; there are no six separate boxes"
+      }
+     },
+     {
+      "lead": {
+       "es": "No pedir dos veces lo mismo (3.3.7)",
+       "en": "Never ask twice (3.3.7)"
+      },
+      "body": {
+       "es": "El correo escrito en el login llega solo al formulario de ayuda si la cuenta se bloquea",
+       "en": "The email typed at login carries over to the help form if the account gets locked"
+      }
+     },
+     {
+      "lead": {
+       "es": "Tiempo ajustable (2.2.1)",
+       "en": "Adjustable timing (2.2.1)"
+      },
+      "body": {
+       "es": "Antes de que venza la sesión aparece un aviso para extenderla",
+       "en": "Before the session expires, a notice offers to extend it"
+      }
+     },
+     {
+      "lead": {
+       "es": "Reacomodo a 320 px (1.4.10)",
+       "en": "Reflow at 320 px (1.4.10)"
+      },
+      "body": {
+       "es": "Ninguna de las 51 vistas desborda en seis anchos, verificado por test",
+       "en": "None of the 51 views overflows at six widths, checked by a test"
+      }
+     },
+     {
+      "lead": {
+       "es": "Gráficos que se leen sin verlos",
+       "en": "Charts you can read without seeing them"
+      },
+      "body": {
+       "es": "Cada gráfico tiene título, resumen en texto y una tabla para lectores de pantalla",
+       "en": "Every chart has a title, a text summary and a table for screen readers"
+      }
+     },
+     {
+      "lead": {
+       "es": "El color nunca solo",
+       "en": "Never colour alone"
+      },
+      "body": {
+       "es": "Cada estado lleva ícono y texto además del color",
+       "en": "Every state has an icon and text as well as colour"
+      }
+     }
+    ]
+   },
+   {
+    "t": "audit",
+    "h": {
+     "es": "Dos problemas de contraste que encontraron los tests",
+     "en": "Two contrast problems the tests caught"
+    },
+    "note": {
+     "es": "Los encontró el test de contraste de los tokens; las dos correcciones quedaron fijadas por test.",
+     "en": "The token contrast test caught them; both fixes are now locked in by a test."
+    },
+    "cols": {
+     "pair": {
+      "es": "Par",
+      "en": "Pair"
+     },
+     "ratio": {
+      "es": "Contraste",
+      "en": "Contrast"
+     },
+     "result": {
+      "es": "Resultado",
+      "en": "Result"
+     },
+     "fix": {
+      "es": "Corrección",
+      "en": "Fix"
+     }
+    },
+    "pass": {
+     "es": "Cumple",
+     "en": "Passes"
+    },
+    "fail": {
+     "es": "No cumple",
+     "en": "Fails"
+    },
+    "nofix": {
+     "es": "No hace falta",
+     "en": "Not needed"
+    },
+    "rows": [
+     {
+      "pair": {
+       "es": "Texto success sobre su contenedor",
+       "en": "Success text on its container"
+      },
+      "fg": "#2E7D32",
+      "bg": "#DCEFDD",
+      "ratio": {
+       "es": "4,26:1",
+       "en": "4.26:1"
+      },
+      "pass": false,
+      "fix": {
+       "es": "Regla de uso: texto en on-container #123D15 (10,23:1) y el color base solo en el ícono",
+       "en": "Usage rule: text in on-container #123D15 (10.23:1) and the base colour only on the icon"
+      },
+      "fixfg": "#123D15",
+      "fixbg": "#DCEFDD"
+     },
+     {
+      "pair": {
+       "es": "Serie 4 de gráficos sobre blanco",
+       "en": "Chart series 4 on white"
+      },
+      "fg": "#C98AAE",
+      "bg": "#FFFFFF",
+      "ratio": {
+       "es": "2,72:1",
+       "en": "2.72:1"
+      },
+      "pass": false,
+      "fix": {
+       "es": "Se cambió a #B9779D (3,39:1), el ciruela más cercano que cumple 3:1 para gráficos",
+       "en": "Changed to #B9779D (3.39:1), the closest plum that meets 3:1 for graphics"
+      },
+      "fixfg": "#B9779D",
+      "fixbg": "#FFFFFF"
+     },
+     {
+      "pair": {
+       "es": "Primary sobre blanco",
+       "en": "Primary on white"
+      },
+      "fg": "#1F6F78",
+      "bg": "#FFFFFF",
+      "ratio": {
+       "es": "5,83:1",
+       "en": "5.83:1"
+      },
+      "pass": true
+     }
+    ]
+   },
+   {
+    "t": "roadmap",
+    "h": {
+     "es": "Seguridad en tres capas",
+     "en": "Security in three layers"
+    },
+    "steps": [
+     {
+      "code": "01",
+      "title": {
+       "es": "Simulada en la interfaz",
+       "en": "Simulated in the interface"
+      },
+      "body": {
+       "es": "SSO, verificación en dos pasos, bloqueo por intentos, sesión que vence, permisos por rol y auditoría: la experiencia completa de una app corporativa, sin frenar a quien visita la demo",
+       "en": "SSO, two-step verification, lockout after failed attempts, session timeout, role permissions and an audit log: the full experience of a corporate app, without getting in the way of demo visitors"
+      }
+     },
+     {
+      "code": "02",
+      "title": {
+       "es": "Aplicada de verdad",
+       "en": "Actually enforced"
+      },
+      "body": {
+       "es": "Política de seguridad de contenido, validación de todos los formularios con esquemas, ningún HTML armado con datos y auditoría de dependencias en cada publicación",
+       "en": "A content security policy, schema validation on every form, no HTML built from data and a dependency audit on every deploy"
+      }
+     },
+     {
+      "code": "03",
+      "title": {
+       "es": "Documentada para producción",
+       "en": "Documented for production"
+      },
+      "body": {
+       "es": "Identidad con OIDC o SAML, autorización en el servidor, auditoría inmutable, capa de borde y cumplimiento de la Ley 25.326",
+       "en": "Identity with OIDC or SAML, server-side authorisation, an immutable audit log, an edge layer and compliance with Argentina's Law 25,326"
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Sin autogestión de acceso, a propósito",
+     "en": "No self-service access, on purpose"
+    },
+    "body": {
+     "es": "En Rumbo nadie recupera ni desbloquea su acceso por su cuenta: **siempre pasa por sistemas**, que verifica la identidad con datos de la ficha y nunca con los que trae el pedido. ==No es un recorte de alcance, es una decisión de diseño==: en una empresa, el atajo del autoservicio es la puerta de la ingeniería social. Para no revelar qué correos existen, un correo inexistente también se bloquea a los cinco intentos y muestra el mismo aviso.",
+     "en": "In Rumbo nobody recovers or unlocks their own access: **it always goes through IT**, who verify identity against the person's record and never against details supplied in the request. ==It is not a scope cut, it is a design decision==: in a company, the self-service shortcut is the door to social engineering. So as not to reveal which emails exist, an unknown email is also locked after five attempts and shows the same notice."
+    }
+   },
+   {
+    "t": "phase",
+    "id": "construir",
+    "n": "06",
+    "lens": "it",
+    "mode": {
+     "es": "Lente UX/UI",
+     "en": "UX/UI lens"
+    },
+    "name": {
+     "es": "Construir y verificar",
+     "en": "Building and verifying"
+    },
+    "q": {
+     "es": "¿Cómo se pasa de un diseño a un producto que funciona sin perder el criterio?",
+     "en": "How do you go from a design to a working product without losing judgement?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Desarrollo dirigido por especificación",
+     "en": "Specification-driven development"
+    },
+    "p": [
+     {
+      "es": "**Rumbo no es una maqueta:** las pantallas crean, editan, completan y aprueban, y los cambios quedan guardados en el navegador. Para llegar ahí trabajé con desarrollo dirigido por especificación.",
+      "en": "**Rumbo is not a mock-up:** its screens create, edit, complete and approve, and the changes are saved in the browser. To get there I worked with specification-driven development."
+     },
+     {
+      "es": "Escribí la especificación completa del producto: roles, funciones, pantallas, modelo de datos, reglas de negocio, sistema de diseño, voz y tono, accesibilidad, seguridad y criterios de aceptación. Claude Code, un agente de IA, la implementó por pasos. **Yo revisé cada pantalla, resolví cada duda y aprobé cada fase.** Todo quedó registrado: qué se dudó, qué se decidió y por qué.",
+      "en": "I wrote the full product specification: roles, features, screens, data model, business rules, design system, voice and tone, accessibility, security and acceptance criteria. Claude Code, an AI agent, implemented it step by step. **I reviewed every screen, resolved every question and approved every phase.** It is all on record: what was in doubt, what was decided and why."
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Cómo trabajé",
+     "en": "How I worked"
+    },
+    "steps": {
+     "es": [
+      "Especificación",
+      "Documentación de diseño",
+      "Piloto visual",
+      "Aprobación",
+      "Fase A: núcleo",
+      "Revisión intermedia",
+      "Fase B: base corporativa",
+      "Revisión final"
+     ],
+     "en": [
+      "Specification",
+      "Design documentation",
+      "Visual pilot",
+      "Approval",
+      "Phase A: core",
+      "Mid-point review",
+      "Phase B: corporate baseline",
+      "Final review"
+     ]
+    }
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": "142",
+      "label": {
+       "es": "decisiones registradas",
+       "en": "decisions logged"
+      }
+     },
+     {
+      "value": "41",
+      "label": {
+       "es": "incidencias, 39 resueltas",
+       "en": "issues, 39 resolved"
+      }
+     },
+     {
+      "value": "380",
+      "label": {
+       "es": "tests unitarios y de componentes",
+       "en": "unit and component tests"
+      }
+     },
+     {
+      "value": "614",
+      "label": {
+       "es": "pruebas de punta a punta en Chromium",
+       "en": "end-to-end tests in Chromium"
+      }
+     },
+     {
+      "value": "3",
+      "label": {
+       "es": "motores de navegador",
+       "en": "browser engines"
+      }
+     },
+     {
+      "value": {
+       "es": "2.509",
+       "en": "2,509"
+      },
+      "label": {
+       "es": "textos traducidos al inglés",
+       "en": "strings translated into English"
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Lighthouse contra el build publicado",
+     "en": "Lighthouse against the production build"
+    },
+    "note": {
+     "es": "Portada, login, Mi recorrido y panel de RRHH.",
+     "en": "Home, login, My journey and the HR dashboard."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Rendimiento",
+       "en": "Performance"
+      },
+      "v": {
+       "es": "98 a 100 en las cuatro pantallas medidas, en celular y escritorio",
+       "en": "98 to 100 on the four screens measured, on mobile and desktop"
+      }
+     },
+     {
+      "k": {
+       "es": "Accesibilidad",
+       "en": "Accessibility"
+      },
+      "v": "100"
+     },
+     {
+      "k": {
+       "es": "Buenas prácticas",
+       "en": "Best practices"
+      },
+      "v": "100"
+     },
+     {
+      "k": "SEO",
+      "v": "100"
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "medium": true,
+    "h": {
+     "es": "Arquitectura",
+     "en": "Architecture"
+    },
+    "note": {
+     "es": "La arquitectura se documentó con el modelo C4 (Brown, s.f.). Una sola fuente de permisos alimenta las rutas, los botones y la matriz que ve sistemas.",
+     "en": "The architecture was documented with the C4 model (Brown, n.d.). A single source of permissions feeds the routes, the buttons and the matrix IT sees."
+    },
+    "images": [
+     {
+      "src": "rumbo-60-capas.webp",
+      "w": 1008,
+      "h": 880,
+      "alt": {
+       "es": "Diagrama de capas de la app: presentación (pantallas por rol, sistema de diseño, rutas e idiomas) lee y dispara acciones en estado (datos de la demo, sesión y preferencias), que carga y guarda en datos (datos semilla y almacenamiento del navegador); presentación y estado consultan el dominio, con las reglas de negocio puras: permisos, recorrido, métricas, accesos, auditoría y validación",
+       "en": "Diagram of the app's layers: presentation (screens by role, design system, routing and languages) reads from and dispatches actions to state (demo data, session and preferences), which loads from and saves to data (seed data and browser storage); presentation and state query the domain, which holds the pure business rules: permissions, journey, metrics, access, audit and validation"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "cierre",
+    "n": "07",
+    "lens": "both",
+    "mode": {
+     "es": "Las dos lentes",
+     "en": "Both lenses"
+    },
+    "name": {
+     "es": "Resultados, lo que falta y aprendizajes",
+     "en": "Results, what's next and lessons learnt"
+    },
+    "q": {
+     "es": "¿Qué demuestra, qué haría con una empresa real y qué me llevo?",
+     "en": "What does it show, what would I do with a real company, and what am I taking away?"
+    }
+   },
+   {
+    "t": "prose",
+    "hl": true,
+    "h": {
+     "es": "Resultados",
+     "en": "Results"
+    },
+    "p": [
+     {
+      "es": "Rumbo es un producto B2B completo de punta a punta: 40 pantallas, cuatro roles que se recorren cambiando de perspectiva en cualquier momento, accesibilidad WCAG 2.2 AA verificada por tests y una documentación que se puede leer sin el código. **No tiene usuarios reales ni métricas de impacto, y no las inventa**: ==lo que sí demuestra es un proceso==. Cómo pienso el ingreso como aprendizaje, cómo traduzco eso a una herramienta para cuatro roles y cómo llevo un diseño a un producto que funciona, con cada decisión a la vista.",
+      "en": "Rumbo is a complete, end-to-end B2B product: 40 screens, four roles you can switch between at any moment, WCAG 2.2 AA accessibility verified by tests and documentation that can be read without the code. **It has no real users or impact metrics, and it doesn't make them up.** ==What it does show is a process==: how I think about onboarding as learning, how I turn that into a tool for four roles and how I take a design to a working product, with every decision in the open."
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Qué haría con una empresa real",
+     "en": "What I would do with a real company"
+    },
+    "items": {
+     "es": [
+      "**Validar las proto-personas** con entrevistas a RRHH, líderes, ingresos recientes y sistemas, con el plan que ya está escrito",
+      "**Probar la arquitectura de la información** con card sorting y tree testing",
+      "**Hacer pruebas de usabilidad** de los cuatro flujos críticos: mi recorrido, check-in, constructor y solicitud de acceso",
+      "**Completar la prueba con lector de pantalla (NVDA)** y recorrerla en celulares reales",
+      "**Medir en un piloto**: tareas completadas a tiempo, check-ins hechos en fecha, días hasta que se destraba una tarea bloqueada y cómo se siente la persona nueva en cada etapa"
+     ],
+     "en": [
+      "**Validate the proto-personas** with interviews with HR, leaders, recent hires and IT, using the plan that is already written",
+      "**Test the information architecture** with card sorting and tree testing",
+      "**Run usability tests** on the four critical flows: my journey, check-in, template builder and access request",
+      "**Complete the screen reader test (NVDA)** and go through it on real phones",
+      "**Measure in a pilot**: tasks completed on time, check-ins held on schedule, days until a blocked task is unblocked and how the new hire feels at each stage"
+     ]
+    },
+    "foot": {
+     "es": "Son propuestas, no resultados.",
+     "en": "These are proposals, not results."
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Lo que me llevo",
+     "en": "What I'm taking away"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "El diseño instruccional sirve fuera del aula",
+       "en": "Instructional design works outside the classroom"
+      },
+      "body": {
+       "es": "Secuencia, andamiaje y evaluación formativa ordenaron un proceso de negocio",
+       "en": "Sequence, scaffolding and formative assessment gave order to a business process"
+      }
+     },
+     {
+      "lead": {
+       "es": "Un dato mal atribuido cuenta otra historia",
+       "en": "A misattributed figure tells a different story"
+      },
+      "body": {
+       "es": "La regla de quién bloquea cambió lo que el panel le dice a RRHH y lo que siente la persona nueva",
+       "en": "The who-is-blocking rule changed what the dashboard tells HR and how the new hire feels"
+      }
+     },
+     {
+      "lead": {
+       "es": "Con IA, el criterio es el trabajo",
+       "en": "With AI, judgement is the work"
+      },
+      "body": {
+       "es": "El agente escribe código rápido; especificar bien, revisar y decidir sigue siendo diseño",
+       "en": "The agent writes code fast; specifying well, reviewing and deciding is still design"
+      }
+     }
+    ]
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencias",
+     "en": "References"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Brown, S. (s.f.).",
+       "en": "Brown, S. (n.d.)."
+      },
+      "title": "The C4 model for visualising software architecture",
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://c4model.com/"
+     },
+     {
+      "pre": {
+       "es": "Google. (s.f.).",
+       "en": "Google. (n.d.)."
+      },
+      "title": "Material Design 3",
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://m3.material.io/"
+     },
+     {
+      "pre": {
+       "es": "Gothelf, J., & Seiden, J. (2021).",
+       "en": "Gothelf, J., & Seiden, J. (2021)."
+      },
+      "title": "Lean UX: Designing great products with agile teams",
+      "post": {
+       "es": " (3rd ed.). O'Reilly Media.",
+       "en": " (3rd ed.). O'Reilly Media."
+      }
+     },
+     {
+      "pre": {
+       "es": "International Organization for Standardization & International Electrotechnical Commission. (2023).",
+       "en": "International Organization for Standardization & International Electrotechnical Commission. (2023)."
+      },
+      "title": "Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model",
+      "post": {
+       "es": " (ISO/IEC 25010:2023). ISO.",
+       "en": " (ISO/IEC 25010:2023). ISO."
+      }
+     },
+     {
+      "pre": {
+       "es": "Rosenfeld, L., Morville, P., & Arango, J. (2015).",
+       "en": "Rosenfeld, L., Morville, P., & Arango, J. (2015)."
+      },
+      "title": "Information architecture: For the web and beyond",
+      "post": {
+       "es": " (4th ed.). O'Reilly Media.",
+       "en": " (4th ed.). O'Reilly Media."
+      }
+     },
+     {
+      "pre": {
+       "es": "World Wide Web Consortium. (2023).",
+       "en": "World Wide Web Consortium. (2023)."
+      },
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.w3.org/TR/WCAG22/"
+     }
+    ]
+   }
+  ],
+  "credits": {
+   "es": "Fotos de personas: Magnific (antes Freepik), con licencia. Íconos de la app: Material Symbols (Google), Apache 2.0. Tipografía de la app: Inter, SIL Open Font License. Nortia S.A., sus personas y sus datos son ficticios.",
+   "en": "People photos: Magnific (formerly Freepik), licensed. App icons: Material Symbols (Google), Apache 2.0. App typeface: Inter, SIL Open Font License. Nortia S.A., its people and its data are fictional."
+  }
  }
 };
