@@ -191,8 +191,7 @@ window.PROJECTS = [
   {
     slug: 'infraestructura-it',
     cover: 'assets/img/covers/infraestructura-it.jpg',
-    cat: 'it',
-    also: ['cap'],
+    cat: 'cap',
     dates: ['2022-07', '2024-12'],
     tags: { es: ['sistemas', 'documentación'], en: ['systems', 'documentation'] },
     title: { es: 'Estandarización de infraestructura IT', en: 'IT infrastructure standardisation' },
@@ -221,10 +220,11 @@ window.PROJECTS = [
   {
     slug: 'riesgos-digitales',
     cover: 'assets/img/covers/riesgos-digitales.jpg',
-    cat: 'it',
+    cat: 'cap',
     also: ['cont'],
+    alsoTags: { it: { es: 'ux', en: 'ux' } },
     dates: ['2024-07', '2024-11'],
-    tags: { es: ['ux', 'seguridad', 'investigación'], en: ['ux', 'security', 'research'] },
+    tags: { es: ['seguridad', 'investigación'], en: ['security', 'research'] },
     badges: ['UX'],
     title: { es: 'Programa participativo de riesgos digitales', en: 'Participatory digital risk programme' },
     desc: {
