@@ -445,6 +445,7 @@
       return `<div class="facts__i facts__i--${k.slice(1).toLowerCase()}"><dt>${t(k)}</dt><dd>${dd}</dd></div>`;
     };
     const links = c.links || [];
+    // creditsLinks: [{ text, url }] convierte esa frase de los créditos en un enlace (por ejemplo, una atribución que pide la licencia).
     H = 2;
     // Los tokens de CSS que aparecen en el texto (--line, --ink-70) van en mono: en la fuente de texto, "--" se lee como una raya.
     /* Paneles de texto seguidos: se agrupan de a dos en la misma fila, como tarjetas de un tablero.
@@ -483,7 +484,7 @@
         <div class="brief__col brief__col--p"><h3 class="brief__k"><i class="ph ph-x-circle" aria-hidden="true"></i>${t('sumProblem')}</h3><p class="brief__t">${rich(L(sm.problem))}</p></div>
         <div class="brief__col brief__col--s"><h3 class="brief__k"><i class="ph ph-check-circle" aria-hidden="true"></i>${t('sumSolution')}</h3><p class="brief__t">${rich(L(sm.solution))}</p></div>
         <div class="brief__col brief__col--r"><h3 class="brief__k"><i class="ph ph-arrow-up" aria-hidden="true"></i>${t(sm.results.length > 1 ? 'sumResults' : 'sumResult')}</h3>
-          <ul class="brief__res">${sm.results.map((r) => (r.v
+          <ul class="brief__res${sm.results.length === 4 && sm.results.slice(0, 3).every((r) => r.v) && !sm.results[3].v ? ' brief__res--31' : ''}">${sm.results.map((r) => (r.v
             ? `<li class="brief__m"><span class="brief__v">${esc(L(r.v))}</span> <span class="brief__l">${esc(L(r.l))}</span></li>`
             : `<li class="brief__x"><i class="ph ph-check" aria-hidden="true"></i><span>${esc(L(r.t))}</span></li>`)).join('')}</ul></div>
       </section>` : '';
@@ -531,7 +532,7 @@
       ${(() => { const items = [fact('fRole', f.role), fact('fTimeline', f.timeline), fact('fContext', f.context), fact('fStack', f.stack), fact('fMethods', f.methods)].filter(Boolean); return `<dl class="facts" style="--n:${items.length}">${items.join('')}</dl>`; })()}
       <div class="blocks">${blocks}</div>
       ${c.outcome ? blk({ h: c.outcome.h || t('outcome') }, [].concat(c.outcome.body).map((x) => `<p>${rich(L(x))}</p>`).join(''), false, ' blk--outcome').replace(/^(\s*<section class="[^"]*")/, c.outcome.join ? '$1 data-join' : '$1') : ''}
-      ${c.credits ? `<p class="case__credits">${esc(L(c.credits))}</p>` : ''}
+      ${c.credits ? `<p class="case__credits">${(c.creditsLinks || []).reduce((s, k) => s.replace(esc(L(k.text)), `<a href="${esc(k.url)}" target="_blank" rel="noopener">${esc(L(k.text))}</a>`), esc(L(c.credits)))}</p>` : ''}
       </div>
       <nav class="pager" aria-label="${esc(t('aptNav'))}" style="--next-c:${nextColor}">
         <a class="pager__btn pager__btn--prev" href="#"><i class="ph ph-arrow-left" aria-hidden="true"></i><span class="pager__txt"><span class="pager__k">${t('aptPrev')}</span><span class="sr-only">: </span><span class="pager__l"></span></span></a>

@@ -14863,5 +14863,2794 @@ window.CASES = {
    "es": "Fotos de personas: Magnific (antes Freepik), con licencia. Íconos de la app: Material Symbols (Google), Apache 2.0. Tipografía de la app: Inter, SIL Open Font License. Nortia S.A., sus personas y sus datos son ficticios.",
    "en": "People photos: Magnific (formerly Freepik), licensed. App icons: Material Symbols (Google), Apache 2.0. App typeface: Inter, SIL Open Font License. Nortia S.A., its people and its data are fictional."
   }
+ },
+ "alcancia": {
+  "cat": "it",
+  "touch": "cap",
+  "title": {
+   "es": "Alcancía, simulador de finanzas personales",
+   "en": "Alcancía, a personal finance simulator"
+  },
+  "subtitle": {
+   "es": "Producto B2B para organizaciones, aulas y productos: se aprende finanzas usando una billetera virtual con dinero ficticio. Prototipo navegable de alta fidelidad. Personas, empresas y entidades ficticias.",
+   "en": "A B2B product for organisations, classrooms and products: people learn personal finance by using a virtual wallet with fictitious money. A high-fidelity, fully navigable prototype. Fictional people, companies and entities."
+  },
+  "chips": {
+   "es": [
+    "Learning Experience Design",
+    "UX/UI",
+    "Producto B2B",
+    "WCAG 2.2 AA"
+   ],
+   "en": [
+    "Learning Experience Design",
+    "UX/UI",
+    "B2B product",
+    "WCAG 2.2 AA"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Muchas personas aprenden finanzas cuando ya se equivocaron con dinero real: **pagan el mínimo de la tarjeta, aceptan un préstamo por la cuota o dejan el sueldo quieto** mientras la inflación se lo come. Los programas de bienestar financiero se lanzan con entusiasmo y se abandonan, miden cuántas personas los abrieron y no qué cambió, y chocan con una desconfianza concreta: «¿la empresa va a ver cuánto debo?».",
+    "en": "Many people learn about money only after getting it wrong with real money: **they pay the card minimum, take a loan because the instalment looks small or leave their salary idle** while inflation eats it. Financial wellbeing programmes launch with enthusiasm and then fade, they count how many people opened them rather than what changed, and they run into a very concrete fear: “will my employer see how much I owe?”"
+   },
+   "solution": {
+    "es": "Alcancía propone **equivocarse antes y gratis**. Quien aprende no entra a un curso: entra a su billetera, cobra un sueldo de práctica, paga, ahorra, decide sobre crédito e invierte, y cada acción le enseña algo en el momento en que pasa. Las secciones se abren por conducta financiera y la organización solo ve avance agregado. **Lo especifiqué, lo diseñé y lo llevé a un prototipo funcional**, con un agente de IA como desarrollador.",
+    "en": "Alcancía lets people **make those mistakes earlier, and for free**. Learners don’t enrol in a course: they open their wallet, get a practice salary, pay, save, make credit decisions and invest, and every action teaches something at the moment it happens. Sections unlock through financial behaviour, and the organisation only sees aggregate progress. **I specified it, designed it and took it to a working prototype**, with an AI agent as the developer."
+   },
+   "results": [
+    {
+     "v": "9",
+     "l": {
+      "es": "niveles que se abren por conducta financiera, no por clics",
+      "en": "levels that unlock through financial behaviour, not clicks"
+     }
+    },
+    {
+     "v": "13",
+     "l": {
+      "es": "misiones con consecuencias reales dentro de la billetera de cada persona",
+      "en": "missions with real consequences inside each learner’s own wallet"
+     }
+    },
+    {
+     "v": "242",
+     "l": {
+      "es": "decisiones de diseño registradas, con la duda, lo decidido y por qué",
+      "en": "design decisions logged, with the question, the decision and the reason"
+     }
+    },
+    {
+     "t": {
+      "es": "780 tests unitarios, 1.181 de punta a punta y 130 sobre el build publicado, todos en verde.",
+      "en": "780 unit tests, 1,181 end-to-end tests and 130 on the published build, all passing."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Experience Designer: supuestos y proto-personas, diseño instruccional del programa, arquitectura de la información, UX/UI, sistema de diseño, especificación funcional y dirección del desarrollo",
+    "en": "Experience Designer: assumptions and proto-personas, instructional design of the programme, information architecture, UX/UI, design system, functional specification and directing the development"
+   },
+   "timeline": {
+    "es": "Noviembre 2026",
+    "en": "November 2026"
+   },
+   "context": {
+    "es": "Producto conceptual para portfolio. Andina Servicios S.A., el Instituto Superior Ceibo, Hornero, sus personas y sus datos son ficticios. El dinero es ficticio; tasas, inflación y tipo de cambio son reales, del BCRA y el INDEC",
+    "en": "Concept product for my portfolio. Andina Servicios S.A., Instituto Superior Ceibo, Hornero, their people and their data are fictional. The money is fictitious; interest rates, inflation and exchange rates are real, from Argentina’s central bank (BCRA) and statistics office (INDEC)"
+   },
+   "stack": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Radix y shadcn/ui",
+    "Zustand",
+    "decimal.js",
+    "Zod",
+    "Recharts",
+    "i18next",
+    "Vitest",
+    "Playwright",
+    "GitHub Actions",
+    "Claude Code"
+   ],
+   "methods": {
+    "es": [
+     "Lean UX",
+     "Backward Design",
+     "Gagné",
+     "Aprendizaje experiencial (Kolb)",
+     "Kirkpatrick",
+     "Arquitectura de la información",
+     "MoSCoW",
+     "ISO/IEC 25010",
+     "WCAG 2.2 AA",
+     "Material Design 3"
+    ],
+    "en": [
+     "Lean UX",
+     "Backward design",
+     "Gagné",
+     "Experiential learning (Kolb)",
+     "Kirkpatrick",
+     "Information architecture",
+     "MoSCoW",
+     "ISO/IEC 25010",
+     "WCAG 2.2 AA",
+     "Material Design 3"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Recorrer la demo",
+     "en": "Explore the demo"
+    },
+    "url": "https://lpedaci.github.io/alcancia-app/"
+   },
+   {
+    "label": {
+     "es": "Sistema de diseño",
+     "en": "Design system"
+    },
+    "url": "https://lpedaci.github.io/alcancia-app/#/design-system"
+   },
+   {
+    "label": {
+     "es": "Documentación y código",
+     "en": "Docs and code"
+    },
+    "url": "https://github.com/lpedaci/alcancia-app"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "quote",
+    "h": {
+     "es": "La idea",
+     "en": "The idea"
+    },
+    "body": {
+     "es": "Nadie aprende a manejar dinero leyendo sobre dinero. Se aprende usándolo, y equivocarse cuesta caro.",
+     "en": "Nobody learns to manage money by reading about money. You learn by using it, and mistakes are expensive."
+    },
+    "p": [
+     {
+      "es": "Alcancía da vuelta el orden de un curso: **la billetera es el programa**. El orden en que se abren las secciones es la secuencia didáctica: primero lo que te protege, después lo que te hace crecer. Y lo construye como producto: una misma billetera para **una organización, una institución educativa o una app financiera**, con cinco roles y ningún dato económico fuera del navegador de quien aprende.",
+      "en": "Alcancía turns a course inside out: **the wallet is the programme**. The order in which sections unlock is the learning sequence: first what protects you, then what helps you grow. And it is built as a product: the same wallet for **an organisation, a school or a financial app**, with five roles and no financial data ever leaving the learner’s browser."
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "join": true,
+    "accent": true,
+    "lens": true,
+    "arrow": false,
+    "h": {
+     "es": "Dos lentes sobre el mismo problema",
+     "en": "Two lenses on the same problem"
+    },
+    "cols": {
+     "dim": {
+      "es": "Aspecto",
+      "en": "Aspect"
+     },
+     "before": {
+      "es": "Lente LXD",
+      "en": "LXD lens"
+     },
+     "after": {
+      "es": "Lente UX/UI",
+      "en": "UX/UI lens"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "La pregunta",
+       "en": "The question"
+      },
+      "before": {
+       "es": "¿Cómo aprende finanzas un adulto con poco tiempo y mucha desconfianza?",
+       "en": "How does an adult with little time and plenty of distrust learn about money?"
+      },
+      "after": {
+       "es": "¿Cómo se usa una billetera que además enseña, para cinco roles y tres contextos?",
+       "en": "How do five roles in three contexts use a wallet that also teaches?"
+      }
+     },
+     {
+      "dim": {
+       "es": "A quién pongo en el centro",
+       "en": "Who I put at the centre"
+      },
+      "before": {
+       "es": "A quien aprende, que necesita equivocarse sin pagar el costo",
+       "en": "The learner, who needs to make mistakes without paying for them"
+      },
+      "after": {
+       "es": "A cada rol con lo suyo: billetera, tutoría, gestión y reporte",
+       "en": "Each role with its own space: wallet, tutoring, management and reporting"
+      }
+     },
+     {
+      "dim": {
+       "es": "Qué diseño",
+       "en": "What I design"
+      },
+      "before": {
+       "es": "Resultados observables, misiones, evaluaciones variadas e impacto medido",
+       "en": "Observable outcomes, missions, varied assessments and measured impact"
+      },
+      "after": {
+       "es": "Arquitectura de una billetera, flujos, desbloqueos visibles y sistema de diseño",
+       "en": "A wallet’s architecture, flows, visible unlocks and a design system"
+      }
+     },
+     {
+      "dim": {
+       "es": "Cómo sé que funciona",
+       "en": "How I know it works"
+      },
+      "before": {
+       "es": "La persona explica el porqué de una decisión, no solo la respuesta",
+       "en": "The learner explains why a decision is right, not just the answer"
+      },
+      "after": {
+       "es": "Cada pantalla se entiende en celular, sin desbordes ni errores de accesibilidad",
+       "en": "Every screen makes sense on a phone, with no overflow and no accessibility errors"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "descubrir",
+    "n": "01",
+    "lens": "both",
+    "mode": {
+     "es": "Las dos lentes",
+     "en": "Both lenses"
+    },
+    "name": {
+     "es": "Descubrir",
+     "en": "Discover"
+    },
+    "q": {
+     "es": "¿Quién aprende, quién acompaña y qué teme cada uno?",
+     "en": "Who learns, who supports them, and what is each of them afraid of?"
+    }
+   },
+   {
+    "t": "cards",
+    "cols": 3,
+    "h": {
+     "es": "Cinco roles y dos públicos que aprenden",
+     "en": "Five roles and two kinds of learner"
+    },
+    "items": [
+     {
+      "avatar": {
+       "src": "alcancia-10-mariana.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Mariana López",
+      "tag": {
+       "es": "Participante de oficina",
+       "en": "Office participant"
+      },
+      "body": {
+       "es": "Quiere ordenar su dinero con criterio propio, sin que nadie le venda nada. **Lee sobre finanzas en redes y no sabe a quién creerle.**",
+       "en": "Wants to sort out her money with her own judgement, without anyone selling her anything. **She reads about money on social media and doesn’t know who to trust.**"
+      }
+     },
+     {
+      "avatar": {
+       "src": "alcancia-11-diego.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Diego Suárez",
+      "tag": {
+       "es": "Participante operativo",
+       "en": "Frontline participant"
+      },
+      "body": {
+       "es": "Aprende desde el celular, en pausas de 5 minutos. **Los textos largos y la jerga lo expulsan**, y desconfía de una app «de la empresa».",
+       "en": "Learns on his phone, in 5-minute breaks. **Long texts and jargon push him away**, and he distrusts an app that belongs to his employer."
+      }
+     },
+     {
+      "avatar": {
+       "src": "alcancia-12-kevin.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Kevin Giovanni",
+      "tag": {
+       "es": "Tutor",
+       "en": "Tutor"
+      },
+      "body": {
+       "es": "Acompaña cohortes sin meterse en la vida financiera de nadie. **Prepara los encuentros a ciegas**, sin saber qué temas costaron más.",
+       "en": "Supports cohorts without prying into anyone’s finances. **He prepares sessions blind**, without knowing which topics people found hardest."
+      }
+     },
+     {
+      "avatar": {
+       "src": "alcancia-13-julieta.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Julieta Martorelli",
+      "tag": {
+       "es": "Admin de L&D y Beneficios",
+       "en": "L&D and Benefits admin"
+      },
+      "body": {
+       "es": "Lanza el programa y tiene que demostrar que sirve. **Los beneficios de bienestar se abandonan pronto** y solo mide cuántos lo abrieron.",
+       "en": "Launches the programme and has to prove it works. **Wellbeing benefits get dropped quickly**, and she can only count how many people opened it."
+      }
+     },
+     {
+      "avatar": {
+       "src": "alcancia-14-ricardo.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": "Ricardo Benítez",
+      "tag": {
+       "es": "Decisor",
+       "en": "Sponsor"
+      },
+      "body": {
+       "es": "Decide si renovar el programa y quiere ver qué cambió en la gente. **Los reportes de capacitación muestran asistencia, no cambios.**",
+       "en": "Decides whether to renew the programme and wants to see what changed for people. **Training reports show attendance, not change.**"
+      }
+     },
+     {
+      "avatar": {
+       "src": "alcancia-15-lucia.webp",
+       "w": 112,
+       "h": 112
+      },
+      "title": {
+       "es": "Otros dos contextos",
+       "en": "Two more contexts"
+      },
+      "tag": {
+       "es": "Institución y producto",
+       "en": "School and product"
+      },
+      "body": {
+       "es": "En el Instituto Superior Ceibo aprende Lucía, de 18 años o más; en Hornero, Joaquín, desde su app. **Mismos niveles, otros roles alrededor.**",
+       "en": "At Instituto Superior Ceibo, Lucía (18 or older) is the learner; at Hornero, Joaquín learns inside his app. **Same levels, different roles around them.**"
+      }
+     }
+    ]
+   },
+   {
+    "t": "persona",
+    "h": {
+     "es": "Mariana, la persona que explora",
+     "en": "Mariana, the explorer"
+    },
+    "photo": {
+     "src": "alcancia-10-mariana.webp",
+     "w": 112,
+     "h": 112,
+     "round": true,
+     "alt": {
+      "es": "Retrato de Mariana López, persona ficticia, con el anillo violeta del rol de participante",
+      "en": "Portrait of Mariana López, a fictional person, with the violet ring of the participant role"
+     }
+    },
+    "name": "Mariana López",
+    "meta": [
+     {
+      "k": {
+       "es": "Rol",
+       "en": "Role"
+      },
+      "v": {
+       "es": "Participante",
+       "en": "Participant"
+      }
+     },
+     {
+      "k": {
+       "es": "Puesto",
+       "en": "Position"
+      },
+      "v": {
+       "es": "Analista de Operaciones",
+       "en": "Operations Analyst"
+      }
+     },
+     {
+      "k": {
+       "es": "Tipo",
+       "en": "Type"
+      },
+      "v": {
+       "es": "Proto-persona, hipótesis sin validar",
+       "en": "Proto-persona, unvalidated hypothesis"
+      }
+     }
+    ],
+    "bio": {
+     "es": "Autónoma y exploradora: si ya sabe un tema, quiere saltarlo y seguir. **Valora entender el porqué más que la respuesta.**",
+     "en": "Independent and curious: if she already knows a topic, she wants to skip it and move on. **She values understanding why over getting the answer.**"
+    },
+    "goalsL": {
+     "es": "Criterios de éxito",
+     "en": "Success criteria"
+    },
+    "goals": {
+     "es": [
+      "Desbloquear secciones por lo que ya sabe, sin repetir lo básico",
+      "Entender por qué Invertir está bloqueado sin sentirse juzgada",
+      "Explicar con sus palabras qué diferencia una cuenta remunerada de un fondo money market"
+     ],
+     "en": [
+      "Unlock sections with what she already knows, without repeating the basics",
+      "Understand why Invest is locked without feeling judged",
+      "Explain in her own words how an interest-bearing account differs from a money market fund"
+     ]
+    },
+    "painsL": {
+     "es": "Frustraciones supuestas",
+     "en": "Assumed frustrations"
+    },
+    "pains": {
+     "es": [
+      "Lee sobre finanzas en redes y no sabe a quién creerle ni qué le conviene",
+      "Siente que «debería saber» y le da vergüenza preguntar",
+      "Las calculadoras no dicen qué supuestos usan ni de dónde salen las tasas"
+     ],
+     "en": [
+      "She reads about money on social media and doesn’t know who to trust or what suits her",
+      "She feels she “should know this” and is embarrassed to ask",
+      "Calculators don’t say which assumptions they use or where the rates come from"
+     ]
+    }
+   },
+   {
+    "t": "persona",
+    "h": {
+     "es": "Diego, la persona que aprende en el celular",
+     "en": "Diego, the mobile learner"
+    },
+    "photo": {
+     "src": "alcancia-11-diego.webp",
+     "w": 112,
+     "h": 112,
+     "round": true,
+     "alt": {
+      "es": "Retrato de Diego Suárez, persona ficticia, con el anillo violeta del rol de participante",
+      "en": "Portrait of Diego Suárez, a fictional person, with the violet ring of the participant role"
+     }
+    },
+    "name": "Diego Suárez",
+    "meta": [
+     {
+      "k": {
+       "es": "Rol",
+       "en": "Role"
+      },
+      "v": {
+       "es": "Participante",
+       "en": "Participant"
+      }
+     },
+     {
+      "k": {
+       "es": "Puesto",
+       "en": "Position"
+      },
+      "v": {
+       "es": "Operario de depósito",
+       "en": "Warehouse operator"
+      }
+     },
+     {
+      "k": {
+       "es": "Tipo",
+       "en": "Type"
+      },
+      "v": {
+       "es": "Proto-persona, hipótesis sin validar",
+       "en": "Proto-persona, unvalidated hypothesis"
+      }
+     }
+    ],
+    "bio": {
+     "es": "Práctico: aprende haciendo y con ejemplos concretos. Necesita **retomar donde dejó, con una sola acción por pantalla**.",
+     "en": "Practical: he learns by doing, with concrete examples. He needs **to pick up where he left off, with one action per screen**."
+    },
+    "goalsL": {
+     "es": "Criterios de éxito",
+     "en": "Success criteria"
+    },
+    "goals": {
+     "es": [
+      "Completar una guía y su práctica en 5 minutos, en un celular de 320 px",
+      "Nunca tener que arrastrar para responder una pregunta",
+      "Revisar el titular de la cuenta antes de confirmar una transferencia"
+     ],
+     "en": [
+      "Finish a guide and its practice in 5 minutes, on a 320 px phone",
+      "Never have to drag anything to answer a question",
+      "Check the account holder’s name before confirming a transfer"
+     ]
+    },
+    "painsL": {
+     "es": "Frustraciones supuestas",
+     "en": "Assumed frustrations"
+    },
+    "pains": {
+     "es": [
+      "Las plataformas de capacitación están pensadas para la computadora",
+      "Los textos largos y técnicos lo expulsan",
+      "Desconfía de poner sus datos en una app de la empresa"
+     ],
+     "en": [
+      "Training platforms are designed for a computer, not a phone",
+      "Long, technical texts push him away before he starts",
+      "He distrusts putting his details into an app run by his employer"
+     ]
+    }
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Proto-personas, no personas",
+     "en": "Proto-personas, not personas"
+    },
+    "body": {
+     "es": "Las construí con el enfoque de Lean UX (Gothelf y Seiden, 2021): **hipótesis explícitas, sin entrevistas ni citas inventadas**. Ninguna describe la situación financiera real de nadie: el producto tampoco la conoce ni la pregunta. Cada una tiene su tabla de supuestos y el proyecto incluye un plan de validación en cuatro etapas.",
+     "en": "I built them with the Lean UX approach (Gothelf & Seiden, 2021): **explicit hypotheses, with no invented interviews or quotes**. None of them describes anyone’s real financial situation: the product doesn’t know it and never asks. Each one has its own table of assumptions, and the project includes a four-stage validation plan."
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Los supuestos de mayor riesgo",
+     "en": "The riskiest assumptions"
+    },
+    "note": {
+     "es": "Cada supuesto, con cómo lo validaría.",
+     "en": "Each assumption, with how I would validate it."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Aprender usando una billetera es más claro que un curso",
+       "en": "Learning by using a wallet is clearer than a course"
+      },
+      "body": {
+       "es": "Prueba con 5 personas: la misión 1 frente a la misma guía en formato lección",
+       "en": "A test with 5 people: mission 1 against the same guide as a lesson"
+      }
+     },
+     {
+      "lead": {
+       "es": "La principal barrera de adopción es la desconfianza sobre la privacidad",
+       "en": "The main barrier to adoption is distrust about privacy"
+      },
+      "body": {
+       "es": "Encuesta previa al lanzamiento sobre los motivos para no sumarse",
+       "en": "A pre-launch survey on the reasons for not joining"
+      }
+     },
+     {
+      "lead": {
+       "es": "El personal operativo entra sobre todo desde el celular personal",
+       "en": "Frontline staff mostly use their personal phone"
+      },
+      "body": {
+       "es": "Consulta a L&D y a jefes de depósito sobre el uso de celulares en planta",
+       "en": "Ask L&D and warehouse supervisors about phone use on the floor"
+      }
+     },
+     {
+      "lead": {
+       "es": "Al tutor le alcanza con ver el avance, sin saber si un nivel está bloqueado",
+       "en": "Seeing progress is enough for tutors, without knowing whether a level is locked"
+      },
+      "body": {
+       "es": "Prueba del panel con 2 o 3 tutores ante un caso concreto",
+       "en": "Test the dashboard with 2 or 3 tutors on a concrete case"
+      }
+     }
+    ]
+   },
+   {
+    "t": "journey",
+    "h": {
+     "es": "El primer sueldo de Diego (hipótesis)",
+     "en": "Diego’s first paycheck (hypothesis)"
+    },
+    "note": {
+     "es": "Mapa de experiencia hipotético, derivado de la proto-persona y de la misión 1: no sale de entrevistas.",
+     "en": "A hypothetical experience map derived from the proto-persona and mission 1, not from interviews."
+    },
+    "labels": {
+     "emotion": {
+      "es": "Emoción",
+      "en": "Emotion"
+     },
+     "actions": {
+      "es": "Qué hace",
+      "en": "What he does"
+     },
+     "feel": {
+      "es": "Qué piensa",
+      "en": "What he thinks"
+     },
+     "actors": {
+      "es": "Quiénes participan",
+      "en": "Who is involved"
+     },
+     "touch": {
+      "es": "Puntos de contacto",
+      "en": "Touchpoints"
+     }
+    },
+    "stages": [
+     {
+      "name": {
+       "es": "Primer ingreso",
+       "en": "First login"
+      },
+      "level": 0,
+      "emo": {
+       "es": "Desconfiado",
+       "en": "Wary"
+      },
+      "actions": {
+       "es": "Lee el aviso de privacidad y hace «Conocerte»",
+       "en": "Reads the privacy notice and takes “Getting to know you”"
+      },
+      "feel": {
+       "es": "«¿Esto lo ve la empresa?»",
+       "en": "“Can my employer see this?”"
+      }
+     },
+     {
+      "name": {
+       "es": "Cobra el sueldo",
+       "en": "Gets paid"
+      },
+      "level": 1,
+      "emo": {
+       "es": "Entusiasmado",
+       "en": "Excited"
+      },
+      "actions": {
+       "es": "Recibe $ 1.284.958,86 de práctica y ve su recibo explicado",
+       "en": "Receives $1,284,958.86 in practice money and sees his payslip explained"
+      },
+      "feel": {
+       "es": "«Ah, por esto el neto es menos que el bruto»",
+       "en": "“So that’s why net pay is less than gross”"
+      }
+     },
+     {
+      "name": {
+       "es": "Separa el 20 %",
+       "en": "Sets aside 20%"
+      },
+      "level": 0,
+      "emo": {
+       "es": "Dudoso",
+       "en": "Unsure"
+      },
+      "actions": {
+       "es": "Calcula cuánto apartar y se equivoca por poco",
+       "en": "Works out how much to set aside and is slightly off"
+      },
+      "feel": {
+       "es": "«¿Lo hice mal? A ver el cálculo»",
+       "en": "“Did I get it wrong? Let me see the maths”"
+      }
+     },
+     {
+      "name": {
+       "es": "Débito sorpresa",
+       "en": "Surprise debit"
+      },
+      "level": -1,
+      "emo": {
+       "es": "Molesto",
+       "en": "Annoyed"
+      },
+      "actions": {
+       "es": "Se le debita una suscripción de $ 4.990 que no recordaba",
+       "en": "A $4,990 subscription he had forgotten about is charged"
+      },
+      "feel": {
+       "es": "«¿Cuántas de estas tengo en la vida real?»",
+       "en": "“How many of these do I have in real life?”"
+      }
+     },
+     {
+      "name": {
+       "es": "Desafío del nivel 1",
+       "en": "Level 1 challenge"
+      },
+      "level": 0,
+      "emo": {
+       "es": "Concentrado",
+       "en": "Focused"
+      },
+      "actions": {
+       "es": "Responde en el celular, sin límite de tiempo",
+       "en": "Answers on his phone, with no time limit"
+      },
+      "feel": {
+       "es": "«Si me equivoco, me explica por qué»",
+       "en": "“If I get it wrong, it tells me why”"
+      }
+     },
+     {
+      "name": {
+       "es": "Se abre Pagar",
+       "en": "Pay unlocks"
+      },
+      "level": 1,
+      "emo": {
+       "es": "Orgulloso",
+       "en": "Proud"
+      },
+      "actions": {
+       "es": "Desbloquea la sección siguiente y Fuerte lo celebra",
+       "en": "Unlocks the next section and Fuerte celebrates"
+      },
+      "feel": {
+       "es": "«Lo gané por lo que hice, no por clics»",
+       "en": "“I earned it by what I did, not by clicking”"
+      }
+     }
+    ],
+    "actors": {
+     "es": [
+      "Diego",
+      "Fuerte",
+      "Kevin (tutor)"
+     ],
+     "en": [
+      "Diego",
+      "Fuerte",
+      "Kevin (tutor)"
+     ]
+    },
+    "touch": {
+     "es": [
+      "Celular",
+      "Billetera",
+      "Recibo de ejemplo",
+      "Desafío de nivel"
+     ],
+     "en": [
+      "Phone",
+      "Wallet",
+      "Sample payslip",
+      "Level challenge"
+     ]
+    }
+   },
+   {
+    "t": "prose",
+    "p": [
+     {
+      "es": "Los momentos bajos son los que Alcancía usa a favor: **el débito sorpresa está diseñado a propósito**, para que la primera experiencia de un gasto hormiga pase con dinero ficticio y deje una pregunta para la vida real.",
+      "en": "Alcancía puts the low points to work: **the surprise debit is there on purpose**, so that the first experience of a small, forgotten expense happens with fictitious money and leaves a question for real life."
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "definir",
+    "n": "02",
+    "lens": "it",
+    "mode": {
+     "es": "Lente UX/UI",
+     "en": "UX/UI lens"
+    },
+    "name": {
+     "es": "Definir",
+     "en": "Define"
+    },
+    "q": {
+     "es": "¿Qué es Alcancía y qué no?",
+     "en": "What is Alcancía, and what isn’t it?"
+    }
+   },
+   {
+    "t": "cards",
+    "cols": 3,
+    "h": {
+     "es": "Tres contextos, una misma billetera",
+     "en": "Three contexts, one wallet"
+    },
+    "note": {
+     "es": "Cambian el vocabulario, los roles visibles y la entrada. La billetera, los niveles, las misiones y la privacidad son los mismos.",
+     "en": "The vocabulary, the visible roles and the entry point change. The wallet, the levels, the missions and privacy stay the same."
+    },
+    "items": [
+     {
+      "title": {
+       "es": "Una organización",
+       "en": "An organisation"
+      },
+      "tag": "Andina Servicios S.A.",
+      "body": {
+       "es": "La ofrece a su gente como beneficio y capacitación, con **tutoría, L&D y un reporte de impacto** para la dirección.",
+       "en": "Offers it to its people as a benefit and as training, with **tutoring, L&D and an impact report** for leadership."
+      }
+     },
+     {
+      "title": {
+       "es": "Una institución educativa",
+       "en": "A school"
+      },
+      "tag": "Instituto Superior Ceibo",
+      "body": {
+       "es": "Nivel superior y formación profesional, **solo con personas de 18 años o más**, con tutoría y coordinación académica.",
+       "en": "Higher and vocational education, **only for people aged 18 or over**, with tutoring and academic coordination."
+      }
+     },
+     {
+      "title": {
+       "es": "Un producto existente",
+       "en": "An existing product"
+      },
+      "tag": "Hornero",
+      "body": {
+       "es": "Una billetera o app financiera la integra para sus usuarios. **Hornero es una marca ficticia** y lo dice en pantalla.",
+       "en": "A wallet or financial app embeds it for its users. **Hornero is a fictional brand**, and the screen says so."
+      }
+     }
+    ]
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": "80",
+      "label": {
+       "es": "requerimientos funcionales, priorizados con MoSCoW",
+       "en": "functional requirements, each prioritised with MoSCoW"
+      }
+     },
+     {
+      "value": "17",
+      "label": {
+       "es": "requerimientos no funcionales, según ISO/IEC 25010",
+       "en": "non-functional requirements, under ISO/IEC 25010"
+      }
+     },
+     {
+      "value": "13",
+      "label": {
+       "es": "casos de uso, con su flujo principal y sus alternativos",
+       "en": "use cases, each with a main flow and alternative flows"
+      }
+     },
+     {
+      "value": "2",
+      "label": {
+       "es": "fases de construcción, con un ajuste de siete pasos entre las dos",
+       "en": "build phases, with a seven-step course correction in between"
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "cols": 2,
+    "h": {
+     "es": "Arquitectura de la información",
+     "en": "Information architecture"
+    },
+    "note": {
+     "es": "Basada en los cuatro sistemas de Rosenfeld, Morville y Arango (2015).",
+     "en": "Based on the four systems described by Rosenfeld, Morville and Arango (2015)."
+    },
+    "items": [
+     {
+      "title": {
+       "es": "Organización: la de una billetera",
+       "en": "Organisation: a wallet’s"
+      },
+      "body": {
+       "es": "Para quien aprende no hay campus: hay Inicio, Pagar, Ahorrar, Invertir y Aprender. **El contenido vive en la sección donde se usa.**",
+       "en": "There is no campus for learners: there is Home, Pay, Save, Invest and Learn. **Content lives in the section where it is used.**"
+      }
+     },
+     {
+      "title": {
+       "es": "Rotulado con verbos",
+       "en": "Labels as verbs"
+      },
+      "body": {
+       "es": "«Pagar», «Ahorrar», «Rendir», «Ya sé esto»: lo que la persona hace, no el nombre del módulo. Nunca «examen», siempre **«desafío de nivel»**.",
+       "en": "“Pay”, “Save”, “Earn interest”, “I already know this”: what people do, not what the module is called. Never “exam”, always **“level challenge”**."
+      }
+     },
+     {
+      "title": {
+       "es": "Navegación por tamaño",
+       "en": "Navigation by screen size"
+      },
+      "body": {
+       "es": "Barra inferior de cinco destinos en celular y tablet, menú lateral desde 1200 px. **Lo bloqueado lleva candado y dice qué falta.**",
+       "en": "A five-item bottom bar on phones and tablets, a side menu from 1200 px. **Locked items show a padlock and say what is missing.**"
+      }
+     },
+     {
+      "title": {
+       "es": "Sin búsqueda global, a propósito",
+       "en": "No global search, on purpose"
+      },
+      "body": {
+       "es": "El volumen se recorre bien navegando. **El glosario de 54 términos tiene su propia búsqueda**, que ignora los acentos.",
+       "en": "The volume is easy to browse by navigating. **The 54-term glossary has its own search**, which ignores accents."
+      }
+     }
+    ]
+   },
+   {
+    "t": "decisionflow",
+    "h": {
+     "es": "User flow: una sección bloqueada",
+     "en": "User flow: a locked section"
+    },
+    "note": {
+     "es": "Lo bloqueado se ve, nunca se esconde: cada sección cerrada dice qué falta y lleva a la acción que la acerca. Quien ya sabe puede demostrarlo y saltar el nivel.",
+     "en": "Locked items are shown, never hidden: every locked section says what is missing and leads to the action that gets you closer. Anyone who already knows the topic can prove it and skip the level."
+    },
+    "nodes": [
+     {
+      "kind": "start",
+      "label": {
+       "es": "Toca una sección con candado",
+       "en": "Taps a locked section"
+      }
+     },
+     {
+      "kind": "step",
+      "label": {
+       "es": "Tarjeta «qué falta», con el progreso de cada condición",
+       "en": "“What’s missing” card, with progress on each condition"
+      }
+     },
+     {
+      "kind": "decision",
+      "label": {
+       "es": "¿Qué elige?",
+       "en": "What do they choose?"
+      },
+      "branches": [
+       {
+        "label": {
+         "es": "Ir a la acción",
+         "en": "Go to the action"
+        },
+        "nodes": [
+         {
+          "kind": "step",
+          "label": {
+           "es": "Misión, guía o desafío pendiente",
+           "en": "Pending mission, guide or challenge"
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "es": "Ya sé esto",
+         "en": "I already know this"
+        },
+        "nodes": [
+         {
+          "kind": "step",
+          "label": {
+           "es": "Desafío de suficiencia",
+           "en": "Proficiency challenge"
+          }
+         },
+         {
+          "kind": "decision",
+          "label": {
+           "es": "¿70 % o más?",
+           "en": "70% or more?"
+          },
+          "branches": [
+           {
+            "label": {
+             "es": "Sí",
+             "en": "Yes"
+            },
+            "nodes": [
+             {
+              "kind": "step",
+              "label": {
+               "es": "Sección desbloqueada",
+               "en": "Section unlocked"
+              }
+             }
+            ]
+           },
+           {
+            "label": {
+             "es": "No",
+             "en": "No"
+            },
+            "nodes": [
+             {
+              "kind": "step",
+              "label": {
+               "es": "Devolución por pregunta y guías sugeridas",
+               "en": "Feedback on each question and suggested guides"
+              }
+             }
+            ],
+            "to": {
+             "es": "Desafío de suficiencia",
+             "en": "Proficiency challenge"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "label": {
+         "es": "Volver",
+         "en": "Go back"
+        }
+       }
+      ]
+     },
+     {
+      "kind": "end",
+      "label": {
+       "es": "Sigue usando la billetera",
+       "en": "Keeps using the wallet"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "aprendizaje",
+    "n": "03",
+    "lens": "cap",
+    "mode": {
+     "es": "Lente LXD",
+     "en": "LXD lens"
+    },
+    "name": {
+     "es": "Diseñar el aprendizaje",
+     "en": "Designing the learning"
+    },
+    "q": {
+     "es": "¿Cómo se enseña dentro de una billetera?",
+     "en": "How do you teach inside a wallet?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "El aprendizaje nace de la acción",
+     "en": "Learning starts with an action"
+    },
+    "p": [
+     {
+      "es": "La persona hace algo en la billetera, recibe una explicación corta justo cuando la necesita, puede ir a **la parte exacta de la guía** que lo explica y vuelve a la misma pantalla sin perder nada. Después lo practica en una misión con consecuencias y lo demuestra en el desafío del nivel, que abre la sección siguiente. El ciclo sigue el aprendizaje experiencial de Kolb (1984) y el aprendizaje en el momento de la necesidad (Gottfredson y Mosher, 2011), pensado para adultos con poco tiempo (Knowles et al., 2015).",
+      "en": "The learner does something in the wallet, gets a short explanation exactly when they need it, can jump to **the exact part of the guide** that covers it and return to the same screen without losing anything. Then they practise it in a mission with consequences and prove it in the level challenge, which unlocks the next section. The cycle follows Kolb’s experiential learning (1984) and learning at the moment of need (Gottfredson & Mosher, 2011), designed for adults with little time (Knowles et al., 2015)."
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "El ciclo de aprendizaje",
+     "en": "The learning cycle"
+    },
+    "steps": {
+     "es": [
+      "Acción en la billetera",
+      "Tarjeta en el momento justo",
+      "Parte exacta de la guía",
+      "Volver sin perder nada",
+      "Misión con consecuencias",
+      "Desafío del nivel",
+      "Desbloqueo"
+     ],
+     "en": [
+      "An action in the wallet",
+      "A card at the right moment",
+      "The exact part of the guide",
+      "Back without losing anything",
+      "A mission with consequences",
+      "The level challenge",
+      "Unlock"
+     ]
+    }
+   },
+   {
+    "t": "gallery",
+    "rowsOf": [
+     3
+    ],
+    "h": {
+     "es": "El ciclo, en pantalla",
+     "en": "The cycle, on screen"
+    },
+    "images": [
+     {
+      "src": "alcancia-20-why-it-matters.webp",
+      "w": 1200,
+      "h": 806,
+      "alt": {
+       "es": "Rendir con la tarjeta «¿Por qué importa?» abierta: una cuenta remunerada y un fondo money market no son lo mismo, con sus fuentes y el botón «Ver en la guía»",
+       "en": "Earn interest with the “Why does it matter?” card open: an interest-bearing account and a money market fund are not the same, with its sources and a “See it in the guide” button"
+      }
+     },
+     {
+      "src": "alcancia-21-guide-part.webp",
+      "w": 1200,
+      "h": 806,
+      "alt": {
+       "es": "La guía «Dónde dejar el dinero que no usas hoy» abierta en la parte 5 de 8, «Fondo money market», con el índice de partes a la derecha",
+       "en": "The guide “Where to keep money you don’t need today” open at part 5 of 8, “Money market fund”, with the list of parts on the right"
+      }
+     },
+     {
+      "src": "alcancia-22-back-to-yield.webp",
+      "w": 1200,
+      "h": 806,
+      "alt": {
+       "es": "De vuelta en Rendir, con la inflación del escenario y la cuenta remunerada elegida al 30 % de TNA, sin perder lo que estaba cargado",
+       "en": "Back in Earn interest, with the scenario’s inflation and the interest-bearing account chosen at a 30% nominal annual rate, with nothing lost"
+      }
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "arrow": false,
+    "h": {
+     "es": "Nueve niveles: primero lo que te protege",
+     "en": "Nine levels: what protects you comes first"
+    },
+    "cols": {
+     "dim": {
+      "es": "Nivel y sección",
+      "en": "Level and section"
+     },
+     "before": {
+      "es": "Qué se aprende",
+      "en": "What you learn"
+     },
+     "after": {
+      "es": "Se abre con",
+      "en": "Unlocks with"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "0 · Abrir tu cuenta",
+       "en": "0 · Open your account"
+      },
+      "before": {
+       "es": "Bienvenida, diagnóstico «Conocerte» y seguridad básica",
+       "en": "Welcome, the “Getting to know you” check and basic security"
+      },
+      "after": {
+       "es": "El primer ingreso",
+       "en": "The first login"
+      }
+     },
+     {
+      "dim": {
+       "es": "1 · Cuenta",
+       "en": "1 · Account"
+      },
+      "before": {
+       "es": "El recibo de sueldo; tu cerebro y el dinero",
+       "en": "The payslip; your brain and money"
+      },
+      "after": {
+       "es": "Terminar el nivel 0",
+       "en": "Finishing level 0"
+      }
+     },
+     {
+      "dim": {
+       "es": "2 · Pagar",
+       "en": "2 · Pay"
+      },
+      "before": {
+       "es": "Billeteras, transferencias, QR y estafas",
+       "en": "Wallets, transfers, QR codes and scams"
+      },
+      "after": {
+       "es": "La misión 1 y el desafío del nivel 1",
+       "en": "Mission 1 and the level 1 challenge"
+      }
+     },
+     {
+      "dim": {
+       "es": "3 · Presupuesto",
+       "en": "3 · Budget"
+      },
+      "before": {
+       "es": "Presupuesto y gastos hormiga",
+       "en": "Budgeting and small, forgotten expenses"
+      },
+      "after": {
+       "es": "10 movimientos categorizados y el desafío del nivel 2",
+       "en": "10 categorised transactions and the level 2 challenge"
+      }
+     },
+     {
+      "dim": {
+       "es": "4 · Apartados y metas",
+       "en": "4 · Pockets and goals"
+      },
+      "before": {
+       "es": "Fondo de emergencia",
+       "en": "Emergency fund"
+      },
+      "after": {
+       "es": "Un mes cerrado en verde y el desafío del nivel 3",
+       "en": "A month closed in the green and the level 3 challenge"
+      }
+     },
+     {
+      "dim": {
+       "es": "5 · Tarjeta y préstamos",
+       "en": "5 · Card and loans"
+      },
+      "before": {
+       "es": "Orden de las deudas, CFT, cuotas o contado",
+       "en": "Which debt to pay first, total cost of credit, instalments or cash"
+      },
+      "after": {
+       "es": "El desafío del nivel 4",
+       "en": "The level 4 challenge"
+      }
+     },
+     {
+      "dim": {
+       "es": "6 · Rendir",
+       "en": "6 · Earn interest"
+      },
+      "before": {
+       "es": "Inflación, TNA, TEA, tasa real, plazo fijo, UVA y money market",
+       "en": "Inflation, nominal and effective rates, real rate, fixed-term and inflation-linked deposits, money market"
+      },
+      "after": {
+       "es": "Fondo de emergencia creado y el desafío del nivel 5",
+       "en": "An emergency fund in place and the level 5 challenge"
+      }
+     },
+     {
+      "dim": {
+       "es": "7 · Invertir",
+       "en": "7 · Invest"
+      },
+      "before": {
+       "es": "Perfil de inversor, bróker, mercado de capitales, CEDEARs",
+       "en": "Investor profile, brokers, capital markets, CEDEARs"
+      },
+      "after": {
+       "es": "==Fondo de 3 meses, sin deudas caras==, el desafío del nivel 6 y el test de perfil",
+       "en": "==A 3-month fund and no expensive debt==, the level 6 challenge and the profile test"
+      }
+     },
+     {
+      "dim": {
+       "es": "8 · Cripto",
+       "en": "8 · Crypto"
+      },
+      "before": {
+       "es": "Riesgos y dónde verificar",
+       "en": "Risks and where to check"
+      },
+      "after": {
+       "es": "Completar el nivel 7",
+       "en": "Completing level 7"
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "La decisión pedagógica que más defiendo",
+     "en": "The learning decision I stand by most"
+    },
+    "body": {
+     "es": "Al principio, las misiones se jugaban en una cuenta de práctica aparte: equivocarse no dejaba rastro. Lo cambié: **las 13 misiones se juegan en la billetera de la persona**. Un préstamo tomado aparece en Tus deudas, sus cuotas se debitan y ==bloquea Invertir hasta saldarlo==. Se revierte pagando o cancelando dentro de la simulación, nunca con «deshacer». La consecuencia es la retroalimentación más fuerte que existe.",
+     "en": "At first, missions were played in a separate practice account: a mistake left no trace. I changed that: **all 13 missions are played in the learner’s own wallet**. A loan they take shows up in Your debts, its instalments are charged, and ==it locks Invest until it is paid off==. You reverse it by paying or cancelling within the simulation, never with “undo”. A consequence is the strongest feedback there is."
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Evaluar lo que importa",
+     "en": "Assessing what matters"
+    },
+    "note": {
+     "es": "Nueve tipos de pregunta, elegidos por lo que se quiere comprobar. Ninguno tiene límite de tiempo.",
+     "en": "Nine question types, each chosen for what it needs to check. None has a time limit."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Devolución por opción",
+       "en": "Feedback for every option"
+      },
+      "body": {
+       "es": "Cada respuesta, correcta o no, explica el porqué.",
+       "en": "Every answer, right or wrong, explains why."
+      }
+     },
+     {
+      "lead": {
+       "es": "Caso con decisiones",
+       "en": "Branching scenarios"
+      },
+      "body": {
+       "es": "Cada elección lleva a una consecuencia y a la siguiente decisión, también en los desafíos de los niveles 5 y 6.",
+       "en": "Each choice leads to a consequence and to the next decision, including in the level 5 and 6 challenges."
+      }
+     },
+     {
+      "lead": {
+       "es": "Arrastrar, con alternativa",
+       "en": "Dragging, with an alternative"
+      },
+      "body": {
+       "es": "Ordenar, unir y clasificar también se hacen con botones o menús.",
+       "en": "Ordering, matching and sorting can also be done with buttons or menus."
+      }
+     },
+     {
+      "lead": {
+       "es": "Primero pensar, después la respuesta",
+       "en": "Think first, then the answer"
+      },
+      "body": {
+       "es": "Si una cuenta sale mal, se muestra el método y se pide otro intento.",
+       "en": "If a calculation is wrong, the method is shown and another attempt is requested."
+      }
+     },
+     {
+      "lead": {
+       "es": "«Ya sé esto»",
+       "en": "“I already know this”"
+      },
+      "body": {
+       "es": "Quien demuestra que sabe, con 70 % o más, salta el nivel.",
+       "en": "Anyone who proves they know it, with 70% or more, skips the level."
+      }
+     },
+     {
+      "lead": {
+       "es": "Intentos agotados, sin castigo",
+       "en": "Out of attempts, with no penalty"
+      },
+      "body": {
+       "es": "El desbloqueo pasa a la tutoría y no se pierde nada.",
+       "en": "Unlocking passes to the tutor and nothing is lost."
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Impacto medido con Kirkpatrick",
+     "en": "Impact measured with Kirkpatrick"
+    },
+    "note": {
+     "es": "Kirkpatrick y Kirkpatrick (2016). Solo cifras agregadas, en grupos de 5 personas o más.",
+     "en": "Kirkpatrick & Kirkpatrick (2016). Aggregate figures only, in groups of 5 people or more."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Nivel 1 · Reacción",
+       "en": "Level 1 · Reaction"
+      },
+      "v": {
+       "es": "Satisfacción con cada guía.",
+       "en": "Satisfaction with each guide."
+      }
+     },
+     {
+      "k": {
+       "es": "Nivel 2 · Aprendizaje",
+       "en": "Level 2 · Learning"
+      },
+      "v": {
+       "es": "Diferencia entre el diagnóstico inicial y el final, solo con las preguntas de conocimiento.",
+       "en": "The difference between the initial and final check, using knowledge questions only."
+      }
+     },
+     {
+      "k": {
+       "es": "Nivel 3 · Conducta",
+       "en": "Level 3 · Behaviour"
+      },
+      "v": {
+       "es": "Autoinforme a los 30 días.",
+       "en": "A self-report after 30 days."
+      }
+     },
+     {
+      "k": {
+       "es": "Nivel 4 · Resultados",
+       "en": "Level 4 · Results"
+      },
+      "v": {
+       "es": "Línea futura: no se inventan datos de negocio.",
+       "en": "Future work: no business data is made up."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bento",
+    "h": {
+     "es": "Fuerte, un compañero con función pedagógica",
+     "en": "Fuerte, a companion with a teaching role"
+    },
+    "items": [
+     {
+      "size": "l",
+      "lead": true,
+      "title": {
+       "es": "Andamiaje, no decoración",
+       "en": "Scaffolding, not decoration"
+      },
+      "body": {
+       "es": "Fuerte avisa antes de un error evitable sin resolver por la persona, y después de un error **explica sin culpa**.",
+       "en": "Fuerte warns before an avoidable mistake without solving it for the learner, and after a mistake **explains without blame**."
+      },
+      "img": {
+       "src": "alcancia-23-fuerte.webp",
+       "w": 1320,
+       "h": 825,
+       "alt": {
+        "es": "Panel de Fuerte abierto en Rendir: «Tu saldo rinde. Ahora la pregunta es si le gana a la inflación», con los avisos de Mariana (una misión pendiente, el seguimiento a 30 días y el desafío semanal) y «¿Por qué importa?» debajo",
+        "en": "Fuerte’s panel open on Earn interest: “Your balance earns interest. Now the question is whether it beats inflation”, with Mariana’s notices (a pending mission, the 30-day follow-up and the weekly challenge) and “Why does it matter?” below"
+       }
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Nunca más de dos oraciones",
+       "en": "Never more than two sentences"
+      },
+      "body": {
+       "es": "Y nunca recomienda un producto financiero.",
+       "en": "And it never recommends a financial product."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Tres niveles de presencia",
+       "en": "Three levels of presence"
+      },
+      "body": {
+       "es": "Conversador, solo lo importante o en silencio.",
+       "en": "Chatty, only what matters, or completely silent."
+      }
+     },
+     {
+      "size": "m",
+      "title": {
+       "es": "Lo importante no depende de él",
+       "en": "What matters doesn’t depend on it"
+      },
+      "body": {
+       "es": "Con Fuerte en silencio, «¿Por qué importa?» sigue visible en cada pantalla.",
+       "en": "With Fuerte silenced, “Why does it matter?” is still visible on every screen."
+      }
+     },
+     {
+      "size": "m",
+      "title": {
+       "es": "La única excepción de color",
+       "en": "The only colour exception"
+      },
+      "body": {
+       "es": "Su naranja plano es lo único cálido en una paleta fría, y solo en el personaje.",
+       "en": "Its flat orange is the only warm colour in a cool palette, and only on the character."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Gamificación con medida",
+       "en": "Measured gamification"
+      },
+      "body": {
+       "es": "Logros por conductas sanas. Sin rankings ni cuentas regresivas.",
+       "en": "Achievements for healthy habits. No leaderboards, no countdowns."
+      }
+     }
+    ]
+   },
+   {
+    "t": "preview",
+    "url": "https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/",
+    "img": {
+     "src": "escape-11-fuerte.webp",
+     "w": 1600,
+     "h": 417
+    },
+    "kicker": {
+     "es": "Caso relacionado",
+     "en": "Related case"
+    },
+    "title": {
+     "es": "Fuerte viene de un escape room",
+     "en": "Fuerte comes from an escape room"
+    },
+    "body": {
+     "es": "El escape room «Tu primer sueldo» vive dentro de Alcancía en tres versiones, con insignias y un modo simple como alternativa accesible.",
+     "en": "The “Your first paycheck” escape room lives inside Alcancía in three versions, with badges and a simple mode as an accessible alternative."
+    },
+    "cta": {
+     "es": "Ver el caso del escape room",
+     "en": "See the escape room case"
+    }
+   },
+   {
+    "t": "phase",
+    "id": "auditar",
+    "n": "04",
+    "lens": "both",
+    "mode": {
+     "es": "Las dos lentes",
+     "en": "Both lenses"
+    },
+    "name": {
+     "es": "Auditar y ajustar",
+     "en": "Audit and adjust"
+    },
+    "q": {
+     "es": "¿Lo construido cumple la idea central?",
+     "en": "Does what was built deliver the core idea?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Frenar a mitad de camino",
+     "en": "Stopping halfway"
+    },
+    "p": [
+     {
+      "es": "Con la fase A terminada y todos los tests en verde, comparé lo construido con la idea central: **aprender finanzas usando una billetera**. Encontré que el aprendizaje todavía dependía de entrar a una misión o a una guía. Las tarjetas vivían dentro de las misiones, las misiones se jugaban en una cuenta aparte y los errores no dejaban huella. ==Los tests probaban que el producto funcionaba, no que enseñaba como se había prometido.== Detuve la fase B y sumé un ajuste de siete pasos.",
+      "en": "With phase A finished and every test passing, I compared what had been built with the core idea: **learning about money by using a wallet**. I found that learning still depended on opening a mission or a guide. The cards lived inside missions, missions were played in a separate account and mistakes left no trace. ==The tests proved the product worked, not that it taught the way it had promised to.== I stopped phase B and added a seven-step adjustment."
+     }
+    ]
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": "7",
+      "label": {
+       "es": "hallazgos verificados contra el código",
+       "en": "findings verified against the code"
+      }
+     },
+     {
+      "value": {
+       "es": "5 de 6",
+       "en": "5 of 6"
+      },
+      "label": {
+       "es": "criterios del ajuste sin cumplir al auditar",
+       "en": "adjustment criteria unmet at the audit"
+      }
+     },
+     {
+      "value": {
+       "es": "6 de 6",
+       "en": "6 of 6"
+      },
+      "label": {
+       "es": "criterios cumplidos después del ajuste, con tests",
+       "en": "criteria met after the adjustment, with tests"
+      }
+     },
+     {
+      "value": "9",
+      "label": {
+       "es": "decisiones nuevas que cambiaron el producto",
+       "en": "new decisions that reshaped the product and its docs"
+      }
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "marks": true,
+    "h": {
+     "es": "Qué cambió con la auditoría",
+     "en": "What changed after the audit"
+    },
+    "cols": {
+     "dim": {
+      "es": "Aspecto",
+      "en": "Aspect"
+     },
+     "before": {
+      "es": "Antes",
+      "en": "Before"
+     },
+     "after": {
+      "es": "Después",
+      "en": "After"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Tarjetas de aprendizaje",
+       "en": "Learning cards"
+      },
+      "before": {
+       "es": "Solo aparecían dentro de las misiones",
+       "en": "Only appeared inside missions"
+      },
+      "after": {
+       "es": "Se disparan por acciones de la billetera, también en el modo libre",
+       "en": "Triggered by wallet actions, in free mode too"
+      }
+     },
+     {
+      "dim": {
+       "es": "«¿Por qué importa?»",
+       "en": "“Why does it matter?”"
+      },
+      "before": {
+       "es": "Escondido en el panel de Fuerte; con Fuerte en silencio, desaparecía",
+       "en": "Hidden in Fuerte’s panel; with Fuerte silenced, it disappeared"
+      },
+      "after": {
+       "es": "Visible en cada pantalla, con enlace a la parte exacta de la guía",
+       "en": "Visible on every screen, linked to the exact part of the guide"
+      }
+     },
+     {
+      "dim": {
+       "es": "Misiones",
+       "en": "Missions"
+      },
+      "before": {
+       "es": "12 de 13 se jugaban en una cuenta aparte",
+       "en": "12 of 13 were played in a separate account"
+      },
+      "after": {
+       "es": "Las 13 se juegan en la billetera de la persona y dejan huella",
+       "en": "All 13 are played in the learner’s wallet and leave a trace"
+      }
+     },
+     {
+      "dim": {
+       "es": "Casos con decisiones",
+       "en": "Branching scenarios"
+      },
+      "before": {
+       "es": "0 en los desafíos de nivel",
+       "en": "None in the level challenges"
+      },
+      "after": {
+       "es": "4, en los desafíos de los niveles 5 y 6",
+       "en": "4, in the level 5 and 6 challenges"
+      }
+     },
+     {
+      "dim": {
+       "es": "Contextos",
+       "en": "Contexts"
+      },
+      "before": {
+       "es": "Solo una empresa",
+       "en": "A company only"
+      },
+      "after": {
+       "es": "Organización, institución educativa y producto existente",
+       "en": "Organisation, school and existing product"
+      }
+     },
+     {
+      "dim": {
+       "es": "Valores",
+       "en": "Figures"
+      },
+      "before": {
+       "es": "Todos de ejemplo",
+       "en": "All sample values"
+      },
+      "after": {
+       "es": "Tasas, inflación y tipo de cambio reales del BCRA y el INDEC, con fecha y fuente",
+       "en": "Real interest rates, inflation and exchange rates from the BCRA and INDEC, with date and source"
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "rowsOf": [
+     3
+    ],
+    "h": {
+     "es": "Una decisión con consecuencias",
+     "en": "A decision with consequences"
+    },
+    "note": {
+     "es": "Tomar un préstamo: la deuda queda registrada, la devolución explica qué pasó e Invertir se bloquea hasta saldarla.",
+     "en": "Taking a loan: the debt is recorded, the feedback explains what happened, and Invest locks until it is paid off."
+    },
+    "images": [
+     {
+      "src": "alcancia-30-loan-debts.webp",
+      "w": 1280,
+      "h": 900,
+      "alt": {
+       "es": "Tarjeta y préstamos con el préstamo tomado: en Tus deudas, $ 599.999,99 con una TEA de 71,2 % y una cuota de $ 41.737,16 por mes, marcada como tasa alta",
+       "en": "Card and loans with the loan taken: Your debts shows $599,999.99 at a 71.2% effective annual rate and a $41,737.16 monthly instalment, flagged as a high rate"
+      }
+     },
+     {
+      "src": "alcancia-31-loan-feedback.webp",
+      "w": 1280,
+      "h": 900,
+      "alt": {
+       "es": "Misión «El préstamo tentador», paso 5 de 6: la devolución explica que la deuda ya está en Tus deudas, con $ 570.000,00 hoy y 24 cuotas de $ 41.737,16, y que Invertir no se abre mientras exista",
+       "en": "Mission “The tempting loan”, step 5 of 6: the feedback explains that the debt is now in Your debts, with $570,000.00 today and 24 instalments of $41,737.16, and that Invest won’t open while it exists"
+      }
+     },
+     {
+      "src": "alcancia-32-invest-locked.webp",
+      "w": 1280,
+      "h": 900,
+      "alt": {
+       "es": "Invertir está bloqueado: 1 de 4 condiciones cumplidas, con el fondo de emergencia en 2,3 de 3 meses, sin deudas de tasa alta pendiente, el desafío del nivel 6 aprobado y el test de perfil por hacer",
+       "en": "Invest is locked: 1 of 4 conditions met, with the emergency fund at 2.3 of 3 months, “no high-rate debt” still pending, the level 6 challenge passed and the profile test still to do"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "interfaz",
+    "n": "05",
+    "lens": "it",
+    "mode": {
+     "es": "Lente UX/UI",
+     "en": "UX/UI lens"
+    },
+    "name": {
+     "es": "Diseñar la interfaz",
+     "en": "Designing the interface"
+    },
+    "q": {
+     "es": "¿Cómo se ve una billetera que enseña?",
+     "en": "What does a wallet that teaches look like?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Una billetera, no un campus",
+     "en": "A wallet, not a campus"
+    },
+    "p": [
+     {
+      "es": "Partí de Material Design 3 con identidad propia: **paleta fría de índigo y verde azulado**, profundidad por elevación tonal y sin sombras en tarjetas en reposo. Las referencias visuales de fintech y de plataformas de aprendizaje se auditaron una por una: qué se toma de cada una y qué no. El dinero tiene sus propias reglas, documentadas en el sistema de diseño en «Cómo mostramos el dinero».",
+      "en": "I started from Material Design 3 with an identity of its own: **a cool palette of indigo and teal**, depth through tonal elevation and no shadows on resting cards. Visual references from fintech and learning platforms were audited one by one: what to take from each and what to leave out. Money has its own rules, documented in the design system under “How we show money”."
+     }
+    ]
+   },
+   {
+    "t": "swatches",
+    "h": {
+     "es": "Paleta: Material 3 con color propio",
+     "en": "Palette: Material 3 with its own colour"
+    },
+    "note": {
+     "es": "El contraste es el del color sobre blanco, calculado con la fórmula de WCAG.",
+     "en": "Contrast is each colour against white, calculated with the WCAG formula."
+    },
+    "groups": [
+     {
+      "name": {
+       "es": "Roles de color",
+       "en": "Colour roles"
+      },
+      "items": [
+       {
+        "token": "primary",
+        "hex": "#3D4FA8",
+        "use": {
+         "es": "Acción principal, navegación activa, foco",
+         "en": "Primary action, active navigation, focus"
+        },
+        "ratio": {
+         "es": "7,29:1",
+         "en": "7.29:1"
+        }
+       },
+       {
+        "token": "secondary",
+        "hex": "#55607A",
+        "use": {
+         "es": "Botones tonales y chips de filtro",
+         "en": "Tonal buttons and filter chips"
+        },
+        "ratio": {
+         "es": "6,29:1",
+         "en": "6.29:1"
+        }
+       },
+       {
+        "token": "tertiary",
+        "hex": "#00796B",
+        "use": {
+         "es": "Logros, metas y segunda serie",
+         "en": "Achievements, goals and second series"
+        },
+        "ratio": {
+         "es": "5,32:1",
+         "en": "5.32:1"
+        }
+       },
+       {
+        "token": "error",
+        "hex": "#B3261E",
+        "use": {
+         "es": "Errores y acciones destructivas",
+         "en": "Errors and destructive actions"
+        },
+        "ratio": {
+         "es": "6,54:1",
+         "en": "6.54:1"
+        }
+       },
+       {
+        "token": "success",
+        "hex": "#2E7D32",
+        "use": {
+         "es": "Completado y dinero que entra",
+         "en": "Completed items and incoming money"
+        },
+        "ratio": {
+         "es": "5,13:1",
+         "en": "5.13:1"
+        }
+       },
+       {
+        "token": "warning",
+        "hex": "#8A5300",
+        "use": {
+         "es": "Riesgo y pérdida de poder de compra",
+         "en": "Risk and loss of purchasing power"
+        },
+        "ratio": {
+         "es": "6,33:1",
+         "en": "6.33:1"
+        }
+       },
+       {
+        "token": "info",
+        "hex": "#2457C5",
+        "use": {
+         "es": "Avisos y supuestos",
+         "en": "Notices and assumptions"
+        },
+        "ratio": {
+         "es": "6,47:1",
+         "en": "6.47:1"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Un color por rol (identifican personas, nunca estados)",
+       "en": "One colour per role (they identify people, never states)"
+      },
+      "items": [
+       {
+        "token": "role-admin",
+        "hex": "#3D4FA8",
+        "use": {
+         "es": "Admin de L&D",
+         "en": "L&D admin"
+        }
+       },
+       {
+        "token": "role-tutor",
+        "hex": "#00796B",
+        "use": {
+         "es": "Tutoría",
+         "en": "Tutor"
+        }
+       },
+       {
+        "token": "role-participant",
+        "hex": "#7A4FB0",
+        "use": {
+         "es": "Participante",
+         "en": "Participant"
+        }
+       },
+       {
+        "token": "role-sponsor",
+        "hex": "#5D6B2F",
+        "use": {
+         "es": "Decisor",
+         "en": "Sponsor"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "t": "bento",
+    "h": {
+     "es": "Cómo mostramos el dinero",
+     "en": "How we show money"
+    },
+    "items": [
+     {
+      "size": "l",
+      "lead": true,
+      "title": {
+       "es": "Comparar antes de elegir",
+       "en": "Compare before choosing"
+      },
+      "body": {
+       "es": "La misma ficha en todas las opciones: tasa, riesgo, liquidez, moneda y protección. **La elegida se marca con borde y texto, no solo con color.**",
+       "en": "The same fact sheet for every option: rate, risk, liquidity, currency and protection. **The chosen one is marked with a border and text, not just colour.**"
+      },
+      "img": {
+       "src": "alcancia-40-option-cards.webp",
+       "w": 1200,
+       "h": 844,
+       "alt": {
+        "es": "Tres fichas para elegir dónde rinde el saldo: sin rendimiento, cuenta remunerada al 30 % de TNA, marcada como «Elegida», y fondo money market al 31 % de TNA, cada una con riesgo, liquidez y moneda",
+        "en": "Three cards for choosing where the balance earns interest: no interest, an interest-bearing account at a 30% nominal annual rate, marked “Chosen”, and a money market fund at 31%, each with risk, liquidity and currency"
+       }
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Montos que nunca se cortan",
+       "en": "Amounts are never cut off"
+      },
+      "body": {
+       "es": "Si no entran, bajan un tamaño o se abrevian, con el valor completo accesible.",
+       "en": "If they don’t fit, they drop a size or get abbreviated, full value still accessible."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "El signo nunca queda solo",
+       "en": "The sign never stands alone"
+      },
+      "body": {
+       "es": "Entre el signo $ y el número va un espacio que no se separa en ningún ancho.",
+       "en": "A non-breaking space keeps the $ sign next to its number at every width."
+      }
+     },
+     {
+      "size": "m",
+      "title": {
+       "es": "Ganancias y pérdidas con signo, ícono y texto",
+       "en": "Gains and losses with sign, icon and text"
+      },
+      "body": {
+       "es": "Perder poder de compra es información, no un error: va en el color de atención.",
+       "en": "Losing purchasing power is information, not an error: it uses the warning colour."
+      }
+     },
+     {
+      "size": "m",
+      "title": {
+       "es": "Siempre «dinero ficticio»",
+       "en": "Always “fictitious money”"
+      },
+      "body": {
+       "es": "El cartel fijo de la billetera lo dice en todas las pantallas y no se puede cerrar ni ocultar.",
+       "en": "The wallet’s fixed banner says so on every screen, and it can’t be closed or hidden."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Ningún cálculo con number",
+       "en": "No maths with number"
+      },
+      "body": {
+       "es": "Todo el dinero se calcula con decimal.js, sin redondeos sorpresa en los centavos.",
+       "en": "All money is calculated with decimal.js, with no surprise rounding in the cents."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "rowsOf": [
+     2
+    ],
+    "h": {
+     "es": "El modo integrado, con una marca ficticia",
+     "en": "Embedded mode, with a fictional brand"
+    },
+    "note": {
+     "es": "Hornero tiene marca propia, hecha desde cero, y no se parece a ninguna app real. Muestra el ahorro con su concepto: el nido que crece y el nido que aguanta.",
+     "en": "Hornero has its own brand, made from scratch, and doesn’t resemble any real app. It shows savings through its own idea: the nest that grows and the nest that holds."
+    },
+    "images": [
+     {
+      "src": "alcancia-41-hornero-home.webp",
+      "w": 1200,
+      "h": 806,
+      "alt": {
+       "es": "Inicio de Hornero, marca ficticia de demostración: «Tu nido crece», con $ 2.291.665,40 guardados; «Un nido que aguanta», 2,3 meses de gastos; y el acceso a Alcancía con los hitos que le avisó a Hornero",
+       "en": "Hornero’s home, a fictional demo brand: “Your nest grows”, with $2,291,665.40 saved; “A nest that holds”, 2.3 months of expenses; and the entry to Alcancía with the milestones it reported to Hornero"
+      }
+     },
+     {
+      "src": "alcancia-42-hornero-wallet.webp",
+      "w": 1200,
+      "h": 806,
+      "alt": {
+       "es": "La billetera de Alcancía abierta desde Hornero: saldo disponible de $ 1.372.112,09, acciones rápidas y el próximo desbloqueo, Invertir, con 2 de 4 condiciones cumplidas",
+       "en": "Alcancía’s wallet opened from Hornero: an available balance of $1,372,112.09, quick actions and the next unlock, Invest, with 2 of 4 conditions met"
+      }
+     }
+    ]
+   },
+   {
+    "t": "preview",
+    "url": "https://lpedaci.github.io/alcancia-app/#/design-system",
+    "img": {
+     "src": "alcancia-43-design-system.webp",
+     "w": 1440,
+     "h": 900
+    },
+    "kicker": {
+     "es": "En vivo",
+     "en": "Live"
+    },
+    "title": {
+     "es": "Un sistema de diseño público, con sus propios componentes",
+     "en": "A public design system, built with its own components"
+    },
+    "body": {
+     "es": "Tokens en cuatro niveles, contraste verificado por tests, componentes reales y las secciones «Cómo mostramos el dinero» y «Seguridad y privacidad».",
+     "en": "Four tiers of tokens, contrast checked by tests, real components and the “How we show money” and “Security and privacy” sections."
+    },
+    "cta": {
+     "es": "Ver el sistema de diseño",
+     "en": "See the design system"
+    }
+   },
+   {
+    "t": "gallery",
+    "rowsOf": [
+     2,
+     2
+    ],
+    "h": {
+     "es": "Una pantalla clave por rol",
+     "en": "One key screen per role"
+    },
+    "images": [
+     {
+      "src": "alcancia-44-participant.webp",
+      "w": 1200,
+      "h": 750,
+      "alt": {
+       "es": "Participante: el inicio de Diego, con $ 459.477,09 disponibles, acciones rápidas y el próximo desbloqueo, Presupuesto, con lo que le falta",
+       "en": "Participant: Diego’s home, with $459,477.09 available, quick actions and the next unlock, Budget, with what is still missing"
+      }
+     },
+     {
+      "src": "alcancia-45-tutor.webp",
+      "w": 1200,
+      "h": 750,
+      "alt": {
+       "es": "Tutoría: el inicio de Kevin, con 80 % de participación, 33 % de módulos completados y la lista «Para atender», sin ningún monto",
+       "en": "Tutor: Kevin’s home, with 80% participation, 33% of modules completed and a “To follow up” list, with no amounts at all"
+      }
+     },
+     {
+      "src": "alcancia-46-admin.webp",
+      "w": 1200,
+      "h": 750,
+      "alt": {
+       "es": "Admin de L&D: el panel de Julieta, con 80 personas invitadas, 80 % activas, 86 % que hicieron Conocerte y avisos de cohortes con menos de 5 personas",
+       "en": "L&D admin: Julieta’s dashboard, with 80 people invited, 80% active, 86% who took the initial check and notices about cohorts with fewer than 5 people"
+      }
+     },
+     {
+      "src": "alcancia-47-sponsor.webp",
+      "w": 1200,
+      "h": 750,
+      "alt": {
+       "es": "Decisor: el reporte de impacto de Ricardo, con 80 % activas, satisfacción de 4,6 sobre 5, 18 puntos de mejora en Conocerte y 78 % que armó un presupuesto",
+       "en": "Sponsor: Ricardo’s impact report, with 80% active, 4.6 out of 5 satisfaction, an 18-point improvement on the initial check and 78% who built a budget"
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "rowsOf": [
+     1
+    ],
+    "h": {
+     "es": "Responsive, de 320 a 1440 px",
+     "en": "Responsive, from 320 to 1440 px"
+    },
+    "note": {
+     "es": "Barra inferior de cinco destinos en celular y tablet; menú lateral desde 1200 px.",
+     "en": "A five-item bottom bar on phones and tablets; a side menu from 1200 px."
+    },
+    "images": [
+     {
+      "src": "alcancia-48-responsive.webp",
+      "w": 1600,
+      "h": 626,
+      "alt": {
+       "es": "Apartados y metas a 375, 768 y 1280 px: el fondo de emergencia de $ 1.695.561,37 con la barra inferior en celular y tablet y el menú lateral en escritorio",
+       "en": "Pockets and goals at 375, 768 and 1280 px: the $1,695,561.37 emergency fund with the bottom bar on phone and tablet and the side menu on desktop"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "privacidad",
+    "n": "06",
+    "lens": "both",
+    "mode": {
+     "es": "Las dos lentes",
+     "en": "Both lenses"
+    },
+    "name": {
+     "es": "Privacidad, accesibilidad y seguridad",
+     "en": "Privacy, accessibility and security"
+    },
+    "q": {
+     "es": "¿Qué puede ver cada rol sin exponer a nadie?",
+     "en": "What can each role see without exposing anyone?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Privacidad por diseño",
+     "en": "Privacy by design"
+    },
+    "p": [
+     {
+      "es": "Los montos, movimientos, metas y respuestas de hábitos **viven solo en el navegador de la persona**. La tutoría ve avance de aprendizaje; la organización, la institución o el socio ven cifras agregadas, siempre en grupos de 5 personas o más. Si un grupo es más chico, el panel dice que no hay datos suficientes para mostrarlo sin identificar a nadie, y no muestra ningún número del que se pueda deducir el resto.",
+      "en": "Amounts, transactions, goals and habit answers **live only in the learner’s browser**. Tutors see learning progress; the organisation, school or partner sees aggregate figures, always in groups of 5 people or more. If a group is smaller, the dashboard says there isn’t enough data to show it without identifying anyone, and shows no number from which the rest could be worked out."
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Qué ve cada rol",
+     "en": "What each role sees"
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Participante",
+       "en": "Participant"
+      },
+      "v": {
+       "es": "Todo lo suyo: saldo, movimientos, deudas, metas y respuestas.",
+       "en": "All of their own: balance, transactions, debts, goals and answers."
+      }
+     },
+     {
+      "k": {
+       "es": "Tutoría",
+       "en": "Tutor"
+      },
+      "v": {
+       "es": "Guías leídas, estado de cada desafío y consultas de su cohorte. Nunca montos.",
+       "en": "Guides read, challenge status and cohort questions. Never amounts."
+      }
+     },
+     {
+      "k": {
+       "es": "L&D, coordinación o socio",
+       "en": "L&D, coordination, partner"
+      },
+      "v": {
+       "es": "Adopción y avance en cifras agregadas, con un umbral de 5 personas.",
+       "en": "Adoption and progress, aggregated, with a threshold of 5."
+      }
+     },
+     {
+      "k": {
+       "es": "Decisor",
+       "en": "Sponsor"
+      },
+      "v": {
+       "es": "El reporte de impacto, de solo lectura y sin datos individuales.",
+       "en": "The impact report, read-only and with no individual data."
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "La decisión que más defiendo",
+     "en": "The decision I stand by most"
+    },
+    "body": {
+     "es": "El tutor podía ver si un nivel estaba bloqueado para alguien. Parecía inofensivo, hasta que lo crucé con los desbloqueos: si ve «desafío del nivel 6 aprobado» e «Invertir bloqueado», **deduce que a esa persona le falta fondo de emergencia o tiene deudas caras**. Cambié la regla: ==la tutoría ve el avance de aprendizaje, nunca el estado de bloqueo==. Puede habilitar cualquier nivel con un motivo registrado, sin saber cuál está cerrado.",
+     "en": "Tutors could see whether a level was locked for someone. It looked harmless until I cross-checked it with the unlock rules: if they see “level 6 challenge passed” and “Invest locked”, **they can infer that the person lacks an emergency fund or has expensive debt**. I changed the rule: ==tutors see learning progress, never lock status==. They can unlock any level with a recorded reason, without knowing which one is closed."
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Accesibilidad en decisiones concretas (WCAG 2.2 AA)",
+     "en": "Accessibility in concrete decisions (WCAG 2.2 AA)"
+    },
+    "note": {
+     "es": "WCAG 2.2 AA es el objetivo: la prueba con lector de pantalla todavía está pendiente.",
+     "en": "WCAG 2.2 AA is the target: the screen reader test is still pending."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Arrastrar, con alternativa (2.5.7)",
+       "en": "Dragging, with an alternative (2.5.7)"
+      },
+      "body": {
+       "es": "Toda pregunta que se arrastra también se responde con botones o menús.",
+       "en": "Every drag-and-drop question can also be answered with buttons or menus."
+      }
+     },
+     {
+      "lead": {
+       "es": "Sin límite de tiempo (2.2.1)",
+       "en": "No time limits (2.2.1)"
+      },
+      "body": {
+       "es": "Ningún desafío ni misión tiene cuenta regresiva.",
+       "en": "No challenge or mission has a countdown."
+      }
+     },
+     {
+      "lead": {
+       "es": "Reacomodo a 320 px (1.4.10)",
+       "en": "Reflow at 320 px (1.4.10)"
+      },
+      "body": {
+       "es": "Ninguna de las 129 vistas desborda en seis anchos, verificado por test.",
+       "en": "None of the 129 views overflows at six widths, checked by tests."
+      }
+     },
+     {
+      "lead": {
+       "es": "El color nunca solo (1.4.1)",
+       "en": "Never colour alone (1.4.1)"
+      },
+      "body": {
+       "es": "Ganancias, pérdidas y estados llevan signo, ícono y texto.",
+       "en": "Gains, losses and statuses carry a sign, an icon and text."
+      }
+     },
+     {
+      "lead": {
+       "es": "Cambios anunciados (4.1.3)",
+       "en": "Announced changes (4.1.3)"
+      },
+      "body": {
+       "es": "Saldos y resultados se anuncian con regiones en vivo.",
+       "en": "Balances and results are announced through live regions."
+      }
+     },
+     {
+      "lead": {
+       "es": "Contraste AA en los dos temas",
+       "en": "AA contrast in both themes"
+      },
+      "body": {
+       "es": "Cada combinación de tokens, en modo claro y oscuro, verificada por test.",
+       "en": "Every token pair, in light and dark mode, checked by tests."
+      }
+     },
+     {
+      "lead": {
+       "es": "Modo simple en el escape room",
+       "en": "Simple mode in the escape room"
+      },
+      "body": {
+       "es": "La misma práctica sin capa de juego, como alternativa accesible.",
+       "en": "The same practice without the game layer, as an accessible alternative."
+      }
+     }
+    ]
+   },
+   {
+    "t": "roadmap",
+    "h": {
+     "es": "Seguridad en tres capas",
+     "en": "Security in three layers"
+    },
+    "steps": [
+     {
+      "code": "01",
+      "title": {
+       "es": "Simulada en la interfaz",
+       "en": "Simulated in the interface"
+      },
+      "body": {
+       "es": "SSO y verificación en dos pasos simulados, permisos por rol y «Mi privacidad», con descarga de datos y pedidos según la Ley 25.326, sin frenar a quien visita la demo",
+       "en": "Simulated SSO and two-step verification, role permissions and “My privacy”, with data download and requests under Argentina’s Law 25,326, without getting in the way of demo visitors"
+      }
+     },
+     {
+      "code": "02",
+      "title": {
+       "es": "Aplicada de verdad",
+       "en": "Actually enforced"
+      },
+      "body": {
+       "es": "Política de seguridad de contenido verificada sobre el build real, validación con esquemas, ningún HTML armado con datos y auditoría de dependencias en cada publicación",
+       "en": "A content security policy checked against the real build, schema validation, no HTML ever built from data and an npm audit dependency check on every deploy"
+      }
+     },
+     {
+      "code": "03",
+      "title": {
+       "es": "Documentada para producción",
+       "en": "Documented for production"
+      },
+      "body": {
+       "es": "Los límites de GitHub Pages, por escrito, y el paso siguiente con dominio propio y encabezados HTTP reales, para un piloto con backend, SSO real y datos cifrados",
+       "en": "GitHub Pages’ limits, in writing, and the next step with its own domain and real HTTP headers, for a pilot with a backend, real SSO and encrypted data"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "construir",
+    "n": "07",
+    "lens": "it",
+    "mode": {
+     "es": "Lente UX/UI",
+     "en": "UX/UI lens"
+    },
+    "name": {
+     "es": "Construir y verificar",
+     "en": "Build and verify"
+    },
+    "q": {
+     "es": "¿Cómo llevé la especificación a un producto que funciona?",
+     "en": "How did I turn the specification into a working product?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Desarrollo dirigido por especificación",
+     "en": "Specification-driven development"
+    },
+    "p": [
+     {
+      "es": "Escribí una especificación de producto completa, con las decisiones numeradas, y dirigí a Claude Code como desarrollador. **Cada decisión que tomó el agente quedó registrada** con la duda, lo decidido y por qué, y las que tocaban el diseño las aprobé yo. El contenido de finanzas se escribió por tandas: cada tanda pasó por mi revisión antes de publicarse, con los números calculados a mano y las ampliaciones marcadas para el Lic. Kevin Giampieri.",
+      "en": "I wrote a complete product specification, with numbered decisions, and directed Claude Code as the developer. **Every decision the agent made was logged** with the question, the decision and the reason, and I approved the ones that affected the design. The finance content was written in batches: each batch went through my review before publishing, with the numbers worked out by hand and any additions flagged for Kevin Giampieri (Lic.)."
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Cómo trabajé",
+     "en": "How I worked"
+    },
+    "steps": {
+     "es": [
+      "Especificación",
+      "Documentación de diseño",
+      "Piloto visual",
+      "Fase A: billetera y aprendizaje",
+      "Auditoría y ajuste",
+      "Fase B: contextos y plataforma",
+      "Informe final y release"
+     ],
+     "en": [
+      "Specification",
+      "Design documentation",
+      "Visual pilot",
+      "Phase A: wallet and learning",
+      "Audit and adjustment",
+      "Phase B: contexts and platform",
+      "Final report and release"
+     ]
+    }
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": "242",
+      "label": {
+       "es": "decisiones registradas, con la duda y el porqué",
+       "en": "decisions logged, with the question and the reason"
+      }
+     },
+     {
+      "value": "780",
+      "label": {
+       "es": "tests unitarios y de componentes, en 58 archivos",
+       "en": "unit and component tests, in 58 files"
+      }
+     },
+     {
+      "value": {
+       "es": "1.181",
+       "en": "1,181"
+      },
+      "label": {
+       "es": "pruebas de punta a punta en desarrollo",
+       "en": "end-to-end Playwright tests in development"
+      }
+     },
+     {
+      "value": "130",
+      "label": {
+       "es": "pruebas sobre el build publicado, con la CSP activa",
+       "en": "tests against the published build, with the CSP on"
+      }
+     },
+     {
+      "value": "12",
+      "label": {
+       "es": "herramientas con fórmulas verificadas a mano",
+       "en": "tools with formulas checked by hand"
+      }
+     },
+     {
+      "value": "54",
+      "label": {
+       "es": "guías escritas y revisadas por tandas",
+       "en": "guides written and reviewed in batches"
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Valores reales, dinero ficticio",
+     "en": "Real figures, fictitious money"
+    },
+    "note": {
+     "es": "Fuentes oficiales, actualizadas en la integración continua una vez por día.",
+     "en": "Official sources, refreshed by continuous integration once a day."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Tasas, UVA y tipo de cambio",
+       "en": "Rates, UVA and exchange rate"
+      },
+      "v": {
+       "es": "API de estadísticas monetarias del BCRA, con fecha y fuente en pantalla.",
+       "en": "The BCRA monetary statistics API, with date and source on screen."
+      }
+     },
+     {
+      "k": {
+       "es": "Inflación",
+       "en": "Inflation"
+      },
+      "v": {
+       "es": "INDEC, con el valor del último mes y su fecha de publicación.",
+       "en": "INDEC, with the latest month’s figure and its publication date."
+      }
+     },
+     {
+      "k": {
+       "es": "Si una fuente falla",
+       "en": "If a source fails"
+      },
+      "v": {
+       "es": "Se conserva el último valor, con su fecha, y se avisa.",
+       "en": "The last value is kept, with its date, and a notice is shown."
+      }
+     },
+     {
+      "k": {
+       "es": "Acciones y CEDEARs",
+       "en": "Shares and CEDEARs"
+      },
+      "v": {
+       "es": "Precios de ejemplo, rotulados, con enlace a la fuente oficial.",
+       "en": "Labelled sample prices, linked to the official source."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "id": "resultados",
+    "n": "08",
+    "lens": "both",
+    "mode": {
+     "es": "Las dos lentes",
+     "en": "Both lenses"
+    },
+    "name": {
+     "es": "Resultados, lo que falta y aprendizajes",
+     "en": "Results, next steps and lessons"
+    },
+    "q": {
+     "es": "¿Qué demuestra y qué haría después?",
+     "en": "What does it show, and what would I do next?"
+    }
+   },
+   {
+    "t": "prose",
+    "hl": true,
+    "h": {
+     "es": "Resultados",
+     "en": "Results"
+    },
+    "p": [
+     {
+      "es": "Alcancía es un producto B2B completo de punta a punta: una billetera de nueve niveles, 13 misiones, 18 módulos con tres guías cada uno, 12 herramientas, cinco roles, tres contextos de uso, español e inglés, modo claro y oscuro, y una documentación que se lee sin el código. **No tiene usuarios reales ni métricas de impacto, y no las inventa.** ==Lo que demuestra es un proceso==: cómo diseño un programa de aprendizaje que vive dentro de un producto, cómo lo traduzco a una herramienta para cinco roles y cómo lo audito contra su propia idea antes de seguir.",
+      "en": "Alcancía is a complete, end-to-end B2B product: a nine-level wallet, 13 missions, 18 modules with three guides each, 12 tools, five roles, three contexts of use, Spanish and English, light and dark mode, and documentation you can read without the code. **It has no real users or impact metrics, and it doesn’t make them up.** ==What it shows is a process==: how I design a learning programme that lives inside a product, how I turn it into a tool for five roles and how I audit it against its own idea before moving on."
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Qué haría con un piloto real",
+     "en": "What I would do in a real pilot"
+    },
+    "items": {
+     "es": [
+      "**Validar las proto-personas** con entrevistas a L&D, tutoría y participantes de oficina y operativos, con el plan que ya está escrito",
+      "**Probar la idea central:** la misión 1 frente a la misma guía en formato lección, con 5 personas",
+      "**Completar la prueba con lector de pantalla (NVDA y VoiceOver) y la auditoría con Lighthouse**, y recorrerla en celulares reales",
+      "**Cerrar la revisión del contenido** con el Lic. Kevin Giampieri y la del inglés con una persona nativa",
+      "**Medir en una cohorte:** avance por nivel, abandono, cambios de conducta a 30 días y confianza en el aviso de privacidad"
+     ],
+     "en": [
+      "**Validate the proto-personas** with interviews with L&D, tutors and office and frontline participants, using the plan that is already written",
+      "**Test the core idea:** mission 1 against the same guide as a lesson, with 5 people",
+      "**Complete the screen reader test (NVDA and VoiceOver) and the Lighthouse audit**, and go through it on real phones",
+      "**Finish the content review** with Kevin Giampieri (Lic.) and the English review with a native speaker",
+      "**Measure in a cohort:** progress by level, drop-off, behaviour change after 30 days and trust in the privacy notice"
+     ]
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Lo que me llevo",
+     "en": "What I take away"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Tests en verde no prueban que algo enseña",
+       "en": "Passing tests don’t prove something teaches"
+      },
+      "body": {
+       "es": "La auditoría contra la idea central encontró lo que ningún test podía ver: tarjetas atadas a las misiones y errores sin huella.",
+       "en": "Auditing against the core idea found what no test could see: cards tied to missions and mistakes that left no trace."
+      }
+     },
+     {
+      "lead": {
+       "es": "La privacidad también se filtra por inferencia",
+       "en": "Privacy also leaks through inference"
+      },
+      "body": {
+       "es": "Un dato inofensivo, cruzado con una regla, revela lo que se quería proteger: el estado de bloqueo delataba deudas.",
+       "en": "A harmless data point, combined with a rule, reveals what you meant to protect: lock status gave debts away."
+      }
+     },
+     {
+      "lead": {
+       "es": "Con IA, el criterio es el trabajo",
+       "en": "With AI, judgement is the job"
+      },
+      "body": {
+       "es": "El agente escribe rápido; especificar, auditar y decidir sigue siendo diseño, y cada decisión quedó registrada.",
+       "en": "The agent writes fast; specifying, auditing and deciding is still design, and every decision was logged."
+      }
+     }
+    ]
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencias",
+     "en": "References"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Gagné, R. M., Wager, W. W., Golas, K. C., & Keller, J. M. (2005).",
+       "en": "Gagné, R. M., Wager, W. W., Golas, K. C., & Keller, J. M. (2005)."
+      },
+      "title": "Principles of instructional design",
+      "post": {
+       "es": " (5th ed.). Wadsworth.",
+       "en": " (5th ed.). Wadsworth."
+      }
+     },
+     {
+      "pre": {
+       "es": "Google. (s.f.).",
+       "en": "Google. (n.d.)."
+      },
+      "title": "Material Design 3",
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://m3.material.io/"
+     },
+     {
+      "pre": {
+       "es": "Gothelf, J., & Seiden, J. (2021).",
+       "en": "Gothelf, J., & Seiden, J. (2021)."
+      },
+      "title": "Lean UX: Designing great products with agile teams",
+      "post": {
+       "es": " (3rd ed.). O'Reilly Media.",
+       "en": " (3rd ed.). O'Reilly Media."
+      }
+     },
+     {
+      "pre": {
+       "es": "Gottfredson, C., & Mosher, B. (2011).",
+       "en": "Gottfredson, C., & Mosher, B. (2011)."
+      },
+      "title": "Innovative performance support: Strategies and practices for learning in the workflow",
+      "post": {
+       "es": ". McGraw-Hill.",
+       "en": ". McGraw-Hill."
+      }
+     },
+     {
+      "pre": {
+       "es": "International Organization for Standardization & International Electrotechnical Commission. (2023).",
+       "en": "International Organization for Standardization & International Electrotechnical Commission. (2023)."
+      },
+      "title": "Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model",
+      "post": {
+       "es": " (ISO/IEC 25010:2023). ISO.",
+       "en": " (ISO/IEC 25010:2023). ISO."
+      }
+     },
+     {
+      "pre": {
+       "es": "Kirkpatrick, J. D., & Kirkpatrick, W. K. (2016).",
+       "en": "Kirkpatrick, J. D., & Kirkpatrick, W. K. (2016)."
+      },
+      "title": "Kirkpatrick's four levels of training evaluation",
+      "post": {
+       "es": ". ATD Press.",
+       "en": ". ATD Press."
+      }
+     },
+     {
+      "pre": {
+       "es": "Knowles, M. S., Holton, E. F., III, & Swanson, R. A. (2015).",
+       "en": "Knowles, M. S., Holton, E. F., III, & Swanson, R. A. (2015)."
+      },
+      "title": "The adult learner: The definitive classic in adult education and human resource development",
+      "post": {
+       "es": " (8th ed.). Routledge.",
+       "en": " (8th ed.). Routledge."
+      }
+     },
+     {
+      "pre": {
+       "es": "Kolb, D. A. (1984).",
+       "en": "Kolb, D. A. (1984)."
+      },
+      "title": "Experiential learning: Experience as the source of learning and development",
+      "post": {
+       "es": ". Prentice Hall.",
+       "en": ". Prentice Hall."
+      }
+     },
+     {
+      "pre": {
+       "es": "Rosenfeld, L., Morville, P., & Arango, J. (2015).",
+       "en": "Rosenfeld, L., Morville, P., & Arango, J. (2015)."
+      },
+      "title": "Information architecture: For the web and beyond",
+      "post": {
+       "es": " (4th ed.). O'Reilly Media.",
+       "en": " (4th ed.). O'Reilly Media."
+      }
+     },
+     {
+      "pre": {
+       "es": "Wiggins, G., & McTighe, J. (2005).",
+       "en": "Wiggins, G., & McTighe, J. (2005)."
+      },
+      "title": "Understanding by design",
+      "post": {
+       "es": " (Expanded 2nd ed.). ASCD.",
+       "en": " (Expanded 2nd ed.). ASCD."
+      }
+     },
+     {
+      "pre": {
+       "es": "World Wide Web Consortium. (2023).",
+       "en": "World Wide Web Consortium. (2023)."
+      },
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.w3.org/TR/WCAG22/"
+     }
+    ]
+   }
+  ],
+  "credits": {
+   "es": "Contenido de finanzas basado en el material del Lic. Kevin Giampieri; las ampliaciones están marcadas para su revisión. Fuerte: personaje propio, del escape room «Tu primer sueldo». Fotos de personas: Designed by Magnific, con licencia. Íconos de la app: Material Symbols (Google), Apache 2.0. Tipografía de la app: Inter, SIL Open Font License. Andina Servicios S.A., el Instituto Superior Ceibo, Hornero, sus personas y sus datos son ficticios. El dinero es ficticio y el contenido es educativo, no asesoramiento financiero.",
+   "en": "Finance content based on material by Kevin Giampieri (Lic.); additions are flagged for his review. Fuerte: my own character, from the “Your first paycheck” escape room. People photos: Designed by Magnific, licensed. App icons: Material Symbols (Google), Apache 2.0. App typeface: Inter, SIL Open Font License. Andina Servicios S.A., Instituto Superior Ceibo, Hornero, their people and their data are fictional. The money is fictitious and the content is educational, not financial advice."
+  },
+  "creditsLinks": [
+   {
+    "text": "Designed by Magnific",
+    "url": "https://www.magnific.com/"
+   }
+  ]
  }
 };

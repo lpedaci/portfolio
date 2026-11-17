@@ -14,6 +14,24 @@
 
 window.PROJECTS = [
   {
+    slug: 'alcancia',
+    cover: 'assets/img/covers/alcancia.jpg',
+    cat: 'it',
+    badges: ['UX', 'LXD'],
+    dates: ['2026-11', '2026-11'],
+    tags: { es: ['ux/ui', 'lxd', 'producto b2b'], en: ['ux/ui', 'lxd', 'b2b product'] },
+    title: { es: 'Alcancía, simulador de finanzas personales', en: 'Alcancía, a personal finance simulator' },
+    desc: {
+      es: 'Producto B2B para organizaciones, aulas y productos: aprender finanzas usando una billetera virtual con dinero ficticio, construido como prototipo navegable.',
+      en: 'A B2B product for organisations, classrooms and products: learning personal finance by using a virtual wallet with fictitious money, built as a navigable prototype.'
+    },
+    result: { es: '9 niveles, 13 misiones, 5 roles', en: '9 levels, 13 missions, 5 roles' },
+    skills: {
+      es: ['Diseño instruccional', 'Gamificación', 'Privacidad por diseño', 'Sistema de diseño', 'WCAG 2.2'],
+      en: ['Instructional design', 'Gamification', 'Privacy by design', 'Design system', 'WCAG 2.2']
+    }
+  },
+  {
     slug: 'rumbo',
     cover: 'assets/img/covers/rumbo.jpg',
     cat: 'it',

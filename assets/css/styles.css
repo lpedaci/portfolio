@@ -868,6 +868,19 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .brief__l { color: var(--text-2); font-size: 0.9375rem; line-height: 1.45; }
 .brief__x { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: start; padding: 14px 16px; background: var(--surface); border-radius: 12px; color: var(--text); line-height: 1.5; }
 .brief__x .ph { margin-top: 3px; color: var(--c2, var(--c)); }
+/* Tres cifras y una frase (Rumbo, Alcancía): columnas fijas para que ninguna fila quede incompleta.
+   Celular: cada cifra en una fila, el número a la izquierda y el rótulo al lado. Tablet: las tres cifras
+   en fila y la frase a lo ancho debajo. Escritorio: las cuatro en una fila. */
+.brief__res--31 .brief__m { display: grid; grid-template-columns: 4.25rem minmax(0, 1fr); align-items: center; column-gap: 12px; }
+@media (min-width: 700px) {
+  .brief__res--31 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .brief__res--31 .brief__m { display: flex; align-items: stretch; }
+  .brief__res--31 .brief__x { grid-column: 1 / -1; }
+}
+@media (min-width: 1280px) {
+  .brief__res--31 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .brief__res--31 .brief__x { grid-column: auto; }
+}
 .brief + .facts { margin-top: 16px; }
 
 /* Ficha: cada dato toma un ancho según su largo y las filas se completan solas (flex-grow).
@@ -951,16 +964,21 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 @media (min-width: 480px) { .stats { --cols: 2; } }
 @media (min-width: 760px) { .stats { --cols: min(3, var(--sc, 3)); } }
 @media (min-width: 1200px) { .stats { --cols: var(--sc, 4); } }
+/* Cuatro cifras: 2 × 2 en celular y tablet (nunca 3 + 1) y las cuatro en fila en escritorio */
+@media (max-width: 1199px) { .stats[style*="--sc:4"] { --cols: 2; } }
 /* Cada mosaico toma su parte de la fila y crece si sobra lugar: la última fila se completa sin huecos */
 .stats > div {
   flex: 1 1 calc((100% - (var(--cols) - 1) * var(--g)) / var(--cols)); min-width: 0;
   display: flex; flex-direction: column; padding: 22px 22px 24px; border-radius: 16px;
   background: color-mix(in srgb, var(--c) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--c) 14%, transparent);
 }
+@media (max-width: 479px) { .stats > div { padding: 16px 14px 18px; } .stats .l { font-size: 0.8125rem; line-height: 1.45; } }
+/* En los celulares más angostos, de a dos, una palabra larga ("requerimientos") se corta con guion en vez de salirse */
+@media (max-width: 359px) { .stats .l { hyphens: auto; } }
 .stats > div:first-child { background: color-mix(in srgb, var(--c) 16%, var(--surface)); }
 .case[data-touch] .stats > div:nth-child(even) { background: color-mix(in srgb, var(--c2) 7%, var(--surface)); border-color: color-mix(in srgb, var(--c2) 14%, transparent); }
 .stats .v { font: 600 clamp(2rem, 1.6rem + 1.4vw, 2.75rem)/1 var(--f-display); color: var(--c); letter-spacing: -0.02em; }
-.stats .l { margin-top: 10px; color: var(--muted); font-size: 0.9375rem; }
+.stats .l { margin-top: 10px; color: var(--muted); font-size: 0.9375rem; overflow-wrap: break-word; }
 
 .cases { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
 .cases > li { padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); display: flex; flex-direction: column; gap: 10px; }
@@ -1052,7 +1070,9 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   .bento__i--tint > .bento__n { font-size: clamp(4rem, 2rem + 4vw, 6.5rem); letter-spacing: -0.04em; }
   .bento__i--tint > .bento__n + .bento__h { font-size: 1.5rem; line-height: 1.2; }
 }
-@media (min-width: 1100px) {
+/* Desde que el bento tiene 6 columnas (900 px), la tarjeta principal con imagen va a lo ancho, con el texto al lado:
+   si ocupara 4 columnas, la tarjeta chica de al lado se estiraría al alto de la imagen y la grilla no cerraría. */
+@media (min-width: 900px) {
   .bento__i--lead:has(.pic) { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); grid-auto-rows: min-content; column-gap: clamp(28px, 3vw, 48px); row-gap: 12px; align-content: center; }
   .bento__i--lead:has(.pic) > :not(.pic) { grid-column: 1; }
   .bento__i--lead:has(.pic) > .pic { grid-column: 2; grid-row: 1 / span 4; margin: 0; padding: 0; align-self: center; }
@@ -1257,7 +1277,7 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   @keyframes jx-in { from { opacity: 0; transform: translateX(14px); } }
 }
 
-.jx__ctrl { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; }
+.jx__ctrl { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; margin-top: 4px; }
 .jx__btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px;
   border: 1px solid var(--line-2); border-radius: var(--r-pill); background: var(--box, #fff); color: var(--text);
@@ -1272,7 +1292,8 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .jx__btn:disabled { opacity: 0.4; cursor: default; }
 @media (max-width: 479px) { .jx__btn--main { flex: 1 1 auto; } }
 
-.jr__extra { margin-top: 8px; display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+/* Actores y puntos de contacto separados de los controles del journey, para que no se lean como parte de la etapa */
+.jr__extra { margin-top: 32px; display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
 .jr__extra > div { padding: 18px 20px; background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); border-radius: var(--r-card); }
 .jr__xh { font: 500 0.8125rem/1.3 var(--f-mono); color: var(--muted); margin-bottom: 12px; }
 @media (min-width: 900px) { .jr__extra { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -1284,31 +1305,29 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .blk__foot { margin-top: 18px; padding: 14px 16px; border-left: 2px solid var(--line); color: var(--muted); line-height: 1.6; }
 
 /* Task flow */
-/* Flujo de pasos: un recorrido de nodos numerados unidos por una línea, sin tarjetas.
-   Angosto: en columna, con la línea a la izquierda. Ancho: en fila, con el texto debajo de cada nodo. */
-.tf { --node: 40px; list-style: none; margin: 0; padding: 4px 0 0; display: grid; position: relative; }
-.tf__s { position: relative; display: grid; grid-template-columns: var(--node) minmax(0, 1fr); align-items: center; column-gap: 16px; padding-bottom: 18px; }
-.tf__s:last-child { padding-bottom: 0; }
-/* Tramo de línea hasta el paso siguiente */
-.tf__s:not(:last-child)::after {
-  content: ""; position: absolute; left: calc(var(--node) / 2 - 1px); top: calc(var(--node) / 2); bottom: calc(var(--node) / -2);
-  width: 2px; background: color-mix(in srgb, var(--c) 35%, var(--line));
+/* Flujo de pasos. Celular y tablet: cada paso es una tarjeta con su número, en filas que se completan solas
+   (la última fila se estira, sin huecos); el último paso, la meta, lleva el color del caso.
+   Escritorio: un recorrido en fila, con nodos numerados unidos por una línea y el texto debajo. */
+.tf { --node: 34px; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.tf__s {
+  flex: 1 1 210px; display: grid; grid-template-columns: var(--node) minmax(0, 1fr); align-items: center; column-gap: 12px;
+  padding: 12px 16px 12px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card);
 }
+.tf__s:last-child { background: color-mix(in srgb, var(--c) 8%, var(--surface)); border-color: color-mix(in srgb, var(--c) 35%, var(--line)); }
 .tf__n {
   position: relative; z-index: 1; display: grid; place-items: center; width: var(--node); height: var(--node); border-radius: 50%;
-  border: 2px solid var(--c); background: var(--box, #fff); color: var(--c); font: 500 0.8125rem/1 var(--f-mono); font-variant-numeric: tabular-nums;
+  border: 2px solid var(--c); background: var(--box, #fff); color: var(--c); font: 500 0.75rem/1 var(--f-mono); font-variant-numeric: tabular-nums;
 }
 .tf__s:last-child .tf__n { background: var(--c); color: var(--on-accent); }
-.tf__t { font: 500 1rem/1.4 var(--f-display); color: var(--text); text-wrap: balance; }
+.tf__t { font: 500 0.9375rem/1.35 var(--f-display); color: var(--text); text-wrap: balance; }
 @media (min-width: 1100px) {
-  .tf { grid-template-columns: repeat(var(--n, 6), minmax(0, 1fr)); column-gap: 12px; }
-  .tf__s { grid-template-columns: minmax(0, 1fr); justify-items: center; row-gap: 14px; padding: 0; text-align: center; align-items: start; }
-  .tf__s:not(:last-child)::after { left: calc(50% + var(--node) / 2 + 6px); right: calc(-50% + var(--node) / 2 + 6px - 12px); top: calc(var(--node) / 2 - 1px); bottom: auto; width: auto; height: 2px; }
-  .tf__t { font-size: 0.9375rem; }
+  .tf { --node: 40px; display: grid; grid-template-columns: repeat(var(--n, 6), minmax(0, 1fr)); gap: 0 8px; padding-top: 4px; }
+  .tf__s { position: relative; grid-template-columns: minmax(0, 1fr); justify-items: center; row-gap: 14px; padding: 0 2px; text-align: center; align-items: start; background: none; border: 0; border-radius: 0; }
+  .tf__s:last-child { background: none; }
+  /* Tramo de línea hasta el paso siguiente (no sale de la tarjeta: va hasta el borde y el hueco lo cubre el gap) */
+  .tf__s:not(:last-child)::after { content: ""; position: absolute; top: calc(var(--node) / 2 - 1px); left: calc(50% + var(--node) / 2 + 6px); width: calc(100% - var(--node) - 12px + 8px); height: 2px; background: color-mix(in srgb, var(--c) 35%, var(--line)); }
+  .tf__t { font-size: 0.875rem; hyphens: auto; }
 }
-
-/* User flow: diagrama y la misma lógica en texto */
-.ufw { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); align-items: start; }
 .ufw__svg { padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); }
 .uf { display: block; width: 100%; max-width: 600px; height: auto; margin-inline: auto; }
 .uf-t { font: 500 12.5px var(--f-body); fill: var(--text); }
@@ -1497,7 +1516,7 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .dfl > .dfl__n:first-child::before { content: none; }
 .dfl__n.is-dashed::before { width: 0; background: none; clip-path: none; border-left: 2px dashed var(--muted); }
 .dfl__box {
-  width: min(100%, 21rem); padding: 12px 16px; text-align: center; text-wrap: balance; line-height: 1.4; color: var(--text);
+  width: min(100%, 21rem); padding: 12px 16px; text-align: center; text-wrap: balance; line-height: 1.4; color: var(--text); overflow-wrap: break-word; hyphens: auto;
   background: var(--box, var(--surface)); border: 1px solid var(--line-2); border-radius: var(--r-card);
 }
 .dfl__n--start > .dfl__box, .dfl__n--end > .dfl__box {
@@ -1522,7 +1541,11 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   .dfl__br { width: 100%; margin-left: 0; padding-left: 0; border-left: 0; grid-template-columns: repeat(var(--nb), minmax(0, 1fr)); }
   .dfl__b .dfl__br { grid-template-columns: minmax(0, 1fr); }
 }
-@media (min-width: 1100px) { .dfl__b .dfl__br { grid-template-columns: repeat(var(--nb), minmax(0, 1fr)); } }
+/* Una decisión dentro de una rama abre sus ramas lado a lado solo si esa rama tiene lugar (no según la pantalla):
+   así una rama angosta, por ejemplo una de tres, no aprieta las cajas hasta que el texto se sale. */
+.dfl__b { container-type: inline-size; }
+.dfl__b > .dfl__list { align-self: stretch; }
+@container (min-width: 380px) { .dfl__b .dfl__br { grid-template-columns: repeat(var(--nb), minmax(0, 1fr)); } }
 @media (forced-colors: active) { .dfl__n::before, .dfl__b::before { background: CanvasText; } .dfl__n.is-dashed::before { background: none; } }
 
 /* Hallazgos de auditoría: severidad y estado escritos, el color sólo acompaña */
