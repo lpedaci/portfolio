@@ -28,11 +28,13 @@ El sitio está diseñado para quien recluta o contrata: alguien que decide en se
 
 Cada caso sigue la misma estructura, con la lógica de un tablero:
 
-- **Un apartado por vez:** el caso se divide en apartados (el resumen, el acceso en vivo, cada fase y cada bloque con título) y se ve uno por vez. El "Índice del caso", fijo a la izquierda, abre cada uno; en tablet y celular es un menú superior con el apartado actual que despliega el índice completo. El panel muestra el apartado entero, la página se desplaza normalmente y las flechas de anterior y siguiente quedan pegadas al pie mientras se lee; en el último apartado, la flecha lleva al caso siguiente. Cada apartado tiene su propio enlace (`#apartado`) y las flechas del teclado también cambian de apartado.
+- **Lectura continua:** el caso se lee de corrido, como un artículo, dividido en apartados (el resumen, cada fase y cada bloque con título) separados por una línea con su número. El "Índice del caso", fijo a la izquierda en escritorio, marca el apartado que se está leyendo, muestra el progreso de lectura y el tiempo estimado; en tablet y celular es una barra superior con el apartado actual y una línea de progreso, que despliega el índice completo. Cada apartado tiene su propio enlace (`#apartado`) y el índice lleva a cada uno con desplazamiento suave (directo con movimiento reducido).
+- **Portada del caso:** volver a proyectos, categoría, año y minutos de lectura, título, bajada, chips y, si el proyecto está publicado, sus enlaces como acción principal. Al lado (o debajo, en tablet y celular), la portada del proyecto; si es un sitio propio, dentro de un marco de navegador con su dirección.
+- **Ficha antes del resumen:** rol, período, contexto, herramientas y metodologías apenas debajo de la portada, para entender el caso de un vistazo.
+- **Siguiente caso:** al final, una tarjeta con la portada, la categoría, el título y la descripción del caso que sigue.
 - **Apartados unidos:** dos apartados cortos que cuentan lo mismo (por ejemplo "El desafío" y "El proyecto") se unen en uno, con un título propio en el índice.
-- **Resumen arriba:** problema y solución lado a lado y, debajo, los resultados en una fila, con cifras grandes cuando hay un dato defendible. Así ninguna tarjeta queda estirada con espacio vacío. Con tres cifras y una frase, las cuatro van en fila en escritorio; en tablet, las cifras en fila y la frase a lo ancho; en celular, cada cifra en un renglón con el número al lado del rótulo.
-- **En vivo:** si el proyecto está publicado, una tarjeta propia con el primer enlace como botón principal. Cuando es un sitio propio, suma una vista previa: la captura del sitio dentro de un marco de navegador con su dirección.
-- **Después, el detalle:** la ficha (rol, período, contexto, herramientas y metodologías, estas dos en pastillas), el proceso explicado por fases y el resultado.
+- **Resumen arriba:** problema y solución lado a lado y, debajo, los resultados en una fila, con cifras grandes cuando hay un dato defendible. Con tres cifras y una frase, las cuatro van en fila en escritorio; en tablet, las cifras en fila y la frase a lo ancho; en celular, cada cifra en un renglón con el número al lado del rótulo.
+- **Después, el detalle:** el proceso explicado por fases y el resultado.
 
 ## 🎨 Sistema visual
 
@@ -126,3 +128,4 @@ Sitio estático sin frameworks ni dependencias en el navegador.
 | 4.0 | Perfil de experience designer: tema claro con auras, animación del proceso en el hero, portadas por proyecto y tarjetas de vista previa con captura. |
 | 4.1 | Casos con lógica de tablero: resumen de problema, solución y resultados, índice lateral, tarjeta en vivo, caja de contenido y un único fondo blanco cálido en toda la web. El hero de la portada queda centrado y sin ilustración. |
 | 4.2 | Casos por apartados: se ve uno por vez desde el índice (menú superior en celular), con flechas para recorrerlos, ancho casi completo, journey maps paso a paso y apartados cortos unidos. |
+| 4.3 | Casos en lectura continua: portada con la imagen del proyecto y los enlaces en vivo, ficha a la vista, índice que sigue la lectura con progreso y minutos estimados, separadores numerados y tarjeta del siguiente caso. |

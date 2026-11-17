@@ -614,33 +614,50 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 
 .case__credits { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.875rem; line-height: 1.6; color: var(--muted); }
 
-.case__head { margin-top: 16px; }
+/* Portada del caso: volver, categoría y tiempo de lectura, título, bajada, chips y los enlaces en vivo como acción
+   principal. Con portada del proyecto, la imagen va al lado (cuando la caja tiene lugar) o debajo (tablet y celular). */
+.case__head { margin-top: 4px; display: grid; gap: clamp(28px, 4cqi, 56px); grid-template-columns: minmax(0, 1fr); align-items: center; }
+@container casebox (min-width: 800px) {
+  .case__head--cover { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+  .case__head--cover .case__title { font-size: clamp(2.125rem, 1.1rem + 2.6cqi, 3.25rem); }
+}
+.case__intro { min-width: 0; }
 .case__meta { display: flex; flex-wrap: wrap; gap: 6px 12px; font: 400 0.8125rem/1.4 var(--f-mono); color: var(--muted); }
 .case__meta .case__cat { color: var(--c); }
 .case__title {
   margin-top: 16px; max-width: 24ch; font: 600 clamp(2.125rem, 1.4rem + 3vw, 3.5rem)/1.06 var(--f-display);
   letter-spacing: -0.025em; text-wrap: balance;
 }
+.case__back {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin: -6px 0 10px -4px; padding: 0 14px 0 10px;
+  border-radius: var(--r-pill); color: var(--text-2); font: 500 0.875rem/1 var(--f-body); text-decoration: none;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.case__back:hover { background: var(--surface); color: var(--text); }
+.case__back .ph { color: var(--c); transition: transform 0.25s var(--ease); }
+@media (prefers-reduced-motion: no-preference) { .case__back:hover .ph { transform: translateX(-3px); } }
+.case__time { color: var(--text-2); }
+.case__cta { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.case__cta .live__badge { background: color-mix(in srgb, var(--c) 9%, var(--box, var(--surface))); }
+.case__cta .live__btns { flex: 1 1 auto; }
+@media (max-width: 559px) { .case__cta .live__btns { flex-basis: 100%; } }
+/* La portada del proyecto: una captura con marco de navegador si es un sitio propio; si no, la imagen sola */
+.hero-shot {
+  display: block; min-width: 0; overflow: hidden; border-radius: 18px; background: var(--surface);
+  box-shadow: 0 2px 4px rgb(23 24 28 / 0.06), 0 24px 48px -24px rgb(23 24 28 / 0.35);
+}
+.hero-shot--site { background: #1E1F24; text-decoration: none; }
+.hero-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; transition: transform 0.6s var(--ease); }
+@media (prefers-reduced-motion: no-preference) { .hero-shot--site:hover img { transform: scale(1.02); } }
 .case__sub { margin-top: 16px; color: var(--text-2); font-size: 1.1875rem; line-height: 1.6; }
 
-/* ---------- Estructura del caso: vista por apartados ----------
-   La página entera queda fija al alto de la pantalla (como una app): el menú arriba, el índice a la izquierda
-   y el panel del apartado a la derecha. Lo único que se desplaza es el contenido del apartado (.case__scroll).
-   El ancho usa casi toda la pantalla, con un margen proporcional (--case-m, 3 % del ancho) a cada lado. */
-/* overflow: clip (y no hidden): así ni el navegador ni un ancla pueden desplazar la página por código */
+/* ---------- Estructura del caso: lectura continua ----------
+   Menú arriba, índice a la izquierda (columna fija en escritorio, barra superior en tablet y celular) y el caso
+   entero en una caja blanca que se lee de corrido. El ancho usa casi toda la pantalla, con un margen proporcional
+   (--case-m, 3 % del ancho) a cada lado. */
 .is-case-app { --case-m: max(16px, 3vw); }
 .is-case-app .nav__inner { width: calc(100% - 2 * var(--case-m)); max-width: none; }
 .is-case-app .foot__inner { max-width: none; padding-inline: var(--case-m); }
-/* Vista fija (?vista=fija) */
-.is-case-fixed { height: 100%; overflow: hidden; overflow: clip; scroll-padding-top: 0; }
-.is-case-fixed body { height: 100%; height: 100dvh; overflow: hidden; overflow: clip; display: flex; flex-direction: column; }
-.is-case-fixed .nav { position: relative; flex: none; padding-top: 10px; }
-.is-case-fixed .case { flex: 1 1 auto; min-height: 0; display: flex; padding-block: 12px 8px; }
-/* Footer: una barra fina fija al pie (no se desplaza). Volver arriba no hace falta: la página no tiene scroll. */
-.is-case-fixed .foot { flex: none; border-top: 0; }
-.is-case-fixed .foot__inner { min-height: 0; padding-bottom: 6px; padding-top: 0; gap: 4px 16px; }
-.is-case-fixed .foot__top { display: none; }
-.is-case-fixed .foot__in { width: 40px; height: 40px; }
 .is-case-app .case > .wrap { flex: 1; max-width: none; min-width: 0; min-height: 0; padding-inline: var(--case-m); display: flex; flex-direction: column; }
 
 .case__grid { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); gap: 10px; }
@@ -652,85 +669,62 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   background: var(--box); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
   border-radius: 24px; box-shadow: 0 1px 2px rgb(23 24 28 / 0.04), 0 18px 48px -24px rgb(23 24 28 / 0.18);
 }
-.case__scroll { flex: 1 1 auto; min-height: 0; padding: 20px 18px 32px; }
-.is-case-fixed .case__scroll { overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+.case__scroll { container: casebox / inline-size; flex: 1 1 auto; min-height: 0; padding: 20px 18px 40px; }
 
-/* Vista completa (por defecto): el panel muestra el apartado entero y se desplaza la página, con el footer del sitio.
-   El índice queda fijo al costado (o arriba, en pantallas chicas) y las flechas quedan pegadas al pie de la pantalla
-   mientras se lee; al final del apartado vuelven a su lugar, al pie del panel. */
-.is-case-flow { scroll-padding-top: calc(var(--nav-h) + 16px); }
 .is-case-flow .case { padding-block: 12px 56px; }
 .is-case-flow .case__main { overflow: visible; }
-.is-case-flow .pager {
-  position: sticky; bottom: 0; z-index: 4; border-radius: 0 0 24px 24px;
-  box-shadow: 0 -10px 24px -18px rgb(23 24 28 / 0.25);
-}
 @media (min-width: 1024px) {
   .is-case-flow .toc { position: sticky; top: calc(var(--nav-h) + 12px); align-self: start; max-height: calc(100dvh - var(--nav-h) - 24px); }
 }
 @media (max-width: 1023px) {
-  .is-case-flow .toc { position: sticky; top: var(--nav-h); z-index: 15; margin-inline: calc(-1 * var(--case-m)); padding: 6px var(--case-m); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .is-case-flow .toc { position: sticky; top: var(--nav-h); z-index: 15; margin-inline: calc(-1 * var(--case-m)); padding: 6px var(--case-m) 0; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
   .is-case-flow .toc__list { left: var(--case-m); right: var(--case-m); }
 }
 .case__scroll:focus { outline: none; }
 @media (min-width: 600px) { .case__scroll { padding: 28px 32px 40px; } }
-@media (min-width: 1100px) { .case__scroll { padding: 36px clamp(32px, 3.4vw, 64px) 48px; } }
+@media (min-width: 1100px) { .case__scroll { padding: 40px clamp(32px, 3.4vw, 64px) 56px; } }
 .case__main :is(.brief__m, .brief__x, .live__badge) { background: var(--box); }
 .case__main .frame { background: var(--box); }
 /* Dentro del panel, lo pegajoso se pega al borde del panel y no debajo del menú */
 .case__scroll .ufw__logic { top: 0; }
 
-/* Un apartado por vez: el primer elemento no arrastra el margen de arriba */
+/* Apartados: se leen de corrido, separados por una línea con su número (decorativo: el índice ya lo dice) */
+.apt { position: relative; }
 .apt > :first-child { margin-top: 0; }
+.apt + .apt { margin-top: clamp(72px, 9cqi, 128px); padding-top: clamp(40px, 5cqi, 64px); border-top: 1px solid var(--line); }
+.apt[data-n]::before {
+  content: attr(data-n); content: attr(data-n) / ""; position: absolute; top: 0; left: 0; transform: translateY(-50%);
+  padding-right: 14px; background: var(--box); font: 500 0.75rem/1 var(--f-mono); color: var(--c); font-variant-numeric: tabular-nums;
+}
 .apt :is(h1, h2, h3)[tabindex="-1"]:focus { outline: none; }
-@media (prefers-reduced-motion: no-preference) {
-  .apt.is-in { animation: apt-in 0.32s var(--ease) both; }
-  @keyframes apt-in { from { opacity: 0; transform: translateY(8px); } }
-}
+.apt:target, .apt :target { scroll-margin-top: calc(var(--nav-h) + 24px); }
 
-/* Flechas de abajo: anterior a la izquierda, siguiente a la derecha y la posición en el medio.
-   Quedan siempre a la vista, al pie del panel. */
-.pager {
-  flex: none; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px;
-  padding: 8px; border-top: 1px solid var(--line); background: var(--box);
+/* Fin del caso: el siguiente caso en una tarjeta con su portada, al pie de la caja */
+.nextc { padding: 0 18px 18px; }
+.nextc__end { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; font: 500 0.75rem/1 var(--f-mono); color: var(--muted); }
+.nextc__end::before, .nextc__end::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.nextc__a {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 20px; border-radius: 20px; text-decoration: none; color: var(--text);
+  background: color-mix(in srgb, var(--next-c) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--next-c) 18%, transparent);
+  transition: background-color 0.25s var(--ease), border-color 0.25s var(--ease);
 }
-.pager__btn {
-  display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 56px; padding: 6px 10px;
-  border-radius: 16px; color: var(--text); text-decoration: none; transition: background-color 0.2s var(--ease);
+.nextc__a:hover { background: color-mix(in srgb, var(--next-c) 11%, var(--surface)); border-color: color-mix(in srgb, var(--next-c) 35%, transparent); }
+.nextc__txt { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
+.nextc__k { font: 500 0.75rem/1 var(--f-mono); color: var(--muted); }
+.nextc__cat { font: 500 0.8125rem/1.2 var(--f-mono); color: var(--next-c); }
+.nextc__t { font: 600 clamp(1.375rem, 1.1rem + 1.2vw, 2.125rem)/1.15 var(--f-display); letter-spacing: -0.02em; text-wrap: balance; }
+.nextc__d { color: var(--text-2); line-height: 1.6; text-wrap: pretty; }
+.nextc__go {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 8px; padding: 0 20px; border-radius: var(--r-pill);
+  background: var(--next-c); color: var(--on-accent); font: 600 0.9375rem/1 var(--f-body);
 }
-.pager__btn:hover { background: var(--surface); }
-.pager__btn .ph {
-  flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
-  font-size: 1.125rem; background: var(--surface); color: var(--c); transition: transform 0.25s var(--ease);
-}
-.pager__btn--next { grid-column: 3; justify-content: flex-end; text-align: right; }
-.pager__btn--next .ph { background: var(--c); color: var(--on-accent); }
-.pager__btn--next.is-case .ph { background: var(--next-c, var(--c)); }
-@media (prefers-reduced-motion: no-preference) {
-  .pager__btn--next:hover .ph { transform: translateX(3px); }
-  .pager__btn--prev:hover .ph { transform: translateX(-3px); }
-}
-.pager__btn.is-off { visibility: hidden; }
-.pager__txt { display: grid; gap: 2px; min-width: 0; }
-.pager__k { font: 400 0.75rem/1.2 var(--f-mono); color: var(--muted); }
-.pager__l { font: 600 0.9375rem/1.3 var(--f-display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.pager__count { grid-column: 2; grid-row: 1; padding: 0 8px; font: 400 0.8125rem/1 var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.pager__count span { color: var(--text); font-weight: 500; }
-.pager__btn--prev { grid-column: 1; grid-row: 1; }
-.pager__btn--next { grid-row: 1; }
-/* Celular: versión liviana. Solo dos flechas (44 px, sin texto visible: el texto queda para lectores de pantalla)
-   y la posición en el medio; la flecha siguiente lleva un tinte del color del caso en vez de un relleno pleno. */
-@media (max-width: 599px) {
-  .pager { padding: 6px 8px; }
-  .pager__btn { min-height: 44px; padding: 0; gap: 0; border-radius: 50%; }
-  .pager__btn:hover { background: none; }
-  .pager__btn--next { justify-self: end; }
-  .pager__btn--prev { justify-self: start; }
-  .pager__btn .ph { width: 44px; height: 44px; font-size: 1.0625rem; background: none; border: 1px solid var(--line); }
-  .pager__btn--next .ph, .pager__btn--next.is-case .ph { background: color-mix(in srgb, var(--c) 10%, var(--box)); border-color: transparent; color: var(--c); }
-  .pager__txt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .pager__count { font-size: 0.75rem; }
-}
+.nextc__go .ph { transition: transform 0.25s var(--ease); }
+@media (prefers-reduced-motion: no-preference) { .nextc__a:hover .nextc__go .ph { transform: translateX(4px); } .nextc__a:hover .nextc__img img { transform: scale(1.03); } }
+.nextc__img { display: block; overflow: hidden; border-radius: 14px; box-shadow: 0 18px 36px -22px rgb(23 24 28 / 0.4); }
+.nextc__img img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; transition: transform 0.6s var(--ease); }
+@media (min-width: 600px) { .nextc { padding: 0 32px 32px; } .nextc__a { padding: 28px; } }
+@media (min-width: 768px) { .nextc__a { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 32px; } }
+@media (min-width: 1100px) { .nextc { padding: 0 clamp(32px, 3.4vw, 64px) clamp(32px, 3.4vw, 64px); } .nextc__a { padding: 36px; gap: 48px; } }
 
 /* En pantallas táctiles el desplazamiento se entiende con el gesto: sin barra visible */
 @media (hover: none) and (pointer: coarse) {
@@ -754,7 +748,9 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .toc__i a[aria-current] .toc__n { color: var(--c); }
 .toc__t { min-width: 0; overflow-wrap: break-word; }
 .toc__i--phase a { font-weight: 500; color: var(--text); }
-.toc__i--live a { color: var(--c); font-weight: 500; }
+.toc__prog { height: 3px; border-radius: 3px; background: color-mix(in srgb, var(--c) 14%, var(--line)); overflow: hidden; }
+.toc__prog span { display: block; height: 100%; background: var(--c); transform: scaleX(var(--read, 0)); transform-origin: left; }
+.toc__time { font: 400 0.75rem/1.3 var(--f-mono); color: var(--muted); }
 
 /* Escritorio: una columna de navegación fija, como la barra lateral de un tablero; si el índice es largo,
    se desplaza dentro de la columna */
@@ -766,7 +762,9 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
     border-radius: var(--r-panel); box-shadow: var(--shadow-card);
   }
   .toc__toggle { display: none; }
-  .toc__h { flex: none; padding: 0 12px 8px; }
+  .toc__h { flex: none; padding: 0 12px 10px; }
+  .toc__prog { flex: none; order: -1; margin: 0 12px 14px; }
+  .toc__time { flex: none; margin: 8px 12px 0; padding-top: 12px; border-top: 1px solid var(--line); }
   .toc__list { flex: 1 1 auto; min-height: 0; display: grid; align-content: start; gap: 2px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
 }
 /* Tablet y celular: un menú superior. A la izquierda, volver a proyectos; al lado, un botón con el apartado
@@ -782,6 +780,8 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   .toc__count { flex: none; font: 400 0.75rem/1 var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
   .toc__now { flex: 1 1 auto; min-width: 0; font: 600 0.9375rem/1.3 var(--f-display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .toc__h { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .toc__time { display: none; }
+  .toc__prog { height: 2px; margin: 6px 4px 0; border-radius: 0; }
   .toc__list {
     display: none; position: absolute; left: 0; right: 0; top: calc(100% + 8px);
     max-height: min(70dvh, 560px); overflow-y: auto; overscroll-behavior: contain; padding: 8px;
@@ -847,7 +847,7 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 
 /* Resumen del caso: problema, solución y resultados como tres tarjetas, arriba de todo.
    Cada una se reconoce por su ícono y su título; los resultados llevan las cifras grandes. */
-.brief { margin-top: 40px; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+.brief { margin-top: 16px; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
 /* Problema y solución lado a lado; los resultados ocupan la fila de abajo, con las cifras en fila.
    Así ninguna tarjeta queda estirada con espacio vacío cuando los resultados son más largos. */
 @media (min-width: 700px) {
@@ -881,12 +881,12 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   .brief__res--31 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .brief__res--31 .brief__x { grid-column: auto; }
 }
-.brief + .facts { margin-top: 16px; }
+.facts + .brief { margin-top: 16px; }
 
 /* Ficha: cada dato toma un ancho según su largo y las filas se completan solas (flex-grow).
    Rol, período y contexto comparten la primera fila; herramientas y metodologías, en chips, la segunda. */
 .facts {
-  margin-top: 40px; display: flex; flex-wrap: wrap; gap: 1px; background: color-mix(in srgb, var(--line) 70%, var(--surface));
+  margin-top: clamp(32px, 4cqi, 56px); display: flex; flex-wrap: wrap; gap: 1px; background: color-mix(in srgb, var(--line) 70%, var(--surface));
   border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); border-radius: var(--r-panel); overflow: hidden;
   box-shadow: var(--shadow-card);
 }

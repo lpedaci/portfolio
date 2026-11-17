@@ -7,9 +7,6 @@
   const PROJECTS = window.PROJECTS;
 
   const slug = document.body.dataset.slug;
-  /* Vista del caso: 'completa' (el panel muestra el apartado entero y se desplaza la página, con el footer del sitio)
-     o 'fija' (todo queda fijo al alto de la pantalla y solo se desplaza el panel). ?vista=fija permite comparar. */
-  const FLOW = new URLSearchParams(location.search).get('vista') !== 'fija';
   const mount = document.getElementById('case');
   const state = { lang: 'es', apt: undefined };
 
@@ -489,59 +486,71 @@
             : `<li class="brief__x"><i class="ph ph-check" aria-hidden="true"></i><span>${esc(L(r.t))}</span></li>`)).join('')}</ul></div>
       </section>` : '';
 
-    /* En vivo: los enlaces al proyecto publicado van en una tarjeta propia, con el primero como botón principal.
-       Si el primer enlace es un sitio propio (github.io), la tarjeta suma una vista previa: la portada del proyecto,
-       que es una captura real del sitio, dentro de un marco de navegador con su dirección. */
+    /* Portada del caso (formato 2026): a la izquierda, el contexto (volver, categoría, título, bajada, chips,
+       tiempo de lectura y los enlaces en vivo como acción principal); a la derecha, la portada del proyecto.
+       Si el primer enlace es un sitio propio (github.io), la portada va en un marco de navegador con su dirección
+       y abre el sitio. La imagen es decorativa: el acceso al sitio son los botones. */
     const site = links.length && /\.github\.io$/.test(host(links[0].url)) && p.cover;
     const shortUrl = (u) => { try { const x = new URL(u); return (x.hostname + x.pathname).replace(/\/$/, ''); } catch { return u; } };
-    const live = links.length ? `<section class="live${site ? ' live--preview' : ''}" aria-labelledby="live-h">
-        ${site ? `<a class="live__shot" href="${esc(links[0].url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-          <span class="live__chrome"><span class="live__dots"><i></i><i></i><i></i></span><span class="live__url">${esc(shortUrl(links[0].url))}</span></span>
-          <img src="${ROOT}${esc(p.cover)}" width="800" height="500" alt="" loading="lazy" decoding="async"></a>` : ''}
-        <div class="live__txt"><p class="live__badge"><span class="live__dot" aria-hidden="true"></span>${t('liveLinks')}</p>
-          <h2 class="live__h" id="live-h">${t('liveTitle')}</h2>${site ? `<p class="live__desc">${esc(L(p.desc))}</p>` : ''}<p class="live__sub">${t('liveSub')}</p>
-          ${site ? '' : '</div>'}
-        <div class="live__btns">${links.map((k, n) => `<a class="btn ${n ? 'btn--soft' : 'btn--live'}" href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(L(k.label))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>`).join('')}</div>
-        ${site ? '</div>' : ''}
-      </section>` : '';
+    const coverImg = p.cover ? `<img src="${ROOT}${esc(p.cover)}" width="800" height="500" alt="" fetchpriority="high" decoding="async">` : '';
+    const cover = !p.cover ? '' : (site
+      ? `<a class="hero-shot hero-shot--site" href="${esc(links[0].url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="live__chrome"><span class="live__dots"><i></i><i></i><i></i></span><span class="live__url">${esc(shortUrl(links[0].url))}</span></span>${coverImg}</a>`
+      : `<div class="hero-shot" aria-hidden="true">${coverImg}</div>`);
+    const cta = links.length ? `<div class="case__cta"><p class="live__badge"><span class="live__dot" aria-hidden="true"></span>${t('liveLinks')}</p>
+        <div class="live__btns">${links.map((k, n) => `<a class="btn ${n ? 'btn--soft' : 'btn--live'}" href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(L(k.label))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>`).join('')}</div></div>` : '';
+
+    // Tiempo de lectura estimado: palabras del resumen y de los bloques, a 200 por minuto (dato calculado, no inventado).
+    const words = `${summary} ${blocks}`.replace(/<[^>]+>/g, ' ').split(/\s+/).filter((w) => /\p{L}/u.test(w)).length;
+    const mins = Math.max(1, Math.round(words / 200));
 
     const i = PROJECTS.indexOf(p);
     const nxt = PROJECTS[(i + 1) % PROJECTS.length];
     const nextColor = { it: 'var(--it)', cap: 'var(--cap)', cont: 'var(--cont)' }[nxt.cat];
+    const nextUrl = `${ROOT}casos/${nxt.slug}/?lang=${state.lang}`;
 
-    /* Vista por apartados: el índice (columna en escritorio, menú superior en pantallas chicas) muestra un apartado
-       por vez; solo el contenido del apartado se desplaza. Abajo, flechas para ir al anterior y al siguiente. */
+    /* Lectura continua: todos los apartados en una sola página. El índice (columna fija en escritorio, barra
+       superior con progreso en tablet y celular) marca dónde se está y lleva a cada apartado. Al final, el
+       siguiente caso en una tarjeta con su portada. */
     mount.innerHTML = `
       <div class="case__grid">
       <nav class="toc" aria-labelledby="toc-h">
         <div class="toc__bar">
           <button type="button" class="toc__toggle" aria-expanded="false" aria-controls="toc-list"><i class="ph ph-list" aria-hidden="true"></i><span class="sr-only">${t('aptMenu')}: </span><span class="toc__count"></span><span class="toc__now"></span></button>
         </div>
+        <div class="toc__prog" role="progressbar" aria-label="${esc(t('readProgress'))}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
         <p class="toc__h" id="toc-h">${t('tocTitle')}</p><ol class="toc__list" id="toc-list"></ol>
+        <p class="toc__time">${mins} ${t('readMin')}</p>
       </nav>
       <div class="case__main">
       <div class="case__scroll" tabindex="-1">
-      <header class="case__head">
-        <p class="case__meta"><span class="case__cat">${t(CAT_KEY[p.cat])}</span>${(p.also || []).map((c) => `<span class="case__cat" style="--c: var(--${c})">${t(CAT_KEY[c])}</span>`).join('')}${(p.badges || []).map((x) => `<span class="case__cat">${esc(x)}</span>`).join('')}${c.chips ? '' : `<span>${esc(p.tags[state.lang].join(' / '))}</span>`}<span>${esc(p.year)}</span></p>
+      <header class="case__head${cover ? ' case__head--cover' : ''}">
+        <div class="case__intro">
+        <a class="case__back" href="${ROOT}?lang=${state.lang}#proyectos"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>${t('backAll')}</span></a>
+        <p class="case__meta"><span class="case__cat">${t(CAT_KEY[p.cat])}</span>${(p.also || []).map((c) => `<span class="case__cat" style="--c: var(--${c})">${t(CAT_KEY[c])}</span>`).join('')}${(p.badges || []).map((x) => `<span class="case__cat">${esc(x)}</span>`).join('')}${c.chips ? '' : `<span>${esc(p.tags[state.lang].join(' / '))}</span>`}<span>${esc(p.year)}</span><span class="case__time">${mins} ${t('readMin')}</span></p>
         <h1 class="case__title">${esc(L(c.title) || L(p.title))}</h1>
         ${c.subtitle ? `<p class="case__sub">${esc(L(c.subtitle))}</p>` : ''}
         ${chips}
+        ${cta}
+        </div>
+        ${cover}
       </header>
-      ${summary}
-      ${live}
       ${(() => { const items = [fact('fRole', f.role), fact('fTimeline', f.timeline), fact('fContext', f.context), fact('fStack', f.stack), fact('fMethods', f.methods)].filter(Boolean); return `<dl class="facts" style="--n:${items.length}">${items.join('')}</dl>`; })()}
+      ${summary}
       <div class="blocks">${blocks}</div>
       ${c.outcome ? blk({ h: c.outcome.h || t('outcome') }, [].concat(c.outcome.body).map((x) => `<p>${rich(L(x))}</p>`).join(''), false, ' blk--outcome').replace(/^(\s*<section class="[^"]*")/, c.outcome.join ? '$1 data-join' : '$1') : ''}
       ${c.credits ? `<p class="case__credits">${(c.creditsLinks || []).reduce((s, k) => s.replace(esc(L(k.text)), `<a href="${esc(k.url)}" target="_blank" rel="noopener">${esc(L(k.text))}</a>`), esc(L(c.credits)))}</p>` : ''}
       </div>
-      <nav class="pager" aria-label="${esc(t('aptNav'))}" style="--next-c:${nextColor}">
-        <a class="pager__btn pager__btn--prev" href="#"><i class="ph ph-arrow-left" aria-hidden="true"></i><span class="pager__txt"><span class="pager__k">${t('aptPrev')}</span><span class="sr-only">: </span><span class="pager__l"></span></span></a>
-        <p class="pager__count" aria-hidden="true"></p>
-        <a class="pager__btn pager__btn--next" href="#"><span class="pager__txt"><span class="pager__k"></span><span class="sr-only">: </span><span class="pager__l"></span></span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      <nav class="nextc" aria-label="${esc(t('nextCase'))}" style="--next-c:${nextColor}">
+        <p class="nextc__end" aria-hidden="true">${t('caseEnd')}</p>
+        <a class="nextc__a" href="${esc(nextUrl)}">
+          <span class="nextc__txt"><span class="nextc__k">${t('nextCase')}</span><span class="nextc__cat">${t(CAT_KEY[nxt.cat])} · ${esc(nxt.year || '')}</span>
+            <span class="nextc__t">${esc(L(nxt.title))}</span>${nxt.desc ? `<span class="nextc__d">${esc(L(nxt.desc))}</span>` : ''}
+            <span class="nextc__go">${t('nextCaseCta')}<i class="ph ph-arrow-right" aria-hidden="true"></i></span></span>
+          ${nxt.cover ? `<span class="nextc__img" aria-hidden="true"><img src="${ROOT}${esc(nxt.cover)}" width="800" height="500" alt="" loading="lazy" decoding="async"></span>` : ''}
+        </a>
       </nav>
       </div></div>`;
-    nextCase = { url: `${ROOT}casos/${nxt.slug}/?lang=${state.lang}`, title: L(nxt.title) };
-    document.documentElement.classList.add('is-case-app', FLOW ? 'is-case-flow' : 'is-case-fixed');
+    document.documentElement.classList.add('is-case-app', 'is-case-flow');
     stopJourneys();
     buildSections();
     initJourneys();
@@ -549,12 +558,12 @@
   }
 
   /* ---------- Apartados del caso ----------
-     Se arman con lo que quedó en la página: cada apartado empieza en el resumen, la tarjeta en vivo, una fase
-     o un bloque con título h2, y suma todo lo que sigue hasta el próximo. La cabecera del caso y la ficha van
-     con el resumen. Se ve un apartado por vez; el índice y las flechas de abajo cambian cuál.
+     Se arman con lo que quedó en la página: cada apartado empieza en el resumen, una fase o un bloque con título
+     h2, y suma todo lo que sigue hasta el próximo. La portada y la ficha van con el resumen. Todos se leen en una
+     sola página (lectura continua); el índice marca el apartado que se está leyendo y lleva a cada uno.
      El enlace (#id) se actualiza sin sumar pasos al historial, así "atrás" sale del caso. */
   let apts = [];
-  let nextCase = null;
+  let built = false;
   const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'seccion';
   const pad = (n) => String(n).padStart(2, '0');
 
@@ -573,7 +582,6 @@
     });
     const head = (u) => {
       if (u.matches('.brief')) return { label: t('tocSummary'), kind: 'brief' };
-      if (u.matches('.live:not(.live--block)')) return { label: t('liveLinks'), kind: 'live' };
       if (u.matches('.phase')) return { label: u.dataset.toc || u.querySelector('.phase__h').textContent, kind: 'phase' };
       const h = [...u.querySelectorAll('h2.blk__h')].find((x) => !x.closest('[data-join]'));
       const own = h && h.closest('[data-toc]');
@@ -599,50 +607,57 @@
       while (used.has(id) || document.getElementById(id)) id = `${slugify(s.label)}-${n++}`;
       used.add(id);
       const el = document.createElement('div');
-      el.className = 'apt';
+      el.className = `apt${s.kind ? ` apt--${s.kind}` : ''}`;
       el.id = id;
-      el.hidden = true;
+      // Número del apartado en el separador (decorativo: el índice ya lo dice)
+      // En las fases no: ya traen su propia numeración ('01 | ...').
+      if (i && s.kind !== 'phase') el.dataset.n = `${pad(i + 1)} / ${pad(out.length)}`;
       s.nodes.forEach((x) => el.appendChild(x));
       scroll.appendChild(el);
       return { ...s, id, el, i };
     });
-    list.innerHTML = apts.map((x) => `<li class="toc__i${x.kind ? ` toc__i--${x.kind}` : ''}"><a href="#${esc(x.id)}" data-i="${x.i}"><span class="toc__n" aria-hidden="true">${x.kind === 'live' ? '<span class="live__dot"></span>' : pad(x.i + 1)}</span><span class="toc__t">${esc(x.label)}</span></a></li>`).join('');
+    list.innerHTML = apts.map((x) => `<li class="toc__i${x.kind ? ` toc__i--${x.kind}` : ''}"><a href="#${esc(x.id)}" data-i="${x.i}"><span class="toc__n" aria-hidden="true">${pad(x.i + 1)}</span><span class="toc__t">${esc(x.label)}</span></a></li>`).join('');
 
-    const fromHash = location.hash ? findApt(decodeURIComponent(location.hash.slice(1))) : null;
-    const start = fromHash ? fromHash.i : Math.min(state.apt || 0, apts.length - 1);
-    show(start, { focus: false, target: fromHash && fromHash.target });
+    state.cur = undefined;
+    // Primera carga con #apartado: se lleva ese punto a la vista. Al cambiar de idioma, la lectura queda donde estaba.
+    if (!built && location.hash) {
+      const hit = findApt(decodeURIComponent(location.hash.slice(1)));
+      if (hit) requestAnimationFrame(() => scrollInside(hit.target || apts[hit.i].el, false));
+    }
+    built = true;
+    spy();
   }
-  /* Al cargar, el navegador intenta llevar el ancla (#apartado) a la vista dentro del panel: se vuelve a dejar
-     el apartado desde arriba (o en el punto pedido, si el enlace apunta adentro de un apartado). */
   try { history.scrollRestoration = 'manual'; } catch { /* sin soporte */ }
+  // Las fuentes y las imágenes pueden mover el ancla: al terminar de cargar, se vuelve a ubicar.
   addEventListener('load', () => {
-    const scroll = mount.querySelector('.case__scroll');
-    if (!scroll) return;
     const hit = location.hash ? findApt(decodeURIComponent(location.hash.slice(1))) : null;
-    if (FLOW) window.scrollTo(0, 0); else toTop();
-    if (hit && hit.target) scrollInside(hit.target);
+    if (hit) scrollInside(hit.target || apts[hit.i].el, false);
+    spy();
   });
 
-  // Alto que tapan arriba el menú (y, en pantallas chicas, la barra del índice) en la vista completa.
+  // Alto que tapan arriba el menú (y, en pantallas chicas, la barra del índice).
   const topOffset = () => {
     const nav = document.querySelector('.nav');
     const bar = matchMedia('(max-width: 1023px)').matches ? mount.querySelector('.toc') : null;
     return (nav ? nav.getBoundingClientRect().height : 0) + (bar ? bar.getBoundingClientRect().height : 0) + 12;
   };
-  /* Lleva un elemento arriba de la vista sin mover nada más (scrollIntoView movería también otros contenedores).
-     Vista fija: dentro del panel. Vista completa: la página, debajo del menú. */
-  const scrollInside = (el) => {
-    const sc = mount.querySelector('.case__scroll');
-    if (!FLOW) { sc.scrollTop += el.getBoundingClientRect().top - sc.getBoundingClientRect().top - 16; return; }
-    window.scrollTo({ top: Math.max(0, scrollY + el.getBoundingClientRect().top - topOffset()), behavior: 'auto' });
-  };
-  // Al cambiar de apartado, se vuelve al principio del panel (en la vista completa, solo si ya se había bajado).
-  const toTop = () => {
-    const sc = mount.querySelector('.case__scroll');
-    if (!FLOW) { sc.scrollTop = 0; window.scrollTo(0, 0); return; }
-    const main = mount.querySelector('.case__main');
-    const top = main.getBoundingClientRect().top - topOffset();
-    if (top < 0) window.scrollTo({ top: Math.max(0, scrollY + top), behavior: 'auto' });
+  // Lleva un elemento arriba de la vista, debajo del menú (scrollIntoView movería también otros contenedores).
+  /* Con desplazamiento suave, al terminar se corrige el destino si algo cargó en el camino (imágenes, embebidos),
+     y mientras tanto el índice queda en el apartado elegido en vez de pasar por los intermedios. */
+  let spyLock = 0;
+  const scrollInside = (el, smooth = true) => {
+    const target = () => Math.max(0, scrollY + el.getBoundingClientRect().top - topOffset() - 8);
+    if (!smooth || reduce.matches) { window.scrollTo({ top: target(), behavior: 'instant' }); return; }
+    const lock = ++spyLock;
+    const done = () => {
+      if (lock !== spyLock) return;
+      if (Math.abs(target() - scrollY) > 4) window.scrollTo({ top: target(), behavior: 'instant' });
+      spyLock = 0;
+      queueSpy();
+    };
+    if ('onscrollend' in window) addEventListener('scrollend', done, { once: true });
+    setTimeout(done, 1500);
+    window.scrollTo({ top: target(), behavior: 'smooth' });
   };
   // Apartado que contiene un id (el propio apartado o algo de adentro, por ejemplo una fase).
   function findApt(id) {
@@ -653,60 +668,59 @@
     return x ? { i: x.i, target: el === apt ? null : el } : null;
   }
 
-  function show(i, { focus = true, target = null } = {}) {
-    if (!apts[i]) return;
-    const prev = state.apt;
-    state.apt = i;
-    stopJourneys();
+  function go(i, target) {
     const cur = apts[i];
-    apts.forEach((a) => { a.el.hidden = a !== cur; });
-    toTop();
-    if (target) scrollInside(target);
-    if (!reduce.matches && prev !== undefined && prev !== i) {
-      cur.el.classList.remove('is-in');
-      void cur.el.offsetWidth;
-      cur.el.classList.add('is-in');
-    }
+    if (!cur) return;
+    scrollInside(target || cur.el);
+    setCurrent(i);
+    const url = new URL(location.href);
+    url.hash = target ? target.id : cur.id;
+    history.replaceState(null, '', url);
+    // El foco pasa al título del apartado: el lector de pantalla anuncia dónde quedó.
+    const h = target || cur.el.querySelector('h1, h2') || cur.el;
+    if (!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1');
+    h.focus({ preventScroll: true });
+  }
 
-    // Índice: marca el apartado actual y, en el menú superior, muestra cuál es.
+  /* Seguimiento de la lectura: el apartado actual es el último cuyo comienzo ya pasó debajo del menú.
+     También calcula el progreso (0 a 1) del contenido del caso, para la barra del índice. */
+  function setCurrent(i) {
+    if (state.cur === i || !apts[i]) return;
+    state.cur = i;
     mount.querySelectorAll('.toc__list a').forEach((a) => {
       if (Number(a.dataset.i) === i) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
     });
     const toggle = mount.querySelector('.toc__toggle');
     toggle.querySelector('.toc__count').textContent = `${pad(i + 1)}/${pad(apts.length)}`;
-    toggle.querySelector('.toc__now').textContent = cur.label;
+    toggle.querySelector('.toc__now').textContent = apts[i].label;
     const on = mount.querySelector('.toc__list a[aria-current]');
     const list = on && on.closest('.toc__list');
-    if (list && list.scrollHeight > list.clientHeight) {
+    if (list && list.scrollHeight > list.clientHeight && getComputedStyle(list).display !== 'none') {
       const li = on.parentElement;
       if (li.offsetTop < list.scrollTop || li.offsetTop + li.offsetHeight > list.scrollTop + list.clientHeight) list.scrollTop = li.offsetTop - list.clientHeight / 2;
     }
-
-    // Flechas: anterior y siguiente; en el último apartado, la siguiente lleva al próximo caso.
-    const pPrev = mount.querySelector('.pager__btn--prev');
-    const pNext = mount.querySelector('.pager__btn--next');
-    const before = apts[i - 1];
-    const after = apts[i + 1];
-    pPrev.classList.toggle('is-off', !before);
-    if (before) { pPrev.href = `#${before.id}`; pPrev.removeAttribute('aria-hidden'); pPrev.removeAttribute('tabindex'); pPrev.querySelector('.pager__l').textContent = before.label; }
-    else { pPrev.removeAttribute('href'); pPrev.setAttribute('aria-hidden', 'true'); pPrev.setAttribute('tabindex', '-1'); pPrev.querySelector('.pager__l').textContent = ''; }
-    pNext.classList.toggle('is-case', !after);
-    pNext.href = after ? `#${after.id}` : nextCase.url;
-    pNext.querySelector('.pager__k').textContent = after ? t('aptNext') : t('nextCase');
-    pNext.querySelector('.pager__l').textContent = after ? after.label : nextCase.title;
-    mount.querySelector('.pager__count').innerHTML = `<span>${pad(i + 1)}</span> / ${pad(apts.length)}`;
-
-    const url = new URL(location.href);
-    url.hash = cur.id;
-    history.replaceState(null, '', url);
-
-    if (focus) {
-      // El foco pasa al título del apartado: el lector de pantalla anuncia dónde quedó.
-      const h = target || cur.el.querySelector('h1, h2') || cur.el;
-      if (!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1');
-      h.focus({ preventScroll: true });
-    }
   }
+  let spyRaf = 0;
+  function spy() {
+    spyRaf = 0;
+    if (!apts.length) return;
+    // Un apartado pasa a ser el actual cuando su comienzo llega al primer cuarto de la pantalla.
+    const off = topOffset() + Math.min(240, innerHeight * 0.25);
+    let k = 0;
+    apts.forEach((a, i) => { if (a.el.getBoundingClientRect().top - off <= 0) k = i; });
+    if (scrollY > 0 && innerHeight + scrollY >= document.documentElement.scrollHeight - 4) k = apts.length - 1;
+    if (!spyLock) setCurrent(k);
+    // Progreso: cuánto del contenido del caso ya pasó por debajo del menú.
+    const box = mount.querySelector('.case__scroll').getBoundingClientRect();
+    const span = box.height - innerHeight + off;
+    const pr = span <= 0 ? 1 : Math.min(1, Math.max(0, (off - box.top) / span));
+    mount.style.setProperty('--read', pr.toFixed(4));
+    const bar = mount.querySelector('.toc__prog');
+    if (bar) bar.setAttribute('aria-valuenow', String(Math.round(pr * 100)));
+  }
+  const queueSpy = () => { if (!spyRaf) spyRaf = requestAnimationFrame(spy); };
+  addEventListener('scroll', queueSpy, { passive: true });
+  addEventListener('resize', queueSpy);
 
   const tocOpen = (open) => {
     const toc = mount.querySelector('.toc');
@@ -719,30 +733,20 @@
 
   mount.addEventListener('click', (e) => {
     if (e.target.closest('.toc__toggle')) { tocOpen(!mount.querySelector('.toc').classList.contains('is-open')); return; }
-    const a = e.target.closest('a[href^="#"], .pager__btn');
+    const a = e.target.closest('a[href^="#"]');
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
-    if (a.classList.contains('pager__btn')) {
-      if (a.classList.contains('is-off')) { e.preventDefault(); return; }
-      if (a.classList.contains('is-case')) return; // próximo caso: navegación normal
-    }
     const hit = findApt(decodeURIComponent((a.getAttribute('href') || '').slice(1)));
     if (!hit) return;
     e.preventDefault();
     tocOpen(false);
-    show(hit.i, { target: hit.target });
+    go(hit.i, hit.target);
   });
   document.addEventListener('click', (e) => { const toc = mount.querySelector('.toc.is-open'); if (toc && !toc.contains(e.target)) tocOpen(false); });
   document.addEventListener('keydown', (e) => {
     const toc = mount.querySelector('.toc.is-open');
-    if (e.key === 'Escape' && toc) { tocOpen(false); toc.querySelector('.toc__toggle').focus(); return; }
-    // Flechas del teclado: cambian de apartado cuando el foco no está en un control ni en el visor.
-    if ((e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
-    if (viewer.open || e.target.closest('input, textarea, select, [contenteditable], iframe, .pic__scroll, .toc__list, .jx')) return;
-    if (!apts.length) return;
-    const k = state.apt + (e.key === 'ArrowRight' ? 1 : -1);
-    if (apts[k]) { e.preventDefault(); show(k); }
+    if (e.key === 'Escape' && toc) { tocOpen(false); toc.querySelector('.toc__toggle').focus(); }
   });
-  addEventListener('hashchange', () => { const hit = findApt(decodeURIComponent(location.hash.slice(1))); if (hit && hit.i !== state.apt) show(hit.i, { target: hit.target }); });
+  addEventListener('hashchange', () => { const hit = findApt(decodeURIComponent(location.hash.slice(1))); if (hit) go(hit.i, hit.target); });
   // Al pasar a escritorio, el menú desplegable deja de tener sentido: se cierra.
   matchMedia('(min-width: 1024px)').addEventListener('change', () => tocOpen(false));
 
