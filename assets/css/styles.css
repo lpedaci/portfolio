@@ -1217,80 +1217,80 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 @media (min-width: 768px) { .persona--round .persona__head { grid-template-columns: 112px minmax(0, 1fr); } }
 @media (min-width: 768px) { .persona__head { grid-template-columns: 240px minmax(0, 1fr); } .persona__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-/* Journey map paso a paso: la curva se dibuja hasta la etapa elegida y se ve una tarjeta por vez.
-   Las etapas bajas llevan el rojo de lo negativo (--neg), siempre con la emoción escrita. */
-.jx { display: grid; gap: 18px; }
-.jc { display: block; width: 100%; height: auto; overflow: visible; }
-.jc__base { stroke: var(--line); stroke-dasharray: 4 4; }
-.jc__seg { stroke: var(--c); stroke-width: 4; stroke-linecap: round; stroke-dasharray: 1 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.6s var(--ease); }
-.jc__seg.is-neg { stroke: var(--neg); }
-.jc__seg.is-on { stroke-dashoffset: 0; }
-.jc__pt { fill: var(--box, #fff); stroke: var(--line-2); stroke-width: 3.5; transform-box: fill-box; transform-origin: center; transition: fill 0.3s var(--ease), stroke 0.3s var(--ease), transform 0.3s var(--ease); }
-.jc__g.is-on .jc__pt { stroke: var(--c); }
-.jc__g.is-neg.is-on .jc__pt { stroke: var(--neg); }
-.jc__pt { transform: scale(var(--ps, 1)); }
-.jc__g.is-cur .jc__pt { fill: var(--c); transform: scale(calc(var(--ps, 1) * 1.3)); }
-/* En pantallas angostas la curva es chica: puntos y trazo más gruesos para que se lean */
-@media (max-width: 767px) { .jc { --ps: 1.6; } .jc__seg { stroke-width: 7; } .jc__pt { stroke-width: 5; } }
-.jc__g.is-neg.is-cur .jc__pt { fill: var(--neg); }
-
-.jx__tabs { display: grid; grid-template-columns: repeat(var(--n, 6), minmax(0, 1fr)); gap: 6px; }
-.jx__tab {
-  display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; min-height: 44px; padding: 10px 12px;
-  border: 1px solid var(--line); border-radius: 12px; background: var(--box, #fff); color: var(--text-2);
-  font: inherit; text-align: left; cursor: pointer; transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+/* Journey map estático. Celular y tablet: línea de tiempo vertical, con un medidor de emoción en cada etapa.
+   Escritorio (según el ancho del bloque): una columna por etapa, la curva de emoción arriba y las filas alineadas
+   entre columnas (subgrid). Las etapas bajas llevan el rojo de lo negativo (--neg), siempre con la emoción escrita. */
+.jm { container: jm / inline-size; }
+.jm__curve { display: none; }
+.jm__list { list-style: none; margin: 0; padding: 0; display: grid; }
+.jm__s { position: relative; display: grid; gap: 12px; padding: 0 0 28px 46px; }
+.jm__s::before { content: ""; position: absolute; left: 15px; top: 34px; bottom: 2px; width: 2px; border-radius: 2px; background: var(--line); }
+.jm__s:last-child { padding-bottom: 0; }
+.jm__s:last-child::before { display: none; }
+.jm__id { display: flex; align-items: center; min-height: 32px; }
+.jm__n {
+  position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%;
+  border: 2px solid var(--c); background: var(--box, var(--surface)); color: var(--c); font: 500 0.75rem/1 var(--f-mono);
 }
-.jx__tab:hover { border-color: color-mix(in srgb, var(--c) 50%, var(--line)); }
-.jx__tn { font: 400 0.75rem/1 var(--f-mono); color: var(--muted); }
-.jx__tl { font: 500 0.875rem/1.25 var(--f-display); overflow-wrap: break-word; hyphens: auto; }
-.jx__tab.is-past { background: var(--surface); }
-.jx__tab[aria-pressed="true"] { border-color: var(--c); background: color-mix(in srgb, var(--c) 8%, var(--box, #fff)); color: var(--text); }
-.jx__tab[aria-pressed="true"] .jx__tn { color: var(--c); }
-.jx__tab.is-neg[aria-pressed="true"] { border-color: var(--neg); background: color-mix(in srgb, var(--neg) 6%, var(--box, #fff)); }
-.jx__tab.is-neg[aria-pressed="true"] .jx__tn { color: var(--neg); }
-@media (max-width: 767px) {
-  .jx__tab { align-items: center; justify-content: center; padding: 0; }
-  .jx__tn { font-size: 0.8125rem; }
-  .jx__tl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.jm__s.is-pos .jm__n { background: var(--c); color: var(--on-accent); }
+.jm__s.is-neg .jm__n { border-color: var(--neg); color: var(--neg); }
+.jm__h { font: 600 1.125rem/1.3 var(--f-display); letter-spacing: -0.01em; text-wrap: balance; }
+.jm__emo { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 0.9375rem; line-height: 1.4; }
+.jm__meter {
+  position: relative; flex: none; width: 76px; height: 8px; margin-right: 4px; border-radius: 8px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--neg) 30%, var(--line)), var(--line) 50%, color-mix(in srgb, var(--c) 30%, var(--line)));
 }
+.jm__meter i {
+  position: absolute; top: 50%; left: var(--lv); width: 14px; height: 14px; border-radius: 50%; transform: translate(-50%, -50%);
+  background: var(--c); border: 2px solid var(--box, #fff); box-shadow: 0 0 0 1px var(--c);
+}
+.jm__s.is-neg .jm__meter i { background: var(--neg); box-shadow: 0 0 0 1px var(--neg); }
+.jm__k { font: 400 0.75rem/1.3 var(--f-mono); color: var(--muted); }
+.jm__ev { font-weight: 600; color: var(--text); }
+.jm__s.is-neg .jm__ev { color: var(--neg); }
+.jm__do, .jm__feel { padding: 14px 16px; border-radius: 12px; background: var(--surface); }
+.jm__k + p { margin-top: 4px; }
+.jm__do .jm__k + p { color: var(--text-2); line-height: 1.55; }
+.jm__feel .jm__k + p { font: 500 1rem/1.5 var(--f-display); color: var(--text); }
+.jm__s.is-neg .jm__feel { background: color-mix(in srgb, var(--neg) 6%, var(--surface)); }
 
-.jr { list-style: none; margin: 0; padding: 0; }
-.jr__s { display: grid; gap: 20px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-panel); }
-.jr__s[hidden] { display: none; }
-.jr__s.is-neg { background: color-mix(in srgb, var(--neg) 4%, var(--surface)); border-color: color-mix(in srgb, var(--neg) 22%, var(--line)); }
-.jr__id { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
-.jr__n { font: 500 0.75rem/1 var(--f-mono); color: var(--c); }
-.jr__s.is-neg .jr__n { color: var(--neg); }
-.jr__h { font: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem)/1.2 var(--f-display); letter-spacing: -0.015em; }
-.jr__emo { font-size: 0.875rem; padding: 4px 10px; border-radius: var(--r-pill); border: 1px solid var(--line); background: var(--box, #fff); color: var(--text); }
-.jr__emo span { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); }
-.jr__emo.is-neg { border-color: color-mix(in srgb, var(--neg) 50%, var(--line)); color: var(--neg); }
-.jr__emo.is-pos { border-color: color-mix(in srgb, var(--it) 50%, var(--line)); }
-.jr dl { display: grid; gap: 18px; }
-.jr dt { font: 400 0.75rem/1.3 var(--f-mono); color: var(--muted); margin-bottom: 6px; }
-.jr dd { color: var(--text-2); font-size: 1rem; line-height: 1.6; }
-.jr__feel dd { font: 500 clamp(1.0625rem, 1rem + 0.3vw, 1.25rem)/1.5 var(--f-display); color: var(--text); }
-@media (min-width: 768px) { .jr dl { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; } }
-@media (min-width: 1100px) { .jr__s { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); align-items: start; padding: 28px 32px; gap: 32px; } }
-@media (prefers-reduced-motion: no-preference) {
-  .jr__s.is-in { animation: jx-in 0.4s var(--ease) both; }
-  @keyframes jx-in { from { opacity: 0; transform: translateX(14px); } }
+/* Tablet: qué hace y qué piensa, lado a lado */
+@container jm (min-width: 540px) {
+  .jm__s { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jm__id, .jm__emo { grid-column: 1 / -1; }
 }
 
-.jx__ctrl { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; margin-top: 4px; }
-.jx__btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px;
-  border: 1px solid var(--line-2); border-radius: var(--r-pill); background: var(--box, #fff); color: var(--text);
-  font: 500 0.9375rem/1 var(--f-body); cursor: pointer; transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
+/* Escritorio: el mapa clásico. Las columnas no llevan espacio entre sí, así cada punto de la curva queda
+   centrado sobre su etapa. */
+@container jm (min-width: 860px) {
+  .jm__curve { display: block; position: relative; height: 112px; margin-bottom: 4px; }
+  .jc { position: absolute; inset: 0; display: block; width: 100%; height: 100%; overflow: visible; }
+  .jc__base { stroke: var(--line-2); stroke-width: 1; stroke-dasharray: 4 4; vector-effect: non-scaling-stroke; }
+  .jc__seg { stroke: var(--c); stroke-width: 3; stroke-linecap: round; }
+  .jc__seg.is-neg { stroke: var(--neg); }
+  .jc__dots { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); }
+  .jc__dot { position: relative; }
+  .jc__dot::after {
+    content: ""; position: absolute; left: 50%; top: var(--y); width: 18px; height: 18px; border-radius: 50%; transform: translate(-50%, -50%);
+    background: var(--c); border: 3px solid var(--box, #fff); box-shadow: 0 0 0 1.5px var(--c);
+  }
+  .jc__dot.is-neg::after { background: var(--neg); box-shadow: 0 0 0 1.5px var(--neg); }
+
+  .jm__list { grid-template-columns: repeat(var(--n), minmax(0, 1fr)); grid-template-rows: repeat(4, auto); }
+  .jm__s { grid-row: span 4; grid-template-rows: subgrid; grid-template-columns: none; gap: 10px; padding: 14px 10px; border-radius: 14px; }
+  .jm__s::before { display: none; }
+  .jm__s:last-child { padding-bottom: 14px; }
+  .jm__s.is-neg { background: color-mix(in srgb, var(--neg) 4%, transparent); }
+  .jm__id { flex-direction: column; align-items: flex-start; gap: 8px; min-height: 0; }
+  .jm__n { position: static; width: 28px; height: 28px; }
+  .jm__h { font-size: 1rem; }
+  .jm__emo { flex-direction: column; align-items: flex-start; gap: 2px; font-size: 0.875rem; }
+  .jm__meter { display: none; }
+  .jm__do, .jm__feel { padding: 12px; }
+  .jm__do .jm__k + p { font-size: 0.875rem; }
+  .jm__feel .jm__k + p { font-size: 0.9375rem; }
 }
-.jx__btn .ph { color: var(--c); }
-.jx__btn:hover:not(:disabled) { border-color: var(--c); }
-.jx__btn--icon { width: 44px; padding: 0; }
-.jx__btn--main { background: var(--c); border-color: var(--c); color: var(--on-accent); }
-.jx__btn--main .ph { color: inherit; }
-.jx__btn--main:hover:not(:disabled) { background: color-mix(in srgb, var(--c) 85%, #000); }
-.jx__btn:disabled { opacity: 0.4; cursor: default; }
-@media (max-width: 479px) { .jx__btn--main { flex: 1 1 auto; } }
+@media (forced-colors: active) { .jm__meter i, .jc__dot::after { forced-color-adjust: none; } }
 
 /* Actores y puntos de contacto separados de los controles del journey, para que no se lean como parte de la etapa */
 .jr__extra { margin-top: 32px; display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }

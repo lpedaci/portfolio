@@ -144,17 +144,17 @@
     </svg>`;
   }
 
-  /* Curva de emoción del journey: un tramo y un punto por etapa, para revelarla paso a paso (initJourneys).
-     Es decorativa: las etapas se leen en las tarjetas. */
+  /* Curva de emoción del journey (escritorio): un punto por etapa, centrado sobre su columna, unidos por tramos.
+     Los tramos y puntos bajos (nivel menor a 0) van en --neg. Es decorativa: la emoción también va escrita. */
   function journeyCurve(stages) {
-    // Cada etapa ocupa una columna de 200 unidades: los puntos quedan centrados sobre los botones de etapa de abajo.
     const W = stages.length * 200;
-    const pts = stages.map((s, i) => [100 + i * 200, 50 - s.level * 20]);
-    return `<svg class="jc" viewBox="0 0 ${W} 100" aria-hidden="true">
-      <line class="jc__base" x1="20" y1="50" x2="${W - 20}" y2="50"/>
-      ${pts.slice(1).map((p, i) => `<line class="jc__seg${stages[i + 1].level < 0 ? ' is-neg' : ''}" data-k="${i + 1}" x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${p[0]}" y2="${p[1]}" pathLength="1"/>`).join('')}
-      ${pts.map((p, i) => `<g class="jc__g${stages[i].level < 0 ? ' is-neg' : ''}" data-k="${i}"><circle class="jc__pt" cx="${p[0]}" cy="${p[1]}" r="9"/></g>`).join('')}
-    </svg>`;
+    const y = (lv) => 60 - lv * 22;
+    const pts = stages.map((s, i) => [100 + i * 200, y(s.level)]);
+    return `<svg class="jc" viewBox="0 0 ${W} 120" preserveAspectRatio="none" aria-hidden="true">
+      <line class="jc__base" x1="0" y1="60" x2="${W}" y2="60"/>
+      ${pts.slice(1).map((p, i) => `<line class="jc__seg${stages[i + 1].level < 0 || stages[i].level < 0 ? ' is-neg' : ''}" x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${p[0]}" y2="${p[1]}" vector-effect="non-scaling-stroke"/>`).join('')}
+    </svg>
+    <div class="jc__dots" aria-hidden="true">${stages.map((s) => `<span class="jc__dot${s.level < 0 ? ' is-neg' : ''}" style="--y:${(y(s.level) / 120 * 100).toFixed(2)}%"></span>`).join('')}</div>`;
   }
 
   let fontsLoaded = false;
@@ -261,19 +261,20 @@
           <div class="persona__col persona__col--goals">${hx(H + 2, 'persona__l', `<i class="ph ph-check-circle" aria-hidden="true"></i>${esc(L(b.goalsL))}`)}<ul>${L(b.goals).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
           <div class="persona__col persona__col--pains">${hx(H + 2, 'persona__l', `<i class="ph ph-x-circle" aria-hidden="true"></i>${esc(L(b.painsL))}`)}<ul>${L(b.pains).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
         </div></div>`, true),
-    /* Journey: la curva se dibuja de a una etapa. Se ve una tarjeta por vez y se recorre con los botones
-       (anterior, siguiente o reproducir) o eligiendo la etapa. Sin JS de interacción, igual se lee la primera. */
-    journey: (b) => blk(b, `<div class="jx" data-step="0" style="--n:${b.stages.length}">${journeyCurve(b.stages)}
-      <div class="jx__tabs" role="group" aria-label="${esc(t('jxStages'))}">${b.stages.map((s, i) => `<button type="button" class="jx__tab${s.level < 0 ? ' is-neg' : ''}" data-jx-go="${i}" aria-pressed="${i === 0}"><span class="jx__tn">${String(i + 1).padStart(2, '0')}</span><span class="jx__tl">${esc(L(s.name))}</span></button>`).join('')}</div>
-      <ol class="jr" aria-live="polite">${b.stages.map((s, i) => `
-      <li class="jr__s${s.level < 0 ? ' is-neg' : ''}"${i ? ' hidden' : ''}><div class="jr__id"><p class="jr__n">${String(i + 1).padStart(2, '0')} / ${String(b.stages.length).padStart(2, '0')}</p>${hx(H + 1, 'jr__h', esc(L(s.name)))}
-        <p class="jr__emo${s.level < 0 ? ' is-neg' : (s.level > 0 ? ' is-pos' : '')}"><span>${esc(L(b.labels.emotion))}:</span> ${esc(L(s.emo))}</p></div>
-        <dl><div><dt>${esc(L(b.labels.actions))}</dt><dd>${esc(L(s.actions))}</dd></div><div class="jr__feel"><dt>${esc(L(b.labels.feel))}</dt><dd>${esc(L(s.feel))}</dd></div></dl></li>`).join('')}</ol>
-      <div class="jx__ctrl">
-        <button type="button" class="jx__btn jx__btn--icon" data-jx="prev" aria-label="${esc(t('jxPrev'))}" disabled><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
-        <button type="button" class="jx__btn jx__btn--soft" data-jx="play"><i class="ph ph-play" aria-hidden="true"></i><span>${t('jxPlay')}</span></button>
-        <button type="button" class="jx__btn jx__btn--main" data-jx="next"><span>${t('jxNext')}</span><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
-      </div></div>
+    /* Journey map estático, sin animación. Escritorio: columnas por etapa con la curva de emoción arriba y las filas
+       (emoción, qué hace, qué piensa) alineadas entre columnas. Tablet y celular: una línea de tiempo vertical, con
+       un medidor de emoción en cada etapa en lugar de la curva. La emoción siempre va escrita. */
+    journey: (b) => blk(b, `<div class="jm" style="--n:${b.stages.length}">
+      <div class="jm__curve">${journeyCurve(b.stages)}</div>
+      <ol class="jm__list">${b.stages.map((s, i) => {
+        const tone = s.level < 0 ? ' is-neg' : (s.level > 0 ? ' is-pos' : '');
+        return `<li class="jm__s${tone}">
+        <div class="jm__id"><span class="jm__n">${pad(i + 1)}</span>${hx(H + 1, 'jm__h', esc(L(s.name)))}</div>
+        <p class="jm__emo"><span class="jm__meter" aria-hidden="true" style="--lv:${((Math.max(-2, Math.min(2, s.level)) + 2) / 4 * 100).toFixed(1)}%"><i></i></span><span class="jm__k">${esc(L(b.labels.emotion))}:</span> <span class="jm__ev">${esc(L(s.emo))}</span></p>
+        <div class="jm__do"><p class="jm__k">${esc(L(b.labels.actions))}</p><p>${esc(L(s.actions))}</p></div>
+        <div class="jm__feel"><p class="jm__k">${esc(L(b.labels.feel))}</p><p>${esc(L(s.feel))}</p></div>
+      </li>`;
+      }).join('')}</ol></div>
       <div class="jr__extra">
         <div>${hx(H + 1, 'jr__xh', esc(L(b.labels.actors)))}<ul class="chips">${L(b.actors).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
         <div>${hx(H + 1, 'jr__xh', esc(L(b.labels.touch)))}<ul class="chips">${L(b.touch).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
@@ -551,9 +552,7 @@
       </nav>
       </div></div>`;
     document.documentElement.classList.add('is-case-app', 'is-case-flow');
-    stopJourneys();
     buildSections();
-    initJourneys();
     initAnims();
   }
 
@@ -749,67 +748,6 @@
   addEventListener('hashchange', () => { const hit = findApt(decodeURIComponent(location.hash.slice(1))); if (hit) go(hit.i, hit.target); });
   // Al pasar a escritorio, el menú desplegable deja de tener sentido: se cierra.
   matchMedia('(min-width: 1024px)').addEventListener('change', () => tocOpen(false));
-
-  /* ---------- Journey paso a paso ----------
-     Cada paso marca la etapa, dibuja el tramo de la curva hasta ella y muestra su tarjeta.
-     Reproducir avanza solo cada pocos segundos y se frena al final, al tocar otro control o al cambiar de apartado. */
-  const jxTimers = new Map();
-  function stopJourneys() { jxTimers.forEach((id, root) => { clearInterval(id); setPlay(root, false); }); jxTimers.clear(); }
-  function setPlay(root, on) {
-    const b = root.querySelector('[data-jx="play"]');
-    if (!b) return;
-    b.querySelector('.ph').className = `ph ${on ? 'ph-pause' : 'ph-play'}`;
-    b.querySelector('span').textContent = t(on ? 'jxPause' : 'jxPlay');
-    b.setAttribute('aria-pressed', String(on));
-  }
-  function jxGo(root, k) {
-    const cards = [...root.querySelectorAll('.jr__s')];
-    const n = cards.length;
-    k = Math.max(0, Math.min(n - 1, k));
-    root.dataset.step = k;
-    cards.forEach((c, i) => {
-      const was = !c.hidden;
-      c.hidden = i !== k;
-      if (i === k && !was && !reduce.matches) { c.classList.remove('is-in'); void c.offsetWidth; c.classList.add('is-in'); }
-    });
-    root.querySelectorAll('.jx__tab').forEach((b, i) => { b.setAttribute('aria-pressed', String(i === k)); b.classList.toggle('is-past', i < k); });
-    root.querySelectorAll('.jc__seg').forEach((l) => l.classList.toggle('is-on', Number(l.dataset.k) <= k));
-    root.querySelectorAll('.jc__g').forEach((g) => { const i = Number(g.dataset.k); g.classList.toggle('is-on', i <= k); g.classList.toggle('is-cur', i === k); });
-    root.querySelector('[data-jx="prev"]').disabled = k === 0;
-    const next = root.querySelector('[data-jx="next"]');
-    next.querySelector('span').textContent = t(k === n - 1 ? 'jxRestart' : 'jxNext');
-    next.querySelector('.ph').className = `ph ${k === n - 1 ? 'ph-arrow-up' : 'ph-arrow-right'}`;
-    // Que la etapa elegida quede a la vista en la fila de etapas (celular)
-    const tab = root.querySelectorAll('.jx__tab')[k];
-    const tabs = tab && tab.parentElement;
-    if (tabs && tabs.scrollWidth > tabs.clientWidth) tabs.scrollTo({ left: tab.offsetLeft - tabs.clientWidth / 2 + tab.offsetWidth / 2, behavior: reduce.matches ? 'auto' : 'smooth' });
-  }
-  function initJourneys() { mount.querySelectorAll('.jx').forEach((root) => jxGo(root, 0)); }
-  mount.addEventListener('click', (e) => {
-    const root = e.target.closest('.jx');
-    if (!root) return;
-    const go = e.target.closest('[data-jx-go]');
-    const act = e.target.closest('[data-jx]');
-    if (!go && !act) return;
-    const k = Number(root.dataset.step);
-    const n = root.querySelectorAll('.jr__s').length;
-    if (act && act.dataset.jx === 'play') {
-      if (jxTimers.has(root)) { clearInterval(jxTimers.get(root)); jxTimers.delete(root); setPlay(root, false); return; }
-      if (k === n - 1) jxGo(root, 0);
-      setPlay(root, true);
-      jxTimers.set(root, setInterval(() => {
-        const cur = Number(root.dataset.step);
-        if (cur >= n - 1 || !root.isConnected) { clearInterval(jxTimers.get(root)); jxTimers.delete(root); setPlay(root, false); return; }
-        jxGo(root, cur + 1);
-        if (cur + 1 >= n - 1) { clearInterval(jxTimers.get(root)); jxTimers.delete(root); setPlay(root, false); }
-      }, 2600));
-      return;
-    }
-    if (jxTimers.has(root)) { clearInterval(jxTimers.get(root)); jxTimers.delete(root); setPlay(root, false); }
-    if (go) jxGo(root, Number(go.dataset.jxGo));
-    else if (act.dataset.jx === 'prev') jxGo(root, k - 1);
-    else jxGo(root, k === n - 1 ? 0 : k + 1);
-  });
 
   /* ---------- Animaciones HyperFrames ---------- */
   const anims = [];
