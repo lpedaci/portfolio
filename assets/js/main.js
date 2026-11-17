@@ -49,7 +49,8 @@
     const num = String(PROJECTS.indexOf(p) + 1).padStart(2, '0');
     // Etiquetas como chips, cada una con el color de su categoría y ordenadas IT, capacitación, contenido.
     // also: categorías adicionales del proyecto (por ejemplo IT que además fue capacitación).
-    const tags = [...p.tags[L].map((x) => [p.cat, x]), ...(p.also || []).map((c) => [c, p.alsoTags?.[c]?.[L] ?? t(CAT_KEY[c]).toLowerCase()])]
+    // alsoTags sin also: solo el chip con el color de esa categoría, sin sumarlo a su filtro.
+    const tags = [...p.tags[L].map((x) => [p.cat, x]), ...[...new Set([...(p.also || []), ...Object.keys(p.alsoTags || {})])].map((c) => [c, p.alsoTags?.[c]?.[L] ?? t(CAT_KEY[c]).toLowerCase()])]
       .sort((a, b) => CAT_ORDER.indexOf(a[0]) - CAT_ORDER.indexOf(b[0]))
       .map(([c, x]) => `<li style="--c: var(--${c})">${escape(x)}</li>`).join('');
     // Sin "+N" en la tarjeta: las etiquetas van en una sola línea y la lista completa está en el caso.

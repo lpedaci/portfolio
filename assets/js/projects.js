@@ -2,11 +2,13 @@
    cat: 'it' (turquesa), 'cap' (rosado, capacitación) o 'cont' (ámbar, creación de contenidos).
    also: categorías adicionales; el proyecto también aparece en esos filtros y suma un chip con el nombre de
    la categoría, o con el texto de alsoTags si lo tiene (por ejemplo { it: { es: 'ux/ui', en: 'ux/ui' } }).
+   alsoTags sin also: solo suma el chip con el color de esa categoría, sin que el proyecto aparezca en su filtro.
    badges: etiquetas extra junto a la categoría en el encabezado del caso (por ejemplo 'UX').
    dates: [inicio, fin] en 'AAAA-MM' (o 'AAAA' si no hay mes). De acá sale el año que se muestra
-   ('2024' o '2022-2024') y el orden de las cards, del más nuevo
-   al más antiguo: por fecha de fin y, si empatan, por fecha de inicio; sin mes, el inicio cuenta
-   como enero y el fin como diciembre. Con fechas iguales, vale el orden del array.
+   ('2024' o '2022-2024').
+   El orden del array es el orden de las cards: primero los destacados (Alcancía, Rumbo, proyectos
+   aplicados y auditorías UX/UI) y después del caso publicado más reciente al más antiguo.
+   Un caso nuevo va en el lugar que le toque según ese criterio, no al final.
    result: null si no hay un dato defendible.
    cover: imagen de la card (800x500, en assets/img/covers). video: true suma un botón de play sobre la portada.
    Sin cover, la card muestra una portada generada con el color de su categoría.
@@ -50,10 +52,39 @@ window.PROJECTS = [
     }
   },
   {
+    slug: 'proyectos-aplicados',
+    cover: 'assets/img/covers/proyectos-aplicados.jpg',
+    cat: 'it',
+    also: ['cap'],
+    dates: ['2024', '2026-11'],
+    tags: { es: ['product design', 'development'], en: ['product design', 'development'] },
+    title: { es: 'Programa de proyectos aplicados', en: 'Applied projects programme' },
+    desc: {
+      es: 'Coordinación de equipos con clientes reales, del relevamiento a la entrega.',
+      en: 'Coordinating teams with real clients, from requirements gathering to delivery.'
+    },
+    result: { es: '14-18 equipos por año', en: '14-18 teams per year' },
+    skills: { es: ['Relevamiento', 'Scrum', 'Gantt', 'GitHub'], en: ['Elicitation', 'Scrum', 'Gantt', 'GitHub'] }
+  },
+  {
+    slug: 'auditorias-ux',
+    cover: 'assets/img/covers/auditorias-ux.jpg',
+    cat: 'it',
+    dates: ['2026-03', '2026-11'],
+    tags: { es: ['ux/ui', 'auditoría'], en: ['ux/ui', 'audit'] },
+    badges: ['UX'],
+    title: { es: 'Auditorías UX/UI', en: 'UX/UI audits' },
+    desc: {
+      es: 'Evaluación heurística y de accesibilidad de los productos de cada equipo, en formato presencial y remoto.',
+      en: 'Heuristic and accessibility evaluation of each team’s product, in person and remotely.'
+    },
+    result: { es: 'Todos los equipos asesorados', en: 'Every team advised' },
+    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.1', 'Lighthouse', 'Claude'], en: ['Nielsen heuristics', 'WCAG 2.1', 'Lighthouse', 'Claude'] }
+  },
+  {
     slug: 'escape-room-finanzas',
     cover: 'assets/img/covers/escape-room-finanzas.jpg',
     cat: 'cap',
-    also: ['it'],
     alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
     badges: ['UX'],
     dates: ['2026-11', '2026-11'],
@@ -65,6 +96,21 @@ window.PROJECTS = [
     },
     result: { es: '5 salas en 3 versiones', en: '5 rooms in 3 versions' },
     skills: { es: ['Gamificación', 'Diseño instruccional', 'Design system', 'WCAG 2.2'], en: ['Gamification', 'Instructional design', 'Design system', 'WCAG 2.2'] }
+  },
+  {
+    slug: 'auditoria-estetica',
+    cover: 'assets/img/covers/auditoria-estetica.jpg',
+    cat: 'it',
+    dates: ['2026-11', '2026-11'],
+    tags: { es: ['ux/ui', 'auditoría'], en: ['ux/ui', 'audit'] },
+    badges: ['UX'],
+    title: { es: 'Auditoría UX/UI de un centro de estética', en: 'UX/UI audit of a facial aesthetics centre' },
+    desc: {
+      es: 'Auditoría heurística, de accesibilidad y de rendimiento de la landing de un centro de estética. Propuesta conceptual, no afiliada.',
+      en: 'Heuristic, accessibility and performance audit of a facial aesthetics centre’s landing page. A conceptual proposal, not affiliated.'
+    },
+    result: { es: '14 problemas priorizados', en: '14 prioritised problems' },
+    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Core Web Vitals'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Core Web Vitals'] }
   },
   {
     slug: 'servidor',
@@ -86,7 +132,6 @@ window.PROJECTS = [
     slug: 'primer-empleo',
     cover: 'assets/img/covers/primer-empleo.jpg',
     cat: 'cap',
-    also: ['it'],
     alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
     badges: ['UX'],
     dates: ['2026-10', '2026-11'],
@@ -98,97 +143,6 @@ window.PROJECTS = [
     },
     result: { es: '45 min de práctica, 65 con el simulacro', en: '45 min hands-on, 65 with the mock interview' },
     skills: { es: ['Doble Diamante', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'], en: ['Double Diamond', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'] }
-  },
-  {
-    slug: 'proyectos-aplicados',
-    cover: 'assets/img/covers/proyectos-aplicados.jpg',
-    cat: 'it',
-    also: ['cap'],
-    dates: ['2024', '2026'],
-    tags: { es: ['product design', 'development'], en: ['product design', 'development'] },
-    title: { es: 'Programa de proyectos aplicados', en: 'Applied projects programme' },
-    desc: {
-      es: 'Coordinación de equipos con clientes reales, del relevamiento a la entrega.',
-      en: 'Coordinating teams with real clients, from requirements gathering to delivery.'
-    },
-    result: { es: '14-18 equipos por año', en: '14-18 teams per year' },
-    skills: { es: ['Relevamiento', 'Scrum', 'Gantt', 'GitHub'], en: ['Elicitation', 'Scrum', 'Gantt', 'GitHub'] }
-  },
-  {
-    slug: 'riesgos-digitales',
-    cover: 'assets/img/covers/riesgos-digitales.jpg',
-    cat: 'it',
-    also: ['cont'],
-    dates: ['2024-07', '2024-11'],
-    tags: { es: ['ux', 'seguridad', 'investigación'], en: ['ux', 'security', 'research'] },
-    badges: ['UX'],
-    title: { es: 'Programa participativo de riesgos digitales', en: 'Participatory digital risk programme' },
-    desc: {
-      es: 'Intersafe: 2da temporada. Investigación con encuestas y entrevistas, y 11 equipos coordinados durante cinco meses.',
-      en: 'Intersafe: season 2. Research through surveys and interviews, with 11 teams coordinated over five months.'
-    },
-    result: { es: '1.741 participantes', en: '1,741 participants' },
-    skills: { es: ['Encuestas', 'Entrevistas', 'Gantt', 'Agile'], en: ['Surveys', 'Interviews', 'Gantt', 'Agile'] }
-  },
-  {
-    slug: 'infraestructura-it',
-    cover: 'assets/img/covers/infraestructura-it.jpg',
-    cat: 'it',
-    also: ['cap'],
-    dates: ['2022-07', '2024-12'],
-    tags: { es: ['sistemas', 'documentación'], en: ['systems', 'documentation'] },
-    title: { es: 'Estandarización de infraestructura IT', en: 'IT infrastructure standardisation' },
-    desc: {
-      es: 'Auditoría de hardware y software de los laboratorios, documentada para que otro equipo la sostenga.',
-      en: 'Hardware and software audit of the labs, documented so another team can run it.'
-    },
-    result: { es: 'SOP de 96 páginas', en: '96-page SOP' },
-    skills: { es: ['Windows 11', 'SOP', 'Benchmarking', 'Camtasia', 'Videotutoriales', 'Capacitación técnica', 'YouTube'], en: ['Windows 11', 'SOP', 'Benchmarking', 'Camtasia', 'Video tutorials', 'Technical training', 'YouTube'] }
-  },
-  {
-    slug: 'edulabs',
-    cover: 'assets/img/covers/edulabs.jpg',
-    cat: 'it',
-    dates: ['2024-01', '2024-03'],
-    tags: { es: ['ux/ui', 'accesibilidad'], en: ['ux/ui', 'accessibility'] },
-    badges: ['UX'],
-    title: { es: 'EduLabs', en: 'EduLabs' },
-    desc: {
-      es: 'Reinvención UX/UI de una plataforma de laboratorios remotos para hacer ciencia a distancia.',
-      en: 'A UX/UI reinvention of a remote-labs platform for doing science from anywhere.'
-    },
-    result: { es: 'Design system auditado en WCAG 2.1 AA', en: 'Design system audited against WCAG 2.1 AA' },
-    skills: { es: ['Doble Diamante', 'Design system', 'Figma', 'WCAG'], en: ['Double Diamond', 'Design system', 'Figma', 'WCAG'] }
-  },
-  {
-    slug: 'auditorias-ux',
-    cover: 'assets/img/covers/auditorias-ux.jpg',
-    cat: 'it',
-    dates: ['2026-03', '2026-11'],
-    tags: { es: ['ux/ui', 'auditoría'], en: ['ux/ui', 'audit'] },
-    badges: ['UX'],
-    title: { es: 'Auditorías UX/UI', en: 'UX/UI audits' },
-    desc: {
-      es: 'Evaluación heurística y de accesibilidad de los productos de cada equipo, en formato presencial y remoto.',
-      en: 'Heuristic and accessibility evaluation of each team’s product, in person and remotely.'
-    },
-    result: { es: 'Todos los equipos asesorados', en: 'Every team advised' },
-    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.1', 'Lighthouse', 'Claude'], en: ['Nielsen heuristics', 'WCAG 2.1', 'Lighthouse', 'Claude'] }
-  },
-  {
-    slug: 'auditoria-estetica',
-    cover: 'assets/img/covers/auditoria-estetica.jpg',
-    cat: 'it',
-    dates: ['2026-11', '2026-11'],
-    tags: { es: ['ux/ui', 'auditoría'], en: ['ux/ui', 'audit'] },
-    badges: ['UX'],
-    title: { es: 'Auditoría UX/UI de un centro de estética', en: 'UX/UI audit of a facial aesthetics centre' },
-    desc: {
-      es: 'Auditoría heurística, de accesibilidad y de rendimiento de la landing de un centro de estética. Propuesta conceptual, no afiliada.',
-      en: 'Heuristic, accessibility and performance audit of a facial aesthetics centre’s landing page. A conceptual proposal, not affiliated.'
-    },
-    result: { es: '14 problemas priorizados', en: '14 prioritised problems' },
-    skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.2', 'Core Web Vitals'], en: ['Nielsen heuristics', 'WCAG 2.2', 'Core Web Vitals'] }
   },
   {
     slug: 'auditoria-turnos',
@@ -220,20 +174,6 @@ window.PROJECTS = [
     skills: { es: ['HTML/CSS/JS', 'GitHub Pages', 'Práctica de recuperación'], en: ['HTML/CSS/JS', 'GitHub Pages', 'Retrieval practice'] }
   },
   {
-    slug: 'tedxtecno',
-    cover: 'assets/img/covers/tedxtecno.jpg',
-    cat: 'cap',
-    dates: ['2022-08', '2022-11'],
-    tags: { es: ['oratoria', 'currículum'], en: ['public speaking', 'curriculum'] },
-    title: { es: 'TEDxTECNO', en: 'TEDxTECNO' },
-    desc: {
-      es: 'Programa de aula para que estudiantes técnicos expliquen temas de informática en charlas.',
-      en: 'A classroom programme for technical students to explain computing topics in talks.'
-    },
-    result: null,
-    skills: { es: ['Storytelling', 'Diseño curricular', 'Coaching'], en: ['Storytelling', 'Curriculum design', 'Coaching'] }
-  },
-  {
     slug: 'docente-era-digital',
     cover: 'assets/img/covers/docente-era-digital.jpg',
     video: true,
@@ -247,6 +187,21 @@ window.PROJECTS = [
     },
     result: null,
     skills: { es: ['Motion graphics', 'Guion', 'IA generativa'], en: ['Motion graphics', 'Script', 'GenAI'] }
+  },
+  {
+    slug: 'infraestructura-it',
+    cover: 'assets/img/covers/infraestructura-it.jpg',
+    cat: 'it',
+    also: ['cap'],
+    dates: ['2022-07', '2024-12'],
+    tags: { es: ['sistemas', 'documentación'], en: ['systems', 'documentation'] },
+    title: { es: 'Estandarización de infraestructura IT', en: 'IT infrastructure standardisation' },
+    desc: {
+      es: 'Auditoría de hardware y software de los laboratorios, documentada para que otro equipo la sostenga.',
+      en: 'Hardware and software audit of the labs, documented so another team can run it.'
+    },
+    result: { es: 'SOP de 96 páginas', en: '96-page SOP' },
+    skills: { es: ['Windows 11', 'SOP', 'Benchmarking', 'Camtasia', 'Videotutoriales', 'Capacitación técnica', 'YouTube'], en: ['Windows 11', 'SOP', 'Benchmarking', 'Camtasia', 'Video tutorials', 'Technical training', 'YouTube'] }
   },
   {
     slug: 'expo-smart-cities',
@@ -264,6 +219,22 @@ window.PROJECTS = [
     skills: { es: ['After Effects', 'Premiere', 'IA generativa'], en: ['After Effects', 'Premiere', 'GenAI'] }
   },
   {
+    slug: 'riesgos-digitales',
+    cover: 'assets/img/covers/riesgos-digitales.jpg',
+    cat: 'it',
+    also: ['cont'],
+    dates: ['2024-07', '2024-11'],
+    tags: { es: ['ux', 'seguridad', 'investigación'], en: ['ux', 'security', 'research'] },
+    badges: ['UX'],
+    title: { es: 'Programa participativo de riesgos digitales', en: 'Participatory digital risk programme' },
+    desc: {
+      es: 'Intersafe: 2da temporada. Investigación con encuestas y entrevistas, y 11 equipos coordinados durante cinco meses.',
+      en: 'Intersafe: season 2. Research through surveys and interviews, with 11 teams coordinated over five months.'
+    },
+    result: { es: '1.741 participantes', en: '1,741 participants' },
+    skills: { es: ['Encuestas', 'Entrevistas', 'Gantt', 'Agile'], en: ['Surveys', 'Interviews', 'Gantt', 'Agile'] }
+  },
+  {
     slug: 'the-crow',
     cover: 'assets/img/covers/the-crow.jpg',
     video: true,
@@ -277,6 +248,35 @@ window.PROJECTS = [
     },
     result: null,
     skills: { es: ['Runway ML', 'Adobe Firefly', 'Suno AI'], en: ['Runway ML', 'Adobe Firefly', 'Suno AI'] }
+  },
+  {
+    slug: 'edulabs',
+    cover: 'assets/img/covers/edulabs.jpg',
+    cat: 'it',
+    dates: ['2024-01', '2024-03'],
+    tags: { es: ['ux/ui', 'accesibilidad'], en: ['ux/ui', 'accessibility'] },
+    badges: ['UX'],
+    title: { es: 'EduLabs', en: 'EduLabs' },
+    desc: {
+      es: 'Reinvención UX/UI de una plataforma de laboratorios remotos para hacer ciencia a distancia.',
+      en: 'A UX/UI reinvention of a remote-labs platform for doing science from anywhere.'
+    },
+    result: { es: 'Design system auditado en WCAG 2.1 AA', en: 'Design system audited against WCAG 2.1 AA' },
+    skills: { es: ['Doble Diamante', 'Design system', 'Figma', 'WCAG'], en: ['Double Diamond', 'Design system', 'Figma', 'WCAG'] }
+  },
+  {
+    slug: 'tedxtecno',
+    cover: 'assets/img/covers/tedxtecno.jpg',
+    cat: 'cap',
+    dates: ['2022-08', '2022-11'],
+    tags: { es: ['oratoria', 'currículum'], en: ['public speaking', 'curriculum'] },
+    title: { es: 'TEDxTECNO', en: 'TEDxTECNO' },
+    desc: {
+      es: 'Programa de aula para que estudiantes técnicos expliquen temas de informática en charlas.',
+      en: 'A classroom programme for technical students to explain computing topics in talks.'
+    },
+    result: null,
+    skills: { es: ['Storytelling', 'Diseño curricular', 'Coaching'], en: ['Storytelling', 'Curriculum design', 'Coaching'] }
   },
   {
     slug: 'erp-motion-graphics',
@@ -296,10 +296,8 @@ window.PROJECTS = [
 ];
 
 {
-  const ym = (d, month) => { const [y, m] = d.split('-').map(Number); return y * 12 + (m || month); };
   window.PROJECTS.forEach((p) => {
     const [a, b] = p.dates.map((d) => d.slice(0, 4));
     p.year = a === b ? a : `${a}-${b}`;
   });
-  window.PROJECTS.sort((a, b) => ym(b.dates[1], 12) - ym(a.dates[1], 12) || ym(b.dates[0], 1) - ym(a.dates[0], 1));
 }
