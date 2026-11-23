@@ -47,7 +47,7 @@ window.PROJECTS = [
     },
     result: { es: '40 pantallas, 4 roles, WCAG 2.2 AA', en: '40 screens, 4 roles, WCAG 2.2 AA' },
     skills: {
-      es: ['Diseño instruccional', 'Arquitectura de la información', 'Sistema de diseño', 'WCAG 2.2', 'Análisis funcional'],
+      es: ['Diseño instruccional', 'Arquitectura de información', 'Sistema de diseño', 'WCAG 2.2', 'Análisis funcional'],
       en: ['Instructional design', 'Information architecture', 'Design system', 'WCAG 2.2', 'Functional analysis']
     }
   },
@@ -95,7 +95,7 @@ window.PROJECTS = [
       en: 'A five-room web game to practise payslips, budgeting, credit cards, inflation and scams, with content by Kevin Giampieri (Lic.) and a character who reacts to every attempt.'
     },
     result: { es: '5 salas en 3 versiones', en: '5 rooms in 3 versions' },
-    skills: { es: ['Gamificación', 'Diseño instruccional', 'Design system', 'WCAG 2.2'], en: ['Gamification', 'Instructional design', 'Design system', 'WCAG 2.2'] }
+    skills: { es: ['Gamificación', 'Diseño instruccional', 'Sistema de diseño', 'WCAG 2.2'], en: ['Gamification', 'Instructional design', 'Design system', 'WCAG 2.2'] }
   },
   /* El aula que incluye y sus tres piezas (videos, podcast y asistente): publicados juntos en el portfolio,
      van seguidos para que "Siguiente caso" recorra el proyecto: el espacio digital y después cada pieza. */
@@ -194,14 +194,14 @@ window.PROJECTS = [
     also: ['cap'],
     badges: ['UX'],
     dates: ['2026-10', '2026-10'],
-    tags: { es: ['ux/ui', 'design system'], en: ['ux/ui', 'design system'] },
+    tags: { es: ['ux/ui', 'sistema de diseño'], en: ['ux/ui', 'design system'] },
     title: { es: 'Repositorio web de recursos para autocapacitarse: análisis y diseño UX/UI', en: 'Self-learning resource hub: UX/UI analysis and design' },
     desc: {
       es: 'El servidor de Lourdes: cursos y materiales que vivían en Notion, rediseñados como un sitio con exploradores, búsqueda e inventario.',
       en: "Lourdes's server (El servidor de Lourdes): courses and materials that lived in Notion, redesigned as a site with explorers, search and an inventory."
     },
     result: { es: '160 cursos y 158 recursos filtrables', en: '160 courses and 158 resources to filter' },
-    skills: { es: ['Arquitectura de información', 'Design system', 'WCAG 2.1', 'Astro'], en: ['Information architecture', 'Design system', 'WCAG 2.1', 'Astro'] }
+    skills: { es: ['Arquitectura de información', 'Sistema de diseño', 'WCAG 2.1', 'Astro'], en: ['Information architecture', 'Design system', 'WCAG 2.1', 'Astro'] }
   },
   {
     slug: 'primer-empleo',
@@ -217,7 +217,7 @@ window.PROJECTS = [
       en: 'A first-job workshop turned into an eleven-stop web journey with four special sections: ATS-ready CVs, LinkedIn, interviews with people and AI, payslips and personal finance.'
     },
     result: { es: '45 min de práctica, 65 con el simulacro', en: '45 min hands-on, 65 with the mock interview' },
-    skills: { es: ['Doble Diamante', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'], en: ['Double Diamond', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'] }
+    skills: { es: ['Doble Diamante', 'Sistema de diseño', 'WCAG 2.2', 'HTML/CSS/JS'], en: ['Double Diamond', 'Design system', 'WCAG 2.2', 'HTML/CSS/JS'] }
   },
   {
     slug: 'auditoria-turnos',
@@ -322,7 +322,7 @@ window.PROJECTS = [
       en: 'An animated short inspired by The Raven, made with generative tools.'
     },
     result: null,
-    skills: { es: ['Runway ML', 'Adobe Firefly', 'Suno AI'], en: ['Runway ML', 'Adobe Firefly', 'Suno AI'] }
+    skills: { es: ['Runway ML', 'Adobe Firefly', 'Suno'], en: ['Runway ML', 'Adobe Firefly', 'Suno'] }
   },
   {
     slug: 'edulabs',
@@ -336,8 +336,8 @@ window.PROJECTS = [
       es: 'Reinvención UX/UI de una plataforma de laboratorios remotos para hacer ciencia a distancia.',
       en: 'A UX/UI reinvention of a remote-labs platform for doing science from anywhere.'
     },
-    result: { es: 'Design system auditado en WCAG 2.1 AA', en: 'Design system audited against WCAG 2.1 AA' },
-    skills: { es: ['Doble Diamante', 'Design system', 'Figma', 'WCAG'], en: ['Double Diamond', 'Design system', 'Figma', 'WCAG'] }
+    result: { es: 'Sistema de diseño auditado en WCAG 2.1 AA', en: 'Design system audited against WCAG 2.1 AA' },
+    skills: { es: ['Doble Diamante', 'Sistema de diseño', 'Figma', 'WCAG'], en: ['Double Diamond', 'Design system', 'Figma', 'WCAG'] }
   },
   {
     slug: 'tedxtecno',

@@ -231,16 +231,18 @@
   /* ---------- Habilidades ---------- */
   function renderSkills() {
     skillsGrid.innerHTML = t('skills').map((g, i) => `
-      <li class="skill" data-cat="${g.cat}"${g.tone ? ` data-tone="${g.tone}"` : ''} style="--i:${i}">
+      <li class="skill${g.items.length >= 10 ? ' skill--wide' : ''}" data-cat="${g.cat}"${g.tone ? ` data-tone="${g.tone}"` : ''} style="--i:${i}">
         <h4>${escape(g.name)}</h4>
-        <ul class="chips">${g.items.map((x, k) => `<li style="--k:${k}">${escape(x)}</li>`).join('')}</ul>
+        <ul class="chips">${g.items.map((x, k) => `<li style="--k:${k}" data-g="${g.concepts !== undefined && k >= g.concepts ? 1 : 0}">${escape(x)}</li>`).join('')}</ul>
       </li>`).join('');
     skillsGrid.querySelectorAll('.chips').forEach((ul) => { packChips(ul); chipsObserver?.observe(ul); });
   }
 
   /* Chips de habilidades sin huecos: respetan su orden y, cuando el siguiente no entra en la fila,
      se trae uno posterior que sí entre (relleno hacia atrás). Solo cambia el orden visual (CSS order);
-     las filas después se estiran para completar el ancho. Se recalcula cuando cambia el ancho. */
+     las filas después se estiran para completar el ancho. Se recalcula cuando cambia el ancho.
+     Cada caja va de lo conceptual a lo instrumental (data-g: 0 conceptos, 1 herramientas): un chip solo se
+     adelanta dentro de su grupo, así ninguna herramienta pasa delante de un concepto. */
   function packChips(ul) {
     const items = [...ul.children];
     ul.classList.add('is-measuring');
@@ -248,6 +250,7 @@
     const gap = parseFloat(getComputedStyle(ul).columnGap) || 0;
     const w = items.map((li) => li.getBoundingClientRect().width);
     ul.classList.remove('is-measuring');
+    const grp = items.map((li) => Number(li.dataset.g || 0));
     const left = items.map((_, i) => i);
     let order = 0;
     while (left.length) {
@@ -255,7 +258,9 @@
       for (let k = 0; k < left.length;) {
         const i = left[k];
         const need = (used ? gap : 0) + w[i];
-        if (used === 0 || used + need <= width + 0.5) {
+        // Solo entra si no queda sin ubicar ningún chip de un grupo anterior
+        const allowed = grp[i] <= Math.min(...left.map((j) => grp[j]));
+        if (allowed && (used === 0 || used + need <= width + 0.5)) {
           items[i].style.order = order++;
           used += need;
           left.splice(k, 1);

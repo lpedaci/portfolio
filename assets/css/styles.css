@@ -518,14 +518,15 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 /* Habilidades: cierre del recorrido. El color de cada grupo sigue el código del sitio */
 .skills { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--line); }
 .skills__title { font: 600 clamp(1.375rem, 1.15rem + 0.8vw, 1.75rem)/1.2 var(--f-display); letter-spacing: -0.015em; margin: 0 0 24px; }
-/* Mosaico: cada tarjeta mide lo que su contenido y la siguiente se apila debajo (sin huecos verticales).
-   Las columnas se recalculan solas con el ancho. */
-.skills__grid { columns: 1; column-gap: 12px; }
+/* Bento: las cajas con mucho contenido (skill--wide, 10 chips o más) ocupan dos columnas, así sus chips
+   respiran en lugar de apilarse en una caja angosta y alta. Las cajas de una fila comparten alto y el
+   llenado denso evita huecos: en escritorio, las cuatro livianas arriba y las anchas de a dos debajo. */
+.skills__grid { display: grid; grid-template-columns: minmax(0, 1fr); grid-auto-flow: row dense; gap: 12px; }
 /* Cada tarjeta lleva un velo del color de su categoría, una línea de color arriba y una aura en la esquina
    que se acerca al pasar el cursor */
 .skill {
   --c: var(--it); --cb: var(--it-bright);
-  position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 14px; padding: 22px 20px 20px; margin-bottom: 12px; break-inside: avoid;
+  position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 14px; padding: 22px 20px 20px;
   background: linear-gradient(180deg, color-mix(in srgb, var(--cb) 13%, var(--surface)), var(--surface) 75%);
   border: 1px solid color-mix(in srgb, var(--cb) 30%, var(--line)); border-radius: 16px;
   transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), border-color 0.3s;
@@ -542,9 +543,8 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .skill .chips li:hover { background: color-mix(in srgb, var(--cb) 18%, var(--surface)); border-color: var(--cb); }
 .skill h4 { position: relative; display: flex; align-items: center; gap: 8px; }
 .skill h4::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cb); box-shadow: 0 0 0 4px color-mix(in srgb, var(--cb) 22%, transparent); }
-/* Chips: cada fila se estira hasta completar el ancho; la última queda natural (el relleno final absorbe el sobrante) */
+/* Chips: todas las filas se estiran hasta completar el ancho, también la última, así ningún chip queda corto y suelto */
 .skill .chips li { flex-grow: 1; text-align: center; }
-.skill .chips::after { content: ""; flex-grow: 999; order: 9999; }
 .skill .chips.is-measuring li { flex-grow: 0; }
 .skill[data-cat="cap"] { --c: var(--cap); --cb: var(--cap-bright); }
 .skill[data-cat="cont"] { --c: var(--cont); --cb: var(--cont-bright); }
@@ -552,8 +552,8 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .skill[data-tone="ux"] { --c: var(--ux); --cb: var(--ux-bright); }
 .skill[data-tone="pm"] { --c: var(--pm); --cb: var(--pm-bright); }
 .skill h4 { margin: 0; font: 500 0.8125rem/1.3 var(--f-mono); color: var(--c); }
-@media (min-width: 640px) { .skills__grid { columns: 2; } }
-@media (min-width: 1100px) { .skills__grid { columns: 4; } }
+@media (min-width: 640px) { .skills__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .skill--wide { grid-column: span 2; } }
+@media (min-width: 1100px) { .skills__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: no-preference) {
   .skills__grid .skill { transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); transition-delay: calc(var(--i) * 60ms); }
   .skills__grid.is-pending .skill { opacity: 0; transform: translateY(10px); }

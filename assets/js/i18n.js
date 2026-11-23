@@ -64,14 +64,14 @@ window.I18N = {
     ],
     skillsTitle: 'Habilidades',
     skills: [
-      { cat: 'it', name: 'Análisis funcional', items: ['Relevamiento de requisitos', 'Historias de usuario', 'Criterios de aceptación', 'Documentación funcional', 'KPIs', 'Testing funcional'] },
-      { cat: 'it', tone: 'pm', name: 'Gestión de proyectos', items: ['Agile', 'Scrum', 'Kanban', 'Notion', 'Slack', 'Google Workspace', 'Microsoft Office'] },
-      { cat: 'it', tone: 'data', name: 'Datos y analítica', items: ['SQL', 'MySQL Workbench', 'Power BI', 'Excel', 'Google Sheets', 'Google Apps Script'] },
-      { cat: 'it', tone: 'ux', name: 'UX/UI', items: ['Wireframing', 'Prototipado', 'Testeo de usabilidad', 'Investigación con usuarios', 'Design systems', 'Accesibilidad (WCAG)', 'Design Thinking', 'Doble Diamante', 'Figma'] },
-      { cat: 'it', name: 'Web', items: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'GitHub Pages'] },
-      { cat: 'it', name: 'Inteligencia artificial', items: ['Prompt engineering', 'Claude', 'ChatGPT', 'Gemini', 'NotebookLM', 'Copilot', 'Contenido asistido por IA', 'Diseño de chatbots', 'ElevenLabs', 'Suno'] },
-      { cat: 'cap', name: 'Capacitación y contenido', items: ['Articulate 360', 'Storyline', 'Rise', 'iSpring', 'Moodle', 'MS Teams', 'Genially', 'Canva', 'PowerPoint', 'LinkedIn Learning'] },
-      { cat: 'cont', name: 'Video y medios', items: ['Camtasia', 'CapCut', 'Adobe Premiere', 'vMix', 'Edición y subtitulado', 'YouTube', 'Contenido para redes'] }
+      { cat: 'it', name: 'Análisis funcional', concepts: 7, items: ['Relevamiento de requisitos', 'Historias de usuario', 'Criterios de aceptación', 'Documentación funcional', 'KPIs', 'Testing funcional', 'MoSCoW'] },
+      { cat: 'it', tone: 'pm', name: 'Gestión de proyectos', concepts: 3, items: ['Agile', 'Scrum', 'Kanban', 'Notion', 'Slack', 'Google Workspace'] },
+      { cat: 'it', name: 'Web', concepts: 4, items: ['HTML', 'CSS', 'JavaScript', 'JSON', 'Astro', 'GitHub', 'GitHub Pages', 'PageSpeed Insights'] },
+      { cat: 'it', tone: 'data', name: 'Datos y analítica', concepts: 1, items: ['SQL', 'MySQL Workbench', 'Power BI', 'Excel', 'Google Sheets', 'Google Apps Script'] },
+      { cat: 'it', tone: 'ux', name: 'UX/UI', concepts: 11, items: ['Design Thinking', 'Doble Diamante', 'Investigación con usuarios', 'Benchmarking', 'Arquitectura de información', 'Wireframing', 'Prototipado', 'Sistema de diseño', 'Testeo de usabilidad', 'Heurísticas de Nielsen', 'Accesibilidad (WCAG)', 'Figma', 'Lighthouse', 'axe-core'] },
+      { cat: 'it', name: 'Inteligencia artificial', concepts: 4, items: ['Prompt engineering', 'Diseño conversacional', 'Guion con IA', 'Producción audiovisual con IA', 'Claude', 'Claude Code', 'ChatGPT', 'Gemini', 'Copilot', 'NotebookLM', 'ElevenLabs', 'Suno', 'Veo y Flow', 'Runway ML', 'Adobe Firefly'] },
+      { cat: 'cap', name: 'Capacitación y contenido', concepts: 5, items: ['Diseño instruccional', 'DUA', 'Diseño curricular', 'Gamificación', 'Storytelling', 'Articulate 360', 'Storyline', 'Rise', 'iSpring', 'Moodle', 'MS Teams', 'Genially', 'Canva', 'PowerPoint'] },
+      { cat: 'cont', name: 'Video y medios', concepts: 4, items: ['Motion graphics', 'Producción de podcast', 'Edición, subtitulado y audiodescripción', 'Contenido para redes', 'Camtasia', 'Adobe Premiere', 'After Effects', 'CapCut', 'PowToon', 'vMix', 'YouTube'] }
     ],
 
     contactTitle: '¿Te interesa mi perfil? Hablemos',
@@ -166,14 +166,14 @@ window.I18N = {
     ],
     skillsTitle: 'Skills',
     skills: [
-      { cat: 'it', name: 'Functional analysis', items: ['Requirements gathering', 'User stories', 'Acceptance criteria', 'Functional documentation', 'KPIs', 'Functional testing'] },
-      { cat: 'it', tone: 'pm', name: 'Project management', items: ['Agile', 'Scrum', 'Kanban', 'Notion', 'Slack', 'Google Workspace', 'Microsoft Office'] },
-      { cat: 'it', tone: 'data', name: 'Data and analytics', items: ['SQL', 'MySQL Workbench', 'Power BI', 'Excel', 'Google Sheets', 'Google Apps Script'] },
-      { cat: 'it', tone: 'ux', name: 'UX/UI', items: ['Wireframing', 'Prototyping', 'Usability testing', 'User research', 'Design systems', 'Accessibility (WCAG)', 'Design Thinking', 'Double Diamond', 'Figma'] },
-      { cat: 'it', name: 'Web', items: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'GitHub Pages'] },
-      { cat: 'it', name: 'Artificial intelligence', items: ['Prompt engineering', 'Claude', 'ChatGPT', 'Gemini', 'NotebookLM', 'Copilot', 'AI-assisted content', 'Chatbot design', 'ElevenLabs', 'Suno'] },
-      { cat: 'cap', name: 'Training and content', items: ['Articulate 360', 'Storyline', 'Rise', 'iSpring', 'Moodle', 'MS Teams', 'Genially', 'Canva', 'PowerPoint', 'LinkedIn Learning'] },
-      { cat: 'cont', name: 'Video and media', items: ['Camtasia', 'CapCut', 'Adobe Premiere', 'vMix', 'Video editing and subtitling', 'YouTube', 'Social media content'] }
+      { cat: 'it', name: 'Functional analysis', concepts: 7, items: ['Requirements gathering', 'User stories', 'Acceptance criteria', 'Functional documentation', 'KPIs', 'Functional testing', 'MoSCoW'] },
+      { cat: 'it', tone: 'pm', name: 'Project management', concepts: 3, items: ['Agile', 'Scrum', 'Kanban', 'Notion', 'Slack', 'Google Workspace'] },
+      { cat: 'it', name: 'Web', concepts: 4, items: ['HTML', 'CSS', 'JavaScript', 'JSON', 'Astro', 'GitHub', 'GitHub Pages', 'PageSpeed Insights'] },
+      { cat: 'it', tone: 'data', name: 'Data and analytics', concepts: 1, items: ['SQL', 'MySQL Workbench', 'Power BI', 'Excel', 'Google Sheets', 'Google Apps Script'] },
+      { cat: 'it', tone: 'ux', name: 'UX/UI', concepts: 11, items: ['Design Thinking', 'Double Diamond', 'User research', 'Benchmarking', 'Information architecture', 'Wireframing', 'Prototyping', 'Design system', 'Usability testing', 'Nielsen heuristics', 'Accessibility (WCAG)', 'Figma', 'Lighthouse', 'axe-core'] },
+      { cat: 'it', name: 'Artificial intelligence', concepts: 4, items: ['Prompt engineering', 'Conversation design', 'AI-assisted scriptwriting', 'AI video production', 'Claude', 'Claude Code', 'ChatGPT', 'Gemini', 'Copilot', 'NotebookLM', 'ElevenLabs', 'Suno', 'Veo and Flow', 'Runway ML', 'Adobe Firefly'] },
+      { cat: 'cap', name: 'Training and content', concepts: 5, items: ['Instructional design', 'UDL', 'Curriculum design', 'Gamification', 'Storytelling', 'Articulate 360', 'Storyline', 'Rise', 'iSpring', 'Moodle', 'MS Teams', 'Genially', 'Canva', 'PowerPoint'] },
+      { cat: 'cont', name: 'Video and media', concepts: 4, items: ['Motion graphics', 'Podcast production', 'Editing, subtitling and audio description', 'Social media content', 'Camtasia', 'Adobe Premiere', 'After Effects', 'CapCut', 'PowToon', 'vMix', 'YouTube'] }
     ],
 
     contactTitle: 'Interested in my profile? Let’s talk',
