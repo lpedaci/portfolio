@@ -4438,7 +4438,7 @@ window.CASES = {
        "es": "Software de control de entrada y salida de personal.",
        "en": "Staff clock-in and clock-out software."
       },
-      "url": "http://tadin.com.ar/"
+      "url": "https://cataquintana11.github.io/landing-page/"
      },
      {
       "title": {
@@ -4466,15 +4466,15 @@ window.CASES = {
      },
      {
       "title": {
-       "es": "Personal trainers",
-       "en": "Personal trainers"
+       "es": "Gimnasio",
+       "en": "Gym"
       },
       "tag": null,
       "body": {
        "es": "Seguimiento de clases, usuarios y pago de clases.",
        "en": "Class, user and payment tracking."
       },
-      "url": "https://juanjoybeto.github.io/training-point-landing/"
+      "url": "https://juanjoybeto.github.io/Pulso-landing/"
      },
      {
       "title": {

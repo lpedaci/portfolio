@@ -68,7 +68,7 @@ window.PROJECTS = [
   },
   {
     slug: 'auditorias-ux',
-    cover: 'assets/img/covers/auditorias-ux.jpg',
+    cover: 'assets/img/covers/auditorias-ux.webp',
     cat: 'it',
     dates: ['2026-03', '2026-11'],
     tags: { es: ['ux/ui', 'auditoría'], en: ['ux/ui', 'audit'] },
