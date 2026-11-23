@@ -949,19 +949,23 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .blk__note { margin-top: 10px; color: var(--muted); }
 .blk__body > p + p { margin-top: 16px; }
 .prose p { color: var(--text-2); font-size: 1.0625rem; line-height: 1.75; }
-.blk--outcome { background: color-mix(in srgb, var(--c) 6%, var(--surface)); }
+.blk--outcome > .blk__body { background: color-mix(in srgb, var(--c) 6%, var(--surface)); }
 .blk--outcome .blk__body p { font-size: 1.125rem; line-height: 1.65; }
 .blk--outcome .blk__h { color: var(--c); }
-/* Bloques de texto: un panel blanco con el título adentro y el texto a todo el ancho del panel.
-   Dos paneles seguidos comparten la fila (.pair); los bloques anchos llevan el título arriba
-   y su contenido (tarjetas, galerías, tablas) directo sobre el fondo, sin tarjeta dentro de tarjeta. */
-.blk--panel { align-content: start; padding: 28px; background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); border-radius: var(--r-panel); box-shadow: var(--shadow-card); }
-@media (max-width: 599px) { .blk--panel { padding: 22px 20px; } }
+/* Bloques de texto: el título (y la nota) van afuera, sobre el fondo, como en los bloques anchos; el contenido
+   va en un panel a todo su ancho (.blk__body). Dos paneles seguidos comparten la fila (.pair), con los paneles
+   alineados aunque los títulos ocupen distinto alto; los bloques anchos llevan su contenido (tarjetas, galerías,
+   tablas) directo sobre el fondo, sin tarjeta dentro de tarjeta. */
+.blk--panel > .blk__body { align-content: start; padding: 28px; background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); border-radius: var(--r-panel); box-shadow: var(--shadow-card); }
+@media (max-width: 599px) { .blk--panel > .blk__body { padding: 22px 20px; } }
 .pair { margin-top: 72px; display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
 .pair > .blk { margin-top: 0; }
 .pair + .pair { margin-top: 20px; }
 .phase + .pair { margin-top: 48px; }
-@media (min-width: 1000px) { .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) {
+  .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pair > .blk--panel { grid-row: span 2; grid-template-rows: subgrid; row-gap: 16px; }
+}
 /* Prosa larga en un panel de fila entera: dos columnas de lectura en pantallas anchas */
 @media (min-width: 1100px) {
   .blk--panel.prose:not(.pair > *) .blk__body:has(p + p) { columns: 2; column-gap: 56px; }

@@ -36,7 +36,8 @@
     const h = b.h ? hx(H, 'blk__h', esc(L(b.h))) : '';
     const n = b.note ? `<p class="blk__note">${esc(L(b.note))}</p>` : '';
     const headless = !h && !n;
-    // Los bloques de texto van en un panel; los anchos ya traen sus propias tarjetas, figuras o tablas.
+    // Título y nota siempre afuera, sobre el fondo. Los bloques de texto llevan su contenido en un panel
+    // (.blk--panel > .blk__body); los anchos ya traen sus propias tarjetas, figuras o tablas.
     return `<section class="blk${wide || headless ? ' blk--wide' : ' blk--panel'}${extra}${b.hl ? ' blk--outcome' : ''}">${headless ? '' : `<div class="blk__head">${h}${n}</div>`}<div class="blk__body">${body}</div></section>`;
   }
 
