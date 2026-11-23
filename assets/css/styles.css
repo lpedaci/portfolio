@@ -1369,7 +1369,7 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   border: 2px solid var(--c); background: var(--box, #fff); color: var(--c); font: 500 0.75rem/1 var(--f-mono); font-variant-numeric: tabular-nums;
 }
 .tf__s:last-child .tf__n { background: var(--c); color: var(--on-accent); }
-.tf__t { font: 600 0.9375rem/1.35 var(--f-display); color: var(--text); text-wrap: balance; }
+.tf__t { font: 400 0.9375rem/1.4 var(--f-body); color: var(--text); text-wrap: balance; }
 @media (min-width: 1100px) {
   .tf { --node: 40px; display: grid; grid-template-columns: repeat(var(--n, 6), minmax(0, 1fr)); gap: 0 8px; padding-top: 4px; }
   .tf__s { position: relative; grid-template-columns: minmax(0, 1fr); justify-items: center; row-gap: 14px; padding: 0 2px; text-align: center; align-items: start; background: none; border: 0; border-radius: 0; }
@@ -1720,7 +1720,7 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 
 /* Ranking de episodios */
 .ranked { display: grid; border-top: 1px solid var(--line); }
-.ranked li { display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--line); font: 600 1.0625rem/1.4 var(--f-display); }
+.ranked li { display: flex; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--line); font: 400 1.0625rem/1.5 var(--f-body); }
 .ranked__n { flex: none; width: 2ch; font: 500 0.875rem/1 var(--f-mono); color: var(--c); }
 
 @media (prefers-reduced-motion: reduce) {

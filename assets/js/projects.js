@@ -122,7 +122,7 @@ window.PROJECTS = [
     result: { es: '5 salas en 3 versiones', en: '5 rooms in 3 versions' },
     skills: { es: ['Gamificación', 'Diseño instruccional', 'Sistema de diseño', 'WCAG 2.2'], en: ['Gamification', 'Instructional design', 'Design system', 'WCAG 2.2'] }
   },
-  /* El aula que incluye y sus tres piezas (videos, podcast y asistente): publicados juntos en el portfolio,
+  /* El aula que incluye y sus cuatro piezas (animación, podcast, documental y asistente): publicados juntos en el portfolio,
      van seguidos para que "Siguiente caso" recorra el proyecto: el espacio digital y después cada pieza. */
   {
     slug: 'el-aula-que-incluye',
@@ -144,21 +144,21 @@ window.PROJECTS = [
     }
   },
   {
-    slug: 'videos-ia-generativa',
-    cover: 'assets/img/covers/videos-ia-generativa.webp',
+    slug: 'animacion-los-monstruos-de-berni',
+    cover: 'assets/img/covers/animacion-los-monstruos-de-berni.webp',
     video: true,
     cat: 'cont',
-    dates: ['2026-08', '2026-09'],
-    tags: { es: ['animación', 'documental'], en: ['animation', 'documentary'] },
-    title: { es: 'Animación y documental con IA generativa', en: 'An animation and a documentary made with generative AI' },
+    dates: ['2026-08', '2026-08'],
+    tags: { es: ['animación', 'ia generativa'], en: ['animation', 'generative ai'] },
+    title: { es: 'Los monstruos de Berni: una animación con IA para la inclusión en la primera infancia', en: 'Berni’s monsters: an AI animation for inclusion in early childhood' },
     desc: {
-      es: 'Un corto sin diálogos para mirar en la sala y un documental para docentes y familias, producidos por escenas con IA, rotulados y con alternativas accesibles.',
-      en: 'A dialogue-free short to watch in the classroom and a documentary for teachers and families, produced scene by scene with AI, labelled and with accessible alternatives.'
+      es: 'Un corto sin diálogos para mirar en la sala: Berni acompaña a un compañero que necesita calmarse, con un personaje sostenido entre escenas y audiodescripción en texto.',
+      en: 'A dialogue-free short to watch in the classroom: Berni supports a classmate who needs to calm down, with a character kept consistent across scenes and a text audio description.'
     },
-    result: { es: '2 videos, 3:22 en total', en: '2 videos, 3:22 in total' },
+    result: { es: '1:18 sin diálogos, 9 escenas audiodescriptas', en: '1:18 with no dialogue, 9 audio-described scenes' },
     skills: {
-      es: ['Producción audiovisual con IA', 'Veo y Flow', 'ElevenLabs', 'Suno', 'Camtasia'],
-      en: ['AI video production', 'Veo and Flow', 'ElevenLabs', 'Suno', 'Camtasia']
+      es: ['Producción audiovisual con IA', 'Diseño de personaje con IA', 'Veo', 'Suno', 'Camtasia'],
+      en: ['AI video production', 'AI character design', 'Veo', 'Suno', 'Camtasia']
     }
   },
   {
@@ -176,6 +176,24 @@ window.PROJECTS = [
     skills: {
       es: ['Guion con IA', 'Claude', 'ElevenLabs', 'Suno', 'Camtasia'],
       en: ['AI-assisted scriptwriting', 'Claude', 'ElevenLabs', 'Suno', 'Camtasia']
+    }
+  },
+  {
+    slug: 'documental-adaptar-para-incluir',
+    cover: 'assets/img/covers/documental-adaptar-para-incluir.webp',
+    video: true,
+    cat: 'cont',
+    dates: ['2026-09', '2026-09'],
+    tags: { es: ['documental', 'ia generativa'], en: ['documentary', 'generative ai'] },
+    title: { es: 'Adaptar para incluir: un documental producido con IA generativa', en: 'Adapt to include: a documentary produced with generative AI' },
+    desc: {
+      es: 'Un documental para docentes y familias sobre qué permite la IA en una sala inclusiva y qué condiciones hacen falta, sin rostros de niños, con subtítulos y transcripción.',
+      en: 'A documentary for teachers and families on what AI makes possible in an inclusive classroom and what it needs, with no children’s faces, captions and a transcript.'
+    },
+    result: { es: '2:04, con subtítulos y transcripción', en: '2:04, with captions and a transcript' },
+    skills: {
+      es: ['Producción audiovisual con IA', 'Guion con IA', 'Veo y Flow', 'ElevenLabs', 'Camtasia'],
+      en: ['AI video production', 'AI-assisted scriptwriting', 'Veo and Flow', 'ElevenLabs', 'Camtasia']
     }
   },
   {

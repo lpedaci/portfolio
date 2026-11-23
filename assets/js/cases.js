@@ -18388,7 +18388,7 @@ window.CASES = {
        "es": "Un corto sin diálogos que modela cómo acompañar a un compañero que necesita calma, con audiodescripción en texto.",
        "en": "A dialogue-free short that models how to support a classmate who needs calm, with a text audio description."
       },
-      "case": "videos-ia-generativa"
+      "case": "animacion-los-monstruos-de-berni"
      },
      {
       "title": {
@@ -18418,7 +18418,7 @@ window.CASES = {
        "es": "Para docentes y familias: adaptaciones curriculares accesibles con IA y el lugar de la docente que decide. Con subtítulos.",
        "en": "For teachers and families: accessible curriculum adaptations with AI and the role of the teacher who decides. With captions."
       },
-      "case": "videos-ia-generativa"
+      "case": "documental-adaptar-para-incluir"
      },
      {
       "title": {
@@ -19832,71 +19832,71 @@ window.CASES = {
    "en": "Team 03: Clara Argüello, Silvia Costas and Lourdes Pedaci (academic authorship of every resource). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz; teaching assistants: Federico Centurión, Marcela Trotta, Miriam Cañamas, Carolina Armella, Raúl Cracco, Verónica Ruggero and Alfredo Esquivel. AI use statement: Claude and Claude Code (Anthropic) were used as support for coding the site, organising and reviewing the writing; the multimedia resources were produced with the tools declared for each one. The concept, the pedagogical decisions, the experience design and the validation of all content belong to Team 03. Screenshots are from the published site."
   }
  },
- "videos-ia-generativa": {
+ "animacion-los-monstruos-de-berni": {
   "cat": "cont",
   "touch": "cap",
   "title": {
-   "es": "Animación y documental con IA generativa",
-   "en": "An animation and a documentary made with generative AI"
+   "es": "Los monstruos de Berni: una animación con IA para la inclusión en la primera infancia",
+   "en": "Berni’s monsters: an AI animation for inclusion in early childhood"
   },
   "subtitle": {
-   "es": "Dos videos para el mismo proyecto de sala: un corto sin diálogos para mirar en grupo antes de la actividad y un documental breve para docentes y familias.",
-   "en": "Two videos for the same class project: a dialogue-free short to watch as a group before the activity and a brief documentary for teachers and families."
+   "es": "Una animación narrativa de 1:18, sin diálogos, que muestra en la sala, antes de que pase, cómo acompañar a un compañero que necesita calmarse.",
+   "en": "A 1:18 dialogue-free narrative animation that shows the class, before it happens, how to support a classmate who needs to calm down."
   },
   "chips": {
    "es": [
     "Animación",
-    "Documental",
     "IA generativa",
+    "Diseño de personaje",
     "Accesibilidad"
    ],
    "en": [
     "Animation",
-    "Documentary",
     "Generative AI",
+    "Character design",
     "Accessibility"
    ]
   },
   "summary": {
    "problem": {
-    "es": "Una sala de 5 años necesita anticipar lo que va a pasar sin depender de la palabra, y las docentes y las familias necesitan entender qué aporta la IA sin un texto académico de por medio.",
-    "en": "A class of 5-year-olds needs to anticipate what will happen without relying on words, and teachers and families need to understand what AI brings without an academic text in between."
+    "es": "Una sala de 5 años necesita anticipar una situación sin depender de la palabra: el Estudiante A, un caso ficticio, todavía no lee y se satura con el ruido, y el resto del grupo no sabe cómo acompañarlo.",
+    "en": "A class of 5-year-olds needs to anticipate a situation without relying on words: Student A, a fictional case, cannot read yet and is overwhelmed by noise, and the rest of the group does not know how to support them."
    },
    "solution": {
-    "es": "Produje los dos videos con IA generativa por escenas, con un personaje propio que se sostiene entre planos, revisión humana de cada clip, rotulado de origen y alternativas accesibles.",
-    "en": "I produced both videos with generative AI scene by scene, with our own character held consistent across shots, human review of every clip, origin labelling and accessible alternatives."
+    "es": "Produje un corto sin diálogos con un personaje propio, Berni, que sostuve entre escenas con una imagen de referencia; generé cada escena por separado, revisé cada clip antes de usarlo y escribí la audiodescripción escena por escena.",
+    "en": "I produced a dialogue-free short with an original character, Berni, kept consistent across scenes with a reference image; I generated each scene separately, reviewed every clip before using it and wrote the audio description scene by scene."
    },
    "results": [
     {
      "v": "1:18",
      "l": {
-      "es": "de animación sin diálogos, con audiodescripción en texto",
-      "en": "of dialogue-free animation, with a text audio description"
+      "es": "de animación sin diálogos, para mirar en grupo",
+      "en": "of dialogue-free animation, to watch as a group"
      }
     },
     {
-     "v": "2:04",
+     "v": "9",
      "l": {
-      "es": "de documental con voz en off, subtítulos y transcripción",
-      "en": "of documentary with voice-over, captions and transcript"
+      "es": "escenas con audiodescripción en texto",
+      "en": "scenes with a text audio description"
      }
     },
     {
      "t": {
-      "es": "Los dos están etiquetados en YouTube como hechos con IA, y los clips de Veo llevan la marca SynthID.",
-      "en": "Both are labelled on YouTube as made with AI, and the Veo clips carry the SynthID watermark."
+      "es": "Está etiquetada en YouTube como hecha con IA, y los clips de Veo llevan la marca SynthID.",
+      "en": "It is labelled on YouTube as made with AI, and the Veo clips carry the SynthID watermark."
      }
     }
    ]
   },
   "facts": {
    "role": {
-    "es": "Learning Experience Designer: guion, generación de escenas con IA, música, voz y montaje",
-    "en": "Learning Experience Designer: script, AI scene generation, music, voice and editing"
+    "es": "Learning Experience Designer: diseño del personaje, generación de escenas con IA, música y montaje",
+    "en": "Learning Experience Designer: character design, AI scene generation, music and editing"
    },
    "timeline": {
-    "es": "Agosto a septiembre 2026 (publicados el 27/8 y el 24/9)",
-    "en": "August to September 2026 (published on 27 August and 24 September)"
+    "es": "Agosto 2026 (publicada el 27/8)",
+    "en": "August 2026 (published on 27 August)"
    },
    "context": {
     "es": "Gestión de recursos digitales con IA generativa, Licenciatura en Tecnología Educativa, UTN FRBA. Trabajo del Equipo 03: Clara Argüello, Silvia Costas y Lourdes Pedaci",
@@ -19906,10 +19906,7 @@ window.CASES = {
     "ChatGPT (GPT-5)",
     "Canva",
     "Veo 3.1 Fast",
-    "Flow",
-    "ElevenLabs",
     "Suno",
-    "Claude",
     "Camtasia",
     "YouTube"
    ],
@@ -19940,23 +19937,19 @@ window.CASES = {
    },
    {
     "label": {
-     "es": "Ver el documental en YouTube",
-     "en": "Watch the documentary on YouTube"
+     "es": "Ver la página del recurso (en vivo)",
+     "en": "See the resource page (live)"
     },
-    "url": "https://youtu.be/qJ5nEvhGr4I"
+    "url": "https://lpedaci.github.io/iag-tif/recursos/animacion.html"
    }
   ],
   "blocks": [
    {
     "t": "cards",
-    "cols": 1,
+    "cols": 2,
     "h": {
      "es": "Parte del proyecto El aula que incluye",
      "en": "Part of the El aula que incluye project"
-    },
-    "caseCta": {
-     "es": "Ver el caso del espacio digital completo",
-     "en": "See the case for the full digital space"
     },
     "items": [
      {
@@ -19964,30 +19957,71 @@ window.CASES = {
        "es": "El aula que incluye: IA generativa para la inclusión en el nivel inicial",
        "en": "The inclusive classroom: generative AI for inclusion in early childhood education"
       },
-      "body": {
-       "es": "Los dos videos son los recursos de las unidades 3 y 5 del espacio digital, que cuenta un mismo proyecto de sala en cinco formatos.",
-       "en": "Both videos are the Unit 3 and Unit 5 resources of the digital space that tells one class project in five formats."
+      "case": "el-aula-que-incluye",
+      "caseCta": {
+       "es": "Ver el caso del espacio digital completo",
+       "en": "See the case for the full digital space"
       },
-      "case": "el-aula-que-incluye"
+      "body": {
+       "es": "La animación es el recurso de la Unidad 3 del espacio digital, que cuenta un mismo proyecto de sala en cinco formatos.",
+       "en": "The animation is the Unit 3 resource of the digital space that tells one class project in five formats."
+      }
+     },
+     {
+      "title": {
+       "es": "Adaptar para incluir: un documental producido con IA generativa",
+       "en": "Adapt to include: a documentary produced with generative AI"
+      },
+      "body": {
+       "es": "El otro video del proyecto, el de la Unidad 5: un documental de 2:04 para docentes y familias.",
+       "en": "The project’s other video, for Unit 5: a 2:04 documentary for teachers and families."
+      },
+      "case": "documental-adaptar-para-incluir",
+      "caseCta": {
+       "es": "Ver el caso del documental",
+       "en": "See the documentary case"
+      }
      }
     ]
    },
    {
-    "t": "phase",
-    "n": "01",
-    "id": "animacion",
-    "mode": {
-     "es": "animación · unidad 3",
-     "en": "animation · unit 3"
+    "t": "kv",
+    "h": {
+     "es": "Para qué y para quién",
+     "en": "What for and for whom"
     },
-    "name": {
-     "es": "Los monstruos de Berni",
-     "en": "Berni’s monsters"
-    },
-    "q": {
-     "es": "¿Cómo se anticipa una situación de la sala a quien todavía no lee y se satura con el ruido?",
-     "en": "How do you anticipate a classroom situation for someone who cannot read yet and is overwhelmed by noise?"
-    }
+    "items": [
+     {
+      "k": {
+       "es": "Qué es",
+       "en": "What it is"
+      },
+      "v": {
+       "es": "Una animación narrativa de 1:18, sin diálogos, que recrea una escena de inclusión en la sala.",
+       "en": "A 1:18 dialogue-free narrative animation that recreates an inclusion scene in the classroom."
+      }
+     },
+     {
+      "k": {
+       "es": "Para qué",
+       "en": "What for"
+      },
+      "v": {
+       "es": "Mostrar, antes de que pase, cómo acompañar a un compañero que necesita calmarse.",
+       "en": "To show, before it happens, how to support a classmate who needs to calm down."
+      }
+     },
+     {
+      "k": {
+       "es": "Para quién",
+       "en": "For whom"
+      },
+      "v": {
+       "es": "Directo, el Estudiante A (caso ficticio). Ampliado, toda la sala.",
+       "en": "Directly, Student A (a fictional case). More broadly, the whole class."
+      }
+     }
+    ]
    },
    {
     "t": "prose",
@@ -20005,17 +20039,42 @@ window.CASES = {
    {
     "t": "taskflow",
     "h": {
+     "es": "La historia, escena por escena",
+     "en": "The story, scene by scene"
+    },
+    "steps": {
+     "es": [
+      "Berni, un monstruo azul, saluda en la sala",
+      "Se acerca a un compañero que está encogido y triste",
+      "El compañero se tapa los oídos por el ruido",
+      "Berni lo acompaña a un rincón de calma",
+      "Ya tranquilo, lo invita a sumarse a la ronda",
+      "Todo el grupo juega junto"
+     ],
+     "en": [
+      "Berni, a blue monster, waves in the classroom",
+      "Berni approaches a classmate who is hunched and sad",
+      "The classmate covers their ears because of the noise",
+      "Berni takes them to a calm corner",
+      "Once calm, Berni invites them to join the circle",
+      "The whole group plays together"
+     ]
+    }
+   },
+   {
+    "t": "taskflow",
+    "h": {
      "es": "Pipeline de producción",
      "en": "Production pipeline"
     },
     "steps": {
      "es": [
       "Personaje de referencia con ChatGPT (GPT-5)",
-      "Escena de apertura con Canva Contenido Mágico",
+      "Escena de apertura con Contenido Mágico de Canva",
       "Escenas por separado con Veo 3.1 Fast, de imagen a video",
       "Revisión de cada clip",
       "Música con Suno",
-      "Montaje y créditos en Camtasia",
+      "Montaje, audio y créditos en Camtasia",
       "Audiodescripción escrita escena por escena"
      ],
      "en": [
@@ -20024,7 +20083,7 @@ window.CASES = {
       "Separate scenes with Veo 3.1 Fast, image to video",
       "Review of every clip",
       "Music with Suno",
-      "Editing and credits in Camtasia",
+      "Editing, audio and credits in Camtasia",
       "Scene-by-scene written audio description"
      ]
     }
@@ -20069,6 +20128,101 @@ window.CASES = {
     ]
    },
    {
+    "t": "callout",
+    "h": {
+     "es": "Problema y solución: una figura que nadie pidió",
+     "en": "Problem and solution: a figure nobody asked for"
+    },
+    "body": {
+     "es": "En las primeras versiones de la escena 2, el modelo agregaba **una figura humana infantil que no se había pedido**. La corregí describiendo al nuevo personaje con rasgos claros de monstruo, diferenciándolo por el color, aclarando que no había seres humanos y partiendo de la imagen de referencia. Desde ahí, **revisé cada clip antes de usarlo**.",
+     "en": "In the first versions of scene 2, the model kept adding **a child-like human figure nobody had asked for**. I fixed it by describing the new character with clear monster features, setting it apart by colour, stating there were no humans and starting from the reference image. From then on, **I reviewed every clip before using it**."
+    }
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "h": {
+     "es": "Iteración del personaje",
+     "en": "Character iteration"
+    },
+    "note": {
+     "es": "Antes de llegar a la versión final hubo otras iteraciones. Esta es la comparación entre una previa y la que fijó el Paso 0.",
+     "en": "There were other iterations before the final version. This compares an earlier one with the one fixed in Step 0."
+    },
+    "cols": {
+     "dim": {
+      "es": "Aspecto",
+      "en": "Aspect"
+     },
+     "before": {
+      "es": "Iteración previa",
+      "en": "Earlier iteration"
+     },
+     "after": {
+      "es": "Versión final",
+      "en": "Final version"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Paleta",
+       "en": "Palette"
+      },
+      "before": {
+       "es": "Lavanda y menta pastel, de baja saturación",
+       "en": "Pastel lavender and mint, low saturation"
+      },
+      "after": {
+       "es": "**Pelaje azul con destellos blancos** como estrellitas",
+       "en": "**Blue fur with white sparkles** like little stars"
+      }
+     },
+     {
+      "dim": {
+       "es": "Cuerpo",
+       "en": "Body"
+      },
+      "before": {
+       "es": "Redondeado, textura suave tipo peluche",
+       "en": "Rounded, soft plush texture"
+      },
+      "after": {
+       "es": "Peludo y regordete, con manitas y pies con garritas oscuras",
+       "en": "Furry and chubby, with little hands and feet with dark claws"
+      }
+     },
+     {
+      "dim": {
+       "es": "Rostro",
+       "en": "Face"
+      },
+      "before": {
+       "es": "Ojos grandes y expresivos, sonrisa cálida",
+       "en": "Large expressive eyes, warm smile"
+      },
+      "after": {
+       "es": "Ojos grandes y celestes, mejillas sonrojadas, sonrisa amplia",
+       "en": "Large light-blue eyes, rosy cheeks, a wide smile"
+      }
+     },
+     {
+      "dim": {
+       "es": "Prompt negativo",
+       "en": "Negative prompt"
+      },
+      "before": {
+       "es": "Sin dientes afilados, colores estridentes, texto, elementos de miedo ni rasgos humanos realistas",
+       "en": "No sharp teeth, garish colours, text, scary elements or realistic human features"
+      },
+      "after": {
+       "es": "Sin dientes afilados, gesto agresivo, colores estridentes, texto ni rasgos humanos realistas",
+       "en": "No sharp teeth, aggressive expression, garish colours, text or realistic human features"
+      }
+     }
+    ]
+   },
+   {
     "t": "quote",
     "h": {
      "es": "Fragmento del prompt del personaje",
@@ -20080,21 +20234,41 @@ window.CASES = {
     },
     "p": [
      {
-      "es": "Paso 0 del trabajo práctico de la Unidad 3. El prompt completo y una iteración anterior, con otra paleta, están en la página del recurso.",
-      "en": "Step 0 of the Unit 3 assignment (quoted in Spanish in the original). The full prompt and an earlier iteration, with another palette, are on the resource page."
+      "es": "Paso 0 del trabajo práctico de la Unidad 3. El prompt completo, con su prompt negativo, y la iteración anterior están en la página del recurso.",
+      "en": "Step 0 of the Unit 3 assignment (quoted in Spanish in the original). The full prompt, with its negative prompt, and the earlier iteration are on the resource page."
      }
     ]
    },
    {
-    "t": "callout",
+    "t": "gallery",
+    "single": true,
+    "compact": true,
     "h": {
-     "es": "Problema y solución: una figura que nadie pidió",
-     "en": "Problem and solution: a figure nobody asked for"
+     "es": "Berni, la imagen de referencia",
+     "en": "Berni, the reference image"
     },
-    "body": {
-     "es": "En las primeras versiones de la escena 2, el modelo agregó **una figura humana infantil que no se había pedido**. La corregí describiendo al nuevo personaje con rasgos claros de monstruo, diferenciándolo por el color, aclarando que no había seres humanos y partiendo de la imagen de referencia.",
-     "en": "In the first versions of scene 2, the model added **a child-like human figure nobody had asked for**. I fixed it by describing the new character with clear monster features, setting it apart by colour, stating there were no humans and starting from the reference image."
-    }
+    "images": [
+     {
+      "src": "aula-berni-referencia.webp",
+      "w": 600,
+      "h": 600,
+      "alt": {
+       "es": "Berni, un monstruo azul y peludo con destellos blancos, sentado y sonriendo sobre un fondo beige. Tiene ojos grandes y celestes, mejillas sonrojadas y orejas pequeñas.",
+       "en": "Berni, a blue, furry monster with white sparkles, sitting and smiling on a beige background. It has large light-blue eyes, rosy cheeks and small ears."
+      },
+      "caption": {
+       "es": "Imagen generada con IA (ChatGPT, GPT-5) y validada por el Equipo 03. Se usó como referencia para animar cada escena en modo imagen a video.",
+       "en": "AI-generated image (ChatGPT, GPT-5), validated by Team 03. It was used as the reference to animate every scene in image-to-video mode."
+      },
+      "link": {
+       "url": "https://lpedaci.github.io/iag-tif/recursos/animacion.html",
+       "cta": {
+        "es": "Ver la página del recurso",
+        "en": "See the resource page"
+       }
+      }
+     }
+    ]
    },
    {
     "t": "embed",
@@ -20215,21 +20389,315 @@ window.CASES = {
     ]
    },
    {
-    "t": "phase",
-    "n": "02",
-    "id": "documental",
-    "mode": {
-     "es": "documental · unidad 5",
-     "en": "documentary · unit 5"
+    "t": "list",
+    "h": {
+     "es": "Cómo se usa en la sala",
+     "en": "How it is used in the classroom"
     },
-    "name": {
-     "es": "Adaptar para incluir",
-     "en": "Adapt to include"
+    "items": [
+     {
+      "lead": {
+       "es": "Antes: anticipar",
+       "en": "Before: anticipate"
+      },
+      "body": {
+       "es": "Mirarla en grupo, en un momento tranquilo, antes de la actividad de plástica, con pausas en cada escena.",
+       "en": "Watch it as a group, at a quiet moment, before the art activity, pausing at each scene."
+      }
+     },
+     {
+      "lead": {
+       "es": "Durante: hacer",
+       "en": "During: do"
+      },
+      "body": {
+       "es": "Tener armado un rincón de calma como el de Berni, con cojines y luz tenue, y nombrarlo igual que en el video.",
+       "en": "Have a calm corner like Berni’s ready, with cushions and soft light, and call it the same as in the video."
+      }
+     },
+     {
+      "lead": {
+       "es": "Después: volver a mirar",
+       "en": "After: look again"
+      },
+      "body": {
+       "es": "Conversar sobre los distintos ritmos de cada quien: qué hizo Berni y qué necesitaba el monstruo verde menta.",
+       "en": "Talk about everyone’s different rhythms: what Berni did and what the mint-green monster needed."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Ética y accesibilidad",
+     "en": "Ethics and accessibility"
     },
-    "q": {
-     "es": "¿Cómo se explica en dos minutos qué puede hacer la IA por una sala inclusiva, y qué no?",
-     "en": "How do you explain in two minutes what AI can do for an inclusive classroom, and what it cannot?"
+    "items": [
+     {
+      "lead": {
+       "es": "Obras de referencia",
+       "en": "Reference works"
+      },
+      "body": {
+       "es": "Las obras de Antonio Berni y de Bortusk Leer inspiran el proyecto de la sala, pero no se reproducen. Berni es un personaje propio.",
+       "en": "Works by Antonio Berni and Bortusk Leer inspire the class project but are not reproduced. Berni is an original character."
+      }
+     },
+     {
+      "lead": {
+       "es": "Sesgos",
+       "en": "Bias"
+      },
+      "body": {
+       "es": "Los personajes son monstruos, no niños, y no reproducen estereotipos sobre el autismo.",
+       "en": "The characters are monsters, not children, and do not reproduce stereotypes about autism."
+      }
+     },
+     {
+      "lead": {
+       "es": "Rotulado",
+       "en": "Labelling"
+      },
+      "body": {
+       "es": "Etiquetada en YouTube como hecha con IA, con el rótulo del equipo en el recurso. Los clips de Veo incorporan SynthID, una marca de agua imperceptible.",
+       "en": "Labelled on YouTube as made with AI, with the team label on the resource. The Veo clips include SynthID, an imperceptible watermark."
+      }
+     },
+     {
+      "lead": {
+       "es": "Sin reproducción automática",
+       "en": "No autoplay"
+      },
+      "body": {
+       "es": "En el sitio, el video carga con una fachada desde el dominio sin cookies de YouTube y nada se reproduce solo: arranca cuando alguien toca Reproducir.",
+       "en": "On the site, the video loads through a facade from YouTube’s cookie-free domain and nothing autoplays: it starts when someone presses Play."
+      }
+     }
+    ]
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencia",
+     "en": "Reference"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Pedaci, L. [El servidor de Lourdes]. (2026a, 27 de agosto).",
+       "en": "Pedaci, L. [El servidor de Lourdes]. (2026a, 27 de agosto)."
+      },
+      "title": {
+       "es": "Los monstruos de Berni: una animación para la inclusión en la primera infancia",
+       "en": "Los monstruos de Berni: una animación para la inclusión en la primera infancia"
+      },
+      "post": {
+       "es": " [Video]. YouTube.",
+       "en": " [Video]. YouTube."
+      },
+      "url": "https://youtu.be/EffCv8EIAwI"
+     }
+    ]
+   }
+  ],
+  "outcome": null,
+  "credits": {
+   "es": "Publicada en el canal El servidor de Lourdes. Diseño del personaje, generación de escenas, música y montaje: Lourdes Pedaci. Autoría académica: Equipo 03 (Clara Argüello, Silvia Costas y Lourdes Pedaci). Cátedra: titular, Mg. Lic. Mónica Leda Torres; adjunto, Mg. Lic. Juan Ruiz Díaz. Contenido generado con IA generativa y validado por el Equipo 03.",
+   "en": "Published on the El servidor de Lourdes channel. Character design, scene generation, music and editing: Lourdes Pedaci. Academic authorship: Team 03 (Clara Argüello, Silvia Costas and Lourdes Pedaci). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz. Content generated with generative AI and validated by Team 03."
+  }
+ },
+ "documental-adaptar-para-incluir": {
+  "cat": "cont",
+  "touch": "cap",
+  "title": {
+   "es": "Adaptar para incluir: un documental producido con IA generativa",
+   "en": "Adapt to include: a documentary produced with generative AI"
+  },
+  "subtitle": {
+   "es": "Un documental de 2:04 para docentes de nivel inicial y familias sobre adaptaciones curriculares accesibles con IA generativa: qué permite y qué condiciones hacen falta.",
+   "en": "A 2:04 documentary for early childhood teachers and families on accessible curriculum adaptations with generative AI: what it makes possible and what conditions it needs."
+  },
+  "chips": {
+   "es": [
+    "Documental",
+    "IA generativa",
+    "Guion con IA",
+    "Accesibilidad"
+   ],
+   "en": [
+    "Documentary",
+    "Generative AI",
+    "AI-assisted script",
+    "Accessibility"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Las docentes y las familias necesitan entender qué aporta la IA a una sala inclusiva sin un texto académico de por medio, y sin que el mensaje prometa más de lo que la IA puede dar.",
+    "en": "Teachers and families need to understand what AI brings to an inclusive classroom without an academic text in between, and without the message promising more than AI can deliver."
+   },
+   "solution": {
+    "es": "Escribí el guion de la voz en off con Claude y generé las escenas en Flow, sin rostros de niñas ni niños; revisé cada clip, sumé voz y música con ElevenLabs, monté en Camtasia y publiqué con subtítulos y transcripción completa.",
+    "en": "I wrote the voice-over script with Claude and generated the scenes in Flow, with no children’s faces; I reviewed every clip, added voice and music with ElevenLabs, edited in Camtasia and published with captions and a full transcript."
+   },
+   "results": [
+    {
+     "v": "2:04",
+     "l": {
+      "es": "de documental con voz en off, subtítulos y transcripción",
+      "en": "of documentary with voice-over, captions and transcript"
+     }
+    },
+    {
+     "v": "4",
+     "l": {
+      "es": "herramientas evaluadas, una descartada antes de producir",
+      "en": "tools evaluated, one dropped before production"
+     }
+    },
+    {
+     "t": {
+      "es": "Está etiquetado en YouTube como hecho con IA («Made with AI»), y los clips de Veo llevan la marca SynthID.",
+      "en": "It is labelled on YouTube as made with AI (“Made with AI”), and the Veo clips carry the SynthID watermark."
+     }
     }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Learning Experience Designer: guion, generación de escenas con IA, voz, música y montaje",
+    "en": "Learning Experience Designer: script, AI scene generation, voice, music and editing"
+   },
+   "timeline": {
+    "es": "Septiembre 2026 (publicado el 24/9)",
+    "en": "September 2026 (published on 24 September)"
+   },
+   "context": {
+    "es": "Gestión de recursos digitales con IA generativa, Licenciatura en Tecnología Educativa, UTN FRBA. Trabajo del Equipo 03: Clara Argüello, Silvia Costas y Lourdes Pedaci",
+    "en": "Managing Digital Resources with Generative AI, Bachelor’s in Educational Technology, UTN FRBA. Work by Team 03: Clara Argüello, Silvia Costas and Lourdes Pedaci"
+   },
+   "stack": [
+    "Claude (Opus 4.8)",
+    "Flow",
+    "Omni 1.1 Flash",
+    "Veo 3.1 Lite",
+    "ElevenLabs",
+    "Camtasia",
+    "YouTube"
+   ],
+   "methods": {
+    "es": [
+     "Guion con IA",
+     "Prompts negativos",
+     "Extensión de escenas",
+     "Subtítulos y transcripción",
+     "DUA"
+    ],
+    "en": [
+     "AI-assisted script",
+     "Negative prompts",
+     "Scene extension",
+     "Captions and transcript",
+     "UDL"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Ver el documental en YouTube",
+     "en": "Watch the documentary on YouTube"
+    },
+    "url": "https://youtu.be/qJ5nEvhGr4I"
+   },
+   {
+    "label": {
+     "es": "Ver la página del recurso (en vivo)",
+     "en": "See the resource page (live)"
+    },
+    "url": "https://lpedaci.github.io/iag-tif/recursos/video.html"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "cards",
+    "cols": 2,
+    "h": {
+     "es": "Parte del proyecto El aula que incluye",
+     "en": "Part of the El aula que incluye project"
+    },
+    "items": [
+     {
+      "title": {
+       "es": "El aula que incluye: IA generativa para la inclusión en el nivel inicial",
+       "en": "The inclusive classroom: generative AI for inclusion in early childhood education"
+      },
+      "case": "el-aula-que-incluye",
+      "caseCta": {
+       "es": "Ver el caso del espacio digital completo",
+       "en": "See the case for the full digital space"
+      },
+      "body": {
+       "es": "El documental es el recurso de la Unidad 5 del espacio digital, que cuenta un mismo proyecto de sala en cinco formatos.",
+       "en": "The documentary is the Unit 5 resource of the digital space that tells one class project in five formats."
+      }
+     },
+     {
+      "title": {
+       "es": "Los monstruos de Berni: una animación con IA para la inclusión en la primera infancia",
+       "en": "Berni’s monsters: an AI animation for inclusion in early childhood"
+      },
+      "body": {
+       "es": "El otro video del proyecto, el de la Unidad 3: una animación de 1:18 sin diálogos para mirar en la sala.",
+       "en": "The project’s other video, for Unit 3: a 1:18 dialogue-free animation to watch in the classroom."
+      },
+      "case": "animacion-los-monstruos-de-berni",
+      "caseCta": {
+       "es": "Ver el caso de la animación",
+       "en": "See the animation case"
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Para qué y para quién",
+     "en": "What for and for whom"
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Qué es",
+       "en": "What it is"
+      },
+      "v": {
+       "es": "Un documental de 2:04 sobre adaptaciones curriculares accesibles con IA generativa.",
+       "en": "A 2:04 documentary on accessible curriculum adaptations with generative AI."
+      }
+     },
+     {
+      "k": {
+       "es": "Para qué",
+       "en": "What for"
+      },
+      "v": {
+       "es": "Mostrar qué permite la IA y qué condiciones hacen falta: conectividad, formación docente y cuidado de la privacidad.",
+       "en": "To show what AI makes possible and what conditions it needs: connectivity, teacher training and care for privacy."
+      }
+     },
+     {
+      "k": {
+       "es": "Para quién",
+       "en": "For whom"
+      },
+      "v": {
+       "es": "Docentes de nivel inicial. Ampliado, las familias.",
+       "en": "Early childhood teachers. More broadly, families."
+      }
+     }
+    ]
    },
    {
     "t": "prose",
@@ -20247,25 +20715,67 @@ window.CASES = {
    {
     "t": "taskflow",
     "h": {
+     "es": "El arco del guion",
+     "en": "The script’s arc"
+    },
+    "steps": {
+     "es": [
+      "Adaptar no es recortar: es abrir más formas de acceder al mismo contenido",
+      "El DUA: un mismo contenido con varias puertas de entrada",
+      "Qué puede generar la IA: imágenes, pictogramas, historias sociales y narraciones",
+      "Las barreras: conectividad, formación docente y privacidad de los datos de las infancias",
+      "Las aplicaciones de apoyo: subtítulos automáticos, lectura por voz y tableros con pictogramas",
+      "El cierre: la docente decide qué herramienta usar, con qué intención y para quién"
+     ],
+     "en": [
+      "Adapting is not cutting back: it opens more ways into the same content",
+      "UDL: one content with several entry points",
+      "What AI can generate: images, pictograms, social stories and narrations",
+      "The barriers: connectivity, teacher training and children’s data privacy",
+      "Support apps: automatic captions, text to speech and pictogram boards",
+      "The close: the teacher decides which tool to use, with what intention and for whom"
+     ]
+    }
+   },
+   {
+    "t": "quote",
+    "h": {
+     "es": "La idea que ordena el guion",
+     "en": "The idea that shapes the script"
+    },
+    "body": {
+     "es": "Adaptar el currículo no significa simplificarlo.",
+     "en": "Adapting the curriculum does not mean simplifying it."
+    },
+    "p": [
+     {
+      "es": "Una frase de la voz en off. El resto del guion está en la transcripción, más abajo.",
+      "en": "A line from the voice-over (in Spanish in the original). The rest of the script is in the transcript below."
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
      "es": "Pipeline de producción",
      "en": "Production pipeline"
     },
     "steps": {
      "es": [
-      "Guion de la voz en off con Claude",
+      "Guion de la voz en off con Claude (Opus 4.8)",
       "Escenas y extensiones con Flow (Omni 1.1 Flash y Veo 3.1 Lite)",
       "Revisión de cada clip, sin rostros de niños",
-      "Voz en off y música con ElevenLabs",
+      "Voz en off y música con ElevenLabs (voz y Music v2)",
       "Montaje en Camtasia",
-      "Subtítulos y transcripción"
+      "Subtítulos automáticos de YouTube y transcripción"
      ],
      "en": [
-      "Voice-over script with Claude",
+      "Voice-over script with Claude (Opus 4.8)",
       "Scenes and extensions with Flow (Omni 1.1 Flash and Veo 3.1 Lite)",
       "Review of every clip, no children’s faces",
-      "Voice-over and music with ElevenLabs",
+      "Voice-over and music with ElevenLabs (voice and Music v2)",
       "Editing in Camtasia",
-      "Captions and transcript"
+      "YouTube automatic captions and transcript"
      ]
     }
    },
@@ -20326,8 +20836,8 @@ window.CASES = {
      },
      {
       "dim": {
-       "es": "Claude",
-       "en": "Claude"
+       "es": "Claude (Opus 4.8)",
+       "en": "Claude (Opus 4.8)"
       },
       "before": {
        "es": "Guion de la voz en off",
@@ -20365,13 +20875,15 @@ window.CASES = {
       "Planos sin rostros de niñas ni niños.",
       "Prompts negativos para evitar figuras infantiles reconocibles.",
       "Revisión de cada clip antes de usarlo.",
-      "Rotulado del origen sintético en el video y en YouTube."
+      "Rotulado del origen sintético en el video y en YouTube, con la etiqueta «Made with AI».",
+      "Marca SynthID en los clips de Veo."
      ],
      "en": [
       "No shots of children’s faces.",
       "Negative prompts to avoid recognisable child figures.",
       "Every clip reviewed before use.",
-      "Synthetic origin labelled in the video and on YouTube."
+      "Synthetic origin labelled in the video and on YouTube, with the “Made with AI” label.",
+      "SynthID watermark on the Veo clips."
      ]
     }
    },
@@ -20418,6 +20930,45 @@ window.CASES = {
    {
     "t": "list",
     "h": {
+     "es": "Cómo se usa",
+     "en": "How it is used"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Antes: anticipar",
+       "en": "Before: anticipate"
+      },
+      "body": {
+       "es": "Verlo en una reunión del equipo docente antes de empezar el proyecto, como disparador.",
+       "en": "Watch it in a teaching team meeting before the project starts, as a conversation starter."
+      }
+     },
+     {
+      "lead": {
+       "es": "Durante: hacer",
+       "en": "During: do"
+      },
+      "body": {
+       "es": "Usar la transcripción para relevar qué aplicaciones de apoyo ya hay en la institución.",
+       "en": "Use the transcript to survey which support apps the school already has."
+      }
+     },
+     {
+      "lead": {
+       "es": "Después: volver a mirar",
+       "en": "After: look again"
+      },
+      "body": {
+       "es": "Compartirlo con las familias para explicar por qué y cómo se usó la IA en el proyecto.",
+       "en": "Share it with families to explain why and how AI was used in the project."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
      "es": "Accesibilidad y transparencia",
      "en": "Accessibility and transparency"
     },
@@ -20428,8 +20979,8 @@ window.CASES = {
        "en": "Alternatives"
       },
       "body": {
-       "es": "Audiodescripción en texto para la animación; subtítulos y transcripción para el documental. En el sitio, los dos cargan con una fachada desde el dominio sin cookies de YouTube y nada se reproduce solo.",
-       "en": "A text audio description for the animation; captions and a transcript for the documentary. On the site, both load through a facade from YouTube’s cookie-free domain and nothing autoplays."
+       "es": "Subtítulos y transcripción completa de la voz en off. En el sitio, el video carga con una fachada desde el dominio sin cookies de YouTube y nada se reproduce solo.",
+       "en": "Captions and a full transcript of the voice-over. On the site, the video loads through a facade from YouTube’s cookie-free domain and nothing autoplays."
       }
      },
      {
@@ -20438,28 +20989,18 @@ window.CASES = {
        "en": "Labelling"
       },
       "body": {
-       "es": "Etiquetados en YouTube como hechos con IA, con el rótulo del equipo en cada recurso. Los clips de Veo incorporan SynthID, una marca de agua imperceptible.",
-       "en": "Labelled on YouTube as made with AI, with the team label on each resource. The Veo clips include SynthID, an imperceptible watermark."
+       "es": "Etiquetado en YouTube como hecho con IA, con el rótulo del equipo en el recurso. Los clips de Veo incorporan SynthID, una marca de agua imperceptible.",
+       "en": "Labelled on YouTube as made with AI, with the team label on the resource. The Veo clips include SynthID, an imperceptible watermark."
       }
      },
      {
       "lead": {
-       "es": "Sesgos y derechos",
-       "en": "Bias and rights"
+       "es": "Límite",
+       "en": "Limitation"
       },
       "body": {
-       "es": "Los personajes son monstruos, no niños, y no reproducen estereotipos sobre el autismo. Las obras de Antonio Berni y Bortusk Leer inspiran a la sala, pero no se reproducen.",
-       "en": "The characters are monsters, not children, and do not reproduce stereotypes about autism. Works by Antonio Berni and Bortusk Leer inspire the class but are not reproduced."
-      }
-     },
-     {
-      "lead": {
-       "es": "Pendiente",
-       "en": "Pending"
-      },
-      "body": {
-       "es": "Los subtítulos automáticos del documental coinciden palabra por palabra con la transcripción, pero fallan mayúsculas y puntuación: falta subir un archivo corregido.",
-       "en": "The documentary’s automatic captions match the transcript word for word, but capitalisation and punctuation are off: a corrected file still needs uploading."
+       "es": "Los subtítulos son los automáticos de YouTube: coinciden palabra por palabra con la transcripción, pero fallan mayúsculas y puntuación. Queda pendiente subir una versión corregida.",
+       "en": "The captions are YouTube’s automatic ones: they match the transcript word for word, but capitalisation and punctuation are off. A corrected version still needs uploading."
       }
      }
     ]
@@ -20467,25 +21008,10 @@ window.CASES = {
    {
     "t": "refs",
     "h": {
-     "es": "Referencias",
-     "en": "References"
+     "es": "Referencia",
+     "en": "Reference"
     },
     "items": [
-     {
-      "pre": {
-       "es": "Pedaci, L. [El servidor de Lourdes]. (2026a, 27 de agosto).",
-       "en": "Pedaci, L. [El servidor de Lourdes]. (2026a, 27 de agosto)."
-      },
-      "title": {
-       "es": "Los monstruos de Berni: una animación para la inclusión en la primera infancia",
-       "en": "Los monstruos de Berni: una animación para la inclusión en la primera infancia"
-      },
-      "post": {
-       "es": " [Video]. YouTube.",
-       "en": " [Video]. YouTube."
-      },
-      "url": "https://youtu.be/EffCv8EIAwI"
-     },
      {
       "pre": {
        "es": "Pedaci, L. [El servidor de Lourdes]. (2026b, 24 de septiembre).",
@@ -20506,8 +21032,8 @@ window.CASES = {
   ],
   "outcome": null,
   "credits": {
-   "es": "Los dos videos se publicaron en el canal El servidor de Lourdes. Producción: Lourdes Pedaci. Autoría académica: Equipo 03 (Clara Argüello, Silvia Costas y Lourdes Pedaci). Cátedra: titular, Mg. Lic. Mónica Leda Torres; adjunto, Mg. Lic. Juan Ruiz Díaz. Contenido generado con IA generativa y validado por el Equipo 03.",
-   "en": "Both videos were published on the El servidor de Lourdes channel. Production: Lourdes Pedaci. Academic authorship: Team 03 (Clara Argüello, Silvia Costas and Lourdes Pedaci). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz. Content generated with generative AI and validated by Team 03."
+   "es": "Publicado en el canal El servidor de Lourdes. Guion, generación de escenas, voz, música y montaje: Lourdes Pedaci. Autoría académica: Equipo 03 (Clara Argüello, Silvia Costas y Lourdes Pedaci). Cátedra: titular, Mg. Lic. Mónica Leda Torres; adjunto, Mg. Lic. Juan Ruiz Díaz. Contenido generado con IA generativa y validado por el Equipo 03.",
+   "en": "Published on the El servidor de Lourdes channel. Script, scene generation, voice, music and editing: Lourdes Pedaci. Academic authorship: Team 03 (Clara Argüello, Silvia Costas and Lourdes Pedaci). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz. Content generated with generative AI and validated by Team 03."
   }
  },
  "podcast-el-aula-que-incluye": {
