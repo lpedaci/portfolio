@@ -81,6 +81,81 @@ window.PROJECTS = [
     result: { es: 'Todos los equipos asesorados', en: 'Every team advised' },
     skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.1', 'Lighthouse', 'Claude'], en: ['Nielsen heuristics', 'WCAG 2.1', 'Lighthouse', 'Claude'] }
   },
+  /* El aula que incluye y sus tres piezas (videos, podcast y asistente): publicados juntos en el portfolio,
+     van seguidos para que "Siguiente caso" recorra el proyecto: el espacio digital y después cada pieza. */
+  {
+    slug: 'el-aula-que-incluye',
+    cover: 'assets/img/covers/el-aula-que-incluye.webp',
+    cat: 'cap',
+    alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
+    badges: ['UX', 'LXD'],
+    dates: ['2026-08', '2026-11'],
+    tags: { es: ['dua', 'ia generativa'], en: ['udl', 'generative ai'] },
+    title: { es: 'El aula que incluye: IA generativa para la inclusión en el nivel inicial', en: 'The inclusive classroom: generative AI for inclusion in early childhood education' },
+    desc: {
+      es: 'Espacio digital de 13 páginas que cuenta un mismo proyecto de sala de 5 años en cinco formatos hechos con IA generativa, diseñado con DUA y validado con docentes.',
+      en: 'A 13-page digital space that tells the same kindergarten project in five formats made with generative AI, designed with UDL and validated with teachers.'
+    },
+    result: { es: '5 recursos en 5 formatos, calificación 9,50', en: '5 resources in 5 formats, graded 9.50/10' },
+    skills: {
+      es: ['Diseño de experiencias de aprendizaje', 'Auditoría de contenido', 'Arquitectura de información', 'Sistema de diseño', 'WCAG 2.1', 'HTML/CSS/JS'],
+      en: ['Learning experience design', 'Content audit', 'Information architecture', 'Design system', 'WCAG 2.1', 'HTML/CSS/JS']
+    }
+  },
+  {
+    slug: 'videos-ia-generativa',
+    cover: 'assets/img/covers/videos-ia-generativa.webp',
+    video: true,
+    cat: 'cont',
+    dates: ['2026-08', '2026-09'],
+    tags: { es: ['animación', 'documental'], en: ['animation', 'documentary'] },
+    title: { es: 'Animación y documental con IA generativa', en: 'An animation and a documentary made with generative AI' },
+    desc: {
+      es: 'Un corto sin diálogos para mirar en la sala y un documental para docentes y familias, producidos por escenas con IA, rotulados y con alternativas accesibles.',
+      en: 'A dialogue-free short to watch in the classroom and a documentary for teachers and families, produced scene by scene with AI, labelled and with accessible alternatives.'
+    },
+    result: { es: '2 videos, 3:22 en total', en: '2 videos, 3:22 in total' },
+    skills: {
+      es: ['Producción audiovisual con IA', 'Veo y Flow', 'ElevenLabs', 'Suno', 'Camtasia'],
+      en: ['AI video production', 'Veo and Flow', 'ElevenLabs', 'Suno', 'Camtasia']
+    }
+  },
+  {
+    slug: 'podcast-el-aula-que-incluye',
+    cover: 'assets/img/covers/podcast-el-aula-que-incluye.webp',
+    cat: 'cont',
+    dates: ['2026-09', '2026-09'],
+    tags: { es: ['podcast', 'voces sintéticas'], en: ['podcast', 'synthetic voices'] },
+    title: { es: 'Podcast El aula que incluye, a dos voces sintéticas', en: 'The El aula que incluye podcast, with two synthetic voices' },
+    desc: {
+      es: 'Un episodio para docentes y familias sobre cómo un mismo cuento llega como texto, pictogramas y audio, con guion iterado con IA y transcripción completa.',
+      en: 'An episode for teachers and families on how one story can arrive as text, pictograms and audio, with an AI-iterated script and a full transcript.'
+    },
+    result: { es: '2:58, guion en 3 iteraciones', en: '2:58, script in 3 iterations' },
+    skills: {
+      es: ['Guion con IA', 'Claude', 'ElevenLabs', 'Suno', 'Camtasia'],
+      en: ['AI-assisted scriptwriting', 'Claude', 'ElevenLabs', 'Suno', 'Camtasia']
+    }
+  },
+  {
+    slug: 'preguntale-a-berni',
+    cover: 'assets/img/covers/preguntale-a-berni.webp',
+    cat: 'cont',
+    alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
+    badges: ['UX'],
+    dates: ['2026-10', '2026-11'],
+    tags: { es: ['chatbot', 'diseño conversacional'], en: ['chatbot', 'conversation design'] },
+    title: { es: 'Preguntale a Berni: un asistente guiado sin campo de texto', en: 'Ask Berni: a guided assistant with no text box' },
+    desc: {
+      es: 'Chatbot por opciones que orienta a docentes, familias y evaluadores por el sitio, sin pedir datos, con un árbol de 33 nodos probado con docentes.',
+      en: 'An option-based chatbot that guides teachers, families and assessors through the site without asking for data, with a 33-node tree tested with teachers.'
+    },
+    result: { es: '33 nodos, ajustado tras la prueba con docentes', en: '33 nodes, adjusted after testing with teachers' },
+    skills: {
+      es: ['Diseño conversacional', 'Privacidad por diseño', 'JavaScript', 'JSON', 'WCAG 2.1'],
+      en: ['Conversation design', 'Privacy by design', 'JavaScript', 'JSON', 'WCAG 2.1']
+    }
+  },
   {
     slug: 'escape-room-finanzas',
     cover: 'assets/img/covers/escape-room-finanzas.jpg',

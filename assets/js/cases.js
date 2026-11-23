@@ -17652,5 +17652,3410 @@ window.CASES = {
     "url": "https://www.magnific.com/"
    }
   ]
+ },
+ "el-aula-que-incluye": {
+  "cat": "cap",
+  "touch": "cont",
+  "title": {
+   "es": "El aula que incluye: IA generativa para la inclusión en el nivel inicial",
+   "en": "The inclusive classroom: generative AI for inclusion in early childhood education"
+  },
+  "subtitle": {
+   "es": "Un espacio digital que cuenta un mismo proyecto de plástica de sala de 5 años en cinco formatos hechos con IA generativa, con el Diseño Universal para el Aprendizaje como tema y como criterio de diseño.",
+   "en": "A digital space that tells the same art project for a class of 5-year-olds in five formats made with generative AI, with Universal Design for Learning as both its subject and its design criterion."
+  },
+  "chips": {
+   "es": [
+    "LXD",
+    "UX/UI",
+    "Accesibilidad",
+    "IA generativa"
+   ],
+   "en": [
+    "LXD",
+    "UX/UI",
+    "Accessibility",
+    "Generative AI"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Las docentes de nivel inicial tienen poco tiempo para adaptar materiales y una formación desigual en IA. En una sala de 5 años, lo que llega solo de forma oral se pierde, sobre todo para quien todavía no lee o se satura con el exceso de estímulos.",
+    "en": "Early childhood teachers have little time to adapt materials and uneven training in AI. In a class of 5-year-olds, whatever arrives only orally gets lost, above all for children who cannot read yet or who are overwhelmed by too much stimulation."
+   },
+   "solution": {
+    "es": "Un sitio de 13 páginas con un mismo contenido en cinco formatos, pensado para la docente que planifica sola y para la sala que mira con una persona adulta al lado. **Audité el contenido que investigaron mis compañeras y diseñé, produje y programé el sitio y los cinco recursos.**",
+    "en": "A 13-page site with the same content in five formats, designed for the teacher planning on her own and for the class watching with an adult beside them. **I audited the content my teammates researched, and I designed, produced and coded the site and all five resources.**"
+   },
+   "results": [
+    {
+     "v": "5",
+     "l": {
+      "es": "recursos en 5 formatos: pictogramas, animación, podcast, documental y asistente",
+      "en": "resources in 5 formats: pictograms, animation, podcast, documentary and assistant"
+     }
+    },
+    {
+     "v": "100",
+     "l": {
+      "es": "en accesibilidad de Lighthouse en las 13 páginas y la 404",
+      "en": "Lighthouse accessibility score on all 13 pages and the 404"
+     }
+    },
+    {
+     "v": "0",
+     "l": {
+      "es": "violaciones de axe-core en 112 corridas (WCAG 2.1 A y AA)",
+      "en": "axe-core violations across 112 runs (WCAG 2.1 A and AA)"
+     }
+    },
+    {
+     "t": {
+      "es": "En la prueba con docentes, elegir opciones les resultó más fácil que escribir, pero no sabían cómo buscar lo que no estaba entre ellas. Sumé al asistente «No encuentro lo que busco», que lleva al mapa del sitio y a los recorridos por perfil.",
+      "en": "In the test with teachers, picking options felt easier than writing, but they did not know how to look for something that was not among them. I added “I can’t find what I’m looking for” to the assistant, which leads to the site map and the routes by profile."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Learning Experience Designer: auditoría del contenido, diseño UX/UI, producción de los cinco recursos y desarrollo del sitio",
+    "en": "Learning Experience Designer: content audit, UX/UI design, production of the five resources and site development"
+   },
+   "timeline": {
+    "es": "Agosto a noviembre 2026: TIF I entregado el 1/11 y TIF II el 7/11",
+    "en": "August to November 2026: Part I submitted on 1 November and Part II on 7 November"
+   },
+   "context": {
+    "es": "Trabajo Integrador Final de la electiva Gestión de recursos digitales con IA generativa, Licenciatura en Tecnología Educativa, UTN FRBA. Equipo 03: Clara Argüello, Silvia Costas y Lourdes Pedaci",
+    "en": "Final integrative project for the elective Managing Digital Resources with Generative AI, Bachelor’s in Educational Technology, UTN FRBA. Team 03: Clara Argüello, Silvia Costas and Lourdes Pedaci"
+   },
+   "stack": [
+    "HTML/CSS/JS",
+    "JSON",
+    "GitHub Pages",
+    "Gemini",
+    "ChatGPT",
+    "Canva",
+    "Veo 3.1",
+    "Flow",
+    "ElevenLabs",
+    "Suno",
+    "Claude",
+    "Claude Code",
+    "Camtasia",
+    "Lighthouse",
+    "axe-core"
+   ],
+   "methods": {
+    "es": [
+     "DUA",
+     "TPACK",
+     "ADKAR",
+     "WCAG 2.1 AA",
+     "Historias sociales",
+     "APA 7"
+    ],
+    "en": [
+     "UDL",
+     "TPACK",
+     "ADKAR",
+     "WCAG 2.1 AA",
+     "Social stories",
+     "APA 7"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Sitio publicado (en vivo)",
+     "en": "Published site (live)"
+    },
+    "url": "https://lpedaci.github.io/iag-tif/"
+   },
+   {
+    "label": {
+     "es": "Repositorio en GitHub",
+     "en": "GitHub repository"
+    },
+    "url": "https://github.com/lpedaci/iag-tif"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "list",
+    "h": {
+     "es": "Mi rol, de punta a punta",
+     "en": "My role, end to end"
+    },
+    "note": {
+     "es": "Fue un trabajo en equipo con una autoría académica compartida. Esto es lo que hizo cada una.",
+     "en": "It was a team project with shared academic authorship. This is what each of us did."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Investigación del contenido: Clara Argüello y Silvia Costas",
+       "en": "Content research: Clara Argüello and Silvia Costas"
+      },
+      "body": {
+       "es": "Relevaron el marco teórico, el caso y las fuentes del proyecto de plástica.",
+       "en": "They gathered the theoretical framework, the case and the sources for the art project."
+      }
+     },
+     {
+      "lead": {
+       "es": "Auditoría del contenido: yo",
+       "en": "Content audit: me"
+      },
+      "body": {
+       "es": "Tomé lo investigado, lo ordené, verifiqué datos, fechas y citas, y lo llevé a un guion por recurso y por página.",
+       "en": "I took the research, organised it, checked facts, dates and citations, and turned it into a script per resource and per page."
+      }
+     },
+     {
+      "lead": {
+       "es": "Diseño UX/UI, arquitectura de información y sistema de diseño: yo",
+       "en": "UX/UI design, information architecture and design system: me"
+      },
+      "body": {
+       "es": "Públicos y tareas, mapa del sitio, recorridos por perfil, plantilla única de recurso, paleta, tipografía, componentes y Modo calma.",
+       "en": "Audiences and tasks, site map, routes by profile, a single resource template, palette, typography, components and Calm mode."
+      }
+     },
+     {
+      "lead": {
+       "es": "Producción de los cinco recursos: yo",
+       "en": "Production of the five resources: me"
+      },
+      "body": {
+       "es": "Historia social con pictogramas, animación, podcast, video documental y asistente: prompts, generación, voces, música, montaje y alternativas accesibles.",
+       "en": "Social story with pictograms, animation, podcast, documentary and assistant: prompts, generation, voices, music, editing and accessible alternatives."
+      }
+     },
+     {
+      "lead": {
+       "es": "Programación del sitio y del asistente: yo",
+       "en": "Coding the site and the assistant: me"
+      },
+      "body": {
+       "es": "HTML, CSS y JavaScript sin frameworks, el árbol del asistente en JSON y su prueba automática, con apoyo de Claude Code.",
+       "en": "HTML, CSS and JavaScript with no frameworks, the assistant tree in JSON and its automated test, with help from Claude Code."
+      }
+     },
+     {
+      "lead": {
+       "es": "Validación de accesibilidad: con Silvia Costas",
+       "en": "Accessibility validation: with Silvia Costas"
+      },
+      "body": {
+       "es": "Lighthouse, axe-core, teclado, zoom, espaciado del texto y dispositivos reales.",
+       "en": "Lighthouse, axe-core, keyboard, zoom, text spacing and real devices."
+      }
+     },
+     {
+      "lead": {
+       "es": "Prueba con docentes: Clara y Silvia. Ajustes finales: yo",
+       "en": "Testing with teachers: Clara and Silvia. Final adjustments: me"
+      },
+      "body": {
+       "es": "Ellas llevaron el sitio a docentes de nivel inicial; yo hice los cambios que salieron de esa prueba.",
+       "en": "They took the site to early childhood teachers; I made the changes that came out of that test."
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "cols": 3,
+    "h": {
+     "es": "Los cinco recursos",
+     "en": "The five resources"
+    },
+    "note": {
+     "es": "Cada recurso corresponde a una unidad de la materia. Los videos, el podcast y el asistente tienen su caso propio con el proceso de producción completo.",
+     "en": "Each resource belongs to a unit of the course. The videos, the podcast and the assistant each have their own case with the full production process."
+    },
+    "caseCta": {
+     "es": "Ver el caso",
+     "en": "See the case"
+    },
+    "cta": {
+     "es": "Ver en el sitio",
+     "en": "See it on the site"
+    },
+    "items": [
+     {
+      "title": {
+       "es": "Historia social con pictogramas",
+       "en": "Social story with pictograms"
+      },
+      "tag": {
+       "es": "Texto e imagen · Unidad 2 · Gemini",
+       "en": "Text and image · Unit 2 · Gemini"
+      },
+      "body": {
+       "es": "«Hoy creamos nuestro monstruo»: nueve viñetas en primera persona que anticipan la transición del juego a la actividad, para proyectar o imprimir.",
+       "en": "“Today we make our monster”: nine first-person panels that anticipate the move from play to the activity, to project or print."
+      },
+      "url": "https://lpedaci.github.io/iag-tif/recursos/historia-social.html"
+     },
+     {
+      "title": {
+       "es": "Animación «Los monstruos de Berni»",
+       "en": "Animation “Berni’s monsters”"
+      },
+      "tag": {
+       "es": "Video, 1:18 · Unidad 3 · ChatGPT, Canva, Veo 3.1 Fast, Suno",
+       "en": "Video, 1:18 · Unit 3 · ChatGPT, Canva, Veo 3.1 Fast, Suno"
+      },
+      "body": {
+       "es": "Un corto sin diálogos que modela cómo acompañar a un compañero que necesita calma, con audiodescripción en texto.",
+       "en": "A dialogue-free short that models how to support a classmate who needs calm, with a text audio description."
+      },
+      "case": "videos-ia-generativa"
+     },
+     {
+      "title": {
+       "es": "Podcast «El aula que incluye»",
+       "en": "Podcast “El aula que incluye”"
+      },
+      "tag": {
+       "es": "Audio, 2:58 · Unidad 4 · Claude, ElevenLabs, Suno",
+       "en": "Audio, 2:58 · Unit 4 · Claude, ElevenLabs, Suno"
+      },
+      "body": {
+       "es": "Dos voces sintéticas explican cómo un mismo cuento llega como texto, pictogramas y audio, con transcripción completa.",
+       "en": "Two synthetic voices explain how one story can arrive as text, pictograms and audio, with a full transcript."
+      },
+      "case": "podcast-el-aula-que-incluye"
+     },
+     {
+      "title": {
+       "es": "Documental «Adaptar para incluir»",
+       "en": "Documentary “Adapt to include”"
+      },
+      "tag": {
+       "es": "Video, 2:04 · Unidad 5 · Flow, ElevenLabs, Claude",
+       "en": "Video, 2:04 · Unit 5 · Flow, ElevenLabs, Claude"
+      },
+      "body": {
+       "es": "Para docentes y familias: adaptaciones curriculares accesibles con IA y el lugar de la docente que decide. Con subtítulos.",
+       "en": "For teachers and families: accessible curriculum adaptations with AI and the role of the teacher who decides. With captions."
+      },
+      "case": "videos-ia-generativa"
+     },
+     {
+      "title": {
+       "es": "Asistente «Preguntale a Berni»",
+       "en": "Assistant “Ask Berni”"
+      },
+      "tag": {
+       "es": "Interactivo · Unidad 6 · Claude, Claude Code",
+       "en": "Interactive · Unit 6 · Claude, Claude Code"
+      },
+      "body": {
+       "es": "Un chatbot guiado por opciones, sin campo de texto, que orienta por el sitio desde cualquier página.",
+       "en": "An option-guided chatbot with no text box that guides people through the site from any page."
+      },
+      "case": "preguntale-a-berni"
+     }
+    ]
+   },
+   {
+    "t": "media",
+    "join": true,
+    "h": {
+     "es": "Los dos videos",
+     "en": "The two videos"
+    },
+    "items": [
+     {
+      "kind": "video",
+      "title": {
+       "es": "Los monstruos de Berni (1:18)",
+       "en": "Berni’s monsters (1:18)"
+      },
+      "src": "https://www.youtube.com/embed/EffCv8EIAwI",
+      "open": "https://youtu.be/EffCv8EIAwI"
+     },
+     {
+      "kind": "video",
+      "title": {
+       "es": "Adaptar para incluir (2:04)",
+       "en": "Adapt to include (2:04)"
+      },
+      "src": "https://www.youtube.com/embed/qJ5nEvhGr4I",
+      "open": "https://youtu.be/qJ5nEvhGr4I"
+     }
+    ]
+   },
+   {
+    "t": "audio",
+    "join": true,
+    "h": {
+     "es": "El podcast",
+     "en": "The podcast"
+    },
+    "src": "podcast-el-aula-que-incluye.mp3",
+    "dur": "2:58",
+    "label": {
+     "es": "El aula que incluye: crear contenido educativo con IA generativa (en español)",
+     "en": "El aula que incluye: creating educational content with generative AI (in Spanish)"
+    },
+    "notice": {
+     "es": "Andrea y Billy son voces sintéticas generadas con ElevenLabs. La transcripción está en el caso del podcast.",
+     "en": "Andrea and Billy are synthetic voices generated with ElevenLabs. The transcript is in the podcast case."
+    },
+    "download": {
+     "es": "Descargar el MP3",
+     "en": "Download the MP3"
+    }
+   },
+   {
+    "t": "phase",
+    "n": "01",
+    "id": "plan",
+    "mode": {
+     "es": "plan · TIF I",
+     "en": "plan · Part I"
+    },
+    "name": {
+     "es": "Un contenido, muchas puertas",
+     "en": "One content, many doors"
+    },
+    "q": {
+     "es": "¿Cómo llega el mismo proyecto de sala a una docente sin tiempo, a una niña que todavía no lee y a una familia que entra desde el celular?",
+     "en": "How does the same class project reach a teacher with no time, a girl who cannot read yet and a family browsing on a phone?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "El plan de implementación",
+     "en": "The implementation plan"
+    },
+    "p": [
+     {
+      "es": "La primera parte del TIF fue el plan: área de aplicación, justificación con **DUA, TPACK y ADKAR**, público, mapa del sitio, cuatro flujos de navegación, ubicación de cada recurso y cinco dimensiones éticas (transparencia, responsabilidad, sesgos, equidad y privacidad). El hilo conductor es el proyecto de plástica de sala de 5 años «Los monstruos de Berni y Bortusk Leer».",
+      "en": "The first part of the project was the plan: field of application, rationale with **UDL, TPACK and ADKAR**, audience, site map, four navigation flows, where each resource lives and five ethical dimensions (transparency, accountability, bias, equity and privacy). The common thread is an art project for 5-year-olds, “The monsters of Berni and Bortusk Leer”."
+     },
+     {
+      "es": "La devolución del TIF I recomendó comprobar tres cosas: las alternativas de accesibilidad, la navegación en celulares y la pertinencia de las respuestas del asistente. ==Esas tres recomendaciones ordenaron las pruebas del TIF II==.",
+      "en": "Feedback on Part I recommended checking three things: the accessibility alternatives, navigation on phones and how relevant the assistant’s answers were. ==Those three recommendations shaped the testing in Part II==."
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "h": {
+     "es": "Tres destinatarios, tres situaciones de uso",
+     "en": "Three audiences, three situations of use"
+    },
+    "note": {
+     "es": "Para cada grupo, qué necesita, qué le dificulta el acceso y qué le ofrece el sitio. El caso del Estudiante A es ficticio y anonimizado.",
+     "en": "For each group, what they need, what gets in the way and what the site offers. Student A is a fictional, anonymised case."
+    },
+    "cols": {
+     "dim": {
+      "es": "Destinatario",
+      "en": "Audience"
+     },
+     "before": {
+      "es": "Necesidades y barreras",
+      "en": "Needs and barriers"
+     },
+     "after": {
+      "es": "Respuesta del sitio",
+      "en": "How the site responds"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Docentes de nivel inicial (directo, como mediadoras)",
+       "en": "Early childhood teachers (direct, as mediators)"
+      },
+      "before": {
+       "es": "Materiales listos para adaptar y saber cómo se produjeron. **Barreras:** poco tiempo de planificación, formación desigual en IA, dudas éticas y de privacidad, conectividad desigual.",
+       "en": "Ready-to-adapt materials and knowing how they were made. **Barriers:** little planning time, uneven AI training, ethical and privacy concerns, uneven connectivity."
+      },
+      "after": {
+       "es": "Cada recurso documenta sus prompts en «Cómo se produjo». La guía En la sala ordena el antes, el durante y el después. El asistente orienta sin pedir que se escriba nada.",
+       "en": "Each resource documents its prompts under “How it was made”. The In the classroom guide covers before, during and after. The assistant guides without asking anyone to type."
+      }
+     },
+     {
+      "dim": {
+       "es": "Niñas y niños de 5 años (siempre con mediación adulta)",
+       "en": "5-year-olds (always with an adult)"
+      },
+      "before": {
+       "es": "Anticipar, apoyos visuales y lenguaje predecible. **Barreras:** todavía no leen, lo solo oral se pierde, las transiciones generan ansiedad y el exceso de estímulos satura.",
+       "en": "Anticipation, visual supports and predictable language. **Barriers:** they cannot read yet, oral-only information gets lost, transitions cause anxiety and too much stimulation overwhelms."
+      },
+      "after": {
+       "es": "Historia social con pictogramas, animación con audiodescripción, podcast con transcripción y video con subtítulos. Una zona «para mirar con los chicos» donde nada se reproduce solo, y el Modo calma.",
+       "en": "A social story with pictograms, an animation with audio description, a podcast with a transcript and a video with captions. A “watch with the children” zone where nothing autoplays, and Calm mode."
+      }
+     },
+     {
+      "dim": {
+       "es": "Familias (ampliado)",
+       "en": "Families (extended)"
+      },
+      "before": {
+       "es": "Entender qué se trabaja en la sala y cómo se cuidan los datos. **Barreras:** lenguaje técnico, acceso casi siempre desde el celular y con datos móviles, distintos niveles de alfabetización digital.",
+       "en": "Understanding what happens in class and how data is protected. **Barriers:** technical language, access mostly from a phone on mobile data, different levels of digital literacy."
+      },
+      "after": {
+       "es": "Diseño pensado primero para el celular y en lenguaje claro. La animación se mira en familia y la historia social se imprime. Ética explica la privacidad y el asistente funciona solo con opciones.",
+       "en": "Mobile-first design in plain language. The animation can be watched as a family and the social story printed. The Ethics page explains privacy and the assistant works with options only."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "02",
+    "id": "arquitectura",
+    "mode": {
+     "es": "auditoría y arquitectura",
+     "en": "audit and architecture"
+    },
+    "name": {
+     "es": "Del contenido investigado al mapa del sitio",
+     "en": "From researched content to site map"
+    },
+    "q": {
+     "es": "¿Cómo se ordena un contenido académico para que una docente encuentre en dos clics lo que necesita para mañana?",
+     "en": "How do you organise academic content so a teacher finds what she needs for tomorrow in two clicks?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Auditoría del contenido",
+     "en": "Content audit"
+    },
+    "p": [
+     {
+      "es": "Clara y Silvia investigaron el marco, el caso y las fuentes. **Audité ese material**: separé lo que era para docentes de lo que era para la sala, verifiqué fechas, duraciones y citas contra los trabajos prácticos de cada unidad y lo convertí en un guion por página. Donde un dato no coincidía, mandó la fuente original (por ejemplo, la fecha de publicación de la animación en YouTube).",
+      "en": "Clara and Silvia researched the framework, the case and the sources. **I audited that material**: I separated what was for teachers from what was for the class, checked dates, durations and citations against each unit’s assignments and turned it into a script per page. Where a fact did not match, the original source won (for example, the animation’s publication date on YouTube)."
+     }
+    ]
+   },
+   {
+    "t": "bento",
+    "h": {
+     "es": "Mapa del sitio: dos niveles de profundidad",
+     "en": "Site map: two levels deep"
+    },
+    "note": {
+     "es": "13 páginas en dos niveles, más la 404. Toda página está a dos clics de Inicio. Mismo menú y pie en todas, migas de pan y menú hamburguesa por debajo de 768 px.",
+     "en": "13 pages on two levels, plus the 404. Every page is two clicks from Home. The same menu and footer everywhere, breadcrumbs and a hamburger menu below 768 px."
+    },
+    "items": [
+     {
+      "size": "l",
+      "lead": true,
+      "k": {
+       "es": "Nivel 1",
+       "en": "Level 1"
+      },
+      "title": {
+       "es": "Inicio",
+       "en": "Home"
+      },
+      "body": {
+       "es": "Un mismo contenido, cinco puertas de entrada: una tarjeta por recurso, para quién es y cómo se usó la IA.",
+       "en": "One content, five ways in: a card per resource, who it is for and how AI was used."
+      }
+     },
+     {
+      "size": "m",
+      "tone": true,
+      "k": {
+       "es": "Nivel 1 › Nivel 2",
+       "en": "Level 1 › Level 2"
+      },
+      "title": {
+       "es": "Recursos",
+       "en": "Resources"
+      },
+      "body": {
+       "es": "Hub con filtro por formato y cuatro páginas con la misma plantilla: historia social, animación, podcast y video.",
+       "en": "A hub with a format filter and four pages on the same template: social story, animation, podcast and video."
+      }
+     },
+     {
+      "size": "s",
+      "k": {
+       "es": "Nivel 1",
+       "en": "Level 1"
+      },
+      "title": {
+       "es": "El proyecto",
+       "en": "The project"
+      },
+      "body": {
+       "es": "Área, justificación, público, el caso y los marcos DUA, TPACK y ADKAR.",
+       "en": "Field, rationale, audience, the case and the UDL, TPACK and ADKAR frameworks."
+      }
+     },
+     {
+      "size": "m",
+      "k": {
+       "es": "Nivel 1",
+       "en": "Level 1"
+      },
+      "title": {
+       "es": "Preguntale a Berni",
+       "en": "Ask Berni"
+      },
+      "body": {
+       "es": "El asistente a ancho completo, y desde cualquier página con un botón flotante.",
+       "en": "The assistant full width, and from any page through a floating button."
+      }
+     },
+     {
+      "size": "s",
+      "k": {
+       "es": "Nivel 1",
+       "en": "Level 1"
+      },
+      "title": {
+       "es": "En la sala",
+       "en": "In the classroom"
+      },
+      "body": {
+       "es": "Antes, durante y después, con una tabla recurso por principio DUA.",
+       "en": "Before, during and after, with a resource by UDL principle table."
+      }
+     },
+     {
+      "size": "s",
+      "k": {
+       "es": "Nivel 1",
+       "en": "Level 1"
+      },
+      "title": {
+       "es": "Ética, créditos y mapa",
+       "en": "Ethics, credits and map"
+      },
+      "body": {
+       "es": "Uso responsable, créditos con prompts y APA 7, y el mapa con los recorridos.",
+       "en": "Responsible use, credits with prompts and APA 7, and the map with the routes."
+      }
+     },
+     {
+      "size": "s",
+      "k": {
+       "es": "Nivel 1",
+       "en": "Level 1"
+      },
+      "title": {
+       "es": "Sistema de diseño",
+       "en": "Design system"
+      },
+      "body": {
+       "es": "Tokens, componentes y Modo calma, documentados con el código real.",
+       "en": "Tokens, components and Calm mode, documented with the real code."
+      }
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Recorrido de una docente que llega por primera vez",
+     "en": "Route for a teacher visiting for the first time"
+    },
+    "note": {
+     "es": "Uno de los cuatro recorridos por perfil. Los otros: docente que busca un recurso puntual, familia y evaluación.",
+     "en": "One of the four routes by profile. The others: a teacher looking for a specific resource, a family and assessment."
+    },
+    "steps": {
+     "es": [
+      "Inicio",
+      "El proyecto",
+      "Recursos",
+      "Historia social",
+      "En la sala",
+      "Preguntale a Berni"
+     ],
+     "en": [
+      "Home",
+      "The project",
+      "Resources",
+      "Social story",
+      "In the classroom",
+      "Ask Berni"
+     ]
+    }
+   },
+   {
+    "t": "cards",
+    "cols": 3,
+    "join": true,
+    "h": {
+     "es": "Los otros tres recorridos",
+     "en": "The other three routes"
+    },
+    "items": [
+     {
+      "title": {
+       "es": "Docente que busca un recurso",
+       "en": "Teacher looking for a resource"
+      },
+      "body": {
+       "es": "Inicio › Recursos › el recurso › «Cómo usarlo en la sala» › Siguiente recurso.",
+       "en": "Home › Resources › the resource › “How to use it in class” › Next resource."
+      }
+     },
+     {
+      "title": {
+       "es": "Familia",
+       "en": "Family"
+      },
+      "body": {
+       "es": "Inicio › Animación (para mirar juntos) › Historia social › Asistente («¿qué es una historia social?»).",
+       "en": "Home › Animation (to watch together) › Social story › Assistant (“what is a social story?”)."
+      }
+     },
+     {
+      "title": {
+       "es": "Evaluación",
+       "en": "Assessment"
+      },
+      "body": {
+       "es": "Inicio › Recursos (los cinco, con créditos) › Créditos y referencias › Uso responsable › Mapa del sitio.",
+       "en": "Home › Resources (all five, with credits) › Credits and references › Responsible use › Site map."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "03",
+    "id": "construccion",
+    "mode": {
+     "es": "diseño y construcción",
+     "en": "design and build"
+    },
+    "name": {
+     "es": "Un sistema para dos situaciones de uso",
+     "en": "One system for two situations of use"
+    },
+    "q": {
+     "es": "¿Qué decisiones sirven a la vez a una docente que explora sola y a una sala que mira proyectado?",
+     "en": "Which decisions serve both a teacher exploring alone and a class watching on a projector?"
+    }
+   },
+   {
+    "t": "bento",
+    "h": {
+     "es": "Decisiones de diseño",
+     "en": "Design decisions"
+    },
+    "items": [
+     {
+      "size": "m",
+      "lead": true,
+      "title": {
+       "es": "Un recurso, muchas puertas",
+       "en": "One resource, many doors"
+      },
+      "body": {
+       "es": "Cada formato tiene su color y su ícono, pero **la estructura no cambia**: para qué, el recurso, alternativa accesible, cómo se produjo, cómo usarlo en la sala y créditos. El DUA es el tema del sitio y su criterio de diseño.",
+       "en": "Each format has its own colour and icon, but **the structure never changes**: what for, the resource, accessible alternative, how it was made, how to use it in class and credits. UDL is both the site’s subject and its design criterion."
+      }
+     },
+     {
+      "size": "m",
+      "tone": true,
+      "title": {
+       "es": "Modo calma",
+       "en": "Calm mode"
+      },
+      "body": {
+       "es": "Un botón en el encabezado desatura la paleta, apaga el movimiento y la decoración y aumenta el interlineado. Se aplica antes del primer pintado y se recuerda entre páginas.",
+       "en": "A header button desaturates the palette, turns off motion and decoration and increases line height. It applies before first paint and persists across pages."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Zona «para mirar con los chicos»",
+       "en": "“Watch with the children” zone"
+      },
+      "body": {
+       "es": "Cada recurso vive en un área neutra y de baja estimulación, donde nada se reproduce solo.",
+       "en": "Each resource sits in a neutral, low-stimulation area where nothing autoplays."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Asistente sin campo de texto",
+       "en": "An assistant with no text box"
+      },
+      "body": {
+       "es": "Privacidad por diseño: si no se puede escribir, nadie puede cargar datos de chicos.",
+       "en": "Privacy by design: if you cannot type, nobody can enter children’s data."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Funciona sin JavaScript",
+       "en": "Works without JavaScript"
+      },
+      "body": {
+       "es": "Menú y pie escritos en cada página, y el asistente con una versión en texto en <noscript>.",
+       "en": "Menu and footer written into every page, and the assistant with a text version in <noscript>."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "wide": true,
+    "h": {
+     "es": "El sitio en escritorio y en celular",
+     "en": "The site on desktop and on a phone"
+    },
+    "images": [
+     {
+      "src": "aula-01-inicio-1366.webp",
+      "w": 1366,
+      "h": 854,
+      "alt": {
+       "es": "Inicio de El aula que incluye a 1366 px: el título con dos palabras resaltadas en amarillo y lavanda, la bajada, los botones Ver los recursos y Conocer el proyecto, y Berni, el monstruo azul, sobre una forma orgánica.",
+       "en": "El aula que incluye home page at 1366 px: the title with two words highlighted in yellow and lavender, the subtitle, the See the resources and About the project buttons, and Berni, the blue monster, on an organic shape."
+      },
+      "caption": {
+       "es": "Inicio a 1366 px.",
+       "en": "Home at 1366 px."
+      }
+     },
+     {
+      "src": "aula-02-inicio-390.webp",
+      "w": 780,
+      "h": 1688,
+      "alt": {
+       "es": "El mismo inicio a 390 px: el interruptor Calma y el menú hamburguesa, el título en una línea, la bajada con el resaltado, los dos botones apilados, Berni debajo y el botón flotante del asistente con su avatar.",
+       "en": "The same home page at 390 px: the Calm toggle and the hamburger menu, the title on one line, the subtitle with its highlight, the two buttons stacked, Berni below and the floating assistant button with its avatar."
+      },
+      "caption": {
+       "es": "Inicio a 390 px.",
+       "en": "Home at 390 px."
+      }
+     }
+    ]
+   },
+   {
+    "t": "swatches",
+    "h": {
+     "es": "Paleta",
+     "en": "Palette"
+    },
+    "note": {
+     "es": "Neutros crema cálidos, un único acento de acción coral terracota y un tinte pastel por recurso. Con texto --c-ink encima, los tintes superan 12:1.",
+     "en": "Warm cream neutrals, a single terracotta coral action accent and a pastel tint per resource. With --c-ink text on top, the tints exceed 12:1."
+    },
+    "dense": true,
+    "groups": [
+     {
+      "name": {
+       "es": "Neutros y texto",
+       "en": "Neutrals and text"
+      },
+      "items": [
+       {
+        "token": "--c-bg",
+        "hex": "#FBF7F1",
+        "use": {
+         "es": "Fondo de página",
+         "en": "Page background"
+        }
+       },
+       {
+        "token": "--c-ink",
+        "hex": "#1C2033",
+        "ratio": {
+         "es": "15,09:1",
+         "en": "15.09:1"
+        },
+        "use": {
+         "es": "Texto principal",
+         "en": "Main text"
+        }
+       },
+       {
+        "token": "--c-ink-soft",
+        "hex": "#454A5E",
+        "ratio": {
+         "es": "8,22:1",
+         "en": "8.22:1"
+        },
+        "use": {
+         "es": "Texto secundario",
+         "en": "Secondary text"
+        }
+       },
+       {
+        "token": "--c-muted",
+        "hex": "#5F6478",
+        "ratio": {
+         "es": "5,50:1",
+         "en": "5.50:1"
+        },
+        "use": {
+         "es": "Texto atenuado",
+         "en": "Muted text"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Acción e identidad",
+       "en": "Action and identity"
+      },
+      "items": [
+       {
+        "token": "--c-accent",
+        "hex": "#B4471F",
+        "ratio": {
+         "es": "5,10:1",
+         "en": "5.10:1"
+        },
+        "use": {
+         "es": "Enlaces y botón principal",
+         "en": "Links and main button"
+        }
+       },
+       {
+        "token": "--c-berni",
+        "hex": "#2F5FC4",
+        "ratio": {
+         "es": "5,54:1",
+         "en": "5.54:1"
+        },
+        "use": {
+         "es": "Azul de Berni y enlaces del asistente",
+         "en": "Berni blue and assistant links"
+        }
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Un tinte por recurso",
+       "en": "One tint per resource"
+      },
+      "items": [
+       {
+        "token": "--t-butter",
+        "hex": "#FBEFC4",
+        "use": {
+         "es": "Historia social",
+         "en": "Social story"
+        }
+       },
+       {
+        "token": "--t-sky",
+        "hex": "#DAE6FA",
+        "use": {
+         "es": "Animación",
+         "en": "Animation"
+        }
+       },
+       {
+        "token": "--t-lav",
+        "hex": "#E8E0FA",
+        "use": {
+         "es": "Podcast",
+         "en": "Podcast"
+        }
+       },
+       {
+        "token": "--t-peach",
+        "hex": "#FCDFCF",
+        "use": {
+         "es": "Video",
+         "en": "Video"
+        }
+       },
+       {
+        "token": "--t-mint",
+        "hex": "#D7EFE4",
+        "use": {
+         "es": "Asistente",
+         "en": "Assistant"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "t": "audit",
+    "h": {
+     "es": "Auditoría de contraste",
+     "en": "Contrast audit"
+    },
+    "note": {
+     "es": "Los 12 pares verificados, en el modo normal y en el Modo calma, contra WCAG 2.1 AA (4,5:1 para texto).",
+     "en": "The 12 verified pairs, in normal mode and Calm mode, against WCAG 2.1 AA (4.5:1 for text)."
+    },
+    "cols": {
+     "pair": {
+      "es": "Combinación",
+      "en": "Combination"
+     },
+     "ratio": {
+      "es": "Contraste",
+      "en": "Contrast"
+     },
+     "result": {
+      "es": "Resultado",
+      "en": "Result"
+     },
+     "fix": {
+      "es": "Corrección",
+      "en": "Fix"
+     }
+    },
+    "pass": {
+     "es": "Cumple",
+     "en": "Passes"
+    },
+    "fail": {
+     "es": "No cumple",
+     "en": "Fails"
+    },
+    "nofix": {
+     "es": "No requiere cambios",
+     "en": "No change needed"
+    },
+    "rows": [
+     {
+      "fg": "#1C2033",
+      "bg": "#FBF7F1",
+      "pair": {
+       "es": "Texto principal sobre fondo",
+       "en": "Main text on background"
+      },
+      "ratio": {
+       "es": "15,09:1",
+       "en": "15.09:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#454A5E",
+      "bg": "#FBF7F1",
+      "pair": {
+       "es": "Texto secundario sobre fondo",
+       "en": "Secondary text on background"
+      },
+      "ratio": {
+       "es": "8,22:1",
+       "en": "8.22:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#5F6478",
+      "bg": "#FBF7F1",
+      "pair": {
+       "es": "Texto atenuado sobre fondo",
+       "en": "Muted text on background"
+      },
+      "ratio": {
+       "es": "5,50:1",
+       "en": "5.50:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#5F6478",
+      "bg": "#E8E0FA",
+      "pair": {
+       "es": "Atenuado sobre tinte lavanda",
+       "en": "Muted on lavender tint"
+      },
+      "ratio": {
+       "es": "4,60:1",
+       "en": "4.60:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#B4471F",
+      "bg": "#FBF7F1",
+      "pair": {
+       "es": "Acento (enlaces y botón) sobre fondo",
+       "en": "Accent (links and button) on background"
+      },
+      "ratio": {
+       "es": "5,10:1",
+       "en": "5.10:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#FFFFFF",
+      "bg": "#B4471F",
+      "pair": {
+       "es": "Texto blanco sobre botón",
+       "en": "White text on button"
+      },
+      "ratio": {
+       "es": "5,44:1",
+       "en": "5.44:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#F3EFE9",
+      "bg": "#1C2033",
+      "pair": {
+       "es": "Texto sobre panel oscuro",
+       "en": "Text on dark panel"
+      },
+      "ratio": {
+       "es": "14,06:1",
+       "en": "14.06:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#2F5FC4",
+      "bg": "#FBF7F1",
+      "pair": {
+       "es": "Enlace del asistente sobre fondo",
+       "en": "Assistant link on background"
+      },
+      "ratio": {
+       "es": "5,54:1",
+       "en": "5.54:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#23252E",
+      "bg": "#F4F2EE",
+      "pair": {
+       "es": "Modo calma: texto principal",
+       "en": "Calm mode: main text"
+      },
+      "ratio": {
+       "es": "13,65:1",
+       "en": "13.65:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#565A66",
+      "bg": "#F4F2EE",
+      "pair": {
+       "es": "Modo calma: texto atenuado",
+       "en": "Calm mode: muted text"
+      },
+      "ratio": {
+       "es": "6,16:1",
+       "en": "6.16:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#7E4E3E",
+      "bg": "#F4F2EE",
+      "pair": {
+       "es": "Modo calma: acento",
+       "en": "Calm mode: accent"
+      },
+      "ratio": {
+       "es": "6,17:1",
+       "en": "6.17:1"
+      },
+      "pass": true
+     },
+     {
+      "fg": "#FFFFFF",
+      "bg": "#7E4E3E",
+      "pair": {
+       "es": "Modo calma: texto blanco sobre botón",
+       "en": "Calm mode: white text on button"
+      },
+      "ratio": {
+       "es": "6,89:1",
+       "en": "6.89:1"
+      },
+      "pass": true
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Tipografía",
+     "en": "Typography"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Fraunces, solo para títulos grandes",
+       "en": "Fraunces, for large headings only"
+      },
+      "body": {
+       "es": "Una serif cálida y editorial que le da al sitio un tono cercano, sin infantilizarlo: el sitio le habla a personas adultas.",
+       "en": "A warm, editorial serif that gives the site a friendly tone without making it childish: the site speaks to adults."
+      }
+     },
+     {
+      "lead": {
+       "es": "Lexend, para el texto, la navegación y los botones",
+       "en": "Lexend, for body text, navigation and buttons"
+      },
+      "body": {
+       "es": "Letras amplias, aberturas abiertas y espaciado generoso, pensados para mejorar la fluidez de lectura. Es más cómoda que una sans condensada en tamaños chicos, también para personas con miopía o astigmatismo.",
+       "en": "Wide letters, open apertures and generous spacing designed to improve reading fluency. It is more comfortable than a condensed sans at small sizes, including for people with myopia or astigmatism."
+      }
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Programación",
+     "en": "Coding"
+    },
+    "p": [
+     {
+      "es": "Programé el sitio en **HTML, CSS y JavaScript sin frameworks ni paso de compilación**, publicado en GitHub Pages. Los metadatos y créditos de cada recurso viven en recursos.json y el asistente en chatbot-kb.json. Los videos de YouTube cargan con un patrón de fachada desde el dominio sin cookies: la miniatura y el botón primero, el reproductor recién al hacer clic. Trabajé con Claude Code como apoyo en la programación y lo declaré en los créditos.",
+      "en": "I coded the site in **HTML, CSS and JavaScript with no frameworks and no build step**, published on GitHub Pages. Each resource’s metadata and credits live in recursos.json and the assistant in chatbot-kb.json. YouTube videos load through a facade from the cookie-free domain: thumbnail and button first, the player only on click. I worked with Claude Code as coding support and declared it in the credits."
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "04",
+    "id": "validacion",
+    "mode": {
+     "es": "validación con docentes",
+     "en": "validation with teachers"
+    },
+    "name": {
+     "es": "Prueba piloto del asistente",
+     "en": "Assistant pilot test"
+    },
+    "q": {
+     "es": "¿Le sirve a una docente real lo que diseñamos para ella?",
+     "en": "Does what we designed for teachers actually work for a real one?"
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Del hallazgo al cambio",
+     "en": "From finding to change"
+    },
+    "note": {
+     "es": "Clara y Silvia probaron el asistente con docentes de la Escuela Infantil N.º 6 (Balvanera, CABA), institución donde trabaja Silvia Costas.",
+     "en": "Clara and Silvia tested the assistant with teachers at Escuela Infantil N.º 6 (Balvanera, Buenos Aires), where Silvia Costas works."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Lo que valoraron",
+       "en": "What they valued"
+      },
+      "body": {
+       "es": "Interactuar con opciones les resultó **más fácil que tener que armar una conversación**. Destacaron los colores, que el asistente tenga nombre propio, la navegación y la facilidad de comprensión.",
+       "en": "Interacting through options felt **easier than having to build a conversation**. They highlighted the colours, the assistant having its own name, the navigation and how easy it was to understand."
+      }
+     },
+     {
+      "lead": {
+       "es": "Lo que había que mejorar",
+       "en": "What needed improving"
+      },
+      "body": {
+       "es": "No sabían cómo buscar algo que no estuviera entre las opciones.",
+       "en": "They did not know how to look for something that was not among the options."
+      }
+     },
+     {
+      "lead": {
+       "es": "El ajuste que hice",
+       "en": "The adjustment I made"
+      },
+      "body": {
+       "es": "Sumé al inicio la opción ==«No encuentro lo que busco»==, que deriva al mapa del sitio y a los recorridos sugeridos para docentes, familias y evaluación.",
+       "en": "I added the option ==“I can’t find what I’m looking for”== at the start, which leads to the site map and the suggested routes for teachers, families and assessment."
+      }
+     },
+     {
+      "lead": {
+       "es": "Por qué así",
+       "en": "Why this way"
+      },
+      "body": {
+       "es": "Mantiene la decisión de no tener campo de texto (privacidad y confiabilidad) y le da una salida a quien no se reconoce en las opciones, sin sumar profundidad al árbol.",
+       "en": "It keeps the decision not to have a text box (privacy and reliability) and gives a way out to anyone who does not see themselves in the options, without making the tree deeper."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "05",
+    "id": "qa",
+    "mode": {
+     "es": "QA",
+     "en": "QA"
+    },
+    "name": {
+     "es": "Accesibilidad y calidad, medidas",
+     "en": "Accessibility and quality, measured"
+    },
+    "q": {
+     "es": "¿El sitio cumple WCAG 2.1 AA en las condiciones en que lo van a usar: en el celular, con datos móviles y con el Modo calma?",
+     "en": "Does the site meet WCAG 2.1 AA in the conditions it will be used in: on a phone, on mobile data and with Calm mode?"
+    }
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "arrow": false,
+    "h": {
+     "es": "Pruebas y resultados",
+     "en": "Tests and results"
+    },
+    "note": {
+     "es": "Validación de accesibilidad hecha junto con Silvia Costas, el 7/11/2026.",
+     "en": "Accessibility validation done together with Silvia Costas on 7 November 2026."
+    },
+    "cols": {
+     "dim": {
+      "es": "Prueba",
+      "en": "Test"
+     },
+     "before": {
+      "es": "Alcance",
+      "en": "Scope"
+     },
+     "after": {
+      "es": "Resultado",
+      "en": "Result"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Lighthouse",
+       "en": "Lighthouse"
+      },
+      "before": {
+       "es": "13 páginas y la 404, en mobile (4G lento simulado) y desktop",
+       "en": "13 pages and the 404, mobile (simulated slow 4G) and desktop"
+      },
+      "after": {
+       "es": "**100** en Accesibilidad, Buenas prácticas y SEO en todas. Rendimiento mobile de 85 o más en 12 de 14; desktop de 94 o más en todas",
+       "en": "**100** in Accessibility, Best practices and SEO on all of them. Mobile performance of 85 or more on 12 of 14; desktop 94 or more on all"
+      }
+     },
+     {
+      "dim": {
+       "es": "axe-core (WCAG 2.0 y 2.1, A y AA)",
+       "en": "axe-core (WCAG 2.0 and 2.1, A and AA)"
+      },
+      "before": {
+       "es": "112 corridas: 14 páginas, 4 anchos (360, 390, 768 y 1366 px), Modo calma apagado y encendido",
+       "en": "112 runs: 14 pages, 4 widths (360, 390, 768 and 1366 px), Calm mode off and on"
+      },
+      "after": {
+       "es": "**0 violaciones**, sin desplazamiento horizontal",
+       "en": "**0 violations**, no horizontal scrolling"
+      }
+     },
+     {
+      "dim": {
+       "es": "Espaciado del texto (1.4.12)",
+       "en": "Text spacing (1.4.12)"
+      },
+      "before": {
+       "es": "56 casos",
+       "en": "56 cases"
+      },
+      "after": {
+       "es": "Tres recortes corregidos; **56 de 56** sin problemas en la corrida final",
+       "en": "Three clipping issues fixed; **56 of 56** clean in the final run"
+      }
+     },
+     {
+      "dim": {
+       "es": "Zoom al 200 % (1.4.4)",
+       "en": "200% zoom (1.4.4)"
+      },
+      "before": {
+       "es": "Todas las páginas",
+       "en": "Every page"
+      },
+      "after": {
+       "es": "Sin pérdida de contenido ni de funciones",
+       "en": "No loss of content or functionality"
+      }
+     },
+     {
+      "dim": {
+       "es": "Teclado",
+       "en": "Keyboard"
+      },
+      "before": {
+       "es": "56 recorridos, con y sin Modo calma",
+       "en": "56 walkthroughs, with and without Calm mode"
+      },
+      "after": {
+       "es": "Sin trampas de foco y con el foco siempre visible",
+       "en": "No focus traps and focus always visible"
+      }
+     },
+     {
+      "dim": {
+       "es": "Dispositivos reales",
+       "en": "Real devices"
+      },
+      "before": {
+       "es": "iPhone con Safari y Android con Chrome",
+       "en": "iPhone with Safari and Android with Chrome"
+      },
+      "after": {
+       "es": "Todo funciona",
+       "en": "Everything works"
+      }
+     },
+     {
+      "dim": {
+       "es": "Asistente",
+       "en": "Assistant"
+      },
+      "before": {
+       "es": "33 nodos y 34 enlaces, con tests/chatbot-arbol.js",
+       "en": "33 nodes and 34 links, with tests/chatbot-arbol.js"
+      },
+      "after": {
+       "es": "Sin destinos rotos ni nodos sin salida",
+       "en": "No broken destinations and no dead-end nodes"
+      }
+     },
+     {
+      "dim": {
+       "es": "Citas APA",
+       "en": "APA citations"
+      },
+      "before": {
+       "es": "Todo el sitio y el asistente",
+       "en": "The whole site and the assistant"
+      },
+      "after": {
+       "es": "30 referencias, todas citadas, y todas las citas con su referencia",
+       "en": "30 references, all cited, and every citation with its reference"
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Corregido durante la verificación",
+     "en": "Fixed during verification"
+    },
+    "items": {
+     "es": [
+      "El asistente no tenía puntaje de rendimiento: un desplazamiento automático al cargar impedía medir el LCP. Ahora el historial no se mueve en el primer mensaje y la página llegó a 89 en mobile y 99 en desktop.",
+      "Los pictogramas de las tarjetas estaban declarados con una altura menor a la real. Corregí las dimensiones y Buenas prácticas pasó de 96 a 100.",
+      "Con el espaciado de texto ampliado, el estado del asistente se cortaba, el encabezado se salía 14 px a 320 px y algunas etiquetas del mapa se salían 11 px. Las tres cosas quedaron resueltas.",
+      "Sin raya larga ni raya media en todo el sitio, 0 enlaces internos rotos y una sola h1 por página."
+     ],
+     "en": [
+      "The assistant had no performance score: an automatic scroll on load stopped LCP from being measured. The history no longer moves on the first message and the page reached 89 on mobile and 99 on desktop.",
+      "The card pictograms were declared shorter than they really were. I fixed the dimensions and Best practices went from 96 to 100.",
+      "With enlarged text spacing, the assistant status was cut off, the header overflowed by 14 px at 320 px and some map labels overflowed by 11 px. All three were fixed.",
+      "No em or en dashes anywhere on the site, 0 broken internal links and a single h1 per page."
+     ]
+    }
+   },
+   {
+    "t": "phase",
+    "n": "06",
+    "id": "etica",
+    "mode": {
+     "es": "transparencia",
+     "en": "transparency"
+    },
+    "name": {
+     "es": "IA como herramienta, no como fuente de decisiones",
+     "en": "AI as a tool, not a source of decisions"
+    },
+    "q": {
+     "es": "¿Cómo se usa IA generativa en un material para infancias sin perder el control humano ni la confianza de las familias?",
+     "en": "How do you use generative AI in material for young children without losing human control or the trust of families?"
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Uso responsable de la IA",
+     "en": "Responsible use of AI"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Control humano en cada iteración",
+       "en": "Human control in every iteration"
+      },
+      "body": {
+       "es": "Cada recurso pasó por varias versiones: reescribí prompts, descarté herramientas que no daban la calidad necesaria (Murf AI y Seedance) y corregí lo que el modelo agregaba sin que se lo pidiera.",
+       "en": "Each resource went through several versions: I rewrote prompts, dropped tools that did not deliver the quality needed (Murf AI and Seedance) and fixed what the model added unasked."
+      }
+     },
+     {
+      "lead": {
+       "es": "Transparencia",
+       "en": "Transparency"
+      },
+      "body": {
+       "es": "Cada recurso lleva el rótulo «Generado con IA generativa y validado por el Equipo 03» y declara sus herramientas. Los videos están etiquetados en YouTube como hechos con IA, los clips de Veo llevan la marca SynthID y las voces sintéticas se presentan como tales. Los créditos muestran los prompts reales.",
+       "en": "Each resource carries the label “Generated with generative AI and validated by Team 03” and declares its tools. The videos are labelled on YouTube as made with AI, the Veo clips carry the SynthID watermark and the synthetic voices are presented as such. The credits show the real prompts."
+      }
+     },
+     {
+      "lead": {
+       "es": "Sesgos",
+       "en": "Bias"
+      },
+      "body": {
+       "es": "Revisamos que ningún material reprodujera estereotipos sobre el autismo. Los personajes son monstruos, no niños.",
+       "en": "We checked that no material reproduced stereotypes about autism. The characters are monsters, not children."
+      }
+     },
+     {
+      "lead": {
+       "es": "Privacidad",
+       "en": "Privacy"
+      },
+      "body": {
+       "es": "El Estudiante A es un caso ficticio y anonimizado: ningún nombre, diagnóstico, foto ni institución de niñas o niños reales. El asistente no tiene campo de texto.",
+       "en": "Student A is a fictional, anonymised case: no names, diagnoses, photos or institutions of real children. The assistant has no text box."
+      }
+     },
+     {
+      "lead": {
+       "es": "Equidad y derechos de autor",
+       "en": "Equity and copyright"
+      },
+      "body": {
+       "es": "Priorizamos planes gratuitos o accesibles. Las obras de Antonio Berni y de Bortusk Leer no se reproducen: Berni, el monstruo azul, es un personaje propio.",
+       "en": "We prioritised free or affordable plans. Works by Antonio Berni and Bortusk Leer are not reproduced: Berni, the blue monster, is our own character."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "07",
+    "id": "resultado",
+    "mode": {
+     "es": "cierre",
+     "en": "wrap-up"
+    },
+    "name": {
+     "es": "Resultado y próximos pasos",
+     "en": "Outcome and next steps"
+    },
+    "q": {
+     "es": "¿Qué quedó resuelto y qué falta para que el sitio sea todavía más accesible?",
+     "en": "What was solved, and what is still needed to make the site even more accessible?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Resultado",
+     "en": "Outcome"
+    },
+    "hl": true,
+    "p": [
+     {
+      "es": "El TIF se aprobó con una **calificación final de 9,50 sobre 10**. El sitio quedó publicado: un mismo proyecto de sala en cinco formatos, con créditos, prompts reales y alternativas accesibles en cada uno, y un asistente que se ajustó a partir de lo que dijeron las docentes.",
+      "en": "The project passed with a **final grade of 9.50 out of 10**. The site is published: one class project in five formats, each with credits, real prompts and accessible alternatives, and an assistant adjusted on the basis of what the teachers said."
+     },
+     {
+      "es": "Para mí, el aprendizaje más fuerte fue que la accesibilidad no se agrega al final: el DUA definió la arquitectura, la plantilla de recurso, el Modo calma y el asistente sin campo de texto desde el plan.",
+      "en": "For me, the strongest lesson was that accessibility is not added at the end: UDL defined the architecture, the resource template, Calm mode and the assistant with no text box from the plan onward."
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Limitaciones y próximos pasos",
+     "en": "Limitations and next steps"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "WCAG 1.2.5, cumplido en parte",
+       "en": "WCAG 1.2.5, partly met"
+      },
+      "body": {
+       "es": "La animación no tiene diálogos y su audiodescripción está en texto, no en audio.",
+       "en": "The animation has no dialogue and its audio description is in text, not audio."
+      }
+     },
+     {
+      "lead": {
+       "es": "Lector de pantalla",
+       "en": "Screen reader"
+      },
+      "body": {
+       "es": "Falta una prueba con NVDA o VoiceOver.",
+       "en": "A test with NVDA or VoiceOver is still pending."
+      }
+     },
+     {
+      "lead": {
+       "es": "Rendimiento mobile",
+       "en": "Mobile performance"
+      },
+      "body": {
+       "es": "Dos páginas quedan por debajo de 85 (Historia social, 77, y Recursos, 83) por el desplazamiento al cargar las tipografías. Se resuelve con precarga de fuentes.",
+       "en": "Two pages stay below 85 (Social story, 77, and Resources, 83) because of layout shift while fonts load. Preloading the fonts fixes it."
+      }
+     },
+     {
+      "lead": {
+       "es": "Subtítulos del documental",
+       "en": "Documentary captions"
+      },
+      "body": {
+       "es": "Los automáticos de YouTube coinciden palabra por palabra con la transcripción, pero fallan mayúsculas y puntuación. Falta subir un archivo corregido.",
+       "en": "YouTube’s automatic captions match the transcript word for word, but capitalisation and punctuation are off. A corrected file still needs uploading."
+      }
+     }
+    ]
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencias",
+     "en": "References"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Argüello, C., Costas, S., y Pedaci, L. (2026a).",
+       "en": "Argüello, C., Costas, S., y Pedaci, L. (2026a)."
+      },
+      "title": {
+       "es": "El aula que incluye: IA generativa como soporte de inclusión en el nivel inicial",
+       "en": "El aula que incluye: IA generativa como soporte de inclusión en el nivel inicial"
+      },
+      "post": {
+       "es": " [Sitio web].",
+       "en": " [Sitio web]."
+      },
+      "url": "https://lpedaci.github.io/iag-tif/"
+     },
+     {
+      "pre": {
+       "es": "Argüello, C., Costas, S., y Pedaci, L. (2026b).",
+       "en": "Argüello, C., Costas, S., y Pedaci, L. (2026b)."
+      },
+      "title": {
+       "es": "Hoy creamos nuestro monstruo",
+       "en": "Hoy creamos nuestro monstruo"
+      },
+      "post": {
+       "es": " [Historia social con pictogramas generada con IA]. El aula que incluye.",
+       "en": " [Historia social con pictogramas generada con IA]. El aula que incluye."
+      },
+      "url": "https://lpedaci.github.io/iag-tif/recursos/historia-social.html"
+     },
+     {
+      "pre": {
+       "es": "Argüello, C., Costas, S., y Pedaci, L. (2026c).",
+       "en": "Argüello, C., Costas, S., y Pedaci, L. (2026c)."
+      },
+      "title": {
+       "es": "Preguntale a Berni",
+       "en": "Preguntale a Berni"
+      },
+      "post": {
+       "es": " [Chatbot]. El aula que incluye.",
+       "en": " [Chatbot]. El aula que incluye."
+      },
+      "url": "https://lpedaci.github.io/iag-tif/asistente.html"
+     },
+     {
+      "pre": {
+       "es": "Argüello, C., Costas, S., y Pedaci, L. (Productoras). (2026d, 11 de septiembre).",
+       "en": "Argüello, C., Costas, S., y Pedaci, L. (Productoras). (2026d, 11 de septiembre)."
+      },
+      "title": {
+       "es": "El aula que incluye: crear contenido educativo con IA generativa",
+       "en": "El aula que incluye: crear contenido educativo con IA generativa"
+      },
+      "post": {
+       "es": " [Episodio de podcast de audio]. En El aula que incluye. Google Drive.",
+       "en": " [Episodio de podcast de audio]. En El aula que incluye. Google Drive."
+      },
+      "url": "https://drive.google.com/file/d/1LhOBEpT0pVuegL7HiBLqOZKyaX_B_HoB/view"
+     },
+     {
+      "pre": {
+       "es": "Pedaci, L. [El servidor de Lourdes]. (2026a, 27 de agosto).",
+       "en": "Pedaci, L. [El servidor de Lourdes]. (2026a, 27 de agosto)."
+      },
+      "title": {
+       "es": "Los monstruos de Berni: una animación para la inclusión en la primera infancia",
+       "en": "Los monstruos de Berni: una animación para la inclusión en la primera infancia"
+      },
+      "post": {
+       "es": " [Video]. YouTube.",
+       "en": " [Video]. YouTube."
+      },
+      "url": "https://youtu.be/EffCv8EIAwI"
+     },
+     {
+      "pre": {
+       "es": "Pedaci, L. [El servidor de Lourdes]. (2026b, 24 de septiembre).",
+       "en": "Pedaci, L. [El servidor de Lourdes]. (2026b, 24 de septiembre)."
+      },
+      "title": {
+       "es": "Adaptar para incluir: inteligencia artificial en la educación inicial",
+       "en": "Adaptar para incluir: inteligencia artificial en la educación inicial"
+      },
+      "post": {
+       "es": " [Video]. YouTube.",
+       "en": " [Video]. YouTube."
+      },
+      "url": "https://youtu.be/qJ5nEvhGr4I"
+     }
+    ]
+   }
+  ],
+  "outcome": null,
+  "credits": {
+   "es": "Equipo 03: Clara Argüello, Silvia Costas y Lourdes Pedaci (autoría académica de todos los recursos). Cátedra: titular, Mg. Lic. Mónica Leda Torres; adjunto, Mg. Lic. Juan Ruiz Díaz; profesores ayudantes: Federico Centurión, Marcela Trotta, Miriam Cañamas, Carolina Armella, Raúl Cracco, Verónica Ruggero y Alfredo Esquivel. Declaración de uso de IA: se usaron Claude y Claude Code (Anthropic) como apoyo en la programación del sitio, la organización y la revisión de la redacción; los recursos multimedia se produjeron con las herramientas declaradas en cada uno. La conceptualización, las decisiones pedagógicas, el diseño de la experiencia y la validación de los contenidos son del Equipo 03. Las capturas son del sitio publicado.",
+   "en": "Team 03: Clara Argüello, Silvia Costas and Lourdes Pedaci (academic authorship of every resource). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz; teaching assistants: Federico Centurión, Marcela Trotta, Miriam Cañamas, Carolina Armella, Raúl Cracco, Verónica Ruggero and Alfredo Esquivel. AI use statement: Claude and Claude Code (Anthropic) were used as support for coding the site, organising and reviewing the writing; the multimedia resources were produced with the tools declared for each one. The concept, the pedagogical decisions, the experience design and the validation of all content belong to Team 03. Screenshots are from the published site."
+  }
+ },
+ "videos-ia-generativa": {
+  "cat": "cont",
+  "touch": "cap",
+  "title": {
+   "es": "Animación y documental con IA generativa",
+   "en": "An animation and a documentary made with generative AI"
+  },
+  "subtitle": {
+   "es": "Dos videos para el mismo proyecto de sala: un corto sin diálogos para mirar en grupo antes de la actividad y un documental breve para docentes y familias.",
+   "en": "Two videos for the same class project: a dialogue-free short to watch as a group before the activity and a brief documentary for teachers and families."
+  },
+  "chips": {
+   "es": [
+    "Animación",
+    "Documental",
+    "IA generativa",
+    "Accesibilidad"
+   ],
+   "en": [
+    "Animation",
+    "Documentary",
+    "Generative AI",
+    "Accessibility"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Una sala de 5 años necesita anticipar lo que va a pasar sin depender de la palabra, y las docentes y las familias necesitan entender qué aporta la IA sin un texto académico de por medio.",
+    "en": "A class of 5-year-olds needs to anticipate what will happen without relying on words, and teachers and families need to understand what AI brings without an academic text in between."
+   },
+   "solution": {
+    "es": "Produje los dos videos con IA generativa por escenas, con un personaje propio que se sostiene entre planos, revisión humana de cada clip, rotulado de origen y alternativas accesibles.",
+    "en": "I produced both videos with generative AI scene by scene, with our own character held consistent across shots, human review of every clip, origin labelling and accessible alternatives."
+   },
+   "results": [
+    {
+     "v": "1:18",
+     "l": {
+      "es": "de animación sin diálogos, con audiodescripción en texto",
+      "en": "of dialogue-free animation, with a text audio description"
+     }
+    },
+    {
+     "v": "2:04",
+     "l": {
+      "es": "de documental con voz en off, subtítulos y transcripción",
+      "en": "of documentary with voice-over, captions and transcript"
+     }
+    },
+    {
+     "t": {
+      "es": "Los dos están etiquetados en YouTube como hechos con IA, y los clips de Veo llevan la marca SynthID.",
+      "en": "Both are labelled on YouTube as made with AI, and the Veo clips carry the SynthID watermark."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Learning Experience Designer: guion, generación de escenas con IA, música, voz y montaje",
+    "en": "Learning Experience Designer: script, AI scene generation, music, voice and editing"
+   },
+   "timeline": {
+    "es": "Agosto a septiembre 2026 (publicados el 27/8 y el 24/9)",
+    "en": "August to September 2026 (published on 27 August and 24 September)"
+   },
+   "context": {
+    "es": "Gestión de recursos digitales con IA generativa, Licenciatura en Tecnología Educativa, UTN FRBA. Trabajo del Equipo 03: Clara Argüello, Silvia Costas y Lourdes Pedaci",
+    "en": "Managing Digital Resources with Generative AI, Bachelor’s in Educational Technology, UTN FRBA. Work by Team 03: Clara Argüello, Silvia Costas and Lourdes Pedaci"
+   },
+   "stack": [
+    "ChatGPT (GPT-5)",
+    "Canva",
+    "Veo 3.1 Fast",
+    "Flow",
+    "ElevenLabs",
+    "Suno",
+    "Claude",
+    "Camtasia",
+    "YouTube"
+   ],
+   "methods": {
+    "es": [
+     "Imagen de referencia",
+     "Prompts negativos",
+     "Generación por escenas",
+     "Audiodescripción",
+     "DUA"
+    ],
+    "en": [
+     "Reference image",
+     "Negative prompts",
+     "Scene-by-scene generation",
+     "Audio description",
+     "UDL"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Ver la animación en YouTube",
+     "en": "Watch the animation on YouTube"
+    },
+    "url": "https://youtu.be/EffCv8EIAwI"
+   },
+   {
+    "label": {
+     "es": "Ver el documental en YouTube",
+     "en": "Watch the documentary on YouTube"
+    },
+    "url": "https://youtu.be/qJ5nEvhGr4I"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "cards",
+    "cols": 1,
+    "h": {
+     "es": "Parte del proyecto El aula que incluye",
+     "en": "Part of the El aula que incluye project"
+    },
+    "caseCta": {
+     "es": "Ver el caso del espacio digital completo",
+     "en": "See the case for the full digital space"
+    },
+    "items": [
+     {
+      "title": {
+       "es": "El aula que incluye: IA generativa para la inclusión en el nivel inicial",
+       "en": "The inclusive classroom: generative AI for inclusion in early childhood education"
+      },
+      "body": {
+       "es": "Los dos videos son los recursos de las unidades 3 y 5 del espacio digital, que cuenta un mismo proyecto de sala en cinco formatos.",
+       "en": "Both videos are the Unit 3 and Unit 5 resources of the digital space that tells one class project in five formats."
+      },
+      "case": "el-aula-que-incluye"
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "01",
+    "id": "animacion",
+    "mode": {
+     "es": "animación · unidad 3",
+     "en": "animation · unit 3"
+    },
+    "name": {
+     "es": "Los monstruos de Berni",
+     "en": "Berni’s monsters"
+    },
+    "q": {
+     "es": "¿Cómo se anticipa una situación de la sala a quien todavía no lee y se satura con el ruido?",
+     "en": "How do you anticipate a classroom situation for someone who cannot read yet and is overwhelmed by noise?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Un corto para mirar antes de la actividad",
+     "en": "A short to watch before the activity"
+    },
+    "p": [
+     {
+      "es": "Un corto de 1:18 **sin diálogos**, anticipatorio y modelizador: Berni acompaña a un compañero que se tapa los oídos por el ruido hasta un rincón de calma y después lo invita a jugar en ronda. Está pensado para mirar en grupo antes de la actividad de plástica, con el caso ficticio del Estudiante A en mente: la información llega por la imagen y no por la palabra.",
+      "en": "A 1:18 **dialogue-free** short that anticipates and models: Berni walks a classmate who covers their ears because of the noise to a calm corner, then invites them to play in a circle. It is meant to be watched as a group before the art activity, with the fictional Student A in mind: the information arrives through images, not words."
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Pipeline de producción",
+     "en": "Production pipeline"
+    },
+    "steps": {
+     "es": [
+      "Personaje de referencia con ChatGPT (GPT-5)",
+      "Escena de apertura con Canva Contenido Mágico",
+      "Escenas por separado con Veo 3.1 Fast, de imagen a video",
+      "Revisión de cada clip",
+      "Música con Suno",
+      "Montaje y créditos en Camtasia",
+      "Audiodescripción escrita escena por escena"
+     ],
+     "en": [
+      "Reference character with ChatGPT (GPT-5)",
+      "Opening scene with Canva Magic Media",
+      "Separate scenes with Veo 3.1 Fast, image to video",
+      "Review of every clip",
+      "Music with Suno",
+      "Editing and credits in Camtasia",
+      "Scene-by-scene written audio description"
+     ]
+    }
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Técnicas para sostener al personaje",
+     "en": "Techniques to keep the character consistent"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Imagen de referencia",
+       "en": "Reference image"
+      },
+      "body": {
+       "es": "Diseñé a Berni primero y usé esa imagen para animar cada escena, así el personaje no cambia entre planos.",
+       "en": "I designed Berni first and used that image to animate every scene, so the character stays the same across shots."
+      }
+     },
+     {
+      "lead": {
+       "es": "Prompts negativos",
+       "en": "Negative prompts"
+      },
+      "body": {
+       "es": "Para excluir lo que no tenía que aparecer: dientes afilados, gestos agresivos, colores estridentes.",
+       "en": "To exclude what must not appear: sharp teeth, aggressive gestures, garish colours."
+      }
+     },
+     {
+      "lead": {
+       "es": "Enfoque modular",
+       "en": "Modular approach"
+      },
+      "body": {
+       "es": "Generé cada escena por separado y ensamblé al final, así una escena fallida se rehace sin tocar las demás.",
+       "en": "I generated each scene separately and assembled at the end, so a failed scene can be redone without touching the rest."
+      }
+     }
+    ]
+   },
+   {
+    "t": "quote",
+    "h": {
+     "es": "Fragmento del prompt del personaje",
+     "en": "Excerpt from the character prompt"
+    },
+    "body": {
+     "es": "Berni es un monstruo peludo y regordete de pelaje azul, cubierto de pequeños destellos blancos brillantes como estrellitas.",
+     "en": "Berni is a chubby, furry monster with blue fur, covered in small bright white sparkles like little stars."
+    },
+    "p": [
+     {
+      "es": "Paso 0 del trabajo práctico de la Unidad 3. El prompt completo y una iteración anterior, con otra paleta, están en la página del recurso.",
+      "en": "Step 0 of the Unit 3 assignment (quoted in Spanish in the original). The full prompt and an earlier iteration, with another palette, are on the resource page."
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Problema y solución: una figura que nadie pidió",
+     "en": "Problem and solution: a figure nobody asked for"
+    },
+    "body": {
+     "es": "En las primeras versiones de la escena 2, el modelo agregó **una figura humana infantil que no se había pedido**. La corregí describiendo al nuevo personaje con rasgos claros de monstruo, diferenciándolo por el color, aclarando que no había seres humanos y partiendo de la imagen de referencia.",
+     "en": "In the first versions of scene 2, the model added **a child-like human figure nobody had asked for**. I fixed it by describing the new character with clear monster features, setting it apart by colour, stating there were no humans and starting from the reference image."
+    }
+   },
+   {
+    "t": "embed",
+    "kind": "video",
+    "h": {
+     "es": "Ver la animación",
+     "en": "Watch the animation"
+    },
+    "src": "https://www.youtube.com/embed/EffCv8EIAwI",
+    "open": "https://youtu.be/EffCv8EIAwI",
+    "label": {
+     "es": "Los monstruos de Berni: una animación para la inclusión en la primera infancia",
+     "en": "Berni’s monsters: an animation for inclusion in early childhood"
+    }
+   },
+   {
+    "t": "list",
+    "join": true,
+    "h": {
+     "es": "Audiodescripción",
+     "en": "Audio description"
+    },
+    "note": {
+     "es": "La animación no tiene diálogos. Esta es su alternativa en texto, escena por escena.",
+     "en": "The animation has no dialogue. This is its text alternative, scene by scene."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Escena 1",
+       "en": "Scene 1"
+      },
+      "body": {
+       "es": "Una sala de jardín vacía, en colores pastel, con estantes, una alfombra suave y luz de la mañana. La cámara la recorre despacio.",
+       "en": "An empty kindergarten room in pastel colours, with shelves, a soft rug and morning light. The camera pans slowly."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escena 2",
+       "en": "Scene 2"
+      },
+      "body": {
+       "es": "Berni, un monstruo azul y peludo con destellos blancos, saluda con la mano en el centro de la sala.",
+       "en": "Berni, a blue, furry monster with white sparkles, waves from the middle of the room."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escena 3",
+       "en": "Scene 3"
+      },
+      "body": {
+       "es": "Berni camina despacio hacia un monstruo verde menta que está sentado en el suelo, encogido y triste, y se agacha a su altura.",
+       "en": "Berni walks slowly towards a mint-green monster sitting on the floor, hunched and sad, and crouches to its level."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escena 4",
+       "en": "Scene 4"
+      },
+      "body": {
+       "es": "El monstruo verde menta se tapa las orejas porque hay mucho ruido. Berni se queda a su lado. El murmullo baja hasta el silencio.",
+       "en": "The mint-green monster covers its ears because it is too noisy. Berni stays beside it. The murmur fades to silence."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escena 5",
+       "en": "Scene 5"
+      },
+      "body": {
+       "es": "Berni lo acompaña a un rincón de calma con cojines, luz tenue y plantas. Los dos respiran tranquilos.",
+       "en": "Berni takes it to a calm corner with cushions, soft light and plants. They both breathe calmly."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escena 6",
+       "en": "Scene 6"
+      },
+      "body": {
+       "es": "Ya calmado, el monstruo verde menta se pone de pie. Berni le da la mano y caminan hacia un grupo de monstruos que juega en ronda. Los demás les hacen lugar.",
+       "en": "Calm now, the mint-green monster stands up. Berni takes its hand and they walk towards a group of monsters playing in a circle. The others make room."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escena 7",
+       "en": "Scene 7"
+      },
+      "body": {
+       "es": "El grupo juega en ronda y sonríe. El monstruo verde menta forma parte del grupo.",
+       "en": "The group plays in a circle and smiles. The mint-green monster is part of the group."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escena 8",
+       "en": "Scene 8"
+      },
+      "body": {
+       "es": "Berni lo lleva al centro del círculo. Todos se toman de las manos y se balancean riendo suavemente. La cámara se aleja.",
+       "en": "Berni brings it to the middle of the circle. They all hold hands and sway, laughing softly. The camera pulls back."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escena 9",
+       "en": "Scene 9"
+      },
+      "body": {
+       "es": "Créditos sobre un fondo azul medianoche con destellos suaves.",
+       "en": "Credits over a midnight-blue background with soft sparkles."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "02",
+    "id": "documental",
+    "mode": {
+     "es": "documental · unidad 5",
+     "en": "documentary · unit 5"
+    },
+    "name": {
+     "es": "Adaptar para incluir",
+     "en": "Adapt to include"
+    },
+    "q": {
+     "es": "¿Cómo se explica en dos minutos qué puede hacer la IA por una sala inclusiva, y qué no?",
+     "en": "How do you explain in two minutes what AI can do for an inclusive classroom, and what it cannot?"
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Un documental para docentes y familias",
+     "en": "A documentary for teachers and families"
+    },
+    "p": [
+     {
+      "es": "Un documental de 2:04 sobre adaptaciones curriculares accesibles: el DUA, qué recursos puede generar la IA, las barreras de conectividad, formación y privacidad, y **el lugar de la docente que decide** qué herramienta usar, con qué intención y para quién.",
+      "en": "A 2:04 documentary on accessible curriculum adaptations: UDL, which resources AI can generate, the barriers of connectivity, training and privacy, and **the role of the teacher who decides** which tool to use, with what intention and for whom."
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Pipeline de producción",
+     "en": "Production pipeline"
+    },
+    "steps": {
+     "es": [
+      "Guion de la voz en off con Claude",
+      "Escenas y extensiones con Flow (Omni 1.1 Flash y Veo 3.1 Lite)",
+      "Revisión de cada clip, sin rostros de niños",
+      "Voz en off y música con ElevenLabs",
+      "Montaje en Camtasia",
+      "Subtítulos y transcripción"
+     ],
+     "en": [
+      "Voice-over script with Claude",
+      "Scenes and extensions with Flow (Omni 1.1 Flash and Veo 3.1 Lite)",
+      "Review of every clip, no children’s faces",
+      "Voice-over and music with ElevenLabs",
+      "Editing in Camtasia",
+      "Captions and transcript"
+     ]
+    }
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "arrow": false,
+    "h": {
+     "es": "Herramientas evaluadas",
+     "en": "Tools evaluated"
+    },
+    "note": {
+     "es": "La oferta de herramientas de video con IA cambia rápido, así que probé y comparé antes de elegir.",
+     "en": "AI video tools change fast, so I tested and compared before choosing."
+    },
+    "cols": {
+     "dim": {
+      "es": "Herramienta",
+      "en": "Tool"
+     },
+     "before": {
+      "es": "Para qué",
+      "en": "What for"
+     },
+     "after": {
+      "es": "Decisión",
+      "en": "Decision"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Flow (Omni 1.1 Flash y Veo 3.1 Lite)",
+       "en": "Flow (Omni 1.1 Flash and Veo 3.1 Lite)"
+      },
+      "before": {
+       "es": "Generar escenas y extenderlas",
+       "en": "Generating and extending scenes"
+      },
+      "after": {
+       "es": "**Se usó**",
+       "en": "**Used**"
+      }
+     },
+     {
+      "dim": {
+       "es": "ElevenLabs (voz y Music v2)",
+       "en": "ElevenLabs (voice and Music v2)"
+      },
+      "before": {
+       "es": "Voz en off y música",
+       "en": "Voice-over and music"
+      },
+      "after": {
+       "es": "**Se usó**",
+       "en": "**Used**"
+      }
+     },
+     {
+      "dim": {
+       "es": "Claude",
+       "en": "Claude"
+      },
+      "before": {
+       "es": "Guion de la voz en off",
+       "en": "Voice-over script"
+      },
+      "after": {
+       "es": "**Se usó**",
+       "en": "**Used**"
+      }
+     },
+     {
+      "dim": {
+       "es": "Seedance 1.0 vía CapCut",
+       "en": "Seedance 1.0 via CapCut"
+      },
+      "before": {
+       "es": "Generar escenas",
+       "en": "Generating scenes"
+      },
+      "after": {
+       "es": "Se probó y se descartó: no daba la calidad necesaria",
+       "en": "Tested and dropped: it did not deliver the quality needed"
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Resguardos",
+     "en": "Safeguards"
+    },
+    "items": {
+     "es": [
+      "Planos sin rostros de niñas ni niños.",
+      "Prompts negativos para evitar figuras infantiles reconocibles.",
+      "Revisión de cada clip antes de usarlo.",
+      "Rotulado del origen sintético en el video y en YouTube."
+     ],
+     "en": [
+      "No shots of children’s faces.",
+      "Negative prompts to avoid recognisable child figures.",
+      "Every clip reviewed before use.",
+      "Synthetic origin labelled in the video and on YouTube."
+     ]
+    }
+   },
+   {
+    "t": "embed",
+    "kind": "video",
+    "h": {
+     "es": "Ver el documental",
+     "en": "Watch the documentary"
+    },
+    "src": "https://www.youtube.com/embed/qJ5nEvhGr4I",
+    "open": "https://youtu.be/qJ5nEvhGr4I",
+    "label": {
+     "es": "Adaptar para incluir: inteligencia artificial en la educación inicial",
+     "en": "Adapt to include: artificial intelligence in early childhood education"
+    }
+   },
+   {
+    "t": "ranked",
+    "join": true,
+    "h": {
+     "es": "Transcripción de la voz en off",
+     "en": "Voice-over transcript"
+    },
+    "note": {
+     "es": "En español, como el video. Contrastada con los subtítulos automáticos de YouTube.",
+     "en": "In Spanish, like the video. Checked against YouTube’s automatic captions."
+    },
+    "items": [
+     "En una sala de cinco años, la inteligencia artificial puede ayudarnos a crear materiales accesibles para todas las infancias.",
+     "Adaptar el currículo no significa simplificarlo: es ofrecer varias formas de representar, de expresar y de participar.",
+     "El Diseño Universal para el Aprendizaje propone ofrecer un mismo contenido de varias formas, para que todas las niñas y todos los niños tengan una puerta de entrada.",
+     "Con la inteligencia artificial generativa, esos recursos se crean en minutos: imágenes, pictogramas, historias sociales y narraciones pensadas para el grupo.",
+     "Una historia social, por ejemplo, anticipa una situación cotidiana con imágenes sencillas para volverla previsible, y hoy puede generarse y adaptarse a cada niño en minutos.",
+     "Ahora bien, integrar la inteligencia artificial en el nivel inicial no es automático. Hoy pesan las brechas de conectividad e infraestructura, la escasa formación pedagógica de los equipos y las dudas sobre la privacidad de los datos de las infancias.",
+     "Frente a estas dificultades, muchos equipos docentes se preguntan por dónde empezar y buscan alternativas concretas para el aula.",
+     "Y ahí las aplicaciones de apoyo suman accesibilidad concreta: subtítulos automáticos, lectura por voz y tableros de comunicación con pictogramas.",
+     "Detrás de cada recurso hay una docente que decide: qué herramienta usar, con qué intención y para quién.",
+     "Es ella quien elige, adapta y prepara el material pensando en su grupo, y lo pone a disposición de cada niño y de cada niña.",
+     "Y cuando ese material llega a la sala, se vuelve juego, exploración y encuentro: la tecnología, ahí, se hace inclusión.",
+     "Integrar la inteligencia artificial con criterio pedagógico hace del nivel inicial un espacio más accesible para todas las infancias."
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Accesibilidad y transparencia",
+     "en": "Accessibility and transparency"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Alternativas",
+       "en": "Alternatives"
+      },
+      "body": {
+       "es": "Audiodescripción en texto para la animación; subtítulos y transcripción para el documental. En el sitio, los dos cargan con una fachada desde el dominio sin cookies de YouTube y nada se reproduce solo.",
+       "en": "A text audio description for the animation; captions and a transcript for the documentary. On the site, both load through a facade from YouTube’s cookie-free domain and nothing autoplays."
+      }
+     },
+     {
+      "lead": {
+       "es": "Rotulado",
+       "en": "Labelling"
+      },
+      "body": {
+       "es": "Etiquetados en YouTube como hechos con IA, con el rótulo del equipo en cada recurso. Los clips de Veo incorporan SynthID, una marca de agua imperceptible.",
+       "en": "Labelled on YouTube as made with AI, with the team label on each resource. The Veo clips include SynthID, an imperceptible watermark."
+      }
+     },
+     {
+      "lead": {
+       "es": "Sesgos y derechos",
+       "en": "Bias and rights"
+      },
+      "body": {
+       "es": "Los personajes son monstruos, no niños, y no reproducen estereotipos sobre el autismo. Las obras de Antonio Berni y Bortusk Leer inspiran a la sala, pero no se reproducen.",
+       "en": "The characters are monsters, not children, and do not reproduce stereotypes about autism. Works by Antonio Berni and Bortusk Leer inspire the class but are not reproduced."
+      }
+     },
+     {
+      "lead": {
+       "es": "Pendiente",
+       "en": "Pending"
+      },
+      "body": {
+       "es": "Los subtítulos automáticos del documental coinciden palabra por palabra con la transcripción, pero fallan mayúsculas y puntuación: falta subir un archivo corregido.",
+       "en": "The documentary’s automatic captions match the transcript word for word, but capitalisation and punctuation are off: a corrected file still needs uploading."
+      }
+     }
+    ]
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencias",
+     "en": "References"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Pedaci, L. [El servidor de Lourdes]. (2026a, 27 de agosto).",
+       "en": "Pedaci, L. [El servidor de Lourdes]. (2026a, 27 de agosto)."
+      },
+      "title": {
+       "es": "Los monstruos de Berni: una animación para la inclusión en la primera infancia",
+       "en": "Los monstruos de Berni: una animación para la inclusión en la primera infancia"
+      },
+      "post": {
+       "es": " [Video]. YouTube.",
+       "en": " [Video]. YouTube."
+      },
+      "url": "https://youtu.be/EffCv8EIAwI"
+     },
+     {
+      "pre": {
+       "es": "Pedaci, L. [El servidor de Lourdes]. (2026b, 24 de septiembre).",
+       "en": "Pedaci, L. [El servidor de Lourdes]. (2026b, 24 de septiembre)."
+      },
+      "title": {
+       "es": "Adaptar para incluir: inteligencia artificial en la educación inicial",
+       "en": "Adaptar para incluir: inteligencia artificial en la educación inicial"
+      },
+      "post": {
+       "es": " [Video]. YouTube.",
+       "en": " [Video]. YouTube."
+      },
+      "url": "https://youtu.be/qJ5nEvhGr4I"
+     }
+    ]
+   }
+  ],
+  "outcome": null,
+  "credits": {
+   "es": "Los dos videos se publicaron en el canal El servidor de Lourdes. Producción: Lourdes Pedaci. Autoría académica: Equipo 03 (Clara Argüello, Silvia Costas y Lourdes Pedaci). Cátedra: titular, Mg. Lic. Mónica Leda Torres; adjunto, Mg. Lic. Juan Ruiz Díaz. Contenido generado con IA generativa y validado por el Equipo 03.",
+   "en": "Both videos were published on the El servidor de Lourdes channel. Production: Lourdes Pedaci. Academic authorship: Team 03 (Clara Argüello, Silvia Costas and Lourdes Pedaci). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz. Content generated with generative AI and validated by Team 03."
+  }
+ },
+ "podcast-el-aula-que-incluye": {
+  "cat": "cont",
+  "touch": "cap",
+  "title": {
+   "es": "Podcast El aula que incluye, a dos voces sintéticas",
+   "en": "The El aula que incluye podcast, with two synthetic voices"
+  },
+  "subtitle": {
+   "es": "Un episodio de 2:58 para docentes y familias que explica cómo un mismo cuento puede llegar como texto, pictogramas y audio.",
+   "en": "A 2:58 episode for teachers and families that explains how one story can arrive as text, pictograms and audio."
+  },
+  "chips": {
+   "es": [
+    "Podcast",
+    "Voces sintéticas",
+    "Guion con IA",
+    "Accesibilidad"
+   ],
+   "en": [
+    "Podcast",
+    "Synthetic voices",
+    "AI-assisted script",
+    "Accessibility"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "El DUA propone ofrecer el mismo contenido por varias vías, pero a una docente le cuesta imaginar cómo se hace sin horas de preparación, y a una familia le cuesta seguirlo si se lo cuentan en lenguaje académico.",
+    "en": "UDL calls for offering the same content through several channels, but a teacher struggles to picture doing it without hours of preparation, and a family struggles to follow it in academic language."
+   },
+   "solution": {
+    "es": "Un episodio breve y conversado, con un guion que iteré con Claude en tres versiones, dos voces sintéticas de ElevenLabs que se presentan como tales, cortina musical y transcripción completa.",
+    "en": "A short, conversational episode, with a script I iterated with Claude across three versions, two ElevenLabs synthetic voices presented as such, a music bed and a full transcript."
+   },
+   "results": [
+    {
+     "v": "2:58",
+     "l": {
+      "es": "de episodio, con transcripción completa",
+      "en": "of episode, with a full transcript"
+     }
+    },
+    {
+     "v": "3",
+     "l": {
+      "es": "iteraciones de guion: diseño, pausas para la síntesis y versión a dos voces",
+      "en": "script iterations: design, pauses for synthesis and a two-voice version"
+     }
+    },
+    {
+     "t": {
+      "es": "El oyente sabe desde el principio que las voces son sintéticas, y el episodio reconoce a las tres integrantes del equipo en el mismo audio.",
+      "en": "Listeners know from the start that the voices are synthetic, and the episode credits all three team members in the audio itself."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Learning Experience Designer: guion con IA, dirección de voces, producción sonora y postproducción",
+    "en": "Learning Experience Designer: AI-assisted script, voice direction, sound production and post-production"
+   },
+   "timeline": {
+    "es": "Septiembre 2026 (publicado el 11/9)",
+    "en": "September 2026 (published on 11 September)"
+   },
+   "context": {
+    "es": "Gestión de recursos digitales con IA generativa, Licenciatura en Tecnología Educativa, UTN FRBA. Trabajo del Equipo 03: Clara Argüello, Silvia Costas y Lourdes Pedaci",
+    "en": "Managing Digital Resources with Generative AI, Bachelor’s in Educational Technology, UTN FRBA. Work by Team 03: Clara Argüello, Silvia Costas and Lourdes Pedaci"
+   },
+   "stack": [
+    "Claude (Opus 4.8)",
+    "ElevenLabs Studio",
+    "Eleven Multilingual v2",
+    "Suno",
+    "Camtasia"
+   ],
+   "methods": {
+    "es": [
+     "Ingeniería de prompts",
+     "Refinamiento iterativo",
+     "Diseño sonoro",
+     "DUA"
+    ],
+    "en": [
+     "Prompt engineering",
+     "Iterative refinement",
+     "Sound design",
+     "UDL"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Escuchar en el sitio (en vivo)",
+     "en": "Listen on the site (live)"
+    },
+    "url": "https://lpedaci.github.io/iag-tif/recursos/podcast.html"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "cards",
+    "cols": 1,
+    "h": {
+     "es": "Parte del proyecto El aula que incluye",
+     "en": "Part of the El aula que incluye project"
+    },
+    "caseCta": {
+     "es": "Ver el caso del espacio digital completo",
+     "en": "See the case for the full digital space"
+    },
+    "items": [
+     {
+      "title": {
+       "es": "El aula que incluye: IA generativa para la inclusión en el nivel inicial",
+       "en": "The inclusive classroom: generative AI for inclusion in early childhood education"
+      },
+      "body": {
+       "es": "El podcast es el recurso de la Unidad 4 del espacio digital, que cuenta un mismo proyecto de sala en cinco formatos.",
+       "en": "The podcast is the Unit 4 resource of the digital space that tells one class project in five formats."
+      },
+      "case": "el-aula-que-incluye"
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Qué es y para quién",
+     "en": "What it is and who it is for"
+    },
+    "p": [
+     {
+      "es": "Un episodio narrativo y divulgativo en el que **Andrea y Billy**, dos voces sintéticas, explican cómo una docente puede pedirle a la IA un cuento breve a partir de los monstruos de Berni y Bortusk Leer, convertirlo en pictogramas y llevarlo a audio. Suma una vía sonora al proyecto y, en el fondo, explica el DUA con un ejemplo: ==la herramienta genera, pero la decisión sigue siendo humana==.",
+      "en": "A narrative, explanatory episode in which **Andrea and Billy**, two synthetic voices, explain how a teacher can ask AI for a short story based on the monsters of Berni and Bortusk Leer, turn it into pictograms and take it to audio. It adds a sound channel to the project and, underneath, explains UDL through an example: ==the tool generates, but the decision stays human==."
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "cols": 3,
+    "h": {
+     "es": "El guion, en tres iteraciones",
+     "en": "The script, in three iterations"
+    },
+    "note": {
+     "es": "Fragmentos de los prompts reales, con asignación de rol, restricciones explícitas, control del formato de salida y refinamiento iterativo.",
+     "en": "Excerpts from the real prompts (in Spanish in the original), with role assignment, explicit constraints, output format control and iterative refinement."
+    },
+    "items": [
+     {
+      "title": {
+       "es": "01 · Diseño del guion",
+       "en": "01 · Script design"
+      },
+      "tag": {
+       "es": "Claude",
+       "en": "Claude"
+      },
+      "body": {
+       "es": "«Actuá como Licenciado en Tecnología Educativa. Diseñá el guion de un podcast educativo de 3 minutos como máximo…» con registro hablado y cálido, español rioplatense, enganche inicial, ejemplos concretos y cierre.",
+       "en": "“Act as an Educational Technology graduate. Design the script for an educational podcast of at most 3 minutes…” with a warm spoken register, River Plate Spanish, an opening hook, concrete examples and a close."
+      }
+     },
+     {
+      "title": {
+       "es": "02 · Pausas para la síntesis",
+       "en": "02 · Pauses for synthesis"
+      },
+      "tag": {
+       "es": "Claude",
+       "en": "Claude"
+      },
+      "body": {
+       "es": "El editor de audio no admitía título ni dos puntos: pedí el mismo guion sin marcas de tiempo ni dos puntos y con una frase inicial que se pudiera leer en voz alta.",
+       "en": "The audio editor did not allow a title or colons: I asked for the same script without timestamps or colons and with an opening line that could be read aloud."
+      }
+     },
+     {
+      "title": {
+       "es": "03 · Versión a dos voces",
+       "en": "03 · Two-voice version"
+      },
+      "tag": {
+       "es": "Claude",
+       "en": "Claude"
+      },
+      "body": {
+       "es": "Una conductora y un co-conductor que alternan por bloques y suenan como una conversación natural, «sin cambiar el contenido ni el estilo».",
+       "en": "A host and a co-host who alternate by blocks and sound like a natural conversation, “without changing the content or the style”."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Voces y producción sonora",
+     "en": "Voices and sound production"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Elección de las voces",
+       "en": "Choosing the voices"
+      },
+      "body": {
+       "es": "Dos voces en español latino que contrastaran, en ElevenLabs Studio con Eleven Multilingual v2: Andrea, la conductora, y Billy, el co-conductor, creado sobre la voz de biblioteca «Bill».",
+       "en": "Two contrasting Latin American Spanish voices in ElevenLabs Studio with Eleven Multilingual v2: Andrea, the host, and Billy, the co-host, built on the library voice “Bill”."
+      }
+     },
+     {
+      "lead": {
+       "es": "Expresividad",
+       "en": "Expressiveness"
+      },
+      "body": {
+       "es": "Activé los ajustes personalizados y bajé levemente la estabilidad. Entre bloques de distinta voz apliqué fundidos cortos para suavizar los cortes.",
+       "en": "I turned on custom settings and slightly lowered stability. Between blocks with different voices I applied short fades to smooth the cuts."
+      }
+     },
+     {
+      "lead": {
+       "es": "Música y cierre",
+       "en": "Music and close"
+      },
+      "body": {
+       "es": "Cortina musical lo-fi de Suno y cortina de créditos generada con ElevenLabs. Postproducción en Camtasia.",
+       "en": "A lo-fi music bed from Suno and a credits sting generated with ElevenLabs. Post-production in Camtasia."
+      }
+     },
+     {
+      "lead": {
+       "es": "Una herramienta descartada",
+       "en": "A tool that was dropped"
+      },
+      "body": {
+       "es": "Probé Murf AI como comparación y no la usé en la versión final: no daba la calidad necesaria.",
+       "en": "I tried Murf AI for comparison and did not use it in the final version: it did not deliver the quality needed."
+      }
+     }
+    ]
+   },
+   {
+    "t": "audio",
+    "h": {
+     "es": "Escuchar el episodio",
+     "en": "Listen to the episode"
+    },
+    "src": "podcast-el-aula-que-incluye.mp3",
+    "dur": "2:58",
+    "label": {
+     "es": "El aula que incluye: crear contenido educativo con IA generativa (en español)",
+     "en": "El aula que incluye: creating educational content with generative AI (in Spanish)"
+    },
+    "notice": {
+     "es": "**Andrea y Billy son voces sintéticas** generadas con ElevenLabs.",
+     "en": "**Andrea and Billy are synthetic voices** generated with ElevenLabs."
+    },
+    "download": {
+     "es": "Descargar el MP3",
+     "en": "Download the MP3"
+    },
+    "open": "https://drive.google.com/file/d/1LhOBEpT0pVuegL7HiBLqOZKyaX_B_HoB/view",
+    "openL": {
+     "es": "Fuente original en Google Drive",
+     "en": "Original source on Google Drive"
+    },
+    "txL": {
+     "es": "Leer la transcripción (en español)",
+     "en": "Read the transcript (in Spanish)"
+    },
+    "txLang": "es",
+    "lines": [
+     {
+      "who": "Andrea",
+      "text": "¡Hola a todos! Querida audiencia, ¿cómo están? Mi nombre es Andrea."
+     },
+     {
+      "who": "Billy",
+      "text": "¡Y yo soy Billy! Sean bienvenidos a otro capítulo de este podcast, «El aula que incluye»."
+     },
+     {
+      "who": "Andrea",
+      "text": "En este nuevo episodio vamos a algo bien concreto: cómo crear contenido educativo con inteligencia artificial generativa en el nivel inicial."
+     },
+     {
+      "who": "Billy",
+      "text": "Arranquemos con una pregunta. ¿Y si cada niño del jardín pudiera acceder al mismo cuento, pero contado de la forma que mejor entiende? Hace unos años, resolver eso para toda una sala parecía imposible."
+     },
+     {
+      "who": "Andrea",
+      "text": "Hoy empieza a tener respuestas, y muchas pasan por la inteligencia artificial generativa. Eso sí, no para reemplazar a quien enseña, sino para ampliar lo que puede ofrecer."
+     },
+     {
+      "who": "Billy",
+      "text": "Pensemos en un ejemplo real. Un proyecto de sala que trabaja con los monstruos de Berni y de Bortusk Leer. A partir de esas imágenes, una docente puede pedirle a una IA que redacte un cuento breve, con frases cortas y lenguaje sencillo. En segundos tiene un texto base."
+     },
+     {
+      "who": "Andrea",
+      "text": "Que después ajusta con su criterio, claro. Y el texto es apenas el comienzo. Con otra herramienta puede transformar ese cuento en pictogramas, para quienes se apoyan en imágenes para comprender. Con una tercera, puede convertirlo en audio, con una voz clara y expresiva, para quienes aprenden mejor escuchando."
+     },
+     {
+      "who": "Billy",
+      "text": "¡Exacto! Entonces, el mismo contenido, ahora disponible en varios formatos. Esto, en el fondo, es diseño universal para el aprendizaje."
+     },
+     {
+      "who": "Andrea",
+      "text": "¡Así es, Billy! La IA no inventa la inclusión, pero baja muchísimo la barrera para lograrla. Lo que antes pedía horas de preparación, hoy entra en una tarde de planificación."
+     },
+     {
+      "who": "Billy",
+      "text": "Ahora, una aclaración que no es menor. La herramienta genera, pero la decisión sigue siendo humana. Elegir qué monstruo, qué palabras, qué voz, qué le sirve a este grupo y no a cualquiera, eso es trabajo pedagógico."
+     },
+     {
+      "who": "Andrea",
+      "text": "La tecnología ofrece opciones, y la docente pone el sentido. Por eso, más que preguntarnos si la IA va a cambiar el aula, conviene preguntarnos cómo queremos acompañar ese cambio."
+     },
+     {
+      "who": "Billy",
+      "text": "Con mirada crítica, cuidando los datos de las infancias y sin perder de vista para qué enseñamos."
+     },
+     {
+      "who": "Andrea",
+      "text": "Porque la mejor tecnología en educación es la que se vuelve invisible, y deja a la vista lo único que importa, que todos, todos, puedan aprender."
+     },
+     {
+      "who": "Billy",
+      "text": "¡Nos escuchamos en el próximo episodio!"
+     },
+     {
+      "who": "Andrea",
+      "text": "¡Hasta la próxima!"
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Accesibilidad y transparencia",
+     "en": "Accessibility and transparency"
+    },
+    "items": {
+     "es": [
+      "El aviso de voces sintéticas va antes del reproductor y de la transcripción: su uso es adecuado siempre que se presenten como tales.",
+      "Transcripción completa como alternativa accesible, también para leer sin audio o con datos móviles.",
+      "Reproductor nativo que no se reproduce solo y solo carga los metadatos hasta que se pide.",
+      "El episodio reconoce en el mismo audio a las tres integrantes del equipo."
+     ],
+     "en": [
+      "The synthetic voice notice comes before the player and the transcript: using them is appropriate as long as they are presented as such.",
+      "A full transcript as the accessible alternative, also for reading without audio or on mobile data.",
+      "A native player that never autoplays and only loads metadata until asked.",
+      "The episode credits all three team members in the audio itself."
+     ]
+    }
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencia",
+     "en": "Reference"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Argüello, C., Costas, S., y Pedaci, L. (Productoras). (2026d, 11 de septiembre).",
+       "en": "Argüello, C., Costas, S., y Pedaci, L. (Productoras). (2026d, 11 de septiembre)."
+      },
+      "title": {
+       "es": "El aula que incluye: crear contenido educativo con IA generativa",
+       "en": "El aula que incluye: crear contenido educativo con IA generativa"
+      },
+      "post": {
+       "es": " [Episodio de podcast de audio]. En El aula que incluye. Google Drive.",
+       "en": " [Episodio de podcast de audio]. En El aula que incluye. Google Drive."
+      },
+      "url": "https://drive.google.com/file/d/1LhOBEpT0pVuegL7HiBLqOZKyaX_B_HoB/view"
+     }
+    ]
+   }
+  ],
+  "outcome": null,
+  "credits": {
+   "es": "Guion, voces, producción sonora y postproducción: Lourdes Pedaci. Autoría académica: Equipo 03 (Clara Argüello, Silvia Costas y Lourdes Pedaci). Cátedra: titular, Mg. Lic. Mónica Leda Torres; adjunto, Mg. Lic. Juan Ruiz Díaz. Contenido generado con IA generativa y validado por el Equipo 03.",
+   "en": "Script, voices, sound production and post-production: Lourdes Pedaci. Academic authorship: Team 03 (Clara Argüello, Silvia Costas and Lourdes Pedaci). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz. Content generated with generative AI and validated by Team 03."
+  }
+ },
+ "preguntale-a-berni": {
+  "cat": "cont",
+  "touch": "it",
+  "title": {
+   "es": "Preguntale a Berni: un asistente guiado sin campo de texto",
+   "en": "Ask Berni: a guided assistant with no text box"
+  },
+  "subtitle": {
+   "es": "Un chatbot por opciones que orienta a docentes, familias y evaluadores por el sitio El aula que incluye, sin pedir ni guardar datos.",
+   "en": "An option-based chatbot that guides teachers, families and assessors through the El aula que incluye site, without asking for or storing data."
+  },
+  "chips": {
+   "es": [
+    "Diseño conversacional",
+    "Privacidad por diseño",
+    "Accesibilidad",
+    "JavaScript"
+   ],
+   "en": [
+    "Conversation design",
+    "Privacy by design",
+    "Accessibility",
+    "JavaScript"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Un sitio para docentes de nivel inicial necesitaba una guía que respondiera dudas sin que nadie pudiera cargar el nombre o el diagnóstico de un chico, y que no inventara respuestas ni se cayera el día de la corrección.",
+    "en": "A site for early childhood teachers needed a guide that answered questions without letting anyone enter a child’s name or diagnosis, and that would not make up answers or go down on assessment day."
+   },
+   "solution": {
+    "es": "Un asistente guiado por opciones, con un árbol de conversación propio en JSON: cada respuesta está revisada y lleva a una página del sitio. Lo diseñé y lo programé, con apoyo de Claude Code.",
+    "en": "An option-guided assistant with its own conversation tree in JSON: every answer is reviewed and leads to a page on the site. I designed and coded it, with help from Claude Code."
+   },
+   "results": [
+    {
+     "v": "33",
+     "l": {
+      "es": "nodos y 34 enlaces, sin destinos rotos ni nodos sin salida",
+      "en": "nodes and 34 links, with no broken destinations or dead ends"
+     }
+    },
+    {
+     "v": "3",
+     "l": {
+      "es": "elecciones como máximo para llegar a una respuesta",
+      "en": "choices at most to reach an answer"
+     }
+    },
+    {
+     "t": {
+      "es": "Las docentes prefirieron elegir antes que escribir, pero no sabían buscar lo que no estaba. Sumé «No encuentro lo que busco», que lleva al mapa del sitio y a los recorridos por perfil.",
+      "en": "Teachers preferred choosing to typing, but did not know how to look for what was not there. I added “I can’t find what I’m looking for”, which leads to the site map and the routes by profile."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Learning Experience Designer: diseño conversacional, diseño UX/UI, programación y pruebas del asistente",
+    "en": "Learning Experience Designer: conversation design, UX/UI design, coding and testing of the assistant"
+   },
+   "timeline": {
+    "es": "Octubre a noviembre 2026",
+    "en": "October to November 2026"
+   },
+   "context": {
+    "es": "Gestión de recursos digitales con IA generativa, Licenciatura en Tecnología Educativa, UTN FRBA. Trabajo del Equipo 03: Clara Argüello, Silvia Costas y Lourdes Pedaci",
+    "en": "Managing Digital Resources with Generative AI, Bachelor’s in Educational Technology, UTN FRBA. Work by Team 03: Clara Argüello, Silvia Costas and Lourdes Pedaci"
+   },
+   "stack": [
+    "JavaScript",
+    "JSON",
+    "HTML/CSS",
+    "Node.js",
+    "Claude",
+    "Claude Code"
+   ],
+   "methods": {
+    "es": [
+     "Diseño de chatbots (Unidad 6)",
+     "Privacidad por diseño",
+     "DUA",
+     "WCAG 2.1 AA",
+     "Prueba piloto"
+    ],
+    "en": [
+     "Chatbot design (Unit 6)",
+     "Privacy by design",
+     "UDL",
+     "WCAG 2.1 AA",
+     "Pilot test"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Probar el asistente (en vivo)",
+     "en": "Try the assistant (live)"
+    },
+    "url": "https://lpedaci.github.io/iag-tif/asistente.html"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "cards",
+    "cols": 1,
+    "h": {
+     "es": "Parte del proyecto El aula que incluye",
+     "en": "Part of the El aula que incluye project"
+    },
+    "caseCta": {
+     "es": "Ver el caso del espacio digital completo",
+     "en": "See the case for the full digital space"
+    },
+    "items": [
+     {
+      "title": {
+       "es": "El aula que incluye: IA generativa para la inclusión en el nivel inicial",
+       "en": "The inclusive classroom: generative AI for inclusion in early childhood education"
+      },
+      "body": {
+       "es": "El asistente es el recurso de la Unidad 6 del espacio digital y se abre desde cualquier página con un botón flotante.",
+       "en": "The assistant is the Unit 6 resource of the digital space and opens from any page through a floating button."
+      },
+      "case": "el-aula-que-incluye"
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Qué responde",
+     "en": "What it answers"
+    },
+    "p": [
+     {
+      "es": "Berni orienta según quién llega: **por dónde empezar** según el perfil, qué recurso usar y para qué, cómo usarlo en la sala (antes, durante y después), qué significan historia social, DUA, TPACK y ADKAR, y cómo se usó la IA. Cada respuesta tiene de una a tres oraciones y **remite a una página del sitio**. No da diagnósticos ni orientación clínica, no reemplaza a la docente y no pide datos.",
+      "en": "Berni guides people depending on who they are: **where to start** by profile, which resource to use and what for, how to use it in class (before, during and after), what social story, UDL, TPACK and ADKAR mean, and how AI was used. Each answer is one to three sentences long and **points to a page on the site**. It gives no diagnoses or clinical advice, does not replace the teacher and asks for no data."
+     }
+    ]
+   },
+   {
+    "t": "bento",
+    "h": {
+     "es": "Por qué un árbol de opciones y no un campo de texto",
+     "en": "Why an option tree and not a text box"
+    },
+    "items": [
+     {
+      "size": "s",
+      "lead": true,
+      "title": {
+       "es": "Privacidad por diseño",
+       "en": "Privacy by design"
+      },
+      "body": {
+       "es": "Si no se puede escribir, **nadie puede cargar nombres ni diagnósticos de chicos**. Es coherente con lo que el sitio predica.",
+       "en": "If you cannot type, **nobody can enter children’s names or diagnoses**. It is consistent with what the site preaches."
+      }
+     },
+     {
+      "size": "s",
+      "tone": true,
+      "title": {
+       "es": "Confiabilidad",
+       "en": "Reliability"
+      },
+      "body": {
+       "es": "No inventa respuestas ni depende de un servicio externo que pueda caerse o llegar a su límite de uso.",
+       "en": "It does not make up answers or depend on an external service that could go down or hit its usage limit."
+      }
+     },
+     {
+      "size": "s",
+      "title": {
+       "es": "Accesibilidad",
+       "en": "Accessibility"
+      },
+      "body": {
+       "es": "Elegir es más simple que redactar, sobre todo con dificultades de lectura o motricidad, o si el español no es la lengua de origen.",
+       "en": "Choosing is simpler than writing, especially with reading or motor difficulties, or when Spanish is not your first language."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Los pasos de la Unidad 6",
+     "en": "The Unit 6 steps"
+    },
+    "note": {
+     "es": "El material de la materia plantea el diseño de un chatbot en siete pasos. Puse el peso en el flujo conversacional y en las pruebas.",
+     "en": "The course material frames chatbot design in seven steps. I put the weight on the conversation flow and on testing."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Objetivos",
+       "en": "Goals"
+      },
+      "body": {
+       "es": "Orientar a docentes, familias y evaluadores por el sitio, sin dar diagnósticos ni pedir datos.",
+       "en": "Guide teachers, families and assessors through the site, without giving diagnoses or asking for data."
+      }
+     },
+     {
+      "lead": {
+       "es": "Plataforma",
+       "en": "Platform"
+      },
+      "body": {
+       "es": "Propia, en JavaScript y sin servicios externos, para que funcione igual en GitHub Pages.",
+       "en": "Our own, in JavaScript with no external services, so it works the same on GitHub Pages."
+      }
+     },
+     {
+      "lead": {
+       "es": "Flujo conversacional",
+       "en": "Conversation flow"
+      },
+      "body": {
+       "es": "Un árbol con un nodo de perfil, un menú de seis opciones y respuestas a no más de tres elecciones. El motor suma siempre «Volver» e «Inicio».",
+       "en": "A tree with a profile node, a six-option menu and answers no more than three choices away. The engine always adds “Back” and “Start”."
+      }
+     },
+     {
+      "lead": {
+       "es": "Entrenamiento",
+       "en": "Training"
+      },
+      "body": {
+       "es": "En lugar de entrenar un modelo, redacté las respuestas con apoyo de Claude y el equipo las validó contra los contenidos del sitio.",
+       "en": "Instead of training a model, I wrote the answers with help from Claude and the team validated them against the site’s content."
+      }
+     },
+     {
+      "lead": {
+       "es": "Integración",
+       "en": "Integration"
+      },
+      "body": {
+       "es": "Una página propia a ancho completo y un botón flotante en el resto del sitio, que abre un panel lateral en escritorio y a pantalla completa en el celular.",
+       "en": "Its own full-width page and a floating button across the rest of the site, opening a side panel on desktop and full screen on phones."
+      }
+     },
+     {
+      "lead": {
+       "es": "Personalización",
+       "en": "Personalisation"
+      },
+      "body": {
+       "es": "El perfil elegido cambia solo la respuesta de «¿Por dónde empiezo?». Se guarda en memoria durante la sesión, no en el navegador.",
+       "en": "The chosen profile only changes the answer to “Where do I start?”. It is kept in memory for the session, not in the browser."
+      }
+     },
+     {
+      "lead": {
+       "es": "Pruebas",
+       "en": "Testing"
+      },
+      "body": {
+       "es": "Una prueba automática del árbol y una prueba piloto con docentes.",
+       "en": "An automated test of the tree and a pilot test with teachers."
+      }
+     }
+    ]
+   },
+   {
+    "t": "decisionflow",
+    "h": {
+     "es": "Un tramo del árbol",
+     "en": "A stretch of the tree"
+    },
+    "note": {
+     "es": "Del saludo inicial a la opción que sumé después de la prueba piloto. Las respuestas reales del asistente, resumidas.",
+     "en": "From the opening greeting to the option I added after the pilot test. The assistant’s real answers, summarised."
+    },
+    "nodes": [
+     {
+      "kind": "start",
+      "label": {
+       "es": "Berni saluda y pregunta «¿Quién sos?»",
+       "en": "Berni says hello and asks “Who are you?”"
+      }
+     },
+     {
+      "kind": "decision",
+      "label": {
+       "es": "¿La persona se reconoce en un perfil?",
+       "en": "Does the person see themselves in a profile?"
+      },
+      "branches": [
+       {
+        "label": {
+         "es": "Sí: docente, familia, evaluación o solo mirando",
+         "en": "Yes: teacher, family, assessment or just browsing"
+        },
+        "nodes": [
+         {
+          "kind": "step",
+          "label": {
+           "es": "Menú «¿Qué querés hacer?», con seis opciones",
+           "en": "“What would you like to do?” menu, with six options"
+          }
+         },
+         {
+          "kind": "step",
+          "label": {
+           "es": "«¿Por dónde empiezo?» responde según el perfil y enlaza a una página",
+           "en": "“Where do I start?” answers by profile and links to a page"
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "es": "No: «No encuentro lo que busco»",
+         "en": "No: “I can’t find what I’m looking for”"
+        },
+        "nodes": [
+         {
+          "kind": "step",
+          "label": {
+           "es": "Berni lleva al mapa del sitio: todas las páginas a no más de dos clics de Inicio",
+           "en": "Berni points to the site map: every page no more than two clicks from Home"
+          }
+         },
+         {
+          "kind": "decision",
+          "label": {
+           "es": "¿Qué recorrido sigue?",
+           "en": "Which route next?"
+          },
+          "branches": [
+           {
+            "label": {
+             "es": "Docentes, familias o evaluación",
+             "en": "Teachers, families or assessment"
+            },
+            "nodes": [
+             {
+              "kind": "step",
+              "label": {
+               "es": "Recorrido sugerido en el mapa del sitio",
+               "en": "Suggested route on the site map"
+              }
+             }
+            ]
+           },
+           {
+            "label": {
+             "es": "Ver los recursos",
+             "en": "See the resources"
+            },
+            "nodes": [
+             {
+              "kind": "step",
+              "label": {
+               "es": "Ficha breve de cada recurso con su enlace",
+               "en": "Short card for each resource with its link"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "end",
+      "label": {
+       "es": "Una página del sitio, con «Volver» e «Inicio» siempre a mano",
+       "en": "A page on the site, with “Back” and “Start” always at hand"
+      }
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "marks": true,
+    "h": {
+     "es": "Antes y después de la prueba piloto",
+     "en": "Before and after the pilot test"
+    },
+    "note": {
+     "es": "Clara Argüello y Silvia Costas probaron el asistente con docentes de la Escuela Infantil N.º 6 (Balvanera, CABA), institución donde trabaja Silvia. Yo hice el ajuste.",
+     "en": "Clara Argüello and Silvia Costas tested the assistant with teachers at Escuela Infantil N.º 6 (Balvanera, Buenos Aires), where Silvia works. I made the adjustment."
+    },
+    "cols": {
+     "dim": {
+      "es": "Aspecto",
+      "en": "Aspect"
+     },
+     "before": {
+      "es": "Antes",
+      "en": "Before"
+     },
+     "after": {
+      "es": "Después",
+      "en": "After"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Primera pantalla",
+       "en": "First screen"
+      },
+      "before": {
+       "es": "Cuatro perfiles: docente, familia, evaluación y solo mirando.",
+       "en": "Four profiles: teacher, family, assessment and just browsing."
+      },
+      "after": {
+       "es": "Los cuatro perfiles y **«No encuentro lo que busco»**.",
+       "en": "The four profiles and **“I can’t find what I’m looking for”**."
+      }
+     },
+     {
+      "dim": {
+       "es": "Si lo que busco no está",
+       "en": "If what I want is not there"
+      },
+      "before": {
+       "es": "Las docentes no sabían cómo buscarlo.",
+       "en": "Teachers did not know how to look for it."
+      },
+      "after": {
+       "es": "Berni deriva al mapa del sitio y a los recorridos para docentes, familias y evaluación.",
+       "en": "Berni points to the site map and the routes for teachers, families and assessment."
+      }
+     },
+     {
+      "dim": {
+       "es": "Lo que se mantuvo",
+       "en": "What stayed"
+      },
+      "before": {
+       "es": "Elegir entre opciones, que les resultó más fácil que armar una conversación.",
+       "en": "Choosing among options, which they found easier than building a conversation."
+      },
+      "after": {
+       "es": "Igual: sin campo de texto y sin sumar profundidad al árbol.",
+       "en": "The same: no text box and no extra depth in the tree."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "single": true,
+    "compact": true,
+    "h": {
+     "es": "El panel del asistente",
+     "en": "The assistant panel"
+    },
+    "images": [
+     {
+      "src": "aula-04-asistente.webp",
+      "w": 690,
+      "h": 639,
+      "alt": {
+       "es": "Panel de Preguntale a Berni: el avatar de Berni, el saludo «¡Hola! Soy Berni, el guía de El aula que incluye…» y cinco botones: Soy docente, Soy de una familia, Vengo a evaluar el trabajo, Solo estoy mirando y No encuentro lo que busco. Al pie, el aviso de que no hay campo para escribir.",
+       "en": "The Ask Berni panel: Berni’s avatar, the greeting “Hi! I’m Berni, the guide to El aula que incluye…” and five buttons: I’m a teacher, I’m from a family, I’m here to assess the work, Just browsing and I can’t find what I’m looking for. At the bottom, a note that there is no field to type in."
+      },
+      "caption": {
+       "es": "Primera pantalla, con la opción que sumé después de la prueba piloto.",
+       "en": "First screen, with the option I added after the pilot test."
+      },
+      "link": {
+       "url": "https://lpedaci.github.io/iag-tif/asistente.html",
+       "cta": {
+        "es": "Probar el asistente",
+        "en": "Try the assistant"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Accesibilidad",
+     "en": "Accessibility"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Historial anunciado",
+       "en": "Announced history"
+      },
+      "body": {
+       "es": "El historial tiene role=\"log\" y aria-live=\"polite\": cada respuesta se anuncia sin interrumpir.",
+       "en": "The history has role=\"log\" and aria-live=\"polite\": each answer is announced without interrupting."
+      }
+     },
+     {
+      "lead": {
+       "es": "Foco en la opción nueva",
+       "en": "Focus on the new option"
+      },
+      "body": {
+       "es": "Las opciones son botones en una lista. Al responder, las anteriores se deshabilitan y el foco pasa a la primera opción nueva. Escape cierra el panel y devuelve el foco al lanzador.",
+       "en": "Options are buttons in a list. After each answer, the previous ones are disabled and focus moves to the first new option. Escape closes the panel and returns focus to the launcher."
+      }
+     },
+     {
+      "lead": {
+       "es": "Sin JavaScript",
+       "en": "Without JavaScript"
+      },
+      "body": {
+       "es": "Una versión en texto dentro de <noscript>, con las preguntas y respuestas.",
+       "en": "A text version inside <noscript>, with the questions and answers."
+      }
+     },
+     {
+      "lead": {
+       "es": "Modo calma",
+       "en": "Calm mode"
+      },
+      "body": {
+       "es": "Sin animación de «escribiendo» ni transiciones.",
+       "en": "No “typing” animation and no transitions."
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "h": {
+     "es": "Cómo está hecho",
+     "en": "How it is built"
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Árbol",
+       "en": "Tree"
+      },
+      "v": {
+       "es": "chatbot-kb.json, 33 nodos",
+       "en": "chatbot-kb.json, 33 nodes"
+      }
+     },
+     {
+      "k": {
+       "es": "Nodo",
+       "en": "Node"
+      },
+      "v": {
+       "es": "Mensaje de 1 a 3 oraciones, enlace opcional y de 2 a 6 opciones",
+       "en": "A 1 to 3 sentence message, an optional link and 2 to 6 options"
+      }
+     },
+     {
+      "k": {
+       "es": "Profundidad",
+       "en": "Depth"
+      },
+      "v": {
+       "es": "Tres elecciones como máximo desde el menú",
+       "en": "Three choices at most from the menu"
+      }
+     },
+     {
+      "k": {
+       "es": "Respuestas",
+       "en": "Answers"
+      },
+      "v": {
+       "es": "Redactadas con Claude y validadas por el equipo",
+       "en": "Written with Claude and validated by the team"
+      }
+     },
+     {
+      "k": {
+       "es": "Prueba automática",
+       "en": "Automated test"
+      },
+      "v": {
+       "es": "tests/chatbot-arbol.js: destinos, huérfanos, enlaces, anclas, profundidad y raya larga",
+       "en": "tests/chatbot-arbol.js: destinations, orphans, links, anchors, depth and em dashes"
+      }
+     },
+     {
+      "k": {
+       "es": "Resultado",
+       "en": "Result"
+      },
+      "v": {
+       "es": "34 enlaces revisados, sin errores",
+       "en": "34 links checked, no errors"
+      }
+     }
+    ]
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencia",
+     "en": "Reference"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Argüello, C., Costas, S., y Pedaci, L. (2026c).",
+       "en": "Argüello, C., Costas, S., y Pedaci, L. (2026c)."
+      },
+      "title": {
+       "es": "Preguntale a Berni",
+       "en": "Preguntale a Berni"
+      },
+      "post": {
+       "es": " [Chatbot]. El aula que incluye.",
+       "en": " [Chatbot]. El aula que incluye."
+      },
+      "url": "https://lpedaci.github.io/iag-tif/asistente.html"
+     }
+    ]
+   }
+  ],
+  "outcome": null,
+  "credits": {
+   "es": "Diseño conversacional, interfaz y programación del asistente: Lourdes Pedaci, con apoyo de Claude Code. Redacción de las respuestas con apoyo de Claude, validada por el equipo. Prueba piloto: Clara Argüello y Silvia Costas. Autoría académica: Equipo 03 (Clara Argüello, Silvia Costas y Lourdes Pedaci). Cátedra: titular, Mg. Lic. Mónica Leda Torres; adjunto, Mg. Lic. Juan Ruiz Díaz. Contenido generado con IA generativa y validado por el Equipo 03.",
+   "en": "Conversation design, interface and coding of the assistant: Lourdes Pedaci, with help from Claude Code. Answers written with help from Claude, validated by the team. Pilot test: Clara Argüello and Silvia Costas. Academic authorship: Team 03 (Clara Argüello, Silvia Costas and Lourdes Pedaci). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz. Content generated with generative AI and validated by Team 03."
+  }
  }
 };

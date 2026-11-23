@@ -221,8 +221,18 @@
           <div class="live__btns"><a class="btn btn--live" href="${esc(b.url)}" target="_blank" rel="noopener"><span>${esc(L(b.cta))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></div></div>
       </div>`, true); },
     embed: (b) => blk(b, frame(b.kind || 'video', b.src, b.open, L(b.label), L(b.h) || L(b.label)), b.kind !== 'audio'),
+    /* Audio propio (MP3 en assets/audio): reproductor nativo, que no se reproduce solo y solo carga los metadatos,
+       con un aviso opcional antes (por ejemplo, que las voces son sintéticas), la descarga y la transcripción
+       en un desplegable. src: nombre del archivo; lines: [{ who, text }]; open: fuente original opcional. */
+    audio: (b) => blk(b, `<figure class="aud">
+        ${b.notice ? `<p class="aud__notice"><i class="ph ph-check-circle" aria-hidden="true"></i><span>${rich(L(b.notice))}</span></p>` : ''}
+        <audio controls preload="metadata" src="${ROOT}assets/audio/${esc(b.src)}" aria-label="${esc(L(b.label))}"></audio>
+        <figcaption class="aud__cap">${esc(L(b.label))}${b.dur ? ` · ${esc(b.dur)}` : ''}</figcaption>
+        <p class="aud__links"><a class="link-arrow" href="${ROOT}assets/audio/${esc(b.src)}" download><span>${esc(L(b.download))}</span><i class="ph ph-download-simple" aria-hidden="true"></i></a>${b.open ? `<a class="link-arrow" href="${esc(b.open)}" target="_blank" rel="noopener"><span>${esc(L(b.openL))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>` : ''}</p>
+        ${b.lines ? `<details class="aud__tx"><summary>${esc(L(b.txL))}</summary><dl${b.txLang ? ` lang="${esc(b.txLang)}"` : ''}>${b.lines.map((x) => `<div><dt>${esc(x.who)}</dt><dd>${esc(L(x.text))}</dd></div>`).join('')}</dl></details>` : ''}
+      </figure>`, true),
     // url + cta: enlace opcional debajo de la galería (por ejemplo, a la página publicada que muestran las capturas).
-    gallery: (b) => blk(b, `<div class="gallery${b.single ? (b.images[0].h > b.images[0].w ? ' gallery--tall' : '') : ''}${b.light ? ' gallery--light' : ''}${b.small ? ' gallery--small' : ''}${b.medium ? ' gallery--medium' : ''}">${rows(b.images, b.wide ? 2 : 3, b.rowsOf || (b.light ? [4, 1] : null)).map((row) => `<div class="gallery__row">${row.map((im) => picture(im)).join('')}</div>`).join('')}</div>${b.url && b.cta ? `<p class="gallery__cta"><a class="link-arrow" href="${esc(b.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(b.cta))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p>` : ''}`, true),
+    gallery: (b) => blk(b, `<div class="gallery${b.single ? (b.images[0].h > b.images[0].w ? ' gallery--tall' : '') : ''}${b.light ? ' gallery--light' : ''}${b.small ? ' gallery--small' : ''}${b.medium ? ' gallery--medium' : ''}${b.compact ? ' gallery--compact' : ''}">${rows(b.images, b.wide ? 2 : 3, b.rowsOf || (b.light ? [4, 1] : null)).map((row) => `<div class="gallery__row">${row.map((im) => picture(im)).join('')}</div>`).join('')}</div>${b.url && b.cta ? `<p class="gallery__cta"><a class="link-arrow" href="${esc(b.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(b.cta))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p>` : ''}`, true),
 
     /* ---------- Bloques del caso MurialdoLab (también los usa el de riesgos digitales) ---------- */
     phase: (b) => {
@@ -246,7 +256,8 @@
     cards: (b) => blk(b, `<ul class="xcards" style="--cols:${b.cols || 3}">${b.items.map((x) => `
       <li class="xcard">${x.img ? `<div class="xcard__img">${picture(x.img, false)}</div>` : ''}
         <div class="xcard__txt">${x.avatar ? `<img class="xcard__av" src="${ROOT}assets/img/${esc(x.avatar.src)}" width="${x.avatar.w}" height="${x.avatar.h}" alt="" loading="lazy" decoding="async">` : ''}${x.title ? hx(H + 1, 'xcard__h', esc(L(x.title))) : ''}${x.tag ? `<p class="xcard__tag">${esc(L(x.tag))}</p>` : ''}<p>${rich(L(x.body))}</p>
-        ${x.url && b.cta ? `<a class="link-arrow xcard__link" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(b.cta))}<span class="sr-only">: ${esc(L(x.title))}</span></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>` : ''}</div></li>`).join('')}</ul>`, true),
+        ${x.case ? `<a class="link-arrow xcard__link" href="${ROOT}casos/${esc(x.case)}/?lang=${state.lang}"><span>${esc(L(x.caseCta || b.caseCta))}<span class="sr-only">: ${esc(L(x.title))}</span></span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>` : ''}
+        ${x.url && (x.cta || b.cta) ? `<a class="link-arrow xcard__link" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(L(x.cta || b.cta))}<span class="sr-only">: ${esc(L(x.title))}</span></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>` : ''}</div></li>`).join('')}</ul>`, true),
     empathy: (b) => blk(b, `<div class="emp">${b.quads.map((q) => `
       <section class="emp__q emp__q--${q.k}">${hx(H + 1, 'emp__h', esc(L(q.title)))}<ul>${L(q.items).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></section>`).join('')}</div>`, true),
     // photo.round: retrato recortado en círculo (con su propio anillo), a su tamaño real en lugar de a 240 px.
@@ -314,7 +325,7 @@
     anim: (b) => blk(b, `<ul class="anims">${b.items.map((x) => `
       <li><figure class="anim" data-mg="${esc(x.id)}" data-state="idle">
         <div class="anim__frame"><iframe data-src="${esc(x.src)}" title="${esc(L(x.title))}" tabindex="-1" scrolling="no" loading="lazy"></iframe></div>
-        <figcaption><button type="button" class="anim__btn"><i class="ph ph-play" aria-hidden="true"></i><span>${t('animPlay')}</span><span class="sr-only">: ${esc(L(x.title))}</span></button>
+        <figcaption><button type="button" class="anim__btn" disabled><i class="ph ph-play" aria-hidden="true"></i><span>${t('animPlay')}</span><span class="sr-only">: ${esc(L(x.title))}</span></button>
         <span class="anim__cap">${esc(L(x.caption))}</span></figcaption>
       </figure></li>`).join('')}</ul>`, true),
     media: (b) => blk(b, `<ul class="media">${b.items.map((x) => `<li>${hx(H + 1, 'media__h', esc(L(x.title)))}${frame(x.kind, x.src, x.open, L(x.title), L(x.title))}</li>`).join('')}</ul>`, true),
@@ -785,7 +796,7 @@
     const d = e.data || {};
     anims.forEach((a) => {
       if (d.mg !== a.id || e.source !== a.iframe.contentWindow) return;
-      if (d.state === 'ready') { a.ready = true; a.fig.dataset.ready = ''; a.auto(); } else if (d.state) a.set(d.state);
+      if (d.state === 'ready') { a.ready = true; a.fig.dataset.ready = ''; a.fig.querySelector('.anim__btn').disabled = false; a.auto(); } else if (d.state) a.set(d.state);
     });
   });
 

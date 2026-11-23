@@ -53,6 +53,9 @@ Tema claro único sobre un fondo blanco cálido, igual en toda la web, con el ef
 Cada color tiene una versión base, con contraste AA para texto y botones, y una "bright" para ilustraciones y acentos sin texto encima.
 
 - **Tipografía:** Schibsted Grotesk para títulos, Hanken Grotesk para lectura y JetBrains Mono para etiquetas y datos.
+- **Pesos tipográficos:** cada familia se usa solo en los pesos que el sitio carga: Hanken Grotesk 400 y 500, Schibsted Grotesk 600 y JetBrains Mono 400 y 500. Botones, índice, etiquetas y énfasis van en 500, nunca en 600 o 700 sobre Hanken: esa negrita la inventa el navegador, se empasta y cuesta leer. Como salvaguarda, `font-synthesis-weight: none` hace que cualquier pedido fuera de escala use el peso real más cercano. La auditoría recorre cada texto visible de la home y de todos los casos y compara su familia y su peso con los cargados.
+- **Énfasis en el texto:** `**frase**` va en Hanken 500 con el color del caso, un poco oscurecido para pasar AA también sobre fondos teñidos. Destaca sin el peso visual de una negrita.
+- **Íconos en hover:** una flecha se mueve solo hacia donde apunta (↗ en diagonal, → a la derecha, ← a la izquierda). Los demás íconos, como el de descarga, quedan quietos. Con movimiento reducido, nada se mueve.
 - **Íconos:** Phosphor, recortado a los íconos que el sitio usa.
 - **Forma y profundidad:** tarjetas y paneles con radio de 20px (`--r-panel`), borde casi invisible y una sombra amplia y suave (`--shadow-card`) en lugar de líneas finas. Controles en forma de pastilla.
 - **Hero de la portada:** centrado y sin ilustración: la etiqueta en una pastilla, título, texto en dos oraciones equilibradas (la segunda empieza en un renglón nuevo), botones y una pastilla con el total de proyectos y su reparto por categoría, que lleva a Proyectos. El título corta después de "claras,": la propuesta en la primera línea y el recorrido en la segunda. Su fondo combina una grilla fina que se desvanece hacia los bordes, un brillo pastel con los tres colores de categoría y algunos cuadrados sueltos. Los botones son planos, sin brillo ni degradé.
@@ -61,6 +64,16 @@ Cada color tiene una versión base, con contraste AA para texto y botones, y una
 - **Caja de contenido:** en los casos, el contenido va en una caja blanca de radio 24px que usa casi todo el ancho, con un margen del 3 % a cada lado (el menú se alinea con ese margen). Adentro, las tarjetas son gris neutro muy claro y sin sombra, para no apilar tarjeta sobre tarjeta.
 - **Paneles de texto:** título adentro y texto a todo el ancho del panel. Dos paneles seguidos comparten la fila solo si tienen un largo parecido; si no, cada uno va a lo ancho. La prosa larga en un panel de fila entera se lee en dos columnas.
 - **Cifras:** mosaicos con un tinte del color del caso, el primero más intenso. Las columnas se eligen según la cantidad (6 cifras: 3 + 3; 4 cifras: 2 × 2 hasta escritorio y en fila desde 1200 px) y la última fila se estira, sin huecos.
+- **Botones:** pastillas, como el resto de los controles. El color de categoría acompaña (íconos, foco y hover) y no llena superficies grandes.
+
+  | Variante | Clases | Reposo | Hover | Foco visible | Presionado | Deshabilitado |
+  |---|---|---|---|---|---|---|
+  | Principal | `btn--primary`, `btn--live` | Tinta (`--text`) con texto blanco | Fondo en el color de la sección o del caso | Anillo de 2 px en el color de acción, a 3 px | Color de acción oscurecido y escala 0,98 | 45 % de opacidad, sin puntero |
+  | Secundaria | `btn--ghost`, `btn--soft`, `anim__btn` | Blanco, borde fino, sombra suave, ícono en color | Borde y texto en color | Igual | Tinte del color, sin sombra | Igual |
+  | Ir a | `nextc__go` | Pastilla blanca con borde fino y sombra, texto en tinta y la flecha adentro, en un círculo teñido junto al borde derecho | Borde en color, el círculo se llena y la flecha avanza | Anillo en toda la tarjeta | Tinte del color, sin sombra | No aplica |
+  | Enlace con flecha | `link-arrow` | Texto con ícono en color | Subrayado que crece; la flecha se mueve hacia donde apunta | Anillo global | No aplica | No aplica |
+
+  Alto mínimo de 48 px (44 px en enlaces y controles del menú), texto en Hanken Grotesk 500 y contraste AA en todos los estados: blanco sobre tinta o sobre cualquiera de los tres colores de categoría, y color oscurecido sobre blanco.
 - **Botoneras:** grupos en una pastilla blanca con sombra suave. La opción elegida de un filtro va llena con el color de acción; la de un selector de vista o un botón activado, con un tinte del mismo color. Los botones de flecha son círculos blancos de 46px que toman el color de acción al pasar el cursor.
 - **En vivo:** etiqueta con un punto verde (late tres veces y se queda quieto con movimiento reducido) y botón lleno con el color del caso, también en la barra de cada sitio embebido.
 - **Vista previa de sitios:** marco oscuro con tres puntos en los colores de categoría y la dirección en mono; la captura es la portada del proyecto. Es decorativa para lectores de pantalla y no suma un paso de tabulación: el acceso es el botón.
@@ -89,6 +102,8 @@ Sitio estático sin frameworks ni dependencias en el navegador.
   - **Énfasis en el texto:** en los textos de lectura (resumen, paneles, tarjetas, tablas, listas), `**frase**` se muestra en negrita y `==frase==` resaltada con un tinte del color del caso. El texto se escapa antes, así que no se puede colar HTML.
   - **`journey`:** journey map estático, sin animación. En escritorio, una columna por etapa con la curva de emoción arriba y las filas (emoción, qué hace, qué piensa) alineadas entre columnas; en tablet y celular, una línea de tiempo vertical con un medidor de emoción en cada etapa. Las etapas bajas llevan `--neg`, siempre con la emoción escrita.
   - **`taskflow`:** los pasos como un recorrido de nodos numerados unidos por una línea en escritorio; en tablet y celular, cada paso es una tarjeta con su número, en filas que se completan solas. El último paso, la meta, lleva el color del caso.
+  - **`audio`:** audio propio (MP3 en `assets/audio`) con el reproductor nativo, que no se reproduce solo y carga solo los metadatos. Suma un aviso opcional antes (por ejemplo, que las voces son sintéticas), la descarga, la fuente original y la transcripción en un desplegable.
+  - **`cards` con `case`:** una tarjeta puede enlazar a otro caso del portfolio (`case: '<slug>'`, en la misma pestaña y en el idioma actual) además de a una página externa (`url`). Así se conectan los casos de un mismo proyecto, como El aula que incluye y sus tres piezas.
   - **`creditsLinks`:** convierte una frase de los créditos en un enlace, por ejemplo una atribución que pide la licencia de las fotos.
   - **`join` y `toc`:** `join: true` suma un bloque (o el resultado del caso, en `outcome`) al apartado anterior, y `toc` le da al apartado el título que muestra el índice.
   - **`lens` en las fases:** `'cap'`, `'it'` o `'both'` pinta el rótulo de la fase con el color de la lente (un punto por color), sin quitar el texto.
