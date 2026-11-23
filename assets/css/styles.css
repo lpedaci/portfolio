@@ -447,6 +447,9 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   border: 1px solid color-mix(in srgb, var(--c) 32%, transparent); background: color-mix(in srgb, var(--c) 7%, transparent);
 }
 
+/* En desarrollo: mismo chip, con borde punteado; el estado va escrito, no solo en el trazo */
+.card__tags .card__wip { border-style: dashed; }
+
 .card__title { font: 600 1.375rem/1.2 var(--f-display); letter-spacing: -0.015em; text-wrap: balance; }
 .card__desc { color: var(--muted); font-size: 0.975rem; line-height: 1.55; }
 

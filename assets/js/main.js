@@ -55,6 +55,9 @@
       .map(([c, x]) => `<li style="--c: var(--${c})">${escape(x)}</li>`).join('');
     // Sin "+N" en la tarjeta: las etiquetas van en una sola línea y la lista completa está en el caso.
     // La tarjeta muestra lo esencial (portada, título, descripción y resultado); herramientas y detalle quedan en el caso.
+    // En desarrollo: chip con el texto escrito, primero en la lista para que no lo corte la máscara.
+    const wip = p.status === 'wip' ? `<li class="card__wip" style="--c: var(--${p.cat})">${escape(t('statusWip').toLowerCase())}</li>` : '';
+    const year = p.yearL ? p.yearL[L] : p.year;
     const result = p.result ? `<p class="card__result"><span class="sr-only">${t('result')}: </span>${escape(p.result[L])}</p>` : '';
     // Portada: captura del proyecto o, si no hay, una generada con el color de la categoría.
     // Es decorativa (alt vacío): el título de la card ya nombra el proyecto.
@@ -66,12 +69,12 @@
     return `
       <li style="--i:${i}" aria-label="${i + 1} / ${n}">
         <article class="card" data-cat="${p.cat}">
-          <div class="card__media${src ? '' : ' card__media--ph'}" aria-hidden="true">${media}<span class="card__year">${escape(p.year)}</span></div>
+          <div class="card__media${src ? '' : ' card__media--ph'}" aria-hidden="true">${media}<span class="card__year">${escape(year)}</span></div>
           <div class="card__body">
-            <ul class="card__tags" aria-label="${t(CAT_KEY[p.cat])}">${tags}</ul>
+            <ul class="card__tags" aria-label="${t(CAT_KEY[p.cat])}">${wip}${tags}</ul>
             <h3 class="card__title"><a class="card__hit" href="casos/${p.slug}/?lang=${L}">${escape(p.title[L])}</a></h3>
             <p class="card__desc">${escape(p.desc[L])}</p>
-            <p class="sr-only">${escape(p.year)}</p>
+            <p class="sr-only">${escape(year)}</p>
             ${result}
             <span class="card__go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
           </div>

@@ -108,6 +108,7 @@ Sitio estático sin frameworks ni dependencias en el navegador.
   - **`join` y `toc`:** `join: true` suma un bloque (o el resultado del caso, en `outcome`) al apartado anterior, y `toc` le da al apartado el título que muestra el índice.
   - **`lens` en las fases:** `'cap'`, `'it'` o `'both'` pinta el rótulo de la fase con el color de la lente (un punto por color), sin quitar el texto.
 - **Orden por fechas:** cada proyecto declara su período y la grilla se ordena sola.
+- **Proyectos en desarrollo:** `status: 'wip'` en `projects.js` marca un proyecto en curso. La tarjeta suma el chip "en desarrollo" (borde punteado, con el texto escrito) al principio de sus etiquetas y el encabezado del caso, la etiqueta "En desarrollo" junto a la categoría, con el estilo de `badges`. El año se muestra como "2026 - en curso" / "2026 - ongoing" (`yearL`, armado con `yearOngoing` de `i18n.js`), sin tocar `dates`, y la etiqueta de los enlaces en vivo pasa a "En vivo, versión en desarrollo". Los textos viven en `i18n.js` (`statusWip`, `yearOngoing`, `liveWip`).
 - **Imágenes:** dimensiones declaradas para que el layout no salte, carga diferida y ampliación en un visor dentro de la página.
 - **Embebidos:** video, audio y presentaciones cargan en diferido; YouTube usa su dominio sin cookies.
 - **Fuentes e íconos propios:** woff2 alojados en el sitio, sin pedidos a CDNs de tipografía, sin analítica ni rastreadores.

@@ -220,7 +220,7 @@ def render_case(p, out_path):
     kf = font("jetbrains-mono-latin", 22, 500)
     d.text((X, 150), fit_kicker(d, " | ".join(dict.fromkeys(labels)), kf), font=kf, fill=CAT_TXT[cat])
     size, n = title_block(d, plain_words(p["title"]["es"]))
-    d.text((X, 540), f"{URL}  |  {p['year']}", font=font("jetbrains-mono-latin", 22, 400), fill=MUTED)
+    d.text((X, 540), f"{URL}  |  {p.get('yearL', {}).get('es', p['year'])}", font=font("jetbrains-mono-latin", 22, 400), fill=MUTED)
 
     cover = os.path.join(ROOT, p["cover"]) if p.get("cover") else ""
     if cover and os.path.exists(cover):

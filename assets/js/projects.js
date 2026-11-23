@@ -6,6 +6,10 @@
    badges: etiquetas extra junto a la categoría en el encabezado del caso (por ejemplo 'UX').
    dates: [inicio, fin] en 'AAAA-MM' (o 'AAAA' si no hay mes). De acá sale el año que se muestra
    ('2024' o '2022-2024').
+   status: 'wip' marca un proyecto en desarrollo. Suma la etiqueta "En desarrollo" junto a la categoría (en la
+   card y en el encabezado del caso), el año pasa a "2026 - en curso" (yearL, armado con yearOngoing de i18n.js)
+   y la etiqueta de los enlaces en vivo aclara que es una versión en desarrollo. dates sigue con inicio y fin
+   iguales (o el último mes con avances) para no romper el orden; el texto del año sale del código.
    El orden del array es el orden de las cards: primero los destacados (Alcancía, Rumbo, proyectos
    aplicados y auditorías UX/UI) y después del caso publicado más reciente al más antiguo.
    Un caso nuevo va en el lugar que le toque según ese criterio, no al final.
@@ -81,6 +85,26 @@ window.PROJECTS = [
     },
     result: { es: 'Todos los equipos asesorados', en: 'Every team advised' },
     skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.1', 'Lighthouse', 'Claude'], en: ['Nielsen heuristics', 'WCAG 2.1', 'Lighthouse', 'Claude'] }
+  },
+  {
+    slug: 'taller-ia',
+    cover: 'assets/img/covers/taller-ia.jpg',
+    cat: 'it',
+    also: ['cap'],
+    badges: ['LXD', 'UX'],
+    status: 'wip',
+    dates: ['2026-11', '2026-11'],
+    tags: { es: ['ia generativa', 'lxd', 'learning environment'], en: ['generative ai', 'lxd', 'learning environment'] },
+    title: { es: 'Taller - IA, entorno de aprendizaje sobre IA generativa', en: 'Taller - IA, a generative AI learning environment' },
+    desc: {
+      es: 'Learning environment para usar la IA generativa con criterio: 21 módulos con actividades interactivas, animaciones propias y fuentes oficiales, para aprender por cuenta propia o dar clases.',
+      en: 'A learning environment for using generative AI with judgement: 21 modules with interactive activities, original animations and official sources, for self-paced learning or teaching a class.'
+    },
+    result: { es: '21 módulos, 25 tipos de actividad, WCAG 2.2 AA', en: '21 modules, 25 activity types, WCAG 2.2 AA' },
+    skills: {
+      es: ['Diseño instruccional', 'Sistema de diseño', 'WCAG 2.2', 'Curaduría de fuentes', 'Claude Code'],
+      en: ['Instructional design', 'Design system', 'WCAG 2.2', 'Source curation', 'Claude Code']
+    }
   },
   {
     slug: 'escape-room-finanzas',
@@ -391,5 +415,10 @@ window.PROJECTS = [
   window.PROJECTS.forEach((p) => {
     const [a, b] = p.dates.map((d) => d.slice(0, 4));
     p.year = a === b ? a : `${a}-${b}`;
+    // En desarrollo: "2026 - en curso" en cada idioma. Sin i18n.js (herramientas de build) queda solo el año.
+    if (p.status === 'wip') {
+      const I = window.I18N || {};
+      p.yearL = Object.fromEntries(['es', 'en'].map((l) => [l, I[l] && I[l].yearOngoing ? I[l].yearOngoing.replace('{y}', a) : a]));
+    }
   });
 }

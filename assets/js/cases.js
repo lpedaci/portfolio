@@ -21531,5 +21531,1191 @@ window.CASES = {
    "es": "Diseño conversacional, interfaz y programación del asistente: Lourdes Pedaci, con apoyo de Claude Code. Redacción de las respuestas con apoyo de Claude, validada por el equipo. Prueba piloto: Clara Argüello y Silvia Costas. Autoría académica: Equipo 03 (Clara Argüello, Silvia Costas y Lourdes Pedaci). Cátedra: titular, Mg. Lic. Mónica Leda Torres; adjunto, Mg. Lic. Juan Ruiz Díaz. Contenido generado con IA generativa y validado por el Equipo 03.",
    "en": "Conversation design, interface and coding of the assistant: Lourdes Pedaci, with help from Claude Code. Answers written with help from Claude, validated by the team. Pilot test: Clara Argüello and Silvia Costas. Academic authorship: Team 03 (Clara Argüello, Silvia Costas and Lourdes Pedaci). Teaching staff: lead, Mg. Lic. Mónica Leda Torres; associate, Mg. Lic. Juan Ruiz Díaz. Content generated with generative AI and validated by Team 03."
   }
+ },
+ "taller-ia": {
+  "cat": "it",
+  "touch": "cap",
+  "title": {
+   "es": "Taller - IA",
+   "en": "Taller - IA"
+  },
+  "subtitle": {
+   "es": "Un entorno de aprendizaje para usar la IA generativa con criterio, diseñado de punta a punta y en desarrollo",
+   "en": "A learning environment for using generative AI with judgement, designed end to end and still in progress"
+  },
+  "chips": {
+   "es": [
+    "LXD",
+    "UX/UI",
+    "Material 3",
+    "Accesibilidad"
+   ],
+   "en": [
+    "LXD",
+    "UX/UI",
+    "Material 3",
+    "Accessibility"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "La oferta de cursos de IA se centra en herramientas que cambian todo el tiempo, mezcla fuentes de calidad dispar y mide el avance con tiempo en pantalla o rachas, que no dicen si alguien aprendió.",
+    "en": "Most AI courses focus on tools that change all the time, mix sources of uneven quality and measure progress with screen time or streaks, which say nothing about whether someone learned."
+   },
+   "solution": {
+    "es": "Un learning environment que enseña primero el criterio (el marco 4D) y después las herramientas, con fuentes oficiales traducidas y citadas, actividades con feedback y un progreso medido por competencias y evidencias.",
+    "en": "A learning environment that teaches judgement first (the 4D framework) and tools second, with official sources translated and cited, activities with feedback and progress measured by competencies and evidence."
+   },
+   "results": [
+    {
+     "v": "21",
+     "l": {
+      "es": "módulos en 7 bloques, de lo general a lo particular",
+      "en": "modules in 7 blocks, from the general to the specific"
+     }
+    },
+    {
+     "v": "25",
+     "l": {
+      "es": "tipos de actividad interactiva, todos operables con teclado",
+      "en": "interactive activity types, all keyboard operable"
+     }
+    },
+    {
+     "v": "900",
+     "l": {
+      "es": "capturas verificadas: 75 pantallas, 6 anchos, claro y oscuro",
+      "en": "verified screenshots: 75 screens, 6 widths, light and dark"
+     }
+    },
+    {
+     "t": {
+      "es": "En desarrollo: las 10 etapas del brief están construidas y verificadas; queda la revisión manual y el primer dictado.",
+      "en": "In progress: all 10 stages of the brief are built and verified; manual review and the first run with learners are still ahead."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Experience Designer: diseño instruccional, UX/UI, sistema de diseño, curaduría y redacción del contenido, y dirección del desarrollo con Claude Code",
+    "en": "Experience Designer: instructional design, UX/UI, design system, content curation and writing, and directing development with Claude Code"
+   },
+   "timeline": {
+    "es": "Noviembre de 2026, en curso",
+    "en": "November 2026, ongoing"
+   },
+   "context": {
+    "es": "Proyecto propio para aprender las bases de la IA generativa a partir de fuentes oficiales y usarlo después para enseñar a personas adultas de LATAM",
+    "en": "A personal project to learn the foundations of generative AI from official sources and then use it to teach adults across Latin America"
+   },
+   "stack": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "JSON",
+    "Material 3 Expressive",
+    "Playwright",
+    "axe-core",
+    "GitHub Pages",
+    "Claude Code"
+   ],
+   "methods": {
+    "es": [
+     "Backward Design",
+     "Eventos de Gagné",
+     "Marco 4D de AI Fluency",
+     "Competencias en IA de la UNESCO",
+     "Kirkpatrick niveles 1 y 2"
+    ],
+    "en": [
+     "Backward Design",
+     "Gagné’s events",
+     "AI Fluency 4D framework",
+     "UNESCO AI competency frameworks",
+     "Kirkpatrick levels 1 and 2"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Recorrer la versión en desarrollo",
+     "en": "Explore the work-in-progress version"
+    },
+    "url": "https://lpedaci.github.io/taller-ia/#/inicio"
+   },
+   {
+    "label": {
+     "es": "Ver el repositorio en GitHub",
+     "en": "View the GitHub repository"
+    },
+    "url": "https://github.com/lpedaci/taller-ia"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "prose",
+    "h": {
+     "es": "El desafío",
+     "en": "The challenge"
+    },
+    "toc": {
+     "es": "Desafío y público",
+     "en": "Challenge and audience"
+    },
+    "p": [
+     {
+      "es": "Quería aprender las bases de la IA generativa desde las fuentes de quienes la desarrollan, y no desde listas de trucos que envejecen en semanas. El taller nace de ese recorrido: ordenar lo que publican Anthropic, Google, OpenAI y la UNESCO en un camino propio, en español, que después sirva para enseñar.",
+      "en": "I wanted to learn the foundations of generative AI from the people who build it, not from lists of tricks that age in weeks. The workshop grew out of that journey: organising what Anthropic, Google, OpenAI and UNESCO publish into a path of my own, in Spanish, that can then be used to teach."
+     },
+     {
+      "es": "El reto de diseño es que se sienta un **learning environment** y no una página de lectura: la persona entra, sabe en qué punto de su recorrido está, practica con actividades que le devuelven feedback y se va con productos propios, como su biblioteca de prompts y un plan de clase con IA.",
+      "en": "The design challenge is to make it feel like a **learning environment** rather than a reading page: people come in, know where they are in their journey, practise with activities that give feedback and leave with their own outputs, such as a prompt library and a lesson plan that uses AI."
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "join": true,
+    "h": {
+     "es": "Para quién y para qué",
+     "en": "Who it is for and why"
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "Aprender",
+       "en": "Learning"
+      },
+      "tag": {
+       "es": "Personas adultas, docentes y estudiantes mayores de 18",
+       "en": "Adults, teachers and students over 18"
+      },
+      "body": {
+       "es": "Personas sin formación técnica en IA, de Argentina y el resto de LATAM, que quieren usarla con criterio en su trabajo o en sus estudios. El taller es autoasistido: los módulos no se bloquean y cada persona elige su camino.",
+       "en": "People with no technical background in AI, in Argentina and the rest of Latin America, who want to use it with judgement at work or in their studies. The workshop is self-paced: modules are never locked and each person chooses their path."
+      }
+     },
+     {
+      "title": {
+       "es": "Enseñar",
+       "en": "Teaching"
+      },
+      "tag": {
+       "es": "Docentes y capacitadores",
+       "en": "Teachers and trainers"
+      },
+      "body": {
+       "es": "El mismo entorno sirve para dar clases sincrónicas: una guía para facilitadores módulo por módulo, rutas cortas para cursos parciales y las animaciones exportadas a video para proyectar.",
+       "en": "The same environment supports live online classes: a module-by-module facilitator guide, short routes for partial courses and the animations exported to video for projecting in class."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Resultados de aprendizaje",
+     "en": "Learning outcomes"
+    },
+    "toc": {
+     "es": "Diseño instruccional",
+     "en": "Instructional design"
+    },
+    "items": {
+     "es": [
+      "Explicar qué es la IA generativa, cómo funciona un modelo de lenguaje y por qué se equivoca.",
+      "Decidir qué tareas conviene delegar a la IA, cuáles no y en qué modalidad.",
+      "Aplicar técnicas de ingeniería de prompts, de básicas a avanzadas, e iterar según el resultado.",
+      "Evaluar críticamente lo que produce la IA: precisión, sesgos, alucinaciones y pertinencia.",
+      "Usar la IA de forma responsable y cuidar los datos personales propios y ajenos según el marco legal.",
+      "Elegir entre ChatGPT, Claude, Gemini y Copilot según la tarea.",
+      "Crear código, imagen, audio y video con IA, y diseñar flujos simples de automatización.",
+      "Diseñar actividades y materiales de formación que integren la IA de forma intencional."
+     ],
+     "en": [
+      "Explain what generative AI is, how a language model works and why it gets things wrong.",
+      "Decide which tasks are worth delegating to AI, which are not, and in which mode.",
+      "Apply prompt engineering techniques, from basic to advanced, and iterate based on the result.",
+      "Critically evaluate what AI produces: accuracy, bias, hallucinations and relevance.",
+      "Use AI responsibly and protect one’s own and other people’s personal data under the law.",
+      "Choose between ChatGPT, Claude, Gemini and Copilot depending on the task.",
+      "Create code, images, audio and video with AI, and design simple automation flows.",
+      "Design learning activities and materials that integrate AI with intent."
+     ]
+    },
+    "foot": {
+     "es": "Síntesis de los 11 resultados del brief, definidos antes que el contenido (Backward Design).",
+     "en": "A summary of the 11 outcomes in the brief, defined before the content (Backward Design)."
+    }
+   },
+   {
+    "join": true,
+    "t": "taskflow",
+    "h": {
+     "es": "De lo general a lo particular",
+     "en": "From the general to the specific"
+    },
+    "note": {
+     "es": "El marco y las técnicas van antes que las herramientas a propósito: las herramientas cambian todo el tiempo, el criterio no.",
+     "en": "Framework and techniques come before tools on purpose: tools change all the time, judgement does not."
+    },
+    "steps": {
+     "es": [
+      "Comprender: qué es la IA y cómo funciona",
+      "Criterio: el marco 4D y los prompts",
+      "Ética y datos",
+      "Asistentes: los cuatro principales y la voz",
+      "Crear con IA: código, imagen, audio y video",
+      "Automatizar: flujos y agentes",
+      "Aplicar: diseñar formación y proyecto final"
+     ],
+     "en": [
+      "Understand: what AI is and how it works",
+      "Judgement: the 4D framework and prompting",
+      "Ethics and data",
+      "Assistants: the main four and voice",
+      "Create with AI: code, image, audio and video",
+      "Automate: flows and agents",
+      "Apply: designing learning and a final project"
+     ]
+    }
+   },
+   {
+    "join": true,
+    "t": "roadmap",
+    "h": {
+     "es": "Cada lección, con los eventos de Gagné",
+     "en": "Every lesson follows Gagné’s events"
+    },
+    "note": {
+     "es": "Robert Gagné, psicólogo educativo, describió nueve eventos de instrucción: los pasos que ayudan a que alguien preste atención, procese lo nuevo y lo recuerde. Son una guía para ordenar una clase, no una receta. El taller los usa en forma liviana, adaptados a una lección en línea de 45 a 75 minutos.",
+     "en": "Robert Gagné, an educational psychologist, described nine events of instruction: the steps that help someone pay attention, process new material and remember it. They are a guide for structuring a lesson, not a recipe. The workshop uses them in a light form, adapted to a 45 to 75 minute online lesson."
+    },
+    "steps": [
+     {
+      "code": "01",
+      "title": {
+       "es": "Gancho",
+       "en": "Hook"
+      },
+      "body": {
+       "es": "Una situación o pregunta que abre el tema.",
+       "en": "A situation or question that opens the topic."
+      }
+     },
+     {
+      "code": "02",
+      "title": {
+       "es": "Objetivo visible",
+       "en": "Visible objective"
+      },
+      "body": {
+       "es": "Qué va a poder hacer la persona al terminar.",
+       "en": "What the learner will be able to do by the end."
+      }
+     },
+     {
+      "code": "03",
+      "title": {
+       "es": "Activación",
+       "en": "Activation"
+      },
+      "body": {
+       "es": "Lo que ya sabe, antes de lo nuevo.",
+       "en": "What they already know, before anything new."
+      }
+     },
+     {
+      "code": "04",
+      "title": {
+       "es": "Contenido breve",
+       "en": "Short content"
+      },
+      "body": {
+       "es": "Un concepto por paso, con animaciones y gráficos.",
+       "en": "One concept per step, with animations and charts."
+      }
+     },
+     {
+      "code": "05",
+      "title": {
+       "es": "Práctica guiada",
+       "en": "Guided practice"
+      },
+      "body": {
+       "es": "Una actividad interactiva en cada lección.",
+       "en": "An interactive activity in every lesson."
+      }
+     },
+     {
+      "code": "06",
+      "title": {
+       "es": "Feedback",
+       "en": "Feedback"
+      },
+      "body": {
+       "es": "Inmediato y explicativo, también cuando la respuesta es correcta.",
+       "en": "Immediate and explanatory, also when the answer is right."
+      }
+     },
+     {
+      "code": "07",
+      "title": {
+       "es": "Evaluación corta",
+       "en": "Short assessment"
+      },
+      "body": {
+       "es": "Un chequeo formativo de 3 a 5 preguntas, con reintento.",
+       "en": "A 3 to 5 question formative check, with retries."
+      }
+     },
+     {
+      "code": "08",
+      "title": {
+       "es": "Transferencia",
+       "en": "Transfer"
+      },
+      "body": {
+       "es": "Cómo lo usaría en su trabajo o en su aula.",
+       "en": "How they would use it at work or in class."
+      }
+     }
+    ]
+   },
+   {
+    "join": true,
+    "t": "kv",
+    "h": {
+     "es": "Rutas sugeridas y competencias",
+     "en": "Suggested routes and competencies"
+    },
+    "note": {
+     "es": "Seis rutas permiten usar el taller por partes en clases o cursos cortos. El avance se mide en 8 competencias con 4 niveles: Sin evidencia, Inicial, En desarrollo y Logrado.",
+     "en": "Six routes make it possible to use the workshop in parts for classes or short courses. Progress is measured across 8 competencies with 4 levels: No evidence, Initial, Developing and Achieved."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Esencial",
+       "en": "Essential"
+      },
+      "v": {
+       "es": "Bloques 1, 2 y 3, más los módulos 11 y 12",
+       "en": "Blocks 1, 2 and 3, plus modules 11 and 12"
+      }
+     },
+     {
+      "k": {
+       "es": "Creativa",
+       "en": "Creative"
+      },
+      "v": {
+       "es": "Bloques 1 y 2, más los módulos 15 a 17",
+       "en": "Blocks 1 and 2, plus modules 15 to 17"
+      }
+     },
+     {
+      "k": {
+       "es": "Técnica",
+       "en": "Technical"
+      },
+      "v": {
+       "es": "Bloques 1 y 2, más los módulos 14 y 18",
+       "en": "Blocks 1 and 2, plus modules 14 and 18"
+      }
+     },
+     {
+      "k": {
+       "es": "Idiomas y accesibilidad",
+       "en": "Languages and accessibility"
+      },
+      "v": {
+       "es": "Bloques 1 y 2, más los módulos 10 y 12",
+       "en": "Blocks 1 and 2, plus modules 10 and 12"
+      }
+     },
+     {
+      "k": {
+       "es": "Formadores",
+       "en": "Trainers"
+      },
+      "v": {
+       "es": "La ruta esencial más el bloque 7",
+       "en": "The essential route plus block 7"
+      }
+     },
+     {
+      "k": {
+       "es": "Taller completo",
+       "en": "Full workshop"
+      },
+      "v": {
+       "es": "Los 21 módulos, en el orden sugerido",
+       "en": "All 21 modules, in the suggested order"
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Decisiones de UX",
+     "en": "UX decisions"
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "Medir lo que se aprende, no el tiempo",
+       "en": "Measure learning, not time"
+      },
+      "tag": {
+       "es": "Principio del sistema y D-024",
+       "en": "System principle and D-024"
+      },
+      "body": {
+       "es": "Sin horas en la plataforma, rachas ni días de inactividad. El inicio muestra objetivos demostrados con evidencias, competencias por nivel y un registro de actividad tipo GitHub que cuenta actividades por día. Los datos de ejemplo solo aparecen con ?demo=1.",
+       "en": "No hours on the platform, streaks or inactive days. The home screen shows objectives demonstrated with evidence, competencies by level and a GitHub-style activity log that counts activities per day. Sample data only appears with ?demo=1."
+      }
+     },
+     {
+      "title": {
+       "es": "Una agenda para la cursada",
+       "en": "A schedule for the course"
+      },
+      "tag": {
+       "es": "D-010 y D-027",
+       "en": "D-010 and D-027"
+      },
+      "body": {
+       "es": "Vista día, semana y mes, pendientes y eventos propios. Lo que ya pasó se atenúa con color y no con opacidad, para no perder contraste, y lleva la marca \"Finalizado\" escrita.",
+       "en": "Day, week and month views, to-dos and personal events. Past items are dimmed with colour rather than opacity, so contrast is kept, and carry a written \"Finished\" label."
+      }
+     },
+     {
+      "title": {
+       "es": "Navegación por clase de ventana",
+       "en": "Navigation by window class"
+      },
+      "tag": {
+       "es": "Material 3, D-009 y D-021",
+       "en": "Material 3, D-009 and D-021"
+      },
+      "body": {
+       "es": "Riel expandido en escritorio, colapsado en tablet y barra inferior con \"Más\" en celular. La búsqueda entra en la barra desde 1200 px; por debajo es un botón, para que nunca se corten el título ni las acciones.",
+       "en": "An expanded rail on desktop, a collapsed one on tablet and a bottom bar with \"More\" on mobile. Search sits in the top bar from 1200 px; below that it becomes a button, so the title and actions are never cut off."
+      }
+     },
+     {
+      "title": {
+       "es": "Texto que crece con la persona",
+       "en": "Text that grows with the reader"
+      },
+      "tag": {
+       "es": "D-071 y D-072",
+       "en": "D-071 and D-072"
+      },
+      "body": {
+       "es": "La tipografía pasó a rem y los cortes de ventana a em: con la letra del navegador al doble, el layout cambia de clase como con el zoom. Además, ninguna barra fija tapa el foco y el botón Atrás devuelve la altura y los filtros.",
+       "en": "Type moved to rem and breakpoints to em: with the browser font doubled, the layout switches class as it does with zoom. No fixed bar hides the focus either, and the Back button restores scroll position and filters."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "join": true,
+    "h": {
+     "es": "El entorno",
+     "en": "The environment"
+    },
+    "rowsOf": [
+     2,
+     1,
+     2
+    ],
+    "images": [
+     {
+      "src": "taller-ia-01-inicio.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Inicio del Taller - IA en escritorio, con datos de ejemplo: saludo \"Buen día, Lourdes\", cuatro tarjetas de resumen (6 de 21 módulos completados, 13 de 38 objetivos demostrados, 13 evidencias y el próximo cierre), \"Continuar donde dejaste\" con los módulos en curso, pendientes y una agenda con calendario mensual.",
+       "en": "Taller - IA home screen on desktop, with sample data: the greeting \"Good morning, Lourdes\", four summary cards (6 of 21 modules completed, 13 of 38 objectives demonstrated, 13 pieces of evidence and the next deadline), \"Continue where you left off\" with modules in progress, to-dos and a schedule with a monthly calendar."
+      },
+      "caption": {
+       "es": "Inicio en escritorio, con el riel expandido.",
+       "en": "Home on desktop, with the expanded rail."
+      }
+     },
+     {
+      "src": "taller-ia-02-inicio-celular.webp",
+      "w": 780,
+      "h": 1688,
+      "alt": {
+       "es": "El mismo inicio en un celular: tarjetas de resumen en dos columnas, la agenda debajo y la barra de navegación inferior con Inicio, Recorrido, Agenda, Aprendizaje y Más.",
+       "en": "The same home screen on a phone: summary cards in two columns, the schedule below and the bottom navigation bar with Home, Journey, Schedule, Learning and More."
+      },
+      "caption": {
+       "es": "En celular, barra inferior.",
+       "en": "On mobile, a bottom bar."
+      }
+     },
+     {
+      "src": "taller-ia-04-recorrido.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Mi recorrido: la ruta elegida (\"Ruta esencial\", 6 de 13 módulos completados) y los bloques Comprender y Criterio con una tarjeta por módulo, su estado y la marca \"En tu ruta\".",
+       "en": "My journey: the chosen route (\"Essential route\", 6 of 13 modules completed) and the Understand and Judgement blocks with one card per module, its status and the \"On your route\" mark."
+      },
+      "caption": {
+       "es": "Mi recorrido, con la ruta elegida.",
+       "en": "My journey, with the chosen route."
+      }
+     },
+     {
+      "src": "taller-ia-14-mi-aprendizaje.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Mi aprendizaje: dominio de competencias (13 de 38 objetivos demostrados) con el nivel de cada competencia escrito, objetivos personales, evidencias recientes y el próximo paso sugerido.",
+       "en": "My learning: competency mastery (13 of 38 objectives demonstrated) with each competency level written out, personal goals, recent evidence and the suggested next step."
+      },
+      "caption": {
+       "es": "Competencias y evidencias, sin tiempo en pantalla.",
+       "en": "Competencies and evidence, no screen time."
+      }
+     },
+     {
+      "src": "taller-ia-15-agenda.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Agenda en vista semana: siete columnas del lunes al domingo con entregas, tutorías y encuentros sincrónicos, filtros por tipo de evento y el selector día, semana y mes.",
+       "en": "Schedule in week view: seven columns from Monday to Sunday with deadlines, tutorials and live sessions, filters by event type and the day, week and month switch."
+      },
+      "caption": {
+       "es": "Agenda en vista semana.",
+       "en": "Schedule in week view."
+      }
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Actividades y animaciones",
+     "en": "Activities and animations"
+    },
+    "p": [
+     {
+      "es": "Cada lección tiene al menos una actividad, y el taller suma **25 tipos**: clasificar, predecir la palabra siguiente, mejorar un prompt en rondas, encontrar los errores de una respuesta, anonimizar un texto, armar un storyboard o leer la conversación de un agente, entre otros. Todas se completan con teclado, guardan borradores en el navegador y devuelven un feedback que explica el porqué.",
+      "en": "Every lesson has at least one activity, and the workshop adds up to **25 types**: sorting, predicting the next word, improving a prompt in rounds, spotting the errors in an answer, anonymising a text, building a storyboard or reading an agent’s conversation, among others. All of them can be completed with the keyboard, save drafts in the browser and give feedback that explains why."
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "join": true,
+    "h": {
+     "es": "Algunas actividades",
+     "en": "Some of the activities"
+    },
+    "rowsOf": [
+     3,
+     3
+    ],
+    "images": [
+     {
+      "src": "taller-ia-06-marco-4d.webp",
+      "w": 768,
+      "h": 812,
+      "alt": {
+       "es": "Diagrama del marco 4D: Delegación, Descripción y Discernimiento en un ciclo que se repite hasta que sirve, envueltos por la Diligencia, y debajo las cuatro dimensiones con sus subcompetencias.",
+       "en": "Diagram of the 4D framework: Delegation, Description and Discernment in a cycle that repeats until the result works, wrapped by Diligence, with the four dimensions and their sub-competencies below."
+      },
+      "caption": {
+       "es": "El marco 4D, diagrama propio.",
+       "en": "The 4D framework, an original diagram."
+      }
+     },
+     {
+      "src": "taller-ia-08-predictor.webp",
+      "w": 768,
+      "h": 719,
+      "alt": {
+       "es": "Actividad \"¿Qué palabra sigue?\": la frase \"Mañana tengo una reunión con el equipo y quiero\" y cuatro opciones con su probabilidad en barras (preparar 45 %, revisar 25 %, llegar 18 % y pedir 12 %).",
+       "en": "The \"Which word comes next?\" activity: a Spanish sentence about a team meeting and four options with their probability shown as bars (45 %, 25 %, 18 % and 12 %)."
+      },
+      "caption": {
+       "es": "Predictor de palabras, con datos fijos.",
+       "en": "Word predictor, with fixed data."
+      }
+     },
+     {
+      "src": "taller-ia-07-clasificar.webp",
+      "w": 768,
+      "h": 990,
+      "alt": {
+       "es": "Actividad \"Ordená los ejemplos\": ocho tarjetas con situaciones cotidianas, cada una con un desplegable para ubicarla en una de tres columnas: sigue reglas fijas, clasifica o recomienda, o genera contenido nuevo.",
+       "en": "The \"Sort the examples\" activity: eight cards with everyday situations, each with a drop-down to place it in one of three columns: follows fixed rules, classifies or recommends, or generates new content."
+      },
+      "caption": {
+       "es": "Clasificar, con alternativa al arrastre.",
+       "en": "Sorting, with an alternative to dragging."
+      }
+     },
+     {
+      "src": "taller-ia-09-subir-de-nivel.webp",
+      "w": 768,
+      "h": 624,
+      "alt": {
+       "es": "Actividad \"Subí de nivel\": un prompt para evaluar un curso que se mejora en tres rondas (mostrá ejemplos, separá las partes, pedí que piense antes) y un resultado final.",
+       "en": "The \"Level up\" activity: a prompt for evaluating a course that is improved over three rounds (show examples, split the parts, ask it to think first) and a final result."
+      },
+      "caption": {
+       "es": "Un prompt que mejora en rondas.",
+       "en": "A prompt that improves in rounds."
+      }
+     },
+     {
+      "src": "taller-ia-10-corregir.webp",
+      "w": 768,
+      "h": 922,
+      "alt": {
+       "es": "Actividad \"Encontrá los errores\": el pedido hecho a la IA arriba y su respuesta debajo, con cada oración marcable para señalar las cifras inventadas o lo que no se pidió.",
+       "en": "The \"Find the errors\" activity: the request made to the AI at the top and its answer below, with each sentence selectable to flag invented figures or anything that was not asked for."
+      },
+      "caption": {
+       "es": "Discernimiento: corregir a la IA.",
+       "en": "Discernment: correcting the AI."
+      }
+     },
+     {
+      "src": "taller-ia-11-anonimizar.webp",
+      "w": 768,
+      "h": 763,
+      "alt": {
+       "es": "Actividad \"Anonimizá este texto\": un correo de ejemplo con datos inventados (nombres, un diagnóstico, un DNI y un teléfono) en el que se tocan las partes que identifican o exponen a una persona.",
+       "en": "The \"Anonymise this text\" activity: a sample email with invented data (names, a diagnosis, an ID number and a phone number) where the learner taps the parts that identify or expose a person."
+      },
+      "caption": {
+       "es": "Datos personales, con casos inventados.",
+       "en": "Personal data, with invented cases."
+      }
+     }
+    ]
+   },
+   {
+    "join": true,
+    "t": "gallery",
+    "h": {
+     "es": "Animaciones propias",
+     "en": "Original animations"
+    },
+    "note": {
+     "es": "Nueve animaciones propias explican lo que cuesta ver: la predicción de tokens, la ventana de contexto, el ciclo 4D, qué pasa con los datos, la difusión, el agente, RAG, el flujo con revisión humana y el modo de voz. Cada una tiene guion, controles, narración, transcripción y una versión estática con movimiento reducido, y se exporta a MP4 en 1920 x 1080 con subtítulos para proyectarla en clase.",
+     "en": "Nine original animations explain what is hard to see: token prediction, the context window, the 4D cycle, what happens to data, diffusion, agents, RAG, a flow with human review and voice mode. Each one has a script, controls, narration, a transcript and a static version with reduced motion, and is exported to 1920 x 1080 MP4 with subtitles for projecting in class."
+    },
+    "wide": true,
+    "images": [
+     {
+      "src": "taller-ia-12-animacion-tokens.webp",
+      "w": 768,
+      "h": 778,
+      "alt": {
+       "es": "Animación \"Cómo escribe un asistente: de a un fragmento por vez\", en modo claro: una burbuja de chat que se completa palabra por palabra, la barra de escenas, la velocidad, el botón Narración y la descripción de la escena 1 de 5.",
+       "en": "The \"How an assistant writes: one fragment at a time\" animation, in light mode: a chat bubble that fills in word by word, the scene bar, playback speed, the Narration button and the description of scene 1 of 5."
+      },
+      "caption": {
+       "es": "Predicción de tokens, en modo claro.",
+       "en": "Token prediction, in light mode."
+      }
+     },
+     {
+      "src": "taller-ia-13-animacion-agente.webp",
+      "w": 768,
+      "h": 778,
+      "alt": {
+       "es": "Animación \"Cómo trabaja un agente\", en modo oscuro: una caja Objetivo con una flecha hacia Planifica, el texto en pantalla \"Le das un objetivo. El agente lo divide en pasos.\" y los controles del reproductor.",
+       "en": "The \"How an agent works\" animation, in dark mode: an Objective box with an arrow to Plan, the on-screen text \"You give it a goal. The agent splits it into steps.\" and the player controls."
+      },
+      "caption": {
+       "es": "El agente, en modo oscuro.",
+       "en": "The agent, in dark mode."
+      }
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Sistema de diseño",
+     "en": "Design system"
+    },
+    "p": [
+     {
+      "es": "El taller usa un design system propio sobre **Material 3 Expressive**: tokens de color, tipografía, forma y movimiento generados desde una semilla, en modo claro y oscuro y con contraste estándar, medio y alto. La terciaria, un tono miel, se reserva para lo relacionado con el tiempo (agenda, pendientes y cierres) y los niveles de competencia van en la escala azul, siempre con su nombre escrito.",
+      "en": "The workshop uses its own design system built on **Material 3 Expressive**: colour, type, shape and motion tokens generated from a seed, in light and dark mode and with standard, medium and high contrast. The tertiary, a honey tone, is kept for anything time-related (schedule, to-dos and deadlines), and competency levels use the blue scale, always with their name written out."
+     },
+     {
+      "es": "estilos.html reúne todos los tokens y componentes con un selector de tema y contraste. Y las reglas no quedan en un documento: npm run auditar revisa cada pantalla en 5 anchos y los dos modos contra el sistema (campos, botones, orden de las acciones, escala tipográfica, forma, espaciado en múltiplos de 4, íconos y color del texto), y cada excepción se documenta.",
+      "en": "estilos.html brings together every token and component with a theme and contrast switch. And the rules do not just live in a document: npm run auditar checks every screen at 5 widths and in both modes against the system (fields, buttons, action order, type scale, shape, spacing in multiples of 4, icons and text colour), and every exception is documented."
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "join": true,
+    "h": {
+     "es": "Tokens y temas",
+     "en": "Tokens and themes"
+    },
+    "wide": true,
+    "images": [
+     {
+      "src": "taller-ia-18-estilos.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Página estilos.html del Taller - IA: el título \"Tokens y componentes\", pestañas por sección (color, tipografía, forma, espaciado, componentes, gráficos y estados), los selectores de tema y contraste, y los roles de color de M3 en muestras.",
+       "en": "The Taller - IA estilos.html page: the heading \"Tokens and components\", tabs per section (colour, type, shape, spacing, components, charts and states), the theme and contrast switches, and the M3 colour roles as swatches."
+      },
+      "caption": {
+       "es": "estilos.html, con selector de tema y contraste.",
+       "en": "estilos.html, with a theme and contrast switch."
+      }
+     },
+     {
+      "src": "taller-ia-03-inicio-oscuro.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "El inicio del taller en modo oscuro, con el riel, las tarjetas de resumen, los pendientes y la agenda sobre superficies oscuras.",
+       "en": "The workshop home screen in dark mode, with the rail, summary cards, to-dos and schedule on dark surfaces."
+      },
+      "caption": {
+       "es": "El mismo inicio, en modo oscuro.",
+       "en": "The same home screen, in dark mode."
+      }
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "h": {
+     "es": "Accesibilidad y verificación",
+     "en": "Accessibility and verification"
+    },
+    "note": {
+     "es": "Objetivo WCAG 2.2 AA. Cada punto que se puede comprobar con un programa es un comando que se vuelve a correr, así la revisión no es de una sola vez.",
+     "en": "Target: WCAG 2.2 AA. Every check a program can run is a command that can be run again, so review is never a one-off."
+    },
+    "cols": {
+     "dim": {
+      "es": "Comando",
+      "en": "Command"
+     },
+     "before": {
+      "es": "Qué revisa",
+      "en": "What it checks"
+     },
+     "after": {
+      "es": "Último resultado",
+      "en": "Latest result"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "npm run verificar",
+       "en": "npm run verificar"
+      },
+      "before": {
+       "es": "75 pantallas en 6 anchos (360 a 1920 px), claro y oscuro: axe-core, scroll horizontal, áreas táctiles de 48 px, consola, movimiento reducido, rayas y puntos medios, y el design system.",
+       "en": "75 screens at 6 widths (360 to 1920 px), light and dark: axe-core, horizontal scroll, 48 px touch targets, console, reduced motion, dashes and middle dots, and the design system."
+      },
+      "after": {
+       "es": "900 capturas, sin problemas",
+       "en": "900 screenshots, no issues"
+      }
+     },
+     {
+      "dim": {
+       "es": "npm run auditar",
+       "en": "npm run auditar"
+      },
+      "before": {
+       "es": "Cada pantalla contra las reglas verificables del design system, en 5 anchos y los dos modos.",
+       "en": "Every screen against the design system’s verifiable rules, at 5 widths and in both modes."
+      },
+      "after": {
+       "es": "El sistema se cumple",
+       "en": "The system holds"
+      }
+     },
+     {
+      "dim": {
+       "es": "npm run contraste",
+       "en": "npm run contraste"
+      },
+      "before": {
+       "es": "Las 75 pantallas con contraste alto, en claro y oscuro, y que el progreso se mantenga al cerrar el navegador.",
+       "en": "All 75 screens with high contrast, light and dark, and that progress survives closing the browser."
+      },
+      "after": {
+       "es": "Sin problemas; el progreso se mantiene",
+       "en": "No issues; progress is kept"
+      }
+     },
+     {
+      "dim": {
+       "es": "npm run letra",
+       "en": "npm run letra"
+      },
+      "before": {
+       "es": "La letra del navegador al doble en 4 clases de ventana: que el texto crezca, sin scroll horizontal ni texto cortado.",
+       "en": "The browser font doubled across 4 window classes: text grows, with no horizontal scroll or clipped text."
+      },
+      "after": {
+       "es": "Sin texto cortado",
+       "en": "No clipped text"
+      }
+     },
+     {
+      "dim": {
+       "es": "npm run textos",
+       "en": "npm run textos"
+      },
+      "before": {
+       "es": "Los 3.669 textos del contenido: rayas, inglés sin traducir, citas sin original, signos sin par y menciones a menores.",
+       "en": "All 3,669 content strings: dashes, untranslated English, quotes without the original, unpaired signs and mentions of minors."
+      },
+      "after": {
+       "es": "Sin hallazgos",
+       "en": "No findings"
+      }
+     },
+     {
+      "dim": {
+       "es": "npm run enlaces",
+       "en": "npm run enlaces"
+      },
+      "before": {
+       "es": "Que todos los enlaces externos respondan.",
+       "en": "That every external link responds."
+      },
+      "after": {
+       "es": "95 de 96 funcionan; 1 se revisa a mano",
+       "en": "95 of 96 work; 1 is checked by hand"
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "join": true,
+    "single": true,
+    "h": {
+     "es": "Diagnóstico sin instalar nada",
+     "en": "Diagnostics with nothing to install"
+    },
+    "note": {
+     "es": "Con ?diagnostico=1 aparece un panel que analiza la pantalla actual con axe-core, en español, y permite verla en anchos de celular, tablet y escritorio. Se suma a la prueba de teclado de los 25 tipos de actividad, que es manual. Lo que ningún programa reemplaza queda pendiente: lectores de pantalla y personas usuarias.",
+     "en": "With ?diagnostico=1 a panel appears that runs axe-core on the current screen, in Spanish, and lets you view it at mobile, tablet and desktop widths. It adds to the keyboard test of all 25 activity types, done by hand. What no program can replace is still pending: screen readers and real users."
+    },
+    "images": [
+     {
+      "src": "taller-ia-19-diagnostico.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Inicio del taller con el panel \"Diagnóstico de accesibilidad\" abierto en la esquina inferior derecha: \"Sin problemas automáticos en #/inicio\" y la aclaración de que las pruebas automáticas detectan solo una parte de los problemas.",
+       "en": "The workshop home screen with the \"Accessibility diagnostics\" panel open in the bottom right corner: \"No automatic issues on #/inicio\" and a note that automated tests only catch part of the problems."
+      }
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Fuentes y contenido",
+     "en": "Sources and content"
+    },
+    "p": [
+     {
+      "es": "El contenido es original y en español: sintetiza con palabras propias lo que publican Anthropic, Google, OpenAI, la UNESCO y autores de referencia, y enlaza cada fuente. Las citas textuales son pocas y cortas, y se muestran traducidas con el original debajo, en tamaño chico, con su idioma marcado para los lectores de pantalla y la etiqueta \"Traducción oficial\" o \"Traducción propia\".",
+      "en": "The content is original and in Spanish: it summarises, in my own words, what Anthropic, Google, OpenAI, UNESCO and reference authors publish, and links every source. Verbatim quotes are few and short, shown translated with the original below in a smaller size, with its language marked for screen readers and an \"Official translation\" or \"Own translation\" label."
+     },
+     {
+      "es": "El **glosario** tiene 40 términos, con el original en inglés, una definición propia y el módulo donde se explican. La **Biblioteca** reúne 56 fuentes en APA 7, filtrables por bloque, nivel, idioma y tipo, con una línea sobre por qué leer cada una. Los datos que cambian rápido (funciones de cada asistente, leyes de la región) viven en archivos aparte, con fecha y fuente.",
+      "en": "The **glossary** has 40 terms, with the English original, an original definition and the module where each one is explained. The **Library** gathers 56 sources in APA 7, filterable by block, level, language and type, with a line on why each one is worth reading. Fast-changing data (each assistant’s features, laws across the region) lives in separate files, with a date and a source."
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "join": true,
+    "h": {
+     "es": "Glosario y Biblioteca",
+     "en": "Glossary and Library"
+    },
+    "wide": true,
+    "images": [
+     {
+      "src": "taller-ia-17-glosario.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Glosario: buscador, índice de letras y los términos Agente, Ajuste fino y Alucinación, cada uno con su original en inglés en cursiva, una definición propia y el enlace al módulo donde se explica.",
+       "en": "Glossary: search box, letter index and the terms Agent, Fine-tuning and Hallucination, each with the English original in italics, an original definition and a link to the module where it is explained."
+      },
+      "caption": {
+       "es": "Glosario, con el término original.",
+       "en": "Glossary, with the original term."
+      }
+     },
+     {
+      "src": "taller-ia-16-biblioteca.webp",
+      "w": 1440,
+      "h": 900,
+      "alt": {
+       "es": "Biblioteca: filtros por bloque, nivel, idioma y tipo, el total de 56 fuentes y tarjetas con el título, por qué leerlo, la referencia en APA 7, etiquetas de tipo, nivel e idioma y los módulos donde se usa.",
+       "en": "Library: filters by block, level, language and type, the total of 56 sources and cards with the title, why to read it, the APA 7 reference, type, level and language tags and the modules where it is used."
+      },
+      "caption": {
+       "es": "Biblioteca, con referencias en APA 7.",
+       "en": "Library, with APA 7 references."
+      }
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Cómo trabajo con IA",
+     "en": "How I work with AI"
+    },
+    "note": {
+     "es": "Yo decido y valido; Claude Code implementa. Cada pedido queda registrado, y nada se aprueba sin verificar.",
+     "en": "I decide and validate; Claude Code implements. Every request is logged, and nothing is approved without verification."
+    },
+    "steps": {
+     "es": [
+      "Escribo el brief como especificación",
+      "Hago un pedido con mis palabras",
+      "Claude Code lo reformula como especificación",
+      "Lo registra en DECISIONES.md",
+      "Implementa y corre la verificación",
+      "Reviso y apruebo o pido cambios"
+     ],
+     "en": [
+      "I write the brief as a specification",
+      "I make a request in my own words",
+      "Claude Code restates it as a specification",
+      "It logs it in DECISIONES.md",
+      "It implements and runs the checks",
+      "I review and approve or ask for changes"
+     ]
+    }
+   },
+   {
+    "t": "prose",
+    "join": true,
+    "h": {
+     "es": "Brief, registro y verificación",
+     "en": "Brief, log and verification"
+    },
+    "p": [
+     {
+      "es": "El brief define el público, los resultados de aprendizaje, el marco pedagógico, el design system, las etapas y los criterios de aceptación. Sobre esa base, DECISIONES.md lleva una entrada por pedido (D-001 a D-073 al día de hoy) con lo solicitado, la decisión y su motivo, los archivos afectados, la verificación y lo que queda pendiente. Cuando el brief se contradice, la inconsistencia se anota y se resuelve conmigo, como la cantidad de bloques del recorrido (D-003) o el uso de la terciaria (D-004).",
+      "en": "The brief defines the audience, learning outcomes, pedagogical framework, design system, stages and acceptance criteria. On that basis, DECISIONES.md keeps one entry per request (D-001 to D-073 so far) with what was asked, the decision and its rationale, the files affected, the verification and what is still pending. When the brief contradicts itself, the inconsistency is logged and resolved with me, as with the number of blocks in the journey (D-003) or the use of the tertiary colour (D-004)."
+     },
+     {
+      "es": "La IA acelera la construcción, pero no reemplaza el criterio: el diseño instruccional, el recorte del contenido, la curaduría de fuentes y la aprobación de cada etapa son míos.",
+      "en": "AI speeds up the build, but it does not replace judgement: the instructional design, the scope of the content, the curation of sources and the sign-off on each stage are mine."
+     }
+    ]
+   },
+   {
+    "t": "preview",
+    "h": {
+     "es": "Recorrer el taller",
+     "en": "Explore the workshop"
+    },
+    "url": "https://lpedaci.github.io/taller-ia/?demo=1#/inicio",
+    "img": {
+     "src": "taller-ia-05-leccion.webp",
+     "w": 1440,
+     "h": 900
+    },
+    "kicker": {
+     "es": "En desarrollo",
+     "en": "In progress"
+    },
+    "title": {
+     "es": "Una lección con su barra de pasos",
+     "en": "A lesson with its step bar"
+    },
+    "body": {
+     "es": "La versión publicada ya tiene los 21 módulos. Con ?demo=1, el inicio y Mi aprendizaje muestran datos de ejemplo; sin ese parámetro, el progreso empieza vacío y se guarda solo en tu navegador.",
+     "en": "The published version already has all 21 modules. With ?demo=1, the home screen and My learning show sample data; without it, progress starts empty and is saved only in your browser."
+    },
+    "cta": {
+     "es": "Recorrer la versión en desarrollo",
+     "en": "Explore the work-in-progress version"
+    }
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencias",
+     "en": "References"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Dakan, R., Feller, J. y Anthropic. (s.f.).",
+       "en": "Dakan, R., Feller, J., & Anthropic. (n.d.)."
+      },
+      "title": {
+       "es": "AI Fluency: Framework & Foundations",
+       "en": "AI Fluency: Framework & Foundations"
+      },
+      "post": {
+       "es": " [Curso en línea]. Anthropic Academy.",
+       "en": " [Online course]. Anthropic Academy."
+      },
+      "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations"
+     },
+     {
+      "pre": {
+       "es": "Gagné, R. M. (1985).",
+       "en": "Gagné, R. M. (1985)."
+      },
+      "title": {
+       "es": "The conditions of learning and theory of instruction",
+       "en": "The conditions of learning and theory of instruction"
+      },
+      "post": {
+       "es": " (4.ª ed.). Holt, Rinehart and Winston.",
+       "en": " (4th ed.). Holt, Rinehart and Winston."
+      }
+     },
+     {
+      "pre": {
+       "es": "Google. (s.f.).",
+       "en": "Google. (n.d.)."
+      },
+      "title": {
+       "es": "Material Design 3",
+       "en": "Material Design 3"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://m3.material.io/"
+     },
+     {
+      "pre": {
+       "es": "Kirkpatrick, D. L. y Kirkpatrick, J. D. (2006).",
+       "en": "Kirkpatrick, D. L., & Kirkpatrick, J. D. (2006)."
+      },
+      "title": {
+       "es": "Evaluating training programs: The four levels",
+       "en": "Evaluating training programs: The four levels"
+      },
+      "post": {
+       "es": " (3.ª ed.). Berrett-Koehler.",
+       "en": " (3rd ed.). Berrett-Koehler."
+      }
+     },
+     {
+      "pre": {
+       "es": "UNESCO. (2024).",
+       "en": "UNESCO. (2024)."
+      },
+      "title": {
+       "es": "AI competency framework for students",
+       "en": "AI competency framework for students"
+      },
+      "post": {
+       "es": ". UNESCO.",
+       "en": ". UNESCO."
+      },
+      "url": "https://www.unesco.org/en/articles/ai-competency-framework-students"
+     },
+     {
+      "pre": {
+       "es": "UNESCO. (2024).",
+       "en": "UNESCO. (2024)."
+      },
+      "title": {
+       "es": "AI competency framework for teachers",
+       "en": "AI competency framework for teachers"
+      },
+      "post": {
+       "es": ". UNESCO.",
+       "en": ". UNESCO."
+      },
+      "url": "https://www.unesco.org/en/articles/ai-competency-framework-teachers"
+     },
+     {
+      "pre": {
+       "es": "W3C. (2023).",
+       "en": "W3C. (2023)."
+      },
+      "title": {
+       "es": "Web Content Accessibility Guidelines (WCAG) 2.2",
+       "en": "Web Content Accessibility Guidelines (WCAG) 2.2"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.w3.org/TR/WCAG22/"
+     },
+     {
+      "pre": {
+       "es": "Wiggins, G. y McTighe, J. (2005).",
+       "en": "Wiggins, G., & McTighe, J. (2005)."
+      },
+      "title": {
+       "es": "Understanding by design",
+       "en": "Understanding by design"
+      },
+      "post": {
+       "es": " (2.ª ed.). ASCD.",
+       "en": " (2nd ed.). ASCD."
+      }
+     }
+    ]
+   }
+  ],
+  "outcome": {
+   "h": {
+    "es": "Estado y próximos pasos",
+    "en": "Status and next steps"
+   },
+   "body": [
+    {
+     "es": "**Hecho:** las 10 etapas del brief están construidas y verificadas. Los 21 módulos tienen lección y actividades, las nueve animaciones tienen su MP4 con subtítulos, y están el glosario, la Biblioteca, el diario de aprendizaje, el portafolio imprimible y la guía para facilitadores. Los 23 criterios de aceptación del brief se cumplen (D-070).",
+     "en": "**Done:** all 10 stages of the brief are built and verified. The 21 modules have a lesson and activities, the nine animations have their MP4 with subtitles, and the glossary, Library, learning journal, printable portfolio and facilitator guide are in place. All 23 acceptance criteria in the brief are met (D-070)."
+    },
+    {
+     "es": "**Falta:** lo que no se comprueba con un programa. Probarlo con lectores de pantalla (NVDA, VoiceOver y TalkBack) y con personas usuarias; una lectura completa de los 21 módulos; confirmar en la fuente oficial las leyes de México y Perú, cuyos sitios no se dejan leer, y una función de Copilot; revisar el tono del glosario, los dilemas y las narraciones; y probar la letra agrandada en teléfonos reales.",
+     "en": "**Still to do:** what no program can check. Testing with screen readers (NVDA, VoiceOver and TalkBack) and with real users; a full read-through of the 21 modules; confirming the Mexican and Peruvian laws at the official source, whose sites cannot be read automatically, and one Copilot feature; reviewing the tone of the glossary, dilemmas and narrations; and testing enlarged text on real phones."
+    },
+    {
+     "es": "**Qué se va a medir al dictarlo:** con Kirkpatrick como referencia, la reacción (nivel 1) con una encuesta de cierre opcional y el aprendizaje (nivel 2) con el autodiagnóstico inicial y final, los objetivos demostrados con evidencias y el proyecto final evaluado con rúbrica.",
+     "en": "**What will be measured when it runs:** using Kirkpatrick as a reference, reaction (level 1) with an optional closing survey and learning (level 2) with the initial and final self-assessment, objectives demonstrated with evidence and the final project assessed with a rubric."
+    }
+   ]
+  }
  }
 };

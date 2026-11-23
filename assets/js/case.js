@@ -508,7 +508,7 @@
     const cover = !p.cover ? '' : (site
       ? `<a class="hero-shot hero-shot--site" href="${esc(links[0].url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="live__chrome"><span class="live__dots"><i></i><i></i><i></i></span><span class="live__url">${esc(shortUrl(links[0].url))}</span></span>${coverImg}</a>`
       : `<div class="hero-shot" aria-hidden="true">${coverImg}</div>`);
-    const cta = links.length ? `<div class="case__cta"><p class="live__badge"><span class="live__dot" aria-hidden="true"></span>${t('liveLinks')}</p>
+    const cta = links.length ? `<div class="case__cta"><p class="live__badge"><span class="live__dot" aria-hidden="true"></span>${t(p.status === 'wip' ? 'liveWip' : 'liveLinks')}</p>
         <div class="live__btns">${links.map((k, n) => `<a class="btn ${n ? 'btn--soft' : 'btn--live'}" href="${esc(k.url)}" target="_blank" rel="noopener"><span>${esc(L(k.label))}</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>`).join('')}</div></div>` : '';
 
     // Tiempo de lectura estimado: palabras del resumen y de los bloques, a 200 por minuto (dato calculado, no inventado).
@@ -538,7 +538,7 @@
       <header class="case__head${cover ? ' case__head--cover' : ''}">
         <div class="case__intro">
         <a class="case__back" href="${ROOT}?lang=${state.lang}#proyectos"><i class="ph ph-arrow-left" aria-hidden="true"></i><span>${t('backAll')}</span></a>
-        <p class="case__meta"><span class="case__cat">${t(CAT_KEY[p.cat])}</span>${(p.also || []).map((c) => `<span class="case__cat" style="--c: var(--${c})">${t(CAT_KEY[c])}</span>`).join('')}${(p.badges || []).map((x) => `<span class="case__cat">${esc(x)}</span>`).join('')}${c.chips ? '' : `<span>${esc(p.tags[state.lang].join(' / '))}</span>`}<span>${esc(p.year)}</span><span class="case__time">${mins} ${t('readMin')}</span></p>
+        <p class="case__meta"><span class="case__cat">${t(CAT_KEY[p.cat])}</span>${(p.also || []).map((c) => `<span class="case__cat" style="--c: var(--${c})">${t(CAT_KEY[c])}</span>`).join('')}${(p.badges || []).map((x) => `<span class="case__cat">${esc(x)}</span>`).join('')}${p.status === 'wip' ? `<span class="case__cat case__wip">${t('statusWip')}</span>` : ''}${c.chips ? '' : `<span>${esc(p.tags[state.lang].join(' / '))}</span>`}<span>${esc(p.yearL ? p.yearL[state.lang] : p.year)}</span><span class="case__time">${mins} ${t('readMin')}</span></p>
         <h1 class="case__title">${esc(L(c.title) || L(p.title))}</h1>
         ${c.subtitle ? `<p class="case__sub">${esc(L(c.subtitle))}</p>` : ''}
         ${chips}
@@ -555,7 +555,7 @@
       <nav class="nextc" aria-label="${esc(t('nextCase'))}" style="--next-c:${nextColor}">
         <p class="nextc__end" aria-hidden="true">${t('caseEnd')}</p>
         <a class="nextc__a" href="${esc(nextUrl)}">
-          <span class="nextc__txt"><span class="nextc__k">${t('nextCase')}</span><span class="nextc__cat">${t(CAT_KEY[nxt.cat])} · ${esc(nxt.year || '')}</span>
+          <span class="nextc__txt"><span class="nextc__k">${t('nextCase')}</span><span class="nextc__cat">${t(CAT_KEY[nxt.cat])} · ${esc((nxt.yearL && nxt.yearL[state.lang]) || nxt.year || '')}</span>
             <span class="nextc__t">${esc(L(nxt.title))}</span>${nxt.desc ? `<span class="nextc__d">${esc(L(nxt.desc))}</span>` : ''}
             <span class="nextc__go">${t('nextCaseCta')}<i class="ph ph-arrow-right" aria-hidden="true"></i></span></span>
           ${nxt.cover ? `<span class="nextc__img" aria-hidden="true"><img src="${ROOT}${esc(nxt.cover)}" width="800" height="500" alt="" loading="lazy" decoding="async"></span>` : ''}
