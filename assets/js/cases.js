@@ -19,8 +19,8 @@ window.CASES = {
     "en": "Dense project-management topics (life cycles, org charts, Gantt, GitHub) were taught with slides, and projects risked ending up as hypothetical exercises."
    },
    "solution": {
-    "es": "Un hub interactivo con seis fases, de la validación del problema con un cliente real a la defensa final, y dos casos de referencia resueltos.",
-    "en": "An interactive hub with six phases, from validating the problem with a real client to the final defence, plus two fully worked reference cases."
+    "es": "Un hub interactivo con las seis fases del proyecto, dos casos de referencia resueltos, los materiales de la asignatura y Hopper, un asistente de preguntas frecuentes.",
+    "en": "An interactive hub with the six project phases, two fully worked reference cases, the course materials and Hopper, a frequently asked questions assistant."
    },
    "results": [
     {
@@ -31,13 +31,10 @@ window.CASES = {
      }
     },
     {
-     "v": {
-      "es": "3er año",
-      "en": "3rd year"
-     },
+     "v": "14",
      "l": {
-      "es": "consecutivo de uso del módulo",
-      "en": "in a row the module is in use"
+      "es": "proyectos finalizados y publicados en el ciclo 2026",
+      "en": "projects finished and published in the 2026 cycle"
      }
     },
     {
@@ -54,8 +51,8 @@ window.CASES = {
     "en": "Project coordination, instructional design, front-end"
    },
    "timeline": {
-    "en": "Running since 2024, third consecutive year, updated 2026",
-    "es": "En curso desde 2024, tercer año consecutivo, actualizado en 2026"
+    "es": "En curso desde 2024, tercer año consecutivo, hub renovado en 2026",
+    "en": "Running since 2024, third consecutive year, hub redesigned in 2026"
    },
    "context": {
     "en": "Seventh-year Informatics programme, Instituto Leonardo Murialdo",
@@ -63,6 +60,7 @@ window.CASES = {
    },
    "stack": [
     "HTML/CSS/JS",
+    "JSON",
     "GitHub Pages",
     "Figma",
     "GenAI"
@@ -336,14 +334,124 @@ window.CASES = {
     ]
    },
    {
+    "t": "prose",
+    "h": {
+     "es": "Proyectos finalizados 2026",
+     "en": "Finished projects, 2026"
+    },
+    "p": [
+     {
+      "es": "En el ciclo 2026, los 14 equipos de 7mo INFO A y 7mo INFO B, siete por división, llevaron el problema de un cliente real hasta un sistema funcionando y con su landing de presentación publicada. Diez son sistemas de software, casi todos web, y cuatro combinan hardware y software, dos de ellos con IoT. Los clientes vienen de sectores muy distintos: logística, salud pública, industria textil y automotriz, ciencia y tecnología, comercio, servicios de oficios, un gimnasio y un club social.",
+      "en": "In the 2026 cycle, the 14 teams from 7th year INFO A and INFO B, seven per class, took a real client’s problem all the way to a working system with its presentation landing page published. Ten are software systems, almost all of them web based, and four combine hardware and software, two of them with IoT. The clients come from very different sectors: logistics, public health, the textile and automotive industries, science and technology, retail, trade services, a gym and a social club."
+     },
+     {
+      "es": "En el hub, cada proyecto tiene su tarjeta con la captura de la landing, el sector del cliente, el tipo de solución y los enlaces a la documentación, el manual de usuario o las preguntas frecuentes que publicó el equipo. Un filtro por división muestra los proyectos de cada curso.",
+      "en": "In the hub, every project has its own card with a screenshot of the landing page, the client’s sector, the type of solution and links to the documentation, the user manual or the FAQ the team published. A filter by class shows the projects of each group."
+     }
+    ],
+    "toc": {
+     "es": "Proyectos 2026 y Hopper",
+     "en": "2026 projects and Hopper"
+    }
+   },
+   {
+    "t": "gallery",
+    "join": true,
+    "rowsOf": [
+     1,
+     1
+    ],
+    "h": {
+     "es": "El hub renovado",
+     "en": "The redesigned hub"
+    },
+    "images": [
+     {
+      "src": "proyectos-01-fases.webp",
+      "w": 1300,
+      "h": 570,
+      "alt": {
+       "es": "Sección «Seis fases, un solo método» del hub, en modo oscuro: a la izquierda el título y la bajada «De la entrevista con el usuario real a la defensa oral»; a la derecha, el cronograma del proyecto con las fases E01 a E06, cada una con sus entregables y una barra que marca su lugar entre inicio, factibilidad, desarrollo y cierre.",
+       "en": "The hub’s “Six phases, one method” section, in dark mode: on the left, the title and the line “From the interview with the real user to the oral defence”; on the right, the project schedule with phases E01 to E06, each with its deliverables and a bar marking where it falls between start, feasibility, development and closure."
+      },
+      "caption": {
+       "es": "Las seis fases, en un cronograma.",
+       "en": "The six phases, as a schedule."
+      }
+     },
+     {
+      "src": "proyectos-02-finalizados-2026.webp",
+      "w": 1300,
+      "h": 595,
+      "alt": {
+       "es": "Sección «Proyectos finalizados 2026» del hub: el filtro Todos, 7mo INFO A y 7mo INFO B, el contador «Mostrando 14 proyectos», flechas de navegación y las primeras tres tarjetas con la captura de la landing de cada equipo.",
+       "en": "The hub’s “Finished projects 2026” section: the All, 7mo INFO A and 7mo INFO B filter, the “Showing 14 projects” counter, navigation arrows and the first three cards with a screenshot of each team’s landing page."
+      },
+      "caption": {
+       "es": "Los 14 proyectos del ciclo, con filtro por división.",
+       "en": "The 14 projects of the cycle, with a filter by class."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Hopper, el asistente de la asignatura",
+     "en": "Hopper, the course assistant"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Preguntas frecuentes, sin IA generativa",
+       "en": "Frequently asked questions, no generative AI"
+      },
+      "body": {
+       "es": "Responde a partir de 28 preguntas frecuentes escritas para la materia. Busca coincidencias por palabras clave con un puntaje mínimo calibrado: si la consulta no lo alcanza, da una respuesta de respaldo en lugar de arriesgar una equivocada.",
+       "en": "It answers from 28 frequently asked questions written for the course. It matches keywords against a calibrated minimum score: when a query falls short, it gives a fallback answer instead of risking a wrong one."
+      }
+     },
+     {
+      "lead": {
+       "es": "Dos públicos",
+       "en": "Two audiences"
+      },
+      "body": {
+       "es": "Al abrirlo pregunta quién consulta, estudiantes de la materia o personas que quieren conocerla, y se puede cambiar de público en cualquier momento.",
+       "en": "When it opens it asks who is asking, students of the course or people who want to learn about it, and the audience can be changed at any time."
+      }
+     },
+     {
+      "lead": {
+       "es": "Fácil de mantener",
+       "en": "Easy to maintain"
+      },
+      "body": {
+       "es": "Es un único script sin dependencias que se suma al sitio con una línea. El contenido vive en un archivo JSON aparte, no guarda datos en el navegador y una prueba automática ayuda a calibrar el umbral de coincidencia.",
+       "en": "It is a single script with no dependencies, added to the site with one line. The content lives in a separate JSON file, it stores nothing in the browser and an automated test helps tune the matching threshold."
+      }
+     },
+     {
+      "lead": {
+       "es": "Por qué Hopper",
+       "en": "Why Hopper"
+      },
+      "body": {
+       "es": "Lleva el nombre de Grace Hopper, que insistió en que un programa tiene que poder leerlo alguien que no lo escribió: la misma idea que guía la documentación que se les pide a los equipos.",
+       "en": "It is named after Grace Hopper, who insisted that a program must be readable by someone who did not write it: the same idea behind the documentation the teams are asked to produce."
+      }
+     }
+    ]
+   },
+   {
     "t": "live",
     "h": {
      "en": "Interactive course hub, live",
      "es": "Hub interactivo de la asignatura, en vivo"
     },
     "note": {
-     "en": "I designed and hand-coded the interactive HTML modules and the course hub, deployed on GitHub Pages. The hub centralises the six project phases, the two real client case studies, the course modules, the Gantt planning sheet and the delivery guidelines.",
-     "es": "Diseñé y programé a mano los módulos interactivos en HTML y el hub de la asignatura, publicados en GitHub Pages. El hub centraliza las seis fases del proyecto, los dos casos de estudio con clientes reales, los módulos de contenido, el cronograma Gantt y las pautas de entrega."
+     "es": "Diseñé y programé a mano el hub de la asignatura, publicado en GitHub Pages y renovado en 2026. Centraliza las seis fases del proyecto, los dos casos de estudio, los 14 proyectos finalizados, los tres módulos de contenido, los lineamientos del proyecto interdisciplinario, el cronograma Gantt 2026, las pautas de entrega y un ejemplo de documentación completa.",
+     "en": "I designed and hand-coded the course hub, published on GitHub Pages and redesigned in 2026. It brings together the six project phases, the two case studies, the 14 finished projects, the three content modules, the guidelines of the interdisciplinary project, the 2026 Gantt schedule, the delivery guidelines and a complete documentation example."
     },
     "src": "https://lpedaci.github.io/ev_proy-landing-casos/",
     "url": "https://lpedaci.github.io/ev_proy-landing-casos/",
@@ -378,8 +486,8 @@ window.CASES = {
     "es": "Resultados"
    },
    "body": {
-    "en": "The module is now in its third consecutive year of use. Teams arrive at the final defence with a validated problem, a published landing page and a real user who has seen the product, rather than a hypothetical exercise handed in on paper.",
-    "es": "El módulo va por su tercer año consecutivo de uso. Los equipos llegan a la defensa final con un problema validado, una landing publicada y un usuario real que vio el producto, en lugar de un ejercicio hipotético entregado en papel."
+    "es": "El módulo va por su tercer año consecutivo de uso. En el ciclo 2026, los 14 equipos llegaron al cierre con un problema validado, un sistema publicado con su landing y un usuario real que vio el producto, en lugar de un ejercicio hipotético entregado en papel.",
+    "en": "The module is now in its third consecutive year of use. In the 2026 cycle, all 14 teams reached the end with a validated problem, a published system with its landing page and a real user who has seen the product, rather than a hypothetical exercise handed in on paper."
    }
   }
  },

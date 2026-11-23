@@ -199,7 +199,7 @@
     refs: (b) => blk(b, `<ul class="refs">${b.items.map((x) => `<li>${esc(L(x.pre))} <em>${esc(L(x.title))}</em>${esc(L(x.post))}${x.url ? ` <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url)}</a>` : ''}</li>`).join('')}</ul>`),
     prose: (b) => blk(b, b.p.map((x) => `<p>${rich(L(x))}</p>`).join(''), false, ' prose'),
     list: (b) => blk(b, `<ul class="items">${b.items.map((x) => `<li><strong>${esc(L(x.lead))}</strong><span>${rich(L(x.body))}</span></li>`).join('')}</ul>`),
-    roadmap: (b) => blk(b, `<ol class="steps" style="--n:${b.steps.length}">${b.steps.map((x) => `<li><span class="code">${esc(L(x.code))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${rich(L(x.body))}</p></li>`).join('')}</ol>`, true),
+    roadmap: (b) => blk(b, `<ol class="steps${b.steps.length > 4 ? ' steps--long' : ''}" style="--n:${b.steps.length}">${b.steps.map((x) => `<li><span class="code">${esc(L(x.code))}</span>${hx(H + 1, '', esc(L(x.title)))}<p>${rich(L(x.body))}</p></li>`).join('')}</ol>`, true),
     callout: (b) => blk({}, `<div class="callout">${hx(H, '', esc(L(b.h)))}<p>${rich(L(b.body))}</p></div>`, true),
     // Cifras en mosaicos: --sc es la cantidad de columnas en pantallas anchas, elegida para que las filas queden parejas
     // (6 cifras: 3 + 3; 7 u 8: de a 4). La última fila se estira, así no quedan huecos.

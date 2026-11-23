@@ -977,7 +977,8 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
   .items li { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px; }
 }
 
-/* Etapas: en fila solo cuando cada tarjeta tiene lugar; en anchos medios, lista con columnas */
+/* Etapas: en fila solo cuando cada tarjeta tiene lugar (hasta 4 en el ancho del caso);
+   en anchos medios, y con 5 o más etapas, lista con columnas: código, título y descripción */
 .steps { display: grid; gap: 12px; grid-template-columns: 1fr; }
 .steps li { padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); }
 .steps .code { font: 500 0.75rem/1 var(--f-mono); color: var(--c); }
@@ -986,10 +987,13 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 @media (min-width: 640px) and (max-width: 1199px) {
   .steps { gap: 0; border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; background: var(--line); row-gap: 1px; }
   .steps li { display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 2fr); gap: 4px 20px; align-items: baseline; border: 0; border-radius: 0; }
-  .steps h3, .steps p { margin: 0; }
+  .steps :is(h3, h4), .steps p { margin: 0; }
 }
 @media (min-width: 1200px) {
-  .blk .steps { grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); }
+  .blk .steps:not(.steps--long) { grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); }
+  .steps--long { gap: 0; border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; background: var(--line); row-gap: 1px; }
+  .steps--long li { display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 2fr); gap: 4px 20px; align-items: baseline; border: 0; border-radius: 0; }
+  .steps--long :is(h3, h4), .steps--long p { margin: 0; }
 }
 
 .callout { padding: 28px; background: color-mix(in srgb, var(--c) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--c) 18%, transparent); border-radius: var(--r-panel); }

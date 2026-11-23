@@ -53,7 +53,7 @@ window.PROJECTS = [
   },
   {
     slug: 'proyectos-aplicados',
-    cover: 'assets/img/covers/proyectos-aplicados.jpg',
+    cover: 'assets/img/covers/proyectos-aplicados.webp',
     cat: 'it',
     also: ['cap'],
     dates: ['2024', '2026-11'],
