@@ -249,6 +249,22 @@ window.PROJECTS = [
     skills: { es: ['HTML/CSS/JS', 'GitHub Pages', 'Práctica de recuperación'], en: ['HTML/CSS/JS', 'GitHub Pages', 'Retrieval practice'] }
   },
   {
+    slug: 'imrsc-energia',
+    cover: 'assets/img/covers/imrsc-energia.webp',
+    cat: 'cap',
+    alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
+    badges: ['UX'],
+    dates: ['2026', '2026'],
+    tags: { es: ['infraestructura', 'energía'], en: ['infrastructure', 'energy'] },
+    title: { es: 'El Sistema Eléctrico Argentino', en: 'The Argentine Electrical System' },
+    desc: {
+      es: 'Recorrido interactivo propio: un mapa de la energía en ocho módulos, de la generación al consumidor final, con curaduría de fuentes oficiales.',
+      en: 'A self-authored interactive journey: an energy map in eight modules, from generation to the end consumer, with curated official sources.'
+    },
+    result: { es: '8 módulos, glosario y 12 recursos curados', en: '8 modules, a glossary and 12 curated resources' },
+    skills: { es: ['Guion didáctico', 'Curaduría de contenidos', 'HTML/CSS/JS', 'GitHub Pages'], en: ['Instructional scripting', 'Content curation', 'HTML/CSS/JS', 'GitHub Pages'] }
+  },
+  {
     slug: 'docente-era-digital',
     cover: 'assets/img/covers/docente-era-digital.jpg',
     video: true,

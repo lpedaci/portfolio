@@ -6409,6 +6409,365 @@ window.CASES = {
    }
   }
  },
+ "imrsc-energia": {
+  "cat": "cap",
+  "touch": "it",
+  "title": {
+   "en": "The Argentine Electrical System",
+   "es": "El Sistema Eléctrico Argentino"
+  },
+  "subtitle": {
+   "en": "From generation to the end consumer",
+   "es": "De la generación al consumidor final"
+  },
+  "summary": {
+   "problem": {
+    "es": "Para un estudiante de Informática, la energía que alimenta un equipo aparece en el enchufe. Lo que pasa antes está repartido entre centrales, redes, empresas y organismos, y la información técnica está dispersa en sitios oficiales, apuntes de ingeniería y videos.",
+    "en": "For a computing student, the power that feeds a machine simply shows up at the socket. Everything before that is split across power plants, grids, companies and agencies, and the technical information is scattered across official sites, engineering notes and videos."
+   },
+   "solution": {
+    "es": "Un recorrido interactivo de ocho módulos que parte de un mapa de la energía, de la generación al consumidor final, con el marco regulatorio, la fórmula clave, un glosario, recursos curados y el progreso de cada estudiante.",
+    "en": "An eight-module interactive journey that starts from an energy map, from generation to the end consumer, with the regulatory framework, the key formula, a glossary, curated resources and each student's progress."
+   },
+   "results": [
+    {
+     "v": "8",
+     "l": {
+      "es": "módulos, del Mercado Eléctrico Mayorista al marco regulatorio",
+      "en": "modules, from the Wholesale Electricity Market to the regulatory framework"
+     }
+    },
+    {
+     "v": "18 min",
+     "l": {
+      "es": "de lectura en total, de 2 a 4 minutos por módulo",
+      "en": "of reading in total, 2 to 4 minutes per module"
+     }
+    },
+    {
+     "v": "12",
+     "l": {
+      "es": "recursos externos curados, con fuentes oficiales",
+      "en": "curated external resources, including official sources"
+     }
+    },
+    {
+     "t": {
+      "es": "Material propio de la Unidad 01 de IMRSC, la materia que dicto como titular desde 2024.",
+      "en": "Self-authored material for Unit 01 of IMRSC, the subject I have led as lead teacher since 2024."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "en": "Content authoring and curation, instructional design and UX/UI, lead teacher of IMRSC since 2024",
+    "es": "Autoría y curaduría de materiales, diseño instruccional y UX/UI, titular de IMRSC desde 2024"
+   },
+   "timeline": {
+    "en": "2026",
+    "es": "2026"
+   },
+   "context": {
+    "en": "Unit 01, 7th year, Computer Science, Installation, Maintenance and Repair of Computer Systems (IMRSC), Instituto Leonardo Murialdo",
+    "es": "Unidad 01, 7mo año de Informática, Instalación, Mantenimiento y Reparación de Sistemas Computacionales (IMRSC), Instituto Leonardo Murialdo"
+   },
+   "stack": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SVG",
+    "Material 3 Expressive",
+    "GitHub Pages"
+   ],
+   "methods": [
+    "Advance organizer",
+    "Progressive disclosure",
+    "Content curation",
+    "WCAG 2.2 AA",
+    "Mobile first"
+   ]
+  },
+  "links": [
+   {
+    "label": {
+     "en": "Open the material",
+     "es": "Acceder al material"
+    },
+    "url": "https://lpedaci.github.io/IMRSC_U1-energia/"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "prose",
+    "h": {
+     "en": "Overview",
+     "es": "Contexto"
+    },
+    "p": [
+     {
+      "es": "Material de la Unidad 01 de Instalación, Mantenimiento y Reparación de Sistemas Computacionales (IMRSC), la materia de 7mo año de Informática que dicto como titular desde 2024 en el Instituto Leonardo Murialdo. Es un guion didáctico interactivo publicado en GitHub Pages que recorre cómo llega la electricidad desde las centrales hasta el usuario final en Argentina: generación, transporte por el SADI, subestaciones y distribución, junto con el Mercado Eléctrico Mayorista, CAMMESA y el marco regulatorio de la Secretaría de Energía y el ENRE.",
+      "en": "Material for Unit 01 of Installation, Maintenance and Repair of Computer Systems (IMRSC), the seventh-year Computer Science subject I have led as lead teacher since 2024 at Instituto Leonardo Murialdo. It is an interactive instructional script published on GitHub Pages that walks through how electricity travels from power plants to end users in Argentina: generation, transmission across the SADI grid, substations and distribution, along with the Wholesale Electricity Market, CAMMESA and the regulatory framework set by the Secretaría de Energía and ENRE."
+     }
+    ],
+    "toc": {
+     "es": "Contexto y desafío",
+     "en": "Context and challenge"
+    }
+   },
+   {
+    "t": "prose",
+    "join": true,
+    "h": {
+     "en": "The challenge",
+     "es": "El desafío"
+    },
+    "p": [
+     {
+      "es": "Antes de instalar o reparar un equipo, conviene entender de dónde viene la energía que lo alimenta y por qué llega como llega. El tema mezcla física, infraestructura, economía y normas. La información existe, pero está repartida entre sitios de organismos, apuntes universitarios, artículos técnicos y videos de calidad desigual. El objetivo fue ordenar ese material en un único recorrido, con un hilo que el estudiante pueda seguir de punta a punta.",
+      "en": "Before installing or repairing a machine, it helps to understand where the energy that feeds it comes from and why it arrives the way it does. The topic mixes physics, infrastructure, economics and regulation. The information exists, but it is spread across agency websites, university notes, technical articles and videos of uneven quality. The goal was to organise that material into a single journey, with a thread students can follow from start to finish."
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "join": true,
+    "h": {
+     "en": "Learning objectives",
+     "es": "Objetivos de aprendizaje"
+    },
+    "items": [
+     {
+      "lead": { "en": "Describe", "es": "Describir" },
+      "body": { "en": "the path of electrical energy from generation to the end user.", "es": "el camino de la energía eléctrica desde la generación hasta el usuario final." }
+     },
+     {
+      "lead": { "en": "Identify", "es": "Identificar" },
+      "body": { "en": "the actors in the system (CAMMESA, Transener, trunk transmission companies, distributors, Secretaría de Energía, ENRE) and what each one does.", "es": "los actores del sistema (CAMMESA, Transener, transportistas troncales, distribuidoras, Secretaría de Energía, ENRE) y su función." }
+     },
+     {
+      "lead": { "en": "Explain", "es": "Explicar" },
+      "body": { "en": "why energy is transmitted at high voltage, based on Joule's law (P = I² × R).", "es": "por qué la energía se transporta en alta tensión, a partir de la ley de Joule (P = I² × R)." }
+     },
+     {
+      "lead": { "en": "Recognise", "es": "Reconocer" },
+      "body": { "en": "the physical components of the grid: conductors, towers, insulators and substations.", "es": "los componentes físicos de la red: conductores, torres, aisladores y subestaciones." }
+     },
+     {
+      "lead": { "en": "Distinguish", "es": "Distinguir" },
+      "body": { "en": "between who sets the sector's policy and who oversees the concession holders.", "es": "entre quien define la política del sector y quien controla a las concesionarias." }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "en": "The journey, step by step",
+     "es": "El recorrido, paso a paso"
+    },
+    "items": [
+     {
+      "lead": {
+       "en": "Introduction: the Wholesale Electricity Market",
+       "es": "Introducción: el Mercado Eléctrico Mayorista"
+      },
+      "body": {
+       "en": "What the market is, why energy is dispatched in real time and what CAMMESA does.",
+       "es": "Qué es el mercado, por qué la energía se despacha en tiempo real y qué hace CAMMESA."
+      }
+     },
+     {
+      "lead": {
+       "en": "Step 1, generation",
+       "es": "Paso 1, generación"
+      },
+      "body": {
+       "en": "Thermal, hydro, nuclear, wind and solar, with real Argentine power plants and their approximate capacity.",
+       "es": "Térmicas, hidroeléctricas, nucleares, eólicas y solares, con centrales argentinas reales y su potencia aproximada."
+      }
+     },
+     {
+      "lead": {
+       "en": "Step 2, cables",
+       "es": "Paso 2, cables"
+      },
+      "body": {
+       "en": "Aluminium, steel and copper compared by typical use, advantages and limits, and why high-voltage conductors are bare.",
+       "es": "Aluminio, acero y cobre comparados por uso típico, ventajas y limitaciones, y por qué los conductores de alta tensión van desnudos."
+      }
+     },
+     {
+      "lead": {
+       "en": "Step 3, towers",
+       "es": "Paso 3, torres"
+      },
+      "body": {
+       "en": "The parts of a high-voltage tower: shield wire, cross-arms, insulators, phase conductors and foundations.",
+       "es": "Las partes de una torre de alta tensión: cable de guardia, crucetas, aisladores, conductores de fase y cimentación."
+      }
+     },
+     {
+      "lead": {
+       "en": "Step 4, transmission (SADI)",
+       "es": "Paso 4, transporte (SADI)"
+      },
+      "body": {
+       "en": "The Argentine Interconnection System as both a physical grid and an organisation of actors coordinated by CAMMESA.",
+       "es": "El Sistema Argentino de Interconexión como red física y como organización de actores coordinados por CAMMESA."
+      }
+     },
+     {
+      "lead": {
+       "en": "Step 5, substations",
+       "es": "Paso 5, subestaciones"
+      },
+      "body": {
+       "en": "The step-by-step reduction from high to medium and low voltage, explained from how a transformer works.",
+       "es": "La reducción progresiva de alta a media y baja tensión, explicada desde el principio del transformador."
+      }
+     },
+     {
+      "lead": {
+       "en": "Step 6, distribution",
+       "es": "Paso 6, distribución"
+      },
+      "body": {
+       "en": "Distribution companies, cooperatives and types of user, with the obligations of whoever brings energy to the meter.",
+       "es": "Distribuidoras, cooperativas y tipos de usuario, con las obligaciones de quien lleva la energía hasta el medidor."
+      }
+     },
+     {
+      "lead": {
+       "en": "Regulatory framework",
+       "es": "Marco regulatorio"
+      },
+      "body": {
+       "en": "The Secretaría de Energía sets policy and ENRE enforces it: who writes the rules and who makes sure they are followed.",
+       "es": "La Secretaría de Energía hace política y el ENRE hace control: quién fija las reglas y quién las hace cumplir."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "en": "How the journey is built",
+     "es": "Cómo está armado el recorrido"
+    },
+    "items": [
+     {
+      "lead": {
+       "en": "An interactive energy map",
+       "es": "Un mapa de la energía interactivo"
+      },
+      "body": {
+       "en": "The MEM 01 diagram as the entry point: each stage (start, arcs, nodes and end) opens its module, and the lines show the current and its voltage level, from 220 V to 500 kV.",
+       "es": "El diagrama MEM 01 como puerta de entrada: cada etapa (inicio, arcos, nodos y final) abre su módulo, y las líneas muestran la corriente y su nivel de tensión, de 220 V a 500 kV."
+      }
+     },
+     {
+      "lead": {
+       "en": "Short modules with a clear order",
+       "es": "Módulos cortos y con orden claro"
+      },
+      "body": {
+       "en": "Each module states its position (module 4 of 8) and its reading time, and closes with a link to the previous and the next one.",
+       "es": "Cada módulo indica su posición (módulo 4 de 8) y su tiempo de lectura, y cierra con el acceso al anterior y al siguiente."
+      }
+     },
+     {
+      "lead": {
+       "en": "Progress, filters and search",
+       "es": "Progreso, filtros y buscador"
+      },
+      "body": {
+       "en": "Visited modules are marked and progress is saved in the browser, with an option to reset it. The module catalogue can be filtered by physical journey, infrastructure, or actors and regulation, and searched by term.",
+       "es": "Los módulos visitados quedan marcados y el progreso se guarda en el navegador, con la opción de reiniciarlo. El catálogo de módulos se filtra por recorrido físico, infraestructura o actores y regulación, y se busca por término."
+      }
+     },
+     {
+      "lead": {
+       "en": "Depth on demand",
+       "es": "Profundidad a demanda"
+      },
+      "body": {
+       "en": "Images that can be enlarged, Go deeper sections that expand with the source material, and a Glossary and resources panel available from any module.",
+       "es": "Imágenes que se amplían, apartados Profundizá que se despliegan con el material de la fuente y un panel de Glosario y recursos disponible desde cualquier módulo."
+      }
+     },
+     {
+      "lead": {
+       "en": "Dark and light mode",
+       "es": "Modo oscuro y claro"
+      },
+      "body": {
+       "en": "The material opens in dark mode and can be switched to light, to suit the classroom projector or the student's screen.",
+       "es": "El material abre en modo oscuro y se puede pasar a claro, según el proyector del aula o la pantalla del estudiante."
+      }
+     }
+    ]
+   },
+   {
+    "t": "live",
+    "h": {
+     "en": "Explore the energy map",
+     "es": "Explorar el mapa de la energía"
+    },
+    "note": {
+     "en": "Eight modules from the Wholesale Electricity Market to the regulatory framework. Start from the energy map, open any stage and follow your progress, right here.",
+     "es": "Ocho módulos del Mercado Eléctrico Mayorista al marco regulatorio. Empezá por el mapa de la energía, abrí cualquier etapa y seguí tu progreso, acá mismo."
+    },
+    "src": "https://lpedaci.github.io/IMRSC_U1-energia/",
+    "url": "https://lpedaci.github.io/IMRSC_U1-energia/",
+    "label": {
+     "en": "Open the material",
+     "es": "Acceder al material"
+    },
+    "toc": {
+     "es": "Explorar el mapa",
+     "en": "Explore the map"
+    }
+   },
+   {
+    "t": "callout",
+    "h": {
+     "en": "The key formula: P = I² × R",
+     "es": "La fórmula clave: P = I² × R"
+    },
+    "body": {
+     "en": "Energy losses in transmission grow with the square of the current. Doubling the voltage halves the current and cuts losses to 25%. This formula explains why substations exist and why energy travels at high voltage, and it ties every step of the journey into a single idea.",
+     "es": "Las pérdidas de energía en el transporte crecen con el cuadrado de la corriente. Al duplicar la tensión, la corriente se reduce a la mitad y las pérdidas caen al 25 %. Esta fórmula explica por qué existen las subestaciones y por qué la energía viaja en alta tensión, y une todos los pasos del recorrido en una sola idea."
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "en": "Curation and resources",
+     "es": "Curaduría y recursos"
+    },
+    "p": [
+     {
+      "es": "La selección de fuentes es parte del material. Los 12 recursos externos combinan sitios oficiales (Energías de mi País, CAMMESA, su mapa GeoSADI y el ENRE), cuatro videos sobre aisladores, fase y neutro, tensión, corriente y potencia, artículos técnicos sobre torres y cables, y un apunte de la UTN Reconquista sobre líneas aéreas de media y alta tensión. El glosario rápido define ocho términos (SADI, ACSR, CAMMESA, ENRE, hilo de guardia, aislador, cable desnudo y vano) y la sección ¿Sabías que…? suma datos que despiertan preguntas, como que Tierra del Fuego no está conectada al SADI. Todo vive en el panel de Glosario y recursos, agrupado por tema, y el apunte de la UTN también aparece dentro del módulo de torres, donde hace falta.",
+      "en": "Choosing the sources is part of the material. The 12 external resources combine official sites (Energías de mi País, CAMMESA, its GeoSADI map and ENRE), four videos on insulators, phase and neutral, voltage, current and power, technical articles on towers and cables, and lecture notes from UTN Reconquista on medium and high-voltage overhead lines. The quick glossary defines eight terms (SADI, ACSR, CAMMESA, ENRE, shield wire, insulator, bare cable and span), and the Did you know…? section adds facts that spark questions, such as Tierra del Fuego not being connected to the SADI. Everything lives in the Glossary and resources panel, grouped by topic, and the UTN notes also appear inside the towers module, where they are needed."
+     }
+    ],
+    "toc": {
+     "es": "Curaduría y recursos",
+     "en": "Curation and resources"
+    }
+   }
+  ],
+  "outcome": {
+   "h": {
+    "en": "Outcomes",
+    "es": "Resultados"
+   },
+   "body": {
+    "en": "Unit 01 now has its own public, always-available material that turns a scattered topic into a single journey from generation to the end consumer. It combines authoring and curation: the texts, the thread and the structure are my own, and each concept points to the official or technical source behind it. It works as a script for the class and, with the map and saved progress, as a self-paced journey students can pick up where they left off.",
+    "es": "La Unidad 01 cuenta ahora con un material propio, público y siempre disponible que ordena un tema disperso en un único recorrido de la generación al consumidor final. Combina autoría y curaduría: los textos, el hilo y la estructura son propios, y cada concepto lleva a la fuente oficial o técnica que lo respalda. Funciona como guion para la clase y, con el mapa y el progreso guardado, como un recorrido a ritmo propio que el estudiante retoma donde lo dejó."
+   }
+  }
+ },
  "sistemas-operativos": {
   "cat": "cap",
   "touch": "it",
