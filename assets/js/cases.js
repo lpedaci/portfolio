@@ -6495,6 +6495,13 @@ window.CASES = {
      "es": "Acceder al material"
     },
     "url": "https://lpedaci.github.io/IMRSC_U1-energia/"
+   },
+   {
+    "label": {
+     "es": "Repositorio en GitHub",
+     "en": "GitHub repository"
+    },
+    "url": "https://github.com/lpedaci/IMRSC_U1-energia"
    }
   ],
   "blocks": [
