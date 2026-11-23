@@ -19,6 +19,7 @@ window.PROJECTS = [
     slug: 'alcancia',
     cover: 'assets/img/covers/alcancia.jpg',
     cat: 'it',
+    also: ['cap'],
     badges: ['UX', 'LXD'],
     dates: ['2026-11', '2026-11'],
     tags: { es: ['ux/ui', 'lxd', 'producto b2b'], en: ['ux/ui', 'lxd', 'b2b product'] },
