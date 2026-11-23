@@ -23338,7 +23338,7 @@ window.CASES = {
     "Performance support",
     "Arquitectura de información",
     "Sistema de diseño",
-    "Auditoría WCAG 2.2 AA",
+    "WCAG 2.2 AA",
     "APA 7"
    ]
   },
@@ -24416,7 +24416,7 @@ window.CASES = {
     "items": {
      "es": [
       "HTML semántico, enlace para saltar al contenido y foco visible en los controles.",
-      "Un calendario visual con su tabla equivalente, y tablas que se apilan en el celular.",
+      "Un calendario visual con su tabla equivalente, que en el celular se desliza también con el teclado, y tablas que se apilan.",
       "Desplegables «Tocá para ver» para el contenido secundario, sin alargar cada parada.",
       "Animaciones con pausa y descripción en texto; con movimiento reducido muestran el cuadro final.",
       "Enlaces externos que avisan que se abren en una pestaña nueva.",
@@ -24424,7 +24424,7 @@ window.CASES = {
      ],
      "en": [
       "Semantic HTML, a skip-to-content link and visible focus on controls.",
-      "A visual calendar with an equivalent table, and tables that stack on phones.",
+      "A visual calendar with an equivalent table, which on phones can also be scrolled with the keyboard, and tables that stack.",
       "“Tap to see” disclosures for secondary content, without making each stop longer.",
       "Animations with a pause control and a text description; with reduced motion they show the final frame.",
       "External links announce that they open in a new tab.",
@@ -24441,8 +24441,8 @@ window.CASES = {
      "en": "WCAG 2.2 AA audit"
     },
     "note": {
-     "es": "Auditoría del 23 de noviembre de 2026: revisión del código, contraste de los tokens en tema claro y oscuro, y prueba en navegador a 375 px y en escritorio. Estos son los problemas que se corrigieron. Queda un cambio de diseño menor: una etiqueta visible para el nombre de la carrera en la escala.",
-     "en": "Audit carried out on 23 November 2026: code review, contrast of the tokens in light and dark themes, and browser testing at 375 px and on desktop. These are the problems that were fixed. One minor design change remains: a visible label for the degree name in the scale."
+     "es": "Dos revisiones del 23 de noviembre de 2026. La primera revisó el código, el contraste de los tokens en tema claro y oscuro y el sitio en el navegador a 375 px y en escritorio. La segunda midió cada texto visible contra su fondo real, con opacidades y fondos semitransparentes, y el calendario en el celular. Después de las correcciones, axe-core no encuentra errores en las trece vistas del sitio, en los dos temas, en escritorio y a 375 px. Queda un cambio de diseño menor: una etiqueta visible para el nombre de la carrera en la escala.",
+     "en": "Two reviews on 23 November 2026. The first covered the code, token contrast in light and dark themes and the site in the browser at 375 px and on desktop. The second measured every visible text against its real background, including opacity and semi-transparent fills, plus the calendar on phones. After the fixes, axe-core finds no errors across the site’s thirteen views, in both themes, on desktop and at 375 px. One minor design change remains: a visible label for the degree name in the scale."
     },
     "cols": {
      "dim": {
@@ -24583,6 +24583,48 @@ window.CASES = {
       "after": {
        "es": "Cada uno suma el nombre de su animación, por ejemplo \"Reproducir: Los cuatro niveles\".",
        "en": "Each one adds its animation name, for example \"Play: The four levels\"."
+      }
+     },
+     {
+      "dim": {
+       "es": "1.4.3 Contraste mínimo (AA)",
+       "en": "1.4.3 Contrast minimum (AA)"
+      },
+      "before": {
+       "es": "El crédito del pie medía 4,38:1 en tema claro y 4,15:1 en oscuro.",
+       "en": "The footer credit measured 4.38:1 in light theme and 4.15:1 in dark."
+      },
+      "after": {
+       "es": "Texto al 72 % en lugar del 48 %.",
+       "en": "Text at 72% instead of 48%."
+      }
+     },
+     {
+      "dim": {
+       "es": "1.4.3 Contraste mínimo (AA)",
+       "en": "1.4.3 Contrast minimum (AA)"
+      },
+      "before": {
+       "es": "En tema oscuro, las fuentes de los datos medían entre 4,15:1 y 4,40:1, los subtítulos de las universidades 4,10:1 y la cita del post-it 4,44:1.",
+       "en": "In dark theme, data sources measured between 4.15:1 and 4.40:1, university subtitles 4.10:1 and the sticky-note quote 4.44:1."
+      },
+      "after": {
+       "es": "Opacidades y colores de texto ajustados: ningún texto queda por debajo de 4,5:1 en ninguno de los dos temas.",
+       "en": "Text opacity and colours adjusted: no text falls below 4.5:1 in either theme."
+      }
+     },
+     {
+      "dim": {
+       "es": "2.1.1 Teclado (A)",
+       "en": "2.1.1 Keyboard (A)"
+      },
+      "before": {
+       "es": "A 375 px el calendario se desliza hacia los costados, pero con el teclado no se podía desplazar.",
+       "en": "At 375 px the calendar scrolls sideways, but it could not be scrolled with the keyboard."
+      },
+      "after": {
+       "es": "El calendario recibe foco y se mueve con las flechas, con una indicación visible para deslizarlo.",
+       "en": "The calendar takes focus and moves with the arrow keys, with a visible hint to swipe it."
       }
      }
     ]

@@ -324,7 +324,7 @@ window.PROJECTS = [
       en: 'A career development workshop for teenagers and adults, delivered since 2019, redesigned as a ten-stop self-directed learning path for making informed decisions about education and personal and professional growth.'
     },
     result: { es: '~80 estudiantes por año desde 2019', en: '~80 students a year since 2019' },
-    skills: { es: ['Doble Diamante', 'Aprendizaje autodirigido', 'Sistema de diseño', 'Accesibilidad'], en: ['Double Diamond', 'Self-directed learning', 'Design system', 'Accessibility'] }
+    skills: { es: ['Doble Diamante', 'Aprendizaje autodirigido', 'Sistema de diseño', 'WCAG 2.2'], en: ['Double Diamond', 'Self-directed learning', 'Design system', 'WCAG 2.2'] }
   },
   {
     slug: 'docente-era-digital',
