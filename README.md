@@ -70,7 +70,7 @@ Cada color tiene una versión base, con contraste AA para texto y botones, y una
   |---|---|---|---|---|---|---|
   | Principal | `btn--primary`, `btn--live` | Tinta (`--text`) con texto blanco | Fondo en el color de la sección o del caso | Anillo de 2 px en el color de acción, a 3 px | Color de acción oscurecido y escala 0,98 | 45 % de opacidad, sin puntero |
   | Secundaria | `btn--ghost`, `btn--soft`, `anim__btn` | Blanco, borde fino, sombra suave, ícono en color | Borde y texto en color | Igual | Tinte del color, sin sombra | Igual |
-  | Ir a | `nextc__go` | Pastilla blanca con borde fino y sombra, texto en tinta y la flecha adentro, en un círculo teñido junto al borde derecho | Borde en color, el círculo se llena y la flecha avanza | Anillo en toda la tarjeta | Tinte del color, sin sombra | No aplica |
+  | Ir a | `nextc__go` | Pastilla blanca con borde en el color del caso, texto en tinta y la flecha adentro, en un círculo teñido junto al borde derecho | Borde sólido en color, sombra suave, el círculo se llena y la flecha avanza | Anillo en toda la tarjeta | Fondo teñido, círculo más oscuro y escala 0,98 | No aplica |
   | Enlace con flecha | `link-arrow` | Texto con ícono en color | Subrayado que crece; la flecha se mueve hacia donde apunta | Anillo global | No aplica | No aplica |
 
   Alto mínimo de 48 px (44 px en enlaces y controles del menú), texto en Hanken Grotesk 500 y contraste AA en todos los estados: blanco sobre tinta o sobre cualquiera de los tres colores de categoría, y color oscurecido sobre blanco.

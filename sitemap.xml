@@ -36,6 +36,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/auditorias-ux/"/>
   </url>
   <url>
+    <loc>https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/"/>
+  </url>
+  <url>
     <loc>https://lpedaci.github.io/portfolio/casos/el-aula-que-incluye/</loc>
     <lastmod>2026-11-23</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/el-aula-que-incluye/"/>
@@ -62,13 +69,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/preguntale-a-berni/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/preguntale-a-berni/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/preguntale-a-berni/"/>
-  </url>
-  <url>
-    <loc>https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/</loc>
-    <lastmod>2026-11-23</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/auditoria-estetica/</loc>

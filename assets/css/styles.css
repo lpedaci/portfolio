@@ -740,21 +740,26 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 .nextc__cat { font: 500 0.8125rem/1.2 var(--f-mono); color: color-mix(in srgb, var(--next-c) 82%, #000); }
 .nextc__t { font: 600 clamp(1.375rem, 1.1rem + 1.2vw, 2.125rem)/1.15 var(--f-display); letter-spacing: -0.02em; text-wrap: balance; }
 .nextc__d { color: var(--text-2); line-height: 1.6; text-wrap: pretty; }
+/* Ir a: pastilla blanca (no --surface, que dentro de la caja del caso es gris y se pierde sobre la tarjeta teñida)
+   con borde en el color del caso desde el reposo. Hover: borde sólido y círculo lleno. Presionado: fondo teñido,
+   círculo más oscuro y la pastilla se achica apenas. */
 .nextc__go {
   display: inline-flex; align-items: center; gap: 12px; min-height: 48px; margin-top: 8px; padding: 0 6px 0 20px; border-radius: var(--r-pill);
-  background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 80%, transparent); box-shadow: var(--shadow-card);
+  background: #fff; border: 1.5px solid color-mix(in srgb, var(--next-c) 85%, #fff); box-shadow: 0 1px 2px rgb(23 24 28 / 0.06);
   color: var(--text); font: 500 0.9375rem/1.2 var(--f-body);
-  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), background-color 0.25s var(--ease);
+  transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease), box-shadow 0.2s var(--ease), transform 0.15s var(--ease);
 }
 .nextc__go .ph {
   display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; font-size: 1rem;
   background: color-mix(in srgb, var(--next-c) 12%, #fff); color: color-mix(in srgb, var(--next-c) 85%, #000);
-  transition: transform 0.25s var(--ease), background-color 0.25s var(--ease), color 0.25s var(--ease);
+  transition: transform 0.25s var(--ease), background-color 0.2s var(--ease), color 0.2s var(--ease);
 }
-.nextc__a:hover .nextc__go { border-color: color-mix(in srgb, var(--next-c) 55%, transparent); }
+.nextc__a:hover .nextc__go { border-color: color-mix(in srgb, var(--next-c) 85%, #000); box-shadow: 0 6px 16px -8px rgb(23 24 28 / 0.25); }
 .nextc__a:hover .nextc__go .ph { background: color-mix(in srgb, var(--next-c) 85%, #000); color: #fff; }
 .nextc__a:focus-visible { outline: 2px solid var(--next-c); outline-offset: 3px; }
-.nextc__a:active .nextc__go { background: color-mix(in srgb, var(--next-c) 6%, #fff); box-shadow: none; }
+.nextc__a:active .nextc__go { background: color-mix(in srgb, var(--next-c) 10%, #fff); box-shadow: none; transform: scale(0.98); }
+.nextc__a:active .nextc__go .ph { background: color-mix(in srgb, var(--next-c) 70%, #000); }
+@media (prefers-reduced-motion: reduce) { .nextc__a:active .nextc__go { transform: none; } }
 @media (prefers-reduced-motion: no-preference) { .nextc__a:hover .nextc__go .ph { transform: translateX(2px); } .nextc__a:hover .nextc__img img { transform: scale(1.03); } }
 .nextc__img { display: block; overflow: hidden; border-radius: 14px; box-shadow: 0 18px 36px -22px rgb(23 24 28 / 0.4); }
 .nextc__img img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; transition: transform 0.6s var(--ease); }
