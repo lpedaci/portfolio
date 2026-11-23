@@ -307,6 +307,25 @@ window.PROJECTS = [
     result: { es: '8 módulos, glosario y 12 recursos curados', en: '8 modules, a glossary and 12 curated resources' },
     skills: { es: ['Guion didáctico', 'Curaduría de contenidos', 'HTML/CSS/JS', 'GitHub Pages'], en: ['Instructional scripting', 'Content curation', 'HTML/CSS/JS', 'GitHub Pages'] }
   },
+  /* Se dicta desde 2019 (dates de 2019 a 2026-10): va después de El Sistema Eléctrico Argentino, así en el filtro
+     Capacitación queda entre ese caso y Estandarización de infraestructura IT. Lejos de primer-empleo, para que
+     "Siguiente caso" no conecte los dos casos (son publicaciones independientes). */
+  {
+    slug: 'taller-ciclosuperior',
+    cover: 'assets/img/covers/taller-ciclosuperior.jpg',
+    cat: 'cap',
+    alsoTags: { it: { es: 'ux/ui', en: 'ux/ui' } },
+    badges: ['UX'],
+    dates: ['2019', '2026-10'],
+    tags: { es: ['desarrollo de carrera', 'empleabilidad', 'capacitación'], en: ['career development', 'employability', 'training'] },
+    title: { es: 'Taller - Ciclo superior', en: 'Workshop - Higher education pathways' },
+    desc: {
+      es: 'Un taller de desarrollo de carrera para adolescentes y adultos que se dicta desde 2019, rediseñado como una ruta de aprendizaje autodirigido de diez paradas para tomar decisiones informadas sobre la formación y el crecimiento personal y profesional.',
+      en: 'A career development workshop for teenagers and adults, delivered since 2019, redesigned as a ten-stop self-directed learning path for making informed decisions about education and personal and professional growth.'
+    },
+    result: { es: '~80 estudiantes por año desde 2019', en: '~80 students a year since 2019' },
+    skills: { es: ['Doble Diamante', 'Aprendizaje autodirigido', 'Sistema de diseño', 'Accesibilidad'], en: ['Double Diamond', 'Self-directed learning', 'Design system', 'Accessibility'] }
+  },
   {
     slug: 'docente-era-digital',
     cover: 'assets/img/covers/docente-era-digital.jpg',

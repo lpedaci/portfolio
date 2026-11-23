@@ -23243,5 +23243,1820 @@ window.CASES = {
     }
    ]
   }
+ },
+ "taller-ciclosuperior": {
+  "cat": "cap",
+  "touch": "it",
+  "title": {
+   "es": "Taller - Ciclo superior",
+   "en": "Workshop - Higher education pathways"
+  },
+  "subtitle": {
+   "es": "Un taller de desarrollo de carrera que se dicta desde 2019 a estudiantes de 6to y 7mo año de Informática y a adultos que buscan insertarse o reinsertarse en el mundo académico, rediseñado en 2026 como una ruta de aprendizaje autodirigido de diez paradas y tres apartados especiales: entender la oferta de formación, tomar decisiones informadas y seguir capacitándose a su ritmo, con fechas reales del ingreso 2027.",
+   "en": "A career development workshop delivered since 2019 to sixth- and seventh-year computing students and to adults looking to enter or return to higher education, redesigned in 2026 as a self-directed learning path with ten stops and three special sections: understanding the education on offer, making informed decisions and keeping on learning at their own pace, with real dates for the 2027 intake."
+  },
+  "chips": {
+   "es": [
+    "LXD",
+    "UX/UI",
+    "Aprendizaje autodirigido",
+    "Desarrollo de carrera",
+    "Design system",
+    "Accesibilidad"
+   ],
+   "en": [
+    "LXD",
+    "UX/UI",
+    "Self-directed learning",
+    "Career development",
+    "Design system",
+    "Accessibility"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "La charla existía como diapositivas que crecían cada año con nuevas preguntas de los estudiantes. La información (fechas de inscripción, programas, herramientas del mercado, normativa de títulos) queda vieja de un año al otro, y lo que se ve en una charla se olvida antes de la inscripción, que en muchos casos cierra mientras el estudiante todavía está en la escuela.",
+    "en": "The talk lived as a slide deck that grew every year with new questions from students. The information (application dates, programmes, the tools the market asks for, rules on qualifications) goes out of date from one year to the next, and what is covered in a talk is forgotten before applications open, which often close while students are still at school."
+   },
+   "solution": {
+    "es": "Una ruta de aprendizaje autodirigido que sirve para dar el taller y como recurso de consulta permanente (performance support) hasta la inscripción: cada parada con idea clave, cifras citadas y una actividad; fechas de inscripción que muestran su estado según el día; herramientas para la toma de decisiones informada (comparador de planes, escala sin el 7), trabajo sobre autoconocimiento y propósito, y avance guardado para seguir a su ritmo.",
+    "en": "A self-directed learning path that works both for running the workshop and as performance support until the day of application: every stop has a key idea, cited figures and an activity; application dates show their status based on today’s date; there are tools for informed decision-making (a study plan comparison, a 1-to-10 scale with no 7), work on self-awareness and purpose, and saved progress so people can carry on at their own pace."
+   },
+   "results": [
+    {
+     "v": "~80",
+     "l": {
+      "es": "estudiantes por año en la escuela desde 2019, en Informática A y B",
+      "en": "students a year at the school since 2019, across computing groups A and B"
+     }
+    },
+    {
+     "v": "3",
+     "l": {
+      "es": "públicos: 6to año, 7mo año y adultos que vuelven a estudiar",
+      "en": "audiences: sixth year, seventh year and adults returning to study"
+     }
+    },
+    {
+     "v": "10",
+     "l": {
+      "es": "paradas y tres apartados especiales, nacidos de las preguntas de los estudiantes",
+      "en": "stops and three special sections, born from students’ questions"
+     }
+    },
+    {
+     "t": {
+      "es": "El contenido creció con la demanda de cada cohorte (programación, ingeniería frente a licenciatura, psicología) y en 2026 pasó a una ruta de autocapacitación a la que se puede volver cuando haga falta decidir.",
+      "en": "The content grew with each cohort’s questions (programming, engineering versus a bachelor’s degree, psychology) and in 2026 became a self-paced learning path people can come back to whenever they need to decide."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Experience Designer: diseño UX/UI e instruccional, investigación y actualización anual del contenido, desarrollo del sitio (HTML/CSS/JS), animaciones y dictado de la charla",
+    "en": "Experience Designer: UX/UI and instructional design, research and yearly content updates, site development (HTML/CSS/JS), animations and delivering the talk"
+   },
+   "timeline": {
+    "es": "Charla dictada todos los años desde 2019; sitio web en octubre de 2026, para el ingreso 2027",
+    "en": "Talk delivered every year since 2019; website built in October 2026, for the 2027 intake"
+   },
+   "context": {
+    "es": "6to y 7mo año de secundaria técnica, modalidad Informática (cursos A y B, unos 80 estudiantes por año), Instituto Leonardo Murialdo; y adultos que buscan insertarse o reinsertarse en el mundo académico",
+    "en": "Sixth and seventh year of technical secondary school, computing track (groups A and B, about 80 students a year), Instituto Leonardo Murialdo; and adults looking to enter or return to higher education"
+   },
+   "stack": [
+    "HTML/CSS/JS",
+    "GitHub Pages",
+    "Web Storage (localStorage)",
+    "HyperFrames",
+    "GSAP"
+   ],
+   "methods": [
+    "Doble Diamante",
+    "Aprendizaje autodirigido",
+    "Performance support",
+    "Arquitectura de información",
+    "Sistema de diseño",
+    "Auditoría WCAG 2.2 AA",
+    "APA 7"
+   ]
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Sitio de la charla (en vivo)",
+     "en": "Career talk site (live)"
+    },
+    "url": "https://lpedaci.github.io/taller-ciclosuperior/"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "quote",
+    "h": {
+     "es": "El problema",
+     "en": "The problem"
+    },
+    "body": {
+     "es": "Quien termina la secundaria tiene que elegir carrera, institución y fechas de inscripción dentro de un sistema que nadie le explicó, y esa información cambia todos los años.",
+     "en": "Anyone finishing secondary school has to choose a degree, an institution and application dates within a system nobody explained to them, and that information changes every year."
+    },
+    "p": [
+     {
+      "es": "El taller tiene tres públicos: estudiantes de 6to año, estudiantes de 7mo año y adultos que buscan insertarse o reinsertarse en el mundo académico. A los tres les falta lo mismo: un mapa del nivel superior y criterios para decidir.",
+      "en": "The workshop has three audiences: sixth-year students, seventh-year students and adults looking to enter or return to higher education. All three are missing the same thing: a map of higher education and criteria for deciding."
+     }
+    ],
+    "toc": {
+     "es": "El problema y el proceso",
+     "en": "The problem and the process"
+    }
+   },
+   {
+    "t": "diamond",
+    "join": true,
+    "h": {
+     "es": "Proceso: Doble Diamante",
+     "en": "Process: Double Diamond"
+    },
+    "note": {
+     "es": "El rediseño se ordenó en los cuatro momentos del Doble Diamante: entender el problema, definir qué resolver, explorar cómo y entregar algo que funcione.",
+     "en": "The redesign followed the four moments of the Double Diamond: understand the problem, define what to solve, explore how, and deliver something that works."
+    },
+    "ends": [
+     {
+      "es": "Preguntas de cada cohorte",
+      "en": "Each cohort’s questions"
+     },
+     {
+      "es": "Problema definido",
+      "en": "Defined problem"
+     },
+     {
+      "es": "Sitio publicado",
+      "en": "Published site"
+     }
+    ],
+    "phases": [
+     {
+      "name": "Discover",
+      "mode": {
+       "es": "divergir",
+       "en": "diverge"
+      },
+      "q": {
+       "es": "¿Qué necesitan saber antes de elegir qué estudiar?",
+       "en": "What do they need to know before choosing what to study?"
+      },
+      "items": {
+       "es": [
+        "Preguntas de siete cohortes",
+        "Contenido que caduca",
+        "Datos del mercado"
+       ],
+       "en": [
+        "Seven cohorts of questions",
+        "Content that expires",
+        "Market data"
+       ]
+      }
+     },
+     {
+      "name": "Define",
+      "mode": {
+       "es": "converger",
+       "en": "converge"
+      },
+      "q": {
+       "es": "¿Qué entra en la charla y qué queda para después?",
+       "en": "What goes into the talk and what stays for later?"
+      },
+      "items": {
+       "es": [
+        "How Might We",
+        "Criterios de éxito"
+       ],
+       "en": [
+        "How Might We",
+        "Success criteria"
+       ]
+      }
+     },
+     {
+      "name": "Develop",
+      "mode": {
+       "es": "divergir",
+       "en": "diverge"
+      },
+      "q": {
+       "es": "¿Cómo se convierte una presentación en un recorrido?",
+       "en": "How does a slide deck become a journey?"
+      },
+      "items": {
+       "es": [
+        "Arquitectura en dos líneas",
+        "Apartados especiales",
+        "Decisiones de diseño",
+        "Design system"
+       ],
+       "en": [
+        "Two-line architecture",
+        "Special sections",
+        "Design decisions",
+        "Design system"
+       ]
+      }
+     },
+     {
+      "name": "Deliver",
+      "mode": {
+       "es": "converger",
+       "en": "converge"
+      },
+      "q": {
+       "es": "¿Funciona? ¿Qué entregamos?",
+       "en": "Does it work? What do we ship?"
+      },
+      "items": {
+       "es": [
+        "Sitio publicado",
+        "Accesibilidad",
+        "Resultados",
+        "Próximos pasos"
+       ],
+       "en": [
+        "Published site",
+        "Accessibility",
+        "Results",
+        "Next steps"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "01",
+    "name": "Discover",
+    "mode": {
+     "es": "divergir",
+     "en": "diverge"
+    },
+    "q": {
+     "es": "Entender qué necesita saber alguien de 17 años antes de elegir qué estudiar.",
+     "en": "Understand what a 17-year-old needs to know before choosing what to study."
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "De dónde surge",
+     "en": "Where it comes from"
+    },
+    "p": [
+     {
+      "es": "El taller se dicta todos los años desde 2019 en el Instituto Leonardo Murialdo, con los cursos A y B de la modalidad Informática, en 6to y 7mo año: unos 80 estudiantes por año. También se dicta a adultos que buscan insertarse o reinsertarse en el mundo académico. Los tres públicos comparten la misma necesidad: entender un sistema que nadie les explicó y **decidir con información**.",
+      "en": "The workshop has been delivered every year since 2019 at Instituto Leonardo Murialdo, to computing groups A and B in sixth and seventh year: about 80 students a year. It is also delivered to adults looking to enter or return to higher education. All three audiences share the same need: to understand a system nobody explained to them and to **decide with information**."
+     },
+     {
+      "es": "Hasta 2025 fue una presentación de PowerPoint (Pedaci, 2025). Cada año había que rehacer fechas, ejemplos y herramientas, y lo que se veía en la charla se olvidaba antes de la inscripción. Para el ingreso 2027, la inscripción de la UTN.BA va del 27 de agosto al 4 de diciembre de 2026 y la de la UNTREF, del 5 de octubre al 6 de noviembre (Universidad Tecnológica Nacional, Facultad Regional Buenos Aires [UTN.BA], 2026; Universidad Nacional de Tres de Febrero [UNTREF], 2026): las dos cierran antes de que terminen las clases.",
+      "en": "Until 2025 it was a PowerPoint deck (Pedaci, 2025). Every year the dates, examples and tools had to be redone, and what was covered in the talk was forgotten before applications opened. For the 2027 intake, applications to UTN.BA run from 27 August to 4 December 2026 and to UNTREF from 5 October to 6 November (Universidad Tecnológica Nacional, Facultad Regional Buenos Aires [UTN.BA], 2026; Universidad Nacional de Tres de Febrero [UNTREF], 2026): both close before the school year ends."
+     },
+     {
+      "es": "El contexto también cambia. La versión 2027 suma el conflicto por el financiamiento universitario (Chequeado, 2026), los títulos y analíticos digitales (Resolución CFE N.º 440/23, 2023; Disposición 15/2025, 2025) y las becas Manuel Belgrano y Progresar (MDZ, 2026; Canal 26, 2026).",
+      "en": "The context changes too. The 2027 version adds the dispute over university funding (Chequeado, 2026), digital diplomas and transcripts (Resolución CFE N.º 440/23, 2023; Disposición 15/2025, 2025) and the Manuel Belgrano and Progresar grants (MDZ, 2026; Canal 26, 2026)."
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "accent": true,
+    "h": {
+     "es": "Qué quedó viejo en un año",
+     "en": "What went out of date in a year"
+    },
+    "note": {
+     "es": "Las filas del desplegable «Qué cambió desde la versión anterior de esta charla», en el apartado de programación. En un año, siete referencias del temario quedaron viejas: el contenido necesitaba un formato que se pudiera actualizar sin rehacerlo.",
+     "en": "The rows of the “What changed since the previous version of this talk” panel, in the programming section. In one year, seven references in the syllabus went out of date: the content needed a format that could be updated without starting over."
+    },
+    "cols": {
+     "dim": {
+      "es": "Tema",
+      "en": "Topic"
+     },
+     "before": {
+      "es": "Versión 2025",
+      "en": "2025 version"
+     },
+     "after": {
+      "es": "Versión 2027",
+      "en": "2027 version"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Apps móviles multiplataforma",
+       "en": "Cross-platform mobile apps"
+      },
+      "before": {
+       "es": "Xamarin",
+       "en": "Xamarin"
+      },
+      "after": {
+       "es": ".NET MAUI: Xamarin dejó de tener soporte el 1 de mayo de 2024 (Microsoft, s.f.).",
+       "en": ".NET MAUI: Xamarin support ended on 1 May 2024 (Microsoft, n.d.)."
+      }
+     },
+     {
+      "dim": {
+       "es": "Servidores y virtualización",
+       "en": "Servers and virtualisation"
+      },
+      "before": {
+       "es": "BladeCenter",
+       "en": "BladeCenter"
+      },
+      "after": {
+       "es": "Contenedores (Docker y Kubernetes) y máquinas virtuales en la nube. BladeCenter es una línea discontinuada.",
+       "en": "Containers (Docker and Kubernetes) and cloud virtual machines. BladeCenter is a discontinued line."
+      }
+     },
+     {
+      "dim": {
+       "es": "Herramientas de front-end",
+       "en": "Front-end build tools"
+      },
+      "before": {
+       "es": "Webpack",
+       "en": "Webpack"
+      },
+      "after": {
+       "es": "Vite, que alcanzó a Webpack en uso y lo supera en satisfacción (InfoQ, 2026).",
+       "en": "Vite, which has caught up with Webpack in usage and beats it on satisfaction (InfoQ, 2026)."
+      }
+     },
+     {
+      "dim": {
+       "es": "Bases de datos en memoria",
+       "en": "In-memory databases"
+      },
+      "before": {
+       "es": "Redis",
+       "en": "Redis"
+      },
+      "after": {
+       "es": "Redis y Valkey: Redis cambió su licencia en 2024, surgió Valkey y en 2025 Redis 8 volvió a una licencia abierta (The Register, 2025).",
+       "en": "Redis and Valkey: Redis changed its licence in 2024, Valkey appeared, and in 2025 Redis 8 returned to an open source licence (The Register, 2025)."
+      }
+     },
+     {
+      "dim": {
+       "es": "Bibliotecas de JavaScript",
+       "en": "JavaScript libraries"
+      },
+      "before": {
+       "es": "jQuery",
+       "en": "jQuery"
+      },
+      "after": {
+       "es": "jQuery como herramienta heredada: sacó su versión 4 en enero de 2026, pero se encuentra en sistemas viejos, no en proyectos nuevos (DevClass, 2026).",
+       "en": "jQuery as a legacy tool: version 4 came out in January 2026, but you find it in older systems, not new projects (DevClass, 2026)."
+      }
+     },
+     {
+      "dim": {
+       "es": "Desarrollo para iOS",
+       "en": "iOS development"
+      },
+      "before": {
+       "es": "Objective-C",
+       "en": "Objective-C"
+      },
+      "after": {
+       "es": "Swift y SwiftUI. Objective-C queda para mantener apps antiguas.",
+       "en": "Swift and SwiftUI. Objective-C remains for maintaining older apps."
+      }
+     },
+     {
+      "dim": {
+       "es": "Formación gratuita de la Ciudad",
+       "en": "Free training from the City"
+      },
+      "before": {
+       "es": "Codo a Codo",
+       "en": "Codo a Codo"
+      },
+      "after": {
+       "es": "Talento Tech, que reunió a Codo a Codo y Aprendé Programando (Gobierno de la Ciudad de Buenos Aires, 2026).",
+       "en": "Talento Tech, which brought together Codo a Codo and Aprendé Programando (Gobierno de la Ciudad de Buenos Aires, 2026)."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bars",
+    "h": {
+     "es": "Lo que dicen los datos",
+     "en": "What the data says"
+    },
+    "note": {
+     "es": "Fuentes: Revista Mercado (2026a, 2026b) y World Economic Forum (2025). Son tres mediciones distintas, con las que la parada 8 explica por qué el título abre la puerta pero no alcanza, y por qué hace falta seguir actualizándose.",
+     "en": "Sources: Revista Mercado (2026a, 2026b) and World Economic Forum (2025). They are three separate measurements, which stop 8 uses to explain why a qualification opens the door but is not enough, and why people need to keep upskilling."
+    },
+    "title": {
+     "es": "Tres cifras de la parada 8, cada una de una fuente distinta",
+     "en": "Three figures from stop 8, each from a different source"
+    },
+    "rows": [
+     {
+      "label": {
+       "es": "Empleadores en Argentina que no logran cubrir puestos por falta de habilidades",
+       "en": "Employers in Argentina unable to fill roles for lack of skills"
+      },
+      "v": 64
+     },
+     {
+      "label": {
+       "es": "Empresas argentinas que no consiguen cubrir sus puestos tecnológicos",
+       "en": "Argentine companies unable to fill their tech roles"
+      },
+      "v": 73
+     },
+     {
+      "label": {
+       "es": "Habilidades de un puesto que van a cambiar antes de 2030",
+       "en": "Skills in a role that will change before 2030"
+      },
+      "v": 39
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Lo que preguntaban los estudiantes",
+     "en": "What students kept asking"
+    },
+    "note": {
+     "es": "Esta es la investigación del caso: siete cohortes de preguntas reales hicieron crecer el temario, y cada pregunta recurrente terminó en una parada o un apartado. Las preguntas están reformuladas, no son citas textuales.",
+     "en": "This is the research behind the case: seven cohorts of real questions grew the syllabus, and every recurring question ended up as a stop or a section. The questions are paraphrased, not verbatim quotes."
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "¿Qué hace alguien que programa y por dónde empiezo?",
+       "en": "What does a programmer actually do, and where do I start?"
+      },
+      "tag": {
+       "es": "Apartado especial: programación",
+       "en": "Special section: programming"
+      },
+      "body": {
+       "es": "Un espectro de roles de UX a datos e IA, las herramientas de 2026 por área y cómo se comunican el front-end y el back-end.",
+       "en": "A spectrum of roles from UX to data and AI, the 2026 tools by area and how the front end and back end talk to each other."
+      }
+     },
+     {
+      "title": {
+       "es": "¿Ingeniería o licenciatura? ¿Cuál es la diferencia?",
+       "en": "Engineering or a bachelor’s degree? What is the difference?"
+      },
+      "tag": {
+       "es": "Paradas 5 y 7",
+       "en": "Stops 5 and 7"
+      },
+      "body": {
+       "es": "Los seis tipos de título con su duración, y una parada propia para la ingeniería: qué hace quien se recibe y en qué se diferencian Informática, Sistemas y Computación.",
+       "en": "The six types of qualification with how long they take, and a stop of its own for engineering: what engineers do and how Computer Science, Information Systems and Computer Engineering differ."
+      }
+     },
+     {
+      "title": {
+       "es": "¿Y si me interesa psicología?",
+       "en": "What if I am interested in psychology?"
+      },
+      "tag": {
+       "es": "Apartado especial: psicología",
+       "en": "Special section: psychology"
+      },
+      "body": {
+       "es": "Títulos posibles, dónde estudiar, especializaciones y la matrícula que hace falta para ejercer en la provincia de Buenos Aires.",
+       "en": "Possible qualifications, where to study, specialisations and the registration needed to practise in the Province of Buenos Aires."
+      }
+     },
+     {
+      "title": {
+       "es": "Si dos carreras se llaman igual, ¿son lo mismo?",
+       "en": "If two degrees have the same name, are they the same?"
+      },
+      "tag": {
+       "es": "Parada 6",
+       "en": "Stop 6"
+      },
+      "body": {
+       "es": "Qué mirar en un plan de estudios, cuatro licenciaturas del mismo campo comparadas y una plantilla para comparar dos planes.",
+       "en": "What to look for in a study plan, four bachelor’s degrees in the same field side by side and a template for comparing two plans."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "02",
+    "name": "Define",
+    "mode": {
+     "es": "converger",
+     "en": "converge"
+    },
+    "q": {
+     "es": "Decidir qué entra en la charla y qué tiene que quedar disponible para después.",
+     "en": "Decide what goes into the talk and what has to stay available for later."
+    }
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "How Might We",
+     "en": "How Might We"
+    },
+    "cols": 3,
+    "items": [
+     {
+      "tag": {
+       "es": "HMW 1",
+       "en": "HMW 1"
+      },
+      "body": {
+       "es": "¿Cómo podríamos explicar el sistema de educación superior completo sin abrumar a quien lo ve por primera vez?",
+       "en": "How might we explain the whole higher education system without overwhelming someone seeing it for the first time?"
+      }
+     },
+     {
+      "tag": {
+       "es": "HMW 2",
+       "en": "HMW 2"
+      },
+      "body": {
+       "es": "¿Cómo podríamos evitar que alguien pierda una inscripción por no saber la fecha?",
+       "en": "How might we make sure nobody misses an application because they did not know the date?"
+      }
+     },
+     {
+      "tag": {
+       "es": "HMW 3",
+       "en": "HMW 3"
+      },
+      "body": {
+       "es": "¿Cómo podríamos ayudar a decidir sin decidir por el estudiante?",
+       "en": "How might we help people decide without deciding for them?"
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Criterios de éxito del diseño",
+     "en": "Design success criteria"
+    },
+    "note": {
+     "es": "Los criterios con los que se rediseñó la charla.",
+     "en": "The criteria the talk was redesigned against."
+    },
+    "items": {
+     "es": [
+      "Que se pueda dictar en el tiempo de la charla: 76 minutos de recorrido.",
+      "Que cada dato tenga su fuente, citada en APA 7.",
+      "Que las fechas digan solas si la inscripción está abierta, por abrir o cerrada.",
+      "Que el estudiante salga con algo hecho: una fecha agendada, un plan comparado, la escala completa.",
+      "Que funcione en el celular y sea accesible."
+     ],
+     "en": [
+      "It can be delivered within the time of the talk: a 76-minute journey.",
+      "Every figure has its source, cited in APA 7.",
+      "Dates show on their own whether applications are open, about to open or closed.",
+      "Students leave with something done: a date in their calendar, a plan compared, the scale filled in.",
+      "It works on a phone and is accessible."
+     ]
+    }
+   },
+   {
+    "t": "phase",
+    "n": "03",
+    "name": "Develop",
+    "mode": {
+     "es": "divergir",
+     "en": "diverge"
+    },
+    "q": {
+     "es": "Convertir una presentación lineal en un recorrido.",
+     "en": "Turn a linear slide deck into a journey."
+    }
+   },
+   {
+    "t": "metro",
+    "h": {
+     "es": "Arquitectura: dos líneas, diez paradas",
+     "en": "Architecture: two lines, ten stops"
+    },
+    "note": {
+     "es": "La metáfora de un mapa de transporte ordena la charla: la primera línea explica cómo está armado el sistema y cuándo anotarse; la segunda, qué estudiar y cómo elegir. Los minutos de cada parada están a la vista.",
+     "en": "A transit map metaphor organises the talk: the first line explains how the system is built and when to apply; the second, what to study and how to choose. The minutes for each stop are in plain sight."
+    },
+    "unit": {
+     "es": "min",
+     "en": "min"
+    },
+    "lines": [
+     {
+      "name": {
+       "es": "Línea 1: Conocer el mapa",
+       "en": "Line 1: Know the map"
+      },
+      "sub": {
+       "es": "Sistema, ingreso y fechas",
+       "en": "System, admission and dates"
+      },
+      "stops": [
+       {
+        "n": 1,
+        "name": {
+         "es": "El sistema educativo",
+         "en": "The education system"
+        },
+        "min": 6
+       },
+       {
+        "n": 2,
+        "name": {
+         "es": "La educación superior",
+         "en": "Higher education"
+        },
+        "min": 8
+       },
+       {
+        "n": 3,
+        "name": {
+         "es": "Requisitos de ingreso",
+         "en": "Entry requirements"
+        },
+        "min": 6
+       },
+       {
+        "n": 4,
+        "name": {
+         "es": "Inscripciones 2027",
+         "en": "2027 applications"
+        },
+        "min": 10
+       }
+      ]
+     },
+     {
+      "name": {
+       "es": "Línea 2: Elegir tu camino",
+       "en": "Line 2: Choose your path"
+      },
+      "sub": {
+       "es": "Títulos, carreras, mercado y decisión",
+       "en": "Qualifications, degrees, market and decision"
+      },
+      "stops": [
+       {
+        "n": 5,
+        "name": {
+         "es": "Tipos de títulos",
+         "en": "Types of qualification"
+        },
+        "min": 10
+       },
+       {
+        "n": 6,
+        "name": {
+         "es": "Planes de estudio",
+         "en": "Study plans"
+        },
+        "min": 8
+       },
+       {
+        "n": 7,
+        "name": {
+         "es": "Ingeniería",
+         "en": "Engineering"
+        },
+        "min": 6
+       },
+       {
+        "n": 8,
+        "name": {
+         "es": "Qué pide el mercado",
+         "en": "What the market wants"
+        },
+        "min": 8
+       },
+       {
+        "n": 9,
+        "name": {
+         "es": "¿Qué camino tomar?",
+         "en": "Which path to take?"
+        },
+        "min": 10
+       },
+       {
+        "n": 10,
+        "name": {
+         "es": "En síntesis",
+         "en": "In summary"
+        },
+        "min": 4
+       }
+      ]
+     }
+    ],
+    "total": {
+     "es": "Total",
+     "en": "Total"
+    }
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Apartados especiales",
+     "en": "Special sections"
+    },
+    "note": {
+     "es": "Viven en el mismo sitio, fuera del recorrido, para no alargar la línea principal. Programación y psicología surgieron de las preguntas de los estudiantes.",
+     "en": "They live on the same site, outside the journey, so the main line does not get longer. Programming and psychology came from students’ questions."
+    },
+    "cols": 3,
+    "caseCta": {
+     "es": "Ver el caso",
+     "en": "See the case"
+    },
+    "items": [
+     {
+      "title": {
+       "es": "La particularidad de la programación",
+       "en": "What makes programming different"
+      },
+      "body": {
+       "es": "Cómo está el sector según la Cámara de la Industria Argentina del Software (CESSI, 2026), un espectro de roles del foco humano al tecnológico, las herramientas de 2026 por área y una animación que muestra cómo viaja un pedido del front-end al back-end.",
+       "en": "How the sector is doing according to the Argentine Software Industry Chamber (CESSI, 2026), a spectrum of roles from human-focused to tech-focused, the 2026 tools by area and an animation showing how a request travels from the front end to the back end."
+      }
+     },
+     {
+      "title": {
+       "es": "La particularidad de la psicología",
+       "en": "What makes psychology different"
+      },
+      "body": {
+       "es": "Títulos posibles, dónde estudiar y especializaciones, y qué tiene que ver la psicología con la tecnología: la experiencia de usuario, los recursos humanos y la educación necesitan entender a las personas.",
+       "en": "Possible qualifications, where to study and specialisations, and what psychology has to do with technology: user experience, human resources and education all need to understand people."
+      }
+     },
+     {
+      "title": {
+       "es": "El servidor de Lourdes",
+       "en": "Lourdes’s server"
+      },
+      "body": {
+       "es": "Un repositorio propio de cursos gratuitos o casi, recursos y guías ordenados por tema, para seguir aprendiendo a su ritmo después del taller.",
+       "en": "A personal hub of free or nearly free courses, resources and guides organised by topic, to keep learning at one’s own pace after the workshop."
+      },
+      "case": "servidor"
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Decisiones de diseño",
+     "en": "Design decisions"
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Fechas con estado propio",
+       "en": "Dates that know their status"
+      },
+      "body": {
+       "es": "Cada institución muestra si la inscripción está abierta, por abrir o cerrada según la fecha de hoy (atributos data-open, data-close y data-tbc), y el calendario del ingreso marca el día actual. La misma información va en una tabla, para no depender del gráfico. Es **performance support**: el sitio sirve el día de la inscripción, no solo el día de la charla.",
+       "en": "Each institution shows whether applications are open, about to open or closed based on today’s date (data-open, data-close and data-tbc attributes), and the intake calendar marks the current day. The same information is also in a table, so nothing depends on the chart. This is **performance support**: the site is useful on application day, not just on the day of the talk."
+      }
+     },
+     {
+      "lead": {
+       "es": "Año de ingreso automático",
+       "en": "Automatic intake year"
+      },
+      "body": {
+       "es": "La solapa muestra el año siguiente al actual, así el sitio no envejece de un ciclo al otro.",
+       "en": "The tab shows the year after the current one, so the site does not age from one cycle to the next."
+      }
+     },
+     {
+      "lead": {
+       "es": "Avance guardado",
+       "en": "Saved progress"
+      },
+      "body": {
+       "es": "Las paradas recorridas, la lista final y la escala quedan guardadas en el navegador. Cada persona avanza **a su ritmo** y retoma donde dejó, sin crear una cuenta.",
+       "en": "Completed stops, the final checklist and the scale are saved in the browser. Everyone moves **at their own pace** and picks up where they left off, without creating an account."
+      }
+     },
+     {
+      "lead": {
+       "es": "Escala sin el 7",
+       "en": "A scale with no 7"
+      },
+      "body": {
+       "es": "Dos carreras, dos preguntas por carrera, del 1 al 10 y sin la opción tibia. Pide una respuesta consistente con lo investigado: es una herramienta de **toma de decisiones informada**, no un test vocacional.",
+       "en": "Two degrees, two questions each, from 1 to 10 with no lukewarm option. It asks for an answer consistent with the research already done: a tool for **informed decision-making**, not an aptitude test."
+      }
+     },
+     {
+      "lead": {
+       "es": "Plantilla para comparar planes",
+       "en": "A template for comparing plans"
+      },
+      "body": {
+       "es": "Trece criterios para dos carreras, con copia al portapapeles. Lleva lo visto a la práctica: cada estudiante la completa con los planes oficiales de las carreras que le interesan.",
+       "en": "Thirteen criteria for two degrees, with copy to clipboard. It moves learning into practice: each student fills it in with the official plans of the degrees they are considering."
+      }
+     },
+     {
+      "lead": {
+       "es": "Parada 9: decidir con miedo",
+       "en": "Stop 9: deciding while afraid"
+      },
+      "body": {
+       "es": "Propósito y **autoconocimiento**, miedos, excusas y fracaso. Trabaja la tolerancia a la frustración: cambiar de carrera puede ser una decisión pensada y no un fracaso.",
+       "en": "Purpose and **self-awareness**, fears, excuses and failure. It builds tolerance to frustration: changing degree can be a considered decision rather than a failure."
+      }
+     },
+     {
+      "lead": {
+       "es": "Apartados fuera del recorrido",
+       "en": "Sections outside the journey"
+      },
+      "body": {
+       "es": "Programación, psicología y el servidor viven en el mismo sitio sin alargar la línea principal.",
+       "en": "Programming, psychology and the server live on the same site without making the main line longer."
+      }
+     },
+     {
+      "lead": {
+       "es": "Contenido modular",
+       "en": "Modular content"
+      },
+      "body": {
+       "es": "Cada parada y cada apartado tiene la misma estructura: idea clave, desarrollo con cifras citadas y una actividad corta. Cuando una cohorte trae una pregunta nueva, se suma una parada o un apartado sin rehacer el resto.",
+       "en": "Every stop and section has the same structure: a key idea, content with cited figures and a short activity. When a cohort brings a new question, a stop or a section is added without rebuilding the rest."
+      }
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "marks": true,
+    "h": {
+     "es": "La misma frase, contada de dos formas",
+     "en": "The same sentence, told two ways"
+    },
+    "note": {
+     "es": "El ejemplo de la parada 8, junto al modelo de perfil en T: profundidad en un título y amplitud en negocio, usuario, datos e IA y comunicación. Son **habilidades transferibles**, las mismas que se trabajan en programas de crecimiento profesional: contar el impacto de un trabajo a alguien que no es del área.",
+     "en": "The example from stop 8, alongside the T-shaped profile: depth in one qualification and breadth across business, users, data and AI, and communication. These are **transferable skills**, the same ones professional growth programmes work on: explaining the impact of a piece of work to someone outside the field."
+    },
+    "cols": {
+     "dim": {
+      "es": "Elemento",
+      "en": "Element"
+     },
+     "before": {
+      "es": "Solo la herramienta",
+      "en": "Just the tool"
+     },
+     "after": {
+      "es": "El problema y el usuario",
+      "en": "The problem and the user"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "La frase",
+       "en": "The sentence"
+      },
+      "before": {
+       "es": "\"Hice un sistema de turnos en PHP con MySQL.\"",
+       "en": "\"I built an appointment system in PHP with MySQL.\""
+      },
+      "after": {
+       "es": "\"El consultorio perdía turnos porque los anotaba en papel. Hablé con la secretaria, armé un sistema de turnos en PHP con MySQL y ahora los pacientes reciben un recordatorio: las ausencias bajaron.\"",
+       "en": "\"The practice kept losing appointments because it wrote them down on paper. I talked to the receptionist, built an appointment system in PHP with MySQL and now patients get a reminder: no-shows went down.\""
+      }
+     },
+     {
+      "dim": {
+       "es": "Qué muestra",
+       "en": "What it shows"
+      },
+      "before": {
+       "es": "Qué herramienta se usó.",
+       "en": "Which tool was used."
+      },
+      "after": {
+       "es": "Para qué servía, para quién era y qué cambió. Vale para cualquier título: una tecnicatura, una ingeniería o un profesorado.",
+       "en": "What it was for, who it was for and what changed. It applies to any qualification: a technical diploma, an engineering degree or a teaching degree."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "h": {
+     "es": "Piezas clave del sitio",
+     "en": "Key pieces of the site"
+    },
+    "note": {
+     "es": "Capturas del sitio publicado, en tema claro, tomadas el 23 de noviembre de 2026: por eso la línea «Hoy» del calendario cae a fines de noviembre y la UTN.BA figura con la inscripción abierta.",
+     "en": "Screenshots of the published site, in light theme, taken on 23 November 2026: that is why the “Today” line on the calendar falls at the end of November and UTN.BA shows applications as open."
+    },
+    "rowsOf": [
+     2,
+     2,
+     3
+    ],
+    "images": [
+     {
+      "src": "taller-ciclosuperior-01-inicio.webp",
+      "w": 1440,
+      "h": 780,
+      "alt": {
+       "es": "Inicio de la charla: un cuaderno con la etiqueta 2027, el título Charla de carreras, el texto de presentación y los botones Empezar el recorrido y Ver el mapa; a la derecha, un cartel de dos flechas con la Línea 1, Conocer el mapa, y la Línea 2, Elegir tu camino, con sus paradas numeradas, y la próxima parada.",
+       "en": "Home of the talk: a notebook with a 2027 tab, the title Charla de carreras, the intro text and the Start the journey and See the map buttons; on the right, a two-arrow signpost with Line 1, Know the map, and Line 2, Choose your path, with their numbered stops, and the next stop."
+      },
+      "caption": {
+       "es": "Inicio con la señalización de las dos líneas.",
+       "en": "Home with the signpost for both lines."
+      }
+     },
+     {
+      "src": "taller-ciclosuperior-02-mapa.webp",
+      "w": 1360,
+      "h": 1185,
+      "alt": {
+       "es": "El mapa del recorrido: la Línea 1 con cuatro paradas y 30 minutos, la Línea 2 con seis paradas y 46 minutos, cada parada con su número, su ícono y sus minutos; debajo, tres tarjetas de color para los apartados especiales de programación, psicología y el servidor de Lourdes, y una franja con tres indicaciones de uso.",
+       "en": "The journey map: Line 1 with four stops and 30 minutes, Line 2 with six stops and 46 minutes, each stop with its number, icon and minutes; below, three coloured cards for the special sections on programming, psychology and Lourdes’s server, and a strip with three usage tips."
+      },
+      "caption": {
+       "es": "El mapa: dos líneas y tres apartados.",
+       "en": "The map: two lines and three sections."
+      }
+     },
+     {
+      "src": "taller-ciclosuperior-03-calendario.webp",
+      "w": 962,
+      "h": 481,
+      "alt": {
+       "es": "Calendario del ingreso 2027 de agosto a marzo: barras de inscripción de UTN.BA (27/8 al 4/12) y UNTREF (5/10 al 6/11), barras de cursos y seminarios de ingreso, barras rayadas para las fechas a confirmar de UNTREF y UBA, y una línea vertical rotulada Hoy a fines de noviembre, con su leyenda.",
+       "en": "2027 intake calendar from August to March: application bars for UTN.BA (27/8 to 4/12) and UNTREF (5/10 to 6/11), bars for admission courses and seminars, striped bars for UNTREF and UBA dates still to be confirmed, and a vertical line labelled Today at the end of November, with its legend."
+      },
+      "caption": {
+       "es": "Calendario del ingreso con el día actual.",
+       "en": "Intake calendar with the current day."
+      }
+     },
+     {
+      "src": "taller-ciclosuperior-04-instituciones.webp",
+      "w": 962,
+      "h": 1095,
+      "alt": {
+       "es": "Cuatro tarjetas de institución con su estado: UBA XXI, Febrero, a confirmar; UTN.BA, Abierta hasta el 4/12; UNTREF, Cerrada; Talento Tech, Convocatorias en el año. Cada una con su descripción, fechas citadas y un enlace a la web oficial.",
+       "en": "Four institution cards with their status: UBA XXI, February, to be confirmed; UTN.BA, Open until 4/12; UNTREF, Closed; Talento Tech, Calls during the year. Each with its description, cited dates and a link to the official website."
+      },
+      "caption": {
+       "es": "Tarjetas con el estado de cada inscripción.",
+       "en": "Cards showing each application’s status."
+      }
+     },
+     {
+      "src": "taller-ciclosuperior-05-escala.webp",
+      "w": 962,
+      "h": 529,
+      "alt": {
+       "es": "La escala sin el 7: arriba, un texto de ayuda que explica que un mismo número no se puede usar en las dos carreras y cómo liberarlo; debajo, dos columnas, Carrera A y Carrera B, cada una con un campo para el nombre y dos preguntas, ¿Cuánto me gustaría hacer esto? y ¿Qué tanto me veo haciéndolo?, con botones del 1 al 10 donde el 7 aparece tachado, y el botón Borrar.",
+       "en": "The scale with no 7: at the top, help text explaining that the same number cannot be used for both degrees and how to free it; below, two columns, Degree A and Degree B, each with a name field and two questions, How much would I like to do this? and How well can I see myself doing it?, with buttons from 1 to 10 where the 7 is crossed out, and a Clear button."
+      },
+      "caption": {
+       "es": "Escala sin el 7, en la parada 9.",
+       "en": "The scale with no 7, at stop 9."
+      }
+     },
+     {
+      "src": "taller-ciclosuperior-06-plantilla.webp",
+      "w": 962,
+      "h": 529,
+      "alt": {
+       "es": "Plantilla en texto monoespaciado para comparar dos planes de estudio, con el botón Copiar: nombre y universidad, duración, título intermedio, materias de matemática, programación y gestión, práctica profesional, trabajo final, modalidad, costo, validez nacional, una materia que entusiasma, una que da miedo y la elección final.",
+       "en": "Monospaced template for comparing two study plans, with a Copy button: name and university, length, intermediate qualification, maths, programming and management subjects, professional practice, final project, format, cost, national recognition, a subject that excites you, one that scares you and the final choice."
+      },
+      "caption": {
+       "es": "Plantilla para comparar planes, en la parada 6.",
+       "en": "Plan comparison template, at stop 6."
+      }
+     },
+     {
+      "src": "taller-ciclosuperior-07-programacion.webp",
+      "w": 962,
+      "h": 504,
+      "alt": {
+       "es": "Las herramientas de 2026 por área, en seis tarjetas: Front-end, Back-end, Datos, Nube y DevOps, Móvil e Inteligencia artificial, cada una con su base y sus herramientas en etiquetas, como React, Node.js, PostgreSQL, Docker, Flutter y Agentes.",
+       "en": "The 2026 tools by area, in six cards: Front-end, Back-end, Data, Cloud and DevOps, Mobile and Artificial intelligence, each with its basics and its tools as tags, such as React, Node.js, PostgreSQL, Docker, Flutter and Agents."
+      },
+      "caption": {
+       "es": "Herramientas de 2026, en el apartado de programación.",
+       "en": "2026 tools, in the programming section."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "",
+    "id": "design-system",
+    "name": "Design system",
+    "mode": {
+     "es": "del sitio",
+     "en": "of the site"
+    },
+    "q": {
+     "es": "Un sistema propio reutilizado, con solo cuatro componentes nuevos.",
+     "en": "A reused in-house system, with only four new components."
+    }
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "Un sistema reutilizado",
+     "en": "A reused system"
+    },
+    "body": {
+     "es": "El sitio parte del design system de otro sitio propio: tokens de color, tipografías Outfit, Geist y Geist Mono, componentes, animaciones y tema claro y oscuro. Suma solo cuatro componentes en carreras.css: el calendario del ingreso, las tarjetas de institución con estado, la escala y las notas adhesivas. Reutilizar fue una decisión de eficiencia y de consistencia: el tiempo fue al contenido y a lo que esta charla necesitaba de nuevo.",
+     "en": "The site builds on the design system of another site of mine: colour tokens, the Outfit, Geist and Geist Mono typefaces, components, animations and light and dark themes. It adds only four components in carreras.css: the intake calendar, institution cards with status, the scale and sticky notes. Reusing it was a decision for efficiency and consistency: the time went into the content and into what this talk needed that was new."
+    }
+   },
+   {
+    "t": "anim",
+    "h": {
+     "es": "Animaciones explicativas",
+     "en": "Explainer animations"
+    },
+    "note": {
+     "es": "Las seis piezas en vivo: son las mismas composiciones de HyperFrames y GSAP que usa el sitio. Arrancan al aparecer en pantalla, se pueden pausar y, con movimiento reducido, muestran el cuadro final.",
+     "en": "The six pieces, live: the same HyperFrames and GSAP compositions the site uses. They start when they come into view, can be paused and, with reduced motion, show the final frame."
+    },
+    "items": [
+     {
+      "id": "niveles",
+      "src": "https://lpedaci.github.io/taller-ciclosuperior/videos/niveles/index.html?embed=1&theme=light",
+      "title": {
+       "es": "Los cuatro niveles",
+       "en": "The four levels"
+      },
+      "caption": {
+       "es": "Los cuatro niveles aparecen sobre una línea de edades. La franja obligatoria va de la sala de 4 al final de la secundaria, y el nivel superior empieza a los 18 o 19 años.",
+       "en": "The four levels appear on an age line. Compulsory schooling runs from age 4 to the end of secondary school, and higher education starts at 18 or 19."
+      }
+     },
+     {
+      "id": "titulos",
+      "src": "https://lpedaci.github.io/taller-ciclosuperior/videos/titulos/index.html?embed=1&theme=light",
+      "title": {
+       "es": "Cuánto dura cada título",
+       "en": "How long each qualification takes"
+      },
+      "caption": {
+       "es": "Barras de duración en años: diplomatura, de meses a un año; tecnicatura, 2,5 a 3; profesorado y licenciatura, 4 a 5; ingeniería, 5 a 6. El posgrado empieza después del grado.",
+       "en": "Bars showing length in years: a diploma course, months to a year; a technical diploma, 2.5 to 3; teaching and bachelor’s degrees, 4 to 5; engineering, 5 to 6. Postgraduate study starts after a first degree."
+      }
+     },
+     {
+      "id": "espectro",
+      "src": "https://lpedaci.github.io/taller-ciclosuperior/videos/espectro/index.html?embed=1&theme=light",
+      "title": {
+       "es": "Del foco humano al foco tecno",
+       "en": "From human focus to tech focus"
+      },
+      "caption": {
+       "es": "Una línea va del foco humano al tecnológico, con investigación, diseño, front-end, back-end y datos e IA, y los roles que ocupan cada tramo.",
+       "en": "A line runs from human focus to tech focus, through research, design, front end, back end and data and AI, with the roles that cover each stretch."
+      }
+     },
+     {
+      "id": "cliente",
+      "src": "https://lpedaci.github.io/taller-ciclosuperior/videos/cliente/index.html?embed=1&theme=light",
+      "title": {
+       "es": "Qué pasa cuando tocás un botón",
+       "en": "What happens when you tap a button"
+      },
+      "caption": {
+       "es": "Un botón en el celular, el pedido que viaja hasta el servidor, la API que consulta la base de datos y la respuesta que actualiza la pantalla.",
+       "en": "A button on a phone, the request travelling to the server, the API querying the database and the response updating the screen."
+      }
+     },
+     {
+      "id": "perfil",
+      "src": "https://lpedaci.github.io/taller-ciclosuperior/videos/perfil/index.html?embed=1&theme=light",
+      "title": {
+       "es": "El perfil en T",
+       "en": "The T-shaped profile"
+      },
+      "caption": {
+       "es": "La barra vertical es el título, lo que se sabe hacer muy bien. La horizontal suma negocio, usuario, datos e IA y comunicación.",
+       "en": "The vertical bar is the qualification, what you do really well. The horizontal bar adds business, users, data and AI, and communication."
+      }
+     },
+     {
+      "id": "escala",
+      "src": "https://lpedaci.github.io/taller-ciclosuperior/videos/escala/index.html?embed=1&theme=light",
+      "title": {
+       "es": "La escala sin el 7",
+       "en": "The scale with no 7"
+      },
+      "caption": {
+       "es": "Una escala del 1 al 10 donde el 7 se tacha. La carrera A queda en 6 y la B en 8: sin intermedios, cada una queda de un lado.",
+       "en": "A scale from 1 to 10 where the 7 is crossed out. Degree A lands on 6 and degree B on 8: with no middle ground, each falls clearly on one side."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "04",
+    "name": "Deliver",
+    "mode": {
+     "es": "converger",
+     "en": "converge"
+    },
+    "q": {
+     "es": "Publicar y verificar que el sitio funcione para todos antes de la charla.",
+     "en": "Publish and check that the site works for everyone before the talk."
+    }
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Accesibilidad del sitio",
+     "en": "Site accessibility"
+    },
+    "items": {
+     "es": [
+      "HTML semántico, enlace para saltar al contenido y foco visible en los controles.",
+      "Un calendario visual con su tabla equivalente, y tablas que se apilan en el celular.",
+      "Desplegables «Tocá para ver» para el contenido secundario, sin alargar cada parada.",
+      "Animaciones con pausa y descripción en texto; con movimiento reducido muestran el cuadro final.",
+      "Enlaces externos que avisan que se abren en una pestaña nueva.",
+      "Tema claro y oscuro, según el sistema o elegido a mano."
+     ],
+     "en": [
+      "Semantic HTML, a skip-to-content link and visible focus on controls.",
+      "A visual calendar with an equivalent table, and tables that stack on phones.",
+      "“Tap to see” disclosures for secondary content, without making each stop longer.",
+      "Animations with a pause control and a text description; with reduced motion they show the final frame.",
+      "External links announce that they open in a new tab.",
+      "Light and dark themes, following the system or chosen by hand."
+     ]
+    },
+    "hl": true
+   },
+   {
+    "t": "compare",
+    "marks": true,
+    "h": {
+     "es": "Auditoría WCAG 2.2 AA",
+     "en": "WCAG 2.2 AA audit"
+    },
+    "note": {
+     "es": "Auditoría del 23 de noviembre de 2026: revisión del código, contraste de los tokens en tema claro y oscuro, y prueba en navegador a 375 px y en escritorio. Estos son los problemas que se corrigieron. Queda un cambio de diseño menor: una etiqueta visible para el nombre de la carrera en la escala.",
+     "en": "Audit carried out on 23 November 2026: code review, contrast of the tokens in light and dark themes, and browser testing at 375 px and on desktop. These are the problems that were fixed. One minor design change remains: a visible label for the degree name in the scale."
+    },
+    "cols": {
+     "dim": {
+      "es": "Criterio",
+      "en": "Criterion"
+     },
+     "before": {
+      "es": "Problema",
+      "en": "Problem"
+     },
+     "after": {
+      "es": "Corrección",
+      "en": "Fix"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "4.1.2 Nombre, función, valor (A)",
+       "en": "4.1.2 Name, role, value (A)"
+      },
+      "before": {
+       "es": "Debajo de 480 px, el botón del menú de paradas se quedaba sin nombre accesible.",
+       "en": "Below 480 px, the stops menu button had no accessible name."
+      },
+      "after": {
+       "es": "aria-label \"Paradas\", igual al texto visible.",
+       "en": "An aria-label matching the visible text."
+      }
+     },
+     {
+      "dim": {
+       "es": "2.4.3 Orden del foco y 2.4.11 Foco no oculto (A y AA)",
+       "en": "2.4.3 Focus order and 2.4.11 Focus not obscured (A and AA)"
+      },
+      "before": {
+       "es": "En el celular, con Tab el foco seguía por el contenido tapado por el panel de paradas.",
+       "en": "On phones, Tab kept moving focus through content hidden behind the stops panel."
+      },
+      "after": {
+       "es": "Al abrir, el foco pasa a la parada actual; si sale del panel, el panel se cierra.",
+       "en": "On opening, focus moves to the current stop; if it leaves the panel, the panel closes."
+      }
+     },
+     {
+      "dim": {
+       "es": "2.2.2 Pausar, detener, ocultar (A)",
+       "en": "2.2.2 Pause, stop, hide (A)"
+      },
+      "before": {
+       "es": "Animaciones decorativas en bucle infinito.",
+       "en": "Decorative animations looping forever."
+      },
+      "after": {
+       "es": "Se repiten una o dos veces y terminan antes de los 5 segundos.",
+       "en": "They repeat once or twice and end within 5 seconds."
+      }
+     },
+     {
+      "dim": {
+       "es": "4.1.3 Mensajes de estado (AA)",
+       "en": "4.1.3 Status messages (AA)"
+      },
+      "before": {
+       "es": "El lector de pantalla anunciaba el resultado de la escala con cada letra escrita.",
+       "en": "The screen reader announced the scale result with every letter typed."
+      },
+      "after": {
+       "es": "El resultado se actualiza al salir del campo o al elegir un número.",
+       "en": "The result updates when leaving the field or picking a number."
+      }
+     },
+     {
+      "dim": {
+       "es": "3.3.2 Etiquetas o instrucciones (A)",
+       "en": "3.3.2 Labels or instructions (A)"
+      },
+      "before": {
+       "es": "Nada explicaba por qué algunos números se desactivan ni cómo liberarlos.",
+       "en": "Nothing explained why some numbers are disabled or how to free them."
+      },
+      "after": {
+       "es": "Texto de ayuda visible, vinculado a cada grupo con aria-describedby.",
+       "en": "Visible help text, linked to each group with aria-describedby."
+      }
+     },
+     {
+      "dim": {
+       "es": "1.4.11 Contraste no textual (AA)",
+       "en": "1.4.11 Non-text contrast (AA)"
+      },
+      "before": {
+       "es": "Bordes del campo y de los números de la escala con 1,37:1 y 2:1.",
+       "en": "Borders of the field and scale numbers at 1.37:1 and 2:1."
+      },
+      "after": {
+       "es": "Bordes recalculados para superar 3:1 en los dos temas.",
+       "en": "Borders recalculated to exceed 3:1 in both themes."
+      }
+     },
+     {
+      "dim": {
+       "es": "2.4.7 Foco visible (AA)",
+       "en": "2.4.7 Focus visible (AA)"
+      },
+      "before": {
+       "es": "El campo de la escala marcaba el foco solo con un cambio de color.",
+       "en": "The scale field showed focus only through a colour change."
+      },
+      "after": {
+       "es": "Contorno de foco de 3 px, como en el resto del sitio.",
+       "en": "A 3 px focus outline, as everywhere else on the site."
+      }
+     },
+     {
+      "dim": {
+       "es": "1.3.1 Información y relaciones (A)",
+       "en": "1.3.1 Info and relationships (A)"
+      },
+      "before": {
+       "es": "La cadena Miedos, Excusas y Éxitos tachado no se transmitía a los lectores de pantalla.",
+       "en": "The Fears, Excuses and crossed-out Successes chain was not conveyed to screen readers."
+      },
+      "after": {
+       "es": "role=\"img\" para que se lea la frase completa.",
+       "en": "role=\"img\" so the full sentence is read."
+      }
+     },
+     {
+      "dim": {
+       "es": "2.4.6 Encabezados y etiquetas (AA)",
+       "en": "2.4.6 Headings and labels (AA)"
+      },
+      "before": {
+       "es": "Los seis botones de animación se llamaban todos \"Reproducir\".",
+       "en": "All six animation buttons were called \"Play\"."
+      },
+      "after": {
+       "es": "Cada uno suma el nombre de su animación, por ejemplo \"Reproducir: Los cuatro niveles\".",
+       "en": "Each one adds its animation name, for example \"Play: The four levels\"."
+      }
+     }
+    ]
+   },
+   {
+    "t": "live",
+    "h": {
+     "es": "El sitio, en vivo",
+     "en": "The site, live"
+    },
+    "note": {
+     "es": "HTML, CSS y JavaScript sin frameworks ni proceso de compilación, publicado en GitHub Pages.",
+     "en": "HTML, CSS and JavaScript with no frameworks and no build step, published on GitHub Pages."
+    },
+    "src": "https://lpedaci.github.io/taller-ciclosuperior/",
+    "url": "https://lpedaci.github.io/taller-ciclosuperior/",
+    "label": {
+     "es": "Charla de carreras 2027",
+     "en": "Career talk 2027"
+    }
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "De adolescentes a adultos, del aula a la organización",
+     "en": "From teenagers to adults, from the classroom to the organisation"
+    },
+    "note": {
+     "es": "El taller ya se dicta con adultos que vuelven a estudiar. Estas tarjetas muestran cómo su diseño se traslada a programas de desarrollo en organizaciones: es una transferencia de diseño, no algo implementado en una empresa.",
+     "en": "The workshop is already delivered to adults returning to study. These cards show how its design carries over to development programmes in organisations: it is a design transfer, not something implemented at a company."
+    },
+    "cols": 3,
+    "items": [
+     {
+      "title": {
+       "es": "Una ruta de desarrollo con paradas",
+       "en": "A development path with stops"
+      },
+      "body": {
+       "es": "Etapas claras, minutos a la vista, algo para hacer en cada una y avance guardado para retomar a su ritmo: la misma estructura sirve para planes de carrera y de movilidad interna.",
+       "en": "Clear stages, visible timings, something to do at each one and saved progress to pick up at one’s own pace: the same structure works for career plans and internal mobility."
+      }
+     },
+     {
+      "title": {
+       "es": "Un recurso de consulta que se actualiza solo",
+       "en": "Performance support that updates itself"
+      },
+      "body": {
+       "es": "Fechas que muestran su estado según el día, útiles para cualquier proceso con plazos: inscripciones a programas de formación, convocatorias internas o ventanas de evaluación.",
+       "en": "Dates that show their status based on today, useful for any process with deadlines: applications to training programmes, internal openings or review windows."
+      }
+     },
+     {
+      "title": {
+       "es": "Herramientas de decisión y autoconocimiento",
+       "en": "Decision-making and self-awareness tools"
+      },
+      "body": {
+       "es": "La escala sin el 7, la plantilla de comparación y el trabajo sobre miedos y propósito se trasladan a conversaciones de desarrollo y a la elección de trayectos de upskilling y reskilling.",
+       "en": "The scale with no 7, the comparison template and the work on fears and purpose carry over to development conversations and to choosing upskilling and reskilling paths."
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Resultados",
+     "en": "Results"
+    },
+    "note": {
+     "es": "Lo que el proyecto entrega.",
+     "en": "What the project delivers."
+    },
+    "items": {
+     "es": [
+      "Dictado todos los años desde 2019 a Informática A y B, en 6to y 7mo año (unos 80 estudiantes por año), y a adultos que buscan insertarse o reinsertarse en el mundo académico.",
+      "Un temario que creció con la demanda de cada cohorte, hasta sumar las paradas de ingeniería y de planes de estudio y los apartados de programación y psicología.",
+      "En 2026 pasó de diapositivas a un sitio con fechas que se actualizan solas y avance guardado: una ruta de **aprendizaje autodirigido** a la que se puede volver hasta el día de la inscripción.",
+      "Treinta y cuatro fuentes citadas en APA 7, con el contexto de 2026: financiamiento universitario, títulos digitales y becas."
+     ],
+     "en": [
+      "Delivered every year since 2019 to computing groups A and B in sixth and seventh year (about 80 students a year), and to adults looking to enter or return to higher education.",
+      "A syllabus that grew with each cohort’s questions, adding the stops on engineering and study plans and the sections on programming and psychology.",
+      "In 2026 it moved from slides to a site with dates that update themselves and saved progress: a **self-directed learning** path people can return to right up to application day.",
+      "Thirty-four sources cited in APA 7, covering the 2026 context: university funding, digital diplomas and grants."
+     ]
+    }
+   },
+   {
+    "t": "phase",
+    "id": "cifras",
+    "name": {
+     "es": "La charla en cifras",
+     "en": "The talk in numbers"
+    },
+    "mode": {
+     "es": "alcance",
+     "en": "scope"
+    },
+    "q": {
+     "es": "Lo que entra en 76 minutos y lo que queda para consultar después.",
+     "en": "What fits into 76 minutes and what stays to look up later."
+    }
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": {
+       "es": "~80",
+       "en": "~80"
+      },
+      "label": {
+       "es": "estudiantes por año en la escuela, desde 2019",
+       "en": "students a year at the school, since 2019"
+      }
+     },
+     {
+      "value": {
+       "es": "3",
+       "en": "3"
+      },
+      "label": {
+       "es": "públicos: 6to, 7mo y adultos",
+       "en": "audiences: sixth year, seventh year and adults"
+      }
+     },
+     {
+      "value": {
+       "es": "10",
+       "en": "10"
+      },
+      "label": {
+       "es": "paradas en dos líneas",
+       "en": "stops on two lines"
+      }
+     },
+     {
+      "value": {
+       "es": "3",
+       "en": "3"
+      },
+      "label": {
+       "es": "apartados especiales",
+       "en": "special sections"
+      }
+     },
+     {
+      "value": {
+       "es": "12",
+       "en": "12"
+      },
+      "label": {
+       "es": "actividades cortas",
+       "en": "short activities"
+      }
+     },
+     {
+      "value": {
+       "es": "6",
+       "en": "6"
+      },
+      "label": {
+       "es": "animaciones explicativas",
+       "en": "explainer animations"
+      }
+     },
+     {
+      "value": {
+       "es": "76 min",
+       "en": "76 min"
+      },
+      "label": {
+       "es": "de recorrido",
+       "en": "journey"
+      }
+     },
+     {
+      "value": {
+       "es": "34",
+       "en": "34"
+      },
+      "label": {
+       "es": "fuentes citadas en APA 7",
+       "en": "sources cited in APA 7"
+      }
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Próximos pasos",
+     "en": "Next steps"
+    },
+    "items": {
+     "es": [
+      "Actualizar las fechas para el ingreso 2028 cambiando solo los atributos data-open y data-close de cada institución.",
+      "Seguir sumando paradas o apartados según las preguntas de cada cohorte.",
+      "Evaluar ejemplos y paradas pensados para el público adulto: cursadas compatibles con el trabajo, reconocimiento de saberes previos y carreras a distancia."
+     ],
+     "en": [
+      "Update the dates for the 2028 intake by changing only each institution’s data-open and data-close attributes.",
+      "Keep adding stops or sections based on each cohort’s questions.",
+      "Explore examples and stops designed for adult learners: study schedules that fit around work, recognition of prior learning and distance degrees."
+     ]
+    }
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencias",
+     "en": "References"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Cámara de la Industria Argentina del Software. (2026).",
+       "en": "Cámara de la Industria Argentina del Software. (2026)."
+      },
+      "title": {
+       "es": "Industria del software en Argentina al 1.er trimestre de 2026",
+       "en": "Industria del software en Argentina al 1.er trimestre de 2026"
+      },
+      "post": {
+       "es": " [Informe del Observatorio Permanente de la Industria del Software y Servicios Informáticos].",
+       "en": " [Report of the Permanent Observatory of the Software and IT Services Industry]."
+      },
+      "url": "https://cessi.org.ar/wp-content/uploads/2026/07/OPSSI-Reporte-Industria-Software-1er.-trim.-2026.pdf"
+     },
+     {
+      "pre": {
+       "es": "Canal 26. (2026, 27 de abril).",
+       "en": "Canal 26. (2026, April 27)."
+      },
+      "title": {
+       "es": "Últimos días para completar la inscripción para las Becas Progresar 2026",
+       "en": "Últimos días para completar la inscripción para las Becas Progresar 2026"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.canal26.com/economia/2026/04/27/se-acaba-el-tiempo-ultimos-dias-para-completar-la-inscripcion-para-las-becas-progresar-2026/"
+     },
+     {
+      "pre": {
+       "es": "Chequeado. (2026).",
+       "en": "Chequeado. (2026)."
+      },
+      "title": {
+       "es": "Marcha federal universitaria del 15 de octubre de 2026: el gasto cayó 25,3 % desde 2023 y los salarios un 24,2 %",
+       "en": "Marcha federal universitaria del 15 de octubre de 2026: el gasto cayó 25,3 % desde 2023 y los salarios un 24,2 %"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://chequeado.com/el-explicador/marcha-federal-universitaria-del-15-de-octubre-de-2026-el-gasto-cayo-253-desde-2023-y-los-salarios-un-242/"
+     },
+     {
+      "pre": {
+       "es": "DevClass. (2026, 19 de enero).",
+       "en": "DevClass. (2026, January 19)."
+      },
+      "title": {
+       "es": "jQuery 4.0 released, first major version since 2016",
+       "en": "jQuery 4.0 released, first major version since 2016"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://devclass.com/2026/01/19/jquery-4-0-released-first-major-version-since-2016/"
+     },
+     {
+      "pre": {
+       "es": "Disposición 15/2025 [Dirección Nacional de Validez de Títulos y Estudios]. (2025, 16 de enero).",
+       "en": "Disposición 15/2025 [Dirección Nacional de Validez de Títulos y Estudios]. (2025, January 16)."
+      },
+      "title": {
+       "es": "Boletín Oficial de la República Argentina",
+       "en": "Boletín Oficial de la República Argentina"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/319739/20250116"
+     },
+     {
+      "pre": {
+       "es": "Gobierno de la Ciudad de Buenos Aires. (2026, 26 de febrero).",
+       "en": "Gobierno de la Ciudad de Buenos Aires. (2026, February 26)."
+      },
+      "title": {
+       "es": "Abrieron las inscripciones para Talento Tech 2026, el programa de formación en tecnología de la Ciudad",
+       "en": "Abrieron las inscripciones para Talento Tech 2026, el programa de formación en tecnología de la Ciudad"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://buenosaires.gob.ar/gcaba_historico/noticias/abrieron-las-inscripciones-para-talento-tech-2026-el-programa-de-formacion"
+     },
+     {
+      "pre": {
+       "es": "InfoQ. (2026, marzo).",
+       "en": "InfoQ. (2026, March)."
+      },
+      "title": {
+       "es": "State of JS survey 2025",
+       "en": "State of JS survey 2025"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.infoq.com/news/2026/03/state-of-js-survey-2025"
+     },
+     {
+      "pre": {
+       "es": "MDZ. (2026, marzo).",
+       "en": "MDZ. (2026, March)."
+      },
+      "title": {
+       "es": "Becas Manuel Belgrano 2026: quiénes pueden inscribirse",
+       "en": "Becas Manuel Belgrano 2026: quiénes pueden inscribirse"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.mdzol.com/sociedad/becas-manuel-belgrano-2026-quienes-pueden-inscribirse-y-cobrar-mas-80000-mes-n1467170"
+     },
+     {
+      "pre": {
+       "es": "Microsoft. (s.f.).",
+       "en": "Microsoft. (n.d.)."
+      },
+      "title": {
+       "es": "Xamarin support policy",
+       "en": "Xamarin support policy"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin"
+     },
+     {
+      "pre": {
+       "es": "Pedaci, L. (2025).",
+       "en": "Pedaci, L. (2025)."
+      },
+      "title": {
+       "es": "Charla de carreras: Modalidad Informática",
+       "en": "Charla de carreras: Modalidad Informática"
+      },
+      "post": {
+       "es": " [Diapositivas de PowerPoint].",
+       "en": " [PowerPoint slides]."
+      }
+     },
+     {
+      "pre": {
+       "es": "Resolución CFE N.º 440/23 [Consejo Federal de Educación]. (2023, 9 de febrero).",
+       "en": "Resolución CFE N.º 440/23 [Consejo Federal de Educación]. (2023, February 9)."
+      },
+      "title": {
+       "es": "Sistema Federal de Títulos: emisión digital de títulos y certificados",
+       "en": "Sistema Federal de Títulos: emisión digital de títulos y certificados"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.uepc.org.ar/conectate/wp-content/uploads/2023/04/RCFE-440-23-Sistema-Federal-Titulos.pdf"
+     },
+     {
+      "pre": {
+       "es": "Revista Mercado. (2026a).",
+       "en": "Revista Mercado. (2026a)."
+      },
+      "title": {
+       "es": "Escasez de talento: 64% de empleadores en Argentina no logra cubrir puestos",
+       "en": "Escasez de talento: 64% de empleadores en Argentina no logra cubrir puestos"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://mercado.com.ar/tendencias/escasez-de-talento-64-de-empleadores-en-argentina-no-logra-cubrir-puestos"
+     },
+     {
+      "pre": {
+       "es": "Revista Mercado. (2026b).",
+       "en": "Revista Mercado. (2026b)."
+      },
+      "title": {
+       "es": "Experis midió que 73% de las empresas argentinas no cubre puestos tecnológicos",
+       "en": "Experis midió que 73% de las empresas argentinas no cubre puestos tecnológicos"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://mercado.com.ar/talento-y-liderazgo/experis-midio-que-73-de-las-empresas-argentinas-no-cubre-puestos-tecnologicos"
+     },
+     {
+      "pre": {
+       "es": "The Register. (2025, 1 de mayo).",
+       "en": "The Register. (2025, May 1)."
+      },
+      "title": {
+       "es": "Redis \"returns\" to open source with AGPL license",
+       "en": "Redis \"returns\" to open source with AGPL license"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.theregister.com/2025/05/01/redis_returns_to_open_source/"
+     },
+     {
+      "pre": {
+       "es": "Universidad Nacional de Tres de Febrero. (2026).",
+       "en": "Universidad Nacional de Tres de Febrero. (2026)."
+      },
+      "title": {
+       "es": "Admisión",
+       "en": "Admisión"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://untref.edu.ar/admision"
+     },
+     {
+      "pre": {
+       "es": "Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. (2026).",
+       "en": "Universidad Tecnológica Nacional, Facultad Regional Buenos Aires. (2026)."
+      },
+      "title": {
+       "es": "Inscripción ingreso 2027",
+       "en": "Inscripción ingreso 2027"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://frba.utn.edu.ar/ingreso/ingresa/"
+     },
+     {
+      "pre": {
+       "es": "World Economic Forum. (2025).",
+       "en": "World Economic Forum. (2025)."
+      },
+      "title": {
+       "es": "The future of jobs report 2025",
+       "en": "The future of jobs report 2025"
+      },
+      "post": {
+       "es": ".",
+       "en": "."
+      },
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
+     }
+    ]
+   }
+  ],
+  "outcome": null
  }
 };
