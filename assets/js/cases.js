@@ -25105,8 +25105,8 @@ window.CASES = {
   "cat": "it",
   "touch": "cap",
   "title": {
-   "es": "Verificación asistida por IA para contenido educativo",
-   "en": "AI-assisted verification for educational content"
+   "es": "Verificación automática de fuentes con IA",
+   "en": "Automated source verification with AI"
   },
   "subtitle": {
    "es": "Un sistema que revisa las fuentes y la redacción del Taller - IA, propone cómo corregirlas y deja la decisión a una persona",
@@ -25128,7 +25128,7 @@ window.CASES = {
   },
   "summary": {
    "problem": {
-    "es": "Un curso sobre IA envejece rápido: las herramientas cambian funciones de un mes a otro, las leyes se reforman y las páginas de ayuda se mudan. Revisarlo a mano lleva horas, y los chequeos automáticos solo ven la forma: un enlace puede funcionar y decir otra cosa.",
+    "es": "Un curso sobre IA envejece rápido: las herramientas cambian funciones de un mes a otro, las leyes se reforman y las páginas de ayuda se mudan. La revisión manual lleva horas, y los chequeos automáticos solo ven la forma: un enlace puede funcionar y decir otra cosa.",
     "en": "A course about AI ages fast: tools change features from one month to the next, laws are amended and help pages move. Checking it by hand takes hours, and automated checks only see the form: a link can work and say something else."
    },
    "solution": {
@@ -25359,8 +25359,8 @@ window.CASES = {
        "en": "Build the report"
       },
       "body": {
-       "es": "Primero lo que hay que decidir, ordenado por gravedad; después lo que hay que abrir a mano; lo que está bien, plegado.",
-       "en": "First what needs a decision, ordered by severity; then what must be opened by hand; what is fine, collapsed."
+       "es": "Primero lo que hay que decidir, ordenado por gravedad; después lo que requiere revisión manual; lo que está bien, plegado.",
+       "en": "First what needs a decision, ordered by severity; then what needs manual review; what is fine, collapsed."
       }
      },
      {
@@ -25444,12 +25444,12 @@ window.CASES = {
     "items": [
      {
       "title": {
-       "es": "La IA propone, yo decido",
-       "en": "The AI suggests, I decide"
+       "es": "Permisos de solo lectura",
+       "en": "Read-only permissions"
       },
       "tag": {
-       "es": "Frontera",
-       "en": "Boundary"
+       "es": "La decisión es mía",
+       "en": "The decision is mine"
       },
       "body": {
        "es": "Los workflows solo pueden leer el repo y escribir informes. No publican, no corrigen y no fusionan. En lugar de instalar la app de Claude en GitHub, que pide permiso para escribir en el repo, uso el permiso mínimo del propio workflow.",
@@ -25458,12 +25458,12 @@ window.CASES = {
      },
      {
       "title": {
-       "es": "Fechas que nadie escribe a mano",
-       "en": "Dates nobody types by hand"
+       "es": "Fechas tomadas del historial",
+       "en": "Dates taken from the history"
       },
       "tag": {
-       "es": "Registros automáticos",
-       "en": "Automatic records"
+       "es": "Sin carga manual",
+       "en": "No manual entry"
       },
       "body": {
        "es": "Cuándo cambió un dato sale del historial de commits. Cuándo se verificó queda en un bloque oculto del último informe. Separar las dos fechas evita que un dato revisado y sin cambios parezca abandonado.",
@@ -25472,12 +25472,12 @@ window.CASES = {
      },
      {
       "title": {
-       "es": "Evidencia o nada",
-       "en": "Evidence or nothing"
+       "es": "Cada veredicto con su cita",
+       "en": "Every verdict with its quote"
       },
       "tag": {
-       "es": "Contra la invención",
-       "en": "Against invention"
+       "es": "Sin completar de memoria",
+       "en": "Nothing filled in from memory"
       },
       "body": {
        "es": "Cada veredicto trae la frase exacta de la fuente, leída en esa corrida. Si la fuente no carga, el dato va a revisión manual: el sistema no completa de memoria, que es justo lo que queda viejo.",
@@ -25486,12 +25486,12 @@ window.CASES = {
      },
      {
       "title": {
-       "es": "Una falla nunca dice \"sin novedades\"",
-       "en": "A failure never says \"nothing new\""
+       "es": "Las fallas se informan",
+       "en": "Failures are reported"
       },
       "tag": {
-       "es": "Fallas visibles",
-       "en": "Visible failures"
+       "es": "Corrida en rojo",
+       "en": "Red run"
       },
       "body": {
        "es": "Si la IA no revisa todo, el informe lista lo que quedó pendiente y la corrida termina en rojo. Si un script lee menos datos de los que hay, se detiene con un error que lo explica.",
@@ -25512,8 +25512,8 @@ window.CASES = {
     },
     "p": [
      {
-      "es": "Un sistema que encuentra cosas no prueba que encuentre las correctas. Para medirlo sembré **21 casos** en una rama de prueba: 9 errores en datos, 7 en textos, 2 de ortografía y **2 controles**, cambios correctos que el sistema no debía marcar. La prueba fue a ciegas: la lista de casos quedó fuera del repo, y la rama, el commit y el pull request tenían nombres neutros, para que el revisor con IA no pudiera saber qué buscar.",
-      "en": "A system that finds things does not prove it finds the right ones. To measure it I seeded **21 cases** on a test branch: 9 errors in claims, 7 in text, 2 in spelling and **2 controls**, correct changes the system should not flag. The test was blind: the list of cases stayed outside the repo, and the branch, commit and pull request had neutral names, so the AI reviewer could not know what to look for."
+      "es": "Para saber si el sistema encuentra los errores correctos, sembré **21 casos** en una rama de prueba: 9 errores en datos, 7 en textos, 2 de ortografía y **2 controles**, cambios correctos que el sistema no debía marcar. La prueba fue a ciegas: la lista de casos quedó fuera del repo, y la rama, el commit y el pull request tenían nombres neutros, para que el revisor con IA no pudiera saber qué buscar.",
+      "en": "To find out whether the system catches the right errors, I seeded **21 cases** on a test branch: 9 errors in claims, 7 in text, 2 in spelling and **2 controls**, correct changes the system should not flag. The test was blind: the list of cases stayed outside the repo, and the branch, commit and pull request had neutral names, so the AI reviewer could not know what to look for."
      },
      {
       "es": "Los errores iban de lo evidente (un año cambiado, una función que la herramienta no tiene) a lo sutil: un falso amigo como \"eventualmente\", una pasiva calcada del inglés, un reglamento descripto como \"plenamente aplicable\" cuando entró en vigor por etapas.",
@@ -25717,8 +25717,8 @@ window.CASES = {
    {
     "t": "cards",
     "h": {
-     "es": "Lo que encontró y nadie sabía",
-     "en": "What it found that nobody knew"
+     "es": "Problemas reales que encontró",
+     "en": "Real problems it found"
     },
     "toc": {
      "es": "Hallazgos reales",
@@ -25732,8 +25732,8 @@ window.CASES = {
     "items": [
      {
       "title": {
-       "es": "Una autoridad que cambió de forma",
-       "en": "An authority that changed form"
+       "es": "Brasil: la ANPD pasó a ser agencia",
+       "en": "Brazil: the ANPD became an agency"
       },
       "tag": {
        "es": "Marco legal, Brasil",
@@ -25746,8 +25746,8 @@ window.CASES = {
      },
      {
       "title": {
-       "es": "Ayudas en español que no se citaban",
-       "en": "Spanish help pages that went uncited"
+       "es": "Ayuda de Claude citada en inglés",
+       "en": "Claude help cited in English"
       },
       "tag": {
        "es": "Asistentes",
@@ -25760,8 +25760,8 @@ window.CASES = {
      },
      {
       "title": {
-       "es": "Un producto que se mudaba de ayuda",
-       "en": "A product moving its help pages"
+       "es": "Copilot: la ayuda redirige a otro producto",
+       "en": "Copilot: help redirects to another product"
       },
       "tag": {
        "es": "Asistentes",
@@ -25774,8 +25774,8 @@ window.CASES = {
      },
      {
       "title": {
-       "es": "Restricciones de plan que faltaban",
-       "en": "Missing plan restrictions"
+       "es": "Funciones pagas sin aclarar",
+       "en": "Paid features not flagged"
       },
       "tag": {
        "es": "Asistentes",

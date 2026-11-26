@@ -122,7 +122,7 @@ window.PROJECTS = [
     result: { es: '5 salas en 3 versiones', en: '5 rooms in 3 versions' },
     skills: { es: ['Gamificación', 'Diseño instruccional', 'Sistema de diseño', 'WCAG 2.2'], en: ['Gamification', 'Instructional design', 'Design system', 'WCAG 2.2'] }
   },
-  /* Verificación asistida por IA: es del Taller - IA, pero va separada de su tarjeta para que no se enlacen como "Siguiente caso". */
+  /* Verificación automática de fuentes con IA: es del Taller - IA, pero va separada de su tarjeta para que no se enlacen como "Siguiente caso". */
   {
     slug: 'verificacion-ia',
     cover: 'assets/img/covers/verificacion-ia.jpg',
@@ -131,7 +131,7 @@ window.PROJECTS = [
     badges: [],
     dates: ['2026-11', '2026-11'],
     tags: { es: ['ia aplicada', 'automatización', 'evaluación'], en: ['applied ai', 'automation', 'evaluation'] },
-    title: { es: 'Verificación asistida por IA para contenido educativo', en: 'AI-assisted verification for educational content' },
+    title: { es: 'Verificación automática de fuentes con IA', en: 'Automated source verification with AI' },
     desc: {
       es: 'Un sistema que revisa las fuentes y la redacción del Taller - IA, propone cómo corregirlas y deja la decisión a una persona. Validado a ciegas con 21 casos sembrados.',
       en: 'A system that checks the sources and wording of Taller - IA, suggests how to fix them and leaves the decision to a person. Blind-validated with 21 seeded cases.'
