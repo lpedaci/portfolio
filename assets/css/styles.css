@@ -634,6 +634,9 @@ h1, h2, h3, h4, h5, p, figure, dl, dd { margin: 0; }
 /* Énfasis dentro del texto de lectura (**negrita** y ==resaltado== en cases.js): la frase clave se lee al pasar la vista */
 /* Hanken Grotesk está cargada en 400 y 500: el énfasis usa el 500 real (no una negrita sintetizada) y el color del caso, con contraste AA. */
 .case .em, .case[data-touch] .items .em { font: inherit; font-weight: 500; color: color-mix(in srgb, var(--c) 85%, #000); }
+/* Verificación automática de fuentes con IA: en "Estado y próximos pasos", "Falta" va en rosado y "Qué voy a medir" en ámbar. */
+body[data-slug="verificacion-ia"] .blk--outcome p:nth-child(2) > .em:first-child { color: color-mix(in srgb, var(--cap) 85%, #000); }
+body[data-slug="verificacion-ia"] .blk--outcome p:nth-child(3) > .em:first-child { color: color-mix(in srgb, var(--cont) 85%, #000); }
 .case .hl {
   padding: 0.05em 0.25em; border-radius: 4px; color: var(--text);
   background: color-mix(in srgb, var(--c2, var(--c)) 14%, transparent);

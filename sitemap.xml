@@ -8,6 +8,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/"/>
   </url>
   <url>
+    <loc>https://lpedaci.github.io/portfolio/casos/verificacion-ia/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/verificacion-ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/verificacion-ia/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/verificacion-ia/"/>
+  </url>
+  <url>
     <loc>https://lpedaci.github.io/portfolio/casos/alcancia/</loc>
     <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/alcancia/"/>
@@ -48,13 +55,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/escape-room-finanzas/"/>
-  </url>
-  <url>
-    <loc>https://lpedaci.github.io/portfolio/casos/verificacion-ia/</loc>
-    <lastmod>2026-11-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://lpedaci.github.io/portfolio/casos/verificacion-ia/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lpedaci.github.io/portfolio/casos/verificacion-ia/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lpedaci.github.io/portfolio/casos/verificacion-ia/"/>
   </url>
   <url>
     <loc>https://lpedaci.github.io/portfolio/casos/el-aula-que-incluye/</loc>
