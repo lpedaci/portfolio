@@ -25100,5 +25100,712 @@ window.CASES = {
    }
   ],
   "outcome": null
+ },
+ "verificacion-ia": {
+  "cat": "it",
+  "touch": "cap",
+  "title": {
+   "es": "Verificación asistida por IA para contenido educativo",
+   "en": "AI-assisted verification for educational content"
+  },
+  "subtitle": {
+   "es": "Un sistema que revisa las fuentes y la redacción del Taller - IA, propone cómo corregirlas y deja la decisión a una persona",
+   "en": "A system that checks the sources and wording of Taller - IA, suggests how to fix them and leaves the decision to a person"
+  },
+  "chips": {
+   "es": [
+    "IA aplicada",
+    "Automatización",
+    "Evaluación",
+    "Human-in-the-loop"
+   ],
+   "en": [
+    "Applied AI",
+    "Automation",
+    "Evaluation",
+    "Human-in-the-loop"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Un curso sobre IA envejece rápido: las herramientas cambian funciones de un mes a otro, las leyes se reforman y las páginas de ayuda se mudan. Revisarlo a mano lleva horas, y los chequeos automáticos solo ven la forma: un enlace puede funcionar y decir otra cosa.",
+    "en": "A course about AI ages fast: tools change features from one month to the next, laws are amended and help pages move. Checking it by hand takes hours, and automated checks only see the form: a link can work and say something else."
+   },
+   "solution": {
+    "es": "Un sistema en GitHub Actions que separa lo que es regla (scripts) de lo que es criterio (IA), verifica cada dato en su fuente oficial con evidencia textual, propone fuentes de reemplazo y abre un informe. Nunca publica ni corrige: decido yo.",
+    "en": "A GitHub Actions system that separates rules (scripts) from judgement (AI), checks every claim against its official source with verbatim evidence, suggests replacement sources and opens a report. It never publishes or fixes anything: I decide."
+   },
+   "results": [
+    {
+     "v": "89 %",
+     "l": {
+      "es": "de los errores sembrados detectados en una prueba a ciegas (17 de 19)",
+      "en": "of seeded errors detected in a blind test (17 of 19)"
+     }
+    },
+    {
+     "v": "0",
+     "l": {
+      "es": "falsas alarmas de error: en los 2 controles y en 18 cambios reales",
+      "en": "false error alarms: in the 2 controls and in 18 real changes"
+     }
+    },
+    {
+     "v": "2",
+     "l": {
+      "es": "problemas reales que nadie había sembrado ni conocía",
+      "en": "real problems nobody had seeded or knew about"
+     }
+    },
+    {
+     "t": {
+      "es": "Sin costo adicional: GitHub Actions es gratis en repositorios públicos y la IA usa la suscripción que ya tenía.",
+      "en": "No extra cost: GitHub Actions is free for public repositories and the AI runs on the subscription I already had."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Experience Designer: diseño del sistema, criterios de evaluación (rúbrica), diseño y análisis de la validación, y cada decisión de contenido. La implementación la hice con Claude y Claude Code.",
+    "en": "Experience Designer: system design, evaluation criteria (rubric), design and analysis of the validation, and every content decision. I built it with Claude and Claude Code."
+   },
+   "timeline": {
+    "es": "Noviembre de 2026",
+    "en": "November 2026"
+   },
+   "context": {
+    "es": "Piloto sobre el Taller - IA, mi learning environment sobre IA generativa: Módulos 10 (marco legal) y 11 (asistentes), con 46 datos verificables. Pensado para extenderse a mis otros proyectos.",
+    "en": "Pilot on Taller - IA, my learning environment on generative AI: Modules 10 (legal framework) and 11 (assistants), with 46 verifiable claims. Designed to extend to my other projects."
+   },
+   "stack": [
+    "GitHub Actions",
+    "Claude Code GitHub Action",
+    "Node.js",
+    "JSON",
+    "git",
+    "Playwright",
+    "axe-core",
+    "Claude Code"
+   ],
+   "methods": {
+    "es": [
+     "Human-in-the-loop",
+     "Rúbrica analítica",
+     "Evaluación a ciegas con casos sembrados",
+     "Casos de control",
+     "Mejora iterativa (versiones 1 a 3)"
+    ],
+    "en": [
+     "Human-in-the-loop",
+     "Analytic rubric",
+     "Blind evaluation with seeded cases",
+     "Control cases",
+     "Iterative improvement (versions 1 to 3)"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Ver la validación a ciegas (PR #6)",
+     "en": "See the blind validation (PR #6)"
+    },
+    "url": "https://github.com/lpedaci/taller-ia/pull/6"
+   },
+   {
+    "label": {
+     "es": "Ver el primer informe real (Issue #2)",
+     "en": "See the first real report (Issue #2)"
+    },
+    "url": "https://github.com/lpedaci/taller-ia/issues/2"
+   },
+   {
+    "label": {
+     "es": "Ver el repositorio en GitHub",
+     "en": "View the GitHub repository"
+    },
+    "url": "https://github.com/lpedaci/taller-ia"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "prose",
+    "h": {
+     "es": "El desafío",
+     "en": "The challenge"
+    },
+    "toc": {
+     "es": "Desafío",
+     "en": "Challenge"
+    },
+    "p": [
+     {
+      "es": "El Taller - IA enseña a usar asistentes de IA con criterio, y para eso dice cosas concretas: qué función tiene cada asistente, qué ley protege los datos en cada país, qué dice cada fuente oficial. Todo eso **vence**. En una sola revisión manual encontré una herramienta discontinuada y una función reemplazada por otra.",
+      "en": "Taller - IA teaches how to use AI assistants with judgement, and to do that it makes concrete claims: which feature each assistant has, which law protects data in each country, what each official source says. All of that **expires**. In a single manual review I found a discontinued tool and a feature replaced by another."
+     },
+     {
+      "es": "El taller ya tenía scripts que revisan enlaces, ortografía y accesibilidad. Pero esos scripts ven la forma, no el sentido: un enlace puede responder y la página haber cambiado lo que dice, y una paráfrasis puede ser correcta en español y decir otra cosa que la fuente. Quería que eso también se revisara solo, **sin que la IA decidiera por mí**.",
+      "en": "The workshop already had scripts checking links, spelling and accessibility. But scripts see form, not meaning: a link can respond while the page now says something else, and a paraphrase can be correct Spanish and say something different from the source. I wanted that checked automatically too, **without the AI deciding for me**."
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "join": true,
+    "h": {
+     "es": "Regla o criterio",
+     "en": "Rule or judgement"
+    },
+    "note": {
+     "es": "La primera decisión de diseño: no todo necesita IA. Lo que se puede escribir como regla va en código, que es gratis, rápido y da siempre el mismo resultado.",
+     "en": "The first design decision: not everything needs AI. Whatever can be written as a rule goes into code, which is free, fast and always gives the same result."
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "Regla: scripts",
+       "en": "Rule: scripts"
+      },
+      "tag": {
+       "es": "Sin IA, sin costo",
+       "en": "No AI, no cost"
+      },
+      "body": {
+       "es": "Enlaces rotos o que redirigen a otra página, qué datos vencieron, ortografía, precios sin fecha, accesibilidad y el armado del informe.",
+       "en": "Broken links or links that redirect elsewhere, which claims expired, spelling, prices without a date, accessibility and building the report."
+      }
+     },
+     {
+      "title": {
+       "es": "Criterio: IA",
+       "en": "Judgement: AI"
+      },
+      "tag": {
+       "es": "Con evidencia textual",
+       "en": "With verbatim evidence"
+      },
+      "body": {
+       "es": "Si la fuente oficial sigue diciendo lo que afirma el taller, si una paráfrasis es fiel y natural en español, y qué fuente oficial sirve para reparar un dato.",
+       "en": "Whether the official source still says what the workshop claims, whether a paraphrase is faithful and natural in Spanish, and which official source can repair a claim."
+      }
+     }
+    ]
+   },
+   {
+    "t": "roadmap",
+    "h": {
+     "es": "Cómo funciona",
+     "en": "How it works"
+    },
+    "toc": {
+     "es": "El sistema",
+     "en": "The system"
+    },
+    "note": {
+     "es": "Seis pasos, de los cuales solo dos usan IA. La IA devuelve datos; el informe lo arma un script, para que tenga siempre la misma forma.",
+     "en": "Six steps, only two of which use AI. The AI returns data; a script builds the report, so it always has the same shape."
+    },
+    "steps": [
+     {
+      "code": "01",
+      "title": {
+       "es": "Detectar qué revisar",
+       "en": "Detect what to check"
+      },
+      "body": {
+       "es": "Cada dato tiene su fecha de último cambio en el historial de git y su fecha de última verificación en el informe anterior. Vence a los 30 días si es de una herramienta y a los 180 si es una ley.",
+       "en": "Each claim has its last-change date in the git history and its last-verification date in the previous report. It expires after 30 days for a tool and 180 for a law."
+      }
+     },
+     {
+      "code": "02",
+      "title": {
+       "es": "Revisar sin IA",
+       "en": "Check without AI"
+      },
+      "body": {
+       "es": "Enlaces, textos y accesibilidad, con los scripts que ya tenía el taller y dos reglas nuevas.",
+       "en": "Links, text and accessibility, with the workshop's existing scripts and two new rules."
+      }
+     },
+     {
+      "code": "03",
+      "title": {
+       "es": "Verificar en la fuente",
+       "en": "Verify at the source"
+      },
+      "body": {
+       "es": "La IA lee la fuente oficial y responde vigente, cambió o no verificable, siempre con la frase exacta. Si no pudo leerla, no completa de memoria.",
+       "en": "The AI reads the official source and answers current, changed or unverifiable, always with the exact sentence. If it could not read it, it does not fill in from memory."
+      }
+     },
+     {
+      "code": "04",
+      "title": {
+       "es": "Proponer cómo reparar",
+       "en": "Suggest a fix"
+      },
+      "body": {
+       "es": "Hasta dos fuentes oficiales de reemplazo, del mismo producto y plan, en español latinoamericano si existe, con la referencia en APA 7 lista para copiar.",
+       "en": "Up to two official replacement sources, for the same product and plan, in Latin American Spanish when available, with the APA 7 reference ready to copy."
+      }
+     },
+     {
+      "code": "05",
+      "title": {
+       "es": "Armar el informe",
+       "en": "Build the report"
+      },
+      "body": {
+       "es": "Primero lo que hay que decidir, ordenado por gravedad; después lo que hay que abrir a mano; lo que está bien, plegado.",
+       "en": "First what needs a decision, ordered by severity; then what must be opened by hand; what is fine, collapsed."
+      }
+     },
+     {
+      "code": "06",
+      "title": {
+       "es": "Decidir",
+       "en": "Decide"
+      },
+      "body": {
+       "es": "Leo el informe, compruebo lo dudoso y decido qué se corrige. Cada corrección queda en un pull request enlazado al informe.",
+       "en": "I read the report, check anything doubtful and decide what gets fixed. Every fix goes into a pull request linked to the report."
+      }
+     }
+    ]
+   },
+   {
+    "t": "kv",
+    "join": true,
+    "h": {
+     "es": "Dos disparadores",
+     "en": "Two triggers"
+    },
+    "note": {
+     "es": "Lo externo cambia sin aviso; lo propio cambia cuando lo edito. Por eso cada uno tiene su momento.",
+     "en": "External things change without notice; my own content changes when I edit it. So each gets its own moment."
+    },
+    "items": [
+     {
+      "k": {
+       "es": "Periódico",
+       "en": "Scheduled"
+      },
+      "v": {
+       "es": "Los días 1, 11 y 21 de cada mes. Revisa solo los datos vencidos y abre un Issue con el informe.",
+       "en": "On the 1st, 11th and 21st of each month. It checks only expired claims and opens an Issue with the report."
+      }
+     },
+     {
+      "k": {
+       "es": "En cada cambio",
+       "en": "On every change"
+      },
+      "v": {
+       "es": "Al abrir un pull request. Verifica en la fuente los datos que cambian, revisa la paráfrasis con la rúbrica y corre la verificación completa del taller. Deja el informe como comentario.",
+       "en": "When a pull request is opened. It verifies changed claims at their source, reviews paraphrases against the rubric and runs the workshop's full verification. It leaves the report as a comment."
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Decisiones de diseño",
+     "en": "Design decisions"
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "La IA propone, yo decido",
+       "en": "The AI suggests, I decide"
+      },
+      "tag": {
+       "es": "Frontera",
+       "en": "Boundary"
+      },
+      "body": {
+       "es": "Los workflows solo pueden leer el repo y escribir informes. No publican, no corrigen y no fusionan. En lugar de instalar la app de Claude en GitHub, que pide permiso para escribir en el repo, uso el permiso mínimo del propio workflow.",
+       "en": "The workflows can only read the repo and write reports. They do not publish, fix or merge. Instead of installing the Claude GitHub app, which asks for permission to write to the repo, I use the workflow's own minimal permission."
+      }
+     },
+     {
+      "title": {
+       "es": "Fechas que nadie escribe a mano",
+       "en": "Dates nobody types by hand"
+      },
+      "tag": {
+       "es": "Registros automáticos",
+       "en": "Automatic records"
+      },
+      "body": {
+       "es": "Cuándo cambió un dato sale del historial de commits. Cuándo se verificó queda en un bloque oculto del último informe. Separar las dos fechas evita que un dato revisado y sin cambios parezca abandonado.",
+       "en": "When a claim changed comes from the commit history. When it was verified is stored in a hidden block of the latest report. Keeping the two dates apart stops a claim that was checked and unchanged from looking abandoned."
+      }
+     },
+     {
+      "title": {
+       "es": "Evidencia o nada",
+       "en": "Evidence or nothing"
+      },
+      "tag": {
+       "es": "Contra la invención",
+       "en": "Against invention"
+      },
+      "body": {
+       "es": "Cada veredicto trae la frase exacta de la fuente, leída en esa corrida. Si la fuente no carga, el dato va a revisión manual: el sistema no completa de memoria, que es justo lo que queda viejo.",
+       "en": "Every verdict includes the exact sentence from the source, read during that run. If the source does not load, the claim goes to manual review: the system does not fill in from memory, which is exactly what goes stale."
+      }
+     },
+     {
+      "title": {
+       "es": "Una falla nunca dice \"sin novedades\"",
+       "en": "A failure never says \"nothing new\""
+      },
+      "tag": {
+       "es": "Fallas visibles",
+       "en": "Visible failures"
+      },
+      "body": {
+       "es": "Si la IA no revisa todo, el informe lista lo que quedó pendiente y la corrida termina en rojo. Si un script lee menos datos de los que hay, se detiene con un error que lo explica.",
+       "en": "If the AI does not check everything, the report lists what is pending and the run turns red. If a script reads fewer claims than there are, it stops with an error that says so."
+      }
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Validación a ciegas",
+     "en": "Blind validation"
+    },
+    "toc": {
+     "es": "Validación",
+     "en": "Validation"
+    },
+    "p": [
+     {
+      "es": "Un sistema que encuentra cosas no prueba que encuentre las correctas. Para medirlo sembré **21 casos** en una rama de prueba: 9 errores en datos, 7 en textos, 2 de ortografía y **2 controles**, cambios correctos que el sistema no debía marcar. La prueba fue a ciegas: la lista de casos quedó fuera del repo, y la rama, el commit y el pull request tenían nombres neutros, para que el revisor con IA no pudiera saber qué buscar.",
+      "en": "A system that finds things does not prove it finds the right ones. To measure it I seeded **21 cases** on a test branch: 9 errors in claims, 7 in text, 2 in spelling and **2 controls**, correct changes the system should not flag. The test was blind: the list of cases stayed outside the repo, and the branch, commit and pull request had neutral names, so the AI reviewer could not know what to look for."
+     },
+     {
+      "es": "Los errores iban de lo evidente (un año cambiado, una función que la herramienta no tiene) a lo sutil: un falso amigo como \"eventualmente\", una pasiva calcada del inglés, un reglamento descripto como \"plenamente aplicable\" cuando entró en vigor por etapas.",
+      "en": "The errors ranged from the obvious (a changed year, a feature the tool does not have) to the subtle: a false friend like \"eventualmente\", a passive voice calqued from English, a regulation described as \"fully applicable\" when it entered into force in stages."
+     }
+    ]
+   },
+   {
+    "t": "stats",
+    "join": true,
+    "items": [
+     {
+      "value": {
+       "es": "17 de 19",
+       "en": "17 of 19"
+      },
+      "label": {
+       "es": "errores detectados",
+       "en": "errors detected"
+      }
+     },
+     {
+      "value": {
+       "es": "2 de 2",
+       "en": "2 of 2"
+      },
+      "label": {
+       "es": "controles sin falsa alarma",
+       "en": "controls with no false alarm"
+      }
+     },
+     {
+      "value": {
+       "es": "2",
+       "en": "2"
+      },
+      "label": {
+       "es": "problemas reales no sembrados",
+       "en": "real problems not seeded"
+      }
+     },
+     {
+      "value": {
+       "es": "18",
+       "en": "18"
+      },
+      "label": {
+       "es": "cambios reales después, sin ningún error falso",
+       "en": "real changes afterwards, with no false error"
+      }
+     }
+    ]
+   },
+   {
+    "t": "compare",
+    "h": {
+     "es": "Lo que falló y cómo lo corregí",
+     "en": "What failed and how I fixed it"
+    },
+    "note": {
+     "es": "Cada falla de la validación se convirtió en un ajuste de la versión 3. Lo que era regla pasó a un script; lo que era criterio, al prompt.",
+     "en": "Every failure in the validation became a version 3 adjustment. Whatever was a rule moved to a script; whatever was judgement, to the prompt."
+    },
+    "cols": {
+     "dim": {
+      "es": "Caso",
+      "en": "Case"
+     },
+     "before": {
+      "es": "Qué pasó",
+      "en": "What happened"
+     },
+     "after": {
+      "es": "Ajuste",
+      "en": "Adjustment"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "Ley de Chile con un error",
+       "en": "Chilean law with an error"
+      },
+      "before": {
+       "es": "La página oficial no cargó. El sistema no inventó, pero el error quedó perdido al final del informe.",
+       "en": "The official page did not load. The system did not invent anything, but the error ended up buried at the end of the report."
+      },
+      "after": {
+       "es": "Prueba otra copia oficial antes de rendirse. En un pull request, lo que cambió y no se pudo verificar va primero.",
+       "en": "It tries another official copy before giving up. In a pull request, anything that changed and could not be verified goes first."
+      }
+     },
+     {
+      "dim": {
+       "es": "Precio sin fecha",
+       "en": "Price without a date"
+      },
+      "before": {
+       "es": "La IA vio un modismo en el mismo párrafo, pero no el precio.",
+       "en": "The AI caught a regionalism in the same paragraph, but not the price."
+      },
+      "after": {
+       "es": "Es una regla, así que pasó al script de textos: ahora lo detecta siempre.",
+       "en": "It is a rule, so it moved to the text script: it is now always detected."
+      }
+     },
+     {
+      "dim": {
+       "es": "Enlace roto",
+       "en": "Broken link"
+      },
+      "before": {
+       "es": "Detectó el error y propuso la URL correcta, pero sugirió reescribir un dato que estaba bien.",
+       "en": "It caught the error and suggested the right URL, but proposed rewriting a claim that was correct."
+      },
+      "after": {
+       "es": "Separa el dato de su fuente: si el problema es la URL, no toca el dato.",
+       "en": "It separates the claim from its source: if the problem is the URL, the claim stays untouched."
+      }
+     },
+     {
+      "dim": {
+       "es": "Versión en español",
+       "en": "Spanish version"
+      },
+      "before": {
+       "es": "Dijo que existía una versión oficial en español y no la propuso.",
+       "en": "It said an official Spanish version existed and did not suggest it."
+      },
+      "after": {
+       "es": "Si lo dice, tiene que proponerla; si no, el informe avisa la contradicción.",
+       "en": "If it says so, it must suggest it; otherwise the report flags the contradiction."
+      }
+     }
+    ]
+   },
+   {
+    "t": "cards",
+    "h": {
+     "es": "Lo que encontró y nadie sabía",
+     "en": "What it found that nobody knew"
+    },
+    "toc": {
+     "es": "Hallazgos reales",
+     "en": "Real findings"
+    },
+    "note": {
+     "es": "El mejor resultado de la validación no estaba en la lista: problemas reales del taller que ni yo conocía. Los verifiqué y los corregí.",
+     "en": "The best result of the validation was not on the list: real problems in the workshop that even I did not know about. I verified and fixed them."
+    },
+    "cols": 2,
+    "items": [
+     {
+      "title": {
+       "es": "Una autoridad que cambió de forma",
+       "en": "An authority that changed form"
+      },
+      "tag": {
+       "es": "Marco legal, Brasil",
+       "en": "Legal framework, Brazil"
+      },
+      "body": {
+       "es": "La autoridad de datos de Brasil pasó a ser una agencia reguladora en 2026, y el taller todavía la presentaba como autoridad.",
+       "en": "Brazil's data protection authority became a regulatory agency in 2026, and the workshop still described it as an authority."
+      }
+     },
+     {
+      "title": {
+       "es": "Ayudas en español que no se citaban",
+       "en": "Spanish help pages that went uncited"
+      },
+      "tag": {
+       "es": "Asistentes",
+       "en": "Assistants"
+      },
+      "body": {
+       "es": "La ayuda de un asistente tenía versión oficial en español y el taller citaba la de inglés en 14 enlaces.",
+       "en": "One assistant's help centre had an official Spanish version and the workshop cited the English one in 14 links."
+      }
+     },
+     {
+      "title": {
+       "es": "Un producto que se mudaba de ayuda",
+       "en": "A product moving its help pages"
+      },
+      "tag": {
+       "es": "Asistentes",
+       "en": "Assistants"
+      },
+      "body": {
+       "es": "La ayuda del Copilot gratuito empezaba a redirigir a la de su versión empresarial. El enlace seguía \"funcionando\"; el aviso de redirecciones mostró que llevaba a otro producto.",
+       "en": "The free Copilot help pages had started redirecting to its enterprise version. The link still \"worked\"; the redirect warning showed it led to another product."
+      }
+     },
+     {
+      "title": {
+       "es": "Restricciones de plan que faltaban",
+       "en": "Missing plan restrictions"
+      },
+      "tag": {
+       "es": "Asistentes",
+       "en": "Assistants"
+      },
+      "body": {
+       "es": "Dos funciones eran solo de planes pagos y el taller no lo aclaraba. Importa, porque las consignas tienen que poder hacerse gratis.",
+       "en": "Two features were paid-plan only and the workshop did not say so. It matters, because the activities must be doable for free."
+      }
+     }
+    ]
+   },
+   {
+    "t": "taskflow",
+    "h": {
+     "es": "Cómo trabajé con IA",
+     "en": "How I worked with AI"
+    },
+    "note": {
+     "es": "Dos IA con roles distintos, y yo en el medio. Que una IA revisara el trabajo de la otra encontró fallas que ninguna habría visto sola.",
+     "en": "Two AIs with different roles, and me in between. Having one AI review the other's work caught failures neither would have seen alone."
+    },
+    "steps": {
+     "es": [
+      "Planteo el problema y los criterios",
+      "Claude diseña y prueba cada pieza",
+      "Reviso y decido qué entra",
+      "Claude Code lo prueba en mi repo y lo registra",
+      "Abro el pull request y leo la revisión automática",
+      "Fusiono o corrijo"
+     ],
+     "en": [
+      "I frame the problem and the criteria",
+      "Claude designs and tests each piece",
+      "I review and decide what goes in",
+      "Claude Code tests it in my repo and logs it",
+      "I open the pull request and read the automated review",
+      "I merge or fix"
+     ]
+    }
+   },
+   {
+    "t": "prose",
+    "join": true,
+    "h": {
+     "es": "Las fallas del propio proceso",
+     "en": "Failures in the process itself"
+    },
+    "p": [
+     {
+      "es": "Antes de la primera corrida, Claude Code encontró que un script leía **6 de 46 datos** en Windows por los saltos de línea, y que si fallaba la IA el informe iba a decir \"sin novedades\". Las dos eran **fallas silenciosas**, el riesgo más serio de automatizar. Se corrigieron con controles que frenan y avisan.",
+      "en": "Before the first run, Claude Code found that a script read **6 of 46 claims** on Windows because of line endings, and that if the AI failed the report would say \"nothing new\". Both were **silent failures**, the most serious risk of automating. They were fixed with checks that stop and warn."
+     },
+     {
+      "es": "También hubo una falsa alarma del lado humano-IA: marqué como no textual una cita que sí lo era, en la versión latinoamericana de la página. Quedó registrada como dato de la medición, y de ahí salió una regla: preferir el español latinoamericano cuando existe.",
+      "en": "There was also a false alarm on the human-AI side: I flagged a quote as not verbatim when it was, in the Latin American version of the page. It was recorded as part of the measurement, and it led to a rule: prefer Latin American Spanish when available."
+     }
+    ]
+   },
+   {
+    "t": "refs",
+    "h": {
+     "es": "Referencias",
+     "en": "References"
+    },
+    "items": [
+     {
+      "pre": {
+       "es": "Anthropic. (s.f.).",
+       "en": "Anthropic. (n.d.)."
+      },
+      "title": {
+       "es": "Claude Code GitHub Actions",
+       "en": "Claude Code GitHub Actions"
+      },
+      "post": {
+       "es": ". Claude Code Docs. Recuperado el 26 de noviembre de 2026 de",
+       "en": ". Claude Code Docs. Retrieved November 26, 2026, from"
+      },
+      "url": "https://code.claude.com/docs/en/github-actions"
+     },
+     {
+      "pre": {
+       "es": "GitHub. (s.f.).",
+       "en": "GitHub. (n.d.)."
+      },
+      "title": {
+       "es": "About billing for GitHub Actions",
+       "en": "About billing for GitHub Actions"
+      },
+      "post": {
+       "es": ". GitHub Docs. Recuperado el 26 de noviembre de 2026 de",
+       "en": ". GitHub Docs. Retrieved November 26, 2026, from"
+      },
+      "url": "https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions"
+     }
+    ]
+   }
+  ],
+  "outcome": {
+   "h": {
+    "es": "Estado y próximos pasos",
+    "en": "Status and next steps"
+   },
+   "body": [
+    {
+     "es": "**Hecho:** el piloto corre solo sobre los Módulos 10 y 11. Tres versiones, cada una ajustada con datos: la primera corrida real, la validación a ciegas y el primer uso en un cambio real. Cada decisión está registrada en el repo, de la D-079 a la D-084.",
+     "en": "**Done:** the pilot runs on its own over Modules 10 and 11. Three versions, each adjusted with data: the first real run, the blind validation and the first use on a real change. Every decision is logged in the repo, from D-079 to D-084."
+    },
+    {
+     "es": "**Falta:** repetir la validación con los mismos 21 casos para medir la versión 3, extender el sistema al resto del taller y adaptarlo a mis otros proyectos, con un registro de datos y una rúbrica propios para cada uno.",
+     "en": "**Still to do:** repeat the validation with the same 21 cases to measure version 3, extend the system to the rest of the workshop and adapt it to my other projects, each with its own claim registry and rubric."
+    },
+    {
+     "es": "**Qué voy a medir:** cuántos hallazgos de cada informe se confirman al revisarlos, cuánto tiempo me lleva decidir sobre un informe y cuántos datos vencidos llegan a una clase sin haber sido revisados. El objetivo es cero.",
+     "en": "**What I will measure:** how many findings in each report are confirmed when reviewed, how long it takes me to decide on a report, and how many expired claims reach a class without being checked. The target is zero."
+    }
+   ]
+  }
  }
 };
