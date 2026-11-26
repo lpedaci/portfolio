@@ -25411,6 +25411,30 @@ window.CASES = {
     ]
    },
    {
+    "t": "gallery",
+    "join": true,
+    "h": {
+     "es": "Un informe real",
+     "en": "A real report"
+    },
+    "wide": true,
+    "images": [
+     {
+      "src": "verificacion-ia-01-fuentes-propuestas.webp",
+      "w": 2080,
+      "h": 1592,
+      "alt": {
+       "es": "Sección \"Fuentes propuestas (5)\" del Issue #2: una tabla con el dato, el problema de la fuente actual, la fuente propuesta en español, la frase que la respalda y el porqué. Debajo, un dato sin reemplazo encontrado, con su motivo.",
+       "en": "\"Proposed sources (5)\" section of Issue #2: a table with the claim, the problem with the current source, the proposed source in Spanish, the sentence that supports it and why. Below, one claim with no replacement found, and the reason."
+      },
+      "caption": {
+       "es": "Primera corrida real (Issue #2): cinco fuentes propuestas, todas en español, cada una con su frase. Cuatro se aceptaron y una se rechazó por ser de otro producto.",
+       "en": "First real run (Issue #2): five proposed sources, all in Spanish, each with its sentence. Four were accepted and one was rejected for being about another product."
+      }
+     }
+    ]
+   },
+   {
     "t": "cards",
     "h": {
      "es": "Decisiones de diseño",
@@ -25544,6 +25568,30 @@ window.CASES = {
     ]
    },
    {
+    "t": "gallery",
+    "join": true,
+    "h": {
+     "es": "La revisión de la prueba",
+     "en": "The test review"
+    },
+    "wide": true,
+    "images": [
+     {
+      "src": "verificacion-ia-02-validacion-errores.webp",
+      "w": 2240,
+      "h": 2500,
+      "alt": {
+       "es": "Sección \"Errores (8)\" de la revisión automática del pull request #6: una tabla de datos con lo que dice el taller, lo que dice la fuente entre comillas y la sugerencia, y otra de fragmentos de texto con el criterio de la rúbrica y su puntaje.",
+       "en": "\"Errors (8)\" section of the automated review of pull request #6: a table of claims with what the workshop says, what the source says in quotation marks and the suggestion, and another of text fragments with the rubric criterion and its score."
+      },
+      "caption": {
+       "es": "La revisión del pull request #6, con los errores sembrados. Cada fila trae la frase exacta de la fuente. Una sugerencia agrega un límite de archivos por día: fue uno de los ajustes de la versión 3.",
+       "en": "The review of pull request #6, with the seeded errors. Every row includes the exact sentence from the source. One suggestion adds a daily file limit: it became one of the version 3 adjustments."
+      }
+     }
+    ]
+   },
+   {
     "t": "compare",
     "h": {
      "es": "Lo que falló y cómo lo corregí",
@@ -25622,6 +25670,46 @@ window.CASES = {
       "after": {
        "es": "Si lo dice, tiene que proponerla; si no, el informe avisa la contradicción.",
        "en": "If it says so, it must suggest it; otherwise the report flags the contradiction."
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "join": true,
+    "h": {
+     "es": "El primer cambio real",
+     "en": "The first real change"
+    },
+    "wide": true,
+    "rowsOf": [
+     2
+    ],
+    "images": [
+     {
+      "src": "verificacion-ia-03-cambio-real.webp",
+      "w": 2080,
+      "h": 1606,
+      "alt": {
+       "es": "Revisión automática del pull request #8: 18 datos verificados en la fuente, Errores (0), Desactualizados (0) y Mejoras (8), cada una con la aclaración de que el dato sigue vigente pero la fuente no es acorde.",
+       "en": "Automated review of pull request #8: 18 claims verified at the source, Errors (0), Out of date (0) and Improvements (8), each noting that the claim is still current but the source is not suitable."
+      },
+      "caption": {
+       "es": "Pull request #8: 18 datos cambiados, ningún error falso. Separa el dato de su fuente, como pide la versión 3.",
+       "en": "Pull request #8: 18 changed claims, no false errors. It separates the claim from its source, as version 3 requires."
+      }
+     },
+     {
+      "src": "verificacion-ia-04-pasos.webp",
+      "w": 1560,
+      "h": 1218,
+      "alt": {
+       "es": "Pasos de la revisión de cambios del pull request #8, todos en verde, con su duración. La verificación de accesibilidad tarda 16 minutos y 12 segundos; los dos pasos con Claude suman 2 minutos y 14 segundos.",
+       "en": "Steps of the change review for pull request #8, all green, with their duration. The accessibility check takes 16 minutes and 12 seconds; the two Claude steps add up to 2 minutes and 14 seconds."
+      },
+      "caption": {
+       "es": "Los pasos de esa revisión, con sus tiempos reales. La IA lleva 2 minutos; lo que más tarda es la verificación de accesibilidad, que es la próxima mejora.",
+       "en": "The steps of that review, with their real timings. The AI takes 2 minutes; what takes longest is the accessibility check, which is the next improvement."
       }
      }
     ]
