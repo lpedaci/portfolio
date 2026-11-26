@@ -10,8 +10,8 @@
    card y en el encabezado del caso), el año pasa a "2026 - en curso" (yearL, armado con yearOngoing de i18n.js)
    y la etiqueta de los enlaces en vivo aclara que es una versión en desarrollo. dates sigue con inicio y fin
    iguales (o el último mes con avances) para no romper el orden; el texto del año sale del código.
-   El orden del array es el orden de las cards: primero los destacados (Alcancía, Rumbo, proyectos
-   aplicados y auditorías UX/UI) y después del caso publicado más reciente al más antiguo.
+   El orden del array es el orden de las cards: primero los destacados (Verificación automática de fuentes con IA,
+   Alcancía, Rumbo, proyectos aplicados y auditorías UX/UI) y después del caso publicado más reciente al más antiguo.
    Un caso nuevo va en el lugar que le toque según ese criterio, no al final.
    result: null si no hay un dato defendible.
    cover: imagen de la card (800x500, en assets/img/covers). video: true suma un botón de play sobre la portada.
@@ -19,6 +19,26 @@
    El detalle de cada caso vive en cases.js, con el mismo slug. */
 
 window.PROJECTS = [
+  /* Verificación automática de fuentes con IA: primera de todas, destacada. Queda lejos de Taller - IA, así no se enlazan como "Siguiente caso". */
+  {
+    slug: 'verificacion-ia',
+    cover: 'assets/img/covers/verificacion-ia.jpg',
+    cat: 'it',
+    also: ['cap'],
+    badges: [],
+    dates: ['2026-11', '2026-11'],
+    tags: { es: ['ia aplicada', 'automatización', 'evaluación'], en: ['applied ai', 'automation', 'evaluation'] },
+    title: { es: 'Verificación automática de fuentes con IA', en: 'Automated source verification with AI' },
+    desc: {
+      es: 'Un sistema que revisa las fuentes y la redacción del Taller - IA, propone cómo corregirlas y deja la decisión a una persona. Validado a ciegas con 21 casos sembrados.',
+      en: 'A system that checks the sources and wording of Taller - IA, suggests how to fix them and leaves the decision to a person. Blind-validated with 21 seeded cases.'
+    },
+    result: { es: '17 de 19 errores sembrados detectados, 0 falsas alarmas', en: '17 of 19 seeded errors detected, 0 false alarms' },
+    skills: {
+      es: ['IA aplicada', 'Automatización', 'Diseño de evaluación', 'Rúbricas', 'Claude Code'],
+      en: ['Applied AI', 'Automation', 'Evaluation design', 'Rubrics', 'Claude Code']
+    }
+  },
   {
     slug: 'alcancia',
     cover: 'assets/img/covers/alcancia.jpg',
@@ -121,26 +141,6 @@ window.PROJECTS = [
     },
     result: { es: '5 salas en 3 versiones', en: '5 rooms in 3 versions' },
     skills: { es: ['Gamificación', 'Diseño instruccional', 'Sistema de diseño', 'WCAG 2.2'], en: ['Gamification', 'Instructional design', 'Design system', 'WCAG 2.2'] }
-  },
-  /* Verificación automática de fuentes con IA: es del Taller - IA, pero va separada de su tarjeta para que no se enlacen como "Siguiente caso". */
-  {
-    slug: 'verificacion-ia',
-    cover: 'assets/img/covers/verificacion-ia.jpg',
-    cat: 'it',
-    also: ['cap'],
-    badges: [],
-    dates: ['2026-11', '2026-11'],
-    tags: { es: ['ia aplicada', 'automatización', 'evaluación'], en: ['applied ai', 'automation', 'evaluation'] },
-    title: { es: 'Verificación automática de fuentes con IA', en: 'Automated source verification with AI' },
-    desc: {
-      es: 'Un sistema que revisa las fuentes y la redacción del Taller - IA, propone cómo corregirlas y deja la decisión a una persona. Validado a ciegas con 21 casos sembrados.',
-      en: 'A system that checks the sources and wording of Taller - IA, suggests how to fix them and leaves the decision to a person. Blind-validated with 21 seeded cases.'
-    },
-    result: { es: '17 de 19 errores sembrados detectados, 0 falsas alarmas', en: '17 of 19 seeded errors detected, 0 false alarms' },
-    skills: {
-      es: ['IA aplicada', 'Automatización', 'Diseño de evaluación', 'Rúbricas', 'Claude Code'],
-      en: ['Applied AI', 'Automation', 'Evaluation design', 'Rubrics', 'Claude Code']
-    }
   },
   /* El aula que incluye y sus cuatro piezas (animación, podcast, documental y asistente): publicados juntos en el portfolio,
      van seguidos para que "Siguiente caso" recorra el proyecto: el espacio digital y después cada pieza. */
