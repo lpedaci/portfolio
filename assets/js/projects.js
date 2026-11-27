@@ -106,6 +106,25 @@ window.PROJECTS = [
     result: { es: 'Todos los equipos asesorados', en: 'Every team advised' },
     skills: { es: ['Heurísticas de Nielsen', 'WCAG 2.1', 'Lighthouse', 'Claude'], en: ['Nielsen heuristics', 'WCAG 2.1', 'Lighthouse', 'Claude'] }
   },
+  /* Primer caso después de los destacados: el más reciente (noviembre 2026). */
+  {
+    slug: 'auditoria-vertex3d',
+    cover: 'assets/img/covers/auditoria-vertex3d.jpg',
+    cat: 'it',
+    badges: ['UX'],
+    dates: ['2026-11', '2026-11'],
+    tags: { es: ['auditoría ux', 'accesibilidad', 'seo'], en: ['ux audit', 'accessibility', 'seo'] },
+    title: { es: 'Auditoría UX/UI | Vertex 3D Argentina', en: 'UX/UI audit | Vertex 3D Argentina' },
+    desc: {
+      es: 'Auditoría integral y optimización de la landing de un taller de impresión 3D en Caseros: jerarquía tipográfica, accesibilidad, SEO local y performance.',
+      en: 'A full audit and optimisation of the landing page of a 3D printing workshop in Caseros, Buenos Aires: type hierarchy, accessibility, local SEO and performance.'
+    },
+    result: { es: 'Contraste de 4,0:1 a 7,6:1, 1 de 3 videos al cargar', en: 'Contrast from 4.0:1 to 7.6:1, 1 of 3 videos on load' },
+    skills: {
+      es: ['Auditoría UX', 'WCAG', 'SEO', 'Performance', 'QA', 'Front-end'],
+      en: ['UX audit', 'WCAG', 'SEO', 'Performance', 'QA', 'Front-end']
+    }
+  },
   {
     slug: 'taller-ia',
     cover: 'assets/img/covers/taller-ia.jpg',

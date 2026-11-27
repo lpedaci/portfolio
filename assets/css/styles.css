@@ -1642,6 +1642,25 @@ body[data-slug="verificacion-ia"] .blk--outcome p:nth-child(3) > .em:first-child
 .bars__row.is-lead .bars__fill { background: var(--cont); }
 .bars__v { min-width: 4.5ch; text-align: right; font: 500 0.9375rem/1 var(--f-mono); font-variant-numeric: tabular-nums; color: var(--text); }
 @media (min-width: 640px) { .bars__row { grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 16px; align-items: center; } }
+.bars__row.is-neg .bars__fill { background: var(--neg); }
+/* Línea de referencia (por ejemplo, el mínimo AA): cruza cada barra y se explica en texto debajo */
+.bars--ref .bars__track { position: relative; overflow: visible; }
+.bars__ref { position: absolute; top: -5px; bottom: -5px; left: var(--x); width: 2px; margin-left: -1px; background: var(--text); border-radius: 1px; }
+.bars__refl { display: flex; align-items: center; gap: 10px; margin-top: 16px; color: var(--text-2); font-size: 0.875rem; }
+.bars__refk { flex: none; width: 2px; height: 18px; background: var(--text); border-radius: 1px; }
+
+/* Estado de hallazgos: chip escrito (Corregido / Pendiente / Recomendación) y el texto al lado */
+.stl { display: grid; }
+.stl__i { display: grid; gap: 8px; padding: 14px 0; border-top: 1px solid var(--line); }
+.stl__i:first-child { padding-top: 0; border-top: 0; }
+.stl__i:last-child { padding-bottom: 0; }
+.stl__chip { justify-self: start; display: inline-flex; align-items: center; gap: 6px; padding: 4px 11px; border-radius: var(--r-pill); font: 500 0.8125rem/1.3 var(--f-mono); color: var(--cont); background: color-mix(in srgb, var(--cont-bright) 20%, #fff); white-space: nowrap; }
+.stl__i.is-done .stl__chip { color: var(--it); background: color-mix(in srgb, var(--it-bright) 16%, #fff); }
+.stl__chip .ph { font-size: 1rem; }
+.stl__dot { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid currentColor; }
+.stl__t { color: var(--text-2); }
+@media (min-width: 640px) { .stl__i { grid-template-columns: 10.5rem minmax(0, 1fr); gap: 16px; align-items: baseline; } }
+
 @media (prefers-reduced-motion: no-preference) {
   .bars__fill { animation: bars-grow 0.9s var(--ease) both; }
   @keyframes bars-grow { from { transform: scaleX(0); } }

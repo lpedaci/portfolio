@@ -5183,6 +5183,1027 @@ window.CASES = {
    }
   ]
  },
+ "auditoria-vertex3d": {
+  "cat": "it",
+  "title": {
+   "es": "Auditoría UX/UI | Vertex 3D Argentina",
+   "en": "UX/UI audit | Vertex 3D Argentina"
+  },
+  "subtitle": {
+   "es": "Auditoría integral y optimización de la landing de un taller de impresión 3D en Caseros: jerarquía tipográfica, accesibilidad, SEO local y performance.",
+   "en": "A full audit and optimisation of the landing page of a 3D printing workshop in Caseros, Buenos Aires: type hierarchy, accessibility, local SEO and performance."
+  },
+  "chips": {
+   "es": [
+    "Auditoría UX",
+    "Accesibilidad",
+    "WCAG",
+    "SEO",
+    "Performance",
+    "QA",
+    "Front-end"
+   ],
+   "en": [
+    "UX audit",
+    "Accessibility",
+    "WCAG",
+    "SEO",
+    "Performance",
+    "QA",
+    "Front-end"
+   ]
+  },
+  "summary": {
+   "problem": {
+    "es": "Una landing con buena identidad visual, pero con títulos que no se distinguían del texto, contraste por debajo del mínimo, links a páginas genéricas y una carga pesada para celulares de gama baja.",
+    "en": "A landing page with a strong visual identity, but with headings that did not stand out from body text, contrast below the minimum, links to generic pages and a heavy load for low-end phones."
+   },
+   "solution": {
+    "es": "Auditoría por áreas, con cada hallazgo marcado como corregido o pendiente. Las mejoras se aplicaron sobre una copia del sitio y se verificaron en escritorio y en 375 px.",
+    "en": "An audit by area, with each finding marked as fixed or pending. The improvements were applied to a copy of the site and checked on desktop and at 375 px."
+   },
+   "results": [
+    {
+     "v": "7,6:1",
+     "l": {
+      "es": "contraste del texto secundario, antes 4,0:1",
+      "en": "secondary text contrast, up from 4.0:1"
+     }
+    },
+    {
+     "v": "1 de 3",
+     "l": {
+      "es": "reels de Instagram al abrir la página, el resto bajo demanda",
+      "en": "Instagram reels on page load, the rest on demand"
+     }
+    },
+    {
+     "v": "30 fps",
+     "l": {
+      "es": "en el fondo animado, antes 60, y en pausa con la pestaña oculta",
+      "en": "for the animated background, down from 60, paused when the tab is hidden"
+     }
+    },
+    {
+     "t": {
+      "es": "Un solo index.html autocontenido, sin CDN ni compilación para editar contenidos.",
+      "en": "A single self-contained index.html, with no CDN or build step to edit content."
+     }
+    }
+   ]
+  },
+  "facts": {
+   "role": {
+    "es": "Experience Designer: auditoría, implementación de mejoras y QA",
+    "en": "Experience Designer: audit, implementation of improvements and QA"
+   },
+   "timeline": {
+    "es": "Noviembre 2026",
+    "en": "November 2026"
+   },
+   "context": {
+    "es": "Landing de una sola página de un emprendimiento de impresión 3D a medida en Caseros, Tres de Febrero, con envíos a todo AMBA",
+    "en": "Single-page landing for a made-to-order 3D printing business in Caseros, Tres de Febrero, shipping across Greater Buenos Aires"
+   },
+   "stack": {
+    "es": [
+     "Claude Code (skill de UI/UX)",
+     "HTML",
+     "Tailwind CSS (compilado)",
+     "Navegador: QA en escritorio y 375 px"
+    ],
+    "en": [
+     "Claude Code (UI/UX skill)",
+     "HTML",
+     "Tailwind CSS (compiled)",
+     "Browser: QA on desktop and at 375 px"
+    ]
+   },
+   "methods": {
+    "es": [
+     "Auditoría por áreas",
+     "WCAG 2.1 AA",
+     "SEO local",
+     "QA móvil"
+    ],
+    "en": [
+     "Audit by area",
+     "WCAG 2.1 AA",
+     "Local SEO",
+     "Mobile QA"
+    ]
+   }
+  },
+  "links": [
+   {
+    "label": {
+     "es": "Ver el sitio",
+     "en": "Visit the site"
+    },
+    "url": "https://vertex3dargentina.vercel.app/"
+   }
+  ],
+  "blocks": [
+   {
+    "t": "prose",
+    "h": {
+     "es": "Contexto",
+     "en": "Context"
+    },
+    "p": [
+     {
+      "es": "Vertex 3D Argentina es un emprendimiento de impresión 3D a medida con base en Caseros (Tres de Febrero) y envíos a todo AMBA. Ofrece piezas personalizadas, diseño CAD y producción mayorista para empresas en PLA, PET-G y TPU.",
+      "en": "Vertex 3D Argentina is a made-to-order 3D printing business based in Caseros (Tres de Febrero), shipping across Greater Buenos Aires. It offers custom parts, CAD design and wholesale production for companies in PLA, PET-G and TPU."
+     },
+     {
+      "es": "Su sitio es una landing de una sola página (Sobre Nosotros, Reseñas, Contacto) con un objetivo claro: que la persona **pida un presupuesto por WhatsApp**.",
+      "en": "Its site is a single-page landing (About us, Reviews, Contact) with one clear goal: getting people to **ask for a quote on WhatsApp**."
+     }
+    ],
+    "toc": {
+     "es": "Contexto y desafío",
+     "en": "Context and challenge"
+    }
+   },
+   {
+    "t": "prose",
+    "join": true,
+    "h": {
+     "es": "Desafío",
+     "en": "Challenge"
+    },
+    "p": [
+     {
+      "es": "La landing tenía buena identidad visual: fondo oscuro, degradé de marca y tipografías Orbitron y Plus Jakarta Sans. Pero los títulos no se distinguían del texto común, el contraste no alcanzaba el mínimo de accesibilidad, varios links llevaban a páginas genéricas y la carga era pesada para celulares de gama baja.",
+      "en": "The landing page had a strong visual identity: a dark background, a brand gradient and the Orbitron and Plus Jakarta Sans typefaces. But the headings did not stand out from body text, contrast fell short of the accessibility minimum, several links led to generic pages and the page was heavy for low-end phones."
+     },
+     {
+      "es": "Para un negocio que vende sobre todo por móvil y redes, **cada uno de esos puntos le resta pedidos**.",
+      "en": "For a business that sells mostly through mobile and social media, **each of those points costs orders**."
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "join": true,
+    "h": {
+     "es": "La landing en escritorio",
+     "en": "The landing page on desktop"
+    },
+    "note": {
+     "es": "Versión optimizada, capturada a 1440 px.",
+     "en": "Optimised version, captured at 1440 px."
+    },
+    "single": true,
+    "images": [
+     {
+      "src": "vertex3d-01-escritorio.webp",
+      "w": 2000,
+      "h": 1250,
+      "alt": {
+       "es": "Escritorio: encabezado con el logo y el nombre Vertex 3D Argentina en Orbitron, el subtítulo Impresión 3D a medida en Caseros, el menú y el título ¿Quiénes Somos? con la palabra Somos en el degradé celeste y violeta de la marca.",
+       "en": "Desktop: header with the logo and the Vertex 3D Argentina name in Orbitron, the subtitle about made-to-order 3D printing in Caseros, the menu and the ¿Quiénes Somos? heading with the word Somos in the brand's blue and violet gradient."
+      }
+     }
+    ]
+   },
+   {
+    "t": "list",
+    "h": {
+     "es": "Enfoque",
+     "en": "Approach"
+    },
+    "note": {
+     "es": "Auditoría por áreas: Accesibilidad, UX/UI, QA, SEO y marketing, y Performance. Cada hallazgo quedó clasificado como corregido o pendiente. Las mejoras se aplicaron sobre una copia del sitio, sin tocar el original.",
+     "en": "An audit by area: Accessibility, UX/UI, QA, SEO and marketing, and Performance. Each finding was classified as fixed or pending. The improvements were applied to a copy of the site, leaving the original untouched."
+    },
+    "items": [
+     {
+      "lead": {
+       "es": "Diagnóstico",
+       "en": "Diagnosis"
+      },
+      "body": {
+       "es": "Recorrido de la landing por área, en escritorio y en celular.",
+       "en": "A walk through the landing page by area, on desktop and on mobile."
+      }
+     },
+     {
+      "lead": {
+       "es": "Priorización",
+       "en": "Prioritisation"
+      },
+      "body": {
+       "es": "Qué se corrige ahora y qué queda como recomendación para el negocio.",
+       "en": "What gets fixed now and what stays as a recommendation for the business."
+      }
+     },
+     {
+      "lead": {
+       "es": "Implementación sobre copia",
+       "en": "Implementation on a copy"
+      },
+      "body": {
+       "es": "Los cambios, sin tocar el sitio original.",
+       "en": "The changes, without touching the original site."
+      }
+     },
+     {
+      "lead": {
+       "es": "QA en escritorio y móvil",
+       "en": "QA on desktop and mobile"
+      },
+      "body": {
+       "es": "Verificación en navegador, en escritorio y en una pantalla de 375 px.",
+       "en": "Browser checks on desktop and on a 375 px screen."
+      }
+     }
+    ],
+    "toc": {
+     "es": "Enfoque y proceso",
+     "en": "Approach and process"
+    }
+   },
+   {
+    "t": "taskflow",
+    "join": true,
+    "h": {
+     "es": "El proceso, cuatro pasos",
+     "en": "The process, four steps"
+    },
+    "steps": {
+     "es": [
+      "Diagnóstico",
+      "Priorización",
+      "Implementación sobre copia",
+      "QA en escritorio y móvil"
+     ],
+     "en": [
+      "Diagnosis",
+      "Prioritisation",
+      "Implementation on a copy",
+      "QA on desktop and mobile"
+     ]
+    }
+   },
+   {
+    "t": "phase",
+    "n": "01",
+    "id": "tipografia",
+    "mode": {
+     "es": "UX/UI",
+     "en": "UX/UI"
+    },
+    "name": {
+     "es": "Jerarquía tipográfica",
+     "en": "Type hierarchy"
+    },
+    "q": {
+     "es": "Que cada nivel de título se distinga del anterior y del texto común.",
+     "en": "Making each heading level stand apart from the next and from body text."
+    }
+   },
+   {
+    "t": "compare",
+    "marks": true,
+    "h": {
+     "es": "Cada nivel, antes y después",
+     "en": "Each level, before and after"
+    },
+    "cols": {
+     "dim": {
+      "es": "Nivel",
+      "en": "Level"
+     },
+     "before": {
+      "es": "Antes",
+      "en": "Before"
+     },
+     "after": {
+      "es": "Después",
+      "en": "After"
+     }
+    },
+    "rows": [
+     {
+      "dim": {
+       "es": "H1",
+       "en": "H1"
+      },
+      "before": {
+       "es": "16 px en móvil; subtítulo con palabra clave en 10 px gris oscuro, casi ilegible",
+       "en": "16 px on mobile; keyword subtitle at 10 px in dark grey, almost unreadable"
+      },
+      "after": {
+       "es": "Orbitron 900, de 20 a 36 px, efecto 3D con el degradé de marca; subtítulo de 11 a 12 px, más grueso y claro",
+       "en": "Orbitron 900, 20 to 36 px, 3D effect with the brand gradient; subtitle at 11 to 12 px, heavier and lighter in colour"
+      }
+     },
+     {
+      "dim": {
+       "es": "H2 (3 secciones)",
+       "en": "H2 (3 sections)"
+      },
+      "before": {
+       "es": "30 a 48 px en peso 300, parecía texto grande",
+       "en": "30 to 48 px at weight 300, it looked like large body text"
+      },
+      "after": {
+       "es": "36 a 60 px en peso 800, tracking más cerrado, una palabra en degradé y subtítulo legible",
+       "en": "36 to 60 px at weight 800, tighter tracking, one word in the gradient and a readable subtitle"
+      }
+     },
+     {
+      "dim": {
+       "es": "H3",
+       "en": "H3"
+      },
+      "before": {
+       "es": "Peso light, casi igual al texto",
+       "en": "Light weight, almost the same as body text"
+      },
+      "after": {
+       "es": "Peso 800, de 30 a 36 px",
+       "en": "Weight 800, 30 to 36 px"
+      }
+     },
+     {
+      "dim": {
+       "es": "Etiquetas",
+       "en": "Labels"
+      },
+      "before": {
+       "es": "Gris oscuro en 11 px, contraste insuficiente",
+       "en": "Dark grey at 11 px, insufficient contrast"
+      },
+      "after": {
+       "es": "Celeste de marca, semibold, con líneas a los costados",
+       "en": "Brand light blue, semibold, with rules on both sides"
+      }
+     },
+     {
+      "dim": {
+       "es": "Línea bajo el título",
+       "en": "Rule under the heading"
+      },
+      "before": {
+       "es": "48 × 1,5 px, apenas visible",
+       "en": "48 × 1.5 px, barely visible"
+      },
+      "after": {
+       "es": "64 × 3 px",
+       "en": "64 × 3 px"
+      }
+     }
+    ]
+   },
+   {
+    "t": "callout",
+    "h": {
+     "es": "El resultado y un detalle técnico",
+     "en": "The result and a technical detail"
+    },
+    "body": {
+     "es": "El orden se lee de un vistazo: etiqueta, título, subtítulo, línea. La fuente del H1 cargaba primero la variante Hollow (solo contorno), por eso el título se veía hueco: se dejó la Regular y se cargaron solo los pesos necesarios (700, 800 y 900). En una segunda iteración se ajustó el interlineado del encabezado en móvil, que quedaba pegado.",
+     "en": "The order reads at a glance: label, heading, subtitle, rule. The H1 font loaded the Hollow variant (outline only) first, which is why the heading looked empty: the Regular cut was kept and only the needed weights were loaded (700, 800 and 900). A second iteration fixed the header line height on mobile, which was too tight."
+    }
+   },
+   {
+    "t": "gallery",
+    "wide": true,
+    "h": {
+     "es": "El encabezado en móvil, a 375 px",
+     "en": "The header on mobile, at 375 px"
+    },
+    "images": [
+     {
+      "src": "vertex3d-antes-movil-encabezado.webp",
+      "w": 1125,
+      "h": 546,
+      "alt": {
+       "es": "Antes: encabezado en 375 px con Vertex 3D Argentina en letra chica, el subtítulo Impresión 3D a medida en Caseros en gris oscuro, muy espaciado y partido en dos líneas, y en el menú Sobre Nosotros cortado en dos renglones.",
+       "en": "Before: the header at 375 px with Vertex 3D Argentina in small type, the subtitle about made-to-order 3D printing in Caseros in dark grey, widely spaced and split over two lines, and Sobre Nosotros (About us) broken onto two lines in the menu."
+      },
+      "caption": {
+       "es": "Antes",
+       "en": "Before"
+      }
+     },
+     {
+      "src": "vertex3d-02-movil-encabezado.webp",
+      "w": 1125,
+      "h": 504,
+      "alt": {
+       "es": "Después: encabezado en 375 px con el logo, Vertex 3D en Orbitron grueso con el 3D en degradé, Argentina debajo y el subtítulo Impresión 3D a medida en Caseros, claro y legible.",
+       "en": "After: the header at 375 px with the logo, Vertex 3D in heavy Orbitron with 3D in the gradient, Argentina below and a clear, readable subtitle about made-to-order 3D printing in Caseros."
+      },
+      "caption": {
+       "es": "Después",
+       "en": "After"
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "wide": true,
+    "h": {
+     "es": "Una sección con su H2, en móvil",
+     "en": "A section with its H2, on mobile"
+    },
+    "images": [
+     {
+      "src": "vertex3d-antes-movil-h2.webp",
+      "w": 1125,
+      "h": 1800,
+      "alt": {
+       "es": "Antes: la sección en 375 px con la etiqueta en gris oscuro, el H2 ¿Quiénes Somos? en peso light, de un solo color y con el mismo peso visual que el texto, y una línea fina debajo; en el menú, Sobre Nosotros ocupa dos renglones.",
+       "en": "Before: the section at 375 px with the label in dark grey, the ¿Quiénes Somos? H2 in a light weight, in a single colour and with the same visual weight as the body text, and a thin rule below; in the menu, Sobre Nosotros takes two lines."
+      },
+      "caption": {
+       "es": "Antes",
+       "en": "Before"
+      }
+     },
+     {
+      "src": "vertex3d-03-movil-h2.webp",
+      "w": 1125,
+      "h": 1800,
+      "alt": {
+       "es": "Después: la sección en 375 px con la etiqueta celeste entre líneas, el H2 ¿Quiénes Somos? en peso 800 con Somos en degradé, el subtítulo legible y la línea de 64 × 3 px debajo; el menú entra en una sola línea.",
+       "en": "After: the section at 375 px with the light blue label between rules, the weight 800 ¿Quiénes Somos? H2 with Somos in the gradient, a readable subtitle and the 64 × 3 px rule below; the menu fits on one line."
+      },
+      "caption": {
+       "es": "Después",
+       "en": "After"
+      }
+     }
+    ]
+   },
+   {
+    "t": "gallery",
+    "wide": true,
+    "h": {
+     "es": "El mismo H2 en escritorio",
+     "en": "The same H2 on desktop"
+    },
+    "images": [
+     {
+      "src": "vertex3d-antes-escritorio-h2.webp",
+      "w": 2000,
+      "h": 1389,
+      "alt": {
+       "es": "Antes, en escritorio: la sección Sobre Nosotros con la etiqueta y las de Nuestra historia y Materiales en gris oscuro, y el H2 ¿Quiénes Somos? en peso light y de un solo color; debajo, la historia del negocio, los materiales y un reel de Instagram a la derecha.",
+       "en": "Before, on desktop: the About us section with its label and the Our story and Materials labels in dark grey, and the ¿Quiénes Somos? H2 in a light weight and a single colour; below, the business story, the materials and an Instagram reel on the right."
+      },
+      "caption": {
+       "es": "Antes",
+       "en": "Before"
+      }
+     },
+     {
+      "src": "vertex3d-04-escritorio-h2.webp",
+      "w": 2000,
+      "h": 1389,
+      "alt": {
+       "es": "Después, en escritorio: la misma sección con las etiquetas en celeste de marca, el H2 en peso 800 con Somos en degradé y una línea más gruesa debajo; debajo, la historia del negocio, los materiales PLA, PET-G y TPU y un reel de Instagram a la derecha.",
+       "en": "After, on desktop: the same section with the labels in the brand light blue, the weight 800 H2 with Somos in the gradient and a thicker rule below; below, the business story, the PLA, PET-G and TPU materials and an Instagram reel on the right."
+      },
+      "caption": {
+       "es": "Después",
+       "en": "After"
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "02",
+    "id": "accesibilidad",
+    "mode": {
+     "es": "WCAG 2.1 AA",
+     "en": "WCAG 2.1 AA"
+    },
+    "name": {
+     "es": "Accesibilidad",
+     "en": "Accessibility"
+    },
+    "q": {
+     "es": "Que la landing se pueda leer, recorrer con teclado y escuchar con lector de pantalla.",
+     "en": "Making the landing page readable, keyboard-navigable and usable with a screen reader."
+    }
+   },
+   {
+    "t": "bars",
+    "h": {
+     "es": "Contraste del texto secundario",
+     "en": "Secondary text contrast"
+    },
+    "note": {
+     "es": "Gris sobre fondo negro. La línea marca el mínimo AA para texto normal.",
+     "en": "Grey on a black background. The line marks the AA minimum for normal text."
+    },
+    "title": {
+     "es": "Relación de contraste",
+     "en": "Contrast ratio"
+    },
+    "unit": ":1",
+    "dec": 1,
+    "max": 8,
+    "ref": {
+     "v": 4.5,
+     "label": {
+      "es": "Mínimo AA para texto normal: 4,5:1",
+      "en": "AA minimum for normal text: 4.5:1"
+     }
+    },
+    "rows": [
+     {
+      "label": {
+       "es": "Antes",
+       "en": "Before"
+      },
+      "v": 4.0,
+      "neg": true
+     },
+     {
+      "label": {
+       "es": "Después",
+       "en": "After"
+      },
+      "v": 7.6
+     }
+    ]
+   },
+   {
+    "t": "status",
+    "h": {
+     "es": "Hallazgos de accesibilidad",
+     "en": "Accessibility findings"
+    },
+    "labels": {
+     "done": {
+      "es": "Corregido",
+      "en": "Fixed"
+     },
+     "todo": {
+      "es": "Pendiente",
+      "en": "Pending"
+     },
+     "rec": {
+      "es": "Recomendación",
+      "en": "Recommendation"
+     }
+    },
+    "items": [
+     {
+      "done": true,
+      "body": {
+       "es": "Foco de teclado invisible (outline-none sin reemplazo): se agregó un contorno celeste visible.",
+       "en": "Invisible keyboard focus (outline-none with no replacement): a visible light blue outline was added."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Contraste del gris sobre fondo negro de **4,0:1 a 7,6:1**.",
+       "en": "Grey on black contrast raised from **4.0:1 to 7.6:1**."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Se sumó el link \"Saltar al contenido\".",
+       "en": "A \"Skip to content\" link was added."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "El globo de WhatsApp oculto recibía foco y lo leían los lectores de pantalla; ahora queda inactivo mientras está cerrado.",
+       "en": "The hidden WhatsApp bubble received focus and was read by screen readers; it now stays inert while closed."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Con \"reducir movimiento\" activo se apagan el fondo animado y el scroll suave.",
+       "en": "With \"reduce motion\" on, the animated background and smooth scrolling are switched off."
+      }
+     },
+     {
+      "body": {
+       "es": "Puntos de los carruseles de 6 px y botón de cierre de 24 px, por debajo del mínimo táctil de 44 px.",
+       "en": "Carousel dots at 6 px and a 24 px close button, below the 44 px touch target minimum."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "03",
+    "id": "ux-ui",
+    "mode": {
+     "es": "experiencia",
+     "en": "experience"
+    },
+    "name": {
+     "es": "UX/UI",
+     "en": "UX/UI"
+    },
+    "q": {
+     "es": "Lo que ayuda o distrae en el camino hacia el pedido.",
+     "en": "What helps or distracts on the way to an order."
+    }
+   },
+   {
+    "t": "status",
+    "h": {
+     "es": "Hallazgos de UX/UI",
+     "en": "UX/UI findings"
+    },
+    "labels": {
+     "done": {
+      "es": "Corregido",
+      "en": "Fixed"
+     },
+     "todo": {
+      "es": "Pendiente",
+      "en": "Pending"
+     },
+     "rec": {
+      "es": "Recomendación",
+      "en": "Recommendation"
+     }
+    },
+    "items": [
+     {
+      "done": true,
+      "body": {
+       "es": "\"Sobre Nosotros\" se partía en dos líneas en el menú móvil.",
+       "en": "\"Sobre Nosotros\" (About us) broke onto two lines in the mobile menu."
+      }
+     },
+     {
+      "rec": true,
+      "body": {
+       "es": "El globo de WhatsApp reaparece cada 10 segundos; alcanza con mostrarlo una vez.",
+       "en": "The WhatsApp bubble reappears every 10 seconds; showing it once is enough."
+      }
+     },
+     {
+      "rec": true,
+      "body": {
+       "es": "Tres botones de WhatsApp más el flotante compiten entre sí.",
+       "en": "Three WhatsApp buttons plus the floating one compete with each other."
+      }
+     },
+     {
+      "rec": true,
+      "body": {
+       "es": "Secciones con altura mínima del 80 a 85 % de la pantalla generan espacios vacíos.",
+       "en": "Sections with a minimum height of 80 to 85% of the screen leave empty space."
+      }
+     },
+     {
+      "rec": true,
+      "body": {
+       "es": "Sumar una galería de trabajos, que en impresión 3D es lo que más vende.",
+       "en": "Add a gallery of finished work, which is what sells most in 3D printing."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "04",
+    "id": "qa",
+    "mode": {
+     "es": "revisión de contenido",
+     "en": "content review"
+    },
+    "name": {
+     "es": "QA y contenido",
+     "en": "QA and content"
+    },
+    "q": {
+     "es": "Que la landing diga lo mismo en todos lados y no lleve a callejones sin salida.",
+     "en": "Making the landing page say the same thing everywhere and lead to no dead ends."
+    }
+   },
+   {
+    "t": "status",
+    "h": {
+     "es": "Hallazgos de QA y contenido",
+     "en": "QA and content findings"
+    },
+    "labels": {
+     "done": {
+      "es": "Corregido",
+      "en": "Fixed"
+     },
+     "todo": {
+      "es": "Pendiente",
+      "en": "Pending"
+     },
+     "rec": {
+      "es": "Recomendación",
+      "en": "Recommendation"
+     }
+    },
+    "items": [
+     {
+      "done": true,
+      "body": {
+       "es": "Se unificó el voseo: \"Contactanos\", \"Pedí\", \"Chateá\", \"Dejanos\".",
+       "en": "The informal Argentine voseo was made consistent: \"Contactanos\", \"Pedí\", \"Chateá\", \"Dejanos\"."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "La foto del fundador no tenía ancho y alto definidos y hacía saltar el contenido al cargar.",
+       "en": "The founder's photo had no width and height set and made the content jump on load."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Área de envíos contradictoria (\"todo AMBA\" en la página, \"todo el país\" en los metadatos): se unificó en AMBA en la descripción para redes, la tarjeta de X y los datos estructurados.",
+       "en": "Contradictory shipping area (\"all of Greater Buenos Aires\" on the page, \"nationwide\" in the metadata): it was aligned to Greater Buenos Aires in the social description, the X card and the structured data."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Los links que llevaban a páginas genéricas (Facebook, \"Dejanos tu reseña\") quedan ocultos hasta cargar la URL real, para no mandar clientes a un callejón sin salida. Se cargó la página real de Facebook.",
+       "en": "Links that led to generic pages (Facebook, \"Leave us a review\") stay hidden until the real URL is set, so customers are not sent to a dead end. The real Facebook page was added."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "05",
+    "id": "seo",
+    "mode": {
+     "es": "búsqueda local",
+     "en": "local search"
+    },
+    "name": {
+     "es": "SEO y marketing",
+     "en": "SEO and marketing"
+    },
+    "q": {
+     "es": "Que Google y las redes muestren al negocio como es y donde está.",
+     "en": "Making Google and social media show the business as it is and where it is."
+    }
+   },
+   {
+    "t": "status",
+    "h": {
+     "es": "Hallazgos de SEO y marketing",
+     "en": "SEO and marketing findings"
+    },
+    "labels": {
+     "done": {
+      "es": "Corregido",
+      "en": "Fixed"
+     },
+     "todo": {
+      "es": "Pendiente",
+      "en": "Pending"
+     },
+     "rec": {
+      "es": "Recomendación",
+      "en": "Recommendation"
+     }
+    },
+    "items": [
+     {
+      "done": true,
+      "body": {
+       "es": "Meta description de más de 160 caracteres que empezaba con \"Página de...\": se reescribió con la palabra clave al principio y un llamado a la acción al final.",
+       "en": "A meta description over 160 characters that began with \"Page of...\": it was rewritten with the keyword first and a call to action at the end."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Área de servicio en los datos estructurados: Caseros, Tres de Febrero, CABA y Gran Buenos Aires.",
+       "en": "Service area in the structured data: Caseros, Tres de Febrero, Buenos Aires City and Greater Buenos Aires."
+      }
+     },
+     {
+      "rec": true,
+      "body": {
+       "es": "Título de unos 72 caracteres; Google muestra alrededor de 60.",
+       "en": "A title of about 72 characters; Google shows around 60."
+      }
+     },
+     {
+      "rec": true,
+      "body": {
+       "es": "Completar dirección, horario e imagen en los datos para Google, y sumar twitter:image.",
+       "en": "Add address, opening hours and an image to the data for Google, and add twitter:image."
+      }
+     },
+     {
+      "rec": true,
+      "body": {
+       "es": "La sección de reseñas usa testimonios de ejemplo con la etiqueta \"verificadas\": reemplazarlos por reseñas reales del Perfil de Empresa de Google antes de mantener esa etiqueta, por transparencia con el cliente y por la normativa de defensa del consumidor.",
+       "en": "The reviews section uses sample testimonials labelled \"verified\": replace them with real reviews from the Google Business Profile before keeping that label, for transparency with customers and under consumer protection rules."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "06",
+    "id": "performance",
+    "mode": {
+     "es": "carga",
+     "en": "loading"
+    },
+    "name": {
+     "es": "Performance",
+     "en": "Performance"
+    },
+    "q": {
+     "es": "Que la landing cargue liviana en un celular de gama baja.",
+     "en": "Making the landing page load light on a low-end phone."
+    }
+   },
+   {
+    "t": "status",
+    "h": {
+     "es": "Hallazgos de performance",
+     "en": "Performance findings"
+    },
+    "labels": {
+     "done": {
+      "es": "Corregido",
+      "en": "Fixed"
+     },
+     "todo": {
+      "es": "Pendiente",
+      "en": "Pending"
+     },
+     "rec": {
+      "es": "Recomendación",
+      "en": "Recommendation"
+     }
+    },
+    "items": [
+     {
+      "done": true,
+      "body": {
+       "es": "Tailwind dejó de cargarse desde el CDN, que bloqueaba el render: CSS compilado y minificado (**26 KB**) e integrado en el HTML.",
+       "en": "Tailwind is no longer loaded from the CDN, which blocked rendering: compiled and minified CSS (**26 KB**) inlined in the HTML."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Los 3 reels de Instagram cargaban al abrir la página; ahora carga **1 de 3** y el resto bajo demanda, al acercarse o al pasar de reel.",
+       "en": "The 3 Instagram reels loaded on page open; now **1 of 3** loads and the rest on demand, when scrolled near or when moving to the next reel."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Fondo animado de **60 a 30 cuadros por segundo**, en pausa con la pestaña oculta, con menos resolución en móvil y desactivado con ahorro de datos.",
+       "en": "Animated background down from **60 to 30 frames per second**, paused when the tab is hidden, at lower resolution on mobile and off in data saver mode."
+      }
+     },
+     {
+      "done": true,
+      "body": {
+       "es": "Se quitó Inter, que solo era respaldo: una descarga menos.",
+       "en": "Inter, used only as a fallback, was removed: one download fewer."
+      }
+     }
+    ]
+   },
+   {
+    "t": "phase",
+    "n": "07",
+    "id": "resultados",
+    "mode": {
+     "es": "antes y después",
+     "en": "before and after"
+    },
+    "name": {
+     "es": "Resultados",
+     "en": "Results"
+    },
+    "q": {
+     "es": "Cuatro indicadores del cambio.",
+     "en": "Four indicators of the change."
+    }
+   },
+   {
+    "t": "stats",
+    "items": [
+     {
+      "value": {
+       "es": "4,0 → 7,6:1",
+       "en": "4.0 → 7.6:1"
+      },
+      "label": {
+       "es": "contraste del texto secundario",
+       "en": "secondary text contrast"
+      }
+     },
+     {
+      "value": {
+       "es": "3 → 1",
+       "en": "3 → 1"
+      },
+      "label": {
+       "es": "videos al cargar la página",
+       "en": "videos on page load"
+      }
+     },
+     {
+      "value": {
+       "es": "60 → 30 fps",
+       "en": "60 → 30 fps"
+      },
+      "label": {
+       "es": "fondo animado",
+       "en": "animated background"
+      }
+     },
+     {
+      "value": {
+       "es": "1 archivo",
+       "en": "1 file"
+      },
+      "label": {
+       "es": "index.html autocontenido, sin CDN ni compilación para editar contenidos",
+       "en": "self-contained index.html, with no CDN or build step to edit content"
+      }
+     }
+    ]
+   },
+   {
+    "t": "prose",
+    "hl": true,
+    "join": true,
+    "h": {
+     "es": "Cierre",
+     "en": "Wrap-up"
+    },
+    "p": [
+     {
+      "es": "La landing conserva su identidad visual, pero ahora jerarquiza bien, se puede navegar con teclado y lector de pantalla, carga bastante menos y es coherente en lo que promete: AMBA, voseo y links reales.",
+      "en": "The landing page keeps its visual identity, but it now has a clear hierarchy, works with a keyboard and a screen reader, loads much less and is consistent in what it promises: Greater Buenos Aires, voseo and real links."
+     },
+     {
+      "es": "Los datos editables (redes, reseñas y reels) quedaron centralizados en un bloque de configuración, para que el negocio los actualice **sin tocar código**.",
+      "en": "The editable data (social links, reviews and reels) is gathered in one configuration block, so the business can update it **without touching code**."
+     }
+    ]
+   },
+   {
+    "t": "bullets",
+    "h": {
+     "es": "Próximos pasos",
+     "en": "Next steps"
+    },
+    "items": {
+     "es": [
+      "Reseñas reales del Perfil de Empresa de Google.",
+      "Una galería de trabajos.",
+      "Objetivos táctiles de 44 px en carruseles y cierres.",
+      "Un único llamado a WhatsApp.",
+      "Un título SEO de 60 caracteres."
+     ],
+     "en": [
+      "Real reviews from the Google Business Profile.",
+      "A gallery of finished work.",
+      "44 px touch targets on carousels and close buttons.",
+      "A single call to action for WhatsApp.",
+      "A 60-character SEO title."
+     ]
+    }
+   },
+   {
+    "t": "prose",
+    "h": {
+     "es": "Aprendizajes",
+     "en": "Lessons learned"
+    },
+    "p": [
+     {
+      "es": "Una auditoría sirve si cada hallazgo termina en un **cambio verificable**. En el QA móvil aparecieron problemas que en escritorio no se veían, como el interlineado del H1 y el menú partido. Y ocultar un link incompleto es mejor que mandar a la persona a una página genérica, siempre avisándole al cliente qué falta.",
+      "en": "An audit is useful when every finding ends in a **verifiable change**. Mobile QA surfaced problems that did not show on desktop, such as the H1 line height and the broken menu. And hiding an incomplete link is better than sending people to a generic page, as long as the client is told what is missing."
+     }
+    ]
+   }
+  ]
+ },
  "auditoria-turnos": {
   "cat": "it",
   "touch": "cap",

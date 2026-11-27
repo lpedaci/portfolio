@@ -309,12 +309,20 @@
     /* ---------- Bloques del caso de riesgos digitales ---------- */
     // Barras horizontales sobre una lista de definición: el valor va escrito al lado de cada barra.
     // unit: lo que sigue al valor ('%' si no se indica; '' para cantidades).
+    // max: tope de la escala (si no, la barra más larga). dec: decimales fijos ('4,0' en vez de '4').
+    // ref: { v, label } dibuja una línea de referencia (por ejemplo, el mínimo AA) en todas las barras y la explica
+    // debajo en texto. neg: true en una fila la pinta con --neg; el valor siempre va escrito.
     bars: (b) => {
-      const max = Math.max(...b.rows.map((r) => r.v));
-      const pct = new Intl.NumberFormat(state.lang === 'en' ? 'en-US' : 'es-AR', { maximumFractionDigits: 1 });
-      return blk(b, `<figure class="bars"><figcaption class="bars__cap">${esc(L(b.title))}</figcaption>
-        <dl>${b.rows.map((r, i) => `<div class="bars__row${b.lead === i ? ' is-lead' : ''}"><dt>${r.flag ? `<img class="bars__flag" src="${ROOT}assets/img/flags/${esc(r.flag)}.svg" width="21" height="14" alt="">` : ''}${esc(L(r.label))}</dt><dd><span class="bars__track" aria-hidden="true"><span class="bars__fill" style="--w:${(r.v / max * 100).toFixed(1)}%"></span></span><span class="bars__v">${pct.format(r.v)}${b.unit === undefined ? '%' : esc(L(b.unit))}</span></dd></div>`).join('')}</dl></figure>`);
+      const max = b.max || Math.max(...b.rows.map((r) => r.v), b.ref ? b.ref.v : 0);
+      const pct = new Intl.NumberFormat(state.lang === 'en' ? 'en-US' : 'es-AR', { maximumFractionDigits: b.dec || 1, minimumFractionDigits: b.dec || 0 });
+      const ref = b.ref ? `<span class="bars__ref" style="--x:${(b.ref.v / max * 100).toFixed(1)}%"></span>` : '';
+      return blk(b, `<figure class="bars${b.ref ? ' bars--ref' : ''}"><figcaption class="bars__cap">${esc(L(b.title))}</figcaption>
+        <dl>${b.rows.map((r, i) => `<div class="bars__row${b.lead === i ? ' is-lead' : ''}${r.neg ? ' is-neg' : ''}"><dt>${r.flag ? `<img class="bars__flag" src="${ROOT}assets/img/flags/${esc(r.flag)}.svg" width="21" height="14" alt="">` : ''}${esc(L(r.label))}</dt><dd><span class="bars__track" aria-hidden="true"><span class="bars__fill" style="--w:${(r.v / max * 100).toFixed(1)}%"></span>${ref}</span><span class="bars__v">${pct.format(r.v)}${b.unit === undefined ? '%' : esc(L(b.unit))}</span></dd></div>`).join('')}</dl>
+        ${b.ref ? `<p class="bars__refl"><span class="bars__refk" aria-hidden="true"></span>${esc(L(b.ref.label))}</p>` : ''}</figure>`);
     },
+    // Estado de cada hallazgo, siempre escrito en un chip: corregido (color de IT, con tilde) o pendiente /
+    // recomendación (ámbar, con un círculo). labels: { done, todo, rec }; items: [{ done?, rec?, body }].
+    status: (b) => blk(b, `<ul class="stl">${b.items.map((x) => `<li class="stl__i${x.done ? ' is-done' : ''}"><span class="stl__chip">${x.done ? '<i class="ph ph-check-circle" aria-hidden="true"></i>' : '<span class="stl__dot" aria-hidden="true"></span>'}${esc(L(x.done ? b.labels.done : (x.rec ? b.labels.rec : b.labels.todo)))}<span class="sr-only">:</span></span><span class="stl__t">${rich(L(x.body))}</span></li>`).join('')}</ul>`),
     activities: (b) => blk(b, `<ol class="acts">${b.items.map((a, i) => `
       <li class="act"><div class="act__head"><p class="act__n">${String(i + 1).padStart(2, '0')}</p>${hx(H + 1, 'act__h', esc(L(a.title)))}
         ${a.tools ? `<ul class="chips" aria-label="${esc(t('fStack'))}">${a.tools.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>
